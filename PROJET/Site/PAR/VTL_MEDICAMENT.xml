@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Medicament</title>
+	<description>Medicament</description>
+	<columns>
+		<col DataField="VTL_MEDICAMENT_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_MEDICAMENT_LIBELLE" Type="Text" Unique="false" HeaderText="Libelle" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_MEDICAMENT_DOSAGE" Type="Text" Unique="false" HeaderText="Dosage" MaxLen="50" />
+		<col DataField="VTL_MEDICAMENT_DUREE_MOYENNE_JOUR" Type="Numeric" Unique="false" HeaderText="Duree_moyenne_jour" />
+	</columns>
+</table>

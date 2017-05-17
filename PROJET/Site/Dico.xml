@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="string">
+      <xsd:complexType>
+        <xsd:attribute name="key" type="xsd:string" use="required" />
+        <xsd:attribute name="fr" type="xsd:string" use="required" />
+        <!-- -->
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <!-- Définition des libellés -->
+  <string key="Connect" fr="Se connecter"></string>
+</root>

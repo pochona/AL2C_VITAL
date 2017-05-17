@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="string">
+      <xsd:complexType>
+        <xsd:attribute name="key" type="xsd:string" use="required" />
+        <xsd:attribute name="fr" type="xsd:string" use="required" />
+        <xsd:attribute name="en" type="xsd:string" use="required" />
+        <!-- -->
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <!-- Définition des libellés -->
+  <string key="BO_RECORD_NOT_FOUND" fr="L'enregistrement n'a pas été trouvé." en="Record not found."></string>
+  <string key="BO_CANT_SAVE" fr="L'enregistrement n'a pas été enregistré." en="Record has not been saved."></string>
+</root>

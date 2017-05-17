@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>User</title>
+	<description>User</description>
+	<columns>
+		<col DataField="VTL_USER_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_USER_LOGIN" Type="Text" Unique="false" HeaderText="Login" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_USER_MDP" Type="Text" Unique="false" HeaderText="Mdp" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_USER_ROLE" Type="Text" Unique="false" HeaderText="Role" NotNull="true" MaxLen="50" />
+	</columns>
+</table>

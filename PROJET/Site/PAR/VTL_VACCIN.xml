@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Vaccin</title>
+	<description>Vaccin</description>
+	<columns>
+		<col DataField="VTL_VACCIN_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_VACCIN_LIBELLE" Type="Text" Unique="false" HeaderText="Libelle" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_VACCIN_TOP_PERIODIQUE" Type="Boolean" Unique="false" HeaderText="Top_periodique" />
+		<col DataField="VTL_VACCIN_PERIODE_MOIS" Type="Numeric" Unique="false" HeaderText="Periode_mois" />
+		<col DataField="VTL_VACCIN_TOP_RECOMMANDATION" Type="Boolean" Unique="false" HeaderText="Top_recommandation" />
+	</columns>
+</table>

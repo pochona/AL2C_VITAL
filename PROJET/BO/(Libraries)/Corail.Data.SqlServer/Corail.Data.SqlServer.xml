@@ -1,0 +1,455 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Corail.Data.SqlServer
+</name>
+</assembly>
+<members>
+<member name="M:Corail.Data.SqlServer.Transaction.#ctor(Corail.Data.SqlServer.DataBase)">
+	<summary>
+ Ouverture de la connection et de la transaction
+ </summary>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.#ctor(System.String,System.Int32)">
+	<summary>
+ Initialise une nouvelle instance de <see cref="T:Corail.Data.SqlServer.SyntaxManager"/> class.
+ </summary>
+	<param name="p_s_schemaName">Nom du schema.</param>
+	<param name="p_i_versionCompatibility">Version de SQL Server (8 -&gt; 2000, 9 -&gt; 2005, 10 -&gt; 2008, ...).</param>
+</member><member name="P:Corail.Data.SqlServer.SyntaxManager.VersionCompatibility">
+	<summary>
+ Retourne la version  de Sql Server avec laquelle le code SQL doit être compatible. (8 -&gt; 2000, 9 -&gt; 2005, 10 -&gt; 2008, ...)
+ </summary>
+	<value>
+ La version  de Sql Server avec laquelle le code SQL doit être compatible.(8 -&gt; 2000, 9 -&gt; 2005, 10 -&gt; 2008, ...)
+ </value>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.SqlTextOpener">
+	<summary>
+ Retourne le texte permettant d'ouvrir une constante chaine de caractères. ("'" en général, ou "N'" pour
+ SQL Server).
+ </summary>
+	<returns>Le texte permettant d'ouvrir une constante chaine de caractères. ("'" en général, ou "N'" pour
+ SQL Server).</returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.GetDateTimeSelect(System.String)">
+	<summary>
+ Retourne la date au format 'aaaa-mm-jj hh:mm:ss'.
+ </summary>
+	<param name="p_s_expression">Expression.</param>
+	<returns>
+ La date au format 'aaaa-mm-jj hh:mm:ss'.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FormatSqlDate(System.Object)">
+	<summary>
+ Formate la valeur de la variable pour être une date SQL valide
+ </summary>
+	<param name="p_o_date">La Date</param>
+	<returns>La date formatée</returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FormatSqlTime(System.Object)">
+	<summary>
+ Formate la valeur de la variable pour être une heure SQL valide
+ </summary>
+	<param name="p_o_time">L'heure</param>
+	<returns>L'heure formatée</returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FormatSqlDateAndTime(System.Object)">
+	<summary>
+ Formate la valeur de la variable pour être une date et heure SQL valide
+ </summary>
+	<param name="p_o_datetime">La date et l'heure</param>
+	<returns>La date et l'heure formatée</returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FormatSqlBlob(System.Byte[])">
+	<summary>
+ Formate le tableau de bits pour être inséré dans un srcit SQL.
+ </summary>
+	<param name="p_ab_data">Tableau d'octets.</param>
+	<returns>
+ La chaine représentant le tableau d'octets.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.EscapeLikeExpression(System.String)">
+	<summary>
+ Retourne la chaine à utiliser avec l'opérateur like en replaçant les
+ caractères spéciaux pour qu'ils ne soient pas interprétés
+ </summary>
+	<param name="p_s_searched">Chaine recherchée sans caractères spéciaux</param>
+	<returns></returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.GetLikeMultipleOperator">
+	<summary>
+ Retourne le caractère à utiliser comme expression générique correspondante
+ à un nombre indéfini de caractères
+ </summary>
+	<returns></returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.BuildComplexUpdate(System.String,Corail.Core.SyntaxManager.FromCollection,Corail.Core.QueryValueDictionnary,System.String)">
+	<summary>
+ Retourne la requête UPDATE correspondant aux informations données.
+ </summary>
+	<param name="p_s_tableDst">Table à mettre à jour.</param>
+	<param name="p_o_froms">Autres tables contenant les données sources.</param>
+	<param name="p_o_select">Collection des champs source et des champs de destination.</param>
+	<returns>La requête UPDATE correspondant aux informations données.</returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.BuildFrom(Corail.Core.SyntaxManager.FromCollection,System.Text.StringBuilder)">
+	<summary>
+ Ajoute à la clause "From" le nouveau lien
+ </summary>
+	<param name="p_o_froms">Tableau des tables à liées</param>
+	<param name="p_sb_where">Condition WHERE à modifier</param>
+	<returns>
+ La partie FROM d'une requête de sélection
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctConcat(System.String[])">
+	<summary>
+ Retourne la chaine contenant les expressions concaténées en utilisant
+ le séparateur propre au type de base de données en cours
+ </summary>
+	<param name="p_s_expressions">Liste des expressions à concaténer</param>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctSysDate">
+	<summary>
+ SQLs the FCT sys date.
+ </summary>
+	<returns></returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctNz(System.String,System.String)">
+	<summary>
+ Retourne la syntaxe SQL pour effectuer une action du type Nz
+ </summary>
+	<param name="p_s_expression">Valeur à tester</param>
+	<param name="p_s_SiNull">Valeur à retourner si Null</param>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctCStr(System.String)">
+	<summary>
+ Retourne la chaine permttant de convertir une expression en chaine de caractère.
+ </summary>
+	<param name="p_s_expression">Expression (nom de champ ou constante).</param>
+	<returns></returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctIIfEqual(System.String,System.String,System.String,System.String)">
+	<summary>
+ Retourne la syntaxe SQL pour effectuer une fonction équivalente à IIf
+ </summary>
+	<param name="p_s_expression1">Expression à comparer à l'expression 2</param>
+	<param name="p_s_expression2">Expression à comparer à l'expression 1</param>
+	<param name="p_s_ifTrue">Valeur retournée si les expressions sont égales</param>
+	<param name="p_s_ifFalse">Valeur retournée si les expressions sont différentes</param>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctMid(System.String,System.Int32,System.Int32)">
+	<summary>
+ Retourne la syntaxe SQL pour effectuer une fonction équivalente à Mid
+ </summary>
+	<param name="p_s_expression">Expression à traiter</param>
+	<param name="p_i_start">Position du premier caractère de la chaîne à extraire</param>
+	<param name="p_i_length">Longueur à extraire</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctLen(System.String)">
+	<summary>
+ Retourne l'appel à la fonction SQL permettant de retourner
+ la longeur de l'expression
+ </summary>
+	<param name="p_s_expression">Expression à traiter</param>
+	<returns></returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctUCase(System.String)">
+	<summary>
+ Retourne la syntaxe SQL pour effectuer une fonction équivalente à UCase
+ </summary>
+	<param name="p_s_expression">Expression à traiter</param>
+	<remarks>UCase est méthode permettant de mettre l'expression en majuscule</remarks>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctLCase(System.String)">
+	<summary>
+ Retourne la syntaxe SQL pour effectuer une fonction équivalente à LCase
+ </summary>
+	<param name="p_s_expression">Expression à traiter</param>
+	<returns></returns>
+	<remarks>UCase est méthode permettant de mettre l'expression en minuscule</remarks>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctString(System.Char,System.Int32)">
+	<summary>
+ Retourne la syntaxe SQL pour générer une chaine de caractères
+ constituée du charactéres répété n fois
+ </summary>
+	<param name="p_s_char">Caractère à répéter</param>
+	<param name="p_i_nombre">Longeur de la chaine</param>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctSign(System.String)">
+	<summary>
+ Retourne la fonction SQL permettant de connaitre le signe
+ d'une expression (La fonction SQL retourne 0 si l'expression vaut 0,
+ 1 si l'expression est positive et -1 si l'expression est négative)
+ </summary>
+	<param name="p_s_expression">Expression à traiter</param>
+	<returns></returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctRound(System.String,System.Int32,System.MidpointRounding)">
+	<summary>
+ Retourne la fonction SQL permettant d'arrondir une expression.
+ </summary>
+	<param name="p_s_expression">Expression à arrondir.</param>
+	<param name="p_i_decimals">Nombre de chiffres après la virgule.</param>
+	<param name="p_i_mode">Indique quel méthode d'arrondi est à utiliser.</param>
+	<returns>La fonction SQL permettant d'arrondir une expression.</returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.FctTrim(System.String)">
+	<summary>
+ Retourne la fonction SQL permettant d'enlever les espaces
+ en début et en fin de chaine
+ </summary>
+	<param name="p_s_expression"></param>
+	<returns></returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.ColumnDefinitionAuto(Corail.Core.SchemaColumn,Corail.Core.SchemaRules,System.String)">
+	<summary>
+ Définition d'une colonne avec valeur auto-incrément.
+ </summary>
+	<param name="p_o_column">Colonne.</param>
+	<param name="p_o_rules">Règles de nommage.</param>
+	<param name="p_s_column">Nom de la colonne.</param><returns>
+ La définition d'une colonne auto-incrément.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.ColumnDefinitionBoolean(Corail.Core.SchemaColumn,Corail.Core.SchemaRules,System.String,System.String)">
+	<summary>
+ Définition d'une colonne booléenne.
+ </summary>
+	<param name="p_o_column">Colonne.</param>
+	<param name="p_o_rules">Règles de nommage.</param>
+	<param name="p_s_column">Nom de la colonne.</param>
+	<param name="p_s_default">Expression pour la valeur par défaut.</param><returns>
+ La définition d'une colonne booléenne.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.ColumnDefinitionString(Corail.Core.SchemaColumn,Corail.Core.SchemaRules,System.String,System.String)">
+	<summary>
+ Définition d'une colonne chaine de caractères.
+ </summary>
+	<param name="p_o_column">Colonne.</param>
+	<param name="p_o_rules">Règles de nommage.</param>
+	<param name="p_s_column">Nom de la colonne.</param>
+	<param name="p_s_default">Expression pour la valeur par défaut.</param>
+	<returns>La définition d'une colonne chaine de caractères.</returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.ColumnDefinitionBlob(Corail.Core.SchemaColumn,Corail.Core.SchemaRules,System.String,System.String)">
+	<summary>
+ Définition d'une colonne chaine de caractères.
+ </summary>
+	<param name="p_o_column">Colonne.</param>
+	<param name="p_o_rules">Règles de nommage.</param>
+	<param name="p_s_column">Nom de la colonne.</param>
+	<param name="p_s_default">Expression pour la valeur par défaut.</param><returns>
+ La définition d'une colonne chaine de caractères.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.ColumnDefinitionDate(Corail.Core.SchemaColumn,Corail.Core.SchemaRules,System.String,System.String)">
+	<summary>
+ Définition d'une colonne date.
+ </summary>
+	<param name="p_o_column">Colonne.</param>
+	<param name="p_o_rules">Règles de nommage.</param>
+	<param name="p_s_column">Nom de la colonne.</param>
+	<param name="p_s_default">Expression pour la valeur par défaut.</param><returns>
+ La définition d'une colonne date.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.ColumnDefinitionInteger(Corail.Core.SchemaColumn,Corail.Core.SchemaRules,System.String,System.String)">
+	<summary>
+ Définition d'une colonne contenant des entiers.
+ </summary>
+	<param name="p_o_column">Colonne.</param>
+	<param name="p_o_rules">Règles de nommage.</param>
+	<param name="p_s_column">Nom de la colonne.</param>
+	<param name="p_s_default">Expression pour la valeur par défaut.</param><returns>
+ La définition d'une colonne contenant des entiers.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.SyntaxManager.ColumnDefinitionDouble(Corail.Core.SchemaColumn,Corail.Core.SchemaRules,System.String,System.String)">
+	<summary>
+ Définition d'une colonne contenant des valeurs décimales.
+ </summary>
+	<param name="p_o_column">Colonne.</param>
+	<param name="p_o_rules">Règles de nommage.</param>
+	<param name="p_s_column">Nom de la colonne.</param>
+	<param name="p_s_default">Expression pour la valeur par défaut.</param><returns>
+ La définition d'une colonne contenant des valeurs décimales.
+ </returns>
+</member><member name="T:Corail.Data.SqlServer.SyntaxManager">
+	<summary>
+ Gestionnaire de syntaxe SQL.
+ </summary>
+</member><member name="P:Corail.Data.SqlServer.DataBase.ConnectionServer">
+	<summary>
+ Retourne le nom du serveur SQL Server. Il est possible de préciser l'instance
+ en utilisant la syntaxe suivante : ServerName\InstanceName
+ </summary>
+	<value>L'instance et le serveur SQL utilisé</value>
+</member><member name="M:Corail.Data.SqlServer.DataBase.#ctor(System.String)">
+	<summary>
+ Initialise une nouvelle instance de la base de données à partir des informations
+ renseignés dans le fichier Web.config, section AppSettings avec les clefs :
+ "SQL Server", "SQL Database", "SQL User ID", "SQL Password", "SQL Password File"
+ </summary>
+	<param name="p_s_parameters">Autres paramètres de connection</param>
+</member><member name="M:Corail.Data.SqlServer.DataBase.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Initialise une nouvelle instance de la base de données
+ </summary>
+	<param name="p_s_serverKey">Nom de la clef dans AppSettings contenant le nom du serveur et son instance</param>
+	<param name="p_s_databaseKey">Nom de la clef dans AppSettings contenant le nom de la base de données</param>
+	<param name="p_s_userKey">Nom de la clef dans AppSettings contenant le nom de l'utilisateur</param>
+	<param name="p_s_passwordKey">Nom de la clef dans AppSettings contenant le mot de passe de l'utilisateur</param>
+	<param name="p_s_passwordKeyFile">[Facultatif] Nom de la clef dans AppSettings contenant le nom du fichier contenant le mot de passe de l'utilisateur</param>
+	<param name="p_s_parameters">Paramètres additionnels.</param>
+</member><member name="M:Corail.Data.SqlServer.DataBase.#ctor(Corail.Core.DbConfig,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Initialise une nouvelle instance de la base de données.
+ </summary>
+	<param name="p_i_config">Emplacement où rechercher les informations de connection à la base de données.</param>
+	<param name="p_s_server">Nom du serveur et son instance</param>
+	<param name="p_s_database">Nom de la base de données</param>
+	<param name="p_s_user">Nom de l'utilisateur</param>
+	<param name="p_s_password">Mot de passe de l'utilisateur</param>
+	<param name="p_s_passwordFile">[Facultatif] Nom du fichier contenant le mot de passe de l'utilisateur</param>
+	<param name="p_s_parameters">Paramètres additionnels.</param>
+</member><member name="M:Corail.Data.SqlServer.DataBase.InitConnectionString(System.String,System.String,System.String)">
+	<summary>
+ Initialise la chaine de connection à partir des autres paramètres
+ </summary>
+</member><member name="M:Corail.Data.SqlServer.DataBase.DetectSqlServerVersion">
+	<summary>
+ Retourne la version actuelle de SQL serveur.
+ </summary>
+	<returns>La version actuelle de SQL serveur.</returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> décrivant la base de données courante.
+ </summary>
+	<returns>
+ Un <see cref="T:System.String"/> décrivant la base de données courante.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.OnCheckError(System.Exception,Corail.Core.DbQueryType)">
+	<summary>
+ Méthode permettant de déclencher des types d'exception plus précis en fonction de l'exception de départ.
+ </summary>
+	<param name="p_o_ex">Exception.</param>
+	<param name="p_i_queryType">Type de requête effectuée.</param>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetNewTransaction">
+	<summary>
+ Retourne une nouvelle transaction sur la base de données
+ </summary>
+	<returns>
+ Une nouvelle transaction sur la base de données
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetNewConnection">
+	<summary>
+ Retourne une nouvelle connection vers la base de données
+ </summary>
+	<returns>
+ Nouvelle connection vers la base de données
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetNewCommand">
+	<summary>
+ Retourne un nouvel objet d'execution de commandes
+ </summary>
+	<returns>Un nouvel objet d'execution de commandes</returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetNewDataAdapter(System.Data.Common.DbCommand)">
+	<summary>
+ Retourne une nouvelle objet permettant de recueillir les données issues d'une
+ commande
+ </summary>
+	<param name="p_o_cm">La commande à executer</param>
+	<returns></returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetNewParameter(System.String,System.Data.DbType)">
+	<summary>
+ Retourne un nouveau paramètre initialisé avec les informations passées en paramètre
+ </summary>
+	<param name="p_s_name">Le nom du paramètre</param>
+	<param name="p_i_type">Le type du parametre</param>
+	<returns>Le nouveau paramètre</returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.AddCommandParameterAuto(System.Data.Common.DbCommand,Corail.Core.QueryParam)">
+	<summary>
+ Ajoute un paramêtre la commande sans connaitre le type
+ </summary>
+	<param name="p_o_command">L'objet commande du client</param>
+	<param name="p_o_param">Le paramètre à ajouter à la commande</param>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetDS(System.Data.CommandType,Corail.Core.Transaction,System.Int32,System.Int32,System.String,System.Object[])">
+	<summary>
+ Demande au SGBD de retourner les lignes de données correspondant à la commande
+ </summary>
+	<param name="p_i_commandType">Le type de commande à exécuter</param>
+	<param name="p_i_startRecord">L'index du premier enregistrement</param>
+	<param name="p_i_maxrecords">Le nombre maximum d'enregistrements</param>
+	<param name="p_o_trans">La transaction dans laquelle effectuer la commande</param>
+	<param name="p_s_command">Nom de la procedure ou de la table</param>
+	<param name="p_o_params">Parametres remplaçant les points d'interrogations de la requête, ou définition des paramètres nommés à l'aide de la classe QerryParam</param>
+	<returns>
+ L'ensemble des données correspondant à la requête
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetDT(System.Data.CommandType,Corail.Core.Transaction,System.String,System.Object[])">
+	<summary>
+ Demande au SGBD de retourner les lignes de données correspondant à la commande
+ </summary>
+	<param name="p_i_commandType">Le type de commande à exécuter</param>
+	<param name="p_o_trans">La transaction dans laquelle effectuer la commande</param>
+	<param name="p_s_command">Nom de la procedure ou de la table</param>
+	<param name="p_o_params">Parametres remplaçant les points d'interrogations de la requête, ou définition des paramètres nommés à l'aide de la classe QerryParam</param>
+	<returns>
+ L'ensemble des données correspondant à la requête
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetDT(System.Data.CommandType,Corail.Core.Transaction,System.Int32,System.Int32,System.String,System.Object[])">
+	<summary>
+ Demande au SGBD de retourner les lignes de données correspondant à la commande
+ </summary>
+	<param name="p_i_commandType">Le type de commande à exécuter</param>
+	<param name="p_o_trans">La transaction dans laquelle effectuer la commande</param>
+	<param name="p_i_startRecord">L'index du premier enregistrement</param>
+	<param name="p_i_maxrecords">Le nombre maximum d'enregistrements</param>
+	<param name="p_s_command">Nom de la procedure ou de la table</param>
+	<param name="p_o_params">Parametres remplaçant les points d'interrogations de la requête, ou définition des paramètres nommés à l'aide de la classe QerryParam</param>
+	<returns>
+ L'ensemble des données correspondant à la requête
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetInsertedIDSQL(System.String,System.String)">
+	<summary>
+ Retourne le dernier identifiant automatique ajouté aprés une requête d'insertion.
+ </summary>
+	<param name="p_s_table">Nom de la table.</param>
+	<param name="p_s_field">Nom du champ automatique.</param>
+	<returns>
+ Le nouvel identifiant automatique à la suite d'une insertion.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetSchemaName">
+	<summary>
+ Retourne le nom du schema à rétro-concevoir.
+ </summary><returns>
+ Le nom du schema à rétro-concevoir.
+ </returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.DbVersion">
+	<summary>
+ Retourne la version de SQL Server utilisée.
+ </summary>
+	<returns>La version de SQL Server utilisée.</returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.SchemaTableAndSequence(Corail.Core.SchemaDataBase)">
+	<summary>
+ Chargement de la liste des tables et des séquences.
+ </summary>
+	<param name="p_o_schema">Schema de rétro-conception.</param>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetTableCommentSql">
+	<summary>
+ Retourne la requête à utilisée pour retrouver les commentaires sur les tables en fonction de la version de SqlServer.
+ </summary>
+	<returns>La requête à utilisée pour retrouver les commentaires sur les tables.</returns>
+</member><member name="M:Corail.Data.SqlServer.DataBase.SchemaRelation(Corail.Core.SchemaDataBase)">
+	<summary>
+ Retourne la liste des relations (clé étrangère de la base).
+ </summary>
+	<param name="p_o_schema">Schema de rétro-conception.</param>
+</member><member name="M:Corail.Data.SqlServer.DataBase.ExtendColumnsInformations(Corail.Core.SchemaTable)">
+	<summary>
+ Ajoute les propriétés manquantes aux champs de la table (Type natif, Commentaire).
+ </summary>
+	<param name="p_o_table">Schema de la table.</param>
+</member><member name="M:Corail.Data.SqlServer.DataBase.GetSchemaIndexRestriction">
+	<summary>
+ Retourne le nom de la restriction pour retrouver les colonnes indexées.
+ </summary>
+	<returns>Le nom de la restriction pour retrouver les colonnes indexées.</returns>
+</member><member name="T:Corail.Data.SqlServer.DataBase">
+	<summary>
+ Base de donnée SQL Server.
+ </summary>
+</member><member name="P:Corail.Data.SqlServer.My.Resources.Resources.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:Corail.Data.SqlServer.My.Resources.Resources.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="T:Corail.Data.SqlServer.My.Resources.Resources">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Animal</title>
+	<description>Animal</description>
+	<columns>
+		<col DataField="VTL_ANIMAL_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_ANIMAL_NOM" Type="Text" Unique="false" HeaderText="Nom" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_ANIMAL_NUM_PUCE" Type="Text" Unique="false" HeaderText="Num_puce" MaxLen="14" />
+		<col DataField="VTL_ANIMAL_DT_NAISSANCE" Type="Date" Unique="false" HeaderText="Dt_naissance" />
+		<col DataField="VTL_ANIMAL_DT_DECES" Type="Date" Unique="false" HeaderText="Dt_deces" />
+		<col DataField="VTL_ANIMAL_ID_RACE" Type="Numeric" HeaderText="Id_race">
+			<source Table="VTL_RACE" TableAlias="T1" KeyField="VTL_RACE_ID" LibField="VTL_RACE_NOM" LibAlias="F1" Unique="false" />
+		</col>
+		<col DataField="VTL_ANIMAL_ID_CARTE" Type="Numeric" HeaderText="Id_carte">
+			<source Table="VTL_CARTE" TableAlias="T2" KeyField="VTL_CARTE_ID" LibField="VTL_CARTE_NUMERO" LibAlias="F2" Unique="false" />
+		</col>
+		<col DataField="VTL_ANIMAL_ID_TYPE" Type="Numeric" HeaderText="Id_type">
+			<source Table="VTL_TYPE" TableAlias="T3" KeyField="VTL_TYPE_ID" LibField="VTL_TYPE_LIBELLE" LibAlias="F3" Unique="false" />
+		</col>
+	</columns>
+</table>

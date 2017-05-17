@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Settings>
+  <Scripts Description="VITL" Version="1.0" Client="" Schema="VITL" Template="SQL Server" Destination="C:\Users\Nolwenn PILLARD\Documents\AL2C\Travail\Scripts" Data="False" />
+  <LinkedDB Type="SqlServer" Database="VITL" Server="(localdb)\Projects" User="VITL" Password="VITL1234" Schema="VITL" />
+</Settings>

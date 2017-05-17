@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Assurance</title>
+	<description>Assurance</description>
+	<columns>
+		<col DataField="VTL_ASSURANCE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_ASSURANCE_NOM" Type="Text" Unique="false" HeaderText="Nom" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_ASSURANCE_SIRET" Type="Text" Unique="false" HeaderText="Siret" NotNull="true" MaxLen="50" />
+	</columns>
+</table>

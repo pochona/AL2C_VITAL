@@ -1,0 +1,26 @@
+CREATE TABLE VTL_USER (
+	VTL_USER_ID INT IDENTITY(1,1) NOT NULL,
+	VTL_USER_LOGIN NVARCHAR(50) NOT NULL,
+	VTL_USER_MDP NVARCHAR(50) NOT NULL,
+	VTL_USER_ROLE NVARCHAR(50) NOT NULL
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'User', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Login', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_LOGIN'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mdp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_MDP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Role', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_ROLE'
+GO
+
+
+ALTER TABLE VTL_USER
+ADD CONSTRAINT VTL_USER_PK PRIMARY KEY (VTL_USER_ID)
+GO
+
+GRANT SELECT,INSERT,UPDATE,DELETE ON VTL_USER TO VTAL;
+GO

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Liste des rôles définis dans l'application
+-->
+<Profiles>
+    <!-- Le roles doivent être séparés par une virgule -->
+    <ADMIN roles="Admin, Veto" />
+    <VETER roles="Veto" />
+    <MUT roles="Mutuelle" />
+    <PROP roles="Proprietaire" />
+</Profiles>

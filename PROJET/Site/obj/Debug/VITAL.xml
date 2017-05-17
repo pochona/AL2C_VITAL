@@ -1,0 +1,394 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+VITAL
+</name>
+</assembly>
+<members>
+<member name="M:VITAL.PageAccueilAdmin.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialisation de la page en cours
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="M:VITAL.PageAccueilVeto.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialisation de la page en cours
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="M:VITAL.PageAccueilProprietaire.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialisation de la page en cours
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="F:VITAL.PageWinCnx.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="P:VITAL.My.MyWebExtension.Computer">
+	<summary>
+ Retourne les informations relatives à l'ordinateur hôte.
+ </summary>
+</member><member name="P:VITAL.My.MyWebExtension.User">
+	<summary>
+ Retourne des informations pour l'utilisateur Web actuel.
+ </summary>
+</member><member name="P:VITAL.My.MyWebExtension.Request">
+	<summary>
+ Retourne l'objet Request.
+ </summary>
+</member><member name="P:VITAL.My.MyWebExtension.Response">
+	<summary>
+ Retourne l'objet Response.
+ </summary>
+</member><member name="P:VITAL.My.MyWebExtension.Log">
+	<summary>
+ Retourne l'objet de journal Asp.
+ </summary>
+</member><member name="T:VITAL.My.MyWebExtension">
+	<summary>
+ Module utilisé pour définir les propriétés qui sont disponibles dans l'espace de noms My pour les projets Web.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:VITAL.PageDefault.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilVeto.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="M:VITAL.PageWelcome.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Chargement de la page.
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="M:VITAL.ModFunctions.BindCbo(Corail.Web.CwComboBox@,System.Data.DataSet,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Remplir une liste déroulante à partir d'un DataSet
+ </summary>
+	<param name="p_o_cbo">Combobox à remplir</param>
+	<param name="p_o_ds">Dataset contenant les données</param>
+	<param name="p_s_valueField">Nom du champ contenant la valeur à récupérer</param>
+	<param name="p_s_TextField">Nom du champ contenant le texte à afficher</param>
+	<param name="p_s_SpecialLine">Libellé de la ligne spéciale</param>
+	<param name="p_s_colSiConcat">Nom du champ en cas de concaténation</param>
+	<param name="p_s_specialValue">Valeur de la ligne spéciale</param>
+	<param name="p_s_dataEnabledField">Nom du champ pour la visibilité des valeurs</param>
+	<param name="p_s_dataEnabledValue">Valeur pour laquelle une ligne de la combobox sera active</param>
+	<returns></returns>
+</member><member name="F:VITAL.PageAccueilProprietaire.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.frlGeneral">
+	<summary>
+Contrôle frlGeneral.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.frmGenral">
+	<summary>
+Contrôle frmGenral.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.frlDtl">
+	<summary>
+Contrôle frlDtl.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.txtTest">
+	<summary>
+Contrôle txtTest.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.txtTest1">
+	<summary>
+Contrôle txtTest1.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.frlGeneral2">
+	<summary>
+Contrôle frlGeneral2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.frmGenral2">
+	<summary>
+Contrôle frmGenral2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.frlDtl2">
+	<summary>
+Contrôle frlDtl2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.txtTest2">
+	<summary>
+Contrôle txtTest2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.txtTest3">
+	<summary>
+Contrôle txtTest3.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.txtTest4">
+	<summary>
+Contrôle txtTest4.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.txtTest5">
+	<summary>
+Contrôle txtTest5.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.CwFormLayout1">
+	<summary>
+Contrôle CwFormLayout1.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.CwFrame1">
+	<summary>
+Contrôle CwFrame1.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.CwFormLayout2">
+	<summary>
+Contrôle CwFormLayout2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.CwTextBox1">
+	<summary>
+Contrôle CwTextBox1.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.CwTextBox2">
+	<summary>
+Contrôle CwTextBox2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.CwTextBox3">
+	<summary>
+Contrôle CwTextBox3.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.CwTextBox4">
+	<summary>
+Contrôle CwTextBox4.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.pnb">
+	<summary>
+Contrôle pnb.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.btn1">
+	<summary>
+Contrôle btn1.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.btn2">
+	<summary>
+Contrôle btn2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.btn3">
+	<summary>
+Contrôle btn3.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageExemple.btn4">
+	<summary>
+Contrôle btn4.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="M:VITAL.MainApplication.InitDatabases(Corail.Core.DataBaseList)">
+	<summary>
+ Méthode permettant de charger la liste des bases de données qui
+ vont être utilisées par l'application. La première base de donnée
+ étant considérée comme la base de donnée par défaut
+ </summary>
+	<param name="p_o_list"></param>
+</member><member name="M:VITAL.MainApplication.LoadUserIdentity(Corail.Web.UserIdentity)">
+	<summary>
+ Chargement des informations (Mot de passe et groupes de l'utilisateur).
+ </summary>
+	<param name="p_o_identity">Identité de l'utilisateur.</param>
+</member><member name="M:VITAL.MainApplication.LoadMenu(Corail.Web.ApplicationMenu,System.Boolean)">
+	<summary>
+ Chargement du menu principal de l'application.
+ </summary>
+	<param name="Menu">Menu principal de l'application.</param>
+	<param name="IsAuthenticated">Indique si l'utilisateur est actuellement connecté.</param>
+</member><member name="M:VITAL.MainApplication.LoadToolbar(Corail.Web.ApplicationToolbar,System.Boolean)">
+	<summary>
+ Chargement de la barre d'outils principale de l'application.
+ </summary>
+	<param name="ToolBar">Barre d'outils principale de l'application.</param>
+	<param name="IsAuthenticated">Indique si l'utilisateur est actuellement connecté.</param>
+</member><member name="T:VITAL.MainApplication">
+	<summary>
+ Application principale.
+ </summary>
+</member><member name="P:VITAL.PageDefault.StartPage">
+	<summary>
+ Définition de la page de démarage à utiliser dans la frame de droite
+ </summary>
+</member><member name="F:VITAL.PageAccueilMutuelle.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="M:VITAL.PageAccueilMutuelle.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialisation de la page en cours
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="M:VITAL.PageExemple.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialisation de la page en cours
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="M:VITAL.PageExemple.LoadData">
+	<summary>
+ Chargement des données.
+ </summary>
+</member><member name="M:VITAL.PageExemple.btn1_Click(System.Object,System.EventArgs)">
+	<summary>
+ Gestion du clic sur le bouton.
+ </summary>
+	<param name="sender">Source de l'événement.</param>
+	<param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
+</member><member name="T:VITAL.PageExemple">
+	<summary>
+ Page servant d'exemple.
+ </summary>
+</member><member name="F:VITAL.PageWelcome.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAdmin.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member>
+</members>
+</doc>

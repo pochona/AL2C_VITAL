@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Veterinaire</title>
+	<description>Veterinaire</description>
+	<columns>
+		<col DataField="VTL_VETERINAIRE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_VETERINAIRE_NOM" Type="Text" Unique="false" HeaderText="Nom" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_VETERINAIRE_PRENOM" Type="Text" Unique="false" HeaderText="Prenom" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_VETERINAIRE_SIRET" Type="Text" Unique="false" HeaderText="SIRET" MaxLen="50" />
+	</columns>
+</table>
+

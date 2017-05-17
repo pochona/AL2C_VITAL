@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Propriétaire</title>
+	<description>Propriétaire</description>
+	<columns>
+		<col DataField="VTL_PROPRIETAIRE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_PROPRIETAIRE_NOM" Type="Text" Unique="false" HeaderText="Nom" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_PROPRIETAIRE_PRENOM" Type="Text" Unique="false" HeaderText="Prenom" MaxLen="50" />
+	</columns>
+</table>

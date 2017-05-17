@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion />
+    <SchemaVersion />
+    <ProjectGuid>{411B7F64-9F5D-4F83-A777-848DC0972161}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VITAL.BO</RootNamespace>
+    <AssemblyName>VITAL.BO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Windows</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>VITAL.BO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>..\Corail.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>VITAL.BO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>..\Corail.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Corail.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Corail.Data.SqlServer">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Text" />
+    <Import Include="Corail.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Adopter.vb" />
+    <Compile Include="Classes\Animal.vb" />
+    <Compile Include="Classes\Assurance.vb" />
+    <Compile Include="Classes\Auto\VITAL.Auto.vb" />
+    <Compile Include="Classes\Auto\VITAL.Raw.vb" />
+    <Compile Include="Classes\Auto\VITAL.vb" />
+    <Compile Include="Classes\Carte.vb" />
+    <Compile Include="Classes\Consultation.vb" />
+    <Compile Include="Classes\Contrat.vb" />
+    <Compile Include="Classes\Histo_Poids.vb" />
+    <Compile Include="Classes\Histo_Taille.vb" />
+    <Compile Include="Classes\Medicament.vb" />
+    <Compile Include="Classes\Position.vb" />
+    <Compile Include="Classes\PropriEtaire.vb" />
+    <Compile Include="Classes\Race.vb" />
+    <Compile Include="Classes\Traitement_medicament.vb" />
+    <Compile Include="Classes\Traitrement.vb" />
+    <Compile Include="Classes\Type.vb" />
+    <Compile Include="Classes\User.vb" />
+    <Compile Include="Classes\Vaccin.vb" />
+    <Compile Include="Classes\Vaccination.vb" />
+    <Compile Include="Classes\Veterinaire.vb" />
+    <Compile Include="Main.vb" />
+    <Compile Include="Modules\ModConst.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="(Libraries)\Corail.Core\Corail.Core.dll" />
+    <None Include="(Libraries)\Corail.Core\Corail.Core.xml" />
+    <None Include="(Libraries)\Corail.Data.SqlServer\Corail.Data.SqlServer.dll" />
+    <None Include="(Libraries)\Corail.Data.SqlServer\Corail.Data.SqlServer.xml" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dico.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schema\VITAL.xlu" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

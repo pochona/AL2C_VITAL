@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Type</title>
+	<description>Type</description>
+	<columns>
+		<col DataField="VTL_TYPE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_TYPE_LIBELLE" Type="Text" Unique="false" HeaderText="Libelle" NotNull="true" MaxLen="50" />
+	</columns>
+</table>

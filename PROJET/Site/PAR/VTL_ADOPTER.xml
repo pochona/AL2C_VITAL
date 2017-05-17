@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Adopter</title>
+	<description>Adopter</description>
+	<columns>
+		<col DataField="VTL_ADOPTER_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_ADOPTER_DT_DEBUT" Type="Date" Unique="false" HeaderText="Dt_debut" NotNull="true" />
+		<col DataField="VTL_ADOPTER_DT_FIN" Type="Date" Unique="false" HeaderText="Dt_fin" />
+		<col DataField="VTL_ADOPTER_ID_PROPRIETAIRE" Type="Numeric" HeaderText="Id_proprietaire">
+			<source Table="VTL_PROPRIETAIRE" TableAlias="T1" KeyField="VTL_PROPRIETAIRE_ID" LibField="VTL_PROPRIETAIRE_NOM" LibAlias="F1" Unique="false" />
+		</col>
+		<col DataField="VTL_ADOPTER_ID_ANIMAL" Type="Numeric" HeaderText="Id_animal">
+			<source Table="VTL_ANIMAL" TableAlias="T2" KeyField="VTL_ANIMAL_ID" LibField="VTL_ANIMAL_NOM" LibAlias="F2" Unique="false" />
+		</col>
+	</columns>
+</table>

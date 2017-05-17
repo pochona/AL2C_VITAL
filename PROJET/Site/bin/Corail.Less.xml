@@ -1,0 +1,2582 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Corail.Less
+</name>
+</assembly>
+<members>
+<member name="F:Corail.Less.LessVariableDefinitionCollection.m_o_list">
+ Liste chargée.
+
+</member><member name="M:Corail.Less.LessVariableDefinitionCollection.#ctor(System.Collections.Generic.List{Corail.Less.LessVariableDefinition})">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_list">Liste chargée.</param>
+</member><member name="M:Corail.Less.LessVariableDefinitionCollection.GetEnumeratorNG">
+	<summary>
+ Retourne un énumérateur qui itère au sein de la collection.
+ </summary>
+	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour itérer au
+ sein de la collection.</returns>
+</member><member name="M:Corail.Less.LessVariableDefinitionCollection.GetEnumerator">
+	<summary>
+ Retourne un énumérateur qui itère au sein de la collection.
+ </summary>
+	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour itérer au
+ sein de la collection.</returns>
+</member><member name="T:Corail.Less.LessVariableDefinitionCollection">
+	<summary>
+ Liste des définitions de variables LESS.
+ </summary>
+</member><member name="F:Corail.Less.LessVariableDefinition.m_s_name">
+ Nom de la variable.
+
+</member><member name="F:Corail.Less.LessVariableDefinition.m_s_formula">
+ Formule de la variable.
+
+</member><member name="F:Corail.Less.LessVariableDefinition.m_s_value">
+ Valeur de la variable.
+
+</member><member name="P:Corail.Less.LessVariableDefinition.Name">
+	<summary>
+ Nom de la formule.
+ </summary>
+	<value>Nom de la formule.</value>
+	<returns>Nom de la formule.</returns>
+</member><member name="P:Corail.Less.LessVariableDefinition.Formula">
+	<summary>
+ Formule de la variable.
+ </summary>
+	<value>Formule de la variable.</value>
+	<returns>Formule de la variable.</returns>
+</member><member name="P:Corail.Less.LessVariableDefinition.Value">
+	<summary>
+ Valeur de la formule.
+ </summary>
+	<value>Valeur de la formule.</value>
+	<returns>Valeur de la formule.</returns>
+</member><member name="P:Corail.Less.LessVariableDefinition.IsIndependant">
+	<summary>
+ Indique si la variable dépend d'une autre variable.
+ </summary>
+	<value><c>True</c> si la variable dépend d'une autre variable; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la variable dépend d'une autre variable; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.LessVariableDefinition.#ctor(System.String,System.String,System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_name">Nom de la variable.</param>
+	<param name="p_s_formula">Formule de la variable.</param>
+	<param name="p_s_value">Valeur de la variable.</param>
+</member><member name="M:Corail.Less.LessVariableDefinition.CompareTo(Corail.Less.LessVariableDefinition)">
+	<summary>
+ Compare l'objet en cours à un autre objet du même type.
+ </summary>
+	<param name="p_o_other"><see cref="T:System.Object"/> à comparer avec le <see cref="T:System.Object"/>
+ actuel.</param>
+	<returns>Valeur qui indique l'ordre relatif des objets comparés.La valeur de retour a les significations
+ suivantes :Valeur Signification Inférieure à zéro Cet objet est inférieur au paramètre <paramref name="other"/>.Zéro Cet objet est égal à <paramref name="other"/>. Supérieure à zéro Cet objet est
+ supérieur à <paramref name="other"/>.</returns>
+</member><member name="T:Corail.Less.LessVariableDefinition">
+	<summary>
+ Définition d'une variable.
+ </summary>
+</member><member name="M:Corail.Less.LessValueVariable.#ctor(Corail.Less.LessBuildContext,System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_s_name">Nom de la variable.</param>
+</member><member name="M:Corail.Less.LessValueVariable.OnEvaluate(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur calculée correspondant à l'élément en cours.
+ </summary>
+	<returns>La valeur calculée correspondant à l'élément en cours.</returns>
+</member><member name="M:Corail.Less.LessValueVariable.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="T:Corail.Less.LessValueVariable">
+	<summary>
+ Nom de variable.
+ </summary>
+</member><member name="P:Corail.Less.LessValueString.ToEvaluate">
+	<summary>
+ Indique si la valeur doit être calculée.
+ </summary>
+	<value><c>True</c> si la valeur doit être calculée; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la valeur doit être calculée; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.LessValueString.#ctor(System.String,System.Char,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_string"></param>
+</member><member name="M:Corail.Less.LessValueString.#ctor(Corail.Less.LessValueString,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_str">Chaine source.</param>
+	<param name="p_b_escape">Indique si on doit conserver les quotes.</param>
+</member><member name="M:Corail.Less.LessValueString.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="M:Corail.Less.LessValueString.ToInterpolationString">
+	<summary>
+ Retourne la chaine à utiliser pour une interpolation "@{variable}".
+ </summary>
+	<returns>La chaine à utiliser pour une interpolation "@{variable}".</returns>
+</member><member name="M:Corail.Less.LessValueString.OnEvaluate(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur calculée correspondant à l'élément en cours.
+ </summary>
+	<returns>La valeur calculée correspondant à l'élément en cours.</returns>
+</member><member name="T:Corail.Less.LessValueString">
+	<summary>
+ Chaine de caractères.
+ </summary>
+</member><member name="M:Corail.Less.LessValueRaw.#ctor(System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_raw"></param>
+</member><member name="M:Corail.Less.LessValueRaw.#ctor(Corail.Less.LessValue)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_value"></param>
+</member><member name="M:Corail.Less.LessValueRaw.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="M:Corail.Less.LessValueRaw.Equals(System.Object)">
+	<summary>
+ Détermine si l'objet <see cref="T:System.Object"/> spécifié est égal à l'objet <see cref="T:System.Object"/> actuel.
+ </summary>
+	<param name="p_o_other"><see cref="T:System.Object"/> à comparer avec le <see cref="T:System.Object"/>
+ actuel.</param>
+	<returns>true si l'objet <see cref="T:System.Object"/> spécifié est égal à l'objet <see cref="T:System.Object"/> en cours ; sinon, false.</returns>
+</member><member name="T:Corail.Less.LessValueRaw">
+	<summary>
+ Chaine brute.
+ </summary>
+</member><member name="M:Corail.Less.LessValueOr.#ctor(Corail.Less.LessBuildContext,System.Object[])">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_context"></param>
+	<param name="p_o_args"></param>
+</member><member name="M:Corail.Less.LessValueOr.OnEvaluate(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur calculée correspondant à l'élément en cours.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<returns>La valeur calculée correspondant à l'élément en cours.</returns>
+</member><member name="M:Corail.Less.LessValueOr.EvalToRaw(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la représentation sous forme de liste séparée par des virgules.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<returns>La représentation sous forme de liste séparée par des virgules.</returns>
+</member><member name="M:Corail.Less.LessValueOr.ToString">
+	<summary>
+ Retourne une chaîne qui représente l'objet actuel.
+ </summary>
+	<returns>Chaîne qui représente l'objet en cours.</returns>
+</member><member name="T:Corail.Less.LessValueOr">
+	<summary>
+ Couple de valeurs séparées par des vigules.
+ </summary>
+</member><member name="P:Corail.Less.LessValueOperator.Operator">
+	<summary>
+ Opérateur.
+ </summary>
+	<value>Opérateur.</value>
+	<returns>Opérateur.</returns>
+</member><member name="M:Corail.Less.LessValueOperator.#ctor(System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_operator"></param>
+</member><member name="M:Corail.Less.LessValueOperator.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="T:Corail.Less.LessValueOperator">
+	<summary>
+ Opérateur.
+ </summary>
+</member><member name="M:Corail.Less.LessValueNumber.#ctor(System.Double,Corail.Less.LessValueNumberUnit)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_d_value"></param>
+	<param name="p_i_unit"></param>
+</member><member name="M:Corail.Less.LessValueNumber.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.AsDouble">
+	<summary>
+ Retourne la valeur en cours au format numérique.
+ </summary>
+	<returns>La valeur en cours au format numérique.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.AsUnit">
+	<summary>
+ Retourne l'unité de la valeur.
+ </summary>
+	<returns>L'unité de la valeur.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.AsRatio">
+	<summary>
+ Retourne le ratio représenté par la valeur.
+ </summary>
+	<returns>Le ratio représenté par la valeur.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.AsBoolean">
+	<summary>
+ Représente la valeur en cour au format booléen.
+ </summary>
+	<returns>Représente la valeur en cour au format booléen.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.CalcAdd(Corail.Less.LessValue)">
+	<summary>
+ Retourne le résultat de l'ajout à la valeur en cours.
+ </summary>
+	<param name="p_o_value">Valeur à ajouter.</param>
+	<returns>Le résultat de l'ajout à la valeur en cours.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.CalcSubstract(Corail.Less.LessValue)">
+	<summary>
+ Retourne le résultat de la soustraction à la valeur en cours.
+ </summary>
+	<param name="p_o_value">Valeur à enlever.</param>
+	<returns>Le résultat de la soustraction à la valeur en cours.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.CalcMultiply(Corail.Less.LessValue)">
+	<summary>
+ Retourne le résultat de la multiplication avec la valeur en cours.
+ </summary>
+	<param name="p_o_value">Valeur à multiplier.</param>
+	<returns>Le résultat de la multiplication avec la valeur en cours.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.CalcDivideBy(Corail.Less.LessValue)">
+	<summary>
+ Retourne le résultat de division de la valeur en cours.
+ </summary>
+	<param name="p_o_value">Valeur avec laquel diviser.</param>
+	<returns>Le résultat de division de la valeur en cours.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.Equals(System.Object)">
+	<summary>
+ Détermine si l'objet <see cref="T:System.Object"/> spécifié est égal à l'objet <see cref="T:System.Object"/> actuel.
+ </summary>
+	<param name="p_o_other"><see cref="T:System.Object"/> à comparer avec le <see cref="T:System.Object"/>
+ actuel.</param>
+	<returns>true si l'objet <see cref="T:System.Object"/> spécifié est égal à l'objet <see cref="T:System.Object"/> en cours ; sinon, false.</returns>
+</member><member name="M:Corail.Less.LessValueNumber.CompareTo(Corail.Less.LessValue)">
+	<summary>
+ Compare l'objet en cours à un autre objet du même type.
+ </summary>
+	<param name="p_o_other"></param>
+	<returns>Entier signé 32 bits qui indique l'ordre relatif des objets comparés. La valeur de retour a les
+ significations suivantes :
+ Valeur Signification Inférieure à zéro Cet objet est inférieur au paramètre <paramref name="other"/>.
+ Zéro Cet objet est égal à <paramref name="other"/>.  Supérieure à zéro Cet objet est supérieur à
+ <paramref name="other"/>.</returns>
+</member><member name="T:Corail.Less.LessValueNumber">
+	<summary>
+ Nombre avec une unité (non obligatoire).
+ </summary>
+</member><member name="M:Corail.Less.LessValueFunction.#ctor(Corail.Less.LessBuildContext,Corail.Less.LessAtomOperator,System.Object[])">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_operator">Opérateur.</param>
+	<param name="p_o_args">Paramètres de l'opérateur.</param>
+</member><member name="M:Corail.Less.LessValueFunction.#ctor(Corail.Less.LessBuildContext,Corail.Less.LessValueFunction.OperatorFunction,System.Object[])">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_i_operator">Opérateur.</param>
+	<param name="p_o_args">Paramètres de l'opérateur.</param>
+</member><member name="M:Corail.Less.LessValueFunction.GetArguments(Corail.Less.LessBuildContext,System.Object[])">
+	<summary>
+ Retourne la liste des arguments calculés.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_args">Arguments non évalués.</param>
+	<returns>La liste des arguments calculés.</returns>
+</member><member name="M:Corail.Less.LessValueFunction.#ctor(Corail.Less.LessBuildContext,Corail.Less.LessAtomRaw,Corail.Less.LessAtomBrackets)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_name">Nom de la fonction.</param>
+	<param name="p_o_param">Paramètres de la fonction.</param>
+</member><member name="M:Corail.Less.LessValueFunction.OnEvaluate(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur calculée correspondant à l'élément en cours.
+ </summary>
+	<returns>La valeur calculée correspondant à l'élément en cours.</returns>
+</member><member name="M:Corail.Less.LessValueFunction.SPrintF(System.Collections.Generic.List{Corail.Less.LessValue})">
+	<summary>
+ Retourne la chaine formatée en utilisant les masques C.
+ </summary>
+	<param name="p_o_args">Arguments à utiliser.</param>
+	<returns>La chaine formatée en utilisant les masques C.</returns>
+</member><member name="M:Corail.Less.LessValueFunction.GetCssFunction(System.String,System.Collections.Generic.List{Corail.Less.LessValue})">
+	<summary>
+ Format l'appel de la fonction CSS.
+ </summary>
+	<param name="p_s_name">Nom de la fonction.</param>
+	<param name="p_o_args">Paramètres de la fonction.</param>
+	<returns>Format l'appel de la fonction CSS.</returns>
+</member><member name="M:Corail.Less.LessValueFunction.IsRelative(System.Collections.Generic.List{Corail.Less.LessValue},System.Int32)">
+	<summary>
+ Indique si le paramètre doit être calculé relativement à sa valeur actuelle.
+ </summary>
+	<param name="p_o_args">Paramètres de la fonction.</param>
+	<param name="p_i_index">Index du paramètre.</param>
+	<returns><c>True</c> si le paramètre doit être calculé relativement à sa valeur actuelle; <c>False</c>
+ sinon.</returns>
+</member><member name="M:Corail.Less.LessValueFunction.Calculate(Corail.Less.LessValueFunction.OperatorFunction,Corail.Less.LessValue,Corail.Less.LessValue)">
+	<summary>
+ Retourne la valeur calculée pour l'opération.
+ </summary>
+	<param name="p_i_operator">Opérateur.</param>
+	<param name="p_o_argA">Premier argument.</param>
+	<param name="p_o_argB">Second argument.</param>
+	<returns>La valeur calculée pour l'opération.</returns>
+</member><member name="M:Corail.Less.LessValueFunction.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="T:Corail.Less.LessValueFunction">
+	<summary>
+ Fonction Less.
+ </summary>
+</member><member name="F:Corail.Less.LessValueColor.m_r_alpha">
+ Transparence (0-1). (On n'utilise pas la transaprence définie dans l'objet couleur car elle manque de
+ précision).
+
+</member><member name="F:Corail.Less.LessValueColor.m_o_color">
+ Couleur.
+
+</member><member name="P:Corail.Less.LessValueColor.Color">
+	<summary>
+ Couleur.
+ </summary>
+	<value>Couleur.</value>
+	<returns>Couleur.</returns>
+</member><member name="M:Corail.Less.LessValueColor.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="M:Corail.Less.LessValueColor.FormatRGBA(System.Double)">
+	<summary>
+ Retourne la valeur alpha formatée avec 3 chiffres significatifs et sans le 0 avant le séparateur de
+ décimal.
+ </summary>
+	<param name="p_f">Valeur.</param>
+	<returns>La valeur alpha formatée avec 3 chiffres significatifs et sans le 0 avant le séparateur de
+ décimal.</returns>
+</member><member name="M:Corail.Less.LessValueColor.FromAhsl(System.Double,System.Double,System.Double,System.Double)">
+	<summary>
+ Retourne la couleur à partir de son code HSL.
+ </summary>
+	<param name="p_r_alpha">Transparence (0-1).</param>
+	<param name="p_r_angle">Teinte (0-360).</param>
+	<param name="p_r_saturation">Saturation (0-1).</param>
+	<param name="p_r_light">Luminosité (0-1).</param>
+	<returns>La couleur à partir de son code HSL.</returns>
+</member><member name="M:Corail.Less.LessValueColor.Fade(System.Double)">
+	<summary>
+ Retourne la couleur en changeant la transparence.
+ </summary>
+	<param name="p_r_alpha">Transparence (0-1).</param>
+	<returns>La couleur en changeant la transparence.</returns>
+</member><member name="M:Corail.Less.LessValueColor.FadeInOut(System.Double,System.Boolean)">
+	<summary>
+ Retourne la couleur dont la transparence a été modifiée.
+ </summary>
+	<param name="p_r_ratio">Valeur entre -1 et 1.</param>
+	<returns>Augmente (Fadein) ou diminue (Fadeout) suivant que le ratio passé soit positif ou négatif.
+ </returns>
+</member><member name="T:Corail.Less.LessValueColor">
+	<summary>
+ Valeur représentant une couleur.
+ </summary>
+</member><member name="M:Corail.Less.LessValueBrackets.#ctor(Corail.Less.LessBuildContext,System.Collections.Generic.IEnumerable{Corail.Less.LessAtom})">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_atoms">Parties de chaine du fichier LESS.</param>
+</member><member name="T:Corail.Less.LessValueBrackets">
+	<summary>
+ Valeurs regroupées entre parenthèses.
+ </summary>
+</member><member name="T:Corail.Less.LessValueBoolean">
+	<summary>
+ Valeur booléenne
+ </summary>
+</member><member name="P:Corail.Less.LessValue.ToEvaluate">
+	<summary>
+ Indique si la valeur doit être calculée.
+ </summary>
+	<value><c>True</c> si la valeur doit être calculée; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la valeur doit être calculée; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.LessValue.OnEvaluate(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur calculée correspondant à l'élément en cours.
+ </summary>
+	<returns>La valeur calculée correspondant à l'élément en cours.</returns>
+</member><member name="M:Corail.Less.LessValue.Eval(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur calculée de l'élement en cours.
+ </summary>
+	<returns>La valeur calculée de l'élement en cours.</returns>
+</member><member name="M:Corail.Less.LessValue.EvalToString(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la chaine à inscrire dans le fichier CSS de sortie.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<returns>La chaine à inscrire dans le fichier CSS de sortie.</returns>
+</member><member name="M:Corail.Less.LessValue.ToInterpolationString">
+	<summary>
+ Retourne la chaine à utiliser pour une interpolation "@{variable}".
+ </summary>
+	<returns>La chaine à utiliser pour une interpolation "@{variable}".</returns>
+</member><member name="M:Corail.Less.LessValue.AsDouble">
+	<summary>
+ Retourne la valeur en cours au format numérique.
+ </summary>
+	<returns>La valeur en cours au format numérique.</returns>
+</member><member name="M:Corail.Less.LessValue.AsUnit">
+	<summary>
+ Retourne l'unité de la valeur.
+ </summary>
+	<returns>L'unité de la valeur.</returns>
+</member><member name="M:Corail.Less.LessValue.AsRatio">
+	<summary>
+ Retourne le ratio représenté par la valeur.
+ </summary>
+	<returns>Le ratio représenté par la valeur.</returns>
+</member><member name="M:Corail.Less.LessValue.AsBoolean">
+	<summary>
+ Représente la valeur en cour au format booléen.
+ </summary>
+	<returns>Représente la valeur en cour au format booléen.</returns>
+</member><member name="M:Corail.Less.LessValue.CalcAdd(Corail.Less.LessValue)">
+	<summary>
+ Retourne le résultat de l'ajout à la valeur en cours.
+ </summary>
+	<param name="p_o_value">Valeur à ajouter.</param>
+	<returns>Le résultat de l'ajout à la valeur en cours.</returns>
+</member><member name="M:Corail.Less.LessValue.CalcSubstract(Corail.Less.LessValue)">
+	<summary>
+ Retourne le résultat de la soustraction à la valeur en cours.
+ </summary>
+	<param name="p_o_value">Valeur à enlever.</param>
+	<returns>Le résultat de la soustraction à la valeur en cours.</returns>
+</member><member name="M:Corail.Less.LessValue.CalcMultiply(Corail.Less.LessValue)">
+	<summary>
+ Retourne le résultat de la multiplication avec la valeur en cours.
+ </summary>
+	<param name="p_o_value">Valeur à multiplier.</param>
+	<returns>Le résultat de la multiplication avec la valeur en cours.</returns>
+</member><member name="M:Corail.Less.LessValue.CalcDivideBy(Corail.Less.LessValue)">
+	<summary>
+ Retourne le résultat de division de la valeur en cours.
+ </summary>
+	<param name="p_o_value">Valeur avec laquel diviser.</param>
+	<returns>Le résultat de division de la valeur en cours.</returns>
+</member><member name="M:Corail.Less.LessValue.Equals(System.Object)">
+	<summary>
+ Détermine si l'objet <see cref="T:System.Object"/> spécifié est égal à l'objet <see cref="T:System.Object"/> actuel.
+ </summary>
+	<param name="p_o_other"><see cref="T:System.Object"/> à comparer avec le <see cref="T:System.Object"/> actuel.
+ </param>
+	<returns>true si l'objet <see cref="T:System.Object"/> spécifié est égal à l'objet <see cref="T:System.Object"/> en cours ; sinon, false.</returns>
+</member><member name="M:Corail.Less.LessValue.CompareTo(Corail.Less.LessValue)">
+	<summary>
+ Compare l'objet en cours à un autre objet du même type.
+ </summary>
+	<param name="p_o_other">Objet à comparer avec cet objet.</param>
+	<returns>Entier signé 32 bits qui indique l'ordre relatif des objets comparés. La valeur de retour a les
+ significations suivantes :
+ Valeur Signification Inférieure à zéro Cet objet est inférieur au paramètre <paramref name="other"/>.
+ Zéro Cet objet est égal à <paramref name="other"/>.  Supérieure à zéro Cet objet est supérieur à
+ <paramref name="other"/>.</returns>
+</member><member name="T:Corail.Less.LessValue">
+	<summary>
+ Valeur d'un élément.
+ </summary>
+</member><member name="F:Corail.Less.LessContextualValue.m_o_context">
+ Contexte de génération en cours.
+
+</member><member name="P:Corail.Less.LessContextualValue.DeclarationContext">
+	<summary>
+ Contexte de la partie dans la chaine.
+ </summary>
+	<value>Contexte de la partie dans la chaine.</value>
+	<returns>Contexte de la partie dans la chaine.</returns>
+</member><member name="P:Corail.Less.LessContextualValue.ToEvaluate">
+	<summary>
+ Indique si la valeur doit être calculée.
+ </summary>
+	<value><c>True</c> si la valeur doit être calculée; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la valeur doit être calculée; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.LessContextualValue.#ctor(Corail.Less.LessBuildContext)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="T:Corail.Less.LessContextualValue">
+	<summary>
+ Valeur dépendant du contexte.
+ </summary>
+</member><member name="M:Corail.Less.LessValueNot.#ctor(Corail.Less.LessBuildContext,System.Object[])">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_context"></param>
+	<param name="p_o_args"></param>
+</member><member name="M:Corail.Less.LessValueNot.OnEvaluate(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur calculée correspondant à l'élément en cours.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<returns>La valeur calculée correspondant à l'élément en cours.</returns>
+</member><member name="M:Corail.Less.LessValueNot.ToString">
+	<summary>
+ Retourne une chaîne qui représente l'objet actuel.
+ </summary>
+	<returns>Chaîne qui représente l'objet en cours.</returns>
+</member><member name="T:Corail.Less.LessValueNot">
+	<summary>
+ Couple de valeurs séparées par des vigules.
+ </summary>
+</member><member name="M:Corail.Less.LessValueBrowser.#ctor(Corail.Less.BrowserVersion)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_browser">Version de navigateur.</param>
+</member><member name="M:Corail.Less.LessValueBrowser.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actif.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actif.</returns>
+</member><member name="M:Corail.Less.LessValueBrowser.AsDouble">
+	<summary>
+ Retourne la valeur en cours au format numérique.
+ </summary>
+	<returns>La valeur en cours au format numérique.</returns>
+</member><member name="M:Corail.Less.LessValueBrowser.Equals(System.Object)">
+	<summary>
+ Détermine si l'objet <see cref="T:System.Object"/> spécifié est égal à l'objet <see cref="T:System.Object"/> actuel.
+ </summary>
+	<param name="p_o_other"><see cref="T:System.Object"/> à comparer avec le <see cref="T:System.Object"/> actuel.
+ </param>
+	<returns>true si l'objet <see cref="T:System.Object"/> spécifié est égal à l'objet <see cref="T:System.Object"/> en cours ; sinon, false.</returns>
+</member><member name="M:Corail.Less.LessValueBrowser.CompareTo(Corail.Less.LessValue)">
+	<summary>
+ Compare l'objet en cours à un autre objet du même type.
+ </summary>
+	<param name="p_o_other">Objet à comparer avec cet objet.</param>
+	<returns>Entier signé 32 bits qui indique l'ordre relatif des objets comparés. La valeur de retour a les
+ significations suivantes :
+ Valeur Signification Inférieure à zéro Cet objet est inférieur au paramètre <paramref name="other"/>.
+ Zéro Cet objet est égal à <paramref name="other"/>.  Supérieure à zéro Cet objet est supérieur à
+ <paramref name="other"/>.</returns>
+</member><member name="T:Corail.Less.LessValueBrowser">
+	<summary>
+ Variable contenant les informations du navigateur pour lequel on génère le CSS.
+ </summary>
+</member><member name="F:Corail.Less.LessNodeSelector.m_o_atoms">
+ Eléments de définition
+
+</member><member name="F:Corail.Less.LessNodeSelector.m_o_selectors">
+ Liste des sélecteurs pour le noeud.
+
+</member><member name="P:Corail.Less.LessNodeSelector.HasAttribute">
+	<summary>
+ Indique s'il s'agit d'un noeud regroupant des "Mixin".
+ </summary>
+	<value>Indique s'il s'agit d'un noeud regroupant des "Mixin".</value>
+	<returns>Indique s'il s'agit d'un noeud regroupant des "Mixin".</returns>
+</member><member name="P:Corail.Less.LessNodeSelector.ParametersCount">
+	<summary>
+ Retourne le nombre de paramètres définis pour le mixin.
+ </summary>
+	<value>Le nombre de paramètres définis pour le mixin.</value>
+	<returns>Le nombre de paramètres définis pour le mixin.</returns>
+</member><member name="M:Corail.Less.LessNodeSelector.#ctor(Corail.Less.LessNode,Corail.Less.LessAtomList)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_parent">Noeud parent.</param>
+	<param name="p_o_atoms">Parties de chaine du fichier LESS.</param>
+</member><member name="M:Corail.Less.LessNodeSelector.Init">
+	<summary>
+ Initialisation du noeud.
+ </summary>
+</member><member name="M:Corail.Less.LessNodeSelector.RenderName(Corail.Less.LessWriter)">
+	<summary>
+ Rendu du nom du noeud sans les accolades.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessNodeSelector.IsMixin">
+	<summary>
+ Indique si le noeud en cours peut-être appellé en tant que "Mixin".
+ </summary>
+	<returns><c>True</c> si le noeud en cours peut-être appellé en tant que "Mixin"; <c>False</c> sinon.
+ </returns>
+</member><member name="M:Corail.Less.LessNodeSelector.GetMixinName">
+	<summary>
+ Retourne le nom à partir duquel le noeud actuel peut être appellé en tant que mixin.
+ </summary>
+	<returns>Le nom à partir duquel le noeud actuel peut être appellé en tant que mixin.</returns>
+</member><member name="M:Corail.Less.LessNodeSelector.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessNodeSelector.AddSelectorItem(Corail.Less.LessBuildContext,System.Int32)">
+	<summary>
+ Construction du sélecteur et ajout du noeud CSS correspondant.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessNodeSelector.AddInterpolatedSelectors(Corail.Less.LessBuildContext,System.Collections.Generic.List{System.String},System.Text.StringBuilder)">
+	<summary>
+ Retourne la liste des sélecteurs à partir d'ue chaine de caractère contenant potentiellement des ",".
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_selectors">Liste des sélecteurs pour le noeud.</param>
+	<param name="p_sb">Buffer.</param>
+</member><member name="M:Corail.Less.LessNodeSelector.GetNamespace">
+	<summary>
+ Retourne l'espace de nom auquel appartient le noeud actuel.
+ </summary>
+	<returns>L'espace de nom auquel appartient le noeud actuel.</returns>
+</member><member name="M:Corail.Less.LessNodeSelector.LoadParameters(Corail.Less.LessBuildContext,Corail.Less.LessParameterList)">
+	<summary>
+ Chargement des valeurs des paramètres.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_parameters">Paramètres.</param>
+	<returns>Retourne <c>True</c> si les paramètres ont pu être renseignés, <c>False</c> sinon.</returns>
+</member><member name="T:Corail.Less.LessNodeSelector">
+	<summary>
+ Noeud contenant un sélecteur CSS.
+ </summary>
+</member><member name="P:Corail.Less.LessNodeRoot.Document">
+	<summary>
+ Document LESS contenant le noeud racine.
+ </summary>
+	<value>Document LESS contenant le noeud racine.</value>
+	<returns>Document LESS contenant le noeud racine.</returns>
+</member><member name="M:Corail.Less.LessNodeRoot.#ctor(Corail.Less.LessDocument)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_document">Document LESS contenant le noeud racine.</param>
+</member><member name="M:Corail.Less.LessNodeRoot.RenderName(Corail.Less.LessWriter)">
+	<summary>
+ Rendu du nom du noeud sans les accolades.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessNodeRoot.GetNamespace">
+	<summary>
+ Retourne l'espace de nom auquel appartient le noeud actuel.
+ </summary>
+	<returns>L'espace de nom auquel appartient le noeud actuel.</returns>
+</member><member name="M:Corail.Less.LessNodeRoot.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="T:Corail.Less.LessNodeRoot">
+	<summary>
+ Noeud représentant le document.
+ </summary>
+</member><member name="P:Corail.Less.LessNodeMixin.ParametersCount">
+	<summary>
+ Retourne le nombre de paramètres définis pour le mixin.
+ </summary>
+	<value>Le nombre de paramètres définis pour le mixin.</value>
+	<returns>Le nombre de paramètres définis pour le mixin.</returns>
+</member><member name="M:Corail.Less.LessNodeMixin.IsMixin">
+	<summary>
+ Indique si le noeud en cours peut-être appellé en tant que "Mixin".
+ </summary>
+	<returns><c>True</c> si le noeud en cours peut-être appellé en tant que "Mixin"; <c>False</c> sinon.
+ </returns>
+</member><member name="M:Corail.Less.LessNodeMixin.GetMixinName">
+	<summary>
+ Retourne le nom à partir duquel le noeud actuel peut être appellé en tant que mixin.
+ </summary>
+	<returns>Le nom à partir duquel le noeud actuel peut être appellé en tant que mixin.</returns>
+</member><member name="M:Corail.Less.LessNodeMixin.GetNamespace">
+	<summary>
+ Retourne l'espace de nom auquel appartient le noeud actuel.
+ </summary>
+	<returns>L'espace de nom auquel appartient le noeud actuel.</returns>
+</member><member name="M:Corail.Less.LessNodeMixin.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessNodeMixin.LoadParameters(Corail.Less.LessBuildContext,Corail.Less.LessParameterList)">
+	<summary>
+ Chargement des valeurs des paramètres.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_parameters">Paramètres.</param>
+	<returns>Retourne <c>True</c> si les paramètres ont pu être renseignés, <c>False</c> sinon.</returns>
+</member><member name="T:Corail.Less.LessNodeMixin">
+	<summary>
+ Définition d'un "Mixin" LESS.
+ </summary>
+</member><member name="M:Corail.Less.LessNodeMedia.#ctor(Corail.Less.LessNode,Corail.Less.LessAtomList)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_parent">Noeud parent.</param>
+	<param name="p_o_atom">Contenu du noeud parent.</param>
+</member><member name="M:Corail.Less.LessNodeMedia.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessNodeMedia.GetNamespace">
+	<summary>
+ Retourne l'espace de nom auquel appartient le noeud actuel.
+ </summary>
+	<returns>L'espace de nom auquel appartient le noeud actuel.</returns>
+</member><member name="T:Corail.Less.LessNodeMedia">
+	<summary>
+ Noeud de définition d'une balise @media.
+ </summary>
+</member><member name="M:Corail.Less.LessBuildException.#ctor(Corail.Less.LessItem,System.Exception)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_item">Elément.</param>
+	<param name="p_o_ex">Exception originale.</param>
+</member><member name="T:Corail.Less.LessBuildException">
+	<summary>
+ Exception produite lors l'interprétation d'un noeud.
+ </summary>
+</member><member name="F:Corail.Less.LessNodeCustomMixin.m_o_when">
+ Condition d'affichage du noeud.
+
+</member><member name="P:Corail.Less.LessNodeCustomMixin.ParametersCount">
+	<summary>
+ Retourne le nombre de paramètres définis pour le mixin.
+ </summary>
+	<value>Le nombre de paramètres définis pour le mixin.</value>
+	<returns>Le nombre de paramètres définis pour le mixin.</returns>
+</member><member name="M:Corail.Less.LessNodeCustomMixin.#ctor(Corail.Less.LessNode)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_parent">Noeud parent.</param>
+</member><member name="M:Corail.Less.LessNodeCustomMixin.GetMixinName">
+	<summary>
+ Retourne le nom à partir duquel le noeud actuel peut être appellé en tant que mixin.
+ </summary>
+	<returns>Le nom à partir duquel le noeud actuel peut être appellé en tant que mixin.</returns>
+</member><member name="M:Corail.Less.LessNodeCustomMixin.LoadParameters(Corail.Less.LessBuildContext,Corail.Less.LessParameterList)">
+	<summary>
+ Chargement des valeurs des paramètres.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_parameters">Paramètres.</param>
+	<returns>Retourne <c>True</c> si les paramètres ont pu être renseignés, <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.LessNodeCustomMixin.OnCall(Corail.Less.LessBuildContext,Corail.Less.LessParameterList)">
+	<summary>
+ Ajoute le contenu du Mixin au fichier CSS en fonction des paramètres.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_parameters">Paramètres.</param>
+</member><member name="M:Corail.Less.LessNodeCustomMixin.InitWhen(Corail.Less.LessAtomWhen)">
+	<summary>
+ Définition de la condition.
+ </summary>
+	<param name="p_o_when">Condition.</param>
+</member><member name="M:Corail.Less.LessNodeCustomMixin.TestWhen(Corail.Less.LessBuildContext)">
+	<summary>
+ Indique si le mixin répond aux conditions de son insertion.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<returns><c>True</c> si le mixin répond aux conditions de son insertion; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.LessNodeCustomMixin.RenderWhen(Corail.Less.LessWriter)">
+	<summary>
+ Rendu de la condition.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="T:Corail.Less.LessNodeCustomMixin">
+	<summary>
+ Mixin ou sélecteur simple.
+ </summary>
+</member><member name="F:Corail.Less.LessNodeAtRule.m_i_kind">
+ Type de règle CSS.
+
+</member><member name="F:Corail.Less.LessNodeAtRule.m_o_content">
+ Déclaration du noeud.
+
+</member><member name="P:Corail.Less.LessNodeAtRule.Content">
+	<summary>
+ Définition de la règle.
+ </summary>
+	<value>Définition de la règle.</value>
+	<returns>Définition de la règle.</returns>
+</member><member name="P:Corail.Less.LessNodeAtRule.Kind">
+	<summary>
+ Type de règle CSS.
+ </summary>
+	<value>Type de règle CSS.</value>
+	<returns>Type de règle CSS.</returns>
+</member><member name="M:Corail.Less.LessNodeAtRule.#ctor(Corail.Less.LessNode,Corail.Less.LessAtomList,Corail.Less.LessNodeAtRuleKind)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_parent">Noeud parent.</param>
+	<param name="p_o_atom">Contenu du noeud parent.</param>
+</member><member name="M:Corail.Less.LessNodeAtRule.GetKind(Corail.Less.LessAtomList)">
+	<summary>
+ Retourne le type de "At Rule".
+ </summary>
+	<param name="p_o_atom">Définition de la règle @.</param>
+	<returns>Le type de "At Rule".</returns>
+</member><member name="M:Corail.Less.LessNodeAtRule.RenderName(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu Less du noeud.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessNodeAtRule.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessNodeAtRule.GetNamespace">
+	<summary>
+ Retourne l'espace de nom auquel appartient le noeud actuel.
+ </summary>
+	<returns>L'espace de nom auquel appartient le noeud actuel.</returns>
+</member><member name="T:Corail.Less.LessNodeAtRule">
+	<summary>
+ Noeud contenant une "AtRule CSS".
+ </summary>
+</member><member name="F:Corail.Less.LessNode.m_o_parent">
+ Noeud parent.
+
+</member><member name="F:Corail.Less.LessNode.m_o_items">
+ Eléments contenus dans le noeud en cours.
+
+</member><member name="F:Corail.Less.LessNode.m_o_mixins">
+ Dictionnaire des définitions de Mixin.
+
+</member><member name="P:Corail.Less.LessNode.Document">
+	<summary>
+ Document LESS principal.
+ </summary>
+	<value>Document LESS principal.</value>
+	<returns>Document LESS principal.</returns>
+</member><member name="P:Corail.Less.LessNode.Items">
+	<summary>
+ Eléments contenus dans le noeud en cours.
+ </summary>
+	<value>Eléments contenus dans le noeud en cours.</value>
+	<returns>Eléments contenus dans le noeud en cours.</returns>
+</member><member name="P:Corail.Less.LessNode.ParentNode">
+	<summary>
+ Noeud parent du noeud en cours.
+ </summary>
+	<value>Noeud parent du noeud en cours.</value>
+	<returns>Noeud parent du noeud en cours.</returns>
+</member><member name="M:Corail.Less.LessNode.AddAtom(Corail.Less.LessAtomListLoader)">
+	<summary>
+ Ajout d'un élément sous un noeud.
+ </summary>
+	<param name="p_o_atom">Contenu de l'élément.</param>
+</member><member name="M:Corail.Less.LessNode.AddItem(Corail.Less.LessItem)">
+	<summary>
+ Ajout d'un élément interprété.
+ </summary>
+	<param name="p_o_item">Elément.</param>
+</member><member name="M:Corail.Less.LessNode.AddChild(System.String)">
+	<summary>
+ Ajoute un nouveau sous noeud et retourne le nouveau noeud.
+ </summary>
+	<param name="p_s_sel">Sélecteur pour le noeud.</param>
+	<returns>Le nouveau noeud.</returns>
+</member><member name="M:Corail.Less.LessNode.Render(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu LESS du document.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessNode.RenderName(Corail.Less.LessWriter)">
+	<summary>
+ Rendu du nom du noeud sans les accolades.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessNode.RenderChildren(Corail.Less.LessWriter)">
+	<summary>
+ Rendu des sous éléments du noeud.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessNode.BuildChildren(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessNode.GetNamespace">
+	<summary>
+ Retourne l'espace de nom auquel appartient le noeud actuel.
+ </summary>
+	<returns>L'espace de nom auquel appartient le noeud actuel.</returns>
+</member><member name="M:Corail.Less.LessNode.LoadVariables(Corail.Less.LessBuildContext)">
+	<summary>
+ Chargement des variables définies dans le noeud en cours.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessNode.IsMixin">
+	<summary>
+ Indique si le noeud en cours peut-être appellé en tant que "Mixin".
+ </summary>
+	<returns><c>True</c> si le noeud en cours peut-être appellé en tant que "Mixin"; <c>False</c> sinon.
+ </returns>
+</member><member name="M:Corail.Less.LessNode.OnLoadMixins(Corail.Less.LessBuildContext)">
+	<summary>
+ Chargement des mixins définis dans l'élément en cours.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessNode.LoadMixins(Corail.Less.LessBuildContext)">
+	<summary>
+ Chargement des mixins définis dans l'élément en cours.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessNode.RegisterMixin(Corail.Less.LessBuildContext,Corail.Less.LessNodeCustomMixin)">
+	<summary>
+ Enregistrement du nom du mixin dans le noeud parent.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_mixin">Noeud de définition du mixin.</param>
+</member><member name="M:Corail.Less.LessNode.RegisterNamespaceMixin(Corail.Less.LessBuildContext,Corail.Less.LessNodeCustomMixin,System.String,System.String)">
+	<summary>
+ Enregistrement des mixin avec espace de nom dans le contexte.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_o_mixin">Noeud de définition du mixin.</param>
+	<param name="p_s_namespace">L'espace de nom du mixin.</param>
+	<param name="p_s_name">Nom du mixin.</param>
+</member><member name="M:Corail.Less.LessNode.GetMixinFullName(System.String,System.String)">
+	<summary>
+ Retourne le nom du mixin avec son espace de nom s'il en a un.
+ </summary>
+	<param name="p_s_namespace">L'espace de nom du "Mixin".</param>
+	<param name="p_s_name">Nom du mixin.</param>
+	<returns>Le nom du mixin avec son espace de nom s'il en a un.</returns>
+</member><member name="M:Corail.Less.LessNode.TryGetParentNodeMixins(System.String,Corail.Less.LessNodeMixinList@)">
+	<summary>
+ Retourne la liste des Mixins à insérer.
+ </summary>
+	<param name="p_s_fullName">Nom complet du mixin.</param>
+	<returns>La liste des Mixins à insérer.</returns>
+</member><member name="M:Corail.Less.LessNode.GetEnumeratorGen">
+	<summary>
+ Retourne un énumérateur qui parcourt la collection.
+ </summary>
+	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour parcourir la
+ collection.</returns>
+</member><member name="M:Corail.Less.LessNode.GetEnumerator">
+	<summary>
+ Retourne un énumérateur qui parcourt la collection.
+ </summary>
+	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour parcourir la
+ collection.</returns>
+</member><member name="T:Corail.Less.LessNode">
+	<summary>
+ Noeud d'un fichier LESS.
+ </summary>
+</member><member name="P:Corail.Less.My.Resources.Resources.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:Corail.Less.My.Resources.Resources.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="T:Corail.Less.My.Resources.Resources">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="M:Corail.Less.LessSourceProvider.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Less.LessSourceProvider.#ctor(System.String,System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_less">Contenu du fichier Less.</param>
+	<param name="p_s_path">Gestionnaire de fichiers inclus.</param>
+</member><member name="M:Corail.Less.LessSourceProvider.Import(System.String,System.String)">
+	<summary>
+ Ajout d'un contenu à l'emplacement actuelle de la lecture.
+ </summary>
+	<param name="p_s_less">Contenu du fichier Less.</param>
+	<param name="p_s_folder">Dossier contenant le fichier Less.</param>
+</member><member name="M:Corail.Less.LessSourceProvider.MoveNext">
+	<summary>
+ On se place sur le prochain caractère et on retourne <c>True</c>si il reste des caractères à charger.
+ </summary>
+	<returns><c>True</c>si il reste des caractères à charger.</returns>
+</member><member name="M:Corail.Less.LessSourceProvider.GetChar">
+	<summary>
+ Retourne le caractère le position actuelle.
+ </summary>
+	<returns>Le caractère le position actuelle.</returns>
+</member><member name="T:Corail.Less.LessSourceProvider">
+	<summary>
+ Fournisseur de contenu Less.
+ </summary>
+</member><member name="F:Corail.Less.LessSource.m_s_folder">
+ Dossier contenant le fichier LESS
+
+</member><member name="F:Corail.Less.LessSource.m_s_content">
+ Contenu du fichier Less.
+
+</member><member name="F:Corail.Less.LessSource.m_i_pos">
+ Position de la lecture.
+
+</member><member name="F:Corail.Less.LessSource.m_i_len">
+ Longueur de la chaine de caractères.
+
+</member><member name="M:Corail.Less.LessSource.#ctor(System.String,System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_less">Contenu du fichier Less.</param>
+	<param name="m_s_folder">Dossier contenant le fichier Less.</param>
+</member><member name="M:Corail.Less.LessSource.CleanUp(System.String)">
+	<summary>
+ Enleve les commentaires, les espaces inutiles et les retour à la ligne d'un fichier CSS
+ </summary>
+	<param name="p_s_text">Contenu d'un fichier CSS</param>
+	<returns></returns>
+</member><member name="M:Corail.Less.LessSource.MoveNext">
+	<summary>
+ On se place sur le prochain caractère et on retourne <c>True</c>si il reste des caractères à charger.
+ </summary>
+	<returns><c>True</c>si il reste des caractères à charger.</returns>
+</member><member name="M:Corail.Less.LessSource.GetChar">
+	<summary>
+ Retourne le caractère le position actuelle.
+ </summary>
+	<returns>Le caractère le position actuelle.</returns>
+</member><member name="T:Corail.Less.LessSource">
+	<summary>
+ Classe permettant de charger le contenu d'un fichier Less.
+ </summary>
+</member><member name="F:Corail.Less.LessImportManager.m_s_rootPath">
+ Dossier racine de réréference.
+
+</member><member name="P:Corail.Less.LessImportManager.RootPath">
+	<summary>
+ Dossier de référence pour la recherche de ficier Less.
+ </summary>
+	<value>Dossier de référence pour la recherche de ficier Less.</value>
+	<returns>Dossier de référence pour la recherche de ficier Less.</returns>
+</member><member name="M:Corail.Less.LessImportManager.#ctor(System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_rootPath">Dossier racine de réréference.</param>
+</member><member name="M:Corail.Less.LessImportManager.ResolvePath(System.String)">
+	<summary>
+ Retourne le chemin complet du fichier à inclure à partir d'un chemin relatif.
+ </summary>
+	<param name="p_s_include"></param>
+	<returns>Le chemin complet du fichier à inclure à partir d'un chemin relatif.</returns>
+</member><member name="M:Corail.Less.LessImportManager.GetLessContent(System.String)">
+	<summary>
+ Retourne le contenu du fichier LESS dont le chemin est passé en paramètre.
+ </summary>
+	<param name="p_s_filename">Chemin du fichier LESS.</param>
+	<returns>Le contenu du fichier LESS dont le chemin est passé en paramètre.</returns>
+</member><member name="T:Corail.Less.LessImportManager">
+	<summary>
+ Clesse permetant de complèter les chemins de fichier lors des "@import".
+ </summary>
+</member><member name="M:Corail.Less.LessWriter.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Less.LessWriter.#ctor(System.Int32)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_len">Taille du buffer.</param>
+</member><member name="M:Corail.Less.LessWriter.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actif.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actif.</returns>
+</member><member name="T:Corail.Less.LessWriter">
+	<summary>
+ Gestionnaire de création d'un fichier LESS.
+ </summary>
+</member><member name="F:Corail.Less.LessParameterList.C_S_DEF_ARG_SEP">
+ Caractère par défaut utilisé pour séparer les paramètres.
+
+</member><member name="F:Corail.Less.LessParameterList.C_S_ALT_ARG_SEP">
+ Caractère alternatif utilisé pour séparer les paramètres.
+
+</member><member name="F:Corail.Less.LessParameterList.m_o_parameters">
+ Paramètres.
+
+</member><member name="F:Corail.Less.LessParameterList.m_c_separator">
+ Caractère de séparation des paramètres.
+
+</member><member name="P:Corail.Less.LessParameterList.Count">
+	<summary>
+ Nombre d'attributs de la liste.
+ </summary>
+	<value>Nombre d'attributs de la liste.</value>
+	<returns>Nombre d'attributs de la liste.</returns>
+</member><member name="P:Corail.Less.LessParameterList.Item(System.Int32)">
+	<summary>
+ Le paramètre dont l'index est passé en paramètre.
+ </summary>
+	<param name="p_i_index">Index du paramètre.</param>
+	<value>Le paramètre dont l'index est passé en paramètre.</value>
+	<returns>Le paramètre dont l'index est passé en paramètre.</returns>
+</member><member name="P:Corail.Less.LessParameterList.Item(System.String)">
+	<summary>
+ Le paramètre dont le nom est passé en paramètre.
+ </summary>
+	<param name="p_s_name">Nom du paramètre.</param>
+	<value>Le paramètre dont le nom est passé en paramètre.</value>
+	<returns>Le paramètre dont le nom est passé en paramètre.</returns>
+</member><member name="M:Corail.Less.LessParameterList.#ctor(Corail.Less.LessAtomList,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="l_o_parameters">Paramètres.</param>
+	<param name="p_b_call">Indique s'il s'agit des paramètre pour un appel, sinon il s'agit de paramètres pour
+ la définition.</param>
+</member><member name="M:Corail.Less.LessParameterList.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe.
+ </summary>
+</member><member name="M:Corail.Less.LessParameterList.Render(Corail.Less.LessWriter)">
+	<summary>
+ Rendu de la liste de paramètres.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessParameterList.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="M:Corail.Less.LessParameterList.GetEnumeratorGeneric">
+	<summary>
+ Retourne un énumérateur qui parcourt la collection.
+ </summary>
+	<returns>Enumérateur pouvant être utilisé pour parcourir la collection.</returns>
+</member><member name="M:Corail.Less.LessParameterList.GetEnumerator">
+	<summary>
+ Retourne un énumérateur qui parcourt la collection.
+ </summary>
+	<returns>Enumérateur pouvant être utilisé pour parcourir la collection.</returns>
+</member><member name="M:Corail.Less.LessParameterList.Contains(System.String)">
+	<summary>
+ Indique si la liste contient une variable ayant ce nom.
+ </summary>
+	<param name="p_s_name">Nom du paramètre.</param>
+	<returns><c>True</c> si la liste contient une variable ayant ce nom; <c>False</c> sinon.</returns>
+</member><member name="T:Corail.Less.LessParameterList">
+	<summary>
+ Liste des paramètres.
+ </summary>
+</member><member name="F:Corail.Less.LessParameter.m_o_atoms">
+ Parties de chaine du fichier LESS.
+
+</member><member name="F:Corail.Less.LessParameter.m_i_name">
+ Index du nom dans le tableau d'atoms.
+
+</member><member name="F:Corail.Less.LessParameter.m_i_formula">
+ Index de la formule dans le tableau d'atoms.
+
+</member><member name="P:Corail.Less.LessParameter.Name">
+	<summary>
+ Nom du paramètre.
+ </summary>
+	<value>Nom du paramètre.</value>
+	<returns>Nom du paramètre.</returns>
+</member><member name="P:Corail.Less.LessParameter.IsEmpty">
+	<summary>
+ Indique si la valeur par défaut de la variable est définie.
+ </summary>
+	<value><c>True</c> si la valeur par défaut de la variable est définie; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la valeur par défaut de la variable est définie; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.LessParameter.#ctor(Corail.Less.LessAtomList,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_atoms">Parties de chaine du fichier LESS.</param>
+	<param name="p_b_call">Indique s'il s'agit des paramètre pour un appel, sinon il s'agit de paramètres pour
+ la définition.</param>
+</member><member name="M:Corail.Less.LessParameter.Render(Corail.Less.LessWriter)">
+	<summary>
+ Rendu des paramètres.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessParameter.ToString">
+	<summary>
+ Retourne une chaîne qui représente l'objet actuel.
+ </summary>
+	<returns>Chaîne qui représente l'objet en cours.</returns>
+</member><member name="M:Corail.Less.LessParameter.GetValue(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur calculé du paramètre.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<returns>La valeur calculé du paramètre.</returns>
+</member><member name="T:Corail.Less.LessParameter">
+	<summary>
+ Paramètre de Mixin.
+ </summary>
+</member><member name="F:Corail.Less.LessExtendManager.m_o_extends">
+ Dictionnaire contenant la liste des sélecteurs à étendre par medias.
+
+</member><member name="M:Corail.Less.LessExtendManager.AddExtend(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Boolean)">
+	<summary>
+ Enregistre un nouvel "Extends".
+ </summary>
+	<param name="p_s_media">Selecteur du dernier @media ouvert.</param>
+	<param name="p_o_selectors">Liste des sélecteurs pour le noeud.</param>
+	<param name="p_s_target">Sélecteur cible.</param>
+	<param name="p_b_all">Indique que l'on doit remplacer dans toutes les occurences. Sinon, seulement les
+ exactes.</param>
+</member><member name="M:Corail.Less.LessExtendManager.ApplyExtends(Corail.Less.CssDocument)">
+	<summary>
+ Applique les "Extends" enregistrés au document CSS.
+ </summary>
+	<param name="p_o_document">Document CSS.</param>
+</member><member name="M:Corail.Less.LessExtendManager.ApplyExtends(Corail.Less.CssItemList,System.String)">
+	<summary>
+ Applique les "Extends" enregistrés au document CSS.
+ </summary>
+	<param name="p_o_items">Eléments contenus dans le noeud en cours.</param>
+	<param name="p_s_media">Selecteur du @media ouvert.</param>
+</member><member name="M:Corail.Less.LessExtendManager.ConsolidateExtends">
+	<summary>
+ Permet de gérer les extend d'éléments pas encore étendus.
+ </summary>
+</member><member name="M:Corail.Less.LessExtendManager.ConsolidateExtendList(Corail.Less.LessExtendList,Corail.Less.LessExtendList)">
+	<summary>
+ Consolide une liste d'extends à partir d'une autre liste.
+ </summary>
+	<param name="p_o_src">Liste à étudier.</param>
+	<param name="p_o_dst">Liste à consolider.</param>
+</member><member name="M:Corail.Less.LessExtendManager.ConsolidateExtend(Corail.Less.LessExtend,Corail.Less.LessExtend)">
+	<summary>
+ Etend les sélecteurs à l'étendue de leurs parents.
+ </summary>
+	<param name="p_o_extendA">Etendu source.</param>
+	<param name="p_o_extendB">Entendu à etendre.</param>
+	<returns>Etend les sélecteurs à l'étendue de leurs parents.</returns>
+</member><member name="T:Corail.Less.LessExtendManager">
+	<summary>
+ Gestionnaire d'"extends" LESS.
+ </summary>
+</member><member name="F:Corail.Less.LessExtendList.m_o_dicoExact">
+ Dictionnaire des extensions exactes.
+
+</member><member name="F:Corail.Less.LessExtendList.m_o_dicoAll">
+ Dictionnaire pour le remplacement de toutes les extensions.
+
+</member><member name="M:Corail.Less.LessExtendList.GetItem(System.String,System.Boolean)">
+	<summary>
+ Retourne la définition des extensions de classe pour un sélecteur cible.
+ </summary>
+	<param name="p_s_target">Sélecteur cible.</param>
+	<param name="p_b_all">Indique que l'on doit remplacer dans toutes les occurences. Sinon, seulement les
+ exactes.</param>
+	<returns>La définition des extensions de classe pour un sélecteur cible.</returns>
+</member><member name="M:Corail.Less.LessExtendList.GetAllExtends">
+	<summary>
+ Retourne la liste de tous les "extend" définis.
+ </summary>
+	<returns>La liste de tous les "extend" définis.</returns>
+</member><member name="M:Corail.Less.LessExtendList.ApplyExtends(Corail.Less.CssItemSelector)">
+	<summary>
+ Ajoute les sélecteurs en fonction des "extends" définis.
+ </summary>
+	<param name="p_o_selector">Sélecteur.</param>
+</member><member name="M:Corail.Less.LessExtendList.SplitSelectors(Corail.Less.CssItemSelector)">
+	<summary>
+ Retourne la liste des sélecteurs découpés en parties comparabales.
+ </summary>
+	<param name="p_o_selector">Sélecteur.</param>
+	<returns>La liste des sélecteurs découpés.</returns>
+</member><member name="M:Corail.Less.LessExtendList.AddBuffer(System.Collections.Generic.List{System.String},System.Text.StringBuilder)">
+	<summary>
+ Ajoute le buffer à la liste s'il n'est pas vide et le vide.
+ </summary>
+	<param name="p_o_list">Liste à complèter.</param>
+	<param name="p_sb">Buffer.</param>
+</member><member name="M:Corail.Less.LessExtendList.ApplyExtendsAll(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String},System.String,System.String)">
+	<summary>
+ Applique les "extend all".
+ </summary>
+	<param name="p_o_add"></param>
+	<param name="p_o_atoms"></param>
+	<param name="p_s_target"></param>
+	<param name="p_s_replacer"></param>
+</member><member name="T:Corail.Less.LessExtendList">
+	<summary>
+ Liste d'extension de classe CSS.
+ </summary>
+</member><member name="P:Corail.Less.LessExtend.Target">
+	<summary>
+ Sélecteur cible.
+ </summary>
+	<value>Sélecteur cible.</value>
+	<returns>Sélecteur cible.</returns>
+</member><member name="P:Corail.Less.LessExtend.Selectors">
+	<summary>
+ Liste des sélecteurs etendant le selecteur cible.
+ </summary>
+	<value>Liste des sélecteurs etendant le selecteur cible.</value>
+	<returns>Liste des sélecteurs etendant le selecteur cible.</returns>
+</member><member name="M:Corail.Less.LessExtend.#ctor(System.String,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_target">Sélecteur cible.</param>
+	<param name="p_b_all">Indique que l'on doit remplacer dans toutes les occurences. Sinon, seulement les
+ exactes.</param>
+</member><member name="M:Corail.Less.LessExtend.Contains(System.String)">
+	<summary>
+ Indique si le sélecteur passé en paramètre contient.
+ </summary>
+	<param name="p_s_selector"></param>
+	<returns><c>True</c> si le sélecteur passé en paramètre contient; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.LessExtend.AddSelector(System.String)">
+	<summary>
+ Ajoute un nouveau sélecteur devant étandre le sélecteur cible.
+ </summary>
+	<param name="p_s_selector"></param>
+</member><member name="T:Corail.Less.LessExtend">
+	<summary>
+ Définition d'extension ("Extend").
+ </summary>
+</member><member name="F:Corail.Less.LessDocument.m_o_root">
+ Noeud racine du document
+
+</member><member name="F:Corail.Less.LessDocument.m_o_pathResolver">
+ Context à utiliser pour gérer l'import de fichier.
+
+</member><member name="F:Corail.Less.LessDocument.m_o_provider">
+ Fournisseur de contenu Less.
+
+</member><member name="M:Corail.Less.LessDocument.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Less.LessDocument.#ctor(System.String,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_fileName">Chemin d'accès au fichier ".LESS".</param>
+	<param name="p_b_includeImport">Indique si on doit inclure le contenu des fichiers dans le document LESS.
+ OBLIGARTOIRE si le documement doit être compilé en CSS.</param>
+</member><member name="M:Corail.Less.LessDocument.Load(System.String,System.Boolean)">
+	<summary>
+ Chargement du contenu du fichier.
+ </summary>
+	<param name="p_s_fileName">Nom du fichier.</param>
+</member><member name="M:Corail.Less.LessDocument.LoadLess(System.String,Corail.Less.LessImportManager)">
+	<summary>
+ Chargement du contenu du fichier.
+ </summary>
+	<param name="p_s_less">Contenu du fichier Less.</param>
+	<param name="p_o_pathResolver">Gestionnaire permettant de récupérer le contenu LESS des @import.</param>
+</member><member name="M:Corail.Less.LessDocument.EndPart(Corail.Less.LessNode,System.Text.StringBuilder)">
+	<summary>
+ Une fois qu'on trouve un séparateur, on traite ce qui a été mis dans le buffer.
+ </summary>
+	<param name="p_o_node">Noeud.</param>
+	<param name="p_sb">Buffer.</param>
+</member><member name="M:Corail.Less.LessDocument.ImportLessContent(System.String)">
+	<summary>
+ Insertion du contenu Less contenu dans le fichier référencé par @import.
+ </summary>
+	<param name="p_s_fileName">Chemin d'accès au fichier ".LESS".</param>
+</member><member name="M:Corail.Less.LessDocument.Build(System.String)">
+	<summary>
+ Génération du fichier CSS.
+ </summary>
+	<param name="p_s_cssFile">Chemin du fichier de destination.</param>
+</member><member name="M:Corail.Less.LessDocument.Build(System.String,Corail.Less.BrowserVersion)">
+	<summary>
+ Génération du fichier CSS à partir du fichier LESS.
+ </summary>
+	<param name="p_s_cssFile">Chemin du fichier de destination.</param>
+	<param name="p_o_browser">Version de navigateur.</param>
+</member><member name="M:Corail.Less.LessDocument.Build(Corail.Less.BrowserVersion)">
+	<summary>
+ Retourne le nouveau document CSS généré.
+ </summary>
+	<returns>Le nouveau document CSS généré.</returns>
+</member><member name="M:Corail.Less.LessDocument.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ On génère le fichier CSS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessDocument.LoadVariables(Corail.Less.LessBuildContext)">
+	<summary>
+ Chargement des variables d'un fichier importé.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessDocument.LoadMixins(Corail.Less.LessBuildContext)">
+	<summary>
+ Chargement des mixin à partir d'un fichier importé.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="T:Corail.Less.LessDocument">
+	<summary>
+ Classe permettant la création d'un fichier CSS à partir de plusieurs sources.
+ </summary>
+</member><member name="F:Corail.Less.LessBuildContext.RootContext.m_o_mixins">
+ Dictionnaire des définitions de Mixin avec espace de noms.
+
+</member><member name="F:Corail.Less.LessBuildContext.RootContext.m_i_level">
+ Niveau de définition du sélecteur.
+
+</member><member name="F:Corail.Less.LessBuildContext.RootContext.m_o_levels">
+ Sélecteurs par niveaux.
+
+</member><member name="F:Corail.Less.LessBuildContext.RootContext.m_o_noSelector">
+ Liste vide pour le niveau racine.
+
+</member><member name="F:Corail.Less.LessBuildContext.RootContext.m_o_extends">
+ Liste des sélecteurs à étendre.
+
+</member><member name="F:Corail.Less.LessBuildContext.RootContext.m_o_browser">
+ Version de navigateur.
+
+</member><member name="F:Corail.Less.LessBuildContext.RootContext.m_o_css">
+ Document CSS.
+
+</member><member name="F:Corail.Less.LessBuildContext.RootContext.m_s_media">
+ Selecteur du dernier @media ouvert.
+
+</member><member name="F:Corail.Less.LessBuildContext.RootContext.m_o_mediaStack">
+ Pile des sélecteurs de @media précédement ouverts.
+
+</member><member name="M:Corail.Less.LessBuildContext.RootContext.OpenMedia(System.String)">
+	<summary>
+ Ouverture d'une balise @media.
+ </summary>
+	<param name="p_s_media">Selecteur du dernier @media ouvert.</param>
+</member><member name="M:Corail.Less.LessBuildContext.RootContext.CloseMedia">
+	<summary>
+ Fermeture d'une balise @media.
+ </summary>
+</member><member name="T:Corail.Less.LessBuildContext.RootContext">
+	<summary>
+ Contexte à la racine du document.
+ </summary>
+</member><member name="F:Corail.Less.LessBuildContext.m_o_shared">
+ Variables partagées entres tous les contextes d'un même traitement.
+
+</member><member name="F:Corail.Less.LessBuildContext.m_o_parent">
+ Context parent.
+
+</member><member name="F:Corail.Less.LessBuildContext.m_o_varDefs">
+ Dictionnaire des définitions de variables.
+
+</member><member name="F:Corail.Less.LessBuildContext.m_o_varVals">
+ Dictionnaire des valeurs calculées pour les variables.
+
+</member><member name="F:Corail.Less.LessBuildContext.m_o_targetList">
+ Destination pour les définitions de sélecteurs CSS à venir.
+
+</member><member name="F:Corail.Less.LessBuildContext.m_o_targetSelector">
+ Destination pour les attributs de sélecteurs CSS à venir.
+
+</member><member name="P:Corail.Less.LessBuildContext.CssDocument">
+	<summary>
+ Document CSS de destination.
+ </summary>
+	<value>Document CSS de destination.</value>
+	<returns>Document CSS de destination.</returns>
+</member><member name="P:Corail.Less.LessBuildContext.Variables(System.String)">
+	<summary>
+ Variable définie dans le contexte.
+ </summary>
+	<param name="p_s_name">Nom de la variable.</param>
+	<value>Variable définie dans le contexte.</value>
+	<returns>Variable définie dans le contexte.</returns>
+</member><member name="P:Corail.Less.LessBuildContext.Mixins">
+	<summary>
+ Dictionnaire des mixins avec espaces de nom.
+ </summary>
+	<value>Dictionnaire des mixins avec espaces de nom.</value>
+	<returns>Dictionnaire des mixins avec espaces de nom.</returns>
+</member><member name="M:Corail.Less.LessBuildContext.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Less.LessBuildContext.#ctor(Corail.Less.BrowserVersion)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Less.LessBuildContext.#ctor(Corail.Less.LessBuildContext)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_parent">Contexte de compilation parent.</param>
+</member><member name="M:Corail.Less.LessBuildContext.GetNewContext">
+	<summary>
+ Retourne un nouveau contexte de génération de fichier CSS.
+ </summary>
+	<returns>Un nouveau contexte de génération de fichier CSS.</returns>
+</member><member name="M:Corail.Less.LessBuildContext.AddSelectorItem(System.Collections.Generic.List{System.String})">
+	<summary>
+ Ajout d'une nouvelle définition pour un sélecteur dans le fichier CSS.
+ </summary>
+	<param name="p_o_selectors">Liste des sélecteurs.</param>
+</member><member name="M:Corail.Less.LessBuildContext.AddAttribute(System.String,Corail.Less.LessValue)">
+	<summary>
+ Ajoute un nouvel attribut au noeud en cours.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_o_formula">Formule de l'attribut.</param>
+</member><member name="M:Corail.Less.LessBuildContext.OpenMedia(System.String)">
+	<summary>
+ Ouverture d'une balise @media.
+ </summary>
+	<param name="p_s_media">Selecteur du dernier @media ouvert.</param>
+</member><member name="M:Corail.Less.LessBuildContext.CloseMedia">
+	<summary>
+ Fermeture d'une balise @media.
+ </summary>
+</member><member name="M:Corail.Less.LessBuildContext.OpenAtRule(System.String)">
+	<summary>
+ Ouverture d'une définition "At rule".
+ </summary>
+	<param name="p_s_rule">Règle.</param>
+</member><member name="M:Corail.Less.LessBuildContext.CloseAtRule">
+	<summary>
+ Fermeture de la définition d'une "At rule".
+ </summary>
+</member><member name="M:Corail.Less.LessBuildContext.SetVariableDefinition(System.String,Corail.Less.LessAtomAttributeValue)">
+	<summary>
+ Enregistrement de la définition d'une variable.
+ </summary>
+	<param name="p_s_name">Nom de la variable.</param>
+	<param name="p_o_value">Formule de la variable.</param>
+</member><member name="M:Corail.Less.LessBuildContext.LoadVariablesValues">
+	<summary>
+ Chargement des valeurs de variables aprés le chargement complet de leurs définitions.
+ </summary>
+</member><member name="M:Corail.Less.LessBuildContext.LoadVariablesValues(System.Collections.Generic.Dictionary{System.String,Corail.Less.LessAtomAttributeValue},System.Collections.Generic.Dictionary{System.String,Corail.Less.LessAtomAttributeValue})">
+	<summary>
+ Enregistre la liste des variables et retourne le nombre de variables n'ayant pas pu être évaluée lors du
+ premier passage.
+ </summary>
+	<param name="p_o_todoList">Liste des variable à évaluer.</param>
+	<param name="p_o_waitList">Liste des variables n'ayant pas pu être évaluées.</param>
+	<returns>Le nombre de variables n'ayant pas pu être évaluée lors du premier passage.</returns>
+</member><member name="M:Corail.Less.LessBuildContext.SetVariableValue(System.String,Corail.Less.LessValue)">
+	<summary>
+ Définition de la valeur d'une variable.
+ </summary>
+	<param name="p_s_name">Nom de la variable.</param>
+	<param name="p_o_value">Valeur de la variable.</param>
+</member><member name="M:Corail.Less.LessBuildContext.GetVariableValue(System.String)">
+	<summary>
+ Retourne la valeur d'une variable.
+ </summary>
+	<param name="p_s_name">Nom de la variable.</param>
+	<returns>La valeur d'une variable.</returns>
+</member><member name="M:Corail.Less.LessBuildContext.HasVariable(System.String)">
+	<summary>
+ Indique si la variable a été définie dans ce contexte.
+ </summary>
+	<param name="p_s_name">Nom de la variable recherchée.</param>
+	<returns><c>True</c> si la variable a été définie dans ce contexte; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.LessBuildContext.GetVariablesDefinitions">
+	<summary>
+ Retourne la collection des variables principale chargées, ainsi que leurs valeurs.
+ </summary>
+	<returns>La collection des variables principale chargées, ainsi que leurs valeurs.</returns>
+</member><member name="M:Corail.Less.LessBuildContext.GetVarStringValue(System.String)">
+	<summary>
+ Retourne la chaine contenue dans une variable LESS.
+ </summary>
+	<param name="p_s_name">Nom de la variable.</param>
+	<returns>La chaine contenue dans une variable LESS.</returns>
+</member><member name="M:Corail.Less.LessBuildContext.GetVarDoubleValue(System.String)">
+	<summary>
+ Retourne le nombre contenu dans une variable LESS.
+ </summary>
+	<param name="p_s_name">Nom de la variable.</param>
+	<returns>Le nombre contenu dans une variable LESS.</returns>
+</member><member name="M:Corail.Less.LessBuildContext.GetVarBooleanValue(System.String)">
+	<summary>
+ Retourne le booléen contenu dans une variable LESS.
+ </summary>
+	<param name="p_s_name">Nom de la variable.</param>
+	<returns>Le booléen contenu dans une variable LESS.</returns>
+</member><member name="M:Corail.Less.LessBuildContext.OnResolveURL(System.String)">
+	<summary>
+ Retourne l'URL a utiliser dans le fichier CSS.
+ </summary>
+	<param name="p_s_url">URL calculée à partir du fichier LESS.</param>
+	<returns>L'URL a utiliser dans le fichier CSS.</returns>
+</member><member name="T:Corail.Less.LessBuildContext">
+	<summary>
+ Context de compilation en cours.
+ </summary>
+</member><member name="M:Corail.Less.LessItemVariable.#ctor(Corail.Less.LessAtomListLoader)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_atom">Partie de chaine du fichier LESS.</param>
+</member><member name="M:Corail.Less.LessItemVariable.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessItemVariable.OnLoadVariables(Corail.Less.LessBuildContext)">
+	<summary>
+ Chargement des variables pour le contexte en cours.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="T:Corail.Less.LessItemVariable">
+	<summary>
+ Définitition d'une variable LESS.
+ </summary>
+</member><member name="F:Corail.Less.LessItemRaw.m_o_atom">
+ Contenu du noeud parent.
+
+</member><member name="M:Corail.Less.LessItemRaw.#ctor(Corail.Less.LessAtom)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_atom">Contenu du noeud parent.</param>
+</member><member name="M:Corail.Less.LessItemRaw.Render(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu LESS du document.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessItemRaw.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="T:Corail.Less.LessItemRaw">
+	<summary>
+ Valeur brute.
+ </summary>
+</member><member name="F:Corail.Less.LessItemMixinCall.m_o_node">
+ Noeud dans lequel est défini le mixin
+
+</member><member name="F:Corail.Less.LessItemMixinCall.m_s_namespace">
+ Espace de nom du mixin.
+
+</member><member name="F:Corail.Less.LessItemMixinCall.m_o_mixinName">
+ Nom du mixin.
+
+</member><member name="F:Corail.Less.LessItemMixinCall.m_o_parameters">
+ Paramètres.
+
+</member><member name="M:Corail.Less.LessItemMixinCall.#ctor(Corail.Less.LessNode,Corail.Less.LessAtomListLoader)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_atom">Définition de l'appel.</param>
+</member><member name="M:Corail.Less.LessItemMixinCall.Render(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu LESS du document.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessItemMixinCall.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="T:Corail.Less.LessItemMixinCall">
+	<summary>
+ Insertion d'un Mixin.
+ </summary>
+</member><member name="F:Corail.Less.LessItemImport.m_s_path">
+ Chemin du fichier à importer.
+
+</member><member name="P:Corail.Less.LessItemImport.Path">
+	<summary>
+ Chemin du fichier à importer.
+ </summary>
+	<value>Chemin du fichier à importer.</value>
+	<returns>Chemin du fichier à importer.</returns>
+</member><member name="M:Corail.Less.LessItemImport.#ctor(Corail.Less.LessAtomList)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_atom">Contenu du noeud parent.</param>
+</member><member name="M:Corail.Less.LessItemImport.Render(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu LESS du document.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessItemImport.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="T:Corail.Less.LessItemImport">
+	<summary>
+ Instruction LESS demandant l'import d'un fichier.
+ </summary>
+</member><member name="F:Corail.Less.LessItemExtend.m_o_atoms">
+ Parties de chaine du fichier LESS.
+
+</member><member name="M:Corail.Less.LessItemExtend.#ctor(Corail.Less.LessAtomBrackets)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_atoms">Parties de chaine du fichier LESS.</param>
+</member><member name="M:Corail.Less.LessItemExtend.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessItemExtend.AddExtend(Corail.Less.LessBuildContext,System.Text.StringBuilder,System.Boolean@)">
+	<summary>
+ Ajout un nouvel Extend.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<param name="p_sb">Buffer.</param>
+	<param name="p_b_all">Indique que l'on doit remplacer dans toutes les occurences. Sinon, seulement les
+ exactes.</param>
+</member><member name="M:Corail.Less.LessItemExtend.Render(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu LESS du document.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="T:Corail.Less.LessItemExtend">
+	<summary>
+ Fucion de définition de classes.
+ </summary>
+</member><member name="F:Corail.Less.LessItemAttribute.m_o_name">
+ Nom.
+
+</member><member name="F:Corail.Less.LessItemAttribute.m_o_value">
+ Valeur.
+
+</member><member name="P:Corail.Less.LessItemAttribute.Name">
+	<summary>
+ Nom.
+ </summary>
+	<value>Nom.</value>
+	<returns>Nom.</returns>
+</member><member name="P:Corail.Less.LessItemAttribute.Value">
+	<summary>
+ Valeur.
+ </summary>
+	<value>Valeur.</value>
+	<returns>Valeur.</returns>
+</member><member name="M:Corail.Less.LessItemAttribute.#ctor(Corail.Less.LessAtomListLoader)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_atom">Partie de chaine du fichier LESS.</param>
+</member><member name="M:Corail.Less.LessItemAttribute.Render(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu LESS du document.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessItemAttribute.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="T:Corail.Less.LessItemAttribute">
+	<summary>
+ Attribut avec un nom et une valeur.
+ </summary>
+</member><member name="M:Corail.Less.LessItem.Render(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu LESS du document.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessItem.Build(Corail.Less.LessBuildContext)">
+	<summary>
+ Génération d'un fichier CSS à partir d'un fichier LESS.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessItem.OnLoadVariables(Corail.Less.LessBuildContext)">
+	<summary>
+ Chargement des variables pour le contexte en cours.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessItem.OnLoadMixins(Corail.Less.LessBuildContext)">
+	<summary>
+ Chargement des mixins défini dans l'élément en cours.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+</member><member name="M:Corail.Less.LessItem.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente l'instance.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente l'instance.</returns>
+</member><member name="T:Corail.Less.LessItem">
+	<summary>
+ Elément du fichier LESS.
+ </summary>
+</member><member name="M:Corail.Less.HlsColor.InvalidHlsColor.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe.
+ </summary>
+</member><member name="T:Corail.Less.HlsColor.InvalidHlsColor">
+	<summary>
+ Couleur HLS invalide.
+ </summary>
+</member><member name="P:Corail.Less.HlsColor.A">
+	<summary>
+ Opacité.
+ </summary>
+	<value>Opacité.</value>
+	<returns>Opacité.</returns>
+</member><member name="P:Corail.Less.HlsColor.H">
+	<summary>
+ Teinte.
+ </summary>
+	<value>Teinte.</value>
+	<returns>Teinte.</returns>
+</member><member name="P:Corail.Less.HlsColor.L">
+	<summary>
+ Luminosité.
+ </summary>
+	<value>Luminosité.</value>
+	<returns>Luminosité.</returns>
+</member><member name="P:Corail.Less.HlsColor.S">
+	<summary>
+ Saturation.
+ </summary>
+	<value>Saturation.</value>
+	<returns>Saturation.</returns>
+</member><member name="M:Corail.Less.HlsColor.#ctor(System.Drawing.Color)">
+	<summary>
+ Initialisation d'une nouvelle couleur AHLS à partir d'une couleur ARGB.
+ </summary>
+	<param name="p_o_argb">Couleur d'origine.</param>
+</member><member name="M:Corail.Less.HlsColor.#ctor(System.Double,System.Int32,System.Double,System.Double)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_r_alpha">Transparence (0-1).</param>
+	<param name="p_i_hue">Teinte (0-360).</param>
+	<param name="p_r_saturation">Saturation (0-1).</param>
+	<param name="p_r_light">Luminosité (0-1).</param>
+</member><member name="M:Corail.Less.HlsColor.ToColor">
+	<summary>
+ Crée un objet <c>Color</c> à partir de la couleur HLS.
+ </summary>
+	<returns>Un objet <c>Color</c> à partir de la couleur HLS.</returns>
+</member><member name="M:Corail.Less.HlsColor.TruncToByte(System.Double)">
+	<summary>
+ On s'assure que la valeur soit un byte valide.
+ </summary>
+	<param name="p_r">Valeur.</param>
+	<returns>Valeur en byte</returns>
+</member><member name="M:Corail.Less.HlsColor.HueToRGB(System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Extrait une partie de la couleur.
+ </summary>
+	<param name="p_i_magic1">Nombre Magique 1.</param>
+	<param name="p_i_magic2">Nombre Magique 2.</param>
+	<param name="p_i_hue">Teinte.</param>
+	<returns>Une partie de la couleur.</returns>
+</member><member name="M:Corail.Less.HlsColor.Spin(System.Int32)">
+	<summary>
+ Changement de la teinte.
+ </summary>
+	<param name="p_i_angle">Angle en degrés (positif ou négatif).</param>
+</member><member name="M:Corail.Less.HlsColor.GetTintedColor(System.Drawing.Color,System.Double)">
+	<summary>
+ Retourne une couleur en lui changeant sa luminosité.
+ </summary>
+	<param name="p_u_color">Couleur source.</param>
+	<param name="p_r_tint">Teinte de la couleur entre -1 (assombrir) et +1 (éclaircir).</param>
+	<returns>La nouvelle couleur avec la teinte appliquée.</returns>
+	<remarks>http://msdn.microsoft.com/en-us/library/documentformat.openxml.spreadsheet.tabcolor.aspx
+ </remarks>
+</member><member name="M:Corail.Less.HlsColor.Lighten(System.Double)">
+	<summary>
+ Augmenter la luminosité d'un certain pourcentage.
+ </summary>
+	<param name="p_r_ratio">Valeur entre 0 et 1. (-1 et 0 pour diminuer la luminosité, équivalent à la méthode
+ "Darken").</param>
+</member><member name="M:Corail.Less.HlsColor.Darken(System.Double)">
+	<summary>
+ Diminuer la luminosité d'un certain pourcentage.
+ </summary>
+	<param name="p_r_ratio">Valeur entre 0 et 1.</param>
+</member><member name="M:Corail.Less.HlsColor.LightenRelative(System.Double)">
+	<summary>
+ Augmenter la luminosité d'un certain pourcentage relatif à la luminosité actuelle.
+ </summary>
+	<param name="p_r_ratio">Valeur entre 0 et 1. (-1 et 0 pour diminuer la luminosité, équivalent à la méthode
+ "Darken").</param>
+</member><member name="M:Corail.Less.HlsColor.DarkenRelative(System.Double)">
+	<summary>
+ Augmenter la luminosité d'un certain pourcentage relatif à la luminosité actuelle.
+ </summary>
+	<param name="p_r_ratio">Valeur entre 0 et 1.</param>
+</member><member name="T:Corail.Less.HlsColor">
+	<summary>
+ Couleur HLS (Teinte / Luminosité / Saturation).
+ </summary>
+	<remarks>Portage des méthodes :
+ https://support.microsoft.com/kb/29240?wa=wsignin1.0 ithm-incorrect VERSION CORRIGE par rapport à celle dans
+ Corail.Excel ! (Les résultats doivent être tronqués)</remarks>
+</member><member name="M:Corail.Less.LessHelper.LessAsOneFile(System.String,System.String,System.String)">
+	<summary>
+ Recopie un fichier Less et tous ses fichiers dépendant dans un seul fichier.
+ </summary>
+	<param name="p_s_srcFile">Nom du fichier source en entrée.</param>
+	<param name="p_s_dstFile">Nom du fichier de destination.</param>
+	<param name="p_s_excludes">Nom des includes à laisser tel quel (séparés par des "|").</param>
+</member><member name="M:Corail.Less.LessHelper.LessAsOneFile(System.IO.TextWriter,System.String,System.String)">
+	<summary>
+ Import le contenu d'un fichier Less ainsi que ses imports dans un fichier unique.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+	<param name="p_s_filename">Chemin d'accès au fichier ".LESS".</param>
+	<param name="p_s_excludes">Nom des includes à laisser tel quel (séparés par des "|").</param>
+</member><member name="T:Corail.Less.LessHelper">
+	<summary>
+ Outils de manipulation des fichiers Less.
+ </summary>
+</member><member name="F:Corail.Less.CssItemSelector.m_o_attributes">
+ Dictionnaire des attributs et de leurs valeurs.
+
+</member><member name="F:Corail.Less.CssItemSelector.m_o_selectors">
+ Liste des sélecteurs.
+
+</member><member name="F:Corail.Less.CssItemSelector.m_s_cache">
+ Cache contenant la liste des sélecteurs séparés par des vigules.
+
+</member><member name="P:Corail.Less.CssItemSelector.Attributes">
+	<summary>
+ Dictionnaire des attributs et de leurs valeurs.
+ </summary>
+	<value>Dictionnaire des attributs et de leurs valeurs.</value>
+	<returns>Dictionnaire des attributs et de leurs valeurs.</returns>
+</member><member name="P:Corail.Less.CssItemSelector.IsEmpty">
+	<summary>
+ Indique si l'élément contient des définitions.
+ </summary>
+	<value><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</value>
+	<returns><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Less.CssItemSelector.Selector">
+	<summary>
+ Sélecteur.
+ </summary>
+	<value>Sélecteur.</value>
+	<returns>Sélecteur.</returns>
+</member><member name="M:Corail.Less.CssItemSelector.#ctor(System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_selector">Sélecteur.</param>
+</member><member name="M:Corail.Less.CssItemSelector.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_selectors">Liste des sélecteurs à séparer par des virgules.</param>
+</member><member name="M:Corail.Less.CssItemSelector.AddSelectors(System.Collections.Generic.IEnumerable{System.String})">
+	<summary>
+ Ajouts de nouveaux sélecteurs à la sélection actuelle.
+ </summary>
+	<param name="p_o_toAdd">Liste des sélecteurs à ajouter.</param>
+</member><member name="M:Corail.Less.CssItemSelector.LoadSelectors(System.Collections.Generic.IEnumerable{System.String})">
+	<summary>
+ Chargement de la liste des sélecteurs.
+ </summary>
+	<param name="p_o_selectors">Liste des sélecteurs pour le noeud.</param>
+</member><member name="M:Corail.Less.CssItemSelector.Clean(System.String)">
+	<summary>
+ Retourne le sélecteur nettoyé des caractères inutiles.
+ </summary>
+	<param name="p_s_selector">Sélecteur.</param>
+	<returns>Le sélecteur nettoyé des caractères inutiles.</returns>
+</member><member name="M:Corail.Less.CssItemSelector.UpdateDefinition(System.String,System.Int32,System.Int32,System.Boolean)">
+	<summary>
+ Mise à jour de la définition des attributs pour un sélecteur.
+ </summary>
+	<param name="p_s_definition">Définition de styles.</param>
+</member><member name="M:Corail.Less.CssItemSelector.EndValuePosition(System.String,System.Int32,System.Int32)">
+	<summary>
+ Retourne la poistion du ";" ou du "}" aprés la valeur.
+ </summary>
+	<param name="p_s_definition">Définition de styles.</param>
+	<param name="p_i_start">Position de départ pour la recherche.</param>
+	<param name="p_i_end">Position du dernier caractère de la chaine à traiter.</param>
+	<returns>La poistion du ";" ou du "}" aprés la valeur.</returns>
+</member><member name="M:Corail.Less.CssItemSelector.RenderContent(Corail.Less.LessWriter,System.String,System.Boolean)">
+	<summary>
+ Rendu à l'intérieur des accolades.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+	<param name="p_s_prefix">Filtre identifiant le type de navigateur cible.</param>
+	<param name="p_b_keep"><c>True</c> Indique si on doit garder uniquement les attributs préfixés
+ correspondants. <c>False</c> indique que l'on doit garder tous les attributs préfixés à l'exception de
+ celui passé en paramètre.</param>
+</member><member name="M:Corail.Less.CssItemSelector.GetRenderAttributesList">
+	<summary>
+ Retourne la liste des attributs triés.
+ </summary>
+	<returns>La liste des attributs triés.</returns>
+</member><member name="M:Corail.Less.CssItemSelector.RenderSelectors">
+	<summary>
+ Retourne la chaine décrivant les sélecteurs.
+ </summary>
+	<returns>La chaine décrivant les sélecteurs.</returns>
+</member><member name="T:Corail.Less.CssItemSelector">
+	<summary>
+ Définition d'un style pour un sélecteur.
+ </summary>
+</member><member name="F:Corail.Less.CssItemList.m_o_items">
+ Définition de styles par sélecteurs.
+
+</member><member name="F:Corail.Less.CssItemList.m_o_keyframes">
+ Liste des animations.
+
+</member><member name="P:Corail.Less.CssItemList.IsEmpty">
+	<summary>
+ Indique si l'élément contient des définitions.
+ </summary>
+	<value><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</value>
+	<returns><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.CssItemList.GetEnumerator">
+	<summary>
+ Retourne un énumérateur qui parcourt une collection.
+ </summary>
+	<returns>Objet <see cref="T:System.Collections.IEnumerator"/> pouvant être utilisé pour parcourir la
+ collection.</returns>
+</member><member name="M:Corail.Less.CssItemList.GetSelectorItem(System.String,System.Boolean)">
+	<summary>
+ Définition de styles par sélecteurs.
+ </summary>
+	<param name="p_s_selector">Sélecteur.</param>
+	<returns>Définition de styles par sélecteurs.</returns>
+</member><member name="M:Corail.Less.CssItemList.AddSelectorItem(System.String)">
+	<summary>
+ Ajoute une nouveau noeud et retourne le nouvel élément.
+ </summary>
+	<param name="p_s_selector">Sélecteur.</param>
+	<returns>Le nouvel élément.</returns>
+</member><member name="M:Corail.Less.CssItemList.AddSelectorItem(System.Collections.Generic.List{System.String})">
+	<summary>
+ Ajoute une nouveau noeud et retourne le nouvel élément.
+ </summary>
+	<param name="p_o_selectors">Sélecteur.</param>
+	<returns>Le nouvel élément.</returns>
+</member><member name="M:Corail.Less.CssItemList.GetAtRuleItem(System.String,System.Boolean)">
+	<summary>
+ Définition de styles par média.
+ </summary>
+	<param name="p_s_selector">Sélecteur.</param>
+	<returns>Définition de styles par média.</returns>
+</member><member name="M:Corail.Less.CssItemList.AddAtRule(System.String)">
+	<summary>
+ Ajoute une nouvelle règle.
+ </summary>
+	<param name="p_s_rule">Règle.</param>
+	<returns>Le nouveau noeud.</returns>
+</member><member name="M:Corail.Less.CssItemList.Find(System.String)">
+	<summary>
+ Retourne l'élément correspondant au sélecteur.
+ </summary>
+	<param name="p_s_selector">Sélecteur.</param>
+	<returns>L'élément correspondant au sélecteur.</returns>
+</member><member name="M:Corail.Less.CssItemList.Render(Corail.Less.LessWriter,System.String,System.Boolean)">
+	<summary>
+ Rendu de la feuille de style.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+	<param name="p_s_prefix">Filtre identifiant le type de navigateur cible.</param>
+	<param name="p_b_keep"><c>True</c> Indique si on doit garder uniquement les attributs préfixés
+ correspondants. <c>False</c> indique que l'on doit garder tous les attributs préfixés à l'exception de
+ celui passé en paramètre.</param>
+</member><member name="M:Corail.Less.CssItemList.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </returns>
+</member><member name="T:Corail.Less.CssItemList">
+	<summary>
+ Liste de définitions de styles.
+ </summary>
+</member><member name="M:Corail.Less.CssItemKeyframes.#ctor(System.String,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_selector">Sélecteur.</param>
+</member><member name="M:Corail.Less.CssItemKeyframes.Render(Corail.Less.LessWriter,System.String,System.Boolean)">
+	<summary>
+ Rendu de la feuille de style.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+	<param name="p_s_prefix">Filtre identifiant le type de navigateur cible.</param>
+	<param name="p_b_keep"><c>True</c> Indique si on doit garder uniquement les attributs préfixés
+ correspondants. <c>False</c> indique que l'on doit garder tous les attributs préfixés à l'exception de
+ celui passé en paramètre.</param>
+</member><member name="T:Corail.Less.CssItemKeyframes">
+	<summary>
+ Définition des animations CSS3.
+ </summary>
+</member><member name="F:Corail.Less.CssItemAtRule.m_s_selector">
+ Sélecteur.
+
+</member><member name="F:Corail.Less.CssItemAtRule.m_o_list">
+ La liste des élements.
+
+</member><member name="P:Corail.Less.CssItemAtRule.Selector">
+	<summary>
+ Sélecteur.
+ </summary>
+	<value>Sélecteur.</value>
+	<returns>Sélecteur.</returns>
+</member><member name="P:Corail.Less.CssItemAtRule.IsEmpty">
+	<summary>
+ Indique si l'élément contient des définitions.
+ </summary>
+	<value><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</value>
+	<returns><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Less.CssItemAtRule.Items">
+	<summary>
+ Liste des éléments.
+ </summary>
+	<value>Liste des éléments.</value>
+	<returns>Liste des éléments.</returns>
+</member><member name="M:Corail.Less.CssItemAtRule.#ctor(System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_selector">Sélecteur.</param>
+</member><member name="M:Corail.Less.CssItemAtRule.RenderContent(Corail.Less.LessWriter,System.String,System.Boolean)">
+	<summary>
+ Rendu à l'intérieur des accolades.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+	<param name="p_s_prefix">Filtre identifiant le type de navigateur cible.</param>
+	<param name="p_b_keep"><c>True</c> Indique si on doit garder uniquement les attributs préfixés
+ correspondants. <c>False</c> indique que l'on doit garder tous les attributs préfixés à l'exception de
+ celui passé en paramètre.</param>
+</member><member name="T:Corail.Less.CssItemAtRule">
+	<summary>
+ Définition d'une "at-rule" @media, @keyframes.
+ </summary>
+</member><member name="P:Corail.Less.CssItem.Selector">
+	<summary>
+ Sélecteur.
+ </summary>
+	<value>Sélecteur.</value>
+	<returns>Sélecteur.</returns>
+</member><member name="P:Corail.Less.CssItem.IsEmpty">
+	<summary>
+ Indique si l'élément contient des définitions.
+ </summary>
+	<value><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</value>
+	<returns><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Less.CssItem.Render(Corail.Less.LessWriter,System.String,System.Boolean)">
+	<summary>
+ Rendu de la feuille de style.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+	<param name="p_s_prefix">Filtre identifiant le type de navigateur cible.</param>
+	<param name="p_b_keep"><c>True</c> Indique si on doit garder uniquement les attributs préfixés
+ correspondants. <c>False</c> indique que l'on doit garder tous les attributs préfixés à l'exception de
+ celui passé en paramètre.</param>
+</member><member name="M:Corail.Less.CssItem.RenderContent(Corail.Less.LessWriter,System.String,System.Boolean)">
+	<summary>
+ Rendu à l'intérieur des accolades.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+	<param name="p_s_prefix">Filtre identifiant le type de navigateur cible.</param>
+	<param name="p_b_keep"><c>True</c> Indique si on doit garder uniquement les attributs préfixés
+ correspondants. <c>False</c> indique que l'on doit garder tous les attributs préfixés à l'exception de
+ celui passé en paramètre.</param>
+</member><member name="T:Corail.Less.CssItem">
+	<summary>
+ Elément de définition d'une feuille de style.
+ </summary>
+</member><member name="F:Corail.Less.CssDocument.m_o_items">
+ Liste des noeuds.
+
+</member><member name="F:Corail.Less.CssDocument.m_o_imports">
+ Liste des définitions d'imports.
+
+</member><member name="F:Corail.Less.CssDocument.m_s_prefixFilter">
+ Préfixe permettant de filtrer les attributs CSS.
+
+</member><member name="P:Corail.Less.CssDocument.Items">
+	<summary>
+ Liste des noeuds.
+ </summary>
+	<value>Liste des noeuds.</value>
+	<returns>Liste des noeuds.</returns>
+</member><member name="P:Corail.Less.CssDocument.PrefixFilter">
+	<summary>
+ Préfixe permettant de filtrer les attributs CSS.
+ </summary>
+	<value>Préfixe permettant de filtrer les attributs CSS.</value>
+	<returns>Préfixe permettant de filtrer les attributs CSS.</returns>
+</member><member name="M:Corail.Less.CssDocument.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Less.CssDocument.Load(System.String)">
+	<summary>
+ Chargement d'un fichier CSS.
+ </summary>
+	<param name="p_s_file">Chemin d'accès au fichier CSS.</param>
+</member><member name="M:Corail.Less.CssDocument.LoadCss(System.String,System.Boolean)">
+	<summary>
+ Ajoute du CSS à fusionner dans le fichier en cours.
+ </summary>
+	<param name="p_s_css">Contenu CSS à fusionner.</param>
+	<param name="p_b_update">Indique si les nouvelles définitions viennent remplacer les définitions
+ existantes.</param>
+</member><member name="M:Corail.Less.CssDocument.AtRuleKeyword(System.String,System.Int32)">
+	<summary>
+ Retourne le mot clé commençant par "@".
+ </summary>
+	<param name="p_s_css">Contenu du fichier CSS.</param>
+	<param name="p_i_atPosition">Poiction du caractère arrobase.</param>
+	<returns>Le mot clé commençant par "@".</returns>
+</member><member name="M:Corail.Less.CssDocument.CleanCss(System.String)">
+	<summary>
+ Enleve les commentaires, les espaces inutiles et les retour à la ligne d'un fichier CSS
+ </summary>
+	<param name="p_s_text">Contenu d'un fichier CSS</param>
+	<returns></returns>
+</member><member name="M:Corail.Less.CssDocument.GetSelector(System.String,System.Int32,System.Int32@)">
+	<summary>
+ Retourne le sélecteur jusq'à la prochaine accolade.
+ </summary>
+	<param name="p_s_css">Contenu CSS à fusionner.</param>
+	<param name="p_i_start">Position de départ du sélecteur.</param>
+	<param name="p_i_end">Position de l'accolade ouvrante correspondant au sélecteur.</param>
+	<returns>Le sélecteur jusq'à la prochaine accolade.</returns>
+</member><member name="M:Corail.Less.CssDocument.Render(Corail.Less.LessWriter,System.String)">
+	<summary>
+ Rendu de la feuille de style.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+	<param name="p_s_prefix">Filtre identifiant le type de navigateur cible.</param>
+</member><member name="M:Corail.Less.CssDocument.Save(System.String,System.String)">
+	<summary>
+ Enregistre le document CSS dans un fichier.
+ </summary>
+	<param name="p_s_fileName">Chemin d'accès au fichier ".LESS".</param>
+	<param name="p_s_prefix">Préfixe identifiant le type de navigateur cible (-moz-, -webkit-, ...).</param>
+</member><member name="M:Corail.Less.CssDocument.SaveToString(System.String)">
+	<summary>
+ Enregistre le fichier CSS dans une chaine de caractères.
+ </summary>
+	<param name="p_s_prefix">Préfixe identifiant le type de navigateur cible (-moz-, -webkit-, ...).</param>
+	<returns>Enregistre le fichier CSS dans une chaine de caractères.</returns>
+</member><member name="M:Corail.Less.CssDocument.GetSelectors">
+	<summary>
+ Retourne la liste de tous les sélecteurs définis.
+ </summary>
+	<returns>La liste de tous les sélecteurs définis.</returns>
+</member><member name="T:Corail.Less.CssDocument">
+	<summary>
+ Document CSS.
+ </summary>
+</member><member name="F:Corail.Less.CssAttributeList.m_o_list">
+ Liste d'attributs.
+
+</member><member name="P:Corail.Less.CssAttributeList.Count">
+	<summary>
+ Nombre d'attributs de la liste.
+ </summary>
+	<value>Nombre d'attributs de la liste.</value>
+	<returns>Nombre d'attributs de la liste.</returns>
+</member><member name="M:Corail.Less.CssAttributeList.GetEnumerator">
+	<summary>
+ Retourne un énumérateur qui itère au sein d'une collection.
+ </summary>
+	<returns>Objet <see cref="T:System.Collections.IEnumerator"/> qui peut être utilisé pour effectuer des
+ itérations au sein de la collection.</returns>
+</member><member name="M:Corail.Less.CssAttributeList.GetEnumeratorGeneric">
+	<summary>
+ Retourne un énumérateur qui itère au sein d'une collection.
+ </summary>
+	<returns>Objet <see cref="T:System.Collections.IEnumerator"/> qui peut être utilisé pour effectuer des
+ itérations au sein de la collection.</returns>
+</member><member name="M:Corail.Less.CssAttributeList.Add(System.String,System.String)">
+	<summary>
+ Ajout d'une nouvelle définition d'attribut sans remplacer celle qui existe déjà.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut (En minuscule).</param>
+	<param name="p_s_value">Valeur de l'attribut.</param>
+</member><member name="M:Corail.Less.CssAttributeList.Update(System.String,System.String)">
+	<summary>
+ Ajout d'une nouvelle définition d'attribut; Si une ou plusieurs définitions existent pour cet attribut, elles sont supprimées.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut (En minuscule).</param>
+	<param name="p_s_value">Valeur de l'attribut.</param>
+</member><member name="T:Corail.Less.CssAttributeList">
+	<summary>
+ Liste d'attributs.
+ </summary>
+</member><member name="M:Corail.Less.CssAttributeComparer.Init">
+	<summary>
+ Chargement d'un dictionnaire pour optimiser le temp de traitement.
+ </summary>
+</member><member name="M:Corail.Less.CssAttributeComparer.GetAttributeOrder(System.String,System.String)">
+	<summary>
+ Retourne l'ordre dans lequel doit être affiché un composant.
+ </summary>
+	<param name="p_s_attributeName">Identifiant de l'attribut.</param>
+	<returns>L'ordre dans lequel doit être affiché un composant.</returns>
+</member><member name="M:Corail.Less.CssAttributeComparer.GetFilterOrder(System.String)">
+	<summary>
+ Retourne la position suivant la valeur du filtre.
+ </summary>
+	<param name="p_s_attributeValue">Valeur de l'attribu filtre.</param>
+	<returns>La position suivant la valeur du filtre.</returns>
+</member><member name="M:Corail.Less.CssAttributeComparer.Compare(Corail.Less.CssAttribute,Corail.Less.CssAttribute)">
+	<summary>
+ Compare deux objets et retourne une valeur indiquant si l'un d'entre eux est inférieur, égal ou supérieur
+ à l'autre.
+ </summary>
+	<param name="x">Premier objet à comparer.</param>
+	<param name="y">Second objet à comparer.</param>
+	<returns>Entier signé qui indique les valeurs relatives de <paramref name="x"/> et <paramref name="y"/>,
+ comme indiqué dans le tableau suivant. Valeur  Signification  Inférieur à zéro <paramref name="x"/> est
+ inférieur à <paramref name="y"/>. Zéro <paramref name="x"/> est égal à <paramref name="y"/>. Supérieure
+ à zéro <paramref name="x"/> est supérieur à <paramref name="y"/>.</returns>
+</member><member name="T:Corail.Less.CssAttributeComparer">
+	<summary>
+ Classe permettant de trier les attributs dans le même ordre que le compilateur utiliser par Bootstrap pour
+ pouvoir comparer rapidement le résultat.
+ </summary>
+</member><member name="F:Corail.Less.CssAttribute.m_s_name">
+ Nom de l'attribut (En minuscule).
+
+</member><member name="F:Corail.Less.CssAttribute.m_s_value">
+ Valeur de l'attribut.
+
+</member><member name="P:Corail.Less.CssAttribute.IsEmpty">
+	<summary>
+ Indique si une valeur est renseignée pour l'attribut.
+ </summary>
+	<value><c>True</c> si une valeur est renseignée pour l'attribut; <c>False</c> sinon.</value>
+	<returns><c>True</c> si une valeur est renseignée pour l'attribut; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Less.CssAttribute.Name">
+	<summary>
+ Nom de l'attribut (En minuscule).
+ </summary>
+	<value>Nom de l'attribut (En minuscule).</value>
+	<returns>Nom de l'attribut (En minuscule).</returns>
+</member><member name="P:Corail.Less.CssAttribute.Value">
+	<summary>
+ Valeur de l'attribut.
+ </summary>
+	<value>Valeur de l'attribut.</value>
+	<returns>Valeur de l'attribut.</returns>
+</member><member name="M:Corail.Less.CssAttribute.#ctor(System.String,System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut (En minuscule).</param>
+	<param name="p_s_value">Valeur de l'attribut.</param>
+</member><member name="M:Corail.Less.CssAttribute.Render(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu de l'attribut.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="T:Corail.Less.CssAttribute">
+	<summary>
+ Attribut pour un sélecteur de feuille de style.
+ </summary>
+</member><member name="F:Corail.Less.BrowserVersion.m_s_browser">
+ Identifiant du navigateur : "ie", "ed", "fi", "ch", op".
+
+</member><member name="F:Corail.Less.BrowserVersion.m_i_version">
+ Version du navigateur.
+
+</member><member name="F:Corail.Less.BrowserVersion.m_s_prefix">
+ Préfixe CSS.
+
+</member><member name="P:Corail.Less.BrowserVersion.ID">
+	<summary>
+ Identifiant de version.
+ </summary>
+	<value>Identifiant de version.</value>
+	<returns>Identifiant de version.</returns>
+</member><member name="P:Corail.Less.BrowserVersion.Prefix">
+	<summary>
+ Préfixe CSS utilisé par le navigateur (-moz-, -ms-, -webkit-, ...).
+ </summary>
+	<value>Préfixe CSS utilisé par le navigateur (-moz-, -ms-, -webkit-, ...).</value>
+	<returns>Préfixe CSS utilisé par le navigateur (-moz-, -ms-, -webkit-, ...).</returns>
+</member><member name="P:Corail.Less.BrowserVersion.Version">
+	<summary>
+ Version du navigateur.
+ </summary>
+	<value>Version du navigateur.</value>
+	<returns>Version du navigateur.</returns>
+</member><member name="M:Corail.Less.BrowserVersion.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Less.BrowserVersion.#ctor(System.String,System.Double)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_browserId">Identifiant du navigateur : "ie", "ed", "fi", "ch", op".</param>
+	<param name="p_f_version">Version du navigateur.</param>
+</member><member name="M:Corail.Less.BrowserVersion.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actif.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actif.</returns>
+</member><member name="T:Corail.Less.BrowserVersion">
+	<summary>
+ Information de version d'un navigateur.
+ </summary>
+</member><member name="M:Corail.Less.LessAtomWhen.#ctor(System.String,System.Int32,System.Int32)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_raw">Contenu de l'élément.</param>
+	<param name="p_i_start">Position de départ du sélecteur.</param>
+	<param name="p_i_end">Position de l'accolade ouvrante correspondant au sélecteur.</param>
+</member><member name="M:Corail.Less.LessAtomWhen.Eval(Corail.Less.LessBuildContext)">
+	<summary>
+ Indique si la condition When est remplie en fonction du contexte.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<returns><c>True</c> si la condition When est remplie en fonction du contexte; <c>False</c> sinon.
+ </returns>
+</member><member name="T:Corail.Less.LessAtomWhen">
+	<summary>
+ Partie de la chaine représentant la condition d'affichage d'un noeud.
+ </summary>
+</member><member name="F:Corail.Less.LessAtomOperator.m_s_operator">
+ Opérateur.
+
+</member><member name="M:Corail.Less.LessAtomOperator.#ctor(Corail.Less.LessAtomContext,System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_context">Contexte dans le fichier LESS.</param>
+	<param name="p_s_operator">Opérateur.</param>
+</member><member name="M:Corail.Less.LessAtomOperator.GetFirstChar">
+	<summary>
+ Retourne le premier caractère de la chaine.
+ </summary>
+	<returns>Le premier caractère de la chaine.</returns>
+</member><member name="M:Corail.Less.LessAtomOperator.GetFirstWord">
+	<summary>
+ Retourne le premier mot de l'extrait.
+ </summary>
+	<returns>Le premier mot de l'extrait.</returns>
+</member><member name="M:Corail.Less.LessAtomOperator.Render(Corail.Less.LessWriter)">
+	<summary>
+ Rendu LESS de l'élément.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessAtomOperator.GetValue(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur representant cette instance.
+ </summary>
+	<returns>La valeur representant cette instance.</returns>
+</member><member name="M:Corail.Less.LessAtomOperator.Add(System.String)">
+	<summary>
+ Complète l 'opérateur en cours.
+ </summary>
+	<param name="p_s">Opérateur à ajouter.</param>
+</member><member name="M:Corail.Less.LessAtomOperator.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="T:Corail.Less.LessAtomOperator">
+	<summary>
+ Opérateur.
+ </summary>
+</member><member name="F:Corail.Less.LessAtom.m_i_context">
+ Contexte de la partie dans la chaine
+
+</member><member name="P:Corail.Less.LessAtom.Context">
+	<summary>
+ Contexte de la partie dans la chaine.
+ </summary>
+	<value>Contexte de la partie dans la chaine.</value>
+	<returns>Contexte de la partie dans la chaine.</returns>
+</member><member name="M:Corail.Less.LessAtom.GetFirstChar">
+	<summary>
+ Retourne le premier caractère de la chaine.
+ </summary>
+	<returns>Le premier caractère de la chaine.</returns>
+</member><member name="M:Corail.Less.LessAtom.GetFirstWord">
+	<summary>
+ Retourne le premier mot de l'extrait.
+ </summary>
+	<returns>Le premier mot de l'extrait.</returns>
+</member><member name="M:Corail.Less.LessAtom.#ctor(Corail.Less.LessAtomContext)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_context">Contexte de l'extrait dans le fichier Less.</param>
+</member><member name="M:Corail.Less.LessAtom.SetContext(Corail.Less.LessAtomContext)">
+	<summary>
+ Définie le contexte d'orgine de l'extrait de chaine.
+ </summary>
+	<param name="p_i_context">Contexte de l'extrait dans le fichier Less.</param>
+</member><member name="M:Corail.Less.LessAtom.Render(Corail.Less.LessWriter)">
+	<summary>
+ Rendu LESS de l'élément.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessAtom.RenderLine(Corail.Less.LessWriter)">
+	<summary>
+ Effectue le rendu d'une ligne.
+ </summary>
+	<param name="p_o_writer">Flux de sortie.</param>
+</member><member name="M:Corail.Less.LessAtom.GetValue(Corail.Less.LessBuildContext)">
+	<summary>
+ Retourne la valeur representant cette instance.
+ </summary>
+	<param name="p_o_context">Contexte de génération en cours.</param>
+	<returns>La valeur representant cette instance.</returns>
+</member><member name="T:Corail.Less.LessAtom">
+	<summary>
+ Partie de la chaine n'ayant pas besoin d'être redécoupée.
+ </summary>
+</member>
+</members>
+</doc>

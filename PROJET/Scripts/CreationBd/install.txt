@@ -1,0 +1,24 @@
+------------------------------------------------------------------------------
+-- Application : VITAL                                                       -
+-- Version     : 1.0                                                         -
+-- Societe     :                                                             -
+-- Historique  : Creation le 16/05/2017                                      -
+-- Commentaire :                                                             -
+-------------------------------------------------------- www.desirade.fr -----
+
+INSTALLATION :
+    * Créer le(s) schéma(s) de(s) bases de données
+    * Effacer tous les fichier LOG du répertoire de script (*.log)    
+    * Exécuter à partir du dossier contenant les scripts :
+		Sqlcmd -U sa -S serveur -i "vital_setup.sql" -o "setup.log"
+	* Saisissez le mot de passe pour lancer l'exécution du script
+
+------------------------------------------------------------------------------
+
+VERIFICATIONS :
+    * Le fichier "vital_setup.lst" contiendra
+      les rapports d'erreurs eventuels
+      
+------------------------------------------------------------------------------
+
+

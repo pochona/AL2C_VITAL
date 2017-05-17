@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DataBase Name="VITAL">
+  <Rules>
+    <TableName Prefix="VITAL_" CharCase="Upper" MaxLength="50" />
+    <ColumnName CharCase="Upper" MaxLength="50" PrimaryKeyName="ID" PrimaryKeyLabel="ID" DefaultFieldName="Name" DefaultFieldLabel="Name" />
+    <ProjectType WPF="False" />
+    <SqlServer UseNvarchar="True" DisablePrintStatements="True" UseWinAuthOverSqlLogin="False" RoleNameRule="0" CustomRoleName="" />
+  </Rules>
+  <Tables>
+    <Table Name="VTL_ADOPTER" ClassName="Adopter" Label="Adopter" Comment="Adopter : Associations etre propriétaire et animal" OldNames="~temp636291743853270664,VITAL_ADOPTER" Param="True">
+      <Columns>
+        <Column Name="VTL_ADOPTER_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_ADOPTER_DT_DEBUT" Type="DateTime" DateKind="Date" AllowNull="false" Label="Dt_debut" PropertyName="Dt_debut" Comment="Dt_debut" />
+        <Column Name="VTL_ADOPTER_DT_FIN" Type="DateTime" DateKind="Date" Label="Dt_fin" PropertyName="Dt_fin" Comment="Dt_fin" />
+        <Column Name="VTL_ADOPTER_ID_PROPRIETAIRE" Type="Integer" Precision="10" Label="Id_proprietaire" PropertyName="Id_proprietaire" PropertyNullValue="0" Comment="Id_proprietaire" />
+        <Column Name="VTL_ADOPTER_ID_ANIMAL" Type="Integer" Precision="10" Label="Id_animal" PropertyName="Id_animal" PropertyNullValue="0" Comment="Id_animal" />
+      </Columns>
+      <Relations>
+        <Relation Name="VTL_ADOPTER_ID_PROPRIETAIRE_VTL_PROPRIETAIRE_FK">
+          <Link ColumnName="VTL_ADOPTER_ID_PROPRIETAIRE" ForeignTableName="VTL_PROPRIETAIRE" ForeignFieldName="VTL_PROPRIETAIRE_ID" />
+        </Relation>
+        <Relation Name="VTL_ADOPTER_ID_ANIMAL_VTL_ANIMAL_FK">
+          <Link ColumnName="VTL_ADOPTER_ID_ANIMAL" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+      </Relations>
+    </Table>
+    <Table Name="VTL_ANIMAL" ClassName="Animal" Label="Animal" Comment="Animal" OldNames="~temp636291743693612982,VITAL_ANIMAL" Param="True">
+      <Columns>
+        <Column Name="VTL_ANIMAL_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_ANIMAL_NOM" Type="String" MaxLength="50" AllowNull="false" Label="Nom" PropertyName="Nom" Comment="Nom" />
+        <Column Name="VTL_ANIMAL_NUM_PUCE" Type="String" MaxLength="14" Label="Num_puce" PropertyName="Num_puce" Comment="Num_puce" />
+        <Column Name="VTL_ANIMAL_DT_NAISSANCE" Type="DateTime" DateKind="Date" Label="Dt_naissance" PropertyName="Dt_naissance" Comment="Dt_naissance" />
+        <Column Name="VTL_ANIMAL_DT_DECES" Type="DateTime" DateKind="Date" Label="Dt_deces" PropertyName="Dt_deces" Comment="Dt_deces" />
+        <Column Name="VTL_ANIMAL_ID_RACE" Type="Integer" Precision="10" Label="Id_race" PropertyName="Id_race" PropertyNullValue="0" Comment="Id_race" />
+        <Column Name="VTL_ANIMAL_ID_CARTE" Type="Integer" Precision="10" Label="Id_carte" PropertyName="Id_carte" PropertyNullValue="0" Comment="Id_carte" />
+        <Column Name="VTL_ANIMAL_ID_TYPE" Type="Integer" Precision="10" Label="Id_type" PropertyName="Id_type" PropertyNullValue="0" Comment="Id_type" />
+      </Columns>
+      <Relations>
+        <Relation Name="VTL_ANIMAL_ID_RACE_VTL_RACE_FK">
+          <Link ColumnName="VTL_ANIMAL_ID_RACE" ForeignTableName="VTL_RACE" ForeignFieldName="VTL_RACE_ID" />
+        </Relation>
+        <Relation Name="VTL_ANIMAL_ID_CARTE_VTL_CARTE_FK">
+          <Link ColumnName="VTL_ANIMAL_ID_CARTE" ForeignTableName="VTL_CARTE" ForeignFieldName="VTL_CARTE_ID" />
+        </Relation>
+        <Relation Name="VTL_ANIMAL_ID_TYPE_VTL_TYPE_FK">
+          <Link ColumnName="VTL_ANIMAL_ID_TYPE" ForeignTableName="VTL_TYPE" ForeignFieldName="VTL_TYPE_ID" />
+        </Relation>
+      </Relations>
+    </Table>
+    <Table Name="VTL_ASSURANCE" ClassName="Assurance" Label="Assurance" Comment="Assurance" OldNames="~temp636291747562342362,VITAL_ASSURANCE" Param="True">
+      <Columns>
+        <Column Name="VTL_ASSURANCE_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_ASSURANCE_NOM" Type="String" MaxLength="50" AllowNull="false" Label="Nom" PropertyName="Nom" Comment="Nom" />
+        <Column Name="VTL_ASSURANCE_SIRET" Type="String" MaxLength="50" AllowNull="false" Label="Siret" PropertyName="Siret" Comment="Siret" />
+      </Columns>
+      <Relations />
+    </Table>
+    <Table Name="VTL_CARTE" ClassName="Carte" Label="Carte" Comment="Carte vitale" OldNames="~temp636291744491361259,VITAL_CARTE" Param="True">
+      <Columns>
+        <Column Name="VTL_CARTE_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_CARTE_NUMERO" Type="String" MaxLength="50" AllowNull="false" Label="Numero" PropertyName="Numero" Comment="Numero" />
+      </Columns>
+      <Relations />
+    </Table>
+    <Table Name="VTL_CONSULTATION" ClassName="Consultation" Label="Consultation" Comment="Consultation vétérinaire d'un animal" OldNames="~temp636291748704489765,VITAL_CONSULTATION" Param="True">
+      <Columns>
+        <Column Name="VTL_CONSULTATION_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_CONSULTATION_DT_CONSULTATION" Type="DateTime" AllowNull="false" Label="Dt_consultation" PropertyName="Dt_consultation" Comment="Dt_consultation" />
+        <Column Name="VTL_CONSULTATION_MONTANT" Type="Double" Scale="2" Precision="9" Label="Montant" PropertyName="Montant" Comment="Montant" />
+        <Column Name="VTL_CONSULTATION_COMMENTAIRE" Type="String" Label="Commentaire" PropertyName="Commentaire" Comment="Commentaire" />
+        <Column Name="VTL_CONSULTATION_ID_VETERINAIRE" Type="Integer" Precision="10" Label="Id_veterinaire" PropertyName="Id_veterinaire" PropertyNullValue="0" Comment="Id_veterinaire" />
+        <Column Name="VTL_CONSULTATION_L" Type="Integer" Precision="10" Label="Id_animal" PropertyName="Id_animal" PropertyNullValue="0" Comment="Id_animal" />
+        <Column Name="VTL_CONSULTATION_ID_PROPRIETAIRE" Type="Integer" Precision="10" Label="Id_proprietaire" PropertyName="Id_proprietaire" PropertyNullValue="0" Comment="Id_proprietaire" />
+      </Columns>
+      <Relations>
+        <Relation Name="VTL_CONSULTATION_ID_VETERINAIRE_VTL_VETERINAIRE_FK">
+          <Link ColumnName="VTL_CONSULTATION_ID_VETERINAIRE" ForeignTableName="VTL_VETERINAIRE" ForeignFieldName="VTL_VETERINAIRE_ID" />
+        </Relation>
+        <Relation Name="VTL_CONSULTATION_L_VTL_ANIMAL_FK">
+          <Link ColumnName="VTL_CONSULTATION_L" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+        <Relation Name="VTL_CONSULTATION_ID_PROPRIETAIRE_VTL_PROPRIETAIRE_FK">
+          <Link ColumnName="VTL_CONSULTATION_ID_PROPRIETAIRE" ForeignTableName="VTL_PROPRIETAIRE" ForeignFieldName="VTL_PROPRIETAIRE_ID" />
+        </Relation>
+      </Relations>
+    </Table>
+    <Table Name="VTL_CONTRAT" ClassName="Contrat" Label="Contrat" Comment="Contrat d'assurance" OldNames="~temp636291744753865460,VITAL_CONTRAT" Param="True">
+      <Columns>
+        <Column Name="VTL_CONTRAT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_CONTRAT_NUM_CONTRAT" Type="String" MaxLength="50" AllowNull="false" Label="Num_contrat" PropertyName="Num_contrat" Comment="Num_contrat" />
+        <Column Name="VTL_CONTRAT_DT_DEBUT" Type="DateTime" DateKind="Date" Label="Dt_debut" PropertyName="Dt_debut" Comment="Dt_debut" />
+        <Column Name="VTL_CONTRAT_DT_FIN" Type="DateTime" DateKind="Date" Label="Dt_fin" PropertyName="Dt_fin" Comment="Dt_fin" />
+        <Column Name="VTL_CONTRAT_ID_ANIMAL" Type="Integer" Precision="10" Label="Id_animal" PropertyName="Id_animal" PropertyNullValue="0" Comment="Id_animal" />
+        <Column Name="VTL_CONTRAT_ID_PROPRIETAIRE" Type="Integer" Precision="10" Label="Id_proprietaire" PropertyName="Id_proprietaire" PropertyNullValue="0" Comment="Id_proprietaire" />
+        <Column Name="VTL_CONTRAT_ID_ASSURANCE" Type="Integer" Precision="10" Label="Id_assurance" PropertyName="Id_assurance" PropertyNullValue="0" Comment="Id_assurance" />
+      </Columns>
+      <Relations>
+        <Relation Name="VTL_CONTRAT_ID_ANIMAL_VTL_ANIMAL_FK">
+          <Link ColumnName="VTL_CONTRAT_ID_ANIMAL" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+        <Relation Name="VTL_CONTRAT_ID_PROPRIETAIRE_VTL_PROPRIETAIRE_FK">
+          <Link ColumnName="VTL_CONTRAT_ID_PROPRIETAIRE" ForeignTableName="VTL_PROPRIETAIRE" ForeignFieldName="VTL_PROPRIETAIRE_ID" />
+        </Relation>
+        <Relation Name="VTL_CONTRAT_ID_ASSURANCE_VTL_ASSURANCE_FK">
+          <Link ColumnName="VTL_CONTRAT_ID_ASSURANCE" ForeignTableName="VTL_ASSURANCE" ForeignFieldName="VTL_ASSURANCE_ID" />
+        </Relation>
+      </Relations>
+    </Table>
+    <Table Name="VTL_HISTO_POIDS" ClassName="Histo_Poids" Label="Histo_Poids" Comment="Historique du poids de l'animal" OldNames="~temp636291748501035293,VITAL_HISTO_POIDS" Param="True">
+      <Columns>
+        <Column Name="VTL_HISTO_POIDS_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_HISTO_POIDS_DT_HISTO" Type="DateTime" AllowNull="false" Label="Dt_histo" PropertyName="Dt_histo" Comment="Dt_histo" />
+        <Column Name="VTL_HISTO_POIDS_POIDS" Type="Double" Scale="2" Precision="9" AllowNull="false" Label="Poids" PropertyName="Poids" Comment="Poids" />
+        <Column Name="VTL_HISTO_POIDS_ID_ANIMAL" Type="Integer" Precision="10" AllowNull="false" Label="Id_animal" PropertyName="Id_animal" Comment="Id_animal" />
+      </Columns>
+      <Relations>
+        <Relation Name="VTL_HISTO_POIDS_ID_ANIMAL_VTL_ANIMAL_FK">
+          <Link ColumnName="VTL_HISTO_POIDS_ID_ANIMAL" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+      </Relations>
+    </Table>
+    <Table Name="VTL_HISTO_TAILLE" ClassName="Histo_Taille" Label="Histo_Taille" Comment="Historique de la taille de l'animal" OldNames="~temp636291755257419776,VITAL_HISTO_TAILLE" Param="True">
+      <Columns>
+        <Column Name="VTL_HISTO_TAILLE_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_HISTO_TAILLE_DT_HISTO" Type="DateTime" AllowNull="false" Label="Dt_histo" PropertyName="Dt_histo" Comment="Dt_histo" />
+        <Column Name="VTL_HISTO_TAILLE_TAILLE" Type="Double" Scale="2" Precision="9" AllowNull="false" Label="Taille" PropertyName="Taille" Comment="Taille" />
+        <Column Name="VTL_HISTO_TAILLE_ID_ANIMAL" Type="Integer" Precision="10" AllowNull="false" Label="Id_animal" PropertyName="Id_animal" Comment="Id_animal" />
+      </Columns>
+      <Relations>
+        <Relation Name="VTL_HISTO_TAILLE_ID_ANIMAL_VTL_ANIMAL_FK">
+          <Link ColumnName="VTL_HISTO_TAILLE_ID_ANIMAL" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+      </Relations>
+    </Table>
+    <Table Name="VTL_MEDICAMENT" ClassName="Medicament" Label="Medicament" Comment="Medicament" OldNames="~temp636291749076615894,VITAL_MEDICAMENTS,VTL_MEDICAMENTS" Param="True">
+      <Columns>
+        <Column Name="VTL_MEDICAMENT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_MEDICAMENT_LIBELLE" Type="String" MaxLength="50" AllowNull="false" Label="Libelle" PropertyName="Libelle" Comment="Libelle" />
+        <Column Name="VTL_MEDICAMENT_DOSAGE" Type="String" MaxLength="50" Label="Dosage" PropertyName="Dosage" Comment="Dosage" />
+        <Column Name="VTL_MEDICAMENT_DUREE_MOYENNE_JOUR" Type="Integer" Precision="10" Label="Duree_moyenne_jour" PropertyName="Duree_moyenne_jour" Comment="Duree_moyenne_jour" />
+      </Columns>
+      <Relations />
+    </Table>
+    <Table Name="VTL_POSITION" ClassName="Position" Label="Position" Comment="Position de l'animal" OldNames="~temp636291746670317683,VITAL_POSITION" Param="True">
+      <Columns>
+        <Column Name="VTL_POSITION_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_POSITION_DT_POSITION" Type="DateTime" AllowNull="false" Label="Dt_position" PropertyName="Dt_position" Comment="Dt_position" />
+        <Column Name="VTL_POSITION_COORD_LAT" Type="String" MaxLength="50" Label="Coord_lat" PropertyName="Coord_lat" Comment="Coord_lat" />
+        <Column Name="VTL_POSITION_COORD_LONG" Type="String" MaxLength="50" Label="Coord_long" PropertyName="Coord_long" Comment="Coord_long" />
+        <Column Name="VTL_POSITION_TOP_COURANTE" Type="Boolean" DefaultValue="False" Label="Top_courante" PropertyName="Top_courante" Comment="Top_courante" />
+        <Column Name="VTL_POSITION_ID_ANIMAL" Type="Integer" Precision="10" Label="Id_animal" PropertyName="Id_animal" PropertyNullValue="0" Comment="Id_animal" />
+      </Columns>
+      <Relations>
+        <Relation Name="VTL_POSITION_ID_ANIMAL_VTL_ANIMAL_FK">
+          <Link ColumnName="VTL_POSITION_ID_ANIMAL" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+      </Relations>
+    </Table>
+    <Table Name="VTL_PROPRIETAIRE" ClassName="PropriEtaire" Label="Propriétaire" Comment="Propriétaire" OldNames="~temp636291743225983973,VITAL_PROPRIETAIRE" Param="True">
+      <Columns>
+        <Column Name="VTL_PROPRIETAIRE_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_PROPRIETAIRE_NOM" Type="String" MaxLength="50" AllowNull="false" Label="Nom" PropertyName="Nom" Comment="Nom" />
+        <Column Name="VTL_PROPRIETAIRE_PRENOM" Type="String" MaxLength="50" Label="Prenom" PropertyName="Prenom" Comment="Prenom" />
+      </Columns>
+      <Relations />
+    </Table>
+    <Table Name="VTL_RACE" ClassName="Race" Label="Race" Comment="Race de l'animal" OldNames="~temp636291744259180330,VITAL_RACE" Param="True">
+      <Columns>
+        <Column Name="VTL_RACE_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_RACE_NOM" Type="String" MaxLength="50" AllowNull="false" Label="Nom" PropertyName="Nom" Comment="Nom" />
+      </Columns>
+      <Relations />
+    </Table>
+    <Table Name="VTL_TRAITEMENT_MEDICAMENT" ClassName="Traitement_medicament" Label="Traitement_medicament" Comment="Liste des médicaments compris dans un traitement" OldNames="~temp636291753605953995,VITAL_TRAITEMENT_MEDICAMENT" Param="True">
+      <Columns>
+        <Column Name="VTL_TRAITEMENT_MEDICAMENT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT" Type="Integer" Precision="10" AllowNull="false" Label="Id_traitement" PropertyName="Id_traitement" Comment="Id_traitement" />
+        <Column Name="VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT" Type="Integer" Precision="10" Label="Id_medicament" PropertyName="Id_medicament" PropertyNullValue="0" Comment="Id_medicament" />
+        <Column Name="VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE" Type="Integer" Precision="10" Label="Posologie" PropertyName="Posologie" Comment="Posologie" />
+        <Column Name="VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR" Type="Integer" Precision="10" Label="Duree_jour" PropertyName="Duree_jour" Comment="Duree_jour" />
+      </Columns>
+      <Relations>
+        <Relation Name="VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT_VTL_TRAITREMENT_FK">
+          <Link ColumnName="VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT" ForeignTableName="VTL_TRAITREMENT" ForeignFieldName="VTL_TRAITREMENT_ID" />
+        </Relation>
+        <Relation Name="VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT_VTL_MEDICAMENT_FK">
+          <Link ColumnName="VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT" ForeignTableName="VTL_MEDICAMENT" ForeignFieldName="VTL_MEDICAMENT_ID" />
+        </Relation>
+      </Relations>
+    </Table>
+    <Table Name="VTL_TRAITREMENT" ClassName="Traitrement" Label="Traitrement" Comment="Traitrement" OldNames="~temp636291749168898950,VITAL_TRAITREMENTS,VITAL_TRAITREMENT" Param="True">
+      <Columns>
+        <Column Name="VTL_TRAITREMENT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_TRAITREMENT_DUREE_JOUR" Type="Integer" Precision="10" AllowNull="false" Label="Duree_jour" PropertyName="Duree_jour" Comment="Duree_jour" />
+        <Column Name="VTL_TRAITREMENT_DT_DEBUT" Type="DateTime" Label="Dt_debut" PropertyName="Dt_debut" Comment="Dt_debut" />
+      </Columns>
+      <Relations />
+    </Table>
+    <Table Name="VTL_TYPE" ClassName="Type" Label="Type" Comment="Typede l'animal" OldNames="~temp636291755689604515,VITAL_TYPE" Param="True">
+      <Columns>
+        <Column Name="VTL_TYPE_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_TYPE_LIBELLE" Type="String" MaxLength="50" AllowNull="false" Label="Libelle" PropertyName="Libelle" Comment="Libelle" />
+      </Columns>
+      <Relations />
+    </Table>
+    <Table Name="VTL_USER" ClassName="User" Label="User" Comment="User" OldNames="~temp636305706109785694,VITAL_USER" Param="True">
+      <Columns>
+        <Column Name="VTL_USER_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_USER_LOGIN" Type="String" MaxLength="50" AllowNull="false" Label="Login" PropertyName="Login" Comment="Login" />
+        <Column Name="VTL_USER_MDP" Type="String" MaxLength="50" AllowNull="false" Label="Mdp" PropertyName="Mdp" Comment="Mdp" />
+        <Column Name="VTL_USER_ROLE" Type="String" MaxLength="50" AllowNull="false" Label="Role" PropertyName="Role" Comment="Role" />
+      </Columns>
+      <Relations />
+    </Table>
+    <Table Name="VTL_VACCIN" ClassName="Vaccin" Label="Vaccin" Comment="Vaccin" OldNames="~temp636291750250202361,VITAL_VACCIN" Param="True">
+      <Columns>
+        <Column Name="VTL_VACCIN_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_VACCIN_LIBELLE" Type="String" MaxLength="50" AllowNull="false" Label="Libelle" PropertyName="Libelle" Comment="Libelle" />
+        <Column Name="VTL_VACCIN_TOP_PERIODIQUE" Type="Boolean" DefaultValue="False" Label="Top_periodique" PropertyName="Top_periodique" Comment="Top_periodique" />
+        <Column Name="VTL_VACCIN_PERIODE_MOIS" Type="Integer" Precision="10" Label="Periode_mois" PropertyName="Periode_mois" Comment="Periode_mois" />
+        <Column Name="VTL_VACCIN_TOP_RECOMMANDATION" Type="Boolean" DefaultValue="False" Label="Top_recommandation" PropertyName="Top_recommandation" Comment="Top_recommandation" />
+      </Columns>
+      <Relations />
+    </Table>
+    <Table Name="VTL_VACCINATION" ClassName="Vaccination" Label="Vaccination" Comment="Vaccination d'un animal" OldNames="~temp636291750547275506,VITAL_VACCINATION" Param="True">
+      <Columns>
+        <Column Name="VTL_VACCINATION_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_VACCINATION_ID_ANIMAL" Type="Integer" Precision="10" AllowNull="false" Label="Id_animal" PropertyName="Id_animal" Comment="Id_animal" />
+        <Column Name="VTL_VACCINATION_ID_VACCIN" Type="Integer" Precision="10" Label="Id_vaccin" PropertyName="Id_vaccin" PropertyNullValue="0" Comment="Id_vaccin" />
+        <Column Name="VTL_VACCINATION_DT_VACCIN" Type="DateTime" DateKind="Date" Label="Dt_vaccin" PropertyName="Dt_vaccin" Comment="Dt_vaccin" />
+        <Column Name="VTL_VACCINATION_ID_CONSULTATION" Type="Integer" Precision="10" Label="Id_consultation" PropertyName="Id_consultation" PropertyNullValue="0" Comment="Id_consultation" />
+      </Columns>
+      <Relations>
+        <Relation Name="VTL_VACCINATION_ID_ANIMAL_VTL_ANIMAL_FK">
+          <Link ColumnName="VTL_VACCINATION_ID_ANIMAL" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+        <Relation Name="VTL_VACCINATION_ID_VACCIN_VTL_VACCIN_FK">
+          <Link ColumnName="VTL_VACCINATION_ID_VACCIN" ForeignTableName="VTL_VACCIN" ForeignFieldName="VTL_VACCIN_ID" />
+        </Relation>
+        <Relation Name="VTL_VACCINATION_ID_CONSULTATION_VTL_CONSULTATION_FK">
+          <Link ColumnName="VTL_VACCINATION_ID_CONSULTATION" ForeignTableName="VTL_CONSULTATION" ForeignFieldName="VTL_CONSULTATION_ID" />
+        </Relation>
+      </Relations>
+    </Table>
+    <Table Name="VTL_VETERINAIRE" ClassName="Veterinaire" Label="Veterinaire" Comment="Veterinaire" OldNames="~temp636291748970209147,VITAL_VETERINAIRE" Param="True">
+      <Columns>
+        <Column Name="VTL_VETERINAIRE_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_VETERINAIRE_NOM" Type="String" MaxLength="50" AllowNull="false" Label="Nom" PropertyName="Nom" Comment="Nom" />
+        <Column Name="VTL_VETERINAIRE_PRENOM" Type="String" MaxLength="50" AllowNull="false" Label="Prenom" PropertyName="Prenom" Comment="Prenom" />
+        <Column Name="VTL_VETERINAIRE_SIRET" Type="String" MaxLength="50" Label="SIRET" PropertyName="SIRET" Comment="SIRET" />
+      </Columns>
+      <Relations />
+    </Table>
+  </Tables>
+</DataBase>

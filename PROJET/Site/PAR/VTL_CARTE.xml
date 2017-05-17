@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Carte</title>
+	<description>Carte</description>
+	<columns>
+		<col DataField="VTL_CARTE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_CARTE_NUMERO" Type="Text" Unique="false" HeaderText="Numero" NotNull="true" MaxLen="50" />
+	</columns>
+</table>
