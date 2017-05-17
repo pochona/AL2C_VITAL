@@ -82,6 +82,7 @@ Public Class MainApplication
             End If
             If UserIsInRole("Veto") Or UserIsInRole("Admin") Then
                 .Add("Veto", "~/Pages/AccueilVeto.aspx")
+                .Add("Historique des consultations", "~/Pages/histo_consultation.aspx")
             End If
             If UserIsInRole("Mutuelle") Or UserIsInRole("Admin") Then
                 .Add("Mutuelle", "~/Pages/AccueilMutuelle.aspx")
