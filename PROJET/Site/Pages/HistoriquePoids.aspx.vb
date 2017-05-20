@@ -16,14 +16,14 @@ Partial Public Class PageHistoriquePoids
 
 #Region "Mode d'accès"
 
-    Private Property ModeAcces As EN_ModeAcces
-        Get
-            Return CType(ViewState("ModeAcces"), EN_ModeAcces)
-        End Get
-        Set(p_o_value As EN_ModeAcces)
-            ViewState("ModeAcces") = p_o_value
-        End Set
-    End Property
+    'Private Property ModeAcces As EN_ModeAcces
+    '    Get
+    '        Return CType(ViewState("ModeAcces"), EN_ModeAcces)
+    '    End Get
+    '    Set(p_o_value As EN_ModeAcces)
+    '        ViewState("ModeAcces") = p_o_value
+    '    End Set
+    'End Property
 
 #End Region
 

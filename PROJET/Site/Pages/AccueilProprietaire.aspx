@@ -4,17 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-	<title>Accueil propri&#233;taire</title>
+	<title>Accueil propriétaire</title>
 </head>
 <body>
 	<form id="frmData" runat="server">
 	<div>
 	<cw:CwFormLayout runat="server" ID="layout1">
-            <cw:CwFrame runat="server" ID="frame1" text="NomAnimalRecupBD" Collapsable="true" >
+            <cw:CwFrame runat="server" ID="frame1" text="ListeAnimaux" Collapsable="true" Kind="Primary">
+                Tableau à créer
                 <cw:CwFormLayout runat="server" ID="frlDtl">
-                    <cw:CwTextBox runat="server" ID="txt1" Label="Race" Enabled="false" Text="infosRecupBD" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwTextBox runat="server" ID="txt2" Label="Poids" Enabled="false" Text="infosRecupBD" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwTextBox runat="server" ID="txt3" Label="Age" Enabled="false" Text="infosRecupBD" ToolTip="Infos bulle"></cw:CwTextBox>
+                    <cw:CwTextBox runat="server" ID="txt1" Label="Race" Enabled="false" Text="animal X"></cw:CwTextBox>
                 </cw:CwFormLayout>
             </cw:CwFrame>
 	    </cw:CwFormLayout>

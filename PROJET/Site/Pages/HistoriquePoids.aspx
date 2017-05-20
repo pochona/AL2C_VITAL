@@ -11,7 +11,7 @@
         <cw:CwFormLayout runat="server" ID="CwFormRecap">
             <cw:CwFrame runat="server" ID="CwFrame2" text="Récapitulatif sur l'animal" Collapsable="true" Kind="Primary" >
                 <cw:CwFormLayout runat="server" ID="CwFormLayout3">
-                    <cw:CwTextBox runat="server" ID="CwNomAnimal" Label="Animal :" Text="Nom de l'animal"></cw:CwTextBox>
+                    <cw:CwTextBox runat="server" ID="CwNomAnimal" Label="Animal :" Text="Nom de l'animal" ReadOnly></cw:CwTextBox>
                     <cw:CwTextBox runat="server" ID="CwDerniereDate" Label="Dernier historique :" Text="Date historique"></cw:CwTextBox>
                     <cw:CwTextBox runat="server" ID="CwDernierPoids" Label="Dernier poids :" Text="Poids historique"></cw:CwTextBox>
                 </cw:CwFormLayout>
