@@ -34,6 +34,7 @@
         <Column Name="VTL_ANIMAL_ID_RACE" Type="Integer" Precision="10" Label="Id_race" PropertyName="Id_race" PropertyNullValue="0" Comment="Id_race" />
         <Column Name="VTL_ANIMAL_ID_CARTE" Type="Integer" Precision="10" Label="Id_carte" PropertyName="Id_carte" PropertyNullValue="0" Comment="Id_carte" />
         <Column Name="VTL_ANIMAL_ID_TYPE" Type="Integer" Precision="10" Label="Id_type" PropertyName="Id_type" PropertyNullValue="0" Comment="Id_type" />
+        <Column Name="VTL_ANIMAL_ID_PROP" Type="Integer" Precision="10" Label="Id_prop" PropertyName="Id_prop" PropertyNullValue="0" Comment="Id_prop" />
       </Columns>
       <Relations>
         <Relation Name="VTL_ANIMAL_ID_RACE_VTL_RACE_FK">
@@ -44,6 +45,9 @@
         </Relation>
         <Relation Name="VTL_ANIMAL_ID_TYPE_VTL_TYPE_FK">
           <Link ColumnName="VTL_ANIMAL_ID_TYPE" ForeignTableName="VTL_TYPE" ForeignFieldName="VTL_TYPE_ID" />
+        </Relation>
+        <Relation Name="VTL_ANIMAL_ID_PROP_VTL_USER_FK">
+          <Link ColumnName="VTL_ANIMAL_ID_PROP" ForeignTableName="VTL_USER" ForeignFieldName="VTL_USER_ID" />
         </Relation>
       </Relations>
     </Table>
@@ -59,6 +63,7 @@
       <Columns>
         <Column Name="VTL_CARTE_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
         <Column Name="VTL_CARTE_NUMERO" Type="String" MaxLength="50" AllowNull="false" Label="Numero" PropertyName="Numero" Comment="Numero" />
+        <Column Name="VTL_CARTE_NFC" Type="String" MaxLength="255" Label="NFC" PropertyName="NFC" Comment="NFC" />
       </Columns>
       <Relations />
     </Table>

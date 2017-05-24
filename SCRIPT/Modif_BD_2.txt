@@ -1,0 +1,21 @@
+Alter table VTL_ANIMAL ADD VTL_ANIMAL_ID_PROP INT 
+
+
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_prop', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_PROP'
+GO
+
+
+
+ALTER TABLE VTL_ANIMAL
+ADD CONSTRAINT VTL_ANIMAL_ID_PROP_VTL_USER_FK FOREIGN KEY (VTL_ANIMAL_ID_PROP)
+	REFERENCES VTL_USER(VTL_USER_ID);
+GO
+
+
+
+Alter table VTL_CARTE ADD VTL_CARTE_NFC NVARCHAR(255)
+
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'NFC', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_NFC'
+GO

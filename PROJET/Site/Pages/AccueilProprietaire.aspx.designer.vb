@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class PageAccueilProprietaire
 
     '''<summary>
+    '''Contrôle Head1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
+
+    '''<summary>
     '''Contrôle frmData.
     '''</summary>
     '''<remarks>
@@ -23,67 +32,67 @@ Partial Public Class PageAccueilProprietaire
     Protected WithEvents frmData As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Contrôle layout1.
+    '''Contrôle frmAnimx.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents layout1 As Global.Corail.Web.CwFormLayout
+    Protected WithEvents frmAnimx As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle frame1.
+    '''Contrôle frmListAnimaux.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frame1 As Global.Corail.Web.CwFrame
+    Protected WithEvents frmListAnimaux As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle frlDtl.
+    '''Contrôle frlListAnimx.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frlDtl As Global.Corail.Web.CwFormLayout
+    Protected WithEvents frlListAnimx As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle txt1.
+    '''Contrôle dtgAnimx.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txt1 As Global.Corail.Web.CwTextBox
+    Protected WithEvents dtgAnimx As Global.Corail.Web.CwDataGrid
 
     '''<summary>
-    '''Contrôle layout2.
+    '''Contrôle frlDepenses.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents layout2 As Global.Corail.Web.CwFormLayout
+    Protected WithEvents frlDepenses As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle frame2.
+    '''Contrôle frm.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frame2 As Global.Corail.Web.CwFrame
+    Protected WithEvents frm As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle layout2bis.
+    '''Contrôle frlDtlDepenses.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents layout2bis As Global.Corail.Web.CwFormLayout
+    Protected WithEvents frlDtlDepenses As Global.Corail.Web.CwFormLayout
 
     '''<summary>
     '''Contrôle txt4.
@@ -93,22 +102,4 @@ Partial Public Class PageAccueilProprietaire
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents txt4 As Global.Corail.Web.CwTextBox
-
-    '''<summary>
-    '''Contrôle label1.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents label1 As Global.Corail.Web.CwLabel
-
-    '''<summary>
-    '''Contrôle txt5.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents txt5 As Global.Corail.Web.CwTextBox
 End Class

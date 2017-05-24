@@ -6,744 +6,7 @@ VITAL.BO
 </name>
 </assembly>
 <members>
-<member name="F:VITAL.BO.VITAL.Tables.VTL_ADOPTER">
-	<summary>
- Adopter : Associations etre propriétaire et animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_ANIMAL">
-	<summary>
- Animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_ASSURANCE">
-	<summary>
- Assurance.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_CARTE">
-	<summary>
- Carte vitale.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_CONSULTATION">
-	<summary>
- Consultation vétérinaire d'un animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_CONTRAT">
-	<summary>
- Contrat d'assurance.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_HISTO_POIDS">
-	<summary>
- Historique du poids de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_HISTO_TAILLE">
-	<summary>
- Historique de la taille de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_MEDICAMENT">
-	<summary>
- Medicament.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_POSITION">
-	<summary>
- Position de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_PROPRIETAIRE">
-	<summary>
- Propriétaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_RACE">
-	<summary>
- Race de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_TRAITEMENT_MEDICAMENT">
-	<summary>
- Liste des médicaments compris dans un traitement.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_TRAITREMENT">
-	<summary>
- Traitrement.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_TYPE">
-	<summary>
- Typede l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_USER">
-	<summary>
- User.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_VACCIN">
-	<summary>
- Vaccin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_VACCINATION">
-	<summary>
- Vaccination d'un animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Tables.VTL_VETERINAIRE">
-	<summary>
- Veterinaire.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Tables">
-	<summary>
- Tables du schéma VITAL.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_DT_DEBUT">
-	<summary>
- Dt_debut.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_DT_FIN">
-	<summary>
- Dt_fin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_ID_PROPRIETAIRE">
-	<summary>
- Id_proprietaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_ID_ANIMAL">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_ADOPTER">
-	<summary>
- Adopter : Associations etre propriétaire et animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_NOM">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_NUM_PUCE">
-	<summary>
- Num_puce.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_DT_NAISSANCE">
-	<summary>
- Dt_naissance.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_DT_DECES">
-	<summary>
- Dt_deces.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_RACE">
-	<summary>
- Id_race.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_CARTE">
-	<summary>
- Id_carte.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_TYPE">
-	<summary>
- Id_type.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_ANIMAL">
-	<summary>
- Animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_NOM">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET">
-	<summary>
- Siret.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_ASSURANCE">
-	<summary>
- Assurance.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_NUMERO">
-	<summary>
- Numero.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_CARTE">
-	<summary>
- Carte vitale.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION">
-	<summary>
- Dt_consultation.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_MONTANT">
-	<summary>
- Montant.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE">
-	<summary>
- Commentaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE">
-	<summary>
- Id_veterinaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_L">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID_PROPRIETAIRE">
-	<summary>
- Id_proprietaire.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_CONSULTATION">
-	<summary>
- Consultation vétérinaire d'un animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_NUM_CONTRAT">
-	<summary>
- Num_contrat.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT">
-	<summary>
- Dt_debut.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_DT_FIN">
-	<summary>
- Dt_fin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_ID_PROPRIETAIRE">
-	<summary>
- Id_proprietaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_ID_ASSURANCE">
-	<summary>
- Id_assurance.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_CONTRAT">
-	<summary>
- Contrat d'assurance.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_POIDS.VTL_HISTO_POIDS_DT_HISTO">
-	<summary>
- Dt_histo.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS">
-	<summary>
- Poids.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID_ANIMAL">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_HISTO_POIDS">
-	<summary>
- Historique du poids de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_DT_HISTO">
-	<summary>
- Dt_histo.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_TAILLE">
-	<summary>
- Taille.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_ID_ANIMAL">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_HISTO_TAILLE">
-	<summary>
- Historique de la taille de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_LIBELLE">
-	<summary>
- Libelle.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DOSAGE">
-	<summary>
- Dosage.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR">
-	<summary>
- Duree_moyenne_jour.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_MEDICAMENT">
-	<summary>
- Medicament.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_DT_POSITION">
-	<summary>
- Dt_position.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_COORD_LAT">
-	<summary>
- Coord_lat.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_COORD_LONG">
-	<summary>
- Coord_long.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_TOP_COURANTE">
-	<summary>
- Top_courante.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_ID_ANIMAL">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_POSITION">
-	<summary>
- Position de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM">
-	<summary>
- Prenom.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_PROPRIETAIRE">
-	<summary>
- Propriétaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_RACE.VTL_RACE_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_RACE.VTL_RACE_NOM">
-	<summary>
- Nom.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_RACE">
-	<summary>
- Race de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT">
-	<summary>
- Id_traitement.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT">
-	<summary>
- Id_medicament.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE">
-	<summary>
- Posologie.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR">
-	<summary>
- Duree_jour.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT">
-	<summary>
- Liste des médicaments compris dans un traitement.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_DUREE_JOUR">
-	<summary>
- Duree_jour.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT">
-	<summary>
- Dt_debut.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_TRAITREMENT">
-	<summary>
- Traitrement.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TYPE.VTL_TYPE_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_TYPE.VTL_TYPE_LIBELLE">
-	<summary>
- Libelle.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_TYPE">
-	<summary>
- Typede l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_LOGIN">
-	<summary>
- Login.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_MDP">
-	<summary>
- Mdp.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_ROLE">
-	<summary>
- Role.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_USER">
-	<summary>
- User.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_LIBELLE">
-	<summary>
- Libelle.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE">
-	<summary>
- Top_periodique.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS">
-	<summary>
- Periode_mois.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION">
-	<summary>
- Top_recommandation.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_VACCIN">
-	<summary>
- Vaccin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_ID_ANIMAL">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_ID_VACCIN">
-	<summary>
- Id_vaccin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_DT_VACCIN">
-	<summary>
- Dt_vaccin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_ID_CONSULTATION">
-	<summary>
- Id_consultation.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_VACCINATION">
-	<summary>
- Vaccination d'un animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_NOM">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_PRENOM">
-	<summary>
- Prenom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET">
-	<summary>
- SIRET.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.VTL_VETERINAIRE">
-	<summary>
- Veterinaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Schema.m_o_db">
-	<summary>
- Base de donnée liée à "VITAL".
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Schema.DB">
-	<summary>
- Base de donnée liée à "VITAL".
- </summary>
-	<value> Base de donnée liée.</value>
-</member><member name="M:VITAL.BO.VITAL.Schema.NullIfValue(System.Int64,System.Int64)">
-	<summary>
- Retourne la valeur à utiliser dans la requête.
- </summary>
-	<param name="p_l_value">Valeur que l'on souhaite enregistrer.</param>
-	<param name="p_l_null">Valeur étant remplacée par NULL.</param>
-	<returns>La valeur à utiliser dans la requête.</returns>
-</member><member name="M:VITAL.BO.VITAL.Schema.NullIfValue(System.Double,System.Double)">
-	<summary>
- Retourne la valeur à utiliser dans la requête.
- </summary>
-	<param name="p_r_value">Valeur que l'on souhaite enregistrer.</param>
-	<param name="p_r_null">Valeur étant remplacée par NULL.</param>
-	<returns>La valeur à utiliser dans la requête.</returns>
-</member><member name="M:VITAL.BO.VITAL.Schema.TextSQLEmpty(System.String)">
-	<summary>
- Met des quotes autour de la chaine de texte.
- </summary>
-	<param name="p_s">Texte.</param>
-	<returns>La valeur à utiliser dans la requête.</returns>
-</member><member name="M:VITAL.BO.VITAL.Schema.ClearAllCache(System.Boolean)">
-	<summary>
- Permet de nettoyer tous les caches
- </summary>
-	<param name="p_b_force">Indique si l'on force le vidage ou non</param>
-</member><member name="M:VITAL.BO.VITAL.Schema.SetDB(Corail.Core.DataBase)">
-	<summary>
- On conserve la référence vers la base de données.
- </summary>
-	<param name="p_o_db">Base de données.</param>
-	<returns>Base de données source.</returns>
-</member><member name="M:VITAL.BO.VITAL.Schema.TransactionCancelled(Corail.Core.DataBase)">
-	<summary>
- Une transaction a été annulée dans la base de données.
- </summary>
-	<param name="p_o_db">Base de données.</param>
-</member><member name="M:VITAL.BO.VITAL.Adopter.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Adopter"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Adopter.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Adopter"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Animal.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Animal"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Animal.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Animal"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Assurance.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Assurance"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Assurance.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Assurance"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Carte.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Carte"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Carte.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Carte"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Consultation.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Consultation"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Consultation.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Consultation"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Contrat.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Contrat"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Contrat.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Contrat"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Histo_Poids.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Poids"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Histo_Poids.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Poids"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Histo_Taille.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Taille"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Histo_Taille.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Taille"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Medicament.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Medicament"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Medicament.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Medicament"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Position.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Position"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Position.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Position"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.PropriEtaire.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.PropriEtaire"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.PropriEtaire.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.PropriEtaire"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Race.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Race"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Race.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Race"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Traitement_medicament.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitement_medicament"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Traitement_medicament.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitement_medicament"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Traitrement.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitrement"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Traitrement.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitrement"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Type.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Type"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Type.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Type"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.User.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.User"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.User.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.User"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Vaccin.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccin"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Vaccin.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccin"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Vaccination.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccination"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Vaccination.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccination"/>.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Veterinaire.#ctor(System.Int32,Corail.Core.Transaction)">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Veterinaire"/>.
- </summary>
-	<param name="p_i_iD">ID.</param>
-	<param name="p_o_trans">Transaction à utiliser.</param>
-</member><member name="M:VITAL.BO.VITAL.Veterinaire.#ctor">
-	<summary>
- Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Veterinaire"/>.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Histo_Poids">
-	<summary>
- Historique du poids de l'animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.PropriEtaire">
-	<summary>
- Propriétaire.
- </summary>
-</member><member name="M:VITAL.BO.Main.InitDatabases(Corail.Core.DataBaseList)">
-	<summary>
- Vous devez initialiser içi la liste des bases de données accessibles depuis
- l'application
- </summary>
-	<param name="p_o_list">Liste de bases de données</param>
-</member><member name="M:VITAL.BO.VITAL.Animal.GetThisAnimal">
+<member name="M:VITAL.BO.VITAL.Animal.GetThisAnimal">
 	<summary>
  Retourne l'id de l'animal - Accessible depuis 1 objet de la classe : p_o_animal.GetThisAnimal2().
  </summary>
@@ -756,32 +19,61 @@ VITAL.BO
 	<param name="p_s_name">Nom de l'animal.</param>
 	<returns>L'id de l'animal - Accessible sans objet de la classe : Animal.GetThisAnimal2("Rex").
  </returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetAnimauxProprio(System.String)">
+	<summary>
+ Retourne la liste des animaux du proprio.
+ </summary>
+	<param name="p_s_logginProprio">Login du propriétaire.</param>
+	<returns>La liste des animaux du proprio.</returns>
 </member><member name="T:VITAL.BO.VITAL.Animal">
 	<summary>
  Animal.
  </summary>
-</member><member name="T:VITAL.BO.VITAL.Vaccination">
+</member><member name="T:VITAL.BO.VITAL.Contrat">
 	<summary>
- Vaccination d'un animal.
+ Contrat d'assurance.
  </summary>
+</member><member name="T:VITAL.BO.VITAL.Carte">
+	<summary>
+ Carte vitale.
+ </summary>
+</member><member name="M:VITAL.BO.Main.InitDatabases(Corail.Core.DataBaseList)">
+	<summary>
+ Vous devez initialiser içi la liste des bases de données accessibles depuis
+ l'application
+ </summary>
+	<param name="p_o_list">Liste de bases de données</param>
 </member><member name="T:VITAL.BO.VITAL.Position">
 	<summary>
  Position de l'animal.
  </summary>
-</member><member name="T:VITAL.BO.VITAL.Type">
+</member><member name="T:VITAL.BO.VITAL.Traitrement">
 	<summary>
- Typede l'animal.
+ Traitrement.
  </summary>
-</member><member name="M:VITAL.BO.VITAL.User.GetConnectedUser(System.String)">
+</member><member name="T:VITAL.BO.VITAL.Vaccin">
 	<summary>
- Get connected User
+ Vaccin.
  </summary>
-	<param name="p_s_login"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="T:VITAL.BO.VITAL.User">
+</member><member name="T:VITAL.BO.VITAL.Consultation">
 	<summary>
- User.
+ Consultation vétérinaire d'un animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Histo_Taille">
+	<summary>
+ Historique de la taille de l'animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Race">
+	<summary>
+ Race de l'animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Medicament">
+	<summary>
+ Medicament.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.PropriEtaire">
+	<summary>
+ Propriétaire.
  </summary>
 </member><member name="P:VITAL.BO.My.Resources.Resources.ResourceManager">
 	<summary>
@@ -796,2074 +88,9 @@ VITAL.BO
 	<summary>
   Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
 </summary>
-</member><member name="T:VITAL.BO.VITAL.Adopter">
-	<summary>
- Adopter : Associations etre propriétaire et animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Vaccin">
-	<summary>
- Vaccin.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Contrat">
-	<summary>
- Contrat d'assurance.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Traitement_medicament">
-	<summary>
- Liste des médicaments compris dans un traitement.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Veterinaire">
-	<summary>
- Veterinaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_dt_dt_debut">
-	<summary>
- Dt_debut.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_dt_dt_fin">
-	<summary>
- Dt_fin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_i_id_proprietaire">
-	<summary>
- Id_proprietaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_i_id_animal">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_ADOPTER.VTL_ADOPTER_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.Dt_debut">
-	<summary>
- Dt_debut.
- Champ associé : VTL_ADOPTER.VTL_ADOPTER_DT_DEBUT.
- </summary>
-	<value>
- Dt_debut.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.Dt_fin">
-	<summary>
- Dt_fin.
- Champ associé : VTL_ADOPTER.VTL_ADOPTER_DT_FIN.
- </summary>
-	<value>
- Dt_fin.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.Id_proprietaire">
-	<summary>
- Id_proprietaire.
- Champ associé : VTL_ADOPTER.VTL_ADOPTER_ID_PROPRIETAIRE.
- </summary>
-	<value>
- Id_proprietaire.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.Id_animal">
-	<summary>
- Id_animal.
- Champ associé : VTL_ADOPTER.VTL_ADOPTER_ID_ANIMAL.
- </summary>
-	<value>
- Id_animal.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.Diff(VITAL.BO.VITAL.Raw.Adopter{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Adopter.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Adopter`1">
-	<summary>
- Adopter : Associations etre propriétaire et animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_s_nom">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_s_num_puce">
-	<summary>
- Num_puce.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_dt_dt_naissance">
-	<summary>
- Dt_naissance.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_dt_dt_deces">
-	<summary>
- Dt_deces.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_i_id_race">
-	<summary>
- Id_race.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_i_id_carte">
-	<summary>
- Id_carte.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_i_id_type">
-	<summary>
- Id_type.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Nom">
-	<summary>
- Nom.
- Champ associé : VTL_ANIMAL.VTL_ANIMAL_NOM.
- </summary>
-	<value>
- Nom.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Num_puce">
-	<summary>
- Num_puce.
- Champ associé : VTL_ANIMAL.VTL_ANIMAL_NUM_PUCE.
- </summary>
-	<value>
- Num_puce.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Dt_naissance">
-	<summary>
- Dt_naissance.
- Champ associé : VTL_ANIMAL.VTL_ANIMAL_DT_NAISSANCE.
- </summary>
-	<value>
- Dt_naissance.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Dt_deces">
-	<summary>
- Dt_deces.
- Champ associé : VTL_ANIMAL.VTL_ANIMAL_DT_DECES.
- </summary>
-	<value>
- Dt_deces.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Id_race">
-	<summary>
- Id_race.
- Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID_RACE.
- </summary>
-	<value>
- Id_race.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Id_carte">
-	<summary>
- Id_carte.
- Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID_CARTE.
- </summary>
-	<value>
- Id_carte.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Id_type">
-	<summary>
- Id_type.
- Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID_TYPE.
- </summary>
-	<value>
- Id_type.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.Diff(VITAL.BO.VITAL.Raw.Animal{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Animal.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Animal`1">
-	<summary>
- Animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_nom">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_siret">
-	<summary>
- Siret.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Nom">
-	<summary>
- Nom.
- Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_NOM.
- </summary>
-	<value>
- Nom.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Siret">
-	<summary>
- Siret.
- Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_SIRET.
- </summary>
-	<value>
- Siret.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.Diff(VITAL.BO.VITAL.Raw.Assurance{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Assurance.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Assurance`1">
+</member><member name="T:VITAL.BO.VITAL.Assurance">
 	<summary>
  Assurance.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_s_numero">
-	<summary>
- Numero.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_CARTE.VTL_CARTE_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.Numero">
-	<summary>
- Numero.
- Champ associé : VTL_CARTE.VTL_CARTE_NUMERO.
- </summary>
-	<value>
- Numero.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.Diff(VITAL.BO.VITAL.Raw.Carte{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Carte.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Carte`1">
-	<summary>
- Carte vitale.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_dt_dt_consultation">
-	<summary>
- Dt_consultation.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_d_montant">
-	<summary>
- Montant.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_s_commentaire">
-	<summary>
- Commentaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_i_id_veterinaire">
-	<summary>
- Id_veterinaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_i_id_animal">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_i_id_proprietaire">
-	<summary>
- Id_proprietaire.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Dt_consultation">
-	<summary>
- Dt_consultation.
- Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION.
- </summary>
-	<value>
- Dt_consultation.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Montant">
-	<summary>
- Montant.
- Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_MONTANT.
- </summary>
-	<value>
- Montant.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Commentaire">
-	<summary>
- Commentaire.
- Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE.
- </summary>
-	<value>
- Commentaire.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Id_veterinaire">
-	<summary>
- Id_veterinaire.
- Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE.
- </summary>
-	<value>
- Id_veterinaire.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Id_animal">
-	<summary>
- Id_animal.
- Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_L.
- </summary>
-	<value>
- Id_animal.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Id_proprietaire">
-	<summary>
- Id_proprietaire.
- Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_ID_PROPRIETAIRE.
- </summary>
-	<value>
- Id_proprietaire.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.Diff(VITAL.BO.VITAL.Raw.Consultation{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Consultation.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Consultation`1">
-	<summary>
- Consultation vétérinaire d'un animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_s_num_contrat">
-	<summary>
- Num_contrat.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_dt_dt_debut">
-	<summary>
- Dt_debut.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_dt_dt_fin">
-	<summary>
- Dt_fin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_i_id_animal">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_i_id_proprietaire">
-	<summary>
- Id_proprietaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_i_id_assurance">
-	<summary>
- Id_assurance.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_CONTRAT.VTL_CONTRAT_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Num_contrat">
-	<summary>
- Num_contrat.
- Champ associé : VTL_CONTRAT.VTL_CONTRAT_NUM_CONTRAT.
- </summary>
-	<value>
- Num_contrat.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Dt_debut">
-	<summary>
- Dt_debut.
- Champ associé : VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT.
- </summary>
-	<value>
- Dt_debut.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Dt_fin">
-	<summary>
- Dt_fin.
- Champ associé : VTL_CONTRAT.VTL_CONTRAT_DT_FIN.
- </summary>
-	<value>
- Dt_fin.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Id_animal">
-	<summary>
- Id_animal.
- Champ associé : VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL.
- </summary>
-	<value>
- Id_animal.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Id_proprietaire">
-	<summary>
- Id_proprietaire.
- Champ associé : VTL_CONTRAT.VTL_CONTRAT_ID_PROPRIETAIRE.
- </summary>
-	<value>
- Id_proprietaire.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Id_assurance">
-	<summary>
- Id_assurance.
- Champ associé : VTL_CONTRAT.VTL_CONTRAT_ID_ASSURANCE.
- </summary>
-	<value>
- Id_assurance.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.Diff(VITAL.BO.VITAL.Raw.Contrat{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Contrat.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Contrat`1">
-	<summary>
- Contrat d'assurance.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_dt_dt_histo">
-	<summary>
- Dt_histo.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_d_poids">
-	<summary>
- Poids.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_i_id_animal">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.Dt_histo">
-	<summary>
- Dt_histo.
- Champ associé : VTL_HISTO_POIDS.VTL_HISTO_POIDS_DT_HISTO.
- </summary>
-	<value>
- Dt_histo.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.Poids">
-	<summary>
- Poids.
- Champ associé : VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS.
- </summary>
-	<value>
- Poids.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.Id_animal">
-	<summary>
- Id_animal.
- Champ associé : VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID_ANIMAL.
- </summary>
-	<value>
- Id_animal.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.Diff(VITAL.BO.VITAL.Raw.Histo_Poids{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Histo_Poids.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Histo_Poids`1">
-	<summary>
- Historique du poids de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_dt_dt_histo">
-	<summary>
- Dt_histo.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_d_taille">
-	<summary>
- Taille.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_i_id_animal">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.Dt_histo">
-	<summary>
- Dt_histo.
- Champ associé : VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_DT_HISTO.
- </summary>
-	<value>
- Dt_histo.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.Taille">
-	<summary>
- Taille.
- Champ associé : VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_TAILLE.
- </summary>
-	<value>
- Taille.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.Id_animal">
-	<summary>
- Id_animal.
- Champ associé : VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_ID_ANIMAL.
- </summary>
-	<value>
- Id_animal.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.Diff(VITAL.BO.VITAL.Raw.Histo_Taille{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Histo_Taille.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Histo_Taille`1">
-	<summary>
- Historique de la taille de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_s_libelle">
-	<summary>
- Libelle.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_s_dosage">
-	<summary>
- Dosage.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_i_duree_moyenne_jour">
-	<summary>
- Duree_moyenne_jour.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.Libelle">
-	<summary>
- Libelle.
- Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_LIBELLE.
- </summary>
-	<value>
- Libelle.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.Dosage">
-	<summary>
- Dosage.
- Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_DOSAGE.
- </summary>
-	<value>
- Dosage.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.Duree_moyenne_jour">
-	<summary>
- Duree_moyenne_jour.
- Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR.
- </summary>
-	<value>
- Duree_moyenne_jour.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.Diff(VITAL.BO.VITAL.Raw.Medicament{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Medicament.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Medicament`1">
-	<summary>
- Medicament.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_dt_dt_position">
-	<summary>
- Dt_position.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_s_coord_lat">
-	<summary>
- Coord_lat.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_s_coord_long">
-	<summary>
- Coord_long.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_b_top_courante">
-	<summary>
- Top_courante.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_i_id_animal">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_POSITION.VTL_POSITION_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Dt_position">
-	<summary>
- Dt_position.
- Champ associé : VTL_POSITION.VTL_POSITION_DT_POSITION.
- </summary>
-	<value>
- Dt_position.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Coord_lat">
-	<summary>
- Coord_lat.
- Champ associé : VTL_POSITION.VTL_POSITION_COORD_LAT.
- </summary>
-	<value>
- Coord_lat.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Coord_long">
-	<summary>
- Coord_long.
- Champ associé : VTL_POSITION.VTL_POSITION_COORD_LONG.
- </summary>
-	<value>
- Coord_long.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Top_courante">
-	<summary>
- Top_courante.
- Champ associé : VTL_POSITION.VTL_POSITION_TOP_COURANTE.
- </summary>
-	<value>
- Top_courante.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Id_animal">
-	<summary>
- Id_animal.
- Champ associé : VTL_POSITION.VTL_POSITION_ID_ANIMAL.
- </summary>
-	<value>
- Id_animal.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.Diff(VITAL.BO.VITAL.Raw.Position{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Position.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Position`1">
-	<summary>
- Position de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_nom">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_prenom">
-	<summary>
- Prenom.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Nom">
-	<summary>
- Nom.
- Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM.
- </summary>
-	<value>
- Nom.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Prenom">
-	<summary>
- Prenom.
- Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM.
- </summary>
-	<value>
- Prenom.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.Diff(VITAL.BO.VITAL.Raw.PropriEtaire{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe PropriEtaire.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.PropriEtaire`1">
-	<summary>
- Propriétaire.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.m_s_nom">
-	<summary>
- Nom.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Race`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Race`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_RACE.VTL_RACE_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Race`1.Nom">
-	<summary>
- Nom.
- Champ associé : VTL_RACE.VTL_RACE_NOM.
- </summary>
-	<value>
- Nom.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.Diff(VITAL.BO.VITAL.Raw.Race{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Race.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Race`1">
-	<summary>
- Race de l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_id_traitement">
-	<summary>
- Id_traitement.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_id_medicament">
-	<summary>
- Id_medicament.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_posologie">
-	<summary>
- Posologie.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_duree_jour">
-	<summary>
- Duree_jour.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Id_traitement">
-	<summary>
- Id_traitement.
- Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT.
- </summary>
-	<value>
- Id_traitement.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Id_medicament">
-	<summary>
- Id_medicament.
- Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT.
- </summary>
-	<value>
- Id_medicament.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Posologie">
-	<summary>
- Posologie.
- Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE.
- </summary>
-	<value>
- Posologie.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Duree_jour">
-	<summary>
- Duree_jour.
- Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR.
- </summary>
-	<value>
- Duree_jour.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Diff(VITAL.BO.VITAL.Raw.Traitement_medicament{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Traitement_medicament.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Traitement_medicament`1">
-	<summary>
- Liste des médicaments compris dans un traitement.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_i_duree_jour">
-	<summary>
- Duree_jour.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_dt_dt_debut">
-	<summary>
- Dt_debut.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_TRAITREMENT.VTL_TRAITREMENT_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.Duree_jour">
-	<summary>
- Duree_jour.
- Champ associé : VTL_TRAITREMENT.VTL_TRAITREMENT_DUREE_JOUR.
- </summary>
-	<value>
- Duree_jour.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.Dt_debut">
-	<summary>
- Dt_debut.
- Champ associé : VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT.
- </summary>
-	<value>
- Dt_debut.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.Diff(VITAL.BO.VITAL.Raw.Traitrement{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Traitrement.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Traitrement`1">
-	<summary>
- Traitrement.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.m_s_libelle">
-	<summary>
- Libelle.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Type`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Type`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_TYPE.VTL_TYPE_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Type`1.Libelle">
-	<summary>
- Libelle.
- Champ associé : VTL_TYPE.VTL_TYPE_LIBELLE.
- </summary>
-	<value>
- Libelle.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.Diff(VITAL.BO.VITAL.Raw.Type{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Type.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Type`1">
-	<summary>
- Typede l'animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_login">
-	<summary>
- Login.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_mdp">
-	<summary>
- Mdp.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_role">
-	<summary>
- Role.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.User`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.User`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_USER.VTL_USER_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Login">
-	<summary>
- Login.
- Champ associé : VTL_USER.VTL_USER_LOGIN.
- </summary>
-	<value>
- Login.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Mdp">
-	<summary>
- Mdp.
- Champ associé : VTL_USER.VTL_USER_MDP.
- </summary>
-	<value>
- Mdp.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Role">
-	<summary>
- Role.
- Champ associé : VTL_USER.VTL_USER_ROLE.
- </summary>
-	<value>
- Role.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.User`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.User`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.User`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.User`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.User`1.Diff(VITAL.BO.VITAL.Raw.User{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe User.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.User`1">
-	<summary>
- User.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_s_libelle">
-	<summary>
- Libelle.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_top_periodique">
-	<summary>
- Top_periodique.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_i_periode_mois">
-	<summary>
- Periode_mois.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_top_recommandation">
-	<summary>
- Top_recommandation.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_VACCIN.VTL_VACCIN_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Libelle">
-	<summary>
- Libelle.
- Champ associé : VTL_VACCIN.VTL_VACCIN_LIBELLE.
- </summary>
-	<value>
- Libelle.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Top_periodique">
-	<summary>
- Top_periodique.
- Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE.
- </summary>
-	<value>
- Top_periodique.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Periode_mois">
-	<summary>
- Periode_mois.
- Champ associé : VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS.
- </summary>
-	<value>
- Periode_mois.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Top_recommandation">
-	<summary>
- Top_recommandation.
- Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION.
- </summary>
-	<value>
- Top_recommandation.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.Diff(VITAL.BO.VITAL.Raw.Vaccin{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Vaccin.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Vaccin`1">
-	<summary>
- Vaccin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_i_id_animal">
-	<summary>
- Id_animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_i_id_vaccin">
-	<summary>
- Id_vaccin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_dt_dt_vaccin">
-	<summary>
- Dt_vaccin.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_i_id_consultation">
-	<summary>
- Id_consultation.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_VACCINATION.VTL_VACCINATION_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.Id_animal">
-	<summary>
- Id_animal.
- Champ associé : VTL_VACCINATION.VTL_VACCINATION_ID_ANIMAL.
- </summary>
-	<value>
- Id_animal.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.Id_vaccin">
-	<summary>
- Id_vaccin.
- Champ associé : VTL_VACCINATION.VTL_VACCINATION_ID_VACCIN.
- </summary>
-	<value>
- Id_vaccin.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.Dt_vaccin">
-	<summary>
- Dt_vaccin.
- Champ associé : VTL_VACCINATION.VTL_VACCINATION_DT_VACCIN.
- </summary>
-	<value>
- Dt_vaccin.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.Id_consultation">
-	<summary>
- Id_consultation.
- Champ associé : VTL_VACCINATION.VTL_VACCINATION_ID_CONSULTATION.
- </summary>
-	<value>
- Id_consultation.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.Diff(VITAL.BO.VITAL.Raw.Vaccination{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Vaccination.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Vaccination`1">
-	<summary>
- Vaccination d'un animal.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_b_changes">
-	<summary>
- Indique s'il y a eu des changements sur l'objet ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_i_iD">
-	<summary>
- ID.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_nom">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_prenom">
-	<summary>
- Prenom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_sIRET">
-	<summary>
- SIRET.
- </summary>
-</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.HasChanges">
-	<summary>
- Indique si l'objet a subi des modifications ou non
- </summary>
-	<value>
-	</value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.ID">
-	<summary>
- ID.
- Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID.
- </summary>
-	<value>
- ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Nom">
-	<summary>
- Nom.
- Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_NOM.
- </summary>
-	<value>
- Nom.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Prenom">
-	<summary>
- Prenom.
- Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_PRENOM.
- </summary>
-	<value>
- Prenom.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.SIRET">
-	<summary>
- SIRET.
- Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET.
- </summary>
-	<value>
- SIRET.
- </value>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.HasHisto">
-	<summary>
- Indique si l'objet a un historique ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.HasCache">
-	<summary>
- Indique si l'objet utilise le cache ou non
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.TableName">
-	<summary>
- Nom de la table associée à la classe.
- </summary>
-</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.CloneAsNew(System.Boolean)">
-	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.CopyTo(`0,System.Boolean)">
-	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
- </summary>
-	<param name="p_b_includeKeyValues">
-		<c>true</c> pour inclure les valeurs des clés primaires.</param>
-	<returns>
-		<paramref name="p_o_target"/></returns>
-</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.Load(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.ToRow(System.Data.DataRow)">
-	<summary>
- Chargement des informations à partir de la table.
- </summary>
-	<param name="p_o_row">Enregistrement.</param>
-</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.Diff(VITAL.BO.VITAL.Raw.Veterinaire{`0})">
-	<summary>
- Permet de détecter toutes les différences entre 2 objets
- </summary>
-	<param name="p_o_object">Objet de la classe Veterinaire.</param>
-</member><member name="T:VITAL.BO.VITAL.Raw.Veterinaire`1">
-	<summary>
- Veterinaire.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Carte">
-	<summary>
- Carte vitale.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Race">
-	<summary>
- Race de l'animal.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Auto.Adopter.m_b_update">
 	<summary>
@@ -5012,14 +2239,2997 @@ VITAL.BO
 	<summary>
  Veterinaire.
  </summary>
-</member><member name="T:VITAL.BO.VITAL.Medicament">
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_dt_dt_debut">
+	<summary>
+ Dt_debut.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_dt_dt_fin">
+	<summary>
+ Dt_fin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_i_id_proprietaire">
+	<summary>
+ Id_proprietaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_ADOPTER.VTL_ADOPTER_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.Dt_debut">
+	<summary>
+ Dt_debut.
+ Champ associé : VTL_ADOPTER.VTL_ADOPTER_DT_DEBUT.
+ </summary>
+	<value>
+ Dt_debut.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.Dt_fin">
+	<summary>
+ Dt_fin.
+ Champ associé : VTL_ADOPTER.VTL_ADOPTER_DT_FIN.
+ </summary>
+	<value>
+ Dt_fin.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.Id_proprietaire">
+	<summary>
+ Id_proprietaire.
+ Champ associé : VTL_ADOPTER.VTL_ADOPTER_ID_PROPRIETAIRE.
+ </summary>
+	<value>
+ Id_proprietaire.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Adopter`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_ADOPTER.VTL_ADOPTER_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Adopter`1.Diff(VITAL.BO.VITAL.Raw.Adopter{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Adopter.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Adopter`1">
+	<summary>
+ Adopter : Associations etre propriétaire et animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_s_nom">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_s_num_puce">
+	<summary>
+ Num_puce.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_dt_dt_naissance">
+	<summary>
+ Dt_naissance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_dt_dt_deces">
+	<summary>
+ Dt_deces.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_i_id_race">
+	<summary>
+ Id_race.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_i_id_carte">
+	<summary>
+ Id_carte.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_i_id_type">
+	<summary>
+ Id_type.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.m_i_id_prop">
+	<summary>
+ Id_prop.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Nom">
+	<summary>
+ Nom.
+ Champ associé : VTL_ANIMAL.VTL_ANIMAL_NOM.
+ </summary>
+	<value>
+ Nom.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Num_puce">
+	<summary>
+ Num_puce.
+ Champ associé : VTL_ANIMAL.VTL_ANIMAL_NUM_PUCE.
+ </summary>
+	<value>
+ Num_puce.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Dt_naissance">
+	<summary>
+ Dt_naissance.
+ Champ associé : VTL_ANIMAL.VTL_ANIMAL_DT_NAISSANCE.
+ </summary>
+	<value>
+ Dt_naissance.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Dt_deces">
+	<summary>
+ Dt_deces.
+ Champ associé : VTL_ANIMAL.VTL_ANIMAL_DT_DECES.
+ </summary>
+	<value>
+ Dt_deces.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Id_race">
+	<summary>
+ Id_race.
+ Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID_RACE.
+ </summary>
+	<value>
+ Id_race.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Id_carte">
+	<summary>
+ Id_carte.
+ Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID_CARTE.
+ </summary>
+	<value>
+ Id_carte.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Id_type">
+	<summary>
+ Id_type.
+ Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID_TYPE.
+ </summary>
+	<value>
+ Id_type.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Animal`1.Id_prop">
+	<summary>
+ Id_prop.
+ Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID_PROP.
+ </summary>
+	<value>
+ Id_prop.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Animal`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Animal`1.Diff(VITAL.BO.VITAL.Raw.Animal{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Animal.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Animal`1">
+	<summary>
+ Animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_nom">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_siret">
+	<summary>
+ Siret.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Nom">
+	<summary>
+ Nom.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_NOM.
+ </summary>
+	<value>
+ Nom.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Siret">
+	<summary>
+ Siret.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_SIRET.
+ </summary>
+	<value>
+ Siret.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Assurance`1.Diff(VITAL.BO.VITAL.Raw.Assurance{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Assurance.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Assurance`1">
+	<summary>
+ Assurance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_s_numero">
+	<summary>
+ Numero.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_s_nFC">
+	<summary>
+ NFC.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_CARTE.VTL_CARTE_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.Numero">
+	<summary>
+ Numero.
+ Champ associé : VTL_CARTE.VTL_CARTE_NUMERO.
+ </summary>
+	<value>
+ Numero.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.NFC">
+	<summary>
+ NFC.
+ Champ associé : VTL_CARTE.VTL_CARTE_NFC.
+ </summary>
+	<value>
+ NFC.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Carte`1.Diff(VITAL.BO.VITAL.Raw.Carte{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Carte.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Carte`1">
+	<summary>
+ Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_dt_dt_consultation">
+	<summary>
+ Dt_consultation.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_d_montant">
+	<summary>
+ Montant.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_s_commentaire">
+	<summary>
+ Commentaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_i_id_veterinaire">
+	<summary>
+ Id_veterinaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_i_id_proprietaire">
+	<summary>
+ Id_proprietaire.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Dt_consultation">
+	<summary>
+ Dt_consultation.
+ Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION.
+ </summary>
+	<value>
+ Dt_consultation.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Montant">
+	<summary>
+ Montant.
+ Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_MONTANT.
+ </summary>
+	<value>
+ Montant.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Commentaire">
+	<summary>
+ Commentaire.
+ Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE.
+ </summary>
+	<value>
+ Commentaire.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Id_veterinaire">
+	<summary>
+ Id_veterinaire.
+ Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE.
+ </summary>
+	<value>
+ Id_veterinaire.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_L.
+ </summary>
+	<value>
+ Id_animal.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Id_proprietaire">
+	<summary>
+ Id_proprietaire.
+ Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_ID_PROPRIETAIRE.
+ </summary>
+	<value>
+ Id_proprietaire.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Consultation`1.Diff(VITAL.BO.VITAL.Raw.Consultation{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Consultation.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Consultation`1">
+	<summary>
+ Consultation vétérinaire d'un animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_s_num_contrat">
+	<summary>
+ Num_contrat.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_dt_dt_debut">
+	<summary>
+ Dt_debut.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_dt_dt_fin">
+	<summary>
+ Dt_fin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_i_id_proprietaire">
+	<summary>
+ Id_proprietaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_i_id_assurance">
+	<summary>
+ Id_assurance.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_CONTRAT.VTL_CONTRAT_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Num_contrat">
+	<summary>
+ Num_contrat.
+ Champ associé : VTL_CONTRAT.VTL_CONTRAT_NUM_CONTRAT.
+ </summary>
+	<value>
+ Num_contrat.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Dt_debut">
+	<summary>
+ Dt_debut.
+ Champ associé : VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT.
+ </summary>
+	<value>
+ Dt_debut.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Dt_fin">
+	<summary>
+ Dt_fin.
+ Champ associé : VTL_CONTRAT.VTL_CONTRAT_DT_FIN.
+ </summary>
+	<value>
+ Dt_fin.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Id_proprietaire">
+	<summary>
+ Id_proprietaire.
+ Champ associé : VTL_CONTRAT.VTL_CONTRAT_ID_PROPRIETAIRE.
+ </summary>
+	<value>
+ Id_proprietaire.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.Id_assurance">
+	<summary>
+ Id_assurance.
+ Champ associé : VTL_CONTRAT.VTL_CONTRAT_ID_ASSURANCE.
+ </summary>
+	<value>
+ Id_assurance.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Contrat`1.Diff(VITAL.BO.VITAL.Raw.Contrat{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Contrat.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Contrat`1">
+	<summary>
+ Contrat d'assurance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_dt_dt_histo">
+	<summary>
+ Dt_histo.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_d_poids">
+	<summary>
+ Poids.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.Dt_histo">
+	<summary>
+ Dt_histo.
+ Champ associé : VTL_HISTO_POIDS.VTL_HISTO_POIDS_DT_HISTO.
+ </summary>
+	<value>
+ Dt_histo.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.Poids">
+	<summary>
+ Poids.
+ Champ associé : VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS.
+ </summary>
+	<value>
+ Poids.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Poids`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Poids`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Poids`1.Diff(VITAL.BO.VITAL.Raw.Histo_Poids{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Histo_Poids.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Histo_Poids`1">
+	<summary>
+ Historique du poids de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_dt_dt_histo">
+	<summary>
+ Dt_histo.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_d_taille">
+	<summary>
+ Taille.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.Dt_histo">
+	<summary>
+ Dt_histo.
+ Champ associé : VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_DT_HISTO.
+ </summary>
+	<value>
+ Dt_histo.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.Taille">
+	<summary>
+ Taille.
+ Champ associé : VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_TAILLE.
+ </summary>
+	<value>
+ Taille.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Histo_Taille`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Histo_Taille`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Histo_Taille`1.Diff(VITAL.BO.VITAL.Raw.Histo_Taille{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Histo_Taille.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Histo_Taille`1">
+	<summary>
+ Historique de la taille de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_s_libelle">
+	<summary>
+ Libelle.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_s_dosage">
+	<summary>
+ Dosage.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_i_duree_moyenne_jour">
+	<summary>
+ Duree_moyenne_jour.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.Libelle">
+	<summary>
+ Libelle.
+ Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_LIBELLE.
+ </summary>
+	<value>
+ Libelle.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.Dosage">
+	<summary>
+ Dosage.
+ Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_DOSAGE.
+ </summary>
+	<value>
+ Dosage.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.Duree_moyenne_jour">
+	<summary>
+ Duree_moyenne_jour.
+ Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR.
+ </summary>
+	<value>
+ Duree_moyenne_jour.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Medicament`1.Diff(VITAL.BO.VITAL.Raw.Medicament{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Medicament.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Medicament`1">
 	<summary>
  Medicament.
  </summary>
-</member><member name="T:VITAL.BO.VITAL.Traitrement">
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_dt_dt_position">
+	<summary>
+ Dt_position.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_s_coord_lat">
+	<summary>
+ Coord_lat.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_s_coord_long">
+	<summary>
+ Coord_long.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_b_top_courante">
+	<summary>
+ Top_courante.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_POSITION.VTL_POSITION_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Dt_position">
+	<summary>
+ Dt_position.
+ Champ associé : VTL_POSITION.VTL_POSITION_DT_POSITION.
+ </summary>
+	<value>
+ Dt_position.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Coord_lat">
+	<summary>
+ Coord_lat.
+ Champ associé : VTL_POSITION.VTL_POSITION_COORD_LAT.
+ </summary>
+	<value>
+ Coord_lat.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Coord_long">
+	<summary>
+ Coord_long.
+ Champ associé : VTL_POSITION.VTL_POSITION_COORD_LONG.
+ </summary>
+	<value>
+ Coord_long.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Top_courante">
+	<summary>
+ Top_courante.
+ Champ associé : VTL_POSITION.VTL_POSITION_TOP_COURANTE.
+ </summary>
+	<value>
+ Top_courante.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Position`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_POSITION.VTL_POSITION_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Position`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Position`1.Diff(VITAL.BO.VITAL.Raw.Position{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Position.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Position`1">
+	<summary>
+ Position de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_nom">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_prenom">
+	<summary>
+ Prenom.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Nom">
+	<summary>
+ Nom.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM.
+ </summary>
+	<value>
+ Nom.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Prenom">
+	<summary>
+ Prenom.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM.
+ </summary>
+	<value>
+ Prenom.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.PropriEtaire`1.Diff(VITAL.BO.VITAL.Raw.PropriEtaire{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe PropriEtaire.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.PropriEtaire`1">
+	<summary>
+ Propriétaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.m_s_nom">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Race`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Race`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_RACE.VTL_RACE_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Race`1.Nom">
+	<summary>
+ Nom.
+ Champ associé : VTL_RACE.VTL_RACE_NOM.
+ </summary>
+	<value>
+ Nom.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Race`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Race`1.Diff(VITAL.BO.VITAL.Raw.Race{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Race.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Race`1">
+	<summary>
+ Race de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_id_traitement">
+	<summary>
+ Id_traitement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_id_medicament">
+	<summary>
+ Id_medicament.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_posologie">
+	<summary>
+ Posologie.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_duree_jour">
+	<summary>
+ Duree_jour.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Id_traitement">
+	<summary>
+ Id_traitement.
+ Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT.
+ </summary>
+	<value>
+ Id_traitement.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Id_medicament">
+	<summary>
+ Id_medicament.
+ Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT.
+ </summary>
+	<value>
+ Id_medicament.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Posologie">
+	<summary>
+ Posologie.
+ Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE.
+ </summary>
+	<value>
+ Posologie.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Duree_jour">
+	<summary>
+ Duree_jour.
+ Champ associé : VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR.
+ </summary>
+	<value>
+ Duree_jour.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitement_medicament`1.Diff(VITAL.BO.VITAL.Raw.Traitement_medicament{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Traitement_medicament.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Traitement_medicament`1">
+	<summary>
+ Liste des médicaments compris dans un traitement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_i_duree_jour">
+	<summary>
+ Duree_jour.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_dt_dt_debut">
+	<summary>
+ Dt_debut.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_TRAITREMENT.VTL_TRAITREMENT_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.Duree_jour">
+	<summary>
+ Duree_jour.
+ Champ associé : VTL_TRAITREMENT.VTL_TRAITREMENT_DUREE_JOUR.
+ </summary>
+	<value>
+ Duree_jour.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.Dt_debut">
+	<summary>
+ Dt_debut.
+ Champ associé : VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT.
+ </summary>
+	<value>
+ Dt_debut.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Traitrement`1.Diff(VITAL.BO.VITAL.Raw.Traitrement{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Traitrement.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Traitrement`1">
 	<summary>
  Traitrement.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.m_s_libelle">
+	<summary>
+ Libelle.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Type`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Type`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_TYPE.VTL_TYPE_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Type`1.Libelle">
+	<summary>
+ Libelle.
+ Champ associé : VTL_TYPE.VTL_TYPE_LIBELLE.
+ </summary>
+	<value>
+ Libelle.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Type`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Type`1.Diff(VITAL.BO.VITAL.Raw.Type{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Type.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Type`1">
+	<summary>
+ Typede l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_login">
+	<summary>
+ Login.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_mdp">
+	<summary>
+ Mdp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_role">
+	<summary>
+ Role.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.User`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.User`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_USER.VTL_USER_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Login">
+	<summary>
+ Login.
+ Champ associé : VTL_USER.VTL_USER_LOGIN.
+ </summary>
+	<value>
+ Login.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Mdp">
+	<summary>
+ Mdp.
+ Champ associé : VTL_USER.VTL_USER_MDP.
+ </summary>
+	<value>
+ Mdp.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Role">
+	<summary>
+ Role.
+ Champ associé : VTL_USER.VTL_USER_ROLE.
+ </summary>
+	<value>
+ Role.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.User`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.User`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.User`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.User`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.User`1.Diff(VITAL.BO.VITAL.Raw.User{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe User.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.User`1">
+	<summary>
+ User.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_s_libelle">
+	<summary>
+ Libelle.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_top_periodique">
+	<summary>
+ Top_periodique.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_i_periode_mois">
+	<summary>
+ Periode_mois.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_top_recommandation">
+	<summary>
+ Top_recommandation.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_VACCIN.VTL_VACCIN_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Libelle">
+	<summary>
+ Libelle.
+ Champ associé : VTL_VACCIN.VTL_VACCIN_LIBELLE.
+ </summary>
+	<value>
+ Libelle.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Top_periodique">
+	<summary>
+ Top_periodique.
+ Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE.
+ </summary>
+	<value>
+ Top_periodique.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Periode_mois">
+	<summary>
+ Periode_mois.
+ Champ associé : VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS.
+ </summary>
+	<value>
+ Periode_mois.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Top_recommandation">
+	<summary>
+ Top_recommandation.
+ Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION.
+ </summary>
+	<value>
+ Top_recommandation.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccin`1.Diff(VITAL.BO.VITAL.Raw.Vaccin{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Vaccin.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Vaccin`1">
+	<summary>
+ Vaccin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_i_id_vaccin">
+	<summary>
+ Id_vaccin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_dt_dt_vaccin">
+	<summary>
+ Dt_vaccin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.m_i_id_consultation">
+	<summary>
+ Id_consultation.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_VACCINATION.VTL_VACCINATION_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_VACCINATION.VTL_VACCINATION_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.Id_vaccin">
+	<summary>
+ Id_vaccin.
+ Champ associé : VTL_VACCINATION.VTL_VACCINATION_ID_VACCIN.
+ </summary>
+	<value>
+ Id_vaccin.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.Dt_vaccin">
+	<summary>
+ Dt_vaccin.
+ Champ associé : VTL_VACCINATION.VTL_VACCINATION_DT_VACCIN.
+ </summary>
+	<value>
+ Dt_vaccin.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccination`1.Id_consultation">
+	<summary>
+ Id_consultation.
+ Champ associé : VTL_VACCINATION.VTL_VACCINATION_ID_CONSULTATION.
+ </summary>
+	<value>
+ Id_consultation.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccination`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Vaccination`1.Diff(VITAL.BO.VITAL.Raw.Vaccination{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Vaccination.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Vaccination`1">
+	<summary>
+ Vaccination d'un animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_nom">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_prenom">
+	<summary>
+ Prenom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_sIRET">
+	<summary>
+ SIRET.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Nom">
+	<summary>
+ Nom.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_NOM.
+ </summary>
+	<value>
+ Nom.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Prenom">
+	<summary>
+ Prenom.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_PRENOM.
+ </summary>
+	<value>
+ Prenom.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.SIRET">
+	<summary>
+ SIRET.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET.
+ </summary>
+	<value>
+ SIRET.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Veterinaire`1.Diff(VITAL.BO.VITAL.Raw.Veterinaire{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Veterinaire.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Veterinaire`1">
+	<summary>
+ Veterinaire.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Histo_Poids">
+	<summary>
+ Historique du poids de l'animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Traitement_medicament">
+	<summary>
+ Liste des médicaments compris dans un traitement.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Vaccination">
+	<summary>
+ Vaccination d'un animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_ADOPTER">
+	<summary>
+ Adopter : Associations etre propriétaire et animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_ANIMAL">
+	<summary>
+ Animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_ASSURANCE">
+	<summary>
+ Assurance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_CARTE">
+	<summary>
+ Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_CONSULTATION">
+	<summary>
+ Consultation vétérinaire d'un animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_CONTRAT">
+	<summary>
+ Contrat d'assurance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_HISTO_POIDS">
+	<summary>
+ Historique du poids de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_HISTO_TAILLE">
+	<summary>
+ Historique de la taille de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_MEDICAMENT">
+	<summary>
+ Medicament.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_POSITION">
+	<summary>
+ Position de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_PROPRIETAIRE">
+	<summary>
+ Propriétaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_RACE">
+	<summary>
+ Race de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_TRAITEMENT_MEDICAMENT">
+	<summary>
+ Liste des médicaments compris dans un traitement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_TRAITREMENT">
+	<summary>
+ Traitrement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_TYPE">
+	<summary>
+ Typede l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_USER">
+	<summary>
+ User.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_VACCIN">
+	<summary>
+ Vaccin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_VACCINATION">
+	<summary>
+ Vaccination d'un animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_VETERINAIRE">
+	<summary>
+ Veterinaire.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Tables">
+	<summary>
+ Tables du schéma VITAL.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_DT_DEBUT">
+	<summary>
+ Dt_debut.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_DT_FIN">
+	<summary>
+ Dt_fin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_ID_PROPRIETAIRE">
+	<summary>
+ Id_proprietaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_ID_ANIMAL">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_ADOPTER">
+	<summary>
+ Adopter : Associations etre propriétaire et animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_NOM">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_NOM_MAXLEN">
+	<summary>
+ Nom (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_NUM_PUCE">
+	<summary>
+ Num_puce.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_NUM_PUCE_MAXLEN">
+	<summary>
+ Num_puce (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_DT_NAISSANCE">
+	<summary>
+ Dt_naissance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_DT_DECES">
+	<summary>
+ Dt_deces.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_RACE">
+	<summary>
+ Id_race.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_CARTE">
+	<summary>
+ Id_carte.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_TYPE">
+	<summary>
+ Id_type.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_PROP">
+	<summary>
+ Id_prop.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_ANIMAL">
+	<summary>
+ Animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_NOM">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_NOM_MAXLEN">
+	<summary>
+ Nom (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET">
+	<summary>
+ Siret.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET_MAXLEN">
+	<summary>
+ Siret (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_ASSURANCE">
+	<summary>
+ Assurance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_NUMERO">
+	<summary>
+ Numero.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_NUMERO_MAXLEN">
+	<summary>
+ Numero (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_NFC">
+	<summary>
+ NFC.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_NFC_MAXLEN">
+	<summary>
+ NFC (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_CARTE">
+	<summary>
+ Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION">
+	<summary>
+ Dt_consultation.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_MONTANT">
+	<summary>
+ Montant.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE">
+	<summary>
+ Commentaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE">
+	<summary>
+ Id_veterinaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_L">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID_PROPRIETAIRE">
+	<summary>
+ Id_proprietaire.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_CONSULTATION">
+	<summary>
+ Consultation vétérinaire d'un animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_NUM_CONTRAT">
+	<summary>
+ Num_contrat.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_NUM_CONTRAT_MAXLEN">
+	<summary>
+ Num_contrat (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT">
+	<summary>
+ Dt_debut.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_DT_FIN">
+	<summary>
+ Dt_fin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_ID_PROPRIETAIRE">
+	<summary>
+ Id_proprietaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_ID_ASSURANCE">
+	<summary>
+ Id_assurance.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_CONTRAT">
+	<summary>
+ Contrat d'assurance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_POIDS.VTL_HISTO_POIDS_DT_HISTO">
+	<summary>
+ Dt_histo.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS">
+	<summary>
+ Poids.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID_ANIMAL">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_HISTO_POIDS">
+	<summary>
+ Historique du poids de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_DT_HISTO">
+	<summary>
+ Dt_histo.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_TAILLE">
+	<summary>
+ Taille.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_ID_ANIMAL">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_HISTO_TAILLE">
+	<summary>
+ Historique de la taille de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_LIBELLE">
+	<summary>
+ Libelle.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_LIBELLE_MAXLEN">
+	<summary>
+ Libelle (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DOSAGE">
+	<summary>
+ Dosage.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DOSAGE_MAXLEN">
+	<summary>
+ Dosage (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR">
+	<summary>
+ Duree_moyenne_jour.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_MEDICAMENT">
+	<summary>
+ Medicament.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_DT_POSITION">
+	<summary>
+ Dt_position.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_COORD_LAT">
+	<summary>
+ Coord_lat.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_COORD_LAT_MAXLEN">
+	<summary>
+ Coord_lat (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_COORD_LONG">
+	<summary>
+ Coord_long.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_COORD_LONG_MAXLEN">
+	<summary>
+ Coord_long (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_TOP_COURANTE">
+	<summary>
+ Top_courante.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_POSITION.VTL_POSITION_ID_ANIMAL">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_POSITION">
+	<summary>
+ Position de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM_MAXLEN">
+	<summary>
+ Nom (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM">
+	<summary>
+ Prenom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM_MAXLEN">
+	<summary>
+ Prenom (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_PROPRIETAIRE">
+	<summary>
+ Propriétaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_RACE.VTL_RACE_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_RACE.VTL_RACE_NOM">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_RACE.VTL_RACE_NOM_MAXLEN">
+	<summary>
+ Nom (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_RACE">
+	<summary>
+ Race de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT">
+	<summary>
+ Id_traitement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT">
+	<summary>
+ Id_medicament.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE">
+	<summary>
+ Posologie.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR">
+	<summary>
+ Duree_jour.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT">
+	<summary>
+ Liste des médicaments compris dans un traitement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_DUREE_JOUR">
+	<summary>
+ Duree_jour.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT">
+	<summary>
+ Dt_debut.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_TRAITREMENT">
+	<summary>
+ Traitrement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TYPE.VTL_TYPE_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TYPE.VTL_TYPE_LIBELLE">
+	<summary>
+ Libelle.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TYPE.VTL_TYPE_LIBELLE_MAXLEN">
+	<summary>
+ Libelle (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_TYPE">
+	<summary>
+ Typede l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_LOGIN">
+	<summary>
+ Login.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_LOGIN_MAXLEN">
+	<summary>
+ Login (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_MDP">
+	<summary>
+ Mdp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_MDP_MAXLEN">
+	<summary>
+ Mdp (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_ROLE">
+	<summary>
+ Role.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_ROLE_MAXLEN">
+	<summary>
+ Role (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_USER">
+	<summary>
+ User.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_LIBELLE">
+	<summary>
+ Libelle.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_LIBELLE_MAXLEN">
+	<summary>
+ Libelle (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE">
+	<summary>
+ Top_periodique.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS">
+	<summary>
+ Periode_mois.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION">
+	<summary>
+ Top_recommandation.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_VACCIN">
+	<summary>
+ Vaccin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_ID_ANIMAL">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_ID_VACCIN">
+	<summary>
+ Id_vaccin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_DT_VACCIN">
+	<summary>
+ Dt_vaccin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VACCINATION.VTL_VACCINATION_ID_CONSULTATION">
+	<summary>
+ Id_consultation.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_VACCINATION">
+	<summary>
+ Vaccination d'un animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_NOM">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_NOM_MAXLEN">
+	<summary>
+ Nom (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_PRENOM">
+	<summary>
+ Prenom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_PRENOM_MAXLEN">
+	<summary>
+ Prenom (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET">
+	<summary>
+ SIRET.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET_MAXLEN">
+	<summary>
+ SIRET (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_VETERINAIRE">
+	<summary>
+ Veterinaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Schema.m_o_db">
+	<summary>
+ Base de donnée liée à "VITAL".
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Schema.DB">
+	<summary>
+ Base de donnée liée à "VITAL".
+ </summary>
+	<value> Base de donnée liée.</value>
+</member><member name="M:VITAL.BO.VITAL.Schema.NullIfValue(System.Int64,System.Int64)">
+	<summary>
+ Retourne la valeur à utiliser dans la requête.
+ </summary>
+	<param name="p_l_value">Valeur que l'on souhaite enregistrer.</param>
+	<param name="p_l_null">Valeur étant remplacée par NULL.</param>
+	<returns>La valeur à utiliser dans la requête.</returns>
+</member><member name="M:VITAL.BO.VITAL.Schema.NullIfValue(System.Double,System.Double)">
+	<summary>
+ Retourne la valeur à utiliser dans la requête.
+ </summary>
+	<param name="p_r_value">Valeur que l'on souhaite enregistrer.</param>
+	<param name="p_r_null">Valeur étant remplacée par NULL.</param>
+	<returns>La valeur à utiliser dans la requête.</returns>
+</member><member name="M:VITAL.BO.VITAL.Schema.TextSQLEmpty(System.String)">
+	<summary>
+ Met des quotes autour de la chaine de texte.
+ </summary>
+	<param name="p_s">Texte.</param>
+	<returns>La valeur à utiliser dans la requête.</returns>
+</member><member name="M:VITAL.BO.VITAL.Schema.ClearAllCache(System.Boolean)">
+	<summary>
+ Permet de nettoyer tous les caches
+ </summary>
+	<param name="p_b_force">Indique si l'on force le vidage ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Schema.SetDB(Corail.Core.DataBase)">
+	<summary>
+ On conserve la référence vers la base de données.
+ </summary>
+	<param name="p_o_db">Base de données.</param>
+	<returns>Base de données source.</returns>
+</member><member name="M:VITAL.BO.VITAL.Schema.TransactionCancelled(Corail.Core.DataBase)">
+	<summary>
+ Une transaction a été annulée dans la base de données.
+ </summary>
+	<param name="p_o_db">Base de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Adopter.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Adopter"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Adopter.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Adopter"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Adopter.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Adopter"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Animal.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Animal"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Animal.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Animal"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Animal.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Animal"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Assurance.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Assurance"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Assurance.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Assurance"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Assurance.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Assurance"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Carte.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Carte"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Carte.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Carte"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Carte.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Carte"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Consultation.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Consultation"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Consultation.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Consultation"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Consultation.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Consultation"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Contrat.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Contrat"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Contrat.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Contrat"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Contrat.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Contrat"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Histo_Poids.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Poids"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Histo_Poids.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Poids"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Histo_Poids.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Poids"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Histo_Taille.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Taille"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Histo_Taille.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Taille"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Histo_Taille.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Histo_Taille"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Medicament.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Medicament"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Medicament.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Medicament"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Medicament.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Medicament"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Position.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Position"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Position.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Position"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Position.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Position"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.PropriEtaire"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.PropriEtaire"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.PropriEtaire"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Race.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Race"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Race.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Race"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Race.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Race"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Traitement_medicament.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitement_medicament"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Traitement_medicament.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitement_medicament"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Traitement_medicament.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitement_medicament"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Traitrement.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitrement"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Traitrement.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitrement"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Traitrement.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitrement"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Type.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Type"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Type.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Type"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Type.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Type"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.User.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.User"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.User.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.User"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.User.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.User"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Vaccin.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccin"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Vaccin.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccin"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Vaccin.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccin"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Vaccination.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccination"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Vaccination.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccination"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Vaccination.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Vaccination"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Veterinaire.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Veterinaire"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Veterinaire.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Veterinaire"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Veterinaire.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Veterinaire"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
 </member><member name="F:VITAL.BO.EN_ModeAcces.Creation">
 	<summary>
  Accès en création
@@ -5035,17 +5245,28 @@ VITAL.BO
 </member><member name="F:VITAL.BO.ModConst.C_S_EXEMPLE">
  Style des éléments inactifs dans les grilles
 
-</member><member name="T:VITAL.BO.VITAL.Assurance">
+</member><member name="T:VITAL.BO.VITAL.Type">
 	<summary>
- Assurance.
+ Typede l'animal.
  </summary>
-</member><member name="T:VITAL.BO.VITAL.Consultation">
+</member><member name="M:VITAL.BO.VITAL.User.GetConnectedUser(System.String)">
 	<summary>
- Consultation vétérinaire d'un animal.
+ Get connected User
  </summary>
-</member><member name="T:VITAL.BO.VITAL.Histo_Taille">
+	<param name="p_s_login"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:VITAL.BO.VITAL.User">
 	<summary>
- Historique de la taille de l'animal.
+ User.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Adopter">
+	<summary>
+ Adopter : Associations etre propriétaire et animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Veterinaire">
+	<summary>
+ Veterinaire.
  </summary>
 </member>
 </members>

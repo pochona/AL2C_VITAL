@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des objets                                        */
-/* Historique  : Creation le 03/05/2017                                     */
+/* Historique  : Creation le 24/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -91,6 +91,11 @@ ALTER TABLE VTL_TYPE
 ADD CONSTRAINT VTL_TYPE_PK PRIMARY KEY (VTL_TYPE_ID)
 GO
 
+-- "Creation de la clef primaire de la table VTL_USER"
+ALTER TABLE VTL_USER
+ADD CONSTRAINT VTL_USER_PK PRIMARY KEY (VTL_USER_ID)
+GO
+
 -- "Creation de la clef primaire de la table VTL_VACCIN"
 ALTER TABLE VTL_VACCIN
 ADD CONSTRAINT VTL_VACCIN_PK PRIMARY KEY (VTL_VACCIN_ID)
@@ -138,6 +143,12 @@ GO
 ALTER TABLE VTL_ANIMAL
 ADD CONSTRAINT VTL_ANIMAL_ID_TYPE_VTL_TYPE_FK FOREIGN KEY (VTL_ANIMAL_ID_TYPE)
 	REFERENCES VTL_TYPE(VTL_TYPE_ID);
+GO
+
+-- "Creation de la clef etrangere de la table VTL_ANIMAL vers la table VTL_USER"
+ALTER TABLE VTL_ANIMAL
+ADD CONSTRAINT VTL_ANIMAL_ID_PROP_VTL_USER_FK FOREIGN KEY (VTL_ANIMAL_ID_PROP)
+	REFERENCES VTL_USER(VTL_USER_ID);
 GO
 
 -- "Creation de la clef etrangere de la table VTL_CONSULTATION vers la table VTL_VETERINAIRE"

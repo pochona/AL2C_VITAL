@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 03/05/2017                                     */
+/* Historique  : Creation le 24/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -49,7 +49,8 @@ CREATE TABLE VTL_ANIMAL (
 	VTL_ANIMAL_DT_DECES DATE,
 	VTL_ANIMAL_ID_RACE INT,
 	VTL_ANIMAL_ID_CARTE INT,
-	VTL_ANIMAL_ID_TYPE INT
+	VTL_ANIMAL_ID_TYPE INT,
+	VTL_ANIMAL_ID_PROP INT
 )
 GO
 
@@ -70,6 +71,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_carte', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_CARTE'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_type', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_TYPE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_prop', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_PROP'
 GO
 
 
@@ -94,7 +97,8 @@ GO
 -- "Creation de la table VTL_CARTE"
 CREATE TABLE VTL_CARTE (
 	VTL_CARTE_ID INT IDENTITY(1,1) NOT NULL,
-	VTL_CARTE_NUMERO NVARCHAR(50) NOT NULL
+	VTL_CARTE_NUMERO NVARCHAR(50) NOT NULL,
+	VTL_CARTE_NFC NVARCHAR(255)
 )
 GO
 
@@ -103,6 +107,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_ID'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Numero', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_NUMERO'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'NFC', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_NFC'
 GO
 
 
@@ -346,6 +352,27 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Libelle', @lev
 GO
 
 
+-- "Creation de la table VTL_USER"
+CREATE TABLE VTL_USER (
+	VTL_USER_ID INT IDENTITY(1,1) NOT NULL,
+	VTL_USER_LOGIN NVARCHAR(50) NOT NULL,
+	VTL_USER_MDP NVARCHAR(50) NOT NULL,
+	VTL_USER_ROLE NVARCHAR(50) NOT NULL
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'User', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Login', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_LOGIN'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mdp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_MDP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Role', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_ROLE'
+GO
+
+
 -- "Creation de la table VTL_VACCIN"
 CREATE TABLE VTL_VACCIN (
 	VTL_VACCIN_ID INT IDENTITY(1,1) NOT NULL,
@@ -415,17 +442,10 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SIRET', @level
 GO
 
 
--- "Creation de la table ~temp636291757526019432"
-CREATE TABLE ~temp636291757526019432 (
-)
-GO
-
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=NULL, @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'~temp636291757526019432'
-GO
-
-
 
 -- "=============================="
 -- "Fin du script vital_table.sql"
 -- "=============================="
+
+
 

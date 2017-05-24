@@ -108,6 +108,15 @@
     <Content Include="Pages\AccueilProprietaire.aspx" />
     <Content Include="Pages\AccueilVeto.aspx" />
     <Content Include="Pages\Exemple.aspx" />
+    <Content Include="Pages\HistoriquePoids.aspx" />
+    <Content Include="Pages\histo_consultation.aspx" />
+    <Content Include="Pages\Mutuelle\ConsulterContrat.aspx" />
+    <Content Include="Pages\Proprio\AnimalGeneral.aspx" />
+    <Content Include="Pages\Proprio\Documents.aspx" />
+    <Content Include="Pages\Proprio\HistoConsul.aspx" />
+    <Content Include="Pages\Proprio\HistoVaccinTraitemt.aspx" />
+    <Content Include="Pages\Proprio\Informations.aspx" />
+    <Content Include="Pages\Proprio\SuiviPoids.aspx" />
     <Content Include="PAR\VTL_ADOPTER.xml" />
     <Content Include="PAR\VTL_ANIMAL.xml" />
     <Content Include="PAR\VTL_ASSURANCE.xml" />
@@ -172,6 +181,69 @@
     <Compile Include="Pages\Exemple.aspx.vb">
       <DependentUpon>Exemple.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HistoriquePoids.aspx.designer.vb">
+      <DependentUpon>HistoriquePoids.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HistoriquePoids.aspx.vb">
+      <DependentUpon>HistoriquePoids.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\histo_consultation.aspx.designer.vb">
+      <DependentUpon>histo_consultation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\histo_consultation.aspx.vb">
+      <DependentUpon>histo_consultation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\ConsulterContrat.aspx.designer.vb">
+      <DependentUpon>ConsulterContrat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\ConsulterContrat.aspx.vb">
+      <DependentUpon>ConsulterContrat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\AnimalGeneral.aspx.designer.vb">
+      <DependentUpon>AnimalGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\AnimalGeneral.aspx.vb">
+      <DependentUpon>AnimalGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\Documents.aspx.designer.vb">
+      <DependentUpon>Documents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\Documents.aspx.vb">
+      <DependentUpon>Documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\HistoConsul.aspx.designer.vb">
+      <DependentUpon>HistoConsul.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\HistoConsul.aspx.vb">
+      <DependentUpon>HistoConsul.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\HistoVaccinTraitemt.aspx.designer.vb">
+      <DependentUpon>HistoVaccinTraitemt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\HistoVaccinTraitemt.aspx.vb">
+      <DependentUpon>HistoVaccinTraitemt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\Informations.aspx.designer.vb">
+      <DependentUpon>Informations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\Informations.aspx.vb">
+      <DependentUpon>Informations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\SuiviPoids.aspx.designer.vb">
+      <DependentUpon>SuiviPoids.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\SuiviPoids.aspx.vb">
+      <DependentUpon>SuiviPoids.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Welcome.aspx.designer.vb">
       <DependentUpon>Welcome.aspx</DependentUpon>

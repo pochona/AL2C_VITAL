@@ -176,9 +176,19 @@
         Public Const VTL_ANIMAL_NOM As String = "VTL_ANIMAL_NOM"
 
         ''' <summary>
+        ''' Nom (Maxlen).
+        ''' </summary>
+        Public Const VTL_ANIMAL_NOM_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' Num_puce.
         ''' </summary>
         Public Const VTL_ANIMAL_NUM_PUCE As String = "VTL_ANIMAL_NUM_PUCE"
+
+        ''' <summary>
+        ''' Num_puce (Maxlen).
+        ''' </summary>
+        Public Const VTL_ANIMAL_NUM_PUCE_MAXLEN As Integer = 14
 
         ''' <summary>
         ''' Dt_naissance.
@@ -205,6 +215,11 @@
         ''' </summary>
         Public Const VTL_ANIMAL_ID_TYPE As String = "VTL_ANIMAL_ID_TYPE"
 
+        ''' <summary>
+        ''' Id_prop.
+        ''' </summary>
+        Public Const VTL_ANIMAL_ID_PROP As String = "VTL_ANIMAL_ID_PROP"
+
     End Class
 
 #End Region
@@ -228,9 +243,19 @@
         Public Const VTL_ASSURANCE_NOM As String = "VTL_ASSURANCE_NOM"
 
         ''' <summary>
+        ''' Nom (Maxlen).
+        ''' </summary>
+        Public Const VTL_ASSURANCE_NOM_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' Siret.
         ''' </summary>
         Public Const VTL_ASSURANCE_SIRET As String = "VTL_ASSURANCE_SIRET"
+
+        ''' <summary>
+        ''' Siret (Maxlen).
+        ''' </summary>
+        Public Const VTL_ASSURANCE_SIRET_MAXLEN As Integer = 50
 
     End Class
 
@@ -253,6 +278,21 @@
         ''' Numero.
         ''' </summary>
         Public Const VTL_CARTE_NUMERO As String = "VTL_CARTE_NUMERO"
+
+        ''' <summary>
+        ''' Numero (Maxlen).
+        ''' </summary>
+        Public Const VTL_CARTE_NUMERO_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' NFC.
+        ''' </summary>
+        Public Const VTL_CARTE_NFC As String = "VTL_CARTE_NFC"
+
+        ''' <summary>
+        ''' NFC (Maxlen).
+        ''' </summary>
+        Public Const VTL_CARTE_NFC_MAXLEN As Integer = 255
 
     End Class
 
@@ -322,6 +362,11 @@
         ''' Num_contrat.
         ''' </summary>
         Public Const VTL_CONTRAT_NUM_CONTRAT As String = "VTL_CONTRAT_NUM_CONTRAT"
+
+        ''' <summary>
+        ''' Num_contrat (Maxlen).
+        ''' </summary>
+        Public Const VTL_CONTRAT_NUM_CONTRAT_MAXLEN As Integer = 50
 
         ''' <summary>
         ''' Dt_debut.
@@ -435,9 +480,19 @@
         Public Const VTL_MEDICAMENT_LIBELLE As String = "VTL_MEDICAMENT_LIBELLE"
 
         ''' <summary>
+        ''' Libelle (Maxlen).
+        ''' </summary>
+        Public Const VTL_MEDICAMENT_LIBELLE_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' Dosage.
         ''' </summary>
         Public Const VTL_MEDICAMENT_DOSAGE As String = "VTL_MEDICAMENT_DOSAGE"
+
+        ''' <summary>
+        ''' Dosage (Maxlen).
+        ''' </summary>
+        Public Const VTL_MEDICAMENT_DOSAGE_MAXLEN As Integer = 50
 
         ''' <summary>
         ''' Duree_moyenne_jour.
@@ -472,9 +527,19 @@
         Public Const VTL_POSITION_COORD_LAT As String = "VTL_POSITION_COORD_LAT"
 
         ''' <summary>
+        ''' Coord_lat (Maxlen).
+        ''' </summary>
+        Public Const VTL_POSITION_COORD_LAT_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' Coord_long.
         ''' </summary>
         Public Const VTL_POSITION_COORD_LONG As String = "VTL_POSITION_COORD_LONG"
+
+        ''' <summary>
+        ''' Coord_long (Maxlen).
+        ''' </summary>
+        Public Const VTL_POSITION_COORD_LONG_MAXLEN As Integer = 50
 
         ''' <summary>
         ''' Top_courante.
@@ -509,9 +574,19 @@
         Public Const VTL_PROPRIETAIRE_NOM As String = "VTL_PROPRIETAIRE_NOM"
 
         ''' <summary>
+        ''' Nom (Maxlen).
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_NOM_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' Prenom.
         ''' </summary>
         Public Const VTL_PROPRIETAIRE_PRENOM As String = "VTL_PROPRIETAIRE_PRENOM"
+
+        ''' <summary>
+        ''' Prenom (Maxlen).
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_PRENOM_MAXLEN As Integer = 50
 
     End Class
 
@@ -534,6 +609,11 @@
         ''' Nom.
         ''' </summary>
         Public Const VTL_RACE_NOM As String = "VTL_RACE_NOM"
+
+        ''' <summary>
+        ''' Nom (Maxlen).
+        ''' </summary>
+        Public Const VTL_RACE_NOM_MAXLEN As Integer = 50
 
     End Class
 
@@ -621,6 +701,11 @@
         ''' </summary>
         Public Const VTL_TYPE_LIBELLE As String = "VTL_TYPE_LIBELLE"
 
+        ''' <summary>
+        ''' Libelle (Maxlen).
+        ''' </summary>
+        Public Const VTL_TYPE_LIBELLE_MAXLEN As Integer = 50
+
     End Class
 
 #End Region
@@ -644,14 +729,29 @@
         Public Const VTL_USER_LOGIN As String = "VTL_USER_LOGIN"
 
         ''' <summary>
+        ''' Login (Maxlen).
+        ''' </summary>
+        Public Const VTL_USER_LOGIN_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' Mdp.
         ''' </summary>
         Public Const VTL_USER_MDP As String = "VTL_USER_MDP"
 
         ''' <summary>
+        ''' Mdp (Maxlen).
+        ''' </summary>
+        Public Const VTL_USER_MDP_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' Role.
         ''' </summary>
         Public Const VTL_USER_ROLE As String = "VTL_USER_ROLE"
+
+        ''' <summary>
+        ''' Role (Maxlen).
+        ''' </summary>
+        Public Const VTL_USER_ROLE_MAXLEN As Integer = 50
 
     End Class
 
@@ -674,6 +774,11 @@
         ''' Libelle.
         ''' </summary>
         Public Const VTL_VACCIN_LIBELLE As String = "VTL_VACCIN_LIBELLE"
+
+        ''' <summary>
+        ''' Libelle (Maxlen).
+        ''' </summary>
+        Public Const VTL_VACCIN_LIBELLE_MAXLEN As Integer = 50
 
         ''' <summary>
         ''' Top_periodique.
@@ -750,14 +855,29 @@
         Public Const VTL_VETERINAIRE_NOM As String = "VTL_VETERINAIRE_NOM"
 
         ''' <summary>
+        ''' Nom (Maxlen).
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_NOM_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' Prenom.
         ''' </summary>
         Public Const VTL_VETERINAIRE_PRENOM As String = "VTL_VETERINAIRE_PRENOM"
 
         ''' <summary>
+        ''' Prenom (Maxlen).
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_PRENOM_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' SIRET.
         ''' </summary>
         Public Const VTL_VETERINAIRE_SIRET As String = "VTL_VETERINAIRE_SIRET"
+
+        ''' <summary>
+        ''' SIRET (Maxlen).
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_SIRET_MAXLEN As Integer = 50
 
     End Class
 
@@ -949,6 +1069,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Adopter" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -979,6 +1107,14 @@
         Public Sub New()
             ' Initialisation des valeurs de propriétés 
             InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Animal" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
         End Sub
 
 #End Region
@@ -1013,6 +1149,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Assurance" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -1043,6 +1187,14 @@
         Public Sub New()
             ' Initialisation des valeurs de propriétés 
             InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Carte" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
         End Sub
 
 #End Region
@@ -1077,6 +1229,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Consultation" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -1107,6 +1267,14 @@
         Public Sub New()
             ' Initialisation des valeurs de propriétés 
             InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Contrat" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
         End Sub
 
 #End Region
@@ -1141,6 +1309,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Histo_Poids" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -1171,6 +1347,14 @@
         Public Sub New()
             ' Initialisation des valeurs de propriétés 
             InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Histo_Taille" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
         End Sub
 
 #End Region
@@ -1205,6 +1389,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Medicament" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -1235,6 +1427,14 @@
         Public Sub New()
             ' Initialisation des valeurs de propriétés 
             InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Position" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
         End Sub
 
 #End Region
@@ -1269,6 +1469,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="PropriEtaire" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -1299,6 +1507,14 @@
         Public Sub New()
             ' Initialisation des valeurs de propriétés 
             InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Race" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
         End Sub
 
 #End Region
@@ -1333,6 +1549,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Traitement_medicament" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -1363,6 +1587,14 @@
         Public Sub New()
             ' Initialisation des valeurs de propriétés 
             InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Traitrement" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
         End Sub
 
 #End Region
@@ -1397,6 +1629,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Type" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -1427,6 +1667,14 @@
         Public Sub New()
             ' Initialisation des valeurs de propriétés 
             InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="User" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
         End Sub
 
 #End Region
@@ -1461,6 +1709,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Vaccin" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -1493,6 +1749,14 @@
             InitDefaultValues()
         End Sub
 
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Vaccination" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
 #End Region
 
     End Class
@@ -1523,6 +1787,14 @@
         Public Sub New()
             ' Initialisation des valeurs de propriétés 
             InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Veterinaire" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
         End Sub
 
 #End Region

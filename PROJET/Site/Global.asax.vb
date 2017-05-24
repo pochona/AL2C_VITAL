@@ -88,7 +88,25 @@ Public Class MainApplication
                 .Add("Mutuelle", "~/Pages/AccueilMutuelle.aspx")
             End If
             If UserIsInRole("Proprietaire") Or UserIsInRole("Admin") Then
-                .Add("Proprietaire", "~/Pages/AccueilProprietaire.aspx")
+                .Add("NomAnimal", "~/Pages/Proprio/Animal.aspx")
+                .AddSub("Informations")
+                .AddSubSub("Générales", "~/Pages/Proprio/AnimalGeneral.aspx")
+                .AddSubSub("Suivi du poids", "~/Pages/Proprio/SuiviPoids.aspx")
+                .AddSubSub("Historique vaccins et traitements", "~/Pages/Proprio/HistoVaccinTraitemt.aspx")
+                .AddSubSub("Historique consultations", "~/Pages/Proprio/HistoConsul.aspx")
+                .AddSubSub("Documents", "~/Pages/Proprio/Documents.aspx")
+                .AddSubSub("Générales", "")
+                .AddSubSub("Générales", "")
+                .AddSubSub("Générales", "")
+                .AddSub("Mes remboursements", "")
+                .AddSub("Mon contrat", "")
+                .AddSubSub("Mes droits", "")
+                .AddSubSub("Mon espace", "")
+                .AddSub("Localisation", "")
+                .AddSub("Infos pratiques", "")
+                .AddSub("Contact", "")
+                .AddSub("Informations", "")
+                .Add("Mes informations", "~/Pages/Proprio/Informations.aspx")
             End If
 #If DEBUG Then
             ' Menu pour le développeur

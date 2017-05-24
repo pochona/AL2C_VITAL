@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Suppression des objets existants                           */
-/* Historique  : Creation le 03/05/2017                                     */
+/* Historique  : Creation le 24/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -71,6 +71,10 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CONSULTATION_ID_VETERINAIRE_VTL_VETERINAIRE_FK' AND type in (N'F'))
 ALTER TABLE VTL_CONSULTATION DROP CONSTRAINT VTL_CONSULTATION_ID_VETERINAIRE_VTL_VETERINAIRE_FK;
 GO
+-- "Suppression de la clef etrangere de la table VTL_ANIMAL vers la table VTL_USER"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ANIMAL_ID_PROP_VTL_USER_FK' AND type in (N'F'))
+ALTER TABLE VTL_ANIMAL DROP CONSTRAINT VTL_ANIMAL_ID_PROP_VTL_USER_FK;
+GO
 -- "Suppression de la clef etrangere de la table VTL_ANIMAL vers la table VTL_TYPE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ANIMAL_ID_TYPE_VTL_TYPE_FK' AND type in (N'F'))
 ALTER TABLE VTL_ANIMAL DROP CONSTRAINT VTL_ANIMAL_ID_TYPE_VTL_TYPE_FK;
@@ -115,6 +119,14 @@ GO
 -- "Suppression de la clef primaire de la table VTL_VACCIN_HISTO"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_VACCIN_HISTO_PK' AND type in (N'PK'))
 ALTER TABLE VTL_VACCIN_HISTO DROP CONSTRAINT VTL_VACCIN_HISTO_PK;
+GO
+-- "Suppression de la clef primaire de la table VTL_USER"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_USER_PK' AND type in (N'PK'))
+ALTER TABLE VTL_USER DROP CONSTRAINT VTL_USER_PK;
+GO
+-- "Suppression de la clef primaire de la table VTL_USER_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_USER_HISTO_PK' AND type in (N'PK'))
+ALTER TABLE VTL_USER_HISTO DROP CONSTRAINT VTL_USER_HISTO_PK;
 GO
 -- "Suppression de la clef primaire de la table VTL_TYPE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_TYPE_PK' AND type in (N'PK'))
@@ -237,14 +249,6 @@ IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ADOPTER_HISTO_PK' AND ty
 ALTER TABLE VTL_ADOPTER_HISTO DROP CONSTRAINT VTL_ADOPTER_HISTO_PK;
 GO
 
--- "Suppression de la table ~temp636291757526019432"
-IF EXISTS (SELECT * FROM sys.objects WHERE name = N'~temp636291757526019432' AND type in (N'U'))
-DROP TABLE ~temp636291757526019432;
-GO
--- "Suppression de la table ~TEMP636291757526019432_HISTO"
-IF EXISTS (SELECT * FROM sys.objects WHERE name = N'~TEMP636291757526019432_HISTO' AND type in (N'U'))
-DROP TABLE ~TEMP636291757526019432_HISTO;
-GO
 -- "Suppression de la table VTL_VETERINAIRE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_VETERINAIRE' AND type in (N'U'))
 DROP TABLE VTL_VETERINAIRE;
@@ -268,6 +272,14 @@ GO
 -- "Suppression de la table VTL_VACCIN_HISTO"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_VACCIN_HISTO' AND type in (N'U'))
 DROP TABLE VTL_VACCIN_HISTO;
+GO
+-- "Suppression de la table VTL_USER"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_USER' AND type in (N'U'))
+DROP TABLE VTL_USER;
+GO
+-- "Suppression de la table VTL_USER_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_USER_HISTO' AND type in (N'U'))
+DROP TABLE VTL_USER_HISTO;
 GO
 -- "Suppression de la table VTL_TYPE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_TYPE' AND type in (N'U'))

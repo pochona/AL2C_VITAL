@@ -3,30 +3,24 @@
 
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server">
+<head id="Head1" runat="server">
 	<title>Accueil propriétaire</title>
 </head>
 <body>
 	<form id="frmData" runat="server">
 	<div>
-	<cw:CwFormLayout runat="server" ID="layout1">
-            <cw:CwFrame runat="server" ID="frame1" text="ListeAnimaux" Collapsable="true" Kind="Primary">
-                Tableau à créer
-                <cw:CwFormLayout runat="server" ID="frlDtl">
-                    <cw:CwTextBox runat="server" ID="txt1" Label="Race" Enabled="false" Text="animal X"></cw:CwTextBox>
+	<cw:CwFormLayout runat="server" ID="frmAnimx">
+            <cw:CwFrame runat="server" ID="frmListAnimaux" text="Animaux" Collapsable="true" Kind="Primary">
+                <cw:CwFormLayout runat="server" ID="frlListAnimx">
+                    <cw:CwDataGrid runat="server" ID="dtgAnimx" Title="{0} Animaux" Cells-ExtraSmall="12" LabelCells-ExtraSmall="1"></cw:CwDataGrid>
                 </cw:CwFormLayout>
             </cw:CwFrame>
 	    </cw:CwFormLayout>
         
-        <cw:CwFormLayout runat="server" ID="layout2">
-            <cw:CwFrame runat="server" ID="frame2" text="Dépenses" Collapsable="true" Kind="Success"  >
-                <cw:CwFormLayout runat="server" ID="layout2bis"  DefaultCells-Small="6" DefaultLabelCells-Small="3">
-                
-                    <cw:CwTextBox runat="server" ID="txt4" Label="Total" Enabled="false" Text="infosRecupBD" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwLabel runat="server" ID="label1">Avec une mutuelle vous auriez économisé 20€</cw:CwLabel>       
-                    <cw:CwTextBox runat="server" ID="txt5" Label="Courbe" Enabled="false" Text="infosRecupBD" ToolTip="Infos bulle"></cw:CwTextBox>
-                      
-                   
+        <cw:CwFormLayout runat="server" ID="frlDepenses">
+            <cw:CwFrame runat="server" ID="frm" text="Dépenses" Collapsable="true" Kind="Success"  >
+                <cw:CwFormLayout runat="server" ID="frlDtlDepenses">
+                    <cw:CwTextBox runat="server" ID="txt4" Enabled="false" Text="20€" Label="Avec une mutuelle vous auriez économisé " ></cw:CwTextBox>
                 </cw:CwFormLayout>
             </cw:CwFrame>
 	    </cw:CwFormLayout>
