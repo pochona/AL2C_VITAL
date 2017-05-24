@@ -12,11 +12,11 @@
             <cw:CwFrame runat="server" ID="frameajoutclient" text="Propriétaire" Collapsable="true" >
                 <cw:CwFormLayout runat="server" ID="frlDtl">
                     <cw:CwTextBox runat="server" ID="NumContrat" Label="Numéro de contrat" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwTextBox runat="server" ID="DateDebut" Label="Date de début" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwTextBox runat="server" ID="DateFin" Label="Date de fin" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwTextBox runat="server" ID="IdAnimal" Label="ID de l'animal" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwTextBox runat="server" ID="IdProprio" Label="ID du propriétaire" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwTextBox runat="server" ID="IdAssurance" Label="ID de l'assurance" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwTextBox>
+                    <cw:CwDateTextBox runat="server" ID="DateDebut" Label="Date de début" Enabled="true" Text="" IsMandatory="true" ></cw:CwDateTextBox>
+                    <cw:CwDateTextBox runat="server" ID="DateFin" Label="Date de fin" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwDateTextBox>
+                    <cw:CwNumericTextBox runat="server" ID="IdAnimal" Label="ID de l'animal" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
+                    <cw:CwNumericTextBox runat="server" ID="IdProprio" Label="ID du propriétaire" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
+                    <cw:CwNumericTextBox runat="server" ID="IdAssurance" Label="ID de l'assurance" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
                     <cw:CwLabel runat="server" ID="label1" Label="Label" Text=""></cw:CwLabel>
                 </cw:CwFormLayout>
             </cw:CwFrame>

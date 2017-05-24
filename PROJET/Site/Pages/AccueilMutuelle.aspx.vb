@@ -13,6 +13,7 @@ Partial Public Class PageAccueilMutuelle
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             consultClient.RefreshData()
+            loadLien()
         End If
     End Sub
 
@@ -23,6 +24,12 @@ Partial Public Class PageAccueilMutuelle
 
             ShowException(ex)
         End Try
+    End Sub
+
+    Private Sub loadLien()
+        btnmut1.NavigateUrl = "~/Pages/Mutuelle/ConsultationContratClient.aspx"
+        btnmut2.NavigateUrl = "~/Pages/Mutuelle/AjoutContratClient.aspx"
+        'pour une popup btnmut1.Target = "Modal#500x300"
     End Sub
 
     Private Sub dtgResults_Init(sender As Object, e As EventArgs) Handles consultClient.Init

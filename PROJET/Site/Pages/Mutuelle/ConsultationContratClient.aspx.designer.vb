@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class PageConsultationClient
 
     '''<summary>
+    '''Contrôle Head1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
+
+    '''<summary>
     '''Contrôle frmData.
     '''</summary>
     '''<remarks>

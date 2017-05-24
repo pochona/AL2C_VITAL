@@ -1,4 +1,5 @@
-Imports System.Data.SqlClient
+Imports VITAL.BO.VITAL
+Imports VITAL.BO
 
 Partial Public Class PageAjoutContratClient
     Inherits CwPage
@@ -15,45 +16,22 @@ Partial Public Class PageAjoutContratClient
 
 
     Public Sub clicValider(sender As Object, e As EventArgs)
+        Dim l_o_contrat As New Contrat
+        Try
+            With l_o_contrat
+                ValidationManager.Validate(NumContrat, DateDebut, DateFin, IdAnimal, IdProprio, IdAssurance)
+                .Num_contrat = CStr(NumContrat.Text)
+                .Dt_debut = DateDebut.Date
+                .Dt_fin = DateFin.Date
+                .Id_animal = CInt(IdAnimal.Value)
+                .Id_proprietaire = CInt(IdProprio.Value)
+                .Id_assurance = CInt(IdAssurance.Value)
 
-        If NumContrat.Text = "" Then
-            label1.Text = "erreur"
-        End If
-
-        If DateDebut.Text = "" Then
-            label1.Text = "erreur"
-        End If
-
-        If DateFin.Text = "" Then
-            label1.Text = "erreur"
-        End If
-
-        If IdAnimal.Text = "" Then
-            label1.Text = "erreur"
-        End If
-
-        If IdProprio.Text = "" Then
-            label1.Text = "erreur"
-        End If
-
-        If IdAssurance.Text = "" Then
-            label1.Text = "erreur"
-        End If
-
-        If label1.Text <> "erreur" Then
-            Dim Connexion As New SqlConnection("Data Source=(localdb)\Projects;Initial Catalog=VITL;User Id=VITL;Password=VITL1234;")
-            Connexion.Open()
-            Dim Requete As String = "INSERT INTO VTL_CONTRAT(VTL_CONTRAT_NUM_CONTRAT, VTL_CONTRAT_DT_DEBUT, VTL_CONTRAT_DT_FIN, VTL_CONTRAT_ID_ANIMAL, VTL_CONTRAT_ID_PROPRIETAIRE, VTL_CONTRAT_ID_ASSURANCE) VALUES (NumContrat.Text, DateDebut.Text, DateFin.Text, IdAnimal.Text, IdProprio.Text, IdAssurance.Text)"
-            Dim Commande As New SqlCommand(Requete, Connexion)
-            Connexion.Close()
-
-            Try
-                Commande.ExecuteNonQuery()
-            Catch ex As Exception
-                Console.WriteLine(ex.Message)
-            End Try
-            label1.Text = "Contrat ajouté"
-        End If
+                l_o_contrat.Save()
+            End With
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
 
     End Sub
 

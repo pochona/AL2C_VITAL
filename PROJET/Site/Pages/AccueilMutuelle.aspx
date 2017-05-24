@@ -14,8 +14,8 @@
         
 
         <cw:CwPanelButtons runat="server" ID="panelmut1">
-            <cw:CwButton runat="server" ID="btnmut1" Text="CONSULTER UN CLIENT" Kind="Default" NavigateUrl="~/Pages/ConsultationContratClient.aspx"></cw:CwButton>
-            <cw:CwButton runat="server" ID="btnmut2" Text="AJOUTER UN CONTRAT CLIENT" Kind="Default" NavigateUrl="~/Pages/AjoutContratClient.aspx"></cw:CwButton>
+            <cw:CwButton runat="server" ID="btnmut1" Text="CONSULTER UN CLIENT" Kind="Default"></cw:CwButton>
+            <cw:CwButton runat="server" ID="btnmut2" Text="AJOUTER UN CONTRAT CLIENT" Kind="Default"></cw:CwButton>
          </cw:CwPanelButtons>
 
 

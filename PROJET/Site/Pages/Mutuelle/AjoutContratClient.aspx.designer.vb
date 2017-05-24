@@ -65,7 +65,7 @@ Partial Public Class PageAjoutContratClient
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents DateDebut As Global.Corail.Web.CwTextBox
+    Protected WithEvents DateDebut As Global.Corail.Web.CwDateTextBox
 
     '''<summary>
     '''Contrôle DateFin.
@@ -74,7 +74,7 @@ Partial Public Class PageAjoutContratClient
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents DateFin As Global.Corail.Web.CwTextBox
+    Protected WithEvents DateFin As Global.Corail.Web.CwDateTextBox
 
     '''<summary>
     '''Contrôle IdAnimal.
@@ -83,7 +83,7 @@ Partial Public Class PageAjoutContratClient
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents IdAnimal As Global.Corail.Web.CwTextBox
+    Protected WithEvents IdAnimal As Global.Corail.Web.CwNumericTextBox
 
     '''<summary>
     '''Contrôle IdProprio.
@@ -92,7 +92,7 @@ Partial Public Class PageAjoutContratClient
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents IdProprio As Global.Corail.Web.CwTextBox
+    Protected WithEvents IdProprio As Global.Corail.Web.CwNumericTextBox
 
     '''<summary>
     '''Contrôle IdAssurance.
@@ -101,7 +101,7 @@ Partial Public Class PageAjoutContratClient
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents IdAssurance As Global.Corail.Web.CwTextBox
+    Protected WithEvents IdAssurance As Global.Corail.Web.CwNumericTextBox
 
     '''<summary>
     '''Contrôle label1.
