@@ -22,7 +22,6 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -118,8 +117,6 @@
     <Content Include="Pages\Proprio\HistoVaccinTraitemt.aspx" />
     <Content Include="Pages\Proprio\Informations.aspx" />
     <Content Include="Pages\Proprio\SuiviPoids.aspx" />
-    <Content Include="Pages\Veto\histo_traitements.aspx" />
-    <Content Include="Pages\Veto\histo_vaccins.aspx" />
     <Content Include="PAR\VTL_ADOPTER.xml" />
     <Content Include="PAR\VTL_ANIMAL.xml" />
     <Content Include="PAR\VTL_ASSURANCE.xml" />
@@ -204,6 +201,7 @@
     </Compile>
     <Compile Include="Pages\Mutuelle\ConsulterContrat.aspx.vb">
       <DependentUpon>ConsulterContrat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Proprio\AnimalGeneral.aspx.designer.vb">
       <DependentUpon>AnimalGeneral.aspx</DependentUpon>
@@ -246,20 +244,6 @@
     <Compile Include="Pages\Proprio\SuiviPoids.aspx.vb">
       <DependentUpon>SuiviPoids.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Veto\histo_traitements.aspx.designer.vb">
-      <DependentUpon>histo_traitements.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Veto\histo_traitements.aspx.vb">
-      <DependentUpon>histo_traitements.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Veto\histo_vaccins.aspx.designer.vb">
-      <DependentUpon>histo_vaccins.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Veto\histo_vaccins.aspx.vb">
-      <DependentUpon>histo_vaccins.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Welcome.aspx.designer.vb">
       <DependentUpon>Welcome.aspx</DependentUpon>

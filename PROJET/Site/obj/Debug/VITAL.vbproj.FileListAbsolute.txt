@@ -78,9 +78,3 @@ C:\Users\Nolwenn PILLARD\Documents\AL2C\V3\AL2C_VITAL\PROJET\Site\obj\Debug\VITA
 C:\Users\Nolwenn PILLARD\Documents\AL2C\V3\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.dll
 C:\Users\Nolwenn PILLARD\Documents\AL2C\V3\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.xml
 C:\Users\Nolwenn PILLARD\Documents\AL2C\V3\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.pdb
-C:\Users\portable\Documents\GitHub\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.vbprojResolveAssemblyReference.cache
-C:\Users\portable\Documents\GitHub\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.Resources.resources
-C:\Users\portable\Documents\GitHub\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.vbproj.GenerateResource.Cache
-C:\Users\portable\Documents\GitHub\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.dll
-C:\Users\portable\Documents\GitHub\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.xml
-C:\Users\portable\Documents\GitHub\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.pdb
