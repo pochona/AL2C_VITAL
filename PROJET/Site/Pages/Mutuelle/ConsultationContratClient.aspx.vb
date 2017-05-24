@@ -1,4 +1,4 @@
-Public Partial Class PageConsulterContrat
+Partial Public Class PageConsultationClient
     Inherits CwPage
 
     ''' <summary>

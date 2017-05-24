@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class PageAccueilMutuelle
+Partial Public Class PageConsultationClient
 
     '''<summary>
     '''Contrôle frmData.
@@ -23,38 +23,38 @@ Partial Public Class PageAccueilMutuelle
     Protected WithEvents frmData As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Contrôle consultClient.
+    '''Contrôle layoutajoutclient.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents consultClient As Global.Corail.Web.CwDataGrid
+    Protected WithEvents layoutajoutclient As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle panelmut1.
+    '''Contrôle frameajoutclient.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents panelmut1 As Global.Corail.Web.CwPanelButtons
+    Protected WithEvents frameajoutclient As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle btnmut1.
+    '''Contrôle frlDtl.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents btnmut1 As Global.Corail.Web.CwButton
+    Protected WithEvents frlDtl As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle btnmut2.
+    '''Contrôle slbNom.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents btnmut2 As Global.Corail.Web.CwButton
+    Protected WithEvents slbNom As Global.Corail.Web.CwSelectTextBox
 End Class
