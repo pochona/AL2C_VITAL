@@ -1,0 +1,82 @@
+-- "Creation de la table VTL_ATTACHEMT"
+CREATE TABLE VTL_ATTACHEMT (
+	VTL_ATTACHEMT_ID INT IDENTITY(1,1) NOT NULL,
+	VTL_ATTACHEMT_NAME NVARCHAR(50) NOT NULL,
+	VTL_ATTACHEMT_CHEMIN NVARCHAR(100) NOT NULL,
+	VTL_ATTACHEMT_CONSULT INT NOT NULL
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Attachement', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT', @level2type=N'COLUMN',@level2name=N'VTL_ATTACHEMT_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Name', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT', @level2type=N'COLUMN',@level2name=N'VTL_ATTACHEMT_NAME'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Chemin', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT', @level2type=N'COLUMN',@level2name=N'VTL_ATTACHEMT_CHEMIN'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Consult', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT', @level2type=N'COLUMN',@level2name=N'VTL_ATTACHEMT_CONSULT'
+GO
+
+-- "Creation de la table VTL_REMBOURSMT"
+CREATE TABLE VTL_REMBOURSMT (
+	VTL_REMBOURSMT_ID INT IDENTITY(1,1) NOT NULL,
+	VTL_REMBOURSMT_NAME NVARCHAR(50) NOT NULL,
+	VTL_REMBOURSMT_DATE DATETIME2(0) NOT NULL,
+	VTL_REMBOURSMT_STATUT NVARCHAR(50),
+	VTL_REMBOURSMT_CONSULT INT,
+	VTL_REMBOURSMT_CONTRAT INT
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Remboursement', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Name', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_NAME'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Date', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_DATE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Statut', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_STATUT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Consult', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_CONSULT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Contrat', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_CONTRAT'
+GO
+
+
+-- "Creation de la clef primaire de la table VTL_ATTACHEMT"
+ALTER TABLE VTL_ATTACHEMT
+ADD CONSTRAINT VTL_ATTACHEMT_PK PRIMARY KEY (VTL_ATTACHEMT_ID)
+GO
+
+-- "Creation de la clef etrangere de la table VTL_ATTACHEMT vers la table VTL_CONSULTATION"
+ALTER TABLE VTL_ATTACHEMT
+ADD CONSTRAINT VTL_ATTACHEMT_CONSULT_VTL_CONSULTATION_FK FOREIGN KEY (VTL_ATTACHEMT_CONSULT)
+	REFERENCES VTL_CONSULTATION(VTL_CONSULTATION_ID);
+GO
+
+-- "Creation de la clef primaire de la table VTL_REMBOURSMT"
+ALTER TABLE VTL_REMBOURSMT
+ADD CONSTRAINT VTL_REMBOURSMT_PK PRIMARY KEY (VTL_REMBOURSMT_ID)
+GO
+
+-- "Creation de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_CONSULTATION"
+ALTER TABLE VTL_REMBOURSMT
+ADD CONSTRAINT VTL_REMBOURSMT_CONSULT_VTL_CONSULTATION_FK FOREIGN KEY (VTL_REMBOURSMT_CONSULT)
+	REFERENCES VTL_CONSULTATION(VTL_CONSULTATION_ID);
+GO
+
+-- "Creation de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_CONTRAT"
+ALTER TABLE VTL_REMBOURSMT
+ADD CONSTRAINT VTL_REMBOURSMT_CONTRAT_VTL_CONTRAT_FK FOREIGN KEY (VTL_REMBOURSMT_CONTRAT)
+	REFERENCES VTL_CONTRAT(VTL_CONTRAT_ID);
+GO
+
+-- "Ajout du role ROLE_VITAL_USER sur la table VTL_REMBOURSMT "
+GRANT SELECT,INSERT,UPDATE,DELETE ON VTL_REMBOURSMT TO VITL;
+GO
+
+-- "Ajout du role ROLE_VITAL_USER sur la table VTL_ATTACHEMT "
+GRANT SELECT,INSERT,UPDATE,DELETE ON VTL_ATTACHEMT TO VITL;
+GO
