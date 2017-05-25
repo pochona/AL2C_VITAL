@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Definition des options de la base de donnees               */
-/* Historique  : Creation le 24/05/2017                                     */
+/* Historique  : Creation le 25/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 

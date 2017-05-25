@@ -37,6 +37,11 @@
         Public Const VTL_ASSURANCE As String = "VTL_ASSURANCE"
 
         ''' <summary>
+        ''' Attachement.
+        ''' </summary>
+        Public Const VTL_ATTACHEMT As String = "VTL_ATTACHEMT"
+
+        ''' <summary>
         ''' Carte vitale.
         ''' </summary>
         Public Const VTL_CARTE As String = "VTL_CARTE"
@@ -80,6 +85,11 @@
         ''' Race de l'animal.
         ''' </summary>
         Public Const VTL_RACE As String = "VTL_RACE"
+
+        ''' <summary>
+        ''' Remboursement.
+        ''' </summary>
+        Public Const VTL_REMBOURSMT As String = "VTL_REMBOURSMT"
 
         ''' <summary>
         ''' Liste des médicaments compris dans un traitement.
@@ -215,11 +225,6 @@
         ''' </summary>
         Public Const VTL_ANIMAL_ID_TYPE As String = "VTL_ANIMAL_ID_TYPE"
 
-        ''' <summary>
-        ''' Id_prop.
-        ''' </summary>
-        Public Const VTL_ANIMAL_ID_PROP As String = "VTL_ANIMAL_ID_PROP"
-
     End Class
 
 #End Region
@@ -261,6 +266,48 @@
 
 #End Region
 
+#Region "VTL_ATTACHEMT - Attachement"
+
+    ''' <summary>
+    ''' Attachement.
+    ''' </summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public NotInheritable Class VTL_ATTACHEMT
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+        Public Const VTL_ATTACHEMT_ID As String = "VTL_ATTACHEMT_ID"
+
+        ''' <summary>
+        ''' Name.
+        ''' </summary>
+        Public Const VTL_ATTACHEMT_NAME As String = "VTL_ATTACHEMT_NAME"
+
+        ''' <summary>
+        ''' Name (Maxlen).
+        ''' </summary>
+        Public Const VTL_ATTACHEMT_NAME_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Chemin.
+        ''' </summary>
+        Public Const VTL_ATTACHEMT_CHEMIN As String = "VTL_ATTACHEMT_CHEMIN"
+
+        ''' <summary>
+        ''' Chemin (Maxlen).
+        ''' </summary>
+        Public Const VTL_ATTACHEMT_CHEMIN_MAXLEN As Integer = 100
+
+        ''' <summary>
+        ''' Consult.
+        ''' </summary>
+        Public Const VTL_ATTACHEMT_CONSULT As String = "VTL_ATTACHEMT_CONSULT"
+
+    End Class
+
+#End Region
+
 #Region "VTL_CARTE - Carte vitale"
 
     ''' <summary>
@@ -283,16 +330,6 @@
         ''' Numero (Maxlen).
         ''' </summary>
         Public Const VTL_CARTE_NUMERO_MAXLEN As Integer = 50
-
-        ''' <summary>
-        ''' NFC.
-        ''' </summary>
-        Public Const VTL_CARTE_NFC As String = "VTL_CARTE_NFC"
-
-        ''' <summary>
-        ''' NFC (Maxlen).
-        ''' </summary>
-        Public Const VTL_CARTE_NFC_MAXLEN As Integer = 255
 
     End Class
 
@@ -614,6 +651,58 @@
         ''' Nom (Maxlen).
         ''' </summary>
         Public Const VTL_RACE_NOM_MAXLEN As Integer = 50
+
+    End Class
+
+#End Region
+
+#Region "VTL_REMBOURSMT - Remboursement"
+
+    ''' <summary>
+    ''' Remboursement.
+    ''' </summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public NotInheritable Class VTL_REMBOURSMT
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_ID As String = "VTL_REMBOURSMT_ID"
+
+        ''' <summary>
+        ''' Name.
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_NAME As String = "VTL_REMBOURSMT_NAME"
+
+        ''' <summary>
+        ''' Name (Maxlen).
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_NAME_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Date.
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_DATE As String = "VTL_REMBOURSMT_DATE"
+
+        ''' <summary>
+        ''' Statut.
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_STATUT As String = "VTL_REMBOURSMT_STATUT"
+
+        ''' <summary>
+        ''' Statut (Maxlen).
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_STATUT_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Consult.
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_CONSULT As String = "VTL_REMBOURSMT_CONSULT"
+
+        ''' <summary>
+        ''' Contrat.
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_CONTRAT As String = "VTL_REMBOURSMT_CONTRAT"
 
     End Class
 
@@ -974,6 +1063,8 @@
             If Animal.HasCache Then Animal.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Assurance
             If Assurance.HasCache Then Assurance.CacheClear(p_b_force)
+            ' Clear cache pour les items de la classe Attachement
+            If Attachement.HasCache Then Attachement.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Carte
             If Carte.HasCache Then Carte.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Consultation
@@ -992,6 +1083,8 @@
             If PropriEtaire.HasCache Then PropriEtaire.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Race
             If Race.HasCache Then Race.CacheClear(p_b_force)
+            ' Clear cache pour les items de la classe Remboursement
+            If Remboursement.HasCache Then Remboursement.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Traitement_medicament
             If Traitement_medicament.HasCache Then Traitement_medicament.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Traitrement
@@ -1151,6 +1244,46 @@
 
         ''' <summary>
         ''' Initialise une nouvelle instance de la classe <see cref="Assurance" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
+#End Region
+
+    End Class
+
+#End Region
+
+#Region "Attachement - Attachement"
+
+    <Serializable()> 
+    Partial Public Class Attachement
+        Inherits Auto.Attachement
+
+#Region "Initialisation"
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Attachement" />.
+        ''' </summary>
+        ''' <param name="p_i_iD">ID.</param>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Sub New(p_i_iD As Integer, Optional p_o_trans As Transaction = Nothing)
+            ' Chargement des informations
+            Load(p_i_iD, p_o_trans)
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Attachement" />.
+        ''' </summary>
+        Public Sub New()
+            ' Initialisation des valeurs de propriétés 
+            InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Attachement" />.
         ''' </summary>
         ''' <param name="p_o_row">Ligne d'une table de données.</param>
         Protected Sub New(p_o_row As DataRow)
@@ -1511,6 +1644,46 @@
 
         ''' <summary>
         ''' Initialise une nouvelle instance de la classe <see cref="Race" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
+#End Region
+
+    End Class
+
+#End Region
+
+#Region "Remboursement - Remboursement"
+
+    <Serializable()> 
+    Partial Public Class Remboursement
+        Inherits Auto.Remboursement
+
+#Region "Initialisation"
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Remboursement" />.
+        ''' </summary>
+        ''' <param name="p_i_iD">ID.</param>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Sub New(p_i_iD As Integer, Optional p_o_trans As Transaction = Nothing)
+            ' Chargement des informations
+            Load(p_i_iD, p_o_trans)
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Remboursement" />.
+        ''' </summary>
+        Public Sub New()
+            ' Initialisation des valeurs de propriétés 
+            InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Remboursement" />.
         ''' </summary>
         ''' <param name="p_o_row">Ligne d'une table de données.</param>
         Protected Sub New(p_o_row As DataRow)

@@ -339,11 +339,6 @@
         ''' </summary>
 		Private m_i_id_type As Integer
 
-        ''' <summary>
-        ''' Id_prop.
-        ''' </summary>
-		Private m_i_id_prop As Integer
-
 #End Region
 
 #Region "Propriétés publiques"
@@ -514,25 +509,6 @@
             End Set
         End Property
 
-        ''' <summary>
-        ''' Id_prop.
-        ''' Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID_PROP.
-        ''' </summary>
-        ''' <value>
-        ''' Id_prop.
-        ''' </value>
-		Public Overridable Property Id_prop As Integer
-            Get
-				Return m_i_id_prop
-            End Get
-			Set(value As Integer)
-                If m_i_id_prop <> value Then
-                    m_i_id_prop = value
-                    HasChanges = True
-                End If
-            End Set
-        End Property
-
 #End Region
 
 #Region "Constantes publiques"
@@ -602,8 +578,6 @@
             p_o_target.m_i_id_carte = m_i_id_carte
             ' Colonne : m_i_id_type
             p_o_target.m_i_id_type = m_i_id_type
-            ' Colonne : m_i_id_prop
-            p_o_target.m_i_id_prop = m_i_id_prop
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -623,7 +597,6 @@
 			m_i_id_race = NzInt(p_o_row!VTL_ANIMAL_ID_RACE, 0)
 			m_i_id_carte = NzInt(p_o_row!VTL_ANIMAL_ID_CARTE, 0)
 			m_i_id_type = NzInt(p_o_row!VTL_ANIMAL_ID_TYPE, 0)
-			m_i_id_prop = NzInt(p_o_row!VTL_ANIMAL_ID_PROP, 0)
             HasChanges = False
         End Sub
 
@@ -640,7 +613,6 @@
 			p_o_row("VTL_ANIMAL_ID_RACE") = Id_race
 			p_o_row("VTL_ANIMAL_ID_CARTE") = Id_carte
 			p_o_row("VTL_ANIMAL_ID_TYPE") = Id_type
-			p_o_row("VTL_ANIMAL_ID_PROP") = Id_prop
         End Sub
 
         ''' <summary>
@@ -673,9 +645,6 @@
             End If
             If p_o_object.Id_type <> Id_type Then
                 l_o_dicDiff.Add(VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_TYPE, {p_o_object.Id_type,Id_type})
-            End If
-            If p_o_object.Id_prop <> Id_prop Then
-                l_o_dicDiff.Add(VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_PROP, {p_o_object.Id_prop,Id_prop})
             End If
             Return l_o_dicDiff
         End Function
@@ -905,6 +874,256 @@
 
 #End Region
 
+#Region "Attachement - Attachement"
+
+    ''' <summary>
+    ''' Attachement.
+    ''' </summary>
+    <Serializable()> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public MustInherit Class Attachement(Of T As {VITAL.Attachement, New})
+        Inherits VITAL.Schema
+
+
+#Region "Variables privées"
+
+        ''' <summary>
+        ''' Indique s'il y a eu des changements sur l'objet ou non
+        ''' </summary>
+        Private m_b_changes As Boolean = False
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+		Private m_i_iD As Integer
+
+        ''' <summary>
+        ''' Name.
+        ''' </summary>
+		Private m_s_name As String
+
+        ''' <summary>
+        ''' Chemin.
+        ''' </summary>
+		Private m_s_chemin As String
+
+        ''' <summary>
+        ''' Consult.
+        ''' </summary>
+		Private m_i_consult As Integer
+
+#End Region
+
+#Region "Propriétés publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a subi des modifications ou non
+        ''' </summary>
+        ''' <value>
+        '''
+        ''' </value>
+        Public Property HasChanges As Boolean
+            Get
+                Return m_b_changes
+            End Get
+            Set(value As Boolean)
+                m_b_changes = value
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' ID.
+        ''' Champ associé : VTL_ATTACHEMT.VTL_ATTACHEMT_ID.
+        ''' </summary>
+        ''' <value>
+        ''' ID.
+        ''' </value>
+		Public Overridable ReadOnly Property ID As Integer
+            Get
+				Return m_i_iD
+            End Get
+        End Property
+
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Protected Sub SetAutoId(p_i_id As Integer)
+            m_i_iD = p_i_id
+        End Sub
+
+        ''' <summary>
+        ''' Name.
+        ''' Champ associé : VTL_ATTACHEMT.VTL_ATTACHEMT_NAME.
+        ''' </summary>
+        ''' <value>
+        ''' Name.
+        ''' </value>
+		Public Overridable Property Name As String
+            Get
+				Return m_s_name
+            End Get
+			Set(value As String)
+                If m_s_name <> value Then
+                    m_s_name = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Chemin.
+        ''' Champ associé : VTL_ATTACHEMT.VTL_ATTACHEMT_CHEMIN.
+        ''' </summary>
+        ''' <value>
+        ''' Chemin.
+        ''' </value>
+		Public Overridable Property Chemin As String
+            Get
+				Return m_s_chemin
+            End Get
+			Set(value As String)
+                If m_s_chemin <> value Then
+                    m_s_chemin = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Consult.
+        ''' Champ associé : VTL_ATTACHEMT.VTL_ATTACHEMT_CONSULT.
+        ''' </summary>
+        ''' <value>
+        ''' Consult.
+        ''' </value>
+		Public Overridable Property Consult As Integer
+            Get
+				Return m_i_consult
+            End Get
+			Set(value As Integer)
+                If m_i_consult <> value Then
+                    m_i_consult = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+#End Region
+
+#Region "Constantes publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a un historique ou non
+        ''' </summary>
+        Public Const HasHisto As Boolean = False
+
+        ''' <summary>
+        ''' Indique si l'objet utilise le cache ou non
+        ''' </summary>
+        Public Const HasCache As Boolean = False
+
+        ''' <summary>
+        ''' Nom de la table associée à la classe.
+        ''' </summary>
+        <Obsolete("Veuillez utiliser la classe 'Tables'.")>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Public Const TableName As String = Tables.VTL_ATTACHEMT
+
+#End Region
+
+#Region "Méthodes publiques"
+
+        ''' <summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Function CloneAsNew(Optional p_b_includeKeyValues As Boolean = False) As T
+            Dim l_o_target As New T()
+
+            ' Copie des propriétés et retour
+            Return CopyTo(l_o_target, p_b_includeKeyValues)
+        End Function
+
+        ''' <summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Overridable Function CopyTo(p_o_target As T, Optional p_b_includeKeyValues As Boolean = False) As T
+
+            ' Vérification des paramètres.
+            If (p_o_target Is Nothing) Then
+                Throw New ArgumentNullException("p_o_target")
+            End If
+
+            ' Copie des valeurs des clés primaires
+            If p_b_includeKeyValues Then
+                ' Column : m_i_iD
+                p_o_target.m_i_iD = m_i_iD
+            End If
+            p_o_target.m_i_iD = m_i_iD
+            ' Colonne : m_s_name
+            p_o_target.m_s_name = m_s_name
+            ' Colonne : m_s_chemin
+            p_o_target.m_s_chemin = m_s_chemin
+            ' Colonne : m_i_consult
+            p_o_target.m_i_consult = m_i_consult
+
+            ' Retour de l'objet cible pour appel en chaine
+            Return p_o_target
+        End Function
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub Load(p_o_row As DataRow)
+            If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
+			m_i_iD = CInt(p_o_row!VTL_ATTACHEMT_ID)
+			m_s_name = CStr(p_o_row!VTL_ATTACHEMT_NAME)
+			m_s_chemin = CStr(p_o_row!VTL_ATTACHEMT_CHEMIN)
+			m_i_consult = CInt(p_o_row!VTL_ATTACHEMT_CONSULT)
+            HasChanges = False
+        End Sub
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub ToRow(p_o_row As DataRow)
+			p_o_row("VTL_ATTACHEMT_ID") = ID
+			p_o_row("VTL_ATTACHEMT_NAME") = Name
+			p_o_row("VTL_ATTACHEMT_CHEMIN") = Chemin
+			p_o_row("VTL_ATTACHEMT_CONSULT") = Consult
+        End Sub
+
+        ''' <summary>
+        ''' Permet de détecter toutes les différences entre 2 objets
+        ''' </summary>
+        ''' <param name="p_o_object">Objet de la classe Attachement.</param>
+        Public Function Diff(p_o_object As Attachement(Of T)) As Dictionary(Of String, Object())
+            Dim l_o_dicDiff As New Dictionary(Of String, Object())
+
+            If p_o_object.ID <> ID Then
+                l_o_dicDiff.Add(VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_ID, {p_o_object.ID,ID})
+            End If
+            If p_o_object.Name <> Name Then
+                l_o_dicDiff.Add(VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_NAME, {p_o_object.Name,Name})
+            End If
+            If p_o_object.Chemin <> Chemin Then
+                l_o_dicDiff.Add(VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_CHEMIN, {p_o_object.Chemin,Chemin})
+            End If
+            If p_o_object.Consult <> Consult Then
+                l_o_dicDiff.Add(VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_CONSULT, {p_o_object.Consult,Consult})
+            End If
+            Return l_o_dicDiff
+        End Function
+
+#End Region
+
+    End Class
+
+#End Region
+
 #Region "Carte - Carte vitale"
 
     ''' <summary>
@@ -932,11 +1151,6 @@
         ''' Numero.
         ''' </summary>
 		Private m_s_numero As String
-
-        ''' <summary>
-        ''' NFC.
-        ''' </summary>
-		Private m_s_nFC As String
 
 #End Region
 
@@ -989,25 +1203,6 @@
 			Set(value As String)
                 If m_s_numero <> value Then
                     m_s_numero = value
-                    HasChanges = True
-                End If
-            End Set
-        End Property
-
-        ''' <summary>
-        ''' NFC.
-        ''' Champ associé : VTL_CARTE.VTL_CARTE_NFC.
-        ''' </summary>
-        ''' <value>
-        ''' NFC.
-        ''' </value>
-		Public Overridable Property NFC As String
-            Get
-				Return m_s_nFC
-            End Get
-			Set(value As String)
-                If m_s_nFC <> value Then
-                    m_s_nFC = value
                     HasChanges = True
                 End If
             End Set
@@ -1070,8 +1265,6 @@
             p_o_target.m_i_iD = m_i_iD
             ' Colonne : m_s_numero
             p_o_target.m_s_numero = m_s_numero
-            ' Colonne : m_s_nFC
-            p_o_target.m_s_nFC = m_s_nFC
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -1085,7 +1278,6 @@
             If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
 			m_i_iD = CInt(p_o_row!VTL_CARTE_ID)
 			m_s_numero = CStr(p_o_row!VTL_CARTE_NUMERO)
-			m_s_nFC = NzStr(p_o_row!VTL_CARTE_NFC)
             HasChanges = False
         End Sub
 
@@ -1096,7 +1288,6 @@
         Public Overridable Sub ToRow(p_o_row As DataRow)
 			p_o_row("VTL_CARTE_ID") = ID
 			p_o_row("VTL_CARTE_NUMERO") = Numero
-			p_o_row("VTL_CARTE_NFC") = NFC
         End Sub
 
         ''' <summary>
@@ -1111,9 +1302,6 @@
             End If
             If p_o_object.Numero <> Numero Then
                 l_o_dicDiff.Add(VITAL.VTL_CARTE.VTL_CARTE_NUMERO, {p_o_object.Numero,Numero})
-            End If
-            If p_o_object.NFC <> NFC Then
-                l_o_dicDiff.Add(VITAL.VTL_CARTE.VTL_CARTE_NFC, {p_o_object.NFC,NFC})
             End If
             Return l_o_dicDiff
         End Function
@@ -3269,6 +3457,318 @@
             End If
             If p_o_object.Nom <> Nom Then
                 l_o_dicDiff.Add(VITAL.VTL_RACE.VTL_RACE_NOM, {p_o_object.Nom,Nom})
+            End If
+            Return l_o_dicDiff
+        End Function
+
+#End Region
+
+    End Class
+
+#End Region
+
+#Region "Remboursement - Remboursement"
+
+    ''' <summary>
+    ''' Remboursement.
+    ''' </summary>
+    <Serializable()> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public MustInherit Class Remboursement(Of T As {VITAL.Remboursement, New})
+        Inherits VITAL.Schema
+
+
+#Region "Variables privées"
+
+        ''' <summary>
+        ''' Indique s'il y a eu des changements sur l'objet ou non
+        ''' </summary>
+        Private m_b_changes As Boolean = False
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+		Private m_i_iD As Integer
+
+        ''' <summary>
+        ''' Name.
+        ''' </summary>
+		Private m_s_name As String
+
+        ''' <summary>
+        ''' Date.
+        ''' </summary>
+		Private m_dt_date As DateTime
+
+        ''' <summary>
+        ''' Statut.
+        ''' </summary>
+		Private m_s_statut As String
+
+        ''' <summary>
+        ''' Consult.
+        ''' </summary>
+		Private m_i_consult As Integer
+
+        ''' <summary>
+        ''' Contrat.
+        ''' </summary>
+		Private m_i_contrat As Integer
+
+#End Region
+
+#Region "Propriétés publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a subi des modifications ou non
+        ''' </summary>
+        ''' <value>
+        '''
+        ''' </value>
+        Public Property HasChanges As Boolean
+            Get
+                Return m_b_changes
+            End Get
+            Set(value As Boolean)
+                m_b_changes = value
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' ID.
+        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_ID.
+        ''' </summary>
+        ''' <value>
+        ''' ID.
+        ''' </value>
+		Public Overridable ReadOnly Property ID As Integer
+            Get
+				Return m_i_iD
+            End Get
+        End Property
+
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Protected Sub SetAutoId(p_i_id As Integer)
+            m_i_iD = p_i_id
+        End Sub
+
+        ''' <summary>
+        ''' Name.
+        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_NAME.
+        ''' </summary>
+        ''' <value>
+        ''' Name.
+        ''' </value>
+		Public Overridable Property Name As String
+            Get
+				Return m_s_name
+            End Get
+			Set(value As String)
+                If m_s_name <> value Then
+                    m_s_name = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Date.
+        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_DATE.
+        ''' </summary>
+        ''' <value>
+        ''' Date.
+        ''' </value>
+		Public Overridable Property [Date] As DateTime
+            Get
+				Return m_dt_date
+            End Get
+			Set(value As DateTime)
+                If m_dt_date <> value Then
+                    m_dt_date = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Statut.
+        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT.
+        ''' </summary>
+        ''' <value>
+        ''' Statut.
+        ''' </value>
+		Public Overridable Property Statut As String
+            Get
+				Return m_s_statut
+            End Get
+			Set(value As String)
+                If m_s_statut <> value Then
+                    m_s_statut = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Consult.
+        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_CONSULT.
+        ''' </summary>
+        ''' <value>
+        ''' Consult.
+        ''' </value>
+		Public Overridable Property Consult As Integer
+            Get
+				Return m_i_consult
+            End Get
+			Set(value As Integer)
+                If m_i_consult <> value Then
+                    m_i_consult = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Contrat.
+        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_CONTRAT.
+        ''' </summary>
+        ''' <value>
+        ''' Contrat.
+        ''' </value>
+		Public Overridable Property Contrat As Integer
+            Get
+				Return m_i_contrat
+            End Get
+			Set(value As Integer)
+                If m_i_contrat <> value Then
+                    m_i_contrat = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+#End Region
+
+#Region "Constantes publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a un historique ou non
+        ''' </summary>
+        Public Const HasHisto As Boolean = False
+
+        ''' <summary>
+        ''' Indique si l'objet utilise le cache ou non
+        ''' </summary>
+        Public Const HasCache As Boolean = False
+
+        ''' <summary>
+        ''' Nom de la table associée à la classe.
+        ''' </summary>
+        <Obsolete("Veuillez utiliser la classe 'Tables'.")>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Public Const TableName As String = Tables.VTL_REMBOURSMT
+
+#End Region
+
+#Region "Méthodes publiques"
+
+        ''' <summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Function CloneAsNew(Optional p_b_includeKeyValues As Boolean = False) As T
+            Dim l_o_target As New T()
+
+            ' Copie des propriétés et retour
+            Return CopyTo(l_o_target, p_b_includeKeyValues)
+        End Function
+
+        ''' <summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Overridable Function CopyTo(p_o_target As T, Optional p_b_includeKeyValues As Boolean = False) As T
+
+            ' Vérification des paramètres.
+            If (p_o_target Is Nothing) Then
+                Throw New ArgumentNullException("p_o_target")
+            End If
+
+            ' Copie des valeurs des clés primaires
+            If p_b_includeKeyValues Then
+                ' Column : m_i_iD
+                p_o_target.m_i_iD = m_i_iD
+            End If
+            p_o_target.m_i_iD = m_i_iD
+            ' Colonne : m_s_name
+            p_o_target.m_s_name = m_s_name
+            ' Colonne : m_dt_date
+            p_o_target.m_dt_date = m_dt_date
+            ' Colonne : m_s_statut
+            p_o_target.m_s_statut = m_s_statut
+            ' Colonne : m_i_consult
+            p_o_target.m_i_consult = m_i_consult
+            ' Colonne : m_i_contrat
+            p_o_target.m_i_contrat = m_i_contrat
+
+            ' Retour de l'objet cible pour appel en chaine
+            Return p_o_target
+        End Function
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub Load(p_o_row As DataRow)
+            If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
+			m_i_iD = CInt(p_o_row!VTL_REMBOURSMT_ID)
+			m_s_name = CStr(p_o_row!VTL_REMBOURSMT_NAME)
+			m_dt_date = CDate(p_o_row!VTL_REMBOURSMT_DATE)
+			m_s_statut = NzStr(p_o_row!VTL_REMBOURSMT_STATUT)
+			m_i_consult = NzInt(p_o_row!VTL_REMBOURSMT_CONSULT, 0)
+			m_i_contrat = NzInt(p_o_row!VTL_REMBOURSMT_CONTRAT, 0)
+            HasChanges = False
+        End Sub
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub ToRow(p_o_row As DataRow)
+			p_o_row("VTL_REMBOURSMT_ID") = ID
+			p_o_row("VTL_REMBOURSMT_NAME") = Name
+			p_o_row("VTL_REMBOURSMT_DATE") = [Date]
+			p_o_row("VTL_REMBOURSMT_STATUT") = Statut
+			p_o_row("VTL_REMBOURSMT_CONSULT") = Consult
+			p_o_row("VTL_REMBOURSMT_CONTRAT") = Contrat
+        End Sub
+
+        ''' <summary>
+        ''' Permet de détecter toutes les différences entre 2 objets
+        ''' </summary>
+        ''' <param name="p_o_object">Objet de la classe Remboursement.</param>
+        Public Function Diff(p_o_object As Remboursement(Of T)) As Dictionary(Of String, Object())
+            Dim l_o_dicDiff As New Dictionary(Of String, Object())
+
+            If p_o_object.ID <> ID Then
+                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_ID, {p_o_object.ID,ID})
+            End If
+            If p_o_object.Name <> Name Then
+                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_NAME, {p_o_object.Name,Name})
+            End If
+            If p_o_object.[Date] <> [Date] Then
+                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_DATE, {p_o_object.[Date],[Date]})
+            End If
+            If p_o_object.Statut <> Statut Then
+                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT, {p_o_object.Statut,Statut})
+            End If
+            If p_o_object.Consult <> Consult Then
+                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_CONSULT, {p_o_object.Consult,Consult})
+            End If
+            If p_o_object.Contrat <> Contrat Then
+                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_CONTRAT, {p_o_object.Contrat,Contrat})
             End If
             Return l_o_dicDiff
         End Function

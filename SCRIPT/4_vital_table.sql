@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 24/05/2017                                     */
+/* Historique  : Creation le 25/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -49,8 +49,7 @@ CREATE TABLE VTL_ANIMAL (
 	VTL_ANIMAL_DT_DECES DATE,
 	VTL_ANIMAL_ID_RACE INT,
 	VTL_ANIMAL_ID_CARTE INT,
-	VTL_ANIMAL_ID_TYPE INT,
-	VTL_ANIMAL_ID_PROP INT
+	VTL_ANIMAL_ID_TYPE INT
 )
 GO
 
@@ -72,8 +71,6 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_carte', @le
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_type', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_TYPE'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_prop', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_PROP'
-GO
 
 
 -- "Creation de la table VTL_ASSURANCE"
@@ -94,11 +91,31 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Siret', @level
 GO
 
 
+-- "Creation de la table VTL_ATTACHEMT"
+CREATE TABLE VTL_ATTACHEMT (
+	VTL_ATTACHEMT_ID INT IDENTITY(1,1) NOT NULL,
+	VTL_ATTACHEMT_NAME NVARCHAR(50) NOT NULL,
+	VTL_ATTACHEMT_CHEMIN NVARCHAR(100) NOT NULL,
+	VTL_ATTACHEMT_CONSULT INT NOT NULL
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Attachement', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT', @level2type=N'COLUMN',@level2name=N'VTL_ATTACHEMT_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Name', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT', @level2type=N'COLUMN',@level2name=N'VTL_ATTACHEMT_NAME'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Chemin', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT', @level2type=N'COLUMN',@level2name=N'VTL_ATTACHEMT_CHEMIN'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Consult', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ATTACHEMT', @level2type=N'COLUMN',@level2name=N'VTL_ATTACHEMT_CONSULT'
+GO
+
+
 -- "Creation de la table VTL_CARTE"
 CREATE TABLE VTL_CARTE (
 	VTL_CARTE_ID INT IDENTITY(1,1) NOT NULL,
-	VTL_CARTE_NUMERO NVARCHAR(50) NOT NULL,
-	VTL_CARTE_NFC NVARCHAR(255)
+	VTL_CARTE_NUMERO NVARCHAR(50) NOT NULL
 )
 GO
 
@@ -107,8 +124,6 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_ID'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Numero', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_NUMERO'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'NFC', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_NFC'
 GO
 
 
@@ -292,6 +307,33 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_RACE', @level2type=N'COLUMN',@level2name=N'VTL_RACE_ID'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_RACE', @level2type=N'COLUMN',@level2name=N'VTL_RACE_NOM'
+GO
+
+
+-- "Creation de la table VTL_REMBOURSMT"
+CREATE TABLE VTL_REMBOURSMT (
+	VTL_REMBOURSMT_ID INT IDENTITY(1,1) NOT NULL,
+	VTL_REMBOURSMT_NAME NVARCHAR(50) NOT NULL,
+	VTL_REMBOURSMT_DATE DATETIME2(0) NOT NULL,
+	VTL_REMBOURSMT_STATUT NVARCHAR(50),
+	VTL_REMBOURSMT_CONSULT INT,
+	VTL_REMBOURSMT_CONTRAT INT
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Remboursement', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Name', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_NAME'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Date', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_DATE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Statut', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_STATUT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Consult', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_CONSULT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Contrat', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_CONTRAT'
 GO
 
 

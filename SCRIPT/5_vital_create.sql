@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des objets                                        */
-/* Historique  : Creation le 24/05/2017                                     */
+/* Historique  : Creation le 25/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -29,6 +29,11 @@ GO
 -- "Creation de la clef primaire de la table VTL_ASSURANCE"
 ALTER TABLE VTL_ASSURANCE
 ADD CONSTRAINT VTL_ASSURANCE_PK PRIMARY KEY (VTL_ASSURANCE_ID)
+GO
+
+-- "Creation de la clef primaire de la table VTL_ATTACHEMT"
+ALTER TABLE VTL_ATTACHEMT
+ADD CONSTRAINT VTL_ATTACHEMT_PK PRIMARY KEY (VTL_ATTACHEMT_ID)
 GO
 
 -- "Creation de la clef primaire de la table VTL_CARTE"
@@ -74,6 +79,11 @@ GO
 -- "Creation de la clef primaire de la table VTL_RACE"
 ALTER TABLE VTL_RACE
 ADD CONSTRAINT VTL_RACE_PK PRIMARY KEY (VTL_RACE_ID)
+GO
+
+-- "Creation de la clef primaire de la table VTL_REMBOURSMT"
+ALTER TABLE VTL_REMBOURSMT
+ADD CONSTRAINT VTL_REMBOURSMT_PK PRIMARY KEY (VTL_REMBOURSMT_ID)
 GO
 
 -- "Creation de la clef primaire de la table VTL_TRAITEMENT_MEDICAMENT"
@@ -145,10 +155,10 @@ ADD CONSTRAINT VTL_ANIMAL_ID_TYPE_VTL_TYPE_FK FOREIGN KEY (VTL_ANIMAL_ID_TYPE)
 	REFERENCES VTL_TYPE(VTL_TYPE_ID);
 GO
 
--- "Creation de la clef etrangere de la table VTL_ANIMAL vers la table VTL_USER"
-ALTER TABLE VTL_ANIMAL
-ADD CONSTRAINT VTL_ANIMAL_ID_PROP_VTL_USER_FK FOREIGN KEY (VTL_ANIMAL_ID_PROP)
-	REFERENCES VTL_USER(VTL_USER_ID);
+-- "Creation de la clef etrangere de la table VTL_ATTACHEMT vers la table VTL_CONSULTATION"
+ALTER TABLE VTL_ATTACHEMT
+ADD CONSTRAINT VTL_ATTACHEMT_CONSULT_VTL_CONSULTATION_FK FOREIGN KEY (VTL_ATTACHEMT_CONSULT)
+	REFERENCES VTL_CONSULTATION(VTL_CONSULTATION_ID);
 GO
 
 -- "Creation de la clef etrangere de la table VTL_CONSULTATION vers la table VTL_VETERINAIRE"
@@ -203,6 +213,18 @@ GO
 ALTER TABLE VTL_POSITION
 ADD CONSTRAINT VTL_POSITION_ID_ANIMAL_VTL_ANIMAL_FK FOREIGN KEY (VTL_POSITION_ID_ANIMAL)
 	REFERENCES VTL_ANIMAL(VTL_ANIMAL_ID);
+GO
+
+-- "Creation de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_CONSULTATION"
+ALTER TABLE VTL_REMBOURSMT
+ADD CONSTRAINT VTL_REMBOURSMT_CONSULT_VTL_CONSULTATION_FK FOREIGN KEY (VTL_REMBOURSMT_CONSULT)
+	REFERENCES VTL_CONSULTATION(VTL_CONSULTATION_ID);
+GO
+
+-- "Creation de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_CONTRAT"
+ALTER TABLE VTL_REMBOURSMT
+ADD CONSTRAINT VTL_REMBOURSMT_CONTRAT_VTL_CONTRAT_FK FOREIGN KEY (VTL_REMBOURSMT_CONTRAT)
+	REFERENCES VTL_CONTRAT(VTL_CONTRAT_ID);
 GO
 
 -- "Creation de la clef etrangere de la table VTL_TRAITEMENT_MEDICAMENT vers la table VTL_TRAITREMENT"

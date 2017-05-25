@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Suppression des objets existants                           */
-/* Historique  : Creation le 24/05/2017                                     */
+/* Historique  : Creation le 25/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -34,6 +34,14 @@ GO
 -- "Suppression de la clef etrangere de la table VTL_TRAITEMENT_MEDICAMENT vers la table VTL_TRAITREMENT"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT_VTL_TRAITREMENT_FK' AND type in (N'F'))
 ALTER TABLE VTL_TRAITEMENT_MEDICAMENT DROP CONSTRAINT VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT_VTL_TRAITREMENT_FK;
+GO
+-- "Suppression de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_CONTRAT"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT_CONTRAT_VTL_CONTRAT_FK' AND type in (N'F'))
+ALTER TABLE VTL_REMBOURSMT DROP CONSTRAINT VTL_REMBOURSMT_CONTRAT_VTL_CONTRAT_FK;
+GO
+-- "Suppression de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_CONSULTATION"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT_CONSULT_VTL_CONSULTATION_FK' AND type in (N'F'))
+ALTER TABLE VTL_REMBOURSMT DROP CONSTRAINT VTL_REMBOURSMT_CONSULT_VTL_CONSULTATION_FK;
 GO
 -- "Suppression de la clef etrangere de la table VTL_POSITION vers la table VTL_ANIMAL"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_POSITION_ID_ANIMAL_VTL_ANIMAL_FK' AND type in (N'F'))
@@ -71,9 +79,9 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CONSULTATION_ID_VETERINAIRE_VTL_VETERINAIRE_FK' AND type in (N'F'))
 ALTER TABLE VTL_CONSULTATION DROP CONSTRAINT VTL_CONSULTATION_ID_VETERINAIRE_VTL_VETERINAIRE_FK;
 GO
--- "Suppression de la clef etrangere de la table VTL_ANIMAL vers la table VTL_USER"
-IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ANIMAL_ID_PROP_VTL_USER_FK' AND type in (N'F'))
-ALTER TABLE VTL_ANIMAL DROP CONSTRAINT VTL_ANIMAL_ID_PROP_VTL_USER_FK;
+-- "Suppression de la clef etrangere de la table VTL_ATTACHEMT vers la table VTL_CONSULTATION"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ATTACHEMT_CONSULT_VTL_CONSULTATION_FK' AND type in (N'F'))
+ALTER TABLE VTL_ATTACHEMT DROP CONSTRAINT VTL_ATTACHEMT_CONSULT_VTL_CONSULTATION_FK;
 GO
 -- "Suppression de la clef etrangere de la table VTL_ANIMAL vers la table VTL_TYPE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ANIMAL_ID_TYPE_VTL_TYPE_FK' AND type in (N'F'))
@@ -152,6 +160,14 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_TRAITEMENT_MEDICAMENT_HISTO_PK' AND type in (N'PK'))
 ALTER TABLE VTL_TRAITEMENT_MEDICAMENT_HISTO DROP CONSTRAINT VTL_TRAITEMENT_MEDICAMENT_HISTO_PK;
 GO
+-- "Suppression de la clef primaire de la table VTL_REMBOURSMT"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT_PK' AND type in (N'PK'))
+ALTER TABLE VTL_REMBOURSMT DROP CONSTRAINT VTL_REMBOURSMT_PK;
+GO
+-- "Suppression de la clef primaire de la table VTL_REMBOURSMT_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT_HISTO_PK' AND type in (N'PK'))
+ALTER TABLE VTL_REMBOURSMT_HISTO DROP CONSTRAINT VTL_REMBOURSMT_HISTO_PK;
+GO
 -- "Suppression de la clef primaire de la table VTL_RACE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_RACE_PK' AND type in (N'PK'))
 ALTER TABLE VTL_RACE DROP CONSTRAINT VTL_RACE_PK;
@@ -223,6 +239,14 @@ GO
 -- "Suppression de la clef primaire de la table VTL_CARTE_HISTO"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CARTE_HISTO_PK' AND type in (N'PK'))
 ALTER TABLE VTL_CARTE_HISTO DROP CONSTRAINT VTL_CARTE_HISTO_PK;
+GO
+-- "Suppression de la clef primaire de la table VTL_ATTACHEMT"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ATTACHEMT_PK' AND type in (N'PK'))
+ALTER TABLE VTL_ATTACHEMT DROP CONSTRAINT VTL_ATTACHEMT_PK;
+GO
+-- "Suppression de la clef primaire de la table VTL_ATTACHEMT_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ATTACHEMT_HISTO_PK' AND type in (N'PK'))
+ALTER TABLE VTL_ATTACHEMT_HISTO DROP CONSTRAINT VTL_ATTACHEMT_HISTO_PK;
 GO
 -- "Suppression de la clef primaire de la table VTL_ASSURANCE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ASSURANCE_PK' AND type in (N'PK'))
@@ -305,6 +329,14 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_TRAITEMENT_MEDICAMENT_HISTO' AND type in (N'U'))
 DROP TABLE VTL_TRAITEMENT_MEDICAMENT_HISTO;
 GO
+-- "Suppression de la table VTL_REMBOURSMT"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT' AND type in (N'U'))
+DROP TABLE VTL_REMBOURSMT;
+GO
+-- "Suppression de la table VTL_REMBOURSMT_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT_HISTO' AND type in (N'U'))
+DROP TABLE VTL_REMBOURSMT_HISTO;
+GO
 -- "Suppression de la table VTL_RACE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_RACE' AND type in (N'U'))
 DROP TABLE VTL_RACE;
@@ -376,6 +408,14 @@ GO
 -- "Suppression de la table VTL_CARTE_HISTO"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CARTE_HISTO' AND type in (N'U'))
 DROP TABLE VTL_CARTE_HISTO;
+GO
+-- "Suppression de la table VTL_ATTACHEMT"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ATTACHEMT' AND type in (N'U'))
+DROP TABLE VTL_ATTACHEMT;
+GO
+-- "Suppression de la table VTL_ATTACHEMT_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ATTACHEMT_HISTO' AND type in (N'U'))
+DROP TABLE VTL_ATTACHEMT_HISTO;
 GO
 -- "Suppression de la table VTL_ASSURANCE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ASSURANCE' AND type in (N'U'))

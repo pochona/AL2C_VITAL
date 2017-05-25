@@ -77,8 +77,10 @@ Public Class MainApplication
                 .AddSubAdminTable("PROPRIETAIRE", Tables.VTL_PROPRIETAIRE)
                 .AddSubAdminTable("RACE", Tables.VTL_RACE)
                 .AddSubAdminTable("TRAITEMENT_MEDICAMENT", Tables.VTL_TRAITEMENT_MEDICAMENT)
-                .AddSubAdminTable("TRAITREMENT", Tables.VTL_TRAITREMENT)
+                .AddSubAdminTable("TRAITEMENT", Tables.VTL_TRAITREMENT)
                 .AddSubAdminTable("TYPE", Tables.VTL_TYPE)
+                .AddSubAdminTable("REMBOURSEMENT", Tables.VTL_REMBOURSMT)
+                .AddSubAdminTable("ATTACHEMENT", Tables.VTL_ATTACHEMT)
             End If
             If UserIsInRole("Veto") Or UserIsInRole("Admin") Then
                 .Add("Veto", "~/Pages/AccueilVeto.aspx")

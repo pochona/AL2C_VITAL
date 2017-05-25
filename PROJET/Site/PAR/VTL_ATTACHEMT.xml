@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Attachement</title>
+	<description>Attachement</description>
+	<columns>
+		<col DataField="VTL_ATTACHEMT_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_ATTACHEMT_NAME" Type="Text" Unique="false" HeaderText="Name" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_ATTACHEMT_CHEMIN" Type="Text" Unique="false" HeaderText="Chemin" NotNull="true" MaxLen="100" />
+		<col DataField="VTL_ATTACHEMT_CONSULT" Type="Numeric" HeaderText="Consult" NotNull="true">
+			<source Table="VTL_CONSULTATION" TableAlias="T1" KeyField="VTL_CONSULTATION_ID" LibField="VTL_CONSULTATION_COMMENTAIRE" LibAlias="F1" Unique="false" />
+		</col>
+	</columns>
+</table>
