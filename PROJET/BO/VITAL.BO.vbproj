@@ -64,6 +64,7 @@
     <Compile Include="Classes\Adopter.vb" />
     <Compile Include="Classes\Animal.vb" />
     <Compile Include="Classes\Assurance.vb" />
+    <Compile Include="Classes\Attachement.vb" />
     <Compile Include="Classes\Auto\VITAL.Auto.vb" />
     <Compile Include="Classes\Auto\VITAL.Raw.vb" />
     <Compile Include="Classes\Auto\VITAL.vb" />
@@ -76,6 +77,7 @@
     <Compile Include="Classes\Position.vb" />
     <Compile Include="Classes\PropriEtaire.vb" />
     <Compile Include="Classes\Race.vb" />
+    <Compile Include="Classes\Remboursement.vb" />
     <Compile Include="Classes\Traitement_medicament.vb" />
     <Compile Include="Classes\Traitrement.vb" />
     <Compile Include="Classes\Type.vb" />

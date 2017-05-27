@@ -120,6 +120,7 @@
     <Content Include="PAR\VTL_ADOPTER.xml" />
     <Content Include="PAR\VTL_ANIMAL.xml" />
     <Content Include="PAR\VTL_ASSURANCE.xml" />
+    <Content Include="PAR\VTL_ATTACHEMT.xml" />
     <Content Include="PAR\VTL_CARTE.xml" />
     <Content Include="PAR\VTL_CONSULTATION.xml" />
     <Content Include="PAR\VTL_CONTRAT.xml" />
@@ -129,6 +130,7 @@
     <Content Include="PAR\VTL_POSITION.xml" />
     <Content Include="PAR\VTL_PROPRIETAIRE.xml" />
     <Content Include="PAR\VTL_RACE.xml" />
+    <Content Include="PAR\VTL_REMBOURSMT.xml" />
     <Content Include="PAR\VTL_TRAITEMENT_MEDICAMENT.xml" />
     <Content Include="PAR\VTL_TRAITREMENT.xml" />
     <Content Include="PAR\VTL_TYPE.xml" />
