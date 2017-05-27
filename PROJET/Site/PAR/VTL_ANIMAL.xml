@@ -17,5 +17,8 @@
 		<col DataField="VTL_ANIMAL_ID_TYPE" Type="Numeric" HeaderText="Id_type">
 			<source Table="VTL_TYPE" TableAlias="T3" KeyField="VTL_TYPE_ID" LibField="VTL_TYPE_LIBELLE" LibAlias="F3" Unique="false" />
 		</col>
+		<col DataField="VTL_ANIMAL_ID_PROP" Type="Numeric" HeaderText="Id_prop">
+			<source Table="VTL_USER" TableAlias="T4" KeyField="VTL_USER_ID" LibField="VTL_USER_LOGIN" LibAlias="F4" Unique="false" />
+		</col>
 	</columns>
 </table>

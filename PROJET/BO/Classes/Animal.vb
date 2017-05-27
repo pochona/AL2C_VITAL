@@ -83,6 +83,30 @@
             Return l_o_sql
         End Function
 
+        ''' <summary>
+        ''' Retourne nb d'animaux d'un prop.
+        ''' </summary>
+        ''' <param name="p_s_logProp"></param>
+        ''' <returns>Nb d'animaux d'un prop.</returns>
+        Public Shared Function GetNbAnimaux(p_s_logProp As String) As Integer
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+
+                .AddSelect("COUNT(" + VTL_ANIMAL.VTL_ANIMAL_ID + ")", "NBANIMX")
+                .AddFrom(Tables.VTL_ANIMAL)
+                .AddFrom(Tables.VTL_USER, DbJoin.Right, Tables.VTL_ANIMAL, VTL_USER.VTL_USER_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+
+                .AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_logProp)
+                If Not .GetFirstRow Is Nothing Then
+                    Return CInt((.GetFirstValue))
+                Else
+                    Return 0
+                End If
+            End With
+        End Function
+
 #End Region
     End Class
 

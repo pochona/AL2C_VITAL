@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des objets                                        */
-/* Historique  : Creation le 25/05/2017                                     */
+/* Historique  : Creation le 27/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -153,6 +153,12 @@ GO
 ALTER TABLE VTL_ANIMAL
 ADD CONSTRAINT VTL_ANIMAL_ID_TYPE_VTL_TYPE_FK FOREIGN KEY (VTL_ANIMAL_ID_TYPE)
 	REFERENCES VTL_TYPE(VTL_TYPE_ID);
+GO
+
+-- "Creation de la clef etrangere de la table VTL_ANIMAL vers la table VTL_USER"
+ALTER TABLE VTL_ANIMAL
+ADD CONSTRAINT VTL_ANIMAL_ID_PROP_VTL_USER_FK FOREIGN KEY (VTL_ANIMAL_ID_PROP)
+	REFERENCES VTL_USER(VTL_USER_ID);
 GO
 
 -- "Creation de la clef etrangere de la table VTL_ATTACHEMT vers la table VTL_CONSULTATION"

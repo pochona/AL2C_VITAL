@@ -422,6 +422,7 @@ Namespace VITAL.Auto
             l_o_qry.AddValue(VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_RACE, NullIfValue(Id_race, 0))
             l_o_qry.AddValue(VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_CARTE, NullIfValue(Id_carte, 0))
             l_o_qry.AddValue(VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_TYPE, NullIfValue(Id_type, 0))
+            l_o_qry.AddValue(VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_PROP, NullIfValue(Id_prop, 0))
             If l_o_qry.ExecuteSave(Tables.VTL_ANIMAL, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))
@@ -1268,6 +1269,7 @@ Namespace VITAL.Auto
                 l_o_qry.AddTypedKey(VITAL.VTL_CARTE.VTL_CARTE_ID, ID)
             End If
             l_o_qry.AddValue(VITAL.VTL_CARTE.VTL_CARTE_NUMERO, TextSQL(Numero))
+            l_o_qry.AddValue(VITAL.VTL_CARTE.VTL_CARTE_NFC, TextSQL(Nfc))
             If l_o_qry.ExecuteSave(Tables.VTL_CARTE, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))

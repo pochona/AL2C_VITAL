@@ -225,6 +225,11 @@
         ''' </summary>
         Public Const VTL_ANIMAL_ID_TYPE As String = "VTL_ANIMAL_ID_TYPE"
 
+        ''' <summary>
+        ''' Id_prop.
+        ''' </summary>
+        Public Const VTL_ANIMAL_ID_PROP As String = "VTL_ANIMAL_ID_PROP"
+
     End Class
 
 #End Region
@@ -330,6 +335,16 @@
         ''' Numero (Maxlen).
         ''' </summary>
         Public Const VTL_CARTE_NUMERO_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Nfc.
+        ''' </summary>
+        Public Const VTL_CARTE_NFC As String = "VTL_CARTE_NFC"
+
+        ''' <summary>
+        ''' Nfc (Maxlen).
+        ''' </summary>
+        Public Const VTL_CARTE_NFC_MAXLEN As Integer = 255
 
     End Class
 

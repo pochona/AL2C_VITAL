@@ -110,7 +110,9 @@
     <Content Include="Pages\Exemple.aspx" />
     <Content Include="Pages\HistoriquePoids.aspx" />
     <Content Include="Pages\histo_consultation.aspx" />
-    <Content Include="Pages\Mutuelle\ConsulterContrat.aspx" />
+    <Content Include="Pages\Mutuelle\AjoutContratClient.aspx" />
+    <Content Include="Pages\Mutuelle\ConsultationContratClient.aspx" />
+    <Content Include="Pages\Mutuelle\PopUpContrat.aspx" />
     <Content Include="Pages\Proprio\AnimalGeneral.aspx" />
     <Content Include="Pages\Proprio\Documents.aspx" />
     <Content Include="Pages\Proprio\HistoConsul.aspx" />
@@ -198,11 +200,25 @@
       <DependentUpon>histo_consultation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Mutuelle\ConsulterContrat.aspx.designer.vb">
-      <DependentUpon>ConsulterContrat.aspx</DependentUpon>
+    <Compile Include="Pages\Mutuelle\AjoutContratClient.aspx.designer.vb">
+      <DependentUpon>AjoutContratClient.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Mutuelle\ConsulterContrat.aspx.vb">
-      <DependentUpon>ConsulterContrat.aspx</DependentUpon>
+    <Compile Include="Pages\Mutuelle\AjoutContratClient.aspx.vb">
+      <DependentUpon>AjoutContratClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\ConsultationContratClient.aspx.designer.vb">
+      <DependentUpon>ConsultationContratClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\ConsultationContratClient.aspx.vb">
+      <DependentUpon>ConsultationContratClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\PopUpContrat.aspx.designer.vb">
+      <DependentUpon>PopUpContrat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\PopUpContrat.aspx.vb">
+      <DependentUpon>PopUpContrat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Proprio\AnimalGeneral.aspx.designer.vb">

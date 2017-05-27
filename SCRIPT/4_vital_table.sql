@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 25/05/2017                                     */
+/* Historique  : Creation le 27/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -49,7 +49,8 @@ CREATE TABLE VTL_ANIMAL (
 	VTL_ANIMAL_DT_DECES DATE,
 	VTL_ANIMAL_ID_RACE INT,
 	VTL_ANIMAL_ID_CARTE INT,
-	VTL_ANIMAL_ID_TYPE INT
+	VTL_ANIMAL_ID_TYPE INT,
+	VTL_ANIMAL_ID_PROP INT
 )
 GO
 
@@ -70,6 +71,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_carte', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_CARTE'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_type', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_TYPE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_prop', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_PROP'
 GO
 
 
@@ -115,7 +118,10 @@ GO
 -- "Creation de la table VTL_CARTE"
 CREATE TABLE VTL_CARTE (
 	VTL_CARTE_ID INT IDENTITY(1,1) NOT NULL,
-	VTL_CARTE_NUMERO NVARCHAR(50) NOT NULL
+	VTL_CARTE_NUMERO NVARCHAR(50) NOT NULL,
+	VTL_CARTE_NFC NVARCHAR(255)
+  CONSTRAINT VTL_CARTE_NUMERO_CK UNIQUE (VTL_CARTE_NUMERO)
+  CONSTRAINT VTL_CARTE_NFC_CK UNIQUE (VTL_CARTE_NFC)
 )
 GO
 
@@ -124,6 +130,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_ID'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Numero', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_NUMERO'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nfc', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_NFC'
 GO
 
 
@@ -400,6 +408,7 @@ CREATE TABLE VTL_USER (
 	VTL_USER_LOGIN NVARCHAR(50) NOT NULL,
 	VTL_USER_MDP NVARCHAR(50) NOT NULL,
 	VTL_USER_ROLE NVARCHAR(50) NOT NULL
+  CONSTRAINT VTL_USER_LOGIN_CK UNIQUE (VTL_USER_LOGIN)
 )
 GO
 

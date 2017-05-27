@@ -46,6 +46,11 @@ Partial Public Class PageAccueilProprietaire
         With dtgAnimx
             .DataKeyField = VTL_ANIMAL.VTL_ANIMAL_ID
 
+            With .AddButtonColumn()
+                .Width = Unit.Pixel(65) ' fixe la taille de la colonne
+                .DataNavigateUrlFormatString = "~/Pages/Proprio/AnimalGeneral.aspx?ID={0}"
+                .DataNavigateUrlField = VTL_ANIMAL.VTL_ANIMAL_ID
+            End With
             With .AddColumn("Nom", VTL_ANIMAL.VTL_ANIMAL_NOM)
                 m_i_nom = .ColumnIndex
             End With

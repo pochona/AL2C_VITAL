@@ -90,24 +90,33 @@ Public Class MainApplication
                 .Add("Mutuelle", "~/Pages/AccueilMutuelle.aspx")
             End If
             If UserIsInRole("Proprietaire") Or UserIsInRole("Admin") Then
-                .Add("NomAnimal", "~/Pages/Proprio/Animal.aspx")
-                .AddSub("Informations")
-                .AddSubSub("Générales", "~/Pages/Proprio/AnimalGeneral.aspx")
-                .AddSubSub("Suivi du poids", "~/Pages/Proprio/SuiviPoids.aspx")
-                .AddSubSub("Historique vaccins et traitements", "~/Pages/Proprio/HistoVaccinTraitemt.aspx")
-                .AddSubSub("Historique consultations", "~/Pages/Proprio/HistoConsul.aspx")
-                .AddSubSub("Documents", "~/Pages/Proprio/Documents.aspx")
-                .AddSubSub("Générales", "")
-                .AddSubSub("Générales", "")
-                .AddSubSub("Générales", "")
-                .AddSub("Mes remboursements", "")
-                .AddSub("Mon contrat", "")
-                .AddSubSub("Mes droits", "")
-                .AddSubSub("Mon espace", "")
-                .AddSub("Localisation", "")
-                .AddSub("Infos pratiques", "")
-                .AddSub("Contact", "")
-                .AddSub("Informations", "")
+                ' Chargement des animaux
+                Dim l_o_animal As Animal
+                ' S'il a des animaux 
+                If Animal.GetNbAnimaux(UserLogin()) <> 0 Then
+                    'Pour chaqun d'entre eux
+                    For Each l_o_row As DataRow In Animal.GetAnimauxProprio(UserLogin()).GetDT.Rows
+                        l_o_animal = New Animal
+                        l_o_animal.Load(NzInt(l_o_row(VTL_ANIMAL.VTL_ANIMAL_ID)))
+                        '         .AddSubSub("Générales", "~/Pages/Proprio/AnimalGeneral.aspx?ID=" & l_o_animal.ID & "&DemID=" & XX)
+
+                        .Add(l_o_animal.Nom)
+                        .AddSub("Informations")
+                        .AddSubSub("Générales", "~/Pages/Proprio/AnimalGeneral.aspx?ID=" & l_o_animal.ID)
+                        .AddSubSub("Suivi du poids", "~/Pages/Proprio/SuiviPoids.aspx?ID=" & l_o_animal.ID)
+                        .AddSubSub("Historique vaccins et traitements", "~/Pages/Proprio/HistoVaccinTraitemt.aspx?ID=" & l_o_animal.ID)
+                        .AddSubSub("Historique consultations", "~/Pages/Proprio/HistoConsul.aspx?ID=" & l_o_animal.ID)
+                        .AddSubSub("Documents", "~/Pages/Proprio/Documents.aspx?ID=" & l_o_animal.ID)
+                        .AddSub("Mes remboursements", "")
+                        .AddSub("Mon contrat", "")
+                        .AddSubSub("Mes droits", "")
+                        .AddSubSub("Mon espace", "")
+                        .AddSub("Localisation", "")
+                        .AddSub("Infos pratiques", "")
+                        .AddSub("Contact", "")
+                    Next
+                End If
+                ' Infos du proprio
                 .Add("Mes informations", "~/Pages/Proprio/Informations.aspx")
             End If
 #If DEBUG Then

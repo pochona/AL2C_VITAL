@@ -339,6 +339,11 @@
         ''' </summary>
 		Private m_i_id_type As Integer
 
+        ''' <summary>
+        ''' Id_prop.
+        ''' </summary>
+		Private m_i_id_prop As Integer
+
 #End Region
 
 #Region "Propriétés publiques"
@@ -509,6 +514,25 @@
             End Set
         End Property
 
+        ''' <summary>
+        ''' Id_prop.
+        ''' Champ associé : VTL_ANIMAL.VTL_ANIMAL_ID_PROP.
+        ''' </summary>
+        ''' <value>
+        ''' Id_prop.
+        ''' </value>
+		Public Overridable Property Id_prop As Integer
+            Get
+				Return m_i_id_prop
+            End Get
+			Set(value As Integer)
+                If m_i_id_prop <> value Then
+                    m_i_id_prop = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
 #End Region
 
 #Region "Constantes publiques"
@@ -578,6 +602,8 @@
             p_o_target.m_i_id_carte = m_i_id_carte
             ' Colonne : m_i_id_type
             p_o_target.m_i_id_type = m_i_id_type
+            ' Colonne : m_i_id_prop
+            p_o_target.m_i_id_prop = m_i_id_prop
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -597,6 +623,7 @@
 			m_i_id_race = NzInt(p_o_row!VTL_ANIMAL_ID_RACE, 0)
 			m_i_id_carte = NzInt(p_o_row!VTL_ANIMAL_ID_CARTE, 0)
 			m_i_id_type = NzInt(p_o_row!VTL_ANIMAL_ID_TYPE, 0)
+			m_i_id_prop = NzInt(p_o_row!VTL_ANIMAL_ID_PROP, 0)
             HasChanges = False
         End Sub
 
@@ -613,6 +640,7 @@
 			p_o_row("VTL_ANIMAL_ID_RACE") = Id_race
 			p_o_row("VTL_ANIMAL_ID_CARTE") = Id_carte
 			p_o_row("VTL_ANIMAL_ID_TYPE") = Id_type
+			p_o_row("VTL_ANIMAL_ID_PROP") = Id_prop
         End Sub
 
         ''' <summary>
@@ -645,6 +673,9 @@
             End If
             If p_o_object.Id_type <> Id_type Then
                 l_o_dicDiff.Add(VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_TYPE, {p_o_object.Id_type,Id_type})
+            End If
+            If p_o_object.Id_prop <> Id_prop Then
+                l_o_dicDiff.Add(VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_PROP, {p_o_object.Id_prop,Id_prop})
             End If
             Return l_o_dicDiff
         End Function
@@ -1152,6 +1183,11 @@
         ''' </summary>
 		Private m_s_numero As String
 
+        ''' <summary>
+        ''' Nfc.
+        ''' </summary>
+		Private m_s_nfc As String
+
 #End Region
 
 #Region "Propriétés publiques"
@@ -1203,6 +1239,25 @@
 			Set(value As String)
                 If m_s_numero <> value Then
                     m_s_numero = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Nfc.
+        ''' Champ associé : VTL_CARTE.VTL_CARTE_NFC.
+        ''' </summary>
+        ''' <value>
+        ''' Nfc.
+        ''' </value>
+		Public Overridable Property Nfc As String
+            Get
+				Return m_s_nfc
+            End Get
+			Set(value As String)
+                If m_s_nfc <> value Then
+                    m_s_nfc = value
                     HasChanges = True
                 End If
             End Set
@@ -1265,6 +1320,8 @@
             p_o_target.m_i_iD = m_i_iD
             ' Colonne : m_s_numero
             p_o_target.m_s_numero = m_s_numero
+            ' Colonne : m_s_nfc
+            p_o_target.m_s_nfc = m_s_nfc
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -1278,6 +1335,7 @@
             If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
 			m_i_iD = CInt(p_o_row!VTL_CARTE_ID)
 			m_s_numero = CStr(p_o_row!VTL_CARTE_NUMERO)
+			m_s_nfc = NzStr(p_o_row!VTL_CARTE_NFC)
             HasChanges = False
         End Sub
 
@@ -1288,6 +1346,7 @@
         Public Overridable Sub ToRow(p_o_row As DataRow)
 			p_o_row("VTL_CARTE_ID") = ID
 			p_o_row("VTL_CARTE_NUMERO") = Numero
+			p_o_row("VTL_CARTE_NFC") = Nfc
         End Sub
 
         ''' <summary>
@@ -1302,6 +1361,9 @@
             End If
             If p_o_object.Numero <> Numero Then
                 l_o_dicDiff.Add(VITAL.VTL_CARTE.VTL_CARTE_NUMERO, {p_o_object.Numero,Numero})
+            End If
+            If p_o_object.Nfc <> Nfc Then
+                l_o_dicDiff.Add(VITAL.VTL_CARTE.VTL_CARTE_NFC, {p_o_object.Nfc,Nfc})
             End If
             Return l_o_dicDiff
         End Function

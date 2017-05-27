@@ -6,93 +6,7 @@ VITAL.BO
 </name>
 </assembly>
 <members>
-<member name="M:VITAL.BO.VITAL.Animal.GetThisAnimal">
-	<summary>
- Retourne l'id de l'animal - Accessible depuis 1 objet de la classe : p_o_animal.GetThisAnimal2().
- </summary>
-	<returns>L'id de l'animal - Accessible depuis 1 objet de la classe : p_o_animal.GetThisAnimal2().
- </returns>
-</member><member name="M:VITAL.BO.VITAL.Animal.GetThisAnimal2(System.String)">
-	<summary>
- Retourne l'id de l'animal - Accessible sans objet de la classe : Animal.GetThisAnimal2("Rex").
- </summary>
-	<param name="p_s_name">Nom de l'animal.</param>
-	<returns>L'id de l'animal - Accessible sans objet de la classe : Animal.GetThisAnimal2("Rex").
- </returns>
-</member><member name="M:VITAL.BO.VITAL.Animal.GetAnimauxProprio(System.String)">
-	<summary>
- Retourne la liste des animaux du proprio.
- </summary>
-	<param name="p_s_logginProprio">Login du propriétaire.</param>
-	<returns>La liste des animaux du proprio.</returns>
-</member><member name="T:VITAL.BO.VITAL.Animal">
-	<summary>
- Animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Contrat">
-	<summary>
- Contrat d'assurance.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Carte">
-	<summary>
- Carte vitale.
- </summary>
-</member><member name="M:VITAL.BO.Main.InitDatabases(Corail.Core.DataBaseList)">
-	<summary>
- Vous devez initialiser içi la liste des bases de données accessibles depuis
- l'application
- </summary>
-	<param name="p_o_list">Liste de bases de données</param>
-</member><member name="T:VITAL.BO.VITAL.Position">
-	<summary>
- Position de l'animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Traitrement">
-	<summary>
- Traitrement.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Vaccin">
-	<summary>
- Vaccin.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Consultation">
-	<summary>
- Consultation vétérinaire d'un animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Histo_Taille">
-	<summary>
- Historique de la taille de l'animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Race">
-	<summary>
- Race de l'animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Medicament">
-	<summary>
- Medicament.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.PropriEtaire">
-	<summary>
- Propriétaire.
- </summary>
-</member><member name="P:VITAL.BO.My.Resources.Resources.ResourceManager">
-	<summary>
-  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
-</summary>
-</member><member name="P:VITAL.BO.My.Resources.Resources.Culture">
-	<summary>
-  Remplace la propriété CurrentUICulture du thread actuel pour toutes
-  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
-</summary>
-</member><member name="T:VITAL.BO.My.Resources.Resources">
-	<summary>
-  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
-</summary>
-</member><member name="T:VITAL.BO.VITAL.Assurance">
-	<summary>
- Assurance.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Auto.Adopter.m_b_update">
+<member name="F:VITAL.BO.VITAL.Auto.Adopter.m_b_update">
 	<summary>
  Indique s'il s'agit d'un élément chargé à partir de la base de données.
  </summary>
@@ -430,6 +344,119 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Auto.Assurance">
 	<summary>
  Assurance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Attachement.m_b_update">
+	<summary>
+ Indique s'il s'agit d'un élément chargé à partir de la base de données.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.Attachement.IsNew">
+	<summary>
+ Indique si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregistrement sera mis à jour.
+ </summary>
+	<value>
+		<c>true</c> si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregestement sera mis à jour.
+ </value>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.InitDefaultValues">
+	<summary>
+ Initialization par défaut avec les valeurs définies via Modeler
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.OnInitDefaultValues">
+	<summary> Post-initialisation en fin d'appel du ou des constructeurs de classe. 
+ Permet de surcharger les valeurs par défaut des propriétés.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.GetAll(Corail.Core.Transaction)">
+	<summary>
+ Retourne la requête retournant tous les élements.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+	<returns>Tous les éléments</returns>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.FindDR(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Retourne la ligne de données correspondant à l'enregistrement.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.Load(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Chargement des informations à partir la table VTL_ATTACHEMT.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table VTL_ATTACHEMT.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.Save(Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_ATTACHEMT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.Save(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_ATTACHEMT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.Cancel(Corail.Core.Transaction)">
+	<summary>
+ Annule les changements apportés a l'objet
+ </summary>
+	<param name="p_o_trans">Transaction a utiliser</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.Delete(Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_ATTACHEMT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.Delete(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_ATTACHEMT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="F:VITAL.BO.VITAL.Auto.Attachement.m_o_cacheDt">
+	<summary>
+ Cache Datatable
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Attachement.m_o_cacheLock">
+	<summary>
+ Cache Lock
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Attachement.m_b_cacheHasChanges">
+	<summary>
+ Cache Changes
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.Attachement.CacheDt(Corail.Core.Transaction,System.Boolean)">
+	<summary>
+ Propriété du cache datatable
+ </summary>
+	<param name="p_o_trans">La transaction à utiliser</param>
+	<param name="p_b_force">Objet de la classe Attachement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.CacheDtKey(VITAL.BO.VITAL.Attachement)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+	<param name="p_o_object">Objet de la classe Attachement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.CacheDtKeyFind(VITAL.BO.VITAL.Attachement)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.CacheUpdate(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.CacheUpdateDt(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache datatable
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Attachement.CacheClear(System.Boolean)">
+	<summary>
+ Permet vider le cache datatable
+ </summary>
+	<param name="p_b_force">Indique si l'on force le vidage ou non</param>
+</member><member name="T:VITAL.BO.VITAL.Auto.Attachement">
+	<summary>
+ Attachement.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Auto.Carte.m_b_update">
 	<summary>
@@ -1448,6 +1475,119 @@ VITAL.BO
 	<summary>
  Race de l'animal.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Remboursement.m_b_update">
+	<summary>
+ Indique s'il s'agit d'un élément chargé à partir de la base de données.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.Remboursement.IsNew">
+	<summary>
+ Indique si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregistrement sera mis à jour.
+ </summary>
+	<value>
+		<c>true</c> si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregestement sera mis à jour.
+ </value>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.InitDefaultValues">
+	<summary>
+ Initialization par défaut avec les valeurs définies via Modeler
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.OnInitDefaultValues">
+	<summary> Post-initialisation en fin d'appel du ou des constructeurs de classe. 
+ Permet de surcharger les valeurs par défaut des propriétés.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.GetAll(Corail.Core.Transaction)">
+	<summary>
+ Retourne la requête retournant tous les élements.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+	<returns>Tous les éléments</returns>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.FindDR(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Retourne la ligne de données correspondant à l'enregistrement.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.Load(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Chargement des informations à partir la table VTL_REMBOURSMT.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table VTL_REMBOURSMT.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.Save(Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_REMBOURSMT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.Save(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_REMBOURSMT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.Cancel(Corail.Core.Transaction)">
+	<summary>
+ Annule les changements apportés a l'objet
+ </summary>
+	<param name="p_o_trans">Transaction a utiliser</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.Delete(Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_REMBOURSMT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.Delete(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_REMBOURSMT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="F:VITAL.BO.VITAL.Auto.Remboursement.m_o_cacheDt">
+	<summary>
+ Cache Datatable
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Remboursement.m_o_cacheLock">
+	<summary>
+ Cache Lock
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Remboursement.m_b_cacheHasChanges">
+	<summary>
+ Cache Changes
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.Remboursement.CacheDt(Corail.Core.Transaction,System.Boolean)">
+	<summary>
+ Propriété du cache datatable
+ </summary>
+	<param name="p_o_trans">La transaction à utiliser</param>
+	<param name="p_b_force">Objet de la classe Remboursement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.CacheDtKey(VITAL.BO.VITAL.Remboursement)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+	<param name="p_o_object">Objet de la classe Remboursement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.CacheDtKeyFind(VITAL.BO.VITAL.Remboursement)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.CacheUpdate(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.CacheUpdateDt(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache datatable
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Remboursement.CacheClear(System.Boolean)">
+	<summary>
+ Permet vider le cache datatable
+ </summary>
+	<param name="p_b_force">Indique si l'on force le vidage ou non</param>
+</member><member name="T:VITAL.BO.VITAL.Auto.Remboursement">
+	<summary>
+ Remboursement.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Auto.Traitement_medicament.m_b_update">
 	<summary>
  Indique s'il s'agit d'un élément chargé à partir de la base de données.
@@ -2239,6 +2379,14 @@ VITAL.BO
 	<summary>
  Veterinaire.
  </summary>
+</member><member name="T:VITAL.BO.VITAL.Position">
+	<summary>
+ Position de l'animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Traitrement">
+	<summary>
+ Traitrement.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_b_changes">
 	<summary>
  Indique s'il y a eu des changements sur l'objet ou non
@@ -2608,6 +2756,109 @@ VITAL.BO
 	<summary>
  Assurance.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Attachement`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Attachement`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Attachement`1.m_s_name">
+	<summary>
+ Name.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Attachement`1.m_s_chemin">
+	<summary>
+ Chemin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Attachement`1.m_i_consult">
+	<summary>
+ Consult.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Attachement`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Attachement`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_ATTACHEMT.VTL_ATTACHEMT_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Attachement`1.Name">
+	<summary>
+ Name.
+ Champ associé : VTL_ATTACHEMT.VTL_ATTACHEMT_NAME.
+ </summary>
+	<value>
+ Name.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Attachement`1.Chemin">
+	<summary>
+ Chemin.
+ Champ associé : VTL_ATTACHEMT.VTL_ATTACHEMT_CHEMIN.
+ </summary>
+	<value>
+ Chemin.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Attachement`1.Consult">
+	<summary>
+ Consult.
+ Champ associé : VTL_ATTACHEMT.VTL_ATTACHEMT_CONSULT.
+ </summary>
+	<value>
+ Consult.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Attachement`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Attachement`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Attachement`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Attachement`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Attachement`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Attachement`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Attachement`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Attachement`1.Diff(VITAL.BO.VITAL.Raw.Attachement{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Attachement.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Attachement`1">
+	<summary>
+ Attachement.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_b_changes">
 	<summary>
  Indique s'il y a eu des changements sur l'objet ou non
@@ -2620,9 +2871,9 @@ VITAL.BO
 	<summary>
  Numero.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_s_nFC">
+</member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.m_s_nfc">
 	<summary>
- NFC.
+ Nfc.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.HasChanges">
 	<summary>
@@ -2646,13 +2897,13 @@ VITAL.BO
 	<value>
  Numero.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.NFC">
+</member><member name="P:VITAL.BO.VITAL.Raw.Carte`1.Nfc">
 	<summary>
- NFC.
+ Nfc.
  Champ associé : VTL_CARTE.VTL_CARTE_NFC.
  </summary>
 	<value>
- NFC.
+ Nfc.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Carte`1.HasHisto">
 	<summary>
@@ -3583,6 +3834,133 @@ VITAL.BO
 	<summary>
  Race de l'animal.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_s_name">
+	<summary>
+ Name.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_dt_date">
+	<summary>
+ Date.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_s_statut">
+	<summary>
+ Statut.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_i_consult">
+	<summary>
+ Consult.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_i_contrat">
+	<summary>
+ Contrat.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Name">
+	<summary>
+ Name.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_NAME.
+ </summary>
+	<value>
+ Name.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Date">
+	<summary>
+ Date.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_DATE.
+ </summary>
+	<value>
+ Date.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Statut">
+	<summary>
+ Statut.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT.
+ </summary>
+	<value>
+ Statut.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Consult">
+	<summary>
+ Consult.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_CONSULT.
+ </summary>
+	<value>
+ Consult.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Contrat">
+	<summary>
+ Contrat.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_CONTRAT.
+ </summary>
+	<value>
+ Contrat.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Remboursement`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Remboursement`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Remboursement`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Remboursement`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Remboursement`1.Diff(VITAL.BO.VITAL.Raw.Remboursement{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Remboursement.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Remboursement`1">
+	<summary>
+ Remboursement.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_b_changes">
 	<summary>
  Indique s'il y a eu des changements sur l'objet ou non
@@ -4304,13 +4682,60 @@ VITAL.BO
 	<summary>
  Veterinaire.
  </summary>
+</member><member name="T:VITAL.BO.VITAL.Traitement_medicament">
+	<summary>
+ Liste des médicaments compris dans un traitement.
+ </summary>
+</member><member name="M:VITAL.BO.Main.InitDatabases(Corail.Core.DataBaseList)">
+	<summary>
+ Vous devez initialiser içi la liste des bases de données accessibles depuis
+ l'application
+ </summary>
+	<param name="p_o_list">Liste de bases de données</param>
+</member><member name="T:VITAL.BO.VITAL.Attachement">
+	<summary>
+ Attachement.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Medicament">
+	<summary>
+ Medicament.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Race">
+	<summary>
+ Race de l'animal.
+ </summary>
 </member><member name="T:VITAL.BO.VITAL.Histo_Poids">
 	<summary>
  Historique du poids de l'animal.
  </summary>
-</member><member name="T:VITAL.BO.VITAL.Traitement_medicament">
+</member><member name="M:VITAL.BO.VITAL.Animal.GetThisAnimal">
 	<summary>
- Liste des médicaments compris dans un traitement.
+ Retourne l'id de l'animal - Accessible depuis 1 objet de la classe : p_o_animal.GetThisAnimal2().
+ </summary>
+	<returns>L'id de l'animal - Accessible depuis 1 objet de la classe : p_o_animal.GetThisAnimal2().
+ </returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetThisAnimal2(System.String)">
+	<summary>
+ Retourne l'id de l'animal - Accessible sans objet de la classe : Animal.GetThisAnimal2("Rex").
+ </summary>
+	<param name="p_s_name">Nom de l'animal.</param>
+	<returns>L'id de l'animal - Accessible sans objet de la classe : Animal.GetThisAnimal2("Rex").
+ </returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetAnimauxProprio(System.String)">
+	<summary>
+ Retourne la liste des animaux du proprio.
+ </summary>
+	<param name="p_s_logginProprio">Login du propriétaire.</param>
+	<returns>La liste des animaux du proprio.</returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetNbAnimaux(System.String)">
+	<summary>
+ Retourne nb d'animaux d'un prop.
+ </summary>
+	<param name="p_s_logProp"></param>
+	<returns>Nb d'animaux d'un prop.</returns>
+</member><member name="T:VITAL.BO.VITAL.Animal">
+	<summary>
+ Animal.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.Vaccination">
 	<summary>
@@ -4327,6 +4752,10 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_ASSURANCE">
 	<summary>
  Assurance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_ATTACHEMT">
+	<summary>
+ Attachement.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_CARTE">
 	<summary>
@@ -4363,6 +4792,10 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_RACE">
 	<summary>
  Race de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_REMBOURSMT">
+	<summary>
+ Remboursement.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_TRAITEMENT_MEDICAMENT">
 	<summary>
@@ -4492,6 +4925,34 @@ VITAL.BO
 	<summary>
  Assurance.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_NAME">
+	<summary>
+ Name.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_NAME_MAXLEN">
+	<summary>
+ Name (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_CHEMIN">
+	<summary>
+ Chemin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_CHEMIN_MAXLEN">
+	<summary>
+ Chemin (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ATTACHEMT.VTL_ATTACHEMT_CONSULT">
+	<summary>
+ Consult.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_ATTACHEMT">
+	<summary>
+ Attachement.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_ID">
 	<summary>
  ID.
@@ -4506,11 +4967,11 @@ VITAL.BO
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_NFC">
 	<summary>
- NFC.
+ Nfc.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_CARTE.VTL_CARTE_NFC_MAXLEN">
 	<summary>
- NFC (Maxlen).
+ Nfc (Maxlen).
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_CARTE">
 	<summary>
@@ -4727,6 +5188,42 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.VTL_RACE">
 	<summary>
  Race de l'animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_NAME">
+	<summary>
+ Name.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_NAME_MAXLEN">
+	<summary>
+ Name (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_DATE">
+	<summary>
+ Date.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT">
+	<summary>
+ Statut.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT_MAXLEN">
+	<summary>
+ Statut (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_CONSULT">
+	<summary>
+ Consult.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_CONTRAT">
+	<summary>
+ Contrat.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_REMBOURSMT">
+	<summary>
+ Remboursement.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID">
 	<summary>
@@ -4990,6 +5487,21 @@ VITAL.BO
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Assurance"/>.
  </summary>
 	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Attachement.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Attachement"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Attachement.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Attachement"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Attachement.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Attachement"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
 </member><member name="M:VITAL.BO.VITAL.Carte.#ctor(System.Int32,Corail.Core.Transaction)">
 	<summary>
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Carte"/>.
@@ -5125,6 +5637,21 @@ VITAL.BO
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Race"/>.
  </summary>
 	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Remboursement.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Remboursement"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Remboursement.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Remboursement"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Remboursement.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Remboursement"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
 </member><member name="M:VITAL.BO.VITAL.Traitement_medicament.#ctor(System.Int32,Corail.Core.Transaction)">
 	<summary>
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Traitement_medicament"/>.
@@ -5230,6 +5757,10 @@ VITAL.BO
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Veterinaire"/>.
  </summary>
 	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="T:VITAL.BO.VITAL.Histo_Taille">
+	<summary>
+ Historique de la taille de l'animal.
+ </summary>
 </member><member name="F:VITAL.BO.EN_ModeAcces.Creation">
 	<summary>
  Accès en création
@@ -5245,9 +5776,58 @@ VITAL.BO
 </member><member name="F:VITAL.BO.ModConst.C_S_EXEMPLE">
  Style des éléments inactifs dans les grilles
 
+</member><member name="T:VITAL.BO.VITAL.Consultation">
+	<summary>
+ Consultation vétérinaire d'un animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Assurance">
+	<summary>
+ Assurance.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Vaccin">
+	<summary>
+ Vaccin.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Adopter">
+	<summary>
+ Adopter : Associations etre propriétaire et animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.PropriEtaire">
+	<summary>
+ Propriétaire.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Remboursement">
+	<summary>
+ Remboursement.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Contrat">
+	<summary>
+ Contrat d'assurance.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Veterinaire">
+	<summary>
+ Veterinaire.
+ </summary>
+</member><member name="P:VITAL.BO.My.Resources.Resources.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:VITAL.BO.My.Resources.Resources.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="T:VITAL.BO.My.Resources.Resources">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
 </member><member name="T:VITAL.BO.VITAL.Type">
 	<summary>
  Typede l'animal.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Carte">
+	<summary>
+ Carte vitale.
  </summary>
 </member><member name="M:VITAL.BO.VITAL.User.GetConnectedUser(System.String)">
 	<summary>
@@ -5259,14 +5839,6 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.User">
 	<summary>
  User.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Adopter">
-	<summary>
- Adopter : Associations etre propriétaire et animal.
- </summary>
-</member><member name="T:VITAL.BO.VITAL.Veterinaire">
-	<summary>
- Veterinaire.
  </summary>
 </member>
 </members>
