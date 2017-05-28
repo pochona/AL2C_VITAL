@@ -50,15 +50,6 @@ Partial Public Class PageAccueilProprietaire
     Protected WithEvents frmListAnimaux As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle frlListAnimx.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents frlListAnimx As Global.Corail.Web.CwFormLayout
-
-    '''<summary>
     '''Contrôle dtgAnimx.
     '''</summary>
     '''<remarks>

@@ -7,6 +7,7 @@
 </head>
 <body>	<form id="frmData" runat="server">
 	<div>
+        
 	    <cw:CwFormLayout runat="server" ID="layoutvet1">
             <cw:CwFrame runat="server" ID="frmAnimal" text="NomAnimal" Collapsable="true" >
                 <cw:CwFormLayout runat="server" ID="frlDtl">

@@ -107,13 +107,12 @@ Public Class MainApplication
                         .AddSubSub("Historique vaccins et traitements", "~/Pages/Proprio/HistoVaccinTraitemt.aspx?ID=" & l_o_animal.ID)
                         .AddSubSub("Historique consultations", "~/Pages/Proprio/HistoConsul.aspx?ID=" & l_o_animal.ID)
                         .AddSubSub("Documents", "~/Pages/Proprio/Documents.aspx?ID=" & l_o_animal.ID)
-                        .AddSub("Mes remboursements", "")
-                        .AddSub("Mon contrat", "")
-                        .AddSubSub("Mes droits", "")
-                        .AddSubSub("Mon espace", "")
-                        .AddSub("Localisation", "")
-                        .AddSub("Infos pratiques", "")
-                        .AddSub("Contact", "")
+                        .AddSub("Mes remboursements", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID)
+                        .AddSub("Mon contrat", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID)
+                        .AddSubSub("Mes droits", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID)
+                        .AddSubSub("Mon espace", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID)
+                        .AddSub("Infos pratiques", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID)
+                        .AddSub("Contact", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID)
                     Next
                 End If
                 ' Infos du proprio

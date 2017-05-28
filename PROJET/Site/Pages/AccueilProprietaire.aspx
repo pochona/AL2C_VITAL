@@ -11,16 +11,14 @@
 	<div>
 	<cw:CwFormLayout runat="server" ID="frmAnimx">
             <cw:CwFrame runat="server" ID="frmListAnimaux" text="Animaux" Collapsable="true" Kind="Primary">
-                <cw:CwFormLayout runat="server" ID="frlListAnimx">
                     <cw:CwDataGrid runat="server" ID="dtgAnimx" Title="{0} Animaux" Cells-ExtraSmall="12" LabelCells-ExtraSmall="1"></cw:CwDataGrid>
-                </cw:CwFormLayout>
             </cw:CwFrame>
 	    </cw:CwFormLayout>
         
         <cw:CwFormLayout runat="server" ID="frlDepenses">
             <cw:CwFrame runat="server" ID="frm" text="Dépenses" Collapsable="true" Kind="Success"  >
                 <cw:CwFormLayout runat="server" ID="frlDtlDepenses">
-                    <cw:CwTextBox runat="server" ID="txt4" Enabled="false" Text="20€" Label="Avec une mutuelle vous auriez économisé " ></cw:CwTextBox>
+                    <cw:CwTextBox runat="server" ID="txt4" Enabled="false" Text="TODO CHANGER 20€" Label="Avec une mutuelle vous auriez économisé " ></cw:CwTextBox>
                 </cw:CwFormLayout>
             </cw:CwFrame>
 	    </cw:CwFormLayout>

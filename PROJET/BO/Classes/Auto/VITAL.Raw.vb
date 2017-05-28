@@ -1422,11 +1422,6 @@
         ''' </summary>
 		Private m_i_id_animal As Integer
 
-        ''' <summary>
-        ''' Id_proprietaire.
-        ''' </summary>
-		Private m_i_id_proprietaire As Integer
-
 #End Region
 
 #Region "Propriétés publiques"
@@ -1559,25 +1554,6 @@
             End Set
         End Property
 
-        ''' <summary>
-        ''' Id_proprietaire.
-        ''' Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_ID_PROPRIETAIRE.
-        ''' </summary>
-        ''' <value>
-        ''' Id_proprietaire.
-        ''' </value>
-		Public Overridable Property Id_proprietaire As Integer
-            Get
-				Return m_i_id_proprietaire
-            End Get
-			Set(value As Integer)
-                If m_i_id_proprietaire <> value Then
-                    m_i_id_proprietaire = value
-                    HasChanges = True
-                End If
-            End Set
-        End Property
-
 #End Region
 
 #Region "Constantes publiques"
@@ -1643,8 +1619,6 @@
             p_o_target.m_i_id_veterinaire = m_i_id_veterinaire
             ' Colonne : m_i_id_animal
             p_o_target.m_i_id_animal = m_i_id_animal
-            ' Colonne : m_i_id_proprietaire
-            p_o_target.m_i_id_proprietaire = m_i_id_proprietaire
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -1662,7 +1636,6 @@
 			m_s_commentaire = BlobToStr(p_o_row!VTL_CONSULTATION_COMMENTAIRE)
 			m_i_id_veterinaire = NzInt(p_o_row!VTL_CONSULTATION_ID_VETERINAIRE, 0)
 			m_i_id_animal = NzInt(p_o_row!VTL_CONSULTATION_L, 0)
-			m_i_id_proprietaire = NzInt(p_o_row!VTL_CONSULTATION_ID_PROPRIETAIRE, 0)
             HasChanges = False
         End Sub
 
@@ -1677,7 +1650,6 @@
 			p_o_row("VTL_CONSULTATION_COMMENTAIRE") = StrToBlob(Commentaire).Value
 			p_o_row("VTL_CONSULTATION_ID_VETERINAIRE") = Id_veterinaire
 			p_o_row("VTL_CONSULTATION_L") = Id_animal
-			p_o_row("VTL_CONSULTATION_ID_PROPRIETAIRE") = Id_proprietaire
         End Sub
 
         ''' <summary>
@@ -1704,9 +1676,6 @@
             End If
             If p_o_object.Id_animal <> Id_animal Then
                 l_o_dicDiff.Add(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_L, {p_o_object.Id_animal,Id_animal})
-            End If
-            If p_o_object.Id_proprietaire <> Id_proprietaire Then
-                l_o_dicDiff.Add(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID_PROPRIETAIRE, {p_o_object.Id_proprietaire,Id_proprietaire})
             End If
             Return l_o_dicDiff
         End Function

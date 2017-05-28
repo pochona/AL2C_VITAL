@@ -388,11 +388,6 @@
         ''' </summary>
         Public Const VTL_CONSULTATION_L As String = "VTL_CONSULTATION_L"
 
-        ''' <summary>
-        ''' Id_proprietaire.
-        ''' </summary>
-        Public Const VTL_CONSULTATION_ID_PROPRIETAIRE As String = "VTL_CONSULTATION_ID_PROPRIETAIRE"
-
     End Class
 
 #End Region

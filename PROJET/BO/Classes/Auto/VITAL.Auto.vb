@@ -1555,7 +1555,6 @@ Namespace VITAL.Auto
             l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE, StrToBlob(Commentaire))
             l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE, NullIfValue(Id_veterinaire, 0))
             l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_L, NullIfValue(Id_animal, 0))
-            l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID_PROPRIETAIRE, NullIfValue(Id_proprietaire, 0))
             If l_o_qry.ExecuteSave(Tables.VTL_CONSULTATION, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))

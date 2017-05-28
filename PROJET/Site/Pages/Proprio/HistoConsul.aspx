@@ -8,7 +8,16 @@
 <body>
 	<form id="frmData" runat="server">
 	<div>
-	
+	 <cw:CwFormLayout runat="server" ID="frlGeneral">
+            <cw:CwFrame runat="server" ID="frmLastConsul" text="Dernière consultation" Collapsable="true" >
+                <cw:CwFormLayout runat="server" ID="frlDtl">
+                    <cw:CwDateTextBox runat="server" ID="dtbConsul" Label="Date" Enabled="false" ></cw:CwDateTextBox>
+                    <cw:CwNumericTextBox runat="server" ID="ntbMontant" Label="Montant" Enabled="false" ></cw:CwNumericTextBox>
+                    <cw:CwTextBox runat="server" ID="txtComm" Label="Commentaire" Enabled="false" TextMode="MultiLine"></cw:CwTextBox>
+                    <cw:CwTextBox runat="server" ID="txtVeto" Label="Vétérinaire" Enabled="false" ></cw:CwTextBox>
+                </cw:CwFormLayout>
+            </cw:CwFrame>
+	    </cw:CwFormLayout>
 	</div>
 	</form>
 </body>

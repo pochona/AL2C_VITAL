@@ -13,8 +13,5 @@
 		<col DataField="VTL_CONSULTATION_L" Type="Numeric" HeaderText="Id_animal">
 			<source Table="VTL_ANIMAL" TableAlias="T2" KeyField="VTL_ANIMAL_ID" LibField="VTL_ANIMAL_NOM" LibAlias="F2" Unique="false" />
 		</col>
-		<col DataField="VTL_CONSULTATION_ID_PROPRIETAIRE" Type="Numeric" HeaderText="Id_proprietaire">
-			<source Table="VTL_PROPRIETAIRE" TableAlias="T3" KeyField="VTL_PROPRIETAIRE_ID" LibField="VTL_PROPRIETAIRE_NOM" LibAlias="F3" Unique="false" />
-		</col>
 	</columns>
 </table>

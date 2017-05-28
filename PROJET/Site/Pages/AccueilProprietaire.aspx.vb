@@ -44,12 +44,16 @@ Partial Public Class PageAccueilProprietaire
 
     Private Sub dtgAnimx_Init(sender As Object, e As EventArgs) Handles dtgAnimx.Init
         With dtgAnimx
+            'obligatoire : identifiant de la ligne
             .DataKeyField = VTL_ANIMAL.VTL_ANIMAL_ID
+            'Pour supprimer le changement de page de la grille 
+            .AllowPaging = False
 
             With .AddButtonColumn()
                 .Width = Unit.Pixel(65) ' fixe la taille de la colonne
                 .DataNavigateUrlFormatString = "~/Pages/Proprio/AnimalGeneral.aspx?ID={0}"
                 .DataNavigateUrlField = VTL_ANIMAL.VTL_ANIMAL_ID
+                .Properties.ImageName = "search"
             End With
             With .AddColumn("Nom", VTL_ANIMAL.VTL_ANIMAL_NOM)
                 m_i_nom = .ColumnIndex

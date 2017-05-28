@@ -88,7 +88,6 @@
         <Column Name="VTL_CONSULTATION_COMMENTAIRE" Type="String" Label="Commentaire" PropertyName="Commentaire" Comment="Commentaire" />
         <Column Name="VTL_CONSULTATION_ID_VETERINAIRE" Type="Integer" Precision="10" Label="Id_veterinaire" PropertyName="Id_veterinaire" PropertyNullValue="0" Comment="Id_veterinaire" />
         <Column Name="VTL_CONSULTATION_L" Type="Integer" Precision="10" Label="Id_animal" PropertyName="Id_animal" PropertyNullValue="0" Comment="Id_animal" />
-        <Column Name="VTL_CONSULTATION_ID_PROPRIETAIRE" Type="Integer" Precision="10" Label="Id_proprietaire" PropertyName="Id_proprietaire" PropertyNullValue="0" Comment="Id_proprietaire" />
       </Columns>
       <Relations>
         <Relation Name="VTL_CONSULTATION_ID_VETERINAIRE_VTL_VETERINAIRE_FK">
@@ -96,9 +95,6 @@
         </Relation>
         <Relation Name="VTL_CONSULTATION_L_VTL_ANIMAL_FK">
           <Link ColumnName="VTL_CONSULTATION_L" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
-        </Relation>
-        <Relation Name="VTL_CONSULTATION_ID_PROPRIETAIRE_VTL_PROPRIETAIRE_FK">
-          <Link ColumnName="VTL_CONSULTATION_ID_PROPRIETAIRE" ForeignTableName="VTL_PROPRIETAIRE" ForeignFieldName="VTL_PROPRIETAIRE_ID" />
         </Relation>
       </Relations>
     </Table>
