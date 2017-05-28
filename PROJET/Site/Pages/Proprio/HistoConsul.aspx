@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-	<title>HistoConsul</title>
+	<title>Historique des consultations</title>
 </head>
 <body>
 	<form id="frmData" runat="server">
@@ -17,6 +17,9 @@
                     <cw:CwTextBox runat="server" ID="txtVeto" Label="Vétérinaire" Enabled="false" ></cw:CwTextBox>
                 </cw:CwFormLayout>
             </cw:CwFrame>
+            <cw:CwFrame runat="server" ID="frmHisto" text="Historique" Collapsable="true" >
+                    <cw:CwDataGrid runat="server" ID="dtgHistoConsultations" Title="{0} Consultation(s)"></cw:CwDataGrid>   
+           </cw:CwFrame>
 	    </cw:CwFormLayout>
 	</div>
 	</form>

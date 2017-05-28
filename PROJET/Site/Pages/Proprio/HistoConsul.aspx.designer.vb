@@ -84,4 +84,22 @@ Partial Public Class PageHistoConsul
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents txtVeto As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle frmHisto.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frmHisto As Global.Corail.Web.CwFrame
+
+    '''<summary>
+    '''Contrôle dtgHistoConsultations.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dtgHistoConsultations As Global.Corail.Web.CwDataGrid
 End Class

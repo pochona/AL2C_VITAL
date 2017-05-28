@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des objets                                        */
-/* Historique  : Creation le 27/05/2017                                     */
+/* Historique  : Creation le 28/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -15,6 +15,11 @@
 -- "=============================="
 -- "Creation des clefs primaires"
 -- "=============================="
+
+-- "Creation de la clef primaire de la table VITAL_ANIMALDOCS"
+ALTER TABLE VITAL_ANIMALDOCS
+ADD CONSTRAINT VITAL_ANIMALDOCS_PK PRIMARY KEY (ANIMALDOCS_ID)
+GO
 
 -- "Creation de la clef primaire de la table VTL_ADOPTER"
 ALTER TABLE VTL_ADOPTER
@@ -179,12 +184,6 @@ ADD CONSTRAINT VTL_CONSULTATION_L_VTL_ANIMAL_FK FOREIGN KEY (VTL_CONSULTATION_L)
 	REFERENCES VTL_ANIMAL(VTL_ANIMAL_ID);
 GO
 
--- "Creation de la clef etrangere de la table VTL_CONSULTATION vers la table VTL_PROPRIETAIRE"
-ALTER TABLE VTL_CONSULTATION
-ADD CONSTRAINT VTL_CONSULTATION_ID_PROPRIETAIRE_VTL_PROPRIETAIRE_FK FOREIGN KEY (VTL_CONSULTATION_ID_PROPRIETAIRE)
-	REFERENCES VTL_PROPRIETAIRE(VTL_PROPRIETAIRE_ID);
-GO
-
 -- "Creation de la clef etrangere de la table VTL_CONTRAT vers la table VTL_ANIMAL"
 ALTER TABLE VTL_CONTRAT
 ADD CONSTRAINT VTL_CONTRAT_ID_ANIMAL_VTL_ANIMAL_FK FOREIGN KEY (VTL_CONTRAT_ID_ANIMAL)
@@ -261,6 +260,12 @@ GO
 ALTER TABLE VTL_VACCINATION
 ADD CONSTRAINT VTL_VACCINATION_ID_CONSULTATION_VTL_CONSULTATION_FK FOREIGN KEY (VTL_VACCINATION_ID_CONSULTATION)
 	REFERENCES VTL_CONSULTATION(VTL_CONSULTATION_ID);
+GO
+
+-- "Creation de la clef etrangere de la table VTL_VETERINAIRE vers la table VTL_USER"
+ALTER TABLE VTL_VETERINAIRE
+ADD CONSTRAINT VTL_VETERINAIRE_ID_USER_VTL_USER_FK FOREIGN KEY (VTL_VETERINAIRE_ID_USER)
+	REFERENCES VTL_USER(VTL_USER_ID);
 GO
 
 

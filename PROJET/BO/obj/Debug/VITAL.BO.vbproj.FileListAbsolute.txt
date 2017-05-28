@@ -70,7 +70,6 @@ C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\bin\Corail.Data.SqlServer.dll
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\bin\Corail.Core.xml
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\bin\Corail.Data.SqlServer.xml
-C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Debug\VITAL.BO.vbprojResolveAssemblyReference.cache
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Debug\VITAL.BO.Resources.resources
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Debug\VITAL.BO.vbproj.GenerateResource.Cache
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Debug\VITAL.BO.dll

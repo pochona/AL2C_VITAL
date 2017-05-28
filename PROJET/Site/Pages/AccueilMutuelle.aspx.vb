@@ -36,7 +36,7 @@ Partial Public Class PageAccueilMutuelle
         With consultClient
             .DataKeyField = VTL_CONSULTATION.VTL_CONSULTATION_ID
             .AddColumn("Numéro de consultation", VTL_CONSULTATION.VTL_CONSULTATION_ID)
-            .AddDateColumn("Date demande", VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION, "=")
+            .AddDateColumn("Date demande", VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
             .AddNumericColumn("Montant", VTL_CONSULTATION.VTL_CONSULTATION_MONTANT)
 
         End With

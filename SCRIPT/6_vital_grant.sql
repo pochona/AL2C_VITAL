@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Attribution des roles                                      */
-/* Historique  : Creation le 27/05/2017                                     */
+/* Historique  : Creation le 28/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -15,6 +15,9 @@
 -- "=============================="
 -- "Roles sur les tables"
 -- "=============================="
+-- "Ajout du role ROLE_VITAL_USER sur la table VITAL_ANIMALDOCS "
+GRANT SELECT,INSERT,UPDATE,DELETE ON VITAL_ANIMALDOCS TO VITL;
+GO
 -- "Ajout du role ROLE_VITAL_USER sur la table VTL_ADOPTER "
 GRANT SELECT,INSERT,UPDATE,DELETE ON VTL_ADOPTER TO VITL;
 GO

@@ -1,5 +1,224 @@
 ﻿Namespace VITAL.Raw
 
+#Region "AnimalDocs - AnimalDocs"
+
+    ''' <summary>
+    ''' AnimalDocs.
+    ''' </summary>
+    <Serializable()> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public MustInherit Class AnimalDocs(Of T As {VITAL.AnimalDocs, New})
+        Inherits VITAL.Schema
+
+
+#Region "Variables privées"
+
+        ''' <summary>
+        ''' Indique s'il y a eu des changements sur l'objet ou non
+        ''' </summary>
+        Private m_b_changes As Boolean = False
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+		Private m_i_iD As Integer
+
+        ''' <summary>
+        ''' Nom.
+        ''' </summary>
+		Private m_s_nom As String
+
+        ''' <summary>
+        ''' Chemin.
+        ''' </summary>
+		Private m_s_chemin As String
+
+#End Region
+
+#Region "Propriétés publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a subi des modifications ou non
+        ''' </summary>
+        ''' <value>
+        '''
+        ''' </value>
+        Public Property HasChanges As Boolean
+            Get
+                Return m_b_changes
+            End Get
+            Set(value As Boolean)
+                m_b_changes = value
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' ID.
+        ''' Champ associé : VITAL_ANIMALDOCS.ANIMALDOCS_ID.
+        ''' </summary>
+        ''' <value>
+        ''' ID.
+        ''' </value>
+		Public Overridable ReadOnly Property ID As Integer
+            Get
+				Return m_i_iD
+            End Get
+        End Property
+
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Protected Sub SetAutoId(p_i_id As Integer)
+            m_i_iD = p_i_id
+        End Sub
+
+        ''' <summary>
+        ''' Nom.
+        ''' Champ associé : VITAL_ANIMALDOCS.ANIMALDOCS_NOM.
+        ''' </summary>
+        ''' <value>
+        ''' Nom.
+        ''' </value>
+		Public Overridable Property Nom As String
+            Get
+				Return m_s_nom
+            End Get
+			Set(value As String)
+                If m_s_nom <> value Then
+                    m_s_nom = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Chemin.
+        ''' Champ associé : VITAL_ANIMALDOCS.ANIMALDOCS_CHEMIN.
+        ''' </summary>
+        ''' <value>
+        ''' Chemin.
+        ''' </value>
+		Public Overridable Property Chemin As String
+            Get
+				Return m_s_chemin
+            End Get
+			Set(value As String)
+                If m_s_chemin <> value Then
+                    m_s_chemin = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+#End Region
+
+#Region "Constantes publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a un historique ou non
+        ''' </summary>
+        Public Const HasHisto As Boolean = False
+
+        ''' <summary>
+        ''' Indique si l'objet utilise le cache ou non
+        ''' </summary>
+        Public Const HasCache As Boolean = False
+
+        ''' <summary>
+        ''' Nom de la table associée à la classe.
+        ''' </summary>
+        <Obsolete("Veuillez utiliser la classe 'Tables'.")>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Public Const TableName As String = Tables.VITAL_ANIMALDOCS
+
+#End Region
+
+#Region "Méthodes publiques"
+
+        ''' <summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Function CloneAsNew(Optional p_b_includeKeyValues As Boolean = False) As T
+            Dim l_o_target As New T()
+
+            ' Copie des propriétés et retour
+            Return CopyTo(l_o_target, p_b_includeKeyValues)
+        End Function
+
+        ''' <summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Overridable Function CopyTo(p_o_target As T, Optional p_b_includeKeyValues As Boolean = False) As T
+
+            ' Vérification des paramètres.
+            If (p_o_target Is Nothing) Then
+                Throw New ArgumentNullException("p_o_target")
+            End If
+
+            ' Copie des valeurs des clés primaires
+            If p_b_includeKeyValues Then
+                ' Column : m_i_iD
+                p_o_target.m_i_iD = m_i_iD
+            End If
+            p_o_target.m_i_iD = m_i_iD
+            ' Colonne : m_s_nom
+            p_o_target.m_s_nom = m_s_nom
+            ' Colonne : m_s_chemin
+            p_o_target.m_s_chemin = m_s_chemin
+
+            ' Retour de l'objet cible pour appel en chaine
+            Return p_o_target
+        End Function
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub Load(p_o_row As DataRow)
+            If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
+			m_i_iD = CInt(p_o_row!ANIMALDOCS_ID)
+			m_s_nom = CStr(p_o_row!ANIMALDOCS_NOM)
+			m_s_chemin = CStr(p_o_row!ANIMALDOCS_CHEMIN)
+            HasChanges = False
+        End Sub
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub ToRow(p_o_row As DataRow)
+			p_o_row("ANIMALDOCS_ID") = ID
+			p_o_row("ANIMALDOCS_NOM") = Nom
+			p_o_row("ANIMALDOCS_CHEMIN") = Chemin
+        End Sub
+
+        ''' <summary>
+        ''' Permet de détecter toutes les différences entre 2 objets
+        ''' </summary>
+        ''' <param name="p_o_object">Objet de la classe AnimalDocs.</param>
+        Public Function Diff(p_o_object As AnimalDocs(Of T)) As Dictionary(Of String, Object())
+            Dim l_o_dicDiff As New Dictionary(Of String, Object())
+
+            If p_o_object.ID <> ID Then
+                l_o_dicDiff.Add(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_ID, {p_o_object.ID,ID})
+            End If
+            If p_o_object.Nom <> Nom Then
+                l_o_dicDiff.Add(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_NOM, {p_o_object.Nom,Nom})
+            End If
+            If p_o_object.Chemin <> Chemin Then
+                l_o_dicDiff.Add(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_CHEMIN, {p_o_object.Chemin,Chemin})
+            End If
+            Return l_o_dicDiff
+        End Function
+
+#End Region
+
+    End Class
+
+#End Region
+
 #Region "Adopter - Adopter : Associations etre propriétaire et animal"
 
     ''' <summary>
@@ -1398,11 +1617,6 @@
 		Private m_i_iD As Integer
 
         ''' <summary>
-        ''' Dt_consultation.
-        ''' </summary>
-		Private m_dt_dt_consultation As DateTime
-
-        ''' <summary>
         ''' Montant.
         ''' </summary>
 		Private m_d_montant As Double?
@@ -1421,6 +1635,11 @@
         ''' Id_animal.
         ''' </summary>
 		Private m_i_id_animal As Integer
+
+        ''' <summary>
+        ''' Dt_Consultation.
+        ''' </summary>
+		Private m_dt_dt_Consultation As DateTime
 
 #End Region
 
@@ -1458,25 +1677,6 @@
         Protected Sub SetAutoId(p_i_id As Integer)
             m_i_iD = p_i_id
         End Sub
-
-        ''' <summary>
-        ''' Dt_consultation.
-        ''' Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION.
-        ''' </summary>
-        ''' <value>
-        ''' Dt_consultation.
-        ''' </value>
-		Public Overridable Property Dt_consultation As DateTime
-            Get
-				Return m_dt_dt_consultation
-            End Get
-			Set(value As DateTime)
-                If m_dt_dt_consultation <> value Then
-                    m_dt_dt_consultation = value
-                    HasChanges = True
-                End If
-            End Set
-        End Property
 
         ''' <summary>
         ''' Montant.
@@ -1554,6 +1754,25 @@
             End Set
         End Property
 
+        ''' <summary>
+        ''' Dt_Consultation.
+        ''' Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION.
+        ''' </summary>
+        ''' <value>
+        ''' Dt_Consultation.
+        ''' </value>
+		Public Overridable Property Dt_Consultation As DateTime
+            Get
+				Return m_dt_dt_Consultation
+            End Get
+			Set(value As DateTime)
+                If m_dt_dt_Consultation <> value Then
+                    m_dt_dt_Consultation = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
 #End Region
 
 #Region "Constantes publiques"
@@ -1609,8 +1828,6 @@
                 p_o_target.m_i_iD = m_i_iD
             End If
             p_o_target.m_i_iD = m_i_iD
-            ' Colonne : m_dt_dt_consultation
-            p_o_target.m_dt_dt_consultation = m_dt_dt_consultation
             ' Colonne : m_d_montant
             p_o_target.m_d_montant = m_d_montant
             ' Colonne : m_s_commentaire
@@ -1619,6 +1836,8 @@
             p_o_target.m_i_id_veterinaire = m_i_id_veterinaire
             ' Colonne : m_i_id_animal
             p_o_target.m_i_id_animal = m_i_id_animal
+            ' Colonne : m_dt_dt_Consultation
+            p_o_target.m_dt_dt_Consultation = m_dt_dt_Consultation
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -1631,11 +1850,11 @@
         Public Overridable Sub Load(p_o_row As DataRow)
             If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
 			m_i_iD = CInt(p_o_row!VTL_CONSULTATION_ID)
-			m_dt_dt_consultation = CDate(p_o_row!VTL_CONSULTATION_DT_CONSULTATION)
 			m_d_montant = NzDblNullable(p_o_row!VTL_CONSULTATION_MONTANT)
-			m_s_commentaire = BlobToStr(p_o_row!VTL_CONSULTATION_COMMENTAIRE)
+			m_s_commentaire = NzStr(p_o_row!VTL_CONSULTATION_COMMENTAIRE)
 			m_i_id_veterinaire = NzInt(p_o_row!VTL_CONSULTATION_ID_VETERINAIRE, 0)
 			m_i_id_animal = NzInt(p_o_row!VTL_CONSULTATION_L, 0)
+			m_dt_dt_Consultation = CDate(p_o_row!VTL_CONSULTATION_DT_CONSULTATION)
             HasChanges = False
         End Sub
 
@@ -1645,11 +1864,11 @@
         ''' <param name="p_o_row">Enregistrement.</param>
         Public Overridable Sub ToRow(p_o_row As DataRow)
 			p_o_row("VTL_CONSULTATION_ID") = ID
-			p_o_row("VTL_CONSULTATION_DT_CONSULTATION") = Dt_consultation
 			p_o_row("VTL_CONSULTATION_MONTANT") = If(Montant Is Nothing, DBNull.Value, CType(Montant, Object))
-			p_o_row("VTL_CONSULTATION_COMMENTAIRE") = StrToBlob(Commentaire).Value
+			p_o_row("VTL_CONSULTATION_COMMENTAIRE") = Commentaire
 			p_o_row("VTL_CONSULTATION_ID_VETERINAIRE") = Id_veterinaire
 			p_o_row("VTL_CONSULTATION_L") = Id_animal
+			p_o_row("VTL_CONSULTATION_DT_CONSULTATION") = Dt_Consultation
         End Sub
 
         ''' <summary>
@@ -1662,9 +1881,6 @@
             If p_o_object.ID <> ID Then
                 l_o_dicDiff.Add(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID, {p_o_object.ID,ID})
             End If
-            If p_o_object.Dt_consultation <> Dt_consultation Then
-                l_o_dicDiff.Add(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION, {p_o_object.Dt_consultation,Dt_consultation})
-            End If
             If Not Object.Equals(p_o_object.Montant, Montant) Then
                 l_o_dicDiff.Add(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_MONTANT, {p_o_object.Montant,Montant})
             End If
@@ -1676,6 +1892,9 @@
             End If
             If p_o_object.Id_animal <> Id_animal Then
                 l_o_dicDiff.Add(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_L, {p_o_object.Id_animal,Id_animal})
+            End If
+            If p_o_object.Dt_Consultation <> Dt_Consultation Then
+                l_o_dicDiff.Add(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION, {p_o_object.Dt_Consultation,Dt_Consultation})
             End If
             Return l_o_dicDiff
         End Function
@@ -5348,6 +5567,11 @@
         ''' </summary>
 		Private m_s_sIRET As String
 
+        ''' <summary>
+        ''' id_user.
+        ''' </summary>
+		Private m_i_id_user As Integer
+
 #End Region
 
 #Region "Propriétés publiques"
@@ -5442,6 +5666,25 @@
             End Set
         End Property
 
+        ''' <summary>
+        ''' id_user.
+        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER.
+        ''' </summary>
+        ''' <value>
+        ''' id_user.
+        ''' </value>
+		Public Overridable Property id_user As Integer
+            Get
+				Return m_i_id_user
+            End Get
+			Set(value As Integer)
+                If m_i_id_user <> value Then
+                    m_i_id_user = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
 #End Region
 
 #Region "Constantes publiques"
@@ -5503,6 +5746,8 @@
             p_o_target.m_s_prenom = m_s_prenom
             ' Colonne : m_s_sIRET
             p_o_target.m_s_sIRET = m_s_sIRET
+            ' Colonne : m_i_id_user
+            p_o_target.m_i_id_user = m_i_id_user
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -5518,6 +5763,7 @@
 			m_s_nom = CStr(p_o_row!VTL_VETERINAIRE_NOM)
 			m_s_prenom = CStr(p_o_row!VTL_VETERINAIRE_PRENOM)
 			m_s_sIRET = NzStr(p_o_row!VTL_VETERINAIRE_SIRET)
+			m_i_id_user = NzInt(p_o_row!VTL_VETERINAIRE_ID_USER, 0)
             HasChanges = False
         End Sub
 
@@ -5530,6 +5776,7 @@
 			p_o_row("VTL_VETERINAIRE_NOM") = Nom
 			p_o_row("VTL_VETERINAIRE_PRENOM") = Prenom
 			p_o_row("VTL_VETERINAIRE_SIRET") = SIRET
+			p_o_row("VTL_VETERINAIRE_ID_USER") = id_user
         End Sub
 
         ''' <summary>
@@ -5550,6 +5797,9 @@
             End If
             If p_o_object.SIRET <> SIRET Then
                 l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET, {p_o_object.SIRET,SIRET})
+            End If
+            If p_o_object.id_user <> id_user Then
+                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER, {p_o_object.id_user,id_user})
             End If
             Return l_o_dicDiff
         End Function

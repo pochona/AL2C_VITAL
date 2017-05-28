@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>AnimalDocs</title>
+	<description>AnimalDocs</description>
+	<columns>
+		<col DataField="ANIMALDOCS_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="ANIMALDOCS_NOM" Type="Text" Unique="false" HeaderText="Nom" NotNull="true" MaxLen="50" />
+		<col DataField="ANIMALDOCS_CHEMIN" Type="Text" Unique="false" HeaderText="Chemin" NotNull="true" MaxLen="255" />
+	</columns>
+</table>

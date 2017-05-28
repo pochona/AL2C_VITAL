@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Suppression des objets existants                           */
-/* Historique  : Creation le 27/05/2017                                     */
+/* Historique  : Creation le 28/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -15,6 +15,10 @@
 USE VITL;
 GO
 
+-- "Suppression de la clef etrangere de la table VTL_VETERINAIRE vers la table VTL_USER"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_VETERINAIRE_ID_USER_VTL_USER_FK' AND type in (N'F'))
+ALTER TABLE VTL_VETERINAIRE DROP CONSTRAINT VTL_VETERINAIRE_ID_USER_VTL_USER_FK;
+GO
 -- "Suppression de la clef etrangere de la table VTL_VACCINATION vers la table VTL_CONSULTATION"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_VACCINATION_ID_CONSULTATION_VTL_CONSULTATION_FK' AND type in (N'F'))
 ALTER TABLE VTL_VACCINATION DROP CONSTRAINT VTL_VACCINATION_ID_CONSULTATION_VTL_CONSULTATION_FK;
@@ -66,10 +70,6 @@ GO
 -- "Suppression de la clef etrangere de la table VTL_CONTRAT vers la table VTL_ANIMAL"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CONTRAT_ID_ANIMAL_VTL_ANIMAL_FK' AND type in (N'F'))
 ALTER TABLE VTL_CONTRAT DROP CONSTRAINT VTL_CONTRAT_ID_ANIMAL_VTL_ANIMAL_FK;
-GO
--- "Suppression de la clef etrangere de la table VTL_CONSULTATION vers la table VTL_PROPRIETAIRE"
-IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CONSULTATION_ID_PROPRIETAIRE_VTL_PROPRIETAIRE_FK' AND type in (N'F'))
-ALTER TABLE VTL_CONSULTATION DROP CONSTRAINT VTL_CONSULTATION_ID_PROPRIETAIRE_VTL_PROPRIETAIRE_FK;
 GO
 -- "Suppression de la clef etrangere de la table VTL_CONSULTATION vers la table VTL_ANIMAL"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CONSULTATION_L_VTL_ANIMAL_FK' AND type in (N'F'))
@@ -276,6 +276,14 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ADOPTER_HISTO_PK' AND type in (N'PK'))
 ALTER TABLE VTL_ADOPTER_HISTO DROP CONSTRAINT VTL_ADOPTER_HISTO_PK;
 GO
+-- "Suppression de la clef primaire de la table VITAL_ANIMALDOCS"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VITAL_ANIMALDOCS_PK' AND type in (N'PK'))
+ALTER TABLE VITAL_ANIMALDOCS DROP CONSTRAINT VITAL_ANIMALDOCS_PK;
+GO
+-- "Suppression de la clef primaire de la table VITAL_ANIMALDOCS_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VITAL_ANIMALDOCS_HISTO_PK' AND type in (N'PK'))
+ALTER TABLE VITAL_ANIMALDOCS_HISTO DROP CONSTRAINT VITAL_ANIMALDOCS_HISTO_PK;
+GO
 
 -- "Suppression de la table VTL_VETERINAIRE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_VETERINAIRE' AND type in (N'U'))
@@ -444,6 +452,14 @@ GO
 -- "Suppression de la table VTL_ADOPTER_HISTO"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ADOPTER_HISTO' AND type in (N'U'))
 DROP TABLE VTL_ADOPTER_HISTO;
+GO
+-- "Suppression de la table VITAL_ANIMALDOCS"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VITAL_ANIMALDOCS' AND type in (N'U'))
+DROP TABLE VITAL_ANIMALDOCS;
+GO
+-- "Suppression de la table VITAL_ANIMALDOCS_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VITAL_ANIMALDOCS_HISTO' AND type in (N'U'))
+DROP TABLE VITAL_ANIMALDOCS_HISTO;
 GO
 
 

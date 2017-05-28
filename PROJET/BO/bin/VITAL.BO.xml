@@ -6,7 +6,98 @@ VITAL.BO
 </name>
 </assembly>
 <members>
-<member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_b_changes">
+<member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_s_nom">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_s_chemin">
+	<summary>
+ Chemin.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.AnimalDocs`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.AnimalDocs`1.ID">
+	<summary>
+ ID.
+ Champ associé : VITAL_ANIMALDOCS.ANIMALDOCS_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.AnimalDocs`1.Nom">
+	<summary>
+ Nom.
+ Champ associé : VITAL_ANIMALDOCS.ANIMALDOCS_NOM.
+ </summary>
+	<value>
+ Nom.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.AnimalDocs`1.Chemin">
+	<summary>
+ Chemin.
+ Champ associé : VITAL_ANIMALDOCS.ANIMALDOCS_CHEMIN.
+ </summary>
+	<value>
+ Chemin.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.AnimalDocs`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.AnimalDocs`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.AnimalDocs`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.AnimalDocs`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.AnimalDocs`1.Diff(VITAL.BO.VITAL.Raw.AnimalDocs{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe AnimalDocs.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.AnimalDocs`1">
+	<summary>
+ AnimalDocs.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Adopter`1.m_b_changes">
 	<summary>
  Indique s'il y a eu des changements sur l'objet ou non
  </summary>
@@ -577,10 +668,6 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_dt_dt_consultation">
-	<summary>
- Dt_consultation.
- </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_d_montant">
 	<summary>
  Montant.
@@ -597,6 +684,10 @@ VITAL.BO
 	<summary>
  Id_animal.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_dt_dt_Consultation">
+	<summary>
+ Dt_Consultation.
+ </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.HasChanges">
 	<summary>
  Indique si l'objet a subi des modifications ou non
@@ -610,14 +701,6 @@ VITAL.BO
  </summary>
 	<value>
  ID.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Dt_consultation">
-	<summary>
- Dt_consultation.
- Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION.
- </summary>
-	<value>
- Dt_consultation.
  </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Montant">
 	<summary>
@@ -650,6 +733,14 @@ VITAL.BO
  </summary>
 	<value>
  Id_animal.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Consultation`1.Dt_Consultation">
+	<summary>
+ Dt_Consultation.
+ Champ associé : VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION.
+ </summary>
+	<value>
+ Dt_Consultation.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.HasHisto">
 	<summary>
@@ -2206,6 +2297,10 @@ VITAL.BO
 	<summary>
  SIRET.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_i_id_user">
+	<summary>
+ id_user.
+ </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.HasChanges">
 	<summary>
  Indique si l'objet a subi des modifications ou non
@@ -2243,6 +2338,14 @@ VITAL.BO
  </summary>
 	<value>
  SIRET.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.id_user">
+	<summary>
+ id_user.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER.
+ </summary>
+	<value>
+ id_user.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.HasHisto">
 	<summary>
@@ -2304,6 +2407,10 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Veterinaire">
 	<summary>
  Veterinaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VITAL_ANIMALDOCS">
+	<summary>
+ AnimalDocs.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_ADOPTER">
 	<summary>
@@ -2392,6 +2499,30 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Tables">
 	<summary>
  Tables du schéma VITAL.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_NOM">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_NOM_MAXLEN">
+	<summary>
+ Nom (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_CHEMIN">
+	<summary>
+ Chemin.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_CHEMIN_MAXLEN">
+	<summary>
+ Chemin (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VITAL_ANIMALDOCS">
+	<summary>
+ AnimalDocs.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_ADOPTER.VTL_ADOPTER_ID">
 	<summary>
@@ -2545,10 +2676,6 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION">
-	<summary>
- Dt_consultation.
- </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_MONTANT">
 	<summary>
  Montant.
@@ -2557,6 +2684,10 @@ VITAL.BO
 	<summary>
  Commentaire.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE_MAXLEN">
+	<summary>
+ Commentaire (Maxlen).
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE">
 	<summary>
  Id_veterinaire.
@@ -2564,6 +2695,10 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_L">
 	<summary>
  Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION">
+	<summary>
+ Dt_Consultation.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_CONSULTATION">
 	<summary>
@@ -2953,6 +3088,10 @@ VITAL.BO
 	<summary>
  SIRET (Maxlen).
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER">
+	<summary>
+ id_user.
+ </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_VETERINAIRE">
 	<summary>
  Veterinaire.
@@ -3002,6 +3141,21 @@ VITAL.BO
  Une transaction a été annulée dans la base de données.
  </summary>
 	<param name="p_o_db">Base de données.</param>
+</member><member name="M:VITAL.BO.VITAL.AnimalDocs.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.AnimalDocs"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.AnimalDocs.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.AnimalDocs"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.AnimalDocs.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.AnimalDocs"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
 </member><member name="M:VITAL.BO.VITAL.Adopter.#ctor(System.Int32,Corail.Core.Transaction)">
 	<summary>
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Adopter"/>.
@@ -3317,6 +3471,119 @@ VITAL.BO
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Veterinaire"/>.
  </summary>
 	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="F:VITAL.BO.VITAL.Auto.AnimalDocs.m_b_update">
+	<summary>
+ Indique s'il s'agit d'un élément chargé à partir de la base de données.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.AnimalDocs.IsNew">
+	<summary>
+ Indique si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregistrement sera mis à jour.
+ </summary>
+	<value>
+		<c>true</c> si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregestement sera mis à jour.
+ </value>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.InitDefaultValues">
+	<summary>
+ Initialization par défaut avec les valeurs définies via Modeler
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.OnInitDefaultValues">
+	<summary> Post-initialisation en fin d'appel du ou des constructeurs de classe. 
+ Permet de surcharger les valeurs par défaut des propriétés.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.GetAll(Corail.Core.Transaction)">
+	<summary>
+ Retourne la requête retournant tous les élements.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+	<returns>Tous les éléments</returns>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.FindDR(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Retourne la ligne de données correspondant à l'enregistrement.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.Load(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Chargement des informations à partir la table VITAL_ANIMALDOCS.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table VITAL_ANIMALDOCS.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.Save(Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VITAL_ANIMALDOCS.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.Save(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VITAL_ANIMALDOCS.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.Cancel(Corail.Core.Transaction)">
+	<summary>
+ Annule les changements apportés a l'objet
+ </summary>
+	<param name="p_o_trans">Transaction a utiliser</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.Delete(Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VITAL_ANIMALDOCS.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.Delete(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VITAL_ANIMALDOCS.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="F:VITAL.BO.VITAL.Auto.AnimalDocs.m_o_cacheDt">
+	<summary>
+ Cache Datatable
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.AnimalDocs.m_o_cacheLock">
+	<summary>
+ Cache Lock
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.AnimalDocs.m_b_cacheHasChanges">
+	<summary>
+ Cache Changes
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.AnimalDocs.CacheDt(Corail.Core.Transaction,System.Boolean)">
+	<summary>
+ Propriété du cache datatable
+ </summary>
+	<param name="p_o_trans">La transaction à utiliser</param>
+	<param name="p_b_force">Objet de la classe AnimalDocs.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.CacheDtKey(VITAL.BO.VITAL.AnimalDocs)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+	<param name="p_o_object">Objet de la classe AnimalDocs.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.CacheDtKeyFind(VITAL.BO.VITAL.AnimalDocs)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.CacheUpdate(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.CacheUpdateDt(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache datatable
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.AnimalDocs.CacheClear(System.Boolean)">
+	<summary>
+ Permet vider le cache datatable
+ </summary>
+	<param name="p_b_force">Indique si l'on force le vidage ou non</param>
+</member><member name="T:VITAL.BO.VITAL.Auto.AnimalDocs">
+	<summary>
+ AnimalDocs.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Auto.Adopter.m_b_update">
 	<summary>
  Indique s'il s'agit d'un élément chargé à partir de la base de données.

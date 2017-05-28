@@ -8,6 +8,288 @@
 Namespace VITAL.Auto
 
 
+#Region "AnimalDocs - AnimalDocs"
+
+    ''' <summary>
+    ''' AnimalDocs.
+    ''' </summary>
+    <Serializable()> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public MustInherit Class AnimalDocs
+        Inherits Raw.AnimalDocs(Of VITAL.AnimalDocs)
+
+#Region "Variables privées"
+
+        ''' <summary>
+        ''' Indique s'il s'agit d'un élément chargé à partir de la base de données.
+        ''' </summary>
+        Private m_b_update As Boolean = False
+
+#End Region
+
+#Region "Propriétés publiques"
+
+        ''' <summary>
+        ''' Indique si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregistrement sera mis à jour.
+        ''' </summary>
+        ''' <value>
+        '''   <c>true</c> si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregestement sera mis à jour.
+        ''' </value>
+        Public Property IsNew As Boolean
+            Get
+                Return Not m_b_update
+            End Get
+            Set(value As Boolean)
+                m_b_update = Not value
+            End Set
+        End Property
+
+#End Region
+
+#Region "Méthodes publiques"
+
+        ''' <summary>
+        ''' Initialization par défaut avec les valeurs définies via Modeler
+        ''' </summary>
+        Protected Sub InitDefaultValues()
+            ' Initialization par défaut avec les valeurs définies via Modeler 
+
+            ' Initialisation des valeurs de propriétés 
+            OnInitDefaultValues()
+        End Sub
+
+        ''' <summary> Post-initialisation en fin d'appel du ou des constructeurs de classe. 
+        ''' Permet de surcharger les valeurs par défaut des propriétés.
+        ''' </summary>
+        Public Overridable Sub OnInitDefaultValues()
+            ' Placer ici les surcharges de valeurs par défaut des propriétés
+        End Sub
+
+        ''' <summary>
+        ''' Retourne la requête retournant tous les élements.
+        ''' </summary>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        ''' <returns>Tous les éléments</returns>
+        Public Shared Function GetAll(Optional p_o_trans As Transaction = Nothing) As Query
+            Dim l_o_qry As New Query(DB, p_o_trans)
+
+            l_o_qry.AddFrom(Tables.VITAL_ANIMALDOCS)
+            Return l_o_qry
+        End Function
+
+        ''' <summary>
+        ''' Retourne la ligne de données correspondant à l'enregistrement.
+        ''' </summary>
+        ''' <param name="p_i_iD">ID.</param>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Friend Shared Function FindDR(p_i_iD As Integer, Optional p_o_trans As Transaction = Nothing) As DataRow
+            If HasCache Then
+                Return CacheDt(p_o_trans).Rows.Find(New Object() {p_i_iD})
+            Else
+                Dim l_o_qry As Query = GetAll(p_o_trans)
+                l_o_qry.AddWhereIs(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_ID, p_i_iD)
+                Return l_o_qry.GetFirstRow()
+            End If
+        End Function
+
+        ''' <summary>
+        ''' Chargement des informations à partir la table VITAL_ANIMALDOCS.
+        ''' </summary>
+        ''' <param name="p_i_iD">ID.</param>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Overloads Sub Load(p_i_iD As Integer, Optional p_o_trans As Transaction = Nothing)
+            Load(FindDR(p_i_iD, p_o_trans))
+        End Sub
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table VITAL_ANIMALDOCS.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overrides Sub Load(p_o_row As DataRow)
+            MyBase.Load(p_o_row)
+            IsNew = False
+        End Sub
+
+        ''' <summary>
+        ''' Enregistrer les informations dans la table VITAL_ANIMALDOCS.
+        ''' </summary>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Overridable Sub Save(Optional p_o_trans As Transaction = Nothing)
+            Save(True, p_o_trans)
+        End Sub
+
+        ''' <summary>
+        ''' Enregistrer les informations dans la table VITAL_ANIMALDOCS.
+        ''' </summary>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Overridable Sub Save(p_b_saveHisto As Boolean, Optional p_o_trans As Transaction = Nothing)
+            Dim l_o_qry As New Query(DB, p_o_trans)
+
+            If Not IsNew And Not HasChanges Then Exit Sub
+            If IsNew Then
+                l_o_qry.SetKeyAuto(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_ID)
+            Else
+                l_o_qry.AddTypedKey(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_ID, ID)
+            End If
+            l_o_qry.AddValue(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_NOM, TextSQL(Nom))
+            l_o_qry.AddValue(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_CHEMIN, TextSQL(Chemin))
+            If l_o_qry.ExecuteSave(Tables.VITAL_ANIMALDOCS, IsNew) > 0 Then
+                HasChanges = False
+                If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))
+                IsNew = False
+
+                CacheUpdate(False)
+            Else
+                Throw New Exception("#BO_CANT_SAVE")
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Annule les changements apportés a l'objet
+        ''' </summary>
+        ''' <param name="p_o_trans">Transaction a utiliser</param>
+        Public Overridable Sub Cancel(Optional p_o_trans As Transaction = Nothing)
+            Load(
+            ID,
+            p_o_trans)
+        End Sub
+
+        ''' <summary>
+        ''' Supprime l'enregistrement de la table VITAL_ANIMALDOCS.
+        ''' </summary>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Overridable Sub Delete(Optional p_o_trans As Transaction = Nothing)
+            Delete(True, p_o_trans)
+        End Sub
+
+        ''' <summary>
+        ''' Supprime l'enregistrement de la table VITAL_ANIMALDOCS.
+        ''' </summary>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Overridable Sub Delete(p_b_saveHisto As Boolean, Optional p_o_trans As Transaction = Nothing)
+            Dim l_o_qry As New Query(DB, p_o_trans)
+
+            l_o_qry.AddWhereIs(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_ID, ID)
+            l_o_qry.ExecuteDelete(Tables.VITAL_ANIMALDOCS)
+            CacheUpdate(True)
+        End Sub
+
+#End Region
+
+#Region "Cache"
+
+        ''' <summary>
+        ''' Cache Datatable
+        ''' </summary>
+        Private Shared m_o_cacheDt As Datatable = Nothing
+
+        ''' <summary>
+        ''' Cache Lock
+        ''' </summary>
+        Private Shared m_o_cacheLock As New Object
+
+        ''' <summary>
+        ''' Cache Changes
+        ''' </summary>
+        Private Shared m_b_cacheHasChanges As Boolean = False
+
+        ''' <summary>
+        ''' Propriété du cache datatable
+        ''' </summary>
+        ''' <param name="p_o_trans">La transaction à utiliser</param>
+        ''' <param name="p_b_force">Objet de la classe AnimalDocs.</param>
+        Public Shared ReadOnly Property CacheDt(Optional p_o_trans As transaction = Nothing, Optional p_b_force As Boolean = False) As Datatable
+            Get
+                SyncLock m_o_cacheLock
+                    If m_o_cacheDt Is Nothing Or p_b_force Then
+                        m_o_cacheDt = Nothing
+                        Dim l_o_qry As Query = VITAL.AnimalDocs.GetAll(p_o_trans)
+                        m_o_cacheDt = l_o_qry.GetDT
+                        Dim l_o_pkColumns As New List(Of DataColumn)
+                        l_o_pkColumns.add(m_o_cacheDt.Columns(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_ID))
+                        m_o_cacheDt.PrimaryKey = l_o_pkColumns.ToArray
+                        m_b_cacheHasChanges = False
+                    End If
+                    Return m_o_cacheDt
+                End SyncLock
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' Permet de constuire le select représentant la clé primaire pour le cache datatable
+        ''' </summary>
+        ''' <param name="p_o_object">Objet de la classe AnimalDocs.</param>
+        Private Shared Function CacheDtKey(p_o_object As VITAL.AnimalDocs) As String
+            Dim l_s_key As New System.Text.StringBuilder
+            If l_s_key.Length <> 0 Then l_s_key.Append(" AND ")
+            l_s_key.Append("ANIMALDOCS_ID = " + p_o_object.ID.ToString())
+            Return l_s_key.ToString()
+        End Function
+
+        ''' <summary>
+        ''' Permet de constuire le select représentant la clé primaire pour le cache datatable
+        ''' </summary>
+        Private Shared Function CacheDtKeyFind(p_o_object As VITAL.AnimalDocs) As object()
+            Dim l_o_pkColumns As New List(Of Object)
+            l_o_pkColumns.add(p_o_object.ID)
+            Return l_o_pkColumns.ToArray
+        End Function
+
+        ''' <summary>
+        ''' Permet mettre à jour le cache
+        ''' </summary>
+        ''' <param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+        Private Sub CacheUpdate(p_b_delete As Boolean)
+            SyncLock m_o_cacheLock
+                CacheUpdateDt(p_b_delete)
+                m_b_cacheHasChanges = True
+            End SyncLock
+        End Sub
+
+        ''' <summary>
+        ''' Permet mettre à jour le cache datatable
+        ''' </summary>
+        ''' <param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+        Private Sub CacheUpdateDt(p_b_delete As Boolean)
+            If Not m_o_cacheDt Is Nothing Then
+                Dim l_o_dr As DataRow = m_o_cacheDt.Rows.Find(CacheDtKeyFind(CType(Me,VITAL.AnimalDocs)))
+
+                If p_b_delete Then
+                    If Not l_o_dr Is Nothing Then
+                        m_o_cacheDt.Rows.RemoveAt(m_o_cacheDt.Rows.IndexOf(l_o_dr))
+                        m_o_cacheDt.AcceptChanges()
+                    End If
+                Else
+                    If l_o_dr Is Nothing Then
+                        Dim l_o_newDr As DataRow = m_o_cacheDt.NewRow
+                        ToRow(l_o_newDr)
+                        m_o_cacheDt.Rows.Add(l_o_newDr)
+                    Else
+                        ToRow(m_o_cacheDt.Rows.Item(m_o_cacheDt.Rows.IndexOf(l_o_dr)))
+                        m_o_cacheDt.AcceptChanges()
+                    End If
+                End If
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Permet vider le cache datatable
+        ''' </summary>
+        ''' <param name="p_b_force">Indique si l'on force le vidage ou non</param>
+        Public Shared Sub CacheClear(Optional p_b_force As Boolean = True)
+            If m_b_cacheHasChanges Or p_b_force Then
+                SyncLock m_o_cacheLock
+                    m_o_cacheDt = Nothing
+                End SyncLock
+            End If
+        End Sub
+
+#End Region
+
+    End Class
+
+#End Region
+
 #Region "Adopter - Adopter : Associations etre propriétaire et animal"
 
     ''' <summary>
@@ -1550,11 +1832,11 @@ Namespace VITAL.Auto
             Else
                 l_o_qry.AddTypedKey(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID, ID)
             End If
-            l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION, DB.SqlDateTime(Dt_consultation))
             l_o_qry.AddTypedValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_MONTANT, Montant)
-            l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE, StrToBlob(Commentaire))
+            l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE, TextSQL(Commentaire))
             l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE, NullIfValue(Id_veterinaire, 0))
             l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_L, NullIfValue(Id_animal, 0))
+            l_o_qry.AddValue(VITAL.VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION, DB.SqlDateTime(Dt_Consultation))
             If l_o_qry.ExecuteSave(Tables.VTL_CONSULTATION, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))
@@ -5804,6 +6086,7 @@ Namespace VITAL.Auto
             l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_NOM, TextSQL(Nom))
             l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_PRENOM, TextSQL(Prenom))
             l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET, TextSQL(SIRET))
+            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER, NullIfValue(id_user, 0))
             If l_o_qry.ExecuteSave(Tables.VTL_VETERINAIRE, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))

@@ -22,6 +22,11 @@
     Public NotInheritable Class Tables
 
         ''' <summary>
+        ''' AnimalDocs.
+        ''' </summary>
+        Public Const VITAL_ANIMALDOCS As String = "VITAL_ANIMALDOCS"
+
+        ''' <summary>
         ''' Adopter : Associations etre propriétaire et animal.
         ''' </summary>
         Public Const VTL_ADOPTER As String = "VTL_ADOPTER"
@@ -125,6 +130,43 @@
         ''' Veterinaire.
         ''' </summary>
         Public Const VTL_VETERINAIRE As String = "VTL_VETERINAIRE"
+
+    End Class
+
+#End Region
+
+#Region "VITAL_ANIMALDOCS - AnimalDocs"
+
+    ''' <summary>
+    ''' AnimalDocs.
+    ''' </summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public NotInheritable Class VITAL_ANIMALDOCS
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+        Public Const ANIMALDOCS_ID As String = "ANIMALDOCS_ID"
+
+        ''' <summary>
+        ''' Nom.
+        ''' </summary>
+        Public Const ANIMALDOCS_NOM As String = "ANIMALDOCS_NOM"
+
+        ''' <summary>
+        ''' Nom (Maxlen).
+        ''' </summary>
+        Public Const ANIMALDOCS_NOM_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Chemin.
+        ''' </summary>
+        Public Const ANIMALDOCS_CHEMIN As String = "ANIMALDOCS_CHEMIN"
+
+        ''' <summary>
+        ''' Chemin (Maxlen).
+        ''' </summary>
+        Public Const ANIMALDOCS_CHEMIN_MAXLEN As Integer = 255
 
     End Class
 
@@ -364,11 +406,6 @@
         Public Const VTL_CONSULTATION_ID As String = "VTL_CONSULTATION_ID"
 
         ''' <summary>
-        ''' Dt_consultation.
-        ''' </summary>
-        Public Const VTL_CONSULTATION_DT_CONSULTATION As String = "VTL_CONSULTATION_DT_CONSULTATION"
-
-        ''' <summary>
         ''' Montant.
         ''' </summary>
         Public Const VTL_CONSULTATION_MONTANT As String = "VTL_CONSULTATION_MONTANT"
@@ -379,6 +416,11 @@
         Public Const VTL_CONSULTATION_COMMENTAIRE As String = "VTL_CONSULTATION_COMMENTAIRE"
 
         ''' <summary>
+        ''' Commentaire (Maxlen).
+        ''' </summary>
+        Public Const VTL_CONSULTATION_COMMENTAIRE_MAXLEN As Integer = 255
+
+        ''' <summary>
         ''' Id_veterinaire.
         ''' </summary>
         Public Const VTL_CONSULTATION_ID_VETERINAIRE As String = "VTL_CONSULTATION_ID_VETERINAIRE"
@@ -387,6 +429,11 @@
         ''' Id_animal.
         ''' </summary>
         Public Const VTL_CONSULTATION_L As String = "VTL_CONSULTATION_L"
+
+        ''' <summary>
+        ''' Dt_Consultation.
+        ''' </summary>
+        Public Const VTL_CONSULTATION_DT_CONSULTATION As String = "VTL_CONSULTATION_DT_CONSULTATION"
 
     End Class
 
@@ -978,6 +1025,11 @@
         ''' </summary>
         Public Const VTL_VETERINAIRE_SIRET_MAXLEN As Integer = 50
 
+        ''' <summary>
+        ''' id_user.
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_ID_USER As String = "VTL_VETERINAIRE_ID_USER"
+
     End Class
 
 #End Region
@@ -1067,6 +1119,8 @@
         ''' </summary>
         ''' <param name="p_b_force">Indique si l'on force le vidage ou non</param>
         Public Shared Sub ClearAllCache(Optional p_b_force As Boolean = False)
+            ' Clear cache pour les items de la classe AnimalDocs
+            If AnimalDocs.HasCache Then AnimalDocs.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Adopter
             If Adopter.HasCache Then Adopter.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Animal
@@ -1145,6 +1199,46 @@
 #End Region
 
 #Region "Classes métiers"
+
+#Region "AnimalDocs - AnimalDocs"
+
+    <Serializable()> 
+    Partial Public Class AnimalDocs
+        Inherits Auto.AnimalDocs
+
+#Region "Initialisation"
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="AnimalDocs" />.
+        ''' </summary>
+        ''' <param name="p_i_iD">ID.</param>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Sub New(p_i_iD As Integer, Optional p_o_trans As Transaction = Nothing)
+            ' Chargement des informations
+            Load(p_i_iD, p_o_trans)
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="AnimalDocs" />.
+        ''' </summary>
+        Public Sub New()
+            ' Initialisation des valeurs de propriétés 
+            InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="AnimalDocs" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
+#End Region
+
+    End Class
+
+#End Region
 
 #Region "Adopter - Adopter : Associations etre propriétaire et animal"
 

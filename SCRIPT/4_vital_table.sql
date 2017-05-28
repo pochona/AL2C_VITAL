@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 27/05/2017                                     */
+/* Historique  : Creation le 28/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -15,6 +15,24 @@
 -- "=============================="
 -- "Creation des tables"
 -- "=============================="
+
+-- "Creation de la table VITAL_ANIMALDOCS"
+CREATE TABLE VITAL_ANIMALDOCS (
+	ANIMALDOCS_ID INT IDENTITY(1,1) NOT NULL,
+	ANIMALDOCS_NOM NVARCHAR(50) NOT NULL,
+	ANIMALDOCS_CHEMIN NVARCHAR(255) NOT NULL
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'AnimalDocs', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_NOM'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Chemin', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_CHEMIN'
+GO
+
 
 -- "Creation de la table VTL_ADOPTER"
 CREATE TABLE VTL_ADOPTER (
@@ -138,20 +156,17 @@ GO
 -- "Creation de la table VTL_CONSULTATION"
 CREATE TABLE VTL_CONSULTATION (
 	VTL_CONSULTATION_ID INT IDENTITY(1,1) NOT NULL,
-	VTL_CONSULTATION_DT_CONSULTATION DATETIME2(0) NOT NULL,
 	VTL_CONSULTATION_MONTANT NUMERIC(9,2),
-	VTL_CONSULTATION_COMMENTAIRE VARBINARY(MAX),
+	VTL_CONSULTATION_COMMENTAIRE NVARCHAR(255),
 	VTL_CONSULTATION_ID_VETERINAIRE INT,
 	VTL_CONSULTATION_L INT,
-	VTL_CONSULTATION_ID_PROPRIETAIRE INT
+	VTL_CONSULTATION_DT_CONSULTATION DATETIME2(0) NOT NULL
 )
 GO
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Consultation vétérinaire d''un animal', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONSULTATION'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONSULTATION', @level2type=N'COLUMN',@level2name=N'VTL_CONSULTATION_ID'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Dt_consultation', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONSULTATION', @level2type=N'COLUMN',@level2name=N'VTL_CONSULTATION_DT_CONSULTATION'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Montant', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONSULTATION', @level2type=N'COLUMN',@level2name=N'VTL_CONSULTATION_MONTANT'
 GO
@@ -161,7 +176,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_veterinaire
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_animal', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONSULTATION', @level2type=N'COLUMN',@level2name=N'VTL_CONSULTATION_L'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_proprietaire', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONSULTATION', @level2type=N'COLUMN',@level2name=N'VTL_CONSULTATION_ID_PROPRIETAIRE'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Dt_Consultation', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONSULTATION', @level2type=N'COLUMN',@level2name=N'VTL_CONSULTATION_DT_CONSULTATION'
 GO
 
 
@@ -477,7 +492,9 @@ CREATE TABLE VTL_VETERINAIRE (
 	VTL_VETERINAIRE_ID INT IDENTITY(1,1) NOT NULL,
 	VTL_VETERINAIRE_NOM NVARCHAR(50) NOT NULL,
 	VTL_VETERINAIRE_PRENOM NVARCHAR(50) NOT NULL,
-	VTL_VETERINAIRE_SIRET NVARCHAR(50)
+	VTL_VETERINAIRE_SIRET NVARCHAR(50),
+	VTL_VETERINAIRE_ID_USER INT
+  CONSTRAINT VTL_VETERINAIRE_ID_USER_CK UNIQUE (VTL_VETERINAIRE_ID_USER)
 )
 GO
 
@@ -490,6 +507,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Prenom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_PRENOM'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SIRET', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_SIRET'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'id_user', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_ID_USER'
 GO
 
 

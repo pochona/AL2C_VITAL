@@ -1,0 +1,41 @@
+ALTER TABLE [dbo].[VTL_VETERINAIRE] Add  VTL_VETERINAIRE_ID_USER INT
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'id_user', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_ID_USER'
+GO
+
+-- "Creation de la clef etrangere de la table VTL_VETERINAIRE vers la table VTL_USER"
+ALTER TABLE VTL_VETERINAIRE
+ADD CONSTRAINT VTL_VETERINAIRE_ID_USER_VTL_USER_FK FOREIGN KEY (VTL_VETERINAIRE_ID_USER)
+	REFERENCES VTL_USER(VTL_USER_ID);
+GO
+
+ALTER TABLE VTL_CONSULTATION drop column VTL_CONSULTATION_COMMENTAIRE ;
+ALTER TABLE VTL_CONSULTATION add VTL_CONSULTATION_COMMENTAIRE NVARCHAR(255);
+	
+
+-- "Creation de la table VITAL_ANIMALDOCS"
+CREATE TABLE VITAL_ANIMALDOCS (
+	ANIMALDOCS_ID INT IDENTITY(1,1) NOT NULL,
+	ANIMALDOCS_NOM NVARCHAR(50) NOT NULL,
+	ANIMALDOCS_CHEMIN NVARCHAR(255) NOT NULL
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'AnimalDocs', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_NOM'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Chemin', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_CHEMIN'
+GO
+
+-- "Creation de la clef primaire de la table VITAL_ANIMALDOCS"
+ALTER TABLE VITAL_ANIMALDOCS
+ADD CONSTRAINT VITAL_ANIMALDOCS_PK PRIMARY KEY (ANIMALDOCS_ID)
+GO
+
+-- "Ajout du role ROLE_VITAL_USER sur la table VITAL_ANIMALDOCS "
+GRANT SELECT,INSERT,UPDATE,DELETE ON VITAL_ANIMALDOCS TO VITL;
+GO
