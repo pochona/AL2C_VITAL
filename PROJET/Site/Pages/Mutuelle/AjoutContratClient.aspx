@@ -17,7 +17,7 @@
                     <cw:CwNumericTextBox runat="server" ID="IdAnimal" Label="ID de l'animal" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
                     <cw:CwNumericTextBox runat="server" ID="IdProprio" Label="ID du propriétaire" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
                     <cw:CwNumericTextBox runat="server" ID="IdAssurance" Label="ID de l'assurance" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
-                    <cw:CwLabel runat="server" ID="label1" Label="Label" Text=""></cw:CwLabel>
+                    <cw:CwLabel runat="server" ID="label1" Label="" Text=""></cw:CwLabel>
                 </cw:CwFormLayout>
             </cw:CwFrame>
 	    </cw:CwFormLayout>

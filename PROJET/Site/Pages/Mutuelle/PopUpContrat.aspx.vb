@@ -29,9 +29,9 @@ Partial Public Class PagePopUpContrat
         With consultContrat
             .DataKeyField = VTL_CONTRAT.VTL_CONTRAT_ID
             .AddSelectColumn("Nom", VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM)
-            .AddSelectColumn("Numéro de contrat", VTL_CONTRAT.VTL_CONTRAT_NUM_CONTRAT)
             .AddDateColumn("Début du contrat", VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT)
             .AddDateColumn("Fin du contrat", VTL_CONTRAT.VTL_CONTRAT_DT_FIN)
+            .AddSelectColumn("Numéro de contrat", VTL_CONTRAT.VTL_CONTRAT_NUM_CONTRAT)
 
         End With
     End Sub
