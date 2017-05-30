@@ -33,6 +33,11 @@
         ''' </summary>
 		Private m_s_chemin As String
 
+        ''' <summary>
+        ''' Id_Animal.
+        ''' </summary>
+		Private m_i_id_Animal As Integer
+
 #End Region
 
 #Region "Propriétés publiques"
@@ -108,6 +113,25 @@
             End Set
         End Property
 
+        ''' <summary>
+        ''' Id_Animal.
+        ''' Champ associé : VITAL_ANIMALDOCS.ANIMALDOCS_ID_ANIMAL.
+        ''' </summary>
+        ''' <value>
+        ''' Id_Animal.
+        ''' </value>
+		Public Overridable Property Id_Animal As Integer
+            Get
+				Return m_i_id_Animal
+            End Get
+			Set(value As Integer)
+                If m_i_id_Animal <> value Then
+                    m_i_id_Animal = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
 #End Region
 
 #Region "Constantes publiques"
@@ -167,6 +191,8 @@
             p_o_target.m_s_nom = m_s_nom
             ' Colonne : m_s_chemin
             p_o_target.m_s_chemin = m_s_chemin
+            ' Colonne : m_i_id_Animal
+            p_o_target.m_i_id_Animal = m_i_id_Animal
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -181,6 +207,7 @@
 			m_i_iD = CInt(p_o_row!ANIMALDOCS_ID)
 			m_s_nom = CStr(p_o_row!ANIMALDOCS_NOM)
 			m_s_chemin = CStr(p_o_row!ANIMALDOCS_CHEMIN)
+			m_i_id_Animal = CInt(p_o_row!ANIMALDOCS_ID_ANIMAL)
             HasChanges = False
         End Sub
 
@@ -192,6 +219,7 @@
 			p_o_row("ANIMALDOCS_ID") = ID
 			p_o_row("ANIMALDOCS_NOM") = Nom
 			p_o_row("ANIMALDOCS_CHEMIN") = Chemin
+			p_o_row("ANIMALDOCS_ID_ANIMAL") = Id_Animal
         End Sub
 
         ''' <summary>
@@ -209,6 +237,9 @@
             End If
             If p_o_object.Chemin <> Chemin Then
                 l_o_dicDiff.Add(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_CHEMIN, {p_o_object.Chemin,Chemin})
+            End If
+            If p_o_object.Id_Animal <> Id_Animal Then
+                l_o_dicDiff.Add(VITAL.VITAL_ANIMALDOCS.ANIMALDOCS_ID_ANIMAL, {p_o_object.Id_Animal,Id_Animal})
             End If
             Return l_o_dicDiff
         End Function
@@ -563,6 +594,11 @@
         ''' </summary>
 		Private m_i_id_prop As Integer
 
+        ''' <summary>
+        ''' Image.
+        ''' </summary>
+		Private m_s_image As String
+
 #End Region
 
 #Region "Propriétés publiques"
@@ -752,6 +788,25 @@
             End Set
         End Property
 
+        ''' <summary>
+        ''' Image.
+        ''' Champ associé : VTL_ANIMAL.VTL_ANIMAL_IMAGE.
+        ''' </summary>
+        ''' <value>
+        ''' Image.
+        ''' </value>
+		Public Overridable Property Image As String
+            Get
+				Return m_s_image
+            End Get
+			Set(value As String)
+                If m_s_image <> value Then
+                    m_s_image = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
 #End Region
 
 #Region "Constantes publiques"
@@ -823,6 +878,8 @@
             p_o_target.m_i_id_type = m_i_id_type
             ' Colonne : m_i_id_prop
             p_o_target.m_i_id_prop = m_i_id_prop
+            ' Colonne : m_s_image
+            p_o_target.m_s_image = m_s_image
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -843,6 +900,7 @@
 			m_i_id_carte = NzInt(p_o_row!VTL_ANIMAL_ID_CARTE, 0)
 			m_i_id_type = NzInt(p_o_row!VTL_ANIMAL_ID_TYPE, 0)
 			m_i_id_prop = NzInt(p_o_row!VTL_ANIMAL_ID_PROP, 0)
+			m_s_image = BlobToStr(p_o_row!VTL_ANIMAL_IMAGE)
             HasChanges = False
         End Sub
 
@@ -860,6 +918,7 @@
 			p_o_row("VTL_ANIMAL_ID_CARTE") = Id_carte
 			p_o_row("VTL_ANIMAL_ID_TYPE") = Id_type
 			p_o_row("VTL_ANIMAL_ID_PROP") = Id_prop
+			p_o_row("VTL_ANIMAL_IMAGE") = StrToBlob(Image).Value
         End Sub
 
         ''' <summary>
@@ -895,6 +954,9 @@
             End If
             If p_o_object.Id_prop <> Id_prop Then
                 l_o_dicDiff.Add(VITAL.VTL_ANIMAL.VTL_ANIMAL_ID_PROP, {p_o_object.Id_prop,Id_prop})
+            End If
+            If p_o_object.Image <> Image Then
+                l_o_dicDiff.Add(VITAL.VTL_ANIMAL.VTL_ANIMAL_IMAGE, {p_o_object.Image,Image})
             End If
             Return l_o_dicDiff
         End Function

@@ -103,6 +103,7 @@
     <None Include="(Libraries)\Corail.Web\Corail.Web.dll" />
     <None Include="(Libraries)\Corail.Web\Corail.Web.xml" />
     <Content Include="Global.asax" />
+    <Content Include="Images\test.png" />
     <Content Include="Pages\AccueilAdmin.aspx" />
     <Content Include="Pages\AccueilMutuelle.aspx" />
     <Content Include="Pages\AccueilProprietaire.aspx" />
@@ -118,6 +119,7 @@
     <Content Include="Pages\Proprio\HistoConsul.aspx" />
     <Content Include="Pages\Proprio\HistoVaccinTraitemt.aspx" />
     <Content Include="Pages\Proprio\Informations.aspx" />
+    <Content Include="Pages\Proprio\OpenDoc.aspx" />
     <Content Include="Pages\Proprio\SuiviPoids.aspx" />
     <Content Include="PAR\VTL_ADOPTER.xml" />
     <Content Include="PAR\VTL_ANIMAL.xml" />
@@ -255,6 +257,13 @@
     <Compile Include="Pages\Proprio\Informations.aspx.vb">
       <DependentUpon>Informations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\OpenDoc.aspx.designer.vb">
+      <DependentUpon>OpenDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\OpenDoc.aspx.vb">
+      <DependentUpon>OpenDoc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Proprio\SuiviPoids.aspx.designer.vb">
       <DependentUpon>SuiviPoids.aspx</DependentUpon>

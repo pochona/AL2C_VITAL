@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Lancement principal des scripts                            */
-/* Historique  : Creation le 28/05/2017                                     */
+/* Historique  : Creation le 30/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -18,7 +18,7 @@
 
 /* Suppression des objets existants */
 :on error ignore
-:r "2_vital_drop.sql$"
+:r "2_vital_drop.sql"
 
 :on error exit
 

@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Classes\Adopter.vb" />
     <Compile Include="Classes\Animal.vb" />
+    <Compile Include="Classes\AnimalDocs.vb" />
     <Compile Include="Classes\Assurance.vb" />
     <Compile Include="Classes\Attachement.vb" />
     <Compile Include="Classes\Auto\VITAL.Auto.vb" />

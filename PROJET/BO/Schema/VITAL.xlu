@@ -7,6 +7,19 @@
     <SqlServer UseNvarchar="True" DisablePrintStatements="True" UseWinAuthOverSqlLogin="False" RoleNameRule="0" CustomRoleName="" />
   </Rules>
   <Tables>
+    <Table Name="VITAL_ANIMALDOCS" ClassName="AnimalDocs" Label="AnimalDocs" Comment="AnimalDocs" OldNames="~temp636316058636309566" Param="True">
+      <Columns>
+        <Column Name="ANIMALDOCS_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="ANIMALDOCS_NOM" Type="String" MaxLength="50" AllowNull="false" Label="Nom" PropertyName="Nom" Comment="Nom" />
+        <Column Name="ANIMALDOCS_CHEMIN" Type="String" MaxLength="255" AllowNull="false" Label="Chemin" PropertyName="Chemin" Comment="Chemin" />
+        <Column Name="ANIMALDOCS_ID_ANIMAL" Type="Integer" Precision="10" AllowNull="false" Label="Id_Animal" PropertyName="Id_Animal" Comment="Id_Animal" />
+      </Columns>
+      <Relations>
+        <Relation Name="VITAL_ANIMALDOCS_ID_ANIMAL_VTL_ANIMAL_FK">
+          <Link ColumnName="ANIMALDOCS_ID_ANIMAL" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+      </Relations>
+    </Table>
     <Table Name="VTL_ADOPTER" ClassName="Adopter" Label="Adopter" Comment="Adopter : Associations etre propriétaire et animal" OldNames="~temp636291743853270664,VITAL_ADOPTER" Param="True">
       <Columns>
         <Column Name="VTL_ADOPTER_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
@@ -35,6 +48,7 @@
         <Column Name="VTL_ANIMAL_ID_CARTE" Type="Integer" Precision="10" Label="Id_carte" PropertyName="Id_carte" PropertyNullValue="0" Comment="Id_carte" />
         <Column Name="VTL_ANIMAL_ID_TYPE" Type="Integer" Precision="10" Label="Id_type" PropertyName="Id_type" PropertyNullValue="0" Comment="Id_type" />
         <Column Name="VTL_ANIMAL_ID_PROP" Type="Integer" Precision="10" Label="Id_prop" PropertyName="Id_prop" PropertyNullValue="0" Comment="Id_prop" />
+        <Column Name="VTL_ANIMAL_IMAGE" Type="String" Label="Image" PropertyName="Image" Comment="Image" />
       </Columns>
       <Relations>
         <Relation Name="VTL_ANIMAL_ID_RACE_VTL_RACE_FK">
@@ -287,14 +301,6 @@
           <Link ColumnName="VTL_VETERINAIRE_ID_USER" ForeignTableName="VTL_USER" ForeignFieldName="VTL_USER_ID" />
         </Relation>
       </Relations>
-    </Table>
-    <Table Name="VITAL_ANIMALDOCS" ClassName="AnimalDocs" Label="AnimalDocs" Comment="AnimalDocs" OldNames="~temp636316058636309566" Param="True">
-      <Columns>
-        <Column Name="ANIMALDOCS_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
-        <Column Name="ANIMALDOCS_NOM" Type="String" MaxLength="50" AllowNull="false" Label="Nom" PropertyName="Nom" Comment="Nom" />
-        <Column Name="ANIMALDOCS_CHEMIN" Type="String" MaxLength="255" AllowNull="false" Label="Chemin" PropertyName="Chemin" Comment="Chemin" />
-      </Columns>
-      <Relations />
     </Table>
   </Tables>
 </DataBase>

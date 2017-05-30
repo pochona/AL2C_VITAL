@@ -6,5 +6,8 @@
 		<col DataField="ANIMALDOCS_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
 		<col DataField="ANIMALDOCS_NOM" Type="Text" Unique="false" HeaderText="Nom" NotNull="true" MaxLen="50" />
 		<col DataField="ANIMALDOCS_CHEMIN" Type="Text" Unique="false" HeaderText="Chemin" NotNull="true" MaxLen="255" />
+		<col DataField="ANIMALDOCS_ID_ANIMAL" Type="Numeric" HeaderText="Id_Animal" NotNull="true">
+			<source Table="VTL_ANIMAL" TableAlias="T1" KeyField="VTL_ANIMAL_ID" LibField="VTL_ANIMAL_NOM" LibAlias="F1" Unique="false" />
+		</col>
 	</columns>
 </table>

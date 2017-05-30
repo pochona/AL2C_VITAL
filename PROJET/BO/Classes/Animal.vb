@@ -108,6 +108,76 @@
         End Function
 
 #End Region
+
+#Region "Informations de l'animal"
+
+        ''' <summary>
+        ''' Retourne le dernier poids enregistre de l'animal.
+        ''' </summary>
+        ''' <returns>Le dernier poids enregistre de l'animal.</returns>
+        Public Function GetLastPoids() As Integer
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS)
+                .AddFrom(Tables.VTL_HISTO_POIDS)
+                '  .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_HISTO_POIDS, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID_ANIMAL)
+                .AddWhereIs(VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID_ANIMAL, ID)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzInt((.GetFirstValue))
+                Else
+                    Return 0
+                End If
+            End With
+        End Function
+
+        ''' <summary>
+        ''' Retourne la derniere taille enregistrée de l'animal.
+        ''' </summary>
+        ''' <returns>La derniere taille enregistrée de l'animal.</returns>
+        Public Function GetLastTaille() As Integer
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_TAILLE)
+                .AddFrom(Tables.VTL_HISTO_TAILLE)
+                '  .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_HISTO_POIDS, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID_ANIMAL)
+                .AddWhereIs(VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_ID_ANIMAL, ID)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzInt((.GetFirstValue))
+                Else
+                    Return 0
+                End If
+            End With
+        End Function
+
+        ''' <summary>
+        ''' Retourne le numéro de carte vitale.
+        ''' </summary>
+        ''' <returns>Le numéro de carte vitale.</returns>
+        Public Function GetNumCarteVit() As String
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_CARTE.VTL_CARTE_NUMERO)
+                .AddFrom(Tables.VTL_CARTE)
+                .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_CARTE, VTL_ANIMAL.VTL_ANIMAL_ID_CARTE, VTL_CARTE.VTL_CARTE_ID)
+                .AddWhereIs(VTL_ANIMAL.VTL_ANIMAL_ID, ID)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzStr((.GetFirstValue))
+                Else
+                    Return ""
+                End If
+            End With
+        End Function
+
+#End Region
     End Class
 
 End Namespace

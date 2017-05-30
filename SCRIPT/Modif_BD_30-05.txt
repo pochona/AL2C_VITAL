@@ -1,0 +1,18 @@
+ALTER TABLE VITAL_ANIMALDOCS add ANIMALDOCS_ID_ANIMAL INT NOT NULL; 
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_Animal', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_ID_ANIMAL'
+GO
+
+
+-- "Creation de la clef etrangere de la table VITAL_ANIMALDOCS vers la table VTL_ANIMAL"
+ALTER TABLE VITAL_ANIMALDOCS
+ADD CONSTRAINT VITAL_ANIMALDOCS_ID_ANIMAL_VTL_ANIMAL_FK FOREIGN KEY (ANIMALDOCS_ID_ANIMAL)
+	REFERENCES VTL_ANIMAL(VTL_ANIMAL_ID);
+GO
+
+
+
+ALTER TABLE VTL_ANIMAL add VTL_ANIMAL_IMAGE VARBINARY(MAX);
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Image', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_IMAGE'
+GO

@@ -168,6 +168,11 @@
         ''' </summary>
         Public Const ANIMALDOCS_CHEMIN_MAXLEN As Integer = 255
 
+        ''' <summary>
+        ''' Id_Animal.
+        ''' </summary>
+        Public Const ANIMALDOCS_ID_ANIMAL As String = "ANIMALDOCS_ID_ANIMAL"
+
     End Class
 
 #End Region
@@ -271,6 +276,11 @@
         ''' Id_prop.
         ''' </summary>
         Public Const VTL_ANIMAL_ID_PROP As String = "VTL_ANIMAL_ID_PROP"
+
+        ''' <summary>
+        ''' Image.
+        ''' </summary>
+        Public Const VTL_ANIMAL_IMAGE As String = "VTL_ANIMAL_IMAGE"
 
     End Class
 

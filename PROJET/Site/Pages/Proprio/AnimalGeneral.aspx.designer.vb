@@ -23,13 +23,13 @@ Partial Public Class PageAnimalGeneral
     Protected WithEvents frmData As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Contrôle layoutvet1.
+    '''Contrôle frlGeneAniml.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents layoutvet1 As Global.Corail.Web.CwFormLayout
+    Protected WithEvents frlGeneAniml As Global.Corail.Web.CwFormLayout
 
     '''<summary>
     '''Contrôle frmAnimal.
@@ -50,31 +50,148 @@ Partial Public Class PageAnimalGeneral
     Protected WithEvents frlDtl As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle txtRace.
+    '''Contrôle hmtlImageTest.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txtRace As Global.Corail.Web.CwTextBox
+    Protected WithEvents hmtlImageTest As Global.Corail.Web.CwHtmlEditor
 
     '''<summary>
-    '''Contrôle txtPoids.
+    '''Contrôle frlInfos.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txtPoids As Global.Corail.Web.CwTextBox
+    Protected WithEvents frlInfos As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle txtAge.
+    '''Contrôle txtNom.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txtAge As Global.Corail.Web.CwTextBox
+    Protected WithEvents txtNom As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle ntbAge.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents ntbAge As Global.Corail.Web.CwNumericTextBox
+
+    '''<summary>
+    '''Contrôle ntbPoids.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents ntbPoids As Global.Corail.Web.CwNumericTextBox
+
+    '''<summary>
+    '''Contrôle ntbTaille.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents ntbTaille As Global.Corail.Web.CwNumericTextBox
+
+    '''<summary>
+    '''Contrôle txtNumPuce.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtNumPuce As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle txtNumCarte.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtNumCarte As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle dtbNaiss.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dtbNaiss As Global.Corail.Web.CwDateTextBox
+
+    '''<summary>
+    '''Contrôle dtbDeces.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dtbDeces As Global.Corail.Web.CwDateTextBox
+
+    '''<summary>
+    '''Contrôle cboType.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents cboType As Global.Corail.Web.CwComboBox
+
+    '''<summary>
+    '''Contrôle cboRace.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents cboRace As Global.Corail.Web.CwComboBox
+
+    '''<summary>
+    '''Contrôle pbnBtnsInfos.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents pbnBtnsInfos As Global.Corail.Web.CwPanelButtons
+
+    '''<summary>
+    '''Contrôle btnModif.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnModif As Global.Corail.Web.CwButton
+
+    '''<summary>
+    '''Contrôle btnSave.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnSave As Global.Corail.Web.CwButton
+
+    '''<summary>
+    '''Contrôle btnImage.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnImage As Global.Corail.Web.CwButton
 
     '''<summary>
     '''Contrôle CwFormLayout1.

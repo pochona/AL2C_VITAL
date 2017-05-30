@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des objets                                        */
-/* Historique  : Creation le 28/05/2017                                     */
+/* Historique  : Creation le 30/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -129,6 +129,12 @@ GO
 -- "=============================="
 -- "Creation des clefs etrangeres"
 -- "=============================="
+
+-- "Creation de la clef etrangere de la table VITAL_ANIMALDOCS vers la table VTL_ANIMAL"
+ALTER TABLE VITAL_ANIMALDOCS
+ADD CONSTRAINT VITAL_ANIMALDOCS_ID_ANIMAL_VTL_ANIMAL_FK FOREIGN KEY (ANIMALDOCS_ID_ANIMAL)
+	REFERENCES VTL_ANIMAL(VTL_ANIMAL_ID);
+GO
 
 -- "Creation de la clef etrangere de la table VTL_ADOPTER vers la table VTL_PROPRIETAIRE"
 ALTER TABLE VTL_ADOPTER

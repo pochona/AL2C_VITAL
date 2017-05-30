@@ -20,5 +20,6 @@
 		<col DataField="VTL_ANIMAL_ID_PROP" Type="Numeric" HeaderText="Id_prop">
 			<source Table="VTL_USER" TableAlias="T4" KeyField="VTL_USER_ID" LibField="VTL_USER_LOGIN" LibAlias="F4" Unique="false" />
 		</col>
+		<col DataField="VTL_ANIMAL_IMAGE" Type="Text" Unique="false" HeaderText="Image" />
 	</columns>
 </table>

@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 28/05/2017                                     */
+/* Historique  : Creation le 30/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -20,7 +20,8 @@
 CREATE TABLE VITAL_ANIMALDOCS (
 	ANIMALDOCS_ID INT IDENTITY(1,1) NOT NULL,
 	ANIMALDOCS_NOM NVARCHAR(50) NOT NULL,
-	ANIMALDOCS_CHEMIN NVARCHAR(255) NOT NULL
+	ANIMALDOCS_CHEMIN NVARCHAR(255) NOT NULL,
+	ANIMALDOCS_ID_ANIMAL INT NOT NULL
 )
 GO
 
@@ -31,6 +32,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_NOM'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Chemin', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_CHEMIN'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_Animal', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VITAL_ANIMALDOCS', @level2type=N'COLUMN',@level2name=N'ANIMALDOCS_ID_ANIMAL'
 GO
 
 
@@ -68,7 +71,8 @@ CREATE TABLE VTL_ANIMAL (
 	VTL_ANIMAL_ID_RACE INT,
 	VTL_ANIMAL_ID_CARTE INT,
 	VTL_ANIMAL_ID_TYPE INT,
-	VTL_ANIMAL_ID_PROP INT
+	VTL_ANIMAL_ID_PROP INT,
+	VTL_ANIMAL_IMAGE VARBINARY(MAX)
 )
 GO
 
@@ -91,6 +95,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_type', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_TYPE'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_prop', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_ID_PROP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Image', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ANIMAL', @level2type=N'COLUMN',@level2name=N'VTL_ANIMAL_IMAGE'
 GO
 
 

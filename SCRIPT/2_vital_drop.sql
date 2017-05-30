@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Suppression des objets existants                           */
-/* Historique  : Creation le 28/05/2017                                     */
+/* Historique  : Creation le 30/05/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -106,6 +106,10 @@ GO
 -- "Suppression de la clef etrangere de la table VTL_ADOPTER vers la table VTL_PROPRIETAIRE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ADOPTER_ID_PROPRIETAIRE_VTL_PROPRIETAIRE_FK' AND type in (N'F'))
 ALTER TABLE VTL_ADOPTER DROP CONSTRAINT VTL_ADOPTER_ID_PROPRIETAIRE_VTL_PROPRIETAIRE_FK;
+GO
+-- "Suppression de la clef etrangere de la table VITAL_ANIMALDOCS vers la table VTL_ANIMAL"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VITAL_ANIMALDOCS_ID_ANIMAL_VTL_ANIMAL_FK' AND type in (N'F'))
+ALTER TABLE VITAL_ANIMALDOCS DROP CONSTRAINT VITAL_ANIMALDOCS_ID_ANIMAL_VTL_ANIMAL_FK;
 GO
 
 -- "Suppression de la clef primaire de la table VTL_VETERINAIRE"
