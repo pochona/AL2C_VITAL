@@ -8,7 +8,7 @@
 <body>
 	<form id="frmData" runat="server">
 	<div>
-	    <cw:CwDataGrid runat="server" id="consultContrat" Title="{0} Contrat"></cw:CwDataGrid>
+	    <cw:CwDataGrid runat="server" ID="consultContrat" Title="{0} Contrat"></cw:CwDataGrid>
 	</div>
 	</form>
 </body>
