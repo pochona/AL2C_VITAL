@@ -5067,6 +5067,16 @@
         ''' </summary>
 		Private m_s_role As String
 
+        ''' <summary>
+        ''' Nom.
+        ''' </summary>
+		Private m_s_nom As String
+
+        ''' <summary>
+        ''' Prenom.
+        ''' </summary>
+		Private m_s_prenom As String
+
 #End Region
 
 #Region "Propriétés publiques"
@@ -5161,6 +5171,44 @@
             End Set
         End Property
 
+        ''' <summary>
+        ''' Nom.
+        ''' Champ associé : VTL_USER.VTL_USER_NOM.
+        ''' </summary>
+        ''' <value>
+        ''' Nom.
+        ''' </value>
+		Public Overridable Property Nom As String
+            Get
+				Return m_s_nom
+            End Get
+			Set(value As String)
+                If m_s_nom <> value Then
+                    m_s_nom = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Prenom.
+        ''' Champ associé : VTL_USER.VTL_USER_PRENOM.
+        ''' </summary>
+        ''' <value>
+        ''' Prenom.
+        ''' </value>
+		Public Overridable Property Prenom As String
+            Get
+				Return m_s_prenom
+            End Get
+			Set(value As String)
+                If m_s_prenom <> value Then
+                    m_s_prenom = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
 #End Region
 
 #Region "Constantes publiques"
@@ -5222,6 +5270,10 @@
             p_o_target.m_s_mdp = m_s_mdp
             ' Colonne : m_s_role
             p_o_target.m_s_role = m_s_role
+            ' Colonne : m_s_nom
+            p_o_target.m_s_nom = m_s_nom
+            ' Colonne : m_s_prenom
+            p_o_target.m_s_prenom = m_s_prenom
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -5237,6 +5289,8 @@
 			m_s_login = CStr(p_o_row!VTL_USER_LOGIN)
 			m_s_mdp = CStr(p_o_row!VTL_USER_MDP)
 			m_s_role = CStr(p_o_row!VTL_USER_ROLE)
+			m_s_nom = NzStr(p_o_row!VTL_USER_NOM)
+			m_s_prenom = NzStr(p_o_row!VTL_USER_PRENOM)
             HasChanges = False
         End Sub
 
@@ -5249,6 +5303,8 @@
 			p_o_row("VTL_USER_LOGIN") = Login
 			p_o_row("VTL_USER_MDP") = Mdp
 			p_o_row("VTL_USER_ROLE") = Role
+			p_o_row("VTL_USER_NOM") = Nom
+			p_o_row("VTL_USER_PRENOM") = Prenom
         End Sub
 
         ''' <summary>
@@ -5269,6 +5325,12 @@
             End If
             If p_o_object.Role <> Role Then
                 l_o_dicDiff.Add(VITAL.VTL_USER.VTL_USER_ROLE, {p_o_object.Role,Role})
+            End If
+            If p_o_object.Nom <> Nom Then
+                l_o_dicDiff.Add(VITAL.VTL_USER.VTL_USER_NOM, {p_o_object.Nom,Nom})
+            End If
+            If p_o_object.Prenom <> Prenom Then
+                l_o_dicDiff.Add(VITAL.VTL_USER.VTL_USER_PRENOM, {p_o_object.Prenom,Prenom})
             End If
             Return l_o_dicDiff
         End Function

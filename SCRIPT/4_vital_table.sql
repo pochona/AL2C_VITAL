@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 01/06/2017                                     */
+/* Historique  : Creation le 03/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -449,7 +449,9 @@ CREATE TABLE VTL_USER (
 	VTL_USER_ID INT IDENTITY(1,1) NOT NULL,
 	VTL_USER_LOGIN NVARCHAR(50) NOT NULL,
 	VTL_USER_MDP NVARCHAR(50) NOT NULL,
-	VTL_USER_ROLE NVARCHAR(50) NOT NULL
+	VTL_USER_ROLE NVARCHAR(50) NOT NULL,
+	VTL_USER_NOM NVARCHAR(50),
+	VTL_USER_PRENOM NVARCHAR(50)
   CONSTRAINT VTL_USER_LOGIN_CK UNIQUE (VTL_USER_LOGIN)
 )
 GO
@@ -463,6 +465,10 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mdp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_MDP'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Role', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_ROLE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_NOM'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Prenom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_PRENOM'
 GO
 
 

@@ -99,6 +99,7 @@ Partial Class PageAuthAnimal
                 .Width = Unit.Pixel(65) ' fixe la taille de la colonne
                 .DataNavigateUrlFormatString = "~/Pages/Veterinaire/AccueilAnimal.aspx?ID={0}"
                 .DataNavigateUrlField = VTL_ANIMAL.VTL_ANIMAL_ID
+                .Target = "tabAnimal" + VTL_ANIMAL.VTL_ANIMAL_ID
                 .Properties.ImageName = "search"
                 m_i_btn = .ColumnIndex
             End With
@@ -130,8 +131,6 @@ Partial Class PageAuthAnimal
             ShowException(ex)
         End Try
     End Sub
-
-
 
 #End Region
 

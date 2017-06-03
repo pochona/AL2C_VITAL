@@ -951,6 +951,26 @@
         ''' </summary>
         Public Const VTL_USER_ROLE_MAXLEN As Integer = 50
 
+        ''' <summary>
+        ''' Nom.
+        ''' </summary>
+        Public Const VTL_USER_NOM As String = "VTL_USER_NOM"
+
+        ''' <summary>
+        ''' Nom (Maxlen).
+        ''' </summary>
+        Public Const VTL_USER_NOM_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Prenom.
+        ''' </summary>
+        Public Const VTL_USER_PRENOM As String = "VTL_USER_PRENOM"
+
+        ''' <summary>
+        ''' Prenom (Maxlen).
+        ''' </summary>
+        Public Const VTL_USER_PRENOM_MAXLEN As Integer = 50
+
     End Class
 
 #End Region

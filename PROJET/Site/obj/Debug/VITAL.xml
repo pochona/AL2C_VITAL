@@ -6,7 +6,117 @@ VITAL
 </name>
 </assembly>
 <members>
-<member name="F:VITAL.PageListeConsult.frmData">
+<member name="M:VITAL.PageNewCarte.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialisation de la page en cours
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="F:VITAL.PageNewCarte.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageNewCarte.frlGene">
+	<summary>
+Contrôle frlGene.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageNewCarte.frmGene">
+	<summary>
+Contrôle frmGene.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageNewCarte.frlDtl">
+	<summary>
+Contrôle frlDtl.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageNewCarte.txtNumCarte">
+	<summary>
+Contrôle txtNumCarte.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageNewCarte.txtNFC">
+	<summary>
+Contrôle txtNFC.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageNewCarte.pnbGene">
+	<summary>
+Contrôle pnbGene.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageNewCarte.btnSave">
+	<summary>
+Contrôle btnSave.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PagePopUpProprio.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PagePopUpProprio.frlGene">
+	<summary>
+Contrôle frlGene.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PagePopUpProprio.frmGene">
+	<summary>
+Contrôle frmGene.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PagePopUpProprio.dtgProprio">
+	<summary>
+Contrôle dtgProprio.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="M:VITAL.PagePopUpProprio.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialisation de la page en cours
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="F:VITAL.PageListeConsult.frmData">
 	<summary>
 Contrôle frmData.
 </summary>
@@ -178,6 +288,258 @@ Contrôle frmData.
 Champ généré automatiquement.
 Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
 </remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.FrlTheBoss">
+	<summary>
+Contrôle FrlTheBoss.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.frmInfosAniml">
+	<summary>
+Contrôle frmInfosAniml.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.frlInfosAniml">
+	<summary>
+Contrôle frlInfosAniml.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.txtNom">
+	<summary>
+Contrôle txtNom.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.ntbAge">
+	<summary>
+Contrôle ntbAge.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.ntbPoids">
+	<summary>
+Contrôle ntbPoids.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.ntbTaille">
+	<summary>
+Contrôle ntbTaille.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.txtNumPuce">
+	<summary>
+Contrôle txtNumPuce.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.cboNumCarte">
+	<summary>
+Contrôle cboNumCarte.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.dtbNaiss">
+	<summary>
+Contrôle dtbNaiss.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.dtbDeces">
+	<summary>
+Contrôle dtbDeces.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.cboType">
+	<summary>
+Contrôle cboType.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.cboRace">
+	<summary>
+Contrôle cboRace.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.txtIdPropCache">
+	<summary>
+Contrôle txtIdPropCache.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.stbProprio">
+	<summary>
+Contrôle stbProprio.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.pbnInfosAnimal">
+	<summary>
+Contrôle pbnInfosAnimal.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.btnModifierInfoAnml">
+	<summary>
+Contrôle btnModifierInfoAnml.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.btnSaveInfoAnml">
+	<summary>
+Contrôle btnSaveInfoAnml.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.btnNewCarte">
+	<summary>
+Contrôle btnNewCarte.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.frmNewConsul">
+	<summary>
+Contrôle frmNewConsul.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.pbnNewConsult">
+	<summary>
+Contrôle pbnNewConsult.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.btnNewConsult">
+	<summary>
+Contrôle btnNewConsult.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.frmListConsult">
+	<summary>
+Contrôle frmListConsult.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.dtgConsultations">
+	<summary>
+Contrôle dtgConsultations.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.frmListTraitements">
+	<summary>
+Contrôle frmListTraitements.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.dtgTraitements">
+	<summary>
+Contrôle dtgTraitements.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.frmListVaccins">
+	<summary>
+Contrôle frmListVaccins.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.dtgVaccins">
+	<summary>
+Contrôle dtgVaccins.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.frmListConseilDiet">
+	<summary>
+Contrôle frmListConseilDiet.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.dtgDiététiques">
+	<summary>
+Contrôle dtgDiététiques.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="P:VITAL.PageAccueilAnimal.SelectedAnimal">
+	<summary>
+ Contient l'Animal consultée
+ </summary>
+	<value>Animal</value>
+	<returns>Animal</returns>
+</member><member name="P:VITAL.PageAccueilAnimal.SelectedAnimalId">
+	<summary>
+ Contient l'ID de l'Animal consultée
+ </summary>
+	<value>ID</value>
+	<returns>ID d'une Animal</returns>
 </member><member name="M:VITAL.PageAccueilAnimal.Page_Load(System.Object,System.EventArgs)">
 	<summary>
  Initialisation de la page en cours
@@ -185,6 +547,51 @@ Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans 
 	<remarks>Ne pas mettre de bloc try/catch :
  S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
  Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="M:VITAL.PageAccueilAnimal.LoadLien">
+	<summary>
+ Chargement des liens vers d'autres page depuis des boutons.
+ </summary>
+</member><member name="M:VITAL.PageAccueilAnimal.LoadCbo">
+	<summary>
+ Chargement des combo box / listes déroulantes.
+ </summary>
+</member><member name="M:VITAL.PageAccueilAnimal.LoadElementsVisibles">
+	<summary>
+ Défini les éléments visibles sur la page.
+ </summary>
+</member><member name="M:VITAL.PageAccueilAnimal.LoadData">
+	<summary>
+ Chargement des données de l'animal.
+ </summary>
+</member><member name="M:VITAL.PageAccueilAnimal.PageAccueilAnimal_Refresh(System.Object,Corail.Web.RefreshEventArg)">
+	<summary>
+ Evènement se déclenchant lors d'une demande de rafraichissement de la page.
+ </summary>
+	<param name="Sender">Source de l'événement.</param>
+	<param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
+</member><member name="M:VITAL.PageAccueilAnimal.stbProprio_TextChanged(System.Object,System.EventArgs)">
+	<summary>
+ Permet de remplir le champ Proprio automatiquemetn.
+ Se produit lorsque le contenu de la zone de texte change entre des publications sur le serveur
+ </summary>
+	<param name="sender">Instance de classe source de l'évènement.</param>
+	<param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
+</member><member name="M:VITAL.PageAccueilAnimal.btnSaveInfoAnml_Click(System.Object,System.EventArgs)">
+	<summary>
+ Boutons qui va permettre d'enregistrer les informations de l'animal.
+ </summary>
+	<param name="sender">Source de l'événement.</param>
+	<param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
+</member><member name="M:VITAL.PageAccueilAnimal.btnModifierInfoAnml_Click(System.Object,System.EventArgs)">
+	<summary>
+ Boutons qui va permettre de modifier les infos de l'animal.
+ </summary>
+	<param name="sender">Source de l'événement.</param>
+	<param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
+</member><member name="T:VITAL.PageAccueilAnimal">
+	<summary>
+ Informations de l'animal vue par un propriétaire.
+ </summary>
 </member><member name="M:VITAL.PageAuthAnimal.Page_Load(System.Object,System.EventArgs)">
 	<summary>
  Initialisation de la page en cours

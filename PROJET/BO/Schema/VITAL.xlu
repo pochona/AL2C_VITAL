@@ -268,6 +268,8 @@
         <Column Name="VTL_USER_LOGIN" Type="String" MaxLength="50" AllowNull="false" Unique="true" Label="Login" PropertyName="Login" Comment="Login" />
         <Column Name="VTL_USER_MDP" Type="String" MaxLength="50" AllowNull="false" Label="Mdp" PropertyName="Mdp" Comment="Mdp" />
         <Column Name="VTL_USER_ROLE" Type="String" MaxLength="50" AllowNull="false" Label="Role" PropertyName="Role" Comment="Role" />
+        <Column Name="VTL_USER_NOM" Type="String" MaxLength="50" Label="Nom" PropertyName="Nom" Comment="Nom" />
+        <Column Name="VTL_USER_PRENOM" Type="String" MaxLength="50" Label="Prenom" PropertyName="Prenom" Comment="Prenom" />
       </Columns>
       <Relations />
     </Table>

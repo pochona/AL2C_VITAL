@@ -3,7 +3,7 @@
     ''' <summary>
     ''' User.
     ''' </summary>
-	Partial Public Class User
+    Partial Public Class User
 
 #Region "get"
 
@@ -30,6 +30,50 @@
         End Function
 
 #End Region
+
+        ''' <summary>
+        ''' Retourne la liste des utilisateurs qui sont des propriétaires d'animaux.
+        ''' </summary>
+        ''' <returns>La liste des utilisateurs qui sont des propriétaires d'animaux.</returns>
+        Public Shared Function GetProprios() As Query
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                ' Requête principale
+                .Clear()
+                .AddSelect(VTL_USER.VTL_USER_ID)
+                .AddSelect(VTL_USER.VTL_USER_NOM)
+                .AddSelect(VTL_USER.VTL_USER_PRENOM)
+                'FROM
+                .AddFrom(Tables.VTL_USER)
+                'WHERE
+                .AddWhereIs(VTL_USER.VTL_USER_ROLE, "Proprietaire")
+            End With
+            Return l_o_sql
+        End Function
+
+        ''' <summary>
+        ''' Indique s'il existe un utilisateur avec cet ID.
+        ''' </summary>
+        ''' <param name="p_i_idUser">Id utilisateur.</param>
+        ''' <returns>Indique s'il existe un utilisateur avec cet ID.</returns>
+        Public Shared Function Exists(p_i_idUser As Integer) As Boolean
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                ' Requête principale
+                .Clear()
+                .AddSelect(VTL_USER.VTL_USER_ID)
+                .AddFrom(Tables.VTL_USER)
+                .AddWhereIs(VTL_USER.VTL_USER_ID, p_i_idUser)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End With
+        End Function
 
     End Class
 

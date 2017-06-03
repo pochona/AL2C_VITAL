@@ -5520,6 +5520,8 @@ Namespace VITAL.Auto
             l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_LOGIN, TextSQL(Login))
             l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_MDP, TextSQL(Mdp))
             l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_ROLE, TextSQL(Role))
+            l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_NOM, TextSQL(Nom))
+            l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_PRENOM, TextSQL(Prenom))
             If l_o_qry.ExecuteSave(Tables.VTL_USER, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))

@@ -2095,6 +2095,14 @@ VITAL.BO
 	<summary>
  Role.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_nom">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_prenom">
+	<summary>
+ Prenom.
+ </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.User`1.HasChanges">
 	<summary>
  Indique si l'objet a subi des modifications ou non
@@ -2132,6 +2140,22 @@ VITAL.BO
  </summary>
 	<value>
  Role.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Nom">
+	<summary>
+ Nom.
+ Champ associé : VTL_USER.VTL_USER_NOM.
+ </summary>
+	<value>
+ Nom.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Prenom">
+	<summary>
+ Prenom.
+ Champ associé : VTL_USER.VTL_USER_PRENOM.
+ </summary>
+	<value>
+ Prenom.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.User`1.HasHisto">
 	<summary>
@@ -3175,6 +3199,22 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_ROLE_MAXLEN">
 	<summary>
  Role (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_NOM">
+	<summary>
+ Nom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_NOM_MAXLEN">
+	<summary>
+ Nom (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_PRENOM">
+	<summary>
+ Prenom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_PRENOM_MAXLEN">
+	<summary>
+ Prenom (Maxlen).
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_USER">
 	<summary>
@@ -6272,6 +6312,17 @@ VITAL.BO
 	<param name="p_s_login"></param>
 	<returns></returns>
 	<remarks></remarks>
+</member><member name="M:VITAL.BO.VITAL.User.GetProprios">
+	<summary>
+ Retourne la liste des utilisateurs qui sont des propriétaires d'animaux.
+ </summary>
+	<returns>La liste des utilisateurs qui sont des propriétaires d'animaux.</returns>
+</member><member name="M:VITAL.BO.VITAL.User.Exists(System.Int32)">
+	<summary>
+ Indique s'il existe un utilisateur avec cet ID.
+ </summary>
+	<param name="p_i_idUser">Id utilisateur.</param>
+	<returns>Indique s'il existe un utilisateur avec cet ID.</returns>
 </member><member name="T:VITAL.BO.VITAL.User">
 	<summary>
  User.
@@ -6373,6 +6424,11 @@ VITAL.BO
  Retourne le dernier ID conseil diététique enregistré.
  </summary>
 	<returns>Le dernier ID conseil diététique enregistré.</returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetNomPrenomProprio">
+	<summary>
+ Retourne le nom prénom de son propriétaire.
+ </summary>
+	<returns>Le nom prénom de son propriétaire.</returns>
 </member><member name="M:VITAL.BO.VITAL.Animal.GetAnimxSearched(System.String,System.String,System.String,System.String)">
 	<summary>
  Retourne les animaux qui correspondent aux critères de recherche.
