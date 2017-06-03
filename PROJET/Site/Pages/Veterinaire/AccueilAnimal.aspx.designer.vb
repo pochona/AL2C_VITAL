@@ -13,7 +13,7 @@ Option Explicit On
 
 
 
-Partial Public Class PageAccueilVeto
+Partial Public Class PageAccueilAnimal
 
     '''<summary>
     '''Contrôle frmData.

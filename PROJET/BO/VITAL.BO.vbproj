@@ -70,6 +70,7 @@
     <Compile Include="Classes\Auto\VITAL.Raw.vb" />
     <Compile Include="Classes\Auto\VITAL.vb" />
     <Compile Include="Classes\Carte.vb" />
+    <Compile Include="Classes\ConseilDietetique.vb" />
     <Compile Include="Classes\Consultation.vb" />
     <Compile Include="Classes\Contrat.vb" />
     <Compile Include="Classes\Histo_Poids.vb" />

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Carte</title>
+	<description>Carte</description>
+	<columns>
+		<col DataField="VTL_CARTE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_CARTE_NUMERO" Type="Text" Unique="true" HeaderText="Numero" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_CARTE_NFC" Type="Text" Unique="true" HeaderText="Nfc" MaxLen="255" />
+	</columns>
+</table>

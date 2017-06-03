@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Suppression des objets existants                           */
-/* Historique  : Creation le 30/05/2017                                     */
+/* Historique  : Creation le 01/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -78,6 +78,10 @@ GO
 -- "Suppression de la clef etrangere de la table VTL_CONSULTATION vers la table VTL_VETERINAIRE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CONSULTATION_ID_VETERINAIRE_VTL_VETERINAIRE_FK' AND type in (N'F'))
 ALTER TABLE VTL_CONSULTATION DROP CONSTRAINT VTL_CONSULTATION_ID_VETERINAIRE_VTL_VETERINAIRE_FK;
+GO
+-- "Suppression de la clef etrangere de la table VTL_CNSLDIET vers la table VTL_ANIMAL"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VITAL_CNSLDIET_ID_ANIMAL_VTL_ANIMAL_FK' AND type in (N'F'))
+ALTER TABLE VTL_CNSLDIET DROP CONSTRAINT VITAL_CNSLDIET_ID_ANIMAL_VTL_ANIMAL_FK;
 GO
 -- "Suppression de la clef etrangere de la table VTL_ATTACHEMT vers la table VTL_CONSULTATION"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ATTACHEMT_CONSULT_VTL_CONSULTATION_FK' AND type in (N'F'))
@@ -239,6 +243,14 @@ GO
 -- "Suppression de la clef primaire de la table VTL_CONSULTATION_HISTO"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CONSULTATION_HISTO_PK' AND type in (N'PK'))
 ALTER TABLE VTL_CONSULTATION_HISTO DROP CONSTRAINT VTL_CONSULTATION_HISTO_PK;
+GO
+-- "Suppression de la clef primaire de la table VTL_CNSLDIET"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CNSLDIET_PK' AND type in (N'PK'))
+ALTER TABLE VTL_CNSLDIET DROP CONSTRAINT VTL_CNSLDIET_PK;
+GO
+-- "Suppression de la clef primaire de la table VTL_CNSLDIET_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CNSLDIET_HISTO_PK' AND type in (N'PK'))
+ALTER TABLE VTL_CNSLDIET_HISTO DROP CONSTRAINT VTL_CNSLDIET_HISTO_PK;
 GO
 -- "Suppression de la clef primaire de la table VTL_CARTE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CARTE_PK' AND type in (N'PK'))
@@ -416,6 +428,14 @@ GO
 -- "Suppression de la table VTL_CONSULTATION_HISTO"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CONSULTATION_HISTO' AND type in (N'U'))
 DROP TABLE VTL_CONSULTATION_HISTO;
+GO
+-- "Suppression de la table VTL_CNSLDIET"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CNSLDIET' AND type in (N'U'))
+DROP TABLE VTL_CNSLDIET;
+GO
+-- "Suppression de la table VTL_CNSLDIET_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CNSLDIET_HISTO' AND type in (N'U'))
+DROP TABLE VTL_CNSLDIET_HISTO;
 GO
 -- "Suppression de la table VTL_CARTE"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_CARTE' AND type in (N'U'))

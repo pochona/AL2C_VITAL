@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Contrat</title>
+	<description>Contrat</description>
+	<columns>
+		<col DataField="VTL_CONTRAT_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_CONTRAT_NUM_CONTRAT" Type="Text" Unique="false" HeaderText="Num_contrat" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_CONTRAT_DT_DEBUT" Type="Date" Unique="false" HeaderText="Dt_debut" />
+		<col DataField="VTL_CONTRAT_DT_FIN" Type="Date" Unique="false" HeaderText="Dt_fin" />
+		<col DataField="VTL_CONTRAT_ID_ANIMAL" Type="Numeric" HeaderText="Id_animal">
+			<source Table="VTL_ANIMAL" TableAlias="T1" KeyField="VTL_ANIMAL_ID" LibField="VTL_ANIMAL_NOM" LibAlias="F1" Unique="false" />
+		</col>
+		<col DataField="VTL_CONTRAT_ID_PROPRIETAIRE" Type="Numeric" HeaderText="Id_proprietaire">
+			<source Table="VTL_PROPRIETAIRE" TableAlias="T2" KeyField="VTL_PROPRIETAIRE_ID" LibField="VTL_PROPRIETAIRE_NOM" LibAlias="F2" Unique="false" />
+		</col>
+		<col DataField="VTL_CONTRAT_ID_ASSURANCE" Type="Numeric" HeaderText="Id_assurance">
+			<source Table="VTL_ASSURANCE" TableAlias="T3" KeyField="VTL_ASSURANCE_ID" LibField="VTL_ASSURANCE_NOM" LibAlias="F3" Unique="false" />
+		</col>
+	</columns>
+</table>

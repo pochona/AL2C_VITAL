@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Remboursement</title>
+	<description>Remboursement</description>
+	<columns>
+		<col DataField="VTL_REMBOURSMT_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_REMBOURSMT_NAME" Type="Text" Unique="false" HeaderText="Name" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_REMBOURSMT_DATE" Type="DateTime" Unique="false" HeaderText="Date" NotNull="true" />
+		<col DataField="VTL_REMBOURSMT_STATUT" Type="Text" Unique="false" HeaderText="Statut" MaxLen="50" />
+		<col DataField="VTL_REMBOURSMT_CONSULT" Type="Numeric" HeaderText="Consult">
+			<source Table="VTL_CONSULTATION" TableAlias="T1" KeyField="VTL_CONSULTATION_ID" LibField="VTL_CONSULTATION_COMMENTAIRE" LibAlias="F1" Unique="false" />
+		</col>
+		<col DataField="VTL_REMBOURSMT_CONTRAT" Type="Numeric" HeaderText="Contrat">
+			<source Table="VTL_CONTRAT" TableAlias="T2" KeyField="VTL_CONTRAT_ID" LibField="VTL_CONTRAT_NUM_CONTRAT" LibAlias="F2" Unique="false" />
+		</col>
+	</columns>
+</table>

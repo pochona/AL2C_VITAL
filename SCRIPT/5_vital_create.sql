@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des objets                                        */
-/* Historique  : Creation le 30/05/2017                                     */
+/* Historique  : Creation le 01/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -44,6 +44,11 @@ GO
 -- "Creation de la clef primaire de la table VTL_CARTE"
 ALTER TABLE VTL_CARTE
 ADD CONSTRAINT VTL_CARTE_PK PRIMARY KEY (VTL_CARTE_ID)
+GO
+
+-- "Creation de la clef primaire de la table VTL_CNSLDIET"
+ALTER TABLE VTL_CNSLDIET
+ADD CONSTRAINT VTL_CNSLDIET_PK PRIMARY KEY (CNSLDIET_ID)
 GO
 
 -- "Creation de la clef primaire de la table VTL_CONSULTATION"
@@ -176,6 +181,12 @@ GO
 ALTER TABLE VTL_ATTACHEMT
 ADD CONSTRAINT VTL_ATTACHEMT_CONSULT_VTL_CONSULTATION_FK FOREIGN KEY (VTL_ATTACHEMT_CONSULT)
 	REFERENCES VTL_CONSULTATION(VTL_CONSULTATION_ID);
+GO
+
+-- "Creation de la clef etrangere de la table VTL_CNSLDIET vers la table VTL_ANIMAL"
+ALTER TABLE VTL_CNSLDIET
+ADD CONSTRAINT VITAL_CNSLDIET_ID_ANIMAL_VTL_ANIMAL_FK FOREIGN KEY (CNSLDIET_ID_ANIMAL)
+	REFERENCES VTL_ANIMAL(VTL_ANIMAL_ID);
 GO
 
 -- "Creation de la clef etrangere de la table VTL_CONSULTATION vers la table VTL_VETERINAIRE"

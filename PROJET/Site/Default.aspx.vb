@@ -11,11 +11,11 @@ Partial Public Class PageDefault
             If UserIsInRole("Admin") Then
                 Return "~/Pages/AccueilAdmin.aspx"
             ElseIf UserIsInRole("Veto") Then
-                Return "~/Pages/AccueilVeto.aspx"
+                Return "~/Pages/Veterinaire/AuthAnimal.aspx"
             ElseIf UserIsInRole("Mutuelle") Then
-                Return "~/Pages/AccueilMutuelle.aspx"
+                Return "~/Pages/Mutuelle/AccueilMutuelle.aspx"
             ElseIf UserIsInRole("Proprietaire") Then
-                Return "~/Pages/AccueilProprietaire.aspx"
+                Return "~/Pages/Proprio/AccueilProprietaire.aspx"
             End If
             Return "Welcome.aspx"
         End Get

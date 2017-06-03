@@ -52,6 +52,11 @@
         Public Const VTL_CARTE As String = "VTL_CARTE"
 
         ''' <summary>
+        ''' ConseilDietetique.
+        ''' </summary>
+        Public Const VTL_CNSLDIET As String = "VTL_CNSLDIET"
+
+        ''' <summary>
         ''' Consultation vétérinaire d'un animal.
         ''' </summary>
         Public Const VTL_CONSULTATION As String = "VTL_CONSULTATION"
@@ -397,6 +402,43 @@
         ''' Nfc (Maxlen).
         ''' </summary>
         Public Const VTL_CARTE_NFC_MAXLEN As Integer = 255
+
+    End Class
+
+#End Region
+
+#Region "VTL_CNSLDIET - ConseilDietetique"
+
+    ''' <summary>
+    ''' ConseilDietetique.
+    ''' </summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public NotInheritable Class VTL_CNSLDIET
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+        Public Const CNSLDIET_ID As String = "CNSLDIET_ID"
+
+        ''' <summary>
+        ''' Contenu.
+        ''' </summary>
+        Public Const CNSLDIET_CONTENU As String = "CNSLDIET_CONTENU"
+
+        ''' <summary>
+        ''' Contenu (Maxlen).
+        ''' </summary>
+        Public Const CNSLDIET_CONTENU_MAXLEN As Integer = 2000
+
+        ''' <summary>
+        ''' Id_animal.
+        ''' </summary>
+        Public Const CNSLDIET_ID_ANIMAL As String = "CNSLDIET_ID_ANIMAL"
+
+        ''' <summary>
+        ''' Date.
+        ''' </summary>
+        Public Const CNSLDIET_DATE As String = "CNSLDIET_DATE"
 
     End Class
 
@@ -1141,6 +1183,8 @@
             If Attachement.HasCache Then Attachement.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Carte
             If Carte.HasCache Then Carte.CacheClear(p_b_force)
+            ' Clear cache pour les items de la classe ConseilDietetique
+            If ConseilDietetique.HasCache Then ConseilDietetique.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Consultation
             If Consultation.HasCache Then Consultation.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Contrat
@@ -1438,6 +1482,46 @@
 
         ''' <summary>
         ''' Initialise une nouvelle instance de la classe <see cref="Carte" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
+#End Region
+
+    End Class
+
+#End Region
+
+#Region "ConseilDietetique - ConseilDietetique"
+
+    <Serializable()> 
+    Partial Public Class ConseilDietetique
+        Inherits Auto.ConseilDietetique
+
+#Region "Initialisation"
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="ConseilDietetique" />.
+        ''' </summary>
+        ''' <param name="p_i_iD">ID.</param>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Sub New(p_i_iD As Integer, Optional p_o_trans As Transaction = Nothing)
+            ' Chargement des informations
+            Load(p_i_iD, p_o_trans)
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="ConseilDietetique" />.
+        ''' </summary>
+        Public Sub New()
+            ' Initialisation des valeurs de propriétés 
+            InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="ConseilDietetique" />.
         ''' </summary>
         ''' <param name="p_o_row">Ligne d'une table de données.</param>
         Protected Sub New(p_o_row As DataRow)

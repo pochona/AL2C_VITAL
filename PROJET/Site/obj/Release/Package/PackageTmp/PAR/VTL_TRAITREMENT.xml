@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Traitrement</title>
+	<description>Traitrement</description>
+	<columns>
+		<col DataField="VTL_TRAITREMENT_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_TRAITREMENT_DUREE_JOUR" Type="Numeric" Unique="false" HeaderText="Duree_jour" NotNull="true" />
+		<col DataField="VTL_TRAITREMENT_DT_DEBUT" Type="DateTime" Unique="false" HeaderText="Dt_debut" />
+	</columns>
+</table>

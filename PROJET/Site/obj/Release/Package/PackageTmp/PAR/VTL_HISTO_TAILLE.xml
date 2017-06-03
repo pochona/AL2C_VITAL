@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Histo_Taille</title>
+	<description>Histo_Taille</description>
+	<columns>
+		<col DataField="VTL_HISTO_TAILLE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_HISTO_TAILLE_DT_HISTO" Type="DateTime" Unique="false" HeaderText="Dt_histo" NotNull="true" />
+		<col DataField="VTL_HISTO_TAILLE_TAILLE" Type="Numeric" Unique="false" HeaderText="Taille" NotNull="true" Decimals="2" />
+		<col DataField="VTL_HISTO_TAILLE_ID_ANIMAL" Type="Numeric" HeaderText="Id_animal" NotNull="true">
+			<source Table="VTL_ANIMAL" TableAlias="T1" KeyField="VTL_ANIMAL_ID" LibField="VTL_ANIMAL_NOM" LibAlias="F1" Unique="false" />
+		</col>
+	</columns>
+</table>

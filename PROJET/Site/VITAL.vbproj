@@ -105,9 +105,8 @@
     <Content Include="Global.asax" />
     <Content Include="Images\test.png" />
     <Content Include="Pages\AccueilAdmin.aspx" />
-    <Content Include="Pages\AccueilMutuelle.aspx" />
-    <Content Include="Pages\AccueilProprietaire.aspx" />
-    <Content Include="Pages\AccueilVeto.aspx" />
+    <Content Include="Pages\Mutuelle\AccueilMutuelle.aspx" />
+    <Content Include="Pages\Proprio\AccueilProprietaire.aspx" />
     <Content Include="Pages\Exemple.aspx" />
     <Content Include="Pages\HistoriquePoids.aspx" />
     <Content Include="Pages\histo_consultation.aspx" />
@@ -121,6 +120,10 @@
     <Content Include="Pages\Proprio\Informations.aspx" />
     <Content Include="Pages\Proprio\OpenDoc.aspx" />
     <Content Include="Pages\Proprio\SuiviPoids.aspx" />
+    <Content Include="Pages\Veterinaire\AccueilAnimal.aspx" />
+    <Content Include="Pages\Veterinaire\AuthAnimal.aspx" />
+    <Content Include="Pages\Veterinaire\CreerAnimal.aspx" />
+    <Content Include="Pages\Veterinaire\ListeConsult.aspx" />
     <Content Include="PAR\VTL_ADOPTER.xml" />
     <Content Include="PAR\VTL_ANIMAL.xml" />
     <Content Include="PAR\VTL_ASSURANCE.xml" />
@@ -142,7 +145,9 @@
     <Content Include="PAR\VTL_VACCIN.xml" />
     <Content Include="PAR\VTL_VACCINATION.xml" />
     <Content Include="PAR\VTL_VETERINAIRE.xml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.designer.vb">
@@ -160,25 +165,18 @@
       <DependentUpon>AccueilAdmin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Pages\AccueilMutuelle.aspx.designer.vb">
+    <Compile Include="Pages\Mutuelle\AccueilMutuelle.aspx.designer.vb">
       <DependentUpon>AccueilMutuelle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AccueilMutuelle.aspx.vb">
+    <Compile Include="Pages\Mutuelle\AccueilMutuelle.aspx.vb">
       <DependentUpon>AccueilMutuelle.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Pages\AccueilProprietaire.aspx.designer.vb">
+    <Compile Include="Pages\Proprio\AccueilProprietaire.aspx.designer.vb">
       <DependentUpon>AccueilProprietaire.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AccueilProprietaire.aspx.vb">
+    <Compile Include="Pages\Proprio\AccueilProprietaire.aspx.vb">
       <DependentUpon>AccueilProprietaire.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Pages\AccueilVeto.aspx.designer.vb">
-      <DependentUpon>AccueilVeto.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AccueilVeto.aspx.vb">
-      <DependentUpon>AccueilVeto.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Exemple.aspx.designer.vb">
@@ -272,6 +270,34 @@
       <DependentUpon>SuiviPoids.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Pages\Veterinaire\AccueilAnimal.aspx.designer.vb">
+      <DependentUpon>AccueilAnimal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Veterinaire\AccueilAnimal.aspx.vb">
+      <DependentUpon>AccueilAnimal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Veterinaire\AuthAnimal.aspx.designer.vb">
+      <DependentUpon>AuthAnimal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Veterinaire\AuthAnimal.aspx.vb">
+      <DependentUpon>AuthAnimal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Veterinaire\CreerAnimal.aspx.designer.vb">
+      <DependentUpon>CreerAnimal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Veterinaire\CreerAnimal.aspx.vb">
+      <DependentUpon>CreerAnimal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Veterinaire\ListeConsult.aspx.designer.vb">
+      <DependentUpon>ListeConsult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Veterinaire\ListeConsult.aspx.vb">
+      <DependentUpon>ListeConsult.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Welcome.aspx.designer.vb">
       <DependentUpon>Welcome.aspx</DependentUpon>
     </Compile>
@@ -327,6 +353,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\PublishProfiles\VitAnimal.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

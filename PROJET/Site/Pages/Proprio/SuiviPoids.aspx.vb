@@ -53,7 +53,26 @@ Partial Public Class PageSuiviPoids
         If Not IsPostBack Then
                 'Récupère le document dans l'url
             SelectedAnimalId = CInt(Request.QueryString("ID"))
+            LoadData()
         End If
+    End Sub
+
+    Private Sub LoadData()
+        Dim l_o_poids As New Histo_Poids
+        Dim l_o_conseilDiet As New ConseilDietetique
+
+        txtPoidsActuel.Text = CStr(SelectedAnimal.GetLastPoids())
+        If SelectedAnimal.GetIDConseilDiet() <> 0 Then
+            l_o_conseilDiet.Load(SelectedAnimal.GetIDConseilDiet())
+            txtConseils.Label = "Conseils diététiques"
+            txtConseils.Text = l_o_conseilDiet.Contenu
+            txtConseils.Enabled = False
+        Else
+            'Pas de dernier conseil diet
+            txtConseils.Label = "Pour obtenir des conseils diététiques pour animal, contactez votre vétérinaire !"
+            dtbLastConseil.Date = l_o_conseilDiet.Date
+        End If
+
     End Sub
 
 #End Region

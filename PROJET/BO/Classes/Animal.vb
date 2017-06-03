@@ -177,7 +177,72 @@
             End With
         End Function
 
+        ''' <summary>
+        ''' Retourne le dernier ID conseil diététique enregistré.
+        ''' </summary>
+        ''' <returns>Le dernier ID conseil diététique enregistré.</returns>
+        Public Function GetIDConseilDiet() As Integer
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_CNSLDIET.CNSLDIET_ID)
+                .AddFrom(Tables.VTL_CNSLDIET)
+                .AddWhereIs(VTL_CNSLDIET.CNSLDIET_ID_ANIMAL, ID)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzInt((.GetFirstValue))
+                Else
+                    Return 0
+                End If
+            End With
+        End Function
+
 #End Region
+
+#Region "Recherche"
+
+        ''' <summary>
+        ''' Retourne les animaux qui correspondent aux critères de recherche.
+        ''' </summary>
+        ''' <param name="p_s_NumCarte">Numéro de carte vital (NUMERO ET PAS ID NI NFC).</param>
+        ''' <param name="p_s_NomAnimal">Nom animal.</param>
+        ''' <param name="p_s_NomProprio">Nom Proprio.</param>
+        ''' <param name="p_s_PrenomProprio">Prénom proprio.</param>
+        ''' <returns>Les animaux qui correspondent aux critères de recherche.</returns>
+        Public Shared Function GetAnimxSearched(p_s_NumCarte As String, p_s_NomAnimal As String, _
+                                                p_s_NomProprio As String, p_s_PrenomProprio As String) As Query
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                ' Requête principale
+                .Clear()
+                ' .AddOption(DbSelectOption.Distinct)
+                ' .AddSelect(Tables.SAV_DMDE + "." + SAV_DMDE.APP_ID)
+                .AddSelect(VTL_ANIMAL.VTL_ANIMAL_ID)
+                .AddSelect(VTL_ANIMAL.VTL_ANIMAL_NOM)
+                .AddSelect(VTL_ANIMAL.VTL_ANIMAL_DT_NAISSANCE)
+                .AddSelect(VTL_CARTE.VTL_CARTE_NUMERO)
+                .AddSelect(MyDB.FctConcat(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, TextSQL(", "), VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM), "nom_prenom")
+                .AddSelect(VTL_RACE.VTL_RACE_NOM)
+                .AddSelect(VTL_TYPE.VTL_TYPE_LIBELLE)
+                'FROM
+                .AddFrom(Tables.VTL_ANIMAL)
+                .AddFrom(Tables.VTL_PROPRIETAIRE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddFrom(Tables.VTL_RACE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_RACE.VTL_RACE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_RACE)
+                .AddFrom(Tables.VTL_TYPE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_TYPE.VTL_TYPE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_TYPE)
+                .AddFrom(Tables.VTL_CARTE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_CARTE.VTL_CARTE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_CARTE)
+                'WHERE
+                If p_s_NumCarte <> "" Then .AddWhereContains(VTL_CARTE.VTL_CARTE_NUMERO, p_s_NumCarte)
+                If p_s_NomAnimal <> "" Then .AddWhereContains(VTL_ANIMAL.VTL_ANIMAL_NOM, p_s_NomAnimal)
+                If p_s_NomProprio <> "" Then .AddWhereContains(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, p_s_NomProprio)
+                If p_s_PrenomProprio <> "" Then .AddWhereContains(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM, p_s_PrenomProprio)
+            End With
+            Return l_o_sql
+        End Function
+
+#End Region
+
     End Class
 
 End Namespace

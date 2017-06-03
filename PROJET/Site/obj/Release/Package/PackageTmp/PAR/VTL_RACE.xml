@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Race</title>
+	<description>Race</description>
+	<columns>
+		<col DataField="VTL_RACE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_RACE_NOM" Type="Text" Unique="false" HeaderText="Nom" NotNull="true" MaxLen="50" />
+	</columns>
+</table>

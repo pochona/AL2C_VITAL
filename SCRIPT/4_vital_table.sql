@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 30/05/2017                                     */
+/* Historique  : Creation le 01/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -156,6 +156,27 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Numero', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_NUMERO'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nfc', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CARTE', @level2type=N'COLUMN',@level2name=N'VTL_CARTE_NFC'
+GO
+
+
+-- "Creation de la table VTL_CNSLDIET"
+CREATE TABLE VTL_CNSLDIET (
+	CNSLDIET_ID INT IDENTITY(1,1) NOT NULL,
+	CNSLDIET_CONTENU NVARCHAR(2000) NOT NULL,
+	CNSLDIET_ID_ANIMAL INT NOT NULL,
+	CNSLDIET_DATE DATE NOT NULL
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ConseilDietetique', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CNSLDIET'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CNSLDIET', @level2type=N'COLUMN',@level2name=N'CNSLDIET_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Contenu', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CNSLDIET', @level2type=N'COLUMN',@level2name=N'CNSLDIET_CONTENU'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_animal', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CNSLDIET', @level2type=N'COLUMN',@level2name=N'CNSLDIET_ID_ANIMAL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Date', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CNSLDIET', @level2type=N'COLUMN',@level2name=N'CNSLDIET_DATE'
 GO
 
 

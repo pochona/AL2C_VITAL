@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Position</title>
+	<description>Position</description>
+	<columns>
+		<col DataField="VTL_POSITION_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_POSITION_DT_POSITION" Type="DateTime" Unique="false" HeaderText="Dt_position" NotNull="true" />
+		<col DataField="VTL_POSITION_COORD_LAT" Type="Text" Unique="false" HeaderText="Coord_lat" MaxLen="50" />
+		<col DataField="VTL_POSITION_COORD_LONG" Type="Text" Unique="false" HeaderText="Coord_long" MaxLen="50" />
+		<col DataField="VTL_POSITION_TOP_COURANTE" Type="Boolean" Unique="false" HeaderText="Top_courante" />
+		<col DataField="VTL_POSITION_ID_ANIMAL" Type="Numeric" HeaderText="Id_animal">
+			<source Table="VTL_ANIMAL" TableAlias="T1" KeyField="VTL_ANIMAL_ID" LibField="VTL_ANIMAL_NOM" LibAlias="F1" Unique="false" />
+		</col>
+	</columns>
+</table>

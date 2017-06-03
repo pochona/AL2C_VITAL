@@ -57,4 +57,40 @@ Partial Public Class PageSuiviPoids
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents txtPoidsActuel As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle frmConseilsDietétiq.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frmConseilsDietétiq As Global.Corail.Web.CwFrame
+
+    '''<summary>
+    '''Contrôle CwFormLayout1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwFormLayout1 As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
+    '''Contrôle txtConseils.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtConseils As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle dtbLastConseil.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dtbLastConseil As Global.Corail.Web.CwDateTextBox
 End Class

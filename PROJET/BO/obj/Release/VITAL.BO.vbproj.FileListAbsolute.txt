@@ -1,0 +1,11 @@
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\bin\VITAL.BO.dll
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\bin\VITAL.BO.xml
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\bin\Corail.Core.dll
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\bin\Corail.Data.SqlServer.dll
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\bin\Corail.Core.xml
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\bin\Corail.Data.SqlServer.xml
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Release\VITAL.BO.vbprojResolveAssemblyReference.cache
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Release\VITAL.BO.Resources.resources
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Release\VITAL.BO.vbproj.GenerateResource.Cache
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Release\VITAL.BO.dll
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Release\VITAL.BO.xml

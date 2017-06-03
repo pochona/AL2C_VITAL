@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Traitement_medicament</title>
+	<description>Traitement_medicament</description>
+	<columns>
+		<col DataField="VTL_TRAITEMENT_MEDICAMENT_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT" Type="Numeric" HeaderText="Id_traitement" NotNull="true">
+			<source Table="VTL_TRAITREMENT" TableAlias="T1" KeyField="VTL_TRAITREMENT_ID" LibField="" LibAlias="F1" Unique="false" />
+		</col>
+		<col DataField="VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT" Type="Numeric" HeaderText="Id_medicament">
+			<source Table="VTL_MEDICAMENT" TableAlias="T2" KeyField="VTL_MEDICAMENT_ID" LibField="VTL_MEDICAMENT_LIBELLE" LibAlias="F2" Unique="false" />
+		</col>
+		<col DataField="VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE" Type="Numeric" Unique="false" HeaderText="Posologie" />
+		<col DataField="VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR" Type="Numeric" Unique="false" HeaderText="Duree_jour" />
+	</columns>
+</table>

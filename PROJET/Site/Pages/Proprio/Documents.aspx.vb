@@ -70,12 +70,51 @@ Partial Public Class PageDocuments
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
+    'x     Private Sub uplDoc_FileReceived(sender As Object, e As EventArgs) Handles uplDoc.FileReceived
+    'x         Dim l_o_cls As New Query
+    'x         Dim l_s_PathInterv As String
+    'x         Dim l_s_nom As String
+    'x         Dim l_s_extension As String
+    'x         Dim l_o_doc As New AnimalDocs
+    'x 
+    'x         If Len(uplDoc.FileName) > 0 Then
+    'x             l_s_PathInterv = AppSettings("DocsPath")
+    'x             Try
+    'x                 If l_s_PathInterv <> "" Then
+    'x                     l_s_nom = uplDoc.FileName
+    'x                     ' On enregistre le chemin des PJ dans la base
+    'x                     ' TODO, voir si on garde
+    'x                     If Len(l_s_nom) > 50 Then
+    'x                         l_s_extension = l_s_nom
+    'x                         l_s_extension = Right(l_s_extension, 4)
+    'x                         l_s_nom = Left(l_s_nom, 46)
+    'x                         l_s_nom = l_s_nom + l_s_extension
+    'x                     End If
+    'x                     '----------Enregsitrement dans un répertoire
+    'x                     'On copie le fichier dans le répertoire qui va contenir les fichiers
+    'x                     uplDoc.PostedFile.SaveAs(l_s_PathInterv + "\" + l_s_nom)
+    'x                     '----------Enregistrement dans la base de données
+    'x                     l_o_doc.Chemin = l_s_PathInterv + "\" + l_s_nom
+    'x                     l_o_doc.Nom = l_s_nom
+    'x                     l_o_doc.Id_Animal = SelectedAnimalId
+    'x                     l_o_doc.Save()
+    'x                     'Message
+    'x                     ShowInfo("Document enregistré.")
+    'x                 Else
+    'x                     Throw New UserException("Chemin du répertoire de l'application non valide.")
+    'x                 End If
+    'x             Catch ex As Exception
+    'x                 ShowException(ex)
+    'x             End Try
+    'x         End If
+    'x     End Sub
     Private Sub uplDoc_FileReceived(sender As Object, e As EventArgs) Handles uplDoc.FileReceived
         Dim l_o_cls As New Query
         Dim l_s_PathInterv As String
         Dim l_s_nom As String
         Dim l_s_extension As String
         Dim l_o_doc As New AnimalDocs
+        Dim l_s_ext As String()
 
         If Len(uplDoc.FileName) > 0 Then
             l_s_PathInterv = AppSettings("DocsPath")
@@ -90,16 +129,22 @@ Partial Public Class PageDocuments
                         l_s_nom = Left(l_s_nom, 46)
                         l_s_nom = l_s_nom + l_s_extension
                     End If
-                    '----------Enregsitrement dans un répertoire
-                    'On copie le fichier dans le répertoire qui va contenir les fichiers
-                    uplDoc.PostedFile.SaveAs(l_s_PathInterv + "\" + l_s_nom)
                     '----------Enregistrement dans la base de données
-                    l_o_doc.Chemin = l_s_PathInterv + "\" + l_s_nom
+                    l_o_doc.Chemin = l_s_PathInterv + "\"
                     l_o_doc.Nom = l_s_nom
                     l_o_doc.Id_Animal = SelectedAnimalId
                     l_o_doc.Save()
+                    'Chemin unique avec l'ID (on le fait now car avant le save l'id existe pas 
+                    l_s_ext = Split(l_s_nom, ".")
+                    l_o_doc.Chemin = l_s_PathInterv + "\" + CStr(l_o_doc.ID) + "." + l_s_ext(1)
+                    l_o_doc.Save()
+                    '----------Enregsitrement dans un répertoire
+                    'On copie le fichier dans le répertoire qui va contenir les fichiers
+                    uplDoc.PostedFile.SaveAs(l_s_PathInterv + "\" + CStr(l_o_doc.ID) + "." + l_s_ext(1))
                     'Message
                     ShowInfo("Document enregistré.")
+                    'refresh grille
+                    dtgDocs.RefreshData()
                 Else
                     Throw New UserException("Chemin du répertoire de l'application non valide.")
                 End If

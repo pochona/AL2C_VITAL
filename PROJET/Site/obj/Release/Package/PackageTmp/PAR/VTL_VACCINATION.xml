@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Vaccination</title>
+	<description>Vaccination</description>
+	<columns>
+		<col DataField="VTL_VACCINATION_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_VACCINATION_ID_ANIMAL" Type="Numeric" HeaderText="Id_animal" NotNull="true">
+			<source Table="VTL_ANIMAL" TableAlias="T1" KeyField="VTL_ANIMAL_ID" LibField="VTL_ANIMAL_NOM" LibAlias="F1" Unique="false" />
+		</col>
+		<col DataField="VTL_VACCINATION_ID_VACCIN" Type="Numeric" HeaderText="Id_vaccin">
+			<source Table="VTL_VACCIN" TableAlias="T2" KeyField="VTL_VACCIN_ID" LibField="VTL_VACCIN_LIBELLE" LibAlias="F2" Unique="false" />
+		</col>
+		<col DataField="VTL_VACCINATION_DT_VACCIN" Type="Date" Unique="false" HeaderText="Dt_vaccin" />
+		<col DataField="VTL_VACCINATION_ID_CONSULTATION" Type="Numeric" HeaderText="Id_consultation">
+			<source Table="VTL_CONSULTATION" TableAlias="T3" KeyField="VTL_CONSULTATION_ID" LibField="VTL_CONSULTATION_COMMENTAIRE" LibAlias="F3" Unique="false" />
+		</col>
+	</columns>
+</table>

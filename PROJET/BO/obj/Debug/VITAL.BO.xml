@@ -6,7 +6,11 @@ VITAL.BO
 </name>
 </assembly>
 <members>
-<member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_b_changes">
+<member name="T:VITAL.BO.VITAL.ConseilDietetique">
+	<summary>
+ ConseilDietetique.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_b_changes">
 	<summary>
  Indique s'il y a eu des changements sur l'objet ou non
  </summary>
@@ -683,6 +687,109 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Raw.Carte`1">
 	<summary>
  Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_s_contenu">
+	<summary>
+ Contenu.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_dt_date">
+	<summary>
+ Date.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_CNSLDIET.CNSLDIET_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Contenu">
+	<summary>
+ Contenu.
+ Champ associé : VTL_CNSLDIET.CNSLDIET_CONTENU.
+ </summary>
+	<value>
+ Contenu.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_CNSLDIET.CNSLDIET_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Date">
+	<summary>
+ Date.
+ Champ associé : VTL_CNSLDIET.CNSLDIET_DATE.
+ </summary>
+	<value>
+ Date.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Diff(VITAL.BO.VITAL.Raw.ConseilDietetique{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe ConseilDietetique.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.ConseilDietetique`1">
+	<summary>
+ ConseilDietetique.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_b_changes">
 	<summary>
@@ -2416,6 +2523,11 @@ VITAL.BO
 	<summary>
  Veterinaire.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.Contrat.GetContratsClient(System.String,System.Int32)">
+	<summary>
+ Retourne les contrats clients correspondant au nom saisi
+ </summary>
+	<returns>Les contrats clients correspondant au nom saisi.</returns>
 </member><member name="T:VITAL.BO.VITAL.Contrat">
 	<summary>
  Contrat d'assurance.
@@ -2455,6 +2567,10 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_CARTE">
 	<summary>
  Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_CNSLDIET">
+	<summary>
+ ConseilDietetique.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_CONSULTATION">
 	<summary>
@@ -2703,6 +2819,30 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.VTL_CARTE">
 	<summary>
  Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_CONTENU">
+	<summary>
+ Contenu.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_CONTENU_MAXLEN">
+	<summary>
+ Contenu (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_ID_ANIMAL">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_DATE">
+	<summary>
+ Date.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_CNSLDIET">
+	<summary>
+ ConseilDietetique.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID">
 	<summary>
@@ -3261,6 +3401,21 @@ VITAL.BO
 </member><member name="M:VITAL.BO.VITAL.Carte.#ctor(System.Data.DataRow)">
 	<summary>
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Carte"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.ConseilDietetique.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.ConseilDietetique"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.ConseilDietetique.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.ConseilDietetique"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.ConseilDietetique.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.ConseilDietetique"/>.
  </summary>
 	<param name="p_o_row">Ligne d'une table de données.</param>
 </member><member name="M:VITAL.BO.VITAL.Consultation.#ctor(System.Int32,Corail.Core.Transaction)">
@@ -4180,6 +4335,119 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Auto.Carte">
 	<summary>
  Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.ConseilDietetique.m_b_update">
+	<summary>
+ Indique s'il s'agit d'un élément chargé à partir de la base de données.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.ConseilDietetique.IsNew">
+	<summary>
+ Indique si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregistrement sera mis à jour.
+ </summary>
+	<value>
+		<c>true</c> si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregestement sera mis à jour.
+ </value>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.InitDefaultValues">
+	<summary>
+ Initialization par défaut avec les valeurs définies via Modeler
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.OnInitDefaultValues">
+	<summary> Post-initialisation en fin d'appel du ou des constructeurs de classe. 
+ Permet de surcharger les valeurs par défaut des propriétés.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.GetAll(Corail.Core.Transaction)">
+	<summary>
+ Retourne la requête retournant tous les élements.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+	<returns>Tous les éléments</returns>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.FindDR(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Retourne la ligne de données correspondant à l'enregistrement.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Load(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Chargement des informations à partir la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Save(Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Save(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Cancel(Corail.Core.Transaction)">
+	<summary>
+ Annule les changements apportés a l'objet
+ </summary>
+	<param name="p_o_trans">Transaction a utiliser</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Delete(Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Delete(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="F:VITAL.BO.VITAL.Auto.ConseilDietetique.m_o_cacheDt">
+	<summary>
+ Cache Datatable
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.ConseilDietetique.m_o_cacheLock">
+	<summary>
+ Cache Lock
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.ConseilDietetique.m_b_cacheHasChanges">
+	<summary>
+ Cache Changes
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheDt(Corail.Core.Transaction,System.Boolean)">
+	<summary>
+ Propriété du cache datatable
+ </summary>
+	<param name="p_o_trans">La transaction à utiliser</param>
+	<param name="p_b_force">Objet de la classe ConseilDietetique.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheDtKey(VITAL.BO.VITAL.ConseilDietetique)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+	<param name="p_o_object">Objet de la classe ConseilDietetique.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheDtKeyFind(VITAL.BO.VITAL.ConseilDietetique)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheUpdate(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheUpdateDt(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache datatable
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheClear(System.Boolean)">
+	<summary>
+ Permet vider le cache datatable
+ </summary>
+	<param name="p_b_force">Indique si l'on force le vidage ou non</param>
+</member><member name="T:VITAL.BO.VITAL.Auto.ConseilDietetique">
+	<summary>
+ ConseilDietetique.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Auto.Consultation.m_b_update">
 	<summary>
@@ -6100,6 +6368,20 @@ VITAL.BO
  Retourne le numéro de carte vitale.
  </summary>
 	<returns>Le numéro de carte vitale.</returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetIDConseilDiet">
+	<summary>
+ Retourne le dernier ID conseil diététique enregistré.
+ </summary>
+	<returns>Le dernier ID conseil diététique enregistré.</returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetAnimxSearched(System.String,System.String,System.String,System.String)">
+	<summary>
+ Retourne les animaux qui correspondent aux critères de recherche.
+ </summary>
+	<param name="p_s_NumCarte">Numéro de carte vital (NUMERO ET PAS ID NI NFC).</param>
+	<param name="p_s_NomAnimal">Nom animal.</param>
+	<param name="p_s_NomProprio">Nom Proprio.</param>
+	<param name="p_s_PrenomProprio">Prénom proprio.</param>
+	<returns>Les animaux qui correspondent aux critères de recherche.</returns>
 </member><member name="T:VITAL.BO.VITAL.Animal">
 	<summary>
  Animal.

@@ -1655,6 +1655,256 @@
 
 #End Region
 
+#Region "ConseilDietetique - ConseilDietetique"
+
+    ''' <summary>
+    ''' ConseilDietetique.
+    ''' </summary>
+    <Serializable()> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public MustInherit Class ConseilDietetique(Of T As {VITAL.ConseilDietetique, New})
+        Inherits VITAL.Schema
+
+
+#Region "Variables privées"
+
+        ''' <summary>
+        ''' Indique s'il y a eu des changements sur l'objet ou non
+        ''' </summary>
+        Private m_b_changes As Boolean = False
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+		Private m_i_iD As Integer
+
+        ''' <summary>
+        ''' Contenu.
+        ''' </summary>
+		Private m_s_contenu As String
+
+        ''' <summary>
+        ''' Id_animal.
+        ''' </summary>
+		Private m_i_id_animal As Integer
+
+        ''' <summary>
+        ''' Date.
+        ''' </summary>
+		Private m_dt_date As DateTime
+
+#End Region
+
+#Region "Propriétés publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a subi des modifications ou non
+        ''' </summary>
+        ''' <value>
+        '''
+        ''' </value>
+        Public Property HasChanges As Boolean
+            Get
+                Return m_b_changes
+            End Get
+            Set(value As Boolean)
+                m_b_changes = value
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' ID.
+        ''' Champ associé : VTL_CNSLDIET.CNSLDIET_ID.
+        ''' </summary>
+        ''' <value>
+        ''' ID.
+        ''' </value>
+		Public Overridable ReadOnly Property ID As Integer
+            Get
+				Return m_i_iD
+            End Get
+        End Property
+
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Protected Sub SetAutoId(p_i_id As Integer)
+            m_i_iD = p_i_id
+        End Sub
+
+        ''' <summary>
+        ''' Contenu.
+        ''' Champ associé : VTL_CNSLDIET.CNSLDIET_CONTENU.
+        ''' </summary>
+        ''' <value>
+        ''' Contenu.
+        ''' </value>
+		Public Overridable Property Contenu As String
+            Get
+				Return m_s_contenu
+            End Get
+			Set(value As String)
+                If m_s_contenu <> value Then
+                    m_s_contenu = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Id_animal.
+        ''' Champ associé : VTL_CNSLDIET.CNSLDIET_ID_ANIMAL.
+        ''' </summary>
+        ''' <value>
+        ''' Id_animal.
+        ''' </value>
+		Public Overridable Property Id_animal As Integer
+            Get
+				Return m_i_id_animal
+            End Get
+			Set(value As Integer)
+                If m_i_id_animal <> value Then
+                    m_i_id_animal = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Date.
+        ''' Champ associé : VTL_CNSLDIET.CNSLDIET_DATE.
+        ''' </summary>
+        ''' <value>
+        ''' Date.
+        ''' </value>
+		Public Overridable Property [Date] As DateTime
+            Get
+				Return m_dt_date
+            End Get
+			Set(value As DateTime)
+                If m_dt_date <> value Then
+                    m_dt_date = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+#End Region
+
+#Region "Constantes publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a un historique ou non
+        ''' </summary>
+        Public Const HasHisto As Boolean = False
+
+        ''' <summary>
+        ''' Indique si l'objet utilise le cache ou non
+        ''' </summary>
+        Public Const HasCache As Boolean = False
+
+        ''' <summary>
+        ''' Nom de la table associée à la classe.
+        ''' </summary>
+        <Obsolete("Veuillez utiliser la classe 'Tables'.")>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Public Const TableName As String = Tables.VTL_CNSLDIET
+
+#End Region
+
+#Region "Méthodes publiques"
+
+        ''' <summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Function CloneAsNew(Optional p_b_includeKeyValues As Boolean = False) As T
+            Dim l_o_target As New T()
+
+            ' Copie des propriétés et retour
+            Return CopyTo(l_o_target, p_b_includeKeyValues)
+        End Function
+
+        ''' <summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Overridable Function CopyTo(p_o_target As T, Optional p_b_includeKeyValues As Boolean = False) As T
+
+            ' Vérification des paramètres.
+            If (p_o_target Is Nothing) Then
+                Throw New ArgumentNullException("p_o_target")
+            End If
+
+            ' Copie des valeurs des clés primaires
+            If p_b_includeKeyValues Then
+                ' Column : m_i_iD
+                p_o_target.m_i_iD = m_i_iD
+            End If
+            p_o_target.m_i_iD = m_i_iD
+            ' Colonne : m_s_contenu
+            p_o_target.m_s_contenu = m_s_contenu
+            ' Colonne : m_i_id_animal
+            p_o_target.m_i_id_animal = m_i_id_animal
+            ' Colonne : m_dt_date
+            p_o_target.m_dt_date = m_dt_date
+
+            ' Retour de l'objet cible pour appel en chaine
+            Return p_o_target
+        End Function
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub Load(p_o_row As DataRow)
+            If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
+			m_i_iD = CInt(p_o_row!CNSLDIET_ID)
+			m_s_contenu = CStr(p_o_row!CNSLDIET_CONTENU)
+			m_i_id_animal = CInt(p_o_row!CNSLDIET_ID_ANIMAL)
+			m_dt_date = CDate(p_o_row!CNSLDIET_DATE)
+            HasChanges = False
+        End Sub
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub ToRow(p_o_row As DataRow)
+			p_o_row("CNSLDIET_ID") = ID
+			p_o_row("CNSLDIET_CONTENU") = Contenu
+			p_o_row("CNSLDIET_ID_ANIMAL") = Id_animal
+			p_o_row("CNSLDIET_DATE") = [Date]
+        End Sub
+
+        ''' <summary>
+        ''' Permet de détecter toutes les différences entre 2 objets
+        ''' </summary>
+        ''' <param name="p_o_object">Objet de la classe ConseilDietetique.</param>
+        Public Function Diff(p_o_object As ConseilDietetique(Of T)) As Dictionary(Of String, Object())
+            Dim l_o_dicDiff As New Dictionary(Of String, Object())
+
+            If p_o_object.ID <> ID Then
+                l_o_dicDiff.Add(VITAL.VTL_CNSLDIET.CNSLDIET_ID, {p_o_object.ID,ID})
+            End If
+            If p_o_object.Contenu <> Contenu Then
+                l_o_dicDiff.Add(VITAL.VTL_CNSLDIET.CNSLDIET_CONTENU, {p_o_object.Contenu,Contenu})
+            End If
+            If p_o_object.Id_animal <> Id_animal Then
+                l_o_dicDiff.Add(VITAL.VTL_CNSLDIET.CNSLDIET_ID_ANIMAL, {p_o_object.Id_animal,Id_animal})
+            End If
+            If p_o_object.[Date] <> [Date] Then
+                l_o_dicDiff.Add(VITAL.VTL_CNSLDIET.CNSLDIET_DATE, {p_o_object.[Date],[Date]})
+            End If
+            Return l_o_dicDiff
+        End Function
+
+#End Region
+
+    End Class
+
+#End Region
+
 #Region "Consultation - Consultation vétérinaire d'un animal"
 
     ''' <summary>

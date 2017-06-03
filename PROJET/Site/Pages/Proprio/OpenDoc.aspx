@@ -14,7 +14,7 @@
                 <cw:CwTextBox runat="server" ID="txtNom" Enabled="false" Label="Nom"></cw:CwTextBox>
                 <cw:CwTextBox runat="server" ID="txtChemin" Enabled="false" Label="Chemin"></cw:CwTextBox>
                 <cw:CwPanelButtons ID="pnbBtn" runat="server" >
-                    <cw:CwButton ID="btnOpen" Text="Télécharger" runat="server" Kind="Primary"></cw:CwButton>
+                    <cw:CwButton ID="btnOpen" Text="Télécharger" RoleVisible="!*" runat="server" Kind="Primary"></cw:CwButton>
                     <cw:CwButton ID="btnLoad" Text="Ouvrir dans un nouvel onglet" runat="server" Kind="Primary"></cw:CwButton>
                     <cw:CwButton ID="btnClose" Text="Fermer" runat="server" ></cw:CwButton>
                 </cw:CwPanelButtons>

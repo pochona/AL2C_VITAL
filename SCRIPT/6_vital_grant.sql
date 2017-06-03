@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Attribution des roles                                      */
-/* Historique  : Creation le 30/05/2017                                     */
+/* Historique  : Creation le 01/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -32,6 +32,9 @@ GRANT SELECT,INSERT,UPDATE,DELETE ON VTL_ATTACHEMT TO VITL;
 GO
 -- "Ajout du role ROLE_VITAL_USER sur la table VTL_CARTE "
 GRANT SELECT,INSERT,UPDATE,DELETE ON VTL_CARTE TO VITL;
+GO
+-- "Ajout du role ROLE_VITAL_USER sur la table VTL_CNSLDIET "
+GRANT SELECT,INSERT,UPDATE,DELETE ON VTL_CNSLDIET TO VITL;
 GO
 -- "Ajout du role ROLE_VITAL_USER sur la table VTL_CONSULTATION "
 GRANT SELECT,INSERT,UPDATE,DELETE ON VTL_CONSULTATION TO VITL;

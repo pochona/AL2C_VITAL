@@ -94,6 +94,19 @@
       </Columns>
       <Relations />
     </Table>
+    <Table Name="VTL_CNSLDIET" ClassName="ConseilDietetique" Label="ConseilDietetique" Comment="ConseilDietetique" OldNames="~temp636319209135916911,VITAL_CONSEILDIETETIQUE,VITAL_CNSLDIET" Param="True">
+      <Columns>
+        <Column Name="CNSLDIET_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="CNSLDIET_CONTENU" Type="String" MaxLength="2000" AllowNull="false" Label="Contenu" PropertyName="Contenu" Comment="Contenu" />
+        <Column Name="CNSLDIET_ID_ANIMAL" Type="Integer" Precision="10" AllowNull="false" Label="Id_animal" PropertyName="Id_animal" Comment="Id_animal" />
+        <Column Name="CNSLDIET_DATE" Type="DateTime" DateKind="Date" AllowNull="false" Label="Date" PropertyName="Date" Comment="Date" />
+      </Columns>
+      <Relations>
+        <Relation Name="VITAL_CNSLDIET_ID_ANIMAL_VTL_ANIMAL_FK">
+          <Link ColumnName="CNSLDIET_ID_ANIMAL" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+      </Relations>
+    </Table>
     <Table Name="VTL_CONSULTATION" ClassName="Consultation" Label="Consultation" Comment="Consultation vétérinaire d'un animal" OldNames="~temp636291748704489765,VITAL_CONSULTATION" Param="True">
       <Columns>
         <Column Name="VTL_CONSULTATION_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />

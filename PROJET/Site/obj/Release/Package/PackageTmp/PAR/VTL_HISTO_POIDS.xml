@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Histo_Poids</title>
+	<description>Histo_Poids</description>
+	<columns>
+		<col DataField="VTL_HISTO_POIDS_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_HISTO_POIDS_DT_HISTO" Type="DateTime" Unique="false" HeaderText="Dt_histo" NotNull="true" />
+		<col DataField="VTL_HISTO_POIDS_POIDS" Type="Numeric" Unique="false" HeaderText="Poids" NotNull="true" Decimals="2" />
+		<col DataField="VTL_HISTO_POIDS_ID_ANIMAL" Type="Numeric" HeaderText="Id_animal" NotNull="true">
+			<source Table="VTL_ANIMAL" TableAlias="T1" KeyField="VTL_ANIMAL_ID" LibField="VTL_ANIMAL_NOM" LibAlias="F1" Unique="false" />
+		</col>
+	</columns>
+</table>
