@@ -95,6 +95,24 @@ Partial Public Class PageAccueilAnimal
     Protected WithEvents txtNumPuce As Global.Corail.Web.CwTextBox
 
     '''<summary>
+    '''Contrôle upnNumCarte.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents upnNumCarte As Global.Corail.Web.CwUpdatePanel
+
+    '''<summary>
+    '''Contrôle frlNumCarte.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frlNumCarte As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
     '''Contrôle cboNumCarte.
     '''</summary>
     '''<remarks>

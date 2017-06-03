@@ -144,6 +144,7 @@ Partial Public Class PageAccueilAnimal
             LoadCbo()
             cboNumCarte.SelectedValue = l_s_parts(1)
             ShowInfo("Enregistrement effectué avec succès!")
+            upnNumCarte.Update()
         End If
     End Sub
 

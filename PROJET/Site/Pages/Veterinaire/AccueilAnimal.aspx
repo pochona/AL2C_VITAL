@@ -17,7 +17,13 @@
                     <cw:CwNumericTextBox  runat="server" ID="ntbPoids" IsMandatory="true" Label="Poids" Suffix="kg"></cw:CwNumericTextBox>
                     <cw:CwNumericTextBox runat="server" ID="ntbTaille" IsMandatory="true" Label="Taille" Suffix="cm"></cw:CwNumericTextBox>
                     <cw:cwTextBox runat="server" ID="txtNumPuce" Label="Numéro de puce"></cw:cwTextBox>
-                    <cw:CwComboBox runat="server" ID="cboNumCarte" Label="Numéro de carte vitale" PostBackMode="Full" AutoPostBack="True"></cw:CwComboBox>
+                        <cw:CwUpdatePanel runat="server" ID="upnNumCarte" UpdateMode="Conditional"  >
+                            <ContentTemplate>
+                                <cw:CwFormLayout runat="server" ID="frlNumCarte">
+                                    <cw:CwComboBox runat="server" ID="cboNumCarte" Label="Numéro de carte vitale" PostBackMode="Full"  AutoPostBack="True"></cw:CwComboBox> 
+                                </cw:CwFormLayout>
+                            </ContentTemplate>
+                        </cw:CwUpdatePanel>
                     <cw:CwDateTextBox runat="server" ID="dtbNaiss" Label="Date naissance"  ></cw:CwDateTextBox>
                     <cw:CwDateTextBox runat="server" ID="dtbDeces" Label="Date décès" ></cw:CwDateTextBox>
                     <cw:CwComboBox runat="server" IsMandatory="true"  ID="cboType" RoleEdit="!*" Label="Type"></cw:CwComboBox>
