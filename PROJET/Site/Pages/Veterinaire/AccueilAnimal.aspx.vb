@@ -74,6 +74,8 @@ Partial Public Class PageAccueilAnimal
     Private Sub LoadLien()
         btnNewCarte.NavigateUrl = "~/Pages/Veterinaire/NewCarte.aspx?ID=" & SelectedAnimalId
         btnNewCarte.Target = "Modal#400x400"
+        btnNewConsult.NavigateUrl = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Creation
+        btnNewConsult.Target = "tabConsult"
     End Sub
 
     ''' <summary>
@@ -281,5 +283,6 @@ Partial Public Class PageAccueilAnimal
     End Sub
 
 #End Region
+
 
 End Class
