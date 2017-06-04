@@ -76,7 +76,8 @@
                 .AddFrom(Tables.VTL_ANIMAL)
                 .AddFrom(Tables.VTL_RACE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_RACE.VTL_RACE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_RACE)
                 .AddFrom(Tables.VTL_TYPE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_TYPE.VTL_TYPE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_TYPE)
-                .AddFrom(Tables.VTL_USER, DbJoin.Right, Tables.VTL_ANIMAL, VTL_USER.VTL_USER_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddFrom(Tables.VTL_PROPRIETAIRE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddFrom(Tables.VTL_USER, DbJoin.Right, Tables.VTL_PROPRIETAIRE, VTL_USER.VTL_USER_ID, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER)
                 .AddFrom(Tables.VTL_CARTE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_CARTE.VTL_CARTE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_CARTE)
                 .AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_logginProprio)
             End With
@@ -96,7 +97,8 @@
 
                 .AddSelect("COUNT(" + VTL_ANIMAL.VTL_ANIMAL_ID + ")", "NBANIMX")
                 .AddFrom(Tables.VTL_ANIMAL)
-                .AddFrom(Tables.VTL_USER, DbJoin.Right, Tables.VTL_ANIMAL, VTL_USER.VTL_USER_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddFrom(Tables.VTL_PROPRIETAIRE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddFrom(Tables.VTL_USER, DbJoin.Right, Tables.VTL_PROPRIETAIRE, VTL_USER.VTL_USER_ID, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER)
 
                 .AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_logProp)
                 If Not .GetFirstRow Is Nothing Then

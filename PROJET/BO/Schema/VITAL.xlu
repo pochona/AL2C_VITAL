@@ -60,8 +60,8 @@
         <Relation Name="VTL_ANIMAL_ID_TYPE_VTL_TYPE_FK">
           <Link ColumnName="VTL_ANIMAL_ID_TYPE" ForeignTableName="VTL_TYPE" ForeignFieldName="VTL_TYPE_ID" />
         </Relation>
-        <Relation Name="VTL_ANIMAL_ID_PROP_VTL_USER_FK">
-          <Link ColumnName="VTL_ANIMAL_ID_PROP" ForeignTableName="VTL_USER" ForeignFieldName="VTL_USER_ID" />
+        <Relation Name="VTL_ANIMAL_ID_PROP_VTL_PROPRIETAIRE_FK">
+          <Link ColumnName="VTL_ANIMAL_ID_PROP" ForeignTableName="VTL_PROPRIETAIRE" ForeignFieldName="VTL_PROPRIETAIRE_ID" />
         </Relation>
       </Relations>
     </Table>
