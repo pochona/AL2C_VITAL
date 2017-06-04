@@ -15,7 +15,7 @@
                         <cw:CwFormLayout runat="server" ID="frlNFC">
                             <cw:CwTextBox runat="server" ID="txtNumCarteNFC" Label="Numéro de carte" Enabled="False"></cw:CwTextBox>
                             <cw:CwPanelButtons runat="server" ID="pnlBtnNfc">
-                                <cw:CwButton runat="server" ID="btnSearchNFC" Text="Lancer la recherche"></cw:CwButton>
+                                <cw:CwButton runat="server" ID="btnSearchNFC" ImageName="download" Text="Lancer la recherche"></cw:CwButton>
                             </cw:CwPanelButtons>
                         </cw:CwFormLayout>
                     </cw:CwFrame>
@@ -26,7 +26,7 @@
                             <cw:CwTextBox runat="server" ID="txtNomProprio" Label="Nom du propriétaire" ></cw:CwTextBox>
                             <cw:CwTextBox runat="server" ID="txtPrenomProprio" Label="Prénom du propriétaire" ></cw:CwTextBox>
                             <cw:CwPanelButtons runat="server" ID="pbnBtnGene">
-                                <cw:CwButton runat="server" ID="btnSearchAnimal" Text="Rechercher"></cw:CwButton>
+                                <cw:CwButton runat="server" ID="btnSearchAnimal" ImageName="search" Text="Rechercher"></cw:CwButton>
                             </cw:CwPanelButtons>
                         </cw:CwFormLayout>
                     </cw:CwFrame>

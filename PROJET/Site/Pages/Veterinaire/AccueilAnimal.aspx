@@ -31,15 +31,15 @@
                     <cw:CwTextBox runat="server" ID="txtIdPropCache" IsMandatory="true" Visible="false" ></cw:CwTextBox>
                     <cw:CwSelectTextBox runat="server" ID="stbProprio" IsMandatory="true" AutoPostBack="true" PostBackMode="Full" NavigateUrl="~/Pages/Veterinaire/PopUpProprio.aspx" Label="Propriétaire" Enabled="True" ToolTip="Pour sélectionner un propriétaire, veuillez cliquer sur le bouton de droite."></cw:CwSelectTextBox>
                     <cw:CwPanelButtons runat="server" ID="pbnInfosAnimal">
-                        <cw:CwButton runat="server" ID="btnModifierInfoAnml" Text="Modifier"></cw:CwButton>
-                        <cw:CwButton runat="server" ID="btnSaveInfoAnml" Text="Enregistrer"></cw:CwButton>
-                        <cw:CwButton runat="server" ID="btnNewCarte" Text="Créer une nouvelle carte"></cw:CwButton>
+                        <cw:CwButton runat="server" ImageName="pencil" ID="btnModifierInfoAnml" Text="Modifier"></cw:CwButton>
+                        <cw:CwButton runat="server" ImageName="floppy-disc" ID="btnSaveInfoAnml" Text="Enregistrer"></cw:CwButton>
+                        <cw:CwButton runat="server" ImageName="sq-plus-all" ID="btnNewCarte" Text="Créer une nouvelle carte"></cw:CwButton>
                     </cw:CwPanelButtons>
                 </cw:CwFormLayout>
             </cw:CwFrame>
             <cw:CwFrame runat="server" ID="frmNewConsul" Text="Nouvelle consultation" Width="100%" Cells-Small="4" ResetLayout="False" >
                 <cw:CwPanelButtons runat="server" ID="pbnNewConsult" PanelAlign="center">
-                    <cw:CwButton runat="server" ID="btnNewConsult"></cw:CwButton>
+                    <cw:CwButton runat="server" ID="btnNewConsult" ImageName="sq-plus" text="Créer une consultation"></cw:CwButton>
                 </cw:CwPanelButtons>
             </cw:CwFrame>
             
