@@ -45,7 +45,7 @@
                 .AddFrom(Tables.VTL_CONSULTATION)
                 .AddFrom(Tables.VTL_VETERINAIRE, DbJoin.Right, Tables.VTL_CONSULTATION, VTL_VETERINAIRE.VTL_VETERINAIRE_ID, VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE)
                 .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_CONSULTATION, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_CONSULTATION.VTL_CONSULTATION_L)
-                 .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_L, p_i_idAnimal)
+                .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_L, p_i_idAnimal)
             End With
             Return l_o_sql
         End Function
@@ -77,20 +77,26 @@
             Return l_o_sql
         End Function
 
+        ''' <summary>
+        ''' Retourne la liste des consultations d'un vétérinaire.
+        ''' </summary>
+        ''' <param name="p_s_loginVeto"></param>
+        ''' <returns>La liste des consultations d'un vétérinaire.</returns>
         Public Shared Function SearchedConsultVeto(p_s_loginVeto As Integer) As Query
             Dim l_o_sql As New Query
 
             With l_o_sql
-
                 .Clear()
                 .AddOption(DbSelectOption.Distinct)
-                ' DataKeyField
-                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_ID)
                 .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
                 .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE)
-                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_L)
                 .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE)
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_MONTANT)
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_ID)
+                .AddSelect(VTL_ANIMAL.VTL_ANIMAL_NOM)
+                .AddSelect(VTL_ANIMAL.VTL_ANIMAL_NUM_PUCE)
                 .AddFrom(Tables.VTL_CONSULTATION)
+                .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_CONSULTATION, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_CONSULTATION.VTL_CONSULTATION_L)
                 .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE, p_s_loginVeto)
             End With
             Return l_o_sql

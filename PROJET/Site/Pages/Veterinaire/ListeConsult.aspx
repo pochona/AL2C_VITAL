@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server">
+<head id="Head1" runat="server">
 	<title>Historique consultations</title>
 </head>
 <body>
@@ -20,9 +20,7 @@
 
     <cw:CwFormLayout runat="server" ID="frlGeneral2">
         <cw:CwFrame runat="server" ID="frmGenral2" text="Historique" Collapsable="true" >
-            <cw:CwFormLayout runat="server" ID="frlDtl2">
-                <cw:CwDataGrid runat="server" ID="grdHistorique" />
-            </cw:CwFormLayout>
+             <cw:CwDataGrid runat="server" ID="grdHistorique" />
         </cw:CwFrame>
     </cw:CwFormLayout>
 	
