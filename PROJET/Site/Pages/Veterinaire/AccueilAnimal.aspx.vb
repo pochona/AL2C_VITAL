@@ -67,6 +67,7 @@ Partial Public Class PageAccueilAnimal
             LoadLien()
             dtgConsultations.RefreshData()
             dtgDietetiques.RefreshData()
+            ClientRegisterWindowName("tabAnimal" & SelectedAnimalId)
         End If
     End Sub
 
@@ -150,6 +151,11 @@ Partial Public Class PageAccueilAnimal
             ShowInfo("Enregistrement effectué avec succès!")
             upnNumCarte.Update()
         End If
+        ' Récupérer l'argument envoyé par la page qui déclenche de rafraichissement
+        If e.Argument.Contains("refreshGrilleConsult") Then
+            dtgConsultations.RefreshData()
+        End If
+
     End Sub
 
     ''' <summary>
@@ -306,7 +312,6 @@ Partial Public Class PageAccueilAnimal
             ShowException(ex)
         End Try
     End Sub
-
 
 #End Region
 

@@ -164,6 +164,13 @@ Partial Public Class PageConsultation
 
 #End Region
 
+#Region "Boutons"
+
+    ''' <summary>
+    ''' Enregsitrement d'une consultation.
+    ''' </summary>
+    ''' <param name="sender">Source de l'événement.</param>
+    ''' <param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim l_o_consult As New Consultation
 
@@ -180,8 +187,13 @@ Partial Public Class PageConsultation
             ModeAcces = EN_ModeAcces.Modification
             LoadData()
             LoadElementsVisibles()
+            ClientRegisterRefreshWindow("tabAnimal" & SelectedAnimalId, "refreshGrilleConsult")
+            CloseWindowOnLoad()
         Catch ex As Exception
             ShowException(ex)
         End Try
     End Sub
+
+#End Region
+
 End Class

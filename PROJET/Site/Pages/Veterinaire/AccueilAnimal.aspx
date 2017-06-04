@@ -54,7 +54,7 @@
                 <cw:CwDataGrid runat="server" ID="dtgVaccins" Title="{0} vaccin(s)"></cw:CwDataGrid>
             </cw:CwFrame>
             
-            <cw:CwFrame runat="server" ID="frmListConseilDiet" Text="Conseils diététiques" Width="100%" Cells-Small="6" ResetLayout="False" >
+            <cw:CwFrame runat="server" ID="frmListConseilDiet" Text="Conseils diététiques" Width="100%" Cells-Small="12" ResetLayout="False" >
                 <cw:CwFormLayout runat="server" ID="frlDtlDiet">
                     <cw:CwTextBox runat="server" ID="txtNewConseil" Label="Nouveau conseil" ResetLayout="true" TextMode="MultiLine" Height="150px" LabelCells-Small="2"></cw:CwTextBox>
                 </cw:CwFormLayout>
