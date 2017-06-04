@@ -40,9 +40,7 @@ Partial Public Class PageInformations
 
             m_o_proprio = SelectedProprio
 
-            Title = SelectedProprio.ID.ToString
-
-
+            Title = m_o_proprio.Prenom & " " & m_o_proprio.Nom
             'chargement des données
             LoadData()
             'définition des éléments visibles
