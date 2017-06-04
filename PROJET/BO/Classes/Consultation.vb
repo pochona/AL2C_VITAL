@@ -77,6 +77,25 @@
             Return l_o_sql
         End Function
 
+        Public Shared Function SearchedConsultVeto(p_s_loginVeto As Integer) As Query
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+
+                .Clear()
+                .AddOption(DbSelectOption.Distinct)
+                ' DataKeyField
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_ID)
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE)
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_L)
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE)
+                .AddFrom(Tables.VTL_CONSULTATION)
+                .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE, p_s_loginVeto)
+            End With
+            Return l_o_sql
+        End Function
+
     End Class
 
 End Namespace
