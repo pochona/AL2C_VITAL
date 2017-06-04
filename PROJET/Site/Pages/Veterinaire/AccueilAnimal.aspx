@@ -55,7 +55,13 @@
             </cw:CwFrame>
             
             <cw:CwFrame runat="server" ID="frmListConseilDiet" Text="Conseils diététiques" Width="100%" Cells-Small="6" ResetLayout="False" >
-                <cw:CwDataGrid runat="server" ID="dtgDiététiques" Title="{0} diététiques(s)"></cw:CwDataGrid>
+                <cw:CwFormLayout runat="server" ID="frlDtlDiet">
+                    <cw:CwTextBox runat="server" ID="txtNewConseil" Label="Nouveau conseil" ResetLayout="true" TextMode="MultiLine" Height="150px" LabelCells-Small="2"></cw:CwTextBox>
+                </cw:CwFormLayout>
+                <cw:CwPanelButtons runat="server" ID="pnbBtnsDiet">
+                    <cw:CwButton runat="server" ID="btnNewConseil" Text="Ajouter"></cw:CwButton>
+                </cw:CwPanelButtons>
+                <cw:CwDataGrid runat="server" ID="dtgDietetiques" Title="{0} conseil(s) diététiques(s)"></cw:CwDataGrid>
             </cw:CwFrame>
         </cw:CwFormLayout>
 

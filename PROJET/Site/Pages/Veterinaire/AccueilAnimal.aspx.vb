@@ -66,6 +66,7 @@ Partial Public Class PageAccueilAnimal
             'définition des url des boutons redirecteurs
             LoadLien()
             dtgConsultations.RefreshData()
+            dtgDietetiques.RefreshData()
         End If
     End Sub
 
@@ -283,6 +284,30 @@ Partial Public Class PageAccueilAnimal
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Nouveau conseil diététique.
+    ''' </summary>
+    ''' <param name="sender">Source de l'événement.</param>
+    ''' <param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
+    Private Sub btnNewConseil_Click(sender As Object, e As EventArgs) Handles btnNewConseil.Click
+        Dim l_o_cslDiet As New ConseilDietetique
+
+        Try
+            With l_o_cslDiet
+                .Date = Now.Date
+                .Contenu = txtNewConseil.Text
+                .Id_animal = SelectedAnimalId
+                .Save()
+            End With
+            ShowInfo("Enregistrement effectué avec succès.")
+            dtgDietetiques.RefreshData()
+            txtNewConseil.Text = ""
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
+    End Sub
+
+
 #End Region
 
 #Region "Grille consultation"
@@ -335,5 +360,46 @@ Partial Public Class PageAccueilAnimal
 
 #End Region
 
+#Region "Grille conseils diététiques"
+
+#Region "Colonnes de la grille "
+
+    Private m_i_btn2 As Integer
+    Private m_i_date2 As Integer
+    Private m_i_content As Integer
+
+#End Region
+
+    Private Sub dtgDietetiques_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgDietetiques.DataTableRequest
+        Try
+            p_o_dt = ConseilDietetique.GetConseilsAnimal(SelectedAnimalId).GetDT
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
+    End Sub
+
+    Private Sub dtgDietetiques_Init(sender As Object, e As EventArgs) Handles dtgDietetiques.Init
+        With dtgDietetiques
+            .DataKeyField = VTL_CNSLDIET.CNSLDIET_ID
+
+            With .AddButtonColumn()
+                .Width = Unit.Pixel(65) ' fixe la taille de la colonne
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/ConseilDiet.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}"
+                .DataNavigateUrlField = VTL_CNSLDIET.CNSLDIET_ID
+                .Target = "tabConseilDiet" + VTL_CNSLDIET.CNSLDIET_ID
+                .Properties.ImageName = "search"
+                m_i_btn2 = .ColumnIndex
+            End With
+            With .AddDateColumn("Date", VTL_CNSLDIET.CNSLDIET_DATE)
+                m_i_date2 = .ColumnIndex
+            End With
+            With .AddColumn("Conseil", VTL_CNSLDIET.CNSLDIET_CONTENU)
+                m_i_content = .ColumnIndex
+            End With
+        End With
+
+    End Sub
+
+#End Region
 
 End Class

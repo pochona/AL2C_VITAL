@@ -302,11 +302,47 @@ Partial Public Class PageAccueilAnimal
     Protected WithEvents frmListConseilDiet As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle dtgDiététiques.
+    '''Contrôle frlDtlDiet.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents dtgDiététiques As Global.Corail.Web.CwDataGrid
+    Protected WithEvents frlDtlDiet As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
+    '''Contrôle txtNewConseil.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtNewConseil As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle pnbBtnsDiet.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents pnbBtnsDiet As Global.Corail.Web.CwPanelButtons
+
+    '''<summary>
+    '''Contrôle btnNewConseil.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnNewConseil As Global.Corail.Web.CwButton
+
+    '''<summary>
+    '''Contrôle dtgDietetiques.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dtgDietetiques As Global.Corail.Web.CwDataGrid
 End Class
