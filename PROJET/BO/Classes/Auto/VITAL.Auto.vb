@@ -4969,6 +4969,7 @@ Namespace VITAL.Auto
             End If
             l_o_qry.AddTypedValue(VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_DUREE_JOUR, Duree_jour)
             l_o_qry.AddValue(VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT, DB.SqlDateTime(Dt_debut))
+            l_o_qry.AddValue(VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_ID_ANIMAL, NullIfValue(Id_animal, 0))
             If l_o_qry.ExecuteSave(Tables.VTL_TRAITREMENT, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))

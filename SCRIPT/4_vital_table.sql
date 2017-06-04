@@ -454,7 +454,8 @@ GO
 CREATE TABLE VTL_TRAITREMENT (
 	VTL_TRAITREMENT_ID INT IDENTITY(1,1) NOT NULL,
 	VTL_TRAITREMENT_DUREE_JOUR INT NOT NULL,
-	VTL_TRAITREMENT_DT_DEBUT DATETIME2(0)
+	VTL_TRAITREMENT_DT_DEBUT DATETIME2(0),
+	VTL_TRAITREMENT_ID_ANIMAL INT
 )
 GO
 
@@ -465,6 +466,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Duree_jour', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_TRAITREMENT', @level2type=N'COLUMN',@level2name=N'VTL_TRAITREMENT_DUREE_JOUR'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Dt_debut', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_TRAITREMENT', @level2type=N'COLUMN',@level2name=N'VTL_TRAITREMENT_DT_DEBUT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_animal', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_TRAITREMENT', @level2type=N'COLUMN',@level2name=N'VTL_TRAITREMENT_ID_ANIMAL'
 GO
 
 

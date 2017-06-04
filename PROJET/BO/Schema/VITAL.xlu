@@ -273,8 +273,13 @@
         <Column Name="VTL_TRAITREMENT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
         <Column Name="VTL_TRAITREMENT_DUREE_JOUR" Type="Integer" Precision="10" AllowNull="false" Label="Duree_jour" PropertyName="Duree_jour" Comment="Duree_jour" />
         <Column Name="VTL_TRAITREMENT_DT_DEBUT" Type="DateTime" Label="Dt_debut" PropertyName="Dt_debut" Comment="Dt_debut" />
+        <Column Name="VTL_TRAITREMENT_ID_ANIMAL" Type="Integer" Precision="10" Label="Id_animal" PropertyName="Id_animal" PropertyNullValue="0" Comment="Id_animal" />
       </Columns>
-      <Relations />
+      <Relations>
+        <Relation Name="VTL_TRAITREMENT_ID_ANIMAL_VTL_ANIMAL_FK">
+          <Link ColumnName="VTL_TRAITREMENT_ID_ANIMAL" ForeignTableName="VTL_ANIMAL" ForeignFieldName="VTL_ANIMAL_ID" />
+        </Relation>
+      </Relations>
     </Table>
     <Table Name="VTL_TYPE" ClassName="Type" Label="Type" Comment="Typede l'animal" OldNames="~temp636291755689604515,VITAL_TYPE" Param="True">
       <Columns>

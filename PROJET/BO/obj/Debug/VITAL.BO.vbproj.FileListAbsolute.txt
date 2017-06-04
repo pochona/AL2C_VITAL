@@ -75,4 +75,3 @@ C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Debug\VITAL.BO.dll
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Debug\VITAL.BO.xml
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Debug\VITAL.BO.pdb
-C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\BO\obj\Debug\VITAL.BO.vbprojResolveAssemblyReference.cache

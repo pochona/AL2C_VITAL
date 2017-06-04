@@ -5058,6 +5058,11 @@
         ''' </summary>
 		Private m_dt_dt_debut As DateTime
 
+        ''' <summary>
+        ''' Id_animal.
+        ''' </summary>
+		Private m_i_id_animal As Integer
+
 #End Region
 
 #Region "Propriétés publiques"
@@ -5133,6 +5138,25 @@
             End Set
         End Property
 
+        ''' <summary>
+        ''' Id_animal.
+        ''' Champ associé : VTL_TRAITREMENT.VTL_TRAITREMENT_ID_ANIMAL.
+        ''' </summary>
+        ''' <value>
+        ''' Id_animal.
+        ''' </value>
+		Public Overridable Property Id_animal As Integer
+            Get
+				Return m_i_id_animal
+            End Get
+			Set(value As Integer)
+                If m_i_id_animal <> value Then
+                    m_i_id_animal = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
 #End Region
 
 #Region "Constantes publiques"
@@ -5192,6 +5216,8 @@
             p_o_target.m_i_duree_jour = m_i_duree_jour
             ' Colonne : m_dt_dt_debut
             p_o_target.m_dt_dt_debut = m_dt_dt_debut
+            ' Colonne : m_i_id_animal
+            p_o_target.m_i_id_animal = m_i_id_animal
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -5206,6 +5232,7 @@
 			m_i_iD = CInt(p_o_row!VTL_TRAITREMENT_ID)
 			m_i_duree_jour = CInt(p_o_row!VTL_TRAITREMENT_DUREE_JOUR)
 			m_dt_dt_debut = NzDate(p_o_row!VTL_TRAITREMENT_DT_DEBUT)
+			m_i_id_animal = NzInt(p_o_row!VTL_TRAITREMENT_ID_ANIMAL, 0)
             HasChanges = False
         End Sub
 
@@ -5217,6 +5244,7 @@
 			p_o_row("VTL_TRAITREMENT_ID") = ID
 			p_o_row("VTL_TRAITREMENT_DUREE_JOUR") = Duree_jour
 			p_o_row("VTL_TRAITREMENT_DT_DEBUT") = Dt_debut
+			p_o_row("VTL_TRAITREMENT_ID_ANIMAL") = Id_animal
         End Sub
 
         ''' <summary>
@@ -5234,6 +5262,9 @@
             End If
             If p_o_object.Dt_debut <> Dt_debut Then
                 l_o_dicDiff.Add(VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT, {p_o_object.Dt_debut,Dt_debut})
+            End If
+            If p_o_object.Id_animal <> Id_animal Then
+                l_o_dicDiff.Add(VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_ID_ANIMAL, {p_o_object.Id_animal,Id_animal})
             End If
             Return l_o_dicDiff
         End Function

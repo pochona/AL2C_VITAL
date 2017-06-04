@@ -78,13 +78,13 @@ Partial Public Class PageListeConsult
         With grdHistorique
             .DataKeyField = VTL_CONSULTATION.VTL_CONSULTATION_ID
 
-            With .AddColumn("Date", VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
+            With .AddDateColumn("Date", VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
                 m_i_date = .ColumnIndex
             End With
-            With .AddDateColumn("Nom animal", VTL_ANIMAL.VTL_ANIMAL_NOM)
+            With .AddColumn("Nom animal", VTL_ANIMAL.VTL_ANIMAL_NOM)
                 m_i_animal = .ColumnIndex
             End With
-            With .AddDateColumn("Puce animal", VTL_ANIMAL.VTL_ANIMAL_NUM_PUCE)
+            With .AddColumn("Puce animal", VTL_ANIMAL.VTL_ANIMAL_NUM_PUCE)
                 m_i_puce = .ColumnIndex
             End With
             With .AddColumn("Commentaire", VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE)

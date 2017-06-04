@@ -6,133 +6,7 @@ VITAL
 </name>
 </assembly>
 <members>
-<member name="P:VITAL.PageConsultation.SelectedConsultation">
-	<summary>
- Contient l'Animal consultée
- </summary>
-	<value>Animal</value>
-	<returns>Animal</returns>
-</member><member name="P:VITAL.PageConsultation.SelectedConsultationId">
-	<summary>
- Contient l'ID de l'Consultation consultée
- </summary>
-	<value>ID</value>
-	<returns>ID d'une Consultation</returns>
-</member><member name="P:VITAL.PageConsultation.SelectedAnimal">
-	<summary>
- Contient l'Animal consultée
- </summary>
-	<value>Animal</value>
-	<returns>Animal</returns>
-</member><member name="P:VITAL.PageConsultation.SelectedAnimalId">
-	<summary>
- Contient l'ID de l'Animal consultée
- </summary>
-	<value>ID</value>
-	<returns>ID d'une Animal</returns>
-</member><member name="M:VITAL.PageConsultation.Page_Load(System.Object,System.EventArgs)">
-	<summary>
- Initialisation de la page en cours
- </summary>
-	<remarks>Ne pas mettre de bloc try/catch :
- S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
- Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
-</member><member name="M:VITAL.PageConsultation.LoadElementsVisibles">
-	<summary>
- Chargement des elemetns visibles.
- </summary>
-</member><member name="M:VITAL.PageConsultation.LoadCbo">
-	<summary>
- Chargement des combo box / listes déroulantes.
- </summary>
-</member><member name="M:VITAL.PageConsultation.LoadData">
-	<summary>
- Chargement des données.
- </summary>
-</member><member name="T:VITAL.PageConsultation">
-	<summary>
-	</summary>
-</member><member name="F:VITAL.PageConsultation.frmData">
-	<summary>
-Contrôle frmData.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageConsultation.frlGeneral">
-	<summary>
-Contrôle frlGeneral.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageConsultation.frmGeneral">
-	<summary>
-Contrôle frmGeneral.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageConsultation.frlDtl">
-	<summary>
-Contrôle frlDtl.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageConsultation.ntbMontant">
-	<summary>
-Contrôle ntbMontant.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageConsultation.dtbDate">
-	<summary>
-Contrôle dtbDate.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageConsultation.cboVeterinaire">
-	<summary>
-Contrôle cboVeterinaire.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageConsultation.txtComment">
-	<summary>
-Contrôle txtComment.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageConsultation.pnbBoutons">
-	<summary>
-Contrôle pnbBoutons.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageConsultation.btnSave">
-	<summary>
-Contrôle btnSave.
-</summary>
-	<remarks>
-Champ généré automatiquement.
-Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-</remarks>
-</member><member name="F:VITAL.PageDefault.frmData">
+<member name="F:VITAL.PageDefault.frmData">
 	<summary>
 Contrôle frmData.
 </summary>
@@ -737,6 +611,52 @@ Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans 
 	<remarks>Ne pas mettre de bloc try/catch :
  S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
  Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="P:VITAL.PageConsultation.SelectedConsultation">
+	<summary>
+ Contient l'Animal consultée
+ </summary>
+	<value>Animal</value>
+	<returns>Animal</returns>
+</member><member name="P:VITAL.PageConsultation.SelectedConsultationId">
+	<summary>
+ Contient l'ID de l'Consultation consultée
+ </summary>
+	<value>ID</value>
+	<returns>ID d'une Consultation</returns>
+</member><member name="P:VITAL.PageConsultation.SelectedAnimal">
+	<summary>
+ Contient l'Animal consultée
+ </summary>
+	<value>Animal</value>
+	<returns>Animal</returns>
+</member><member name="P:VITAL.PageConsultation.SelectedAnimalId">
+	<summary>
+ Contient l'ID de l'Animal consultée
+ </summary>
+	<value>ID</value>
+	<returns>ID d'une Animal</returns>
+</member><member name="M:VITAL.PageConsultation.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialisation de la page en cours
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="M:VITAL.PageConsultation.LoadElementsVisibles">
+	<summary>
+ Chargement des elemetns visibles.
+ </summary>
+</member><member name="M:VITAL.PageConsultation.LoadCbo">
+	<summary>
+ Chargement des combo box / listes déroulantes.
+ </summary>
+</member><member name="M:VITAL.PageConsultation.LoadData">
+	<summary>
+ Chargement des données.
+ </summary>
+</member><member name="T:VITAL.PageConsultation">
+	<summary>
+	</summary>
 </member><member name="F:VITAL.PageWelcome.frmData">
 	<summary>
 Contrôle frmData.
@@ -1328,9 +1248,169 @@ Contrôle btnvet3.
 Champ généré automatiquement.
 Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
 </remarks>
+</member><member name="F:VITAL.PageConsultation.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageConsultation.frlGeneral">
+	<summary>
+Contrôle frlGeneral.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageConsultation.frmGeneral">
+	<summary>
+Contrôle frmGeneral.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageConsultation.frlDtl">
+	<summary>
+Contrôle frlDtl.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageConsultation.ntbMontant">
+	<summary>
+Contrôle ntbMontant.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageConsultation.dtbDate">
+	<summary>
+Contrôle dtbDate.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageConsultation.cboVeterinaire">
+	<summary>
+Contrôle cboVeterinaire.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageConsultation.txtComment">
+	<summary>
+Contrôle txtComment.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageConsultation.pnbBoutons">
+	<summary>
+Contrôle pnbBoutons.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageConsultation.btnSave">
+	<summary>
+Contrôle btnSave.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.Head1">
+	<summary>
+Contrôle Head1.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
 </member><member name="F:VITAL.PageListeConsult.frmData">
 	<summary>
 Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.frlGeneral">
+	<summary>
+Contrôle frlGeneral.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.frmGenral">
+	<summary>
+Contrôle frmGenral.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.frlDtl">
+	<summary>
+Contrôle frlDtl.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.txtTest">
+	<summary>
+Contrôle txtTest.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.txtTest1">
+	<summary>
+Contrôle txtTest1.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.txtTest2">
+	<summary>
+Contrôle txtTest2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.frlGeneral2">
+	<summary>
+Contrôle frlGeneral2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.frmGenral2">
+	<summary>
+Contrôle frmGenral2.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageListeConsult.grdHistorique">
+	<summary>
+Contrôle grdHistorique.
 </summary>
 	<remarks>
 Champ généré automatiquement.
@@ -2460,6 +2540,18 @@ Contrôle frmData.
 Champ généré automatiquement.
 Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
 </remarks>
+</member><member name="P:VITAL.PageListeConsult.SelectedVeto">
+	<summary>
+ Contient l'Animal consultée
+ </summary>
+	<value>Animal</value>
+	<returns>Animal</returns>
+</member><member name="P:VITAL.PageListeConsult.SelectedVetoId">
+	<summary>
+ Contient l'ID de l'SelectedVeto consultée
+ </summary>
+	<value>ID</value>
+	<returns>ID d'une SelectedVeto</returns>
 </member><member name="M:VITAL.PageListeConsult.Page_Load(System.Object,System.EventArgs)">
 	<summary>
  Initialisation de la page en cours

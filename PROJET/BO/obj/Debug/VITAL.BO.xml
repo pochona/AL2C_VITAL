@@ -6794,6 +6794,12 @@ VITAL.BO
  Retourne les consultations d'un client et d'un animal de la plus récente à la plus ancienne
  </summary>
 	<returns>Les consultations d'un client et d'un animal de la plus récente à la plus ancienne.</returns>
+</member><member name="M:VITAL.BO.VITAL.Consultation.SearchedConsultVeto(System.Int32)">
+	<summary>
+ Retourne la liste des consultations d'un vétérinaire.
+ </summary>
+	<param name="p_s_loginVeto"></param>
+	<returns>La liste des consultations d'un vétérinaire.</returns>
 </member><member name="T:VITAL.BO.VITAL.Consultation">
 	<summary>
  Consultation vétérinaire d'un animal.

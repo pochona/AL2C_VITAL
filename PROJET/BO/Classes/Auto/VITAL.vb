@@ -992,6 +992,11 @@
         ''' </summary>
         Public Const VTL_TRAITREMENT_DT_DEBUT As String = "VTL_TRAITREMENT_DT_DEBUT"
 
+        ''' <summary>
+        ''' Id_animal.
+        ''' </summary>
+        Public Const VTL_TRAITREMENT_ID_ANIMAL As String = "VTL_TRAITREMENT_ID_ANIMAL"
+
     End Class
 
 #End Region

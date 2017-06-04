@@ -89,11 +89,10 @@ Public Class MainApplication
             If UserIsInRole("Veto") Or UserIsInRole("Admin") Then
                .Add("Sélectionner un animal", "~/Pages/Veterinaire/AuthAnimal.aspx")
                 .Add("Créer un nouveau animal", "~/Pages/Veterinaire/CreerAnimal.aspx")
-                .Add("Liste des consultations", "~/Pages/Veterinaire/ListeConsult.aspx")
+                .Add("Liste des consultations", "~/Pages/Veterinaire/ListeConsult.aspx?ID=" & Veterinaire.GetIdVetoConnectedUser(UserLogin()))
                 .Add("Paramétrage")
                 .AddSubAdminTable("Vaccins", Tables.VTL_VACCIN)
                 .AddSubAdminTable("Médicaments", Tables.VTL_MEDICAMENT)
-                '   .Add("Historique des consultations", "~/Pages/histo_consultation.aspx")
             End If
             If UserIsInRole("Mutuelle") Or UserIsInRole("Admin") Then
                 .Add("Mutuelle", "~/Pages/Mutuelle/AccueilMutuelle.aspx")
