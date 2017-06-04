@@ -14,7 +14,7 @@
 			<source Table="VTL_PROPRIETAIRE" TableAlias="T2" KeyField="VTL_PROPRIETAIRE_ID" LibField="VTL_PROPRIETAIRE_NOM" LibAlias="F2" Unique="false" />
 		</col>
 		<col DataField="VTL_CONTRAT_ID_ASSURANCE" Type="Numeric" HeaderText="Id_assurance">
-			<source Table="VTL_ASSURANCE" TableAlias="T3" KeyField="VTL_ASSURANCE_ID" LibField="VTL_ASSURANCE_NOM" LibAlias="F3" Unique="false" />
+			<source Table="VTL_ASSURANCE" TableAlias="T3" KeyField="VTL_ASSURANCE_ID" LibField="VTL_ASSURANCE_SIRET" LibAlias="F3" Unique="false" />
 		</col>
 	</columns>
 </table>

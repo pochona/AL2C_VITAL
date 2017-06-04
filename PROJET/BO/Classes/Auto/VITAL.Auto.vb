@@ -987,8 +987,14 @@ Namespace VITAL.Auto
             Else
                 l_o_qry.AddTypedKey(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ID, ID)
             End If
-            l_o_qry.AddValue(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_NOM, TextSQL(Nom))
             l_o_qry.AddValue(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET, TextSQL(Siret))
+            l_o_qry.AddValue(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_NOM, TextSQL(Nom))
+            l_o_qry.AddValue(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_TEL, TextSQL(Tel))
+            l_o_qry.AddValue(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_MAIL, TextSQL(Mail))
+            l_o_qry.AddValue(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ADR, TextSQL(Adr))
+            l_o_qry.AddValue(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_CP, TextSQL(Cp))
+            l_o_qry.AddValue(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_VILLE, TextSQL(Ville))
+            l_o_qry.AddValue(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ID_USER, NullIfValue(id_user, 0))
             If l_o_qry.ExecuteSave(Tables.VTL_ASSURANCE, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))
@@ -3822,8 +3828,15 @@ Namespace VITAL.Auto
             Else
                 l_o_qry.AddTypedKey(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, ID)
             End If
+            l_o_qry.AddTypedValue(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_DATEFIN, DateFin)
             l_o_qry.AddValue(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, TextSQL(Nom))
             l_o_qry.AddValue(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM, TextSQL(Prenom))
+            l_o_qry.AddValue(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL, TextSQL(Tel))
+            l_o_qry.AddValue(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL, TextSQL(Mail))
+            l_o_qry.AddValue(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR, TextSQL(Adr))
+            l_o_qry.AddValue(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP, TextSQL(Cp))
+            l_o_qry.AddValue(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE, TextSQL(Ville))
+            l_o_qry.AddValue(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER, NullIfValue(id_user, 0))
             If l_o_qry.ExecuteSave(Tables.VTL_PROPRIETAIRE, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))
@@ -5520,8 +5533,6 @@ Namespace VITAL.Auto
             l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_LOGIN, TextSQL(Login))
             l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_MDP, TextSQL(Mdp))
             l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_ROLE, TextSQL(Role))
-            l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_NOM, TextSQL(Nom))
-            l_o_qry.AddValue(VITAL.VTL_USER.VTL_USER_PRENOM, TextSQL(Prenom))
             If l_o_qry.ExecuteSave(Tables.VTL_USER, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))
@@ -6370,10 +6381,15 @@ Namespace VITAL.Auto
             Else
                 l_o_qry.AddTypedKey(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID, ID)
             End If
-            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_NOM, TextSQL(Nom))
-            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_PRENOM, TextSQL(Prenom))
             l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET, TextSQL(SIRET))
             l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER, NullIfValue(id_user, 0))
+            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_NOM, TextSQL(Nom))
+            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_PRENOM, TextSQL(Prenom))
+            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_TEL, TextSQL(Tel))
+            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_MAIL, TextSQL(Mail))
+            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ADR, TextSQL(Adr))
+            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_CP, TextSQL(Cp))
+            l_o_qry.AddValue(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_VILLE, TextSQL(Ville))
             If l_o_qry.ExecuteSave(Tables.VTL_VETERINAIRE, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))

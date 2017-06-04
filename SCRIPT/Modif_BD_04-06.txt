@@ -1,0 +1,91 @@
+alter table VTL_USER drop column VTL_USER_NOM;
+alter table VTL_USER drop column VTL_USER_PRENOM;
+
+alter table [dbo].[VTL_VETERINAIRE] add VTL_VETERINAIRE_TEL NVARCHAR(50);
+alter table [dbo].[VTL_VETERINAIRE] add VTL_VETERINAIRE_MAIL NVARCHAR(50);
+alter table [dbo].[VTL_VETERINAIRE] add VTL_VETERINAIRE_ADR NVARCHAR(255);
+alter table [dbo].[VTL_VETERINAIRE] add VTL_VETERINAIRE_CP NVARCHAR(50);
+alter table [dbo].[VTL_VETERINAIRE] add VTL_VETERINAIRE_VILLE NVARCHAR(50);
+
+alter table [dbo].[VTL_PROPRIETAIRE] add VTL_PROPRIETAIRE_TEL NVARCHAR(50);
+alter table [dbo].[VTL_PROPRIETAIRE] add VTL_PROPRIETAIRE_MAIL NVARCHAR(50);
+alter table [dbo].[VTL_PROPRIETAIRE] add VTL_PROPRIETAIRE_ADR NVARCHAR(255);
+alter table [dbo].[VTL_PROPRIETAIRE] add VTL_PROPRIETAIRE_CP NVARCHAR(50);
+alter table [dbo].[VTL_PROPRIETAIRE] add VTL_PROPRIETAIRE_VILLE NVARCHAR(50);
+alter table [dbo].[VTL_PROPRIETAIRE] add VTL_PROPRIETAIRE_DATEFIN DATE;
+
+alter table [dbo].[VTL_ASSURANCE] add VTL_ASSURANCE_TEL NVARCHAR(50);
+alter table [dbo].[VTL_ASSURANCE] add VTL_ASSURANCE_MAIL NVARCHAR(50);
+alter table [dbo].[VTL_ASSURANCE] add VTL_ASSURANCE_ADR NVARCHAR(255);
+alter table [dbo].[VTL_ASSURANCE] add VTL_ASSURANCE_CP NVARCHAR(50);
+alter table [dbo].[VTL_ASSURANCE] add VTL_ASSURANCE_VILLE NVARCHAR(50);
+
+
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Tel', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_TEL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mail', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_MAIL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Adr', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_ADR'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_CP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ville', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_VILLE'
+GO
+
+
+
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Tel', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_TEL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mail', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_MAIL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Adr', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_ADR'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_CP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ville', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_VILLE'
+GO
+
+
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Tel', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_TEL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mail', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_MAIL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Adr', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_ADR'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_CP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ville', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_VILLE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'DateFin', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_DATEFIN'
+GO
+
+
+
+alter table [dbo].[VTL_ASSURANCE] add VTL_ASSURANCE_ID_USER INT;
+
+-- "Creation de la clef etrangere de la table VTL_ASSURANCE vers la table VTL_USER"
+ALTER TABLE VTL_ASSURANCE
+ADD CONSTRAINT VTL_ASSURANCE_ID_USER_VTL_USER_FK FOREIGN KEY (VTL_ASSURANCE_ID_USER)
+	REFERENCES VTL_USER(VTL_USER_ID);
+GO
+
+
+alter table [dbo].[VTL_PROPRIETAIRE] add VTL_PROPRIETAIRE_ID_USER INT;
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'id_user', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_ID_USER'
+GO
+	
+	
+	-- "Creation de la clef etrangere de la table VTL_PROPRIETAIRE vers la table VTL_USER"
+ALTER TABLE VTL_PROPRIETAIRE
+ADD CONSTRAINT VTL_PROPRIETAIRE_ID_USER_VTL_USER_FK FOREIGN KEY (VTL_PROPRIETAIRE_ID_USER)
+	REFERENCES VTL_USER(VTL_USER_ID);
+GO
+
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'id_user', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_ID_USER'
+GO

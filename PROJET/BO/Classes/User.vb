@@ -41,39 +41,18 @@
             With l_o_sql
                 ' Requête principale
                 .Clear()
-                .AddSelect(VTL_USER.VTL_USER_ID)
-                .AddSelect(VTL_USER.VTL_USER_NOM)
-                .AddSelect(VTL_USER.VTL_USER_PRENOM)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM)
                 'FROM
-                .AddFrom(Tables.VTL_USER)
+                .AddFrom(Tables.VTL_PROPRIETAIRE)
                 'WHERE
-                .AddWhereIs(VTL_USER.VTL_USER_ROLE, "Proprietaire")
+                ' .AddWhereIs(VTL_USER.VTL_USER_ROLE, "Proprietaire")
             End With
             Return l_o_sql
         End Function
 
-        ''' <summary>
-        ''' Indique s'il existe un utilisateur avec cet ID.
-        ''' </summary>
-        ''' <param name="p_i_idUser">Id utilisateur.</param>
-        ''' <returns>Indique s'il existe un utilisateur avec cet ID.</returns>
-        Public Shared Function Exists(p_i_idUser As Integer) As Boolean
-            Dim l_o_sql As New Query
-
-            With l_o_sql
-                ' Requête principale
-                .Clear()
-                .AddSelect(VTL_USER.VTL_USER_ID)
-                .AddFrom(Tables.VTL_USER)
-                .AddWhereIs(VTL_USER.VTL_USER_ID, p_i_idUser)
-
-                If Not .GetFirstRow Is Nothing Then
-                    Return True
-                Else
-                    Return False
-                End If
-            End With
-        End Function
+    
 
         ''' <summary>
         ''' Retourne l'id de l'utilisateur connecté.

@@ -7,7 +7,5 @@
 		<col DataField="VTL_USER_LOGIN" Type="Text" Unique="true" HeaderText="Login" NotNull="true" MaxLen="50" />
 		<col DataField="VTL_USER_MDP" Type="Text" Unique="false" HeaderText="Mdp" NotNull="true" MaxLen="50" />
 		<col DataField="VTL_USER_ROLE" Type="Text" Unique="false" HeaderText="Role" NotNull="true" MaxLen="50" />
-		<col DataField="VTL_USER_NOM" Type="Text" Unique="false" HeaderText="Nom" MaxLen="50" />
-		<col DataField="VTL_USER_PRENOM" Type="Text" Unique="false" HeaderText="Prenom" MaxLen="50" />
 	</columns>
 </table>

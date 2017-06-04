@@ -122,6 +122,7 @@
     <Content Include="Pages\Proprio\SuiviPoids.aspx" />
     <Content Include="Pages\Veterinaire\AccueilAnimal.aspx" />
     <Content Include="Pages\Veterinaire\AuthAnimal.aspx" />
+    <Content Include="Pages\Veterinaire\Consultation.aspx" />
     <Content Include="Pages\Veterinaire\CreerAnimal.aspx" />
     <Content Include="Pages\Veterinaire\ListeConsult.aspx" />
     <Content Include="Pages\Veterinaire\NewCarte.aspx" />
@@ -284,6 +285,13 @@
     </Compile>
     <Compile Include="Pages\Veterinaire\AuthAnimal.aspx.vb">
       <DependentUpon>AuthAnimal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Veterinaire\Consultation.aspx.designer.vb">
+      <DependentUpon>Consultation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Veterinaire\Consultation.aspx.vb">
+      <DependentUpon>Consultation.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Veterinaire\CreerAnimal.aspx.designer.vb">

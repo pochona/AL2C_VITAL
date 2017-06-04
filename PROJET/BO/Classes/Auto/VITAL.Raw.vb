@@ -991,14 +991,44 @@
 		Private m_i_iD As Integer
 
         ''' <summary>
+        ''' Siret.
+        ''' </summary>
+		Private m_s_siret As String
+
+        ''' <summary>
         ''' Nom.
         ''' </summary>
 		Private m_s_nom As String
 
         ''' <summary>
-        ''' Siret.
+        ''' Tel.
         ''' </summary>
-		Private m_s_siret As String
+		Private m_s_tel As String
+
+        ''' <summary>
+        ''' Mail.
+        ''' </summary>
+		Private m_s_mail As String
+
+        ''' <summary>
+        ''' Adr.
+        ''' </summary>
+		Private m_s_adr As String
+
+        ''' <summary>
+        ''' Cp.
+        ''' </summary>
+		Private m_s_cp As String
+
+        ''' <summary>
+        ''' Ville.
+        ''' </summary>
+		Private m_s_ville As String
+
+        ''' <summary>
+        ''' id_user.
+        ''' </summary>
+		Private m_i_id_user As Integer
 
 #End Region
 
@@ -1038,6 +1068,25 @@
         End Sub
 
         ''' <summary>
+        ''' Siret.
+        ''' Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_SIRET.
+        ''' </summary>
+        ''' <value>
+        ''' Siret.
+        ''' </value>
+		Public Overridable Property Siret As String
+            Get
+				Return m_s_siret
+            End Get
+			Set(value As String)
+                If m_s_siret <> value Then
+                    m_s_siret = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
         ''' Nom.
         ''' Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_NOM.
         ''' </summary>
@@ -1057,19 +1106,114 @@
         End Property
 
         ''' <summary>
-        ''' Siret.
-        ''' Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_SIRET.
+        ''' Tel.
+        ''' Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_TEL.
         ''' </summary>
         ''' <value>
-        ''' Siret.
+        ''' Tel.
         ''' </value>
-		Public Overridable Property Siret As String
+		Public Overridable Property Tel As String
             Get
-				Return m_s_siret
+				Return m_s_tel
             End Get
 			Set(value As String)
-                If m_s_siret <> value Then
-                    m_s_siret = value
+                If m_s_tel <> value Then
+                    m_s_tel = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Mail.
+        ''' Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_MAIL.
+        ''' </summary>
+        ''' <value>
+        ''' Mail.
+        ''' </value>
+		Public Overridable Property Mail As String
+            Get
+				Return m_s_mail
+            End Get
+			Set(value As String)
+                If m_s_mail <> value Then
+                    m_s_mail = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Adr.
+        ''' Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_ADR.
+        ''' </summary>
+        ''' <value>
+        ''' Adr.
+        ''' </value>
+		Public Overridable Property Adr As String
+            Get
+				Return m_s_adr
+            End Get
+			Set(value As String)
+                If m_s_adr <> value Then
+                    m_s_adr = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Cp.
+        ''' Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_CP.
+        ''' </summary>
+        ''' <value>
+        ''' Cp.
+        ''' </value>
+		Public Overridable Property Cp As String
+            Get
+				Return m_s_cp
+            End Get
+			Set(value As String)
+                If m_s_cp <> value Then
+                    m_s_cp = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Ville.
+        ''' Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_VILLE.
+        ''' </summary>
+        ''' <value>
+        ''' Ville.
+        ''' </value>
+		Public Overridable Property Ville As String
+            Get
+				Return m_s_ville
+            End Get
+			Set(value As String)
+                If m_s_ville <> value Then
+                    m_s_ville = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' id_user.
+        ''' Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_ID_USER.
+        ''' </summary>
+        ''' <value>
+        ''' id_user.
+        ''' </value>
+		Public Overridable Property id_user As Integer
+            Get
+				Return m_i_id_user
+            End Get
+			Set(value As Integer)
+                If m_i_id_user <> value Then
+                    m_i_id_user = value
                     HasChanges = True
                 End If
             End Set
@@ -1130,10 +1274,22 @@
                 p_o_target.m_i_iD = m_i_iD
             End If
             p_o_target.m_i_iD = m_i_iD
-            ' Colonne : m_s_nom
-            p_o_target.m_s_nom = m_s_nom
             ' Colonne : m_s_siret
             p_o_target.m_s_siret = m_s_siret
+            ' Colonne : m_s_nom
+            p_o_target.m_s_nom = m_s_nom
+            ' Colonne : m_s_tel
+            p_o_target.m_s_tel = m_s_tel
+            ' Colonne : m_s_mail
+            p_o_target.m_s_mail = m_s_mail
+            ' Colonne : m_s_adr
+            p_o_target.m_s_adr = m_s_adr
+            ' Colonne : m_s_cp
+            p_o_target.m_s_cp = m_s_cp
+            ' Colonne : m_s_ville
+            p_o_target.m_s_ville = m_s_ville
+            ' Colonne : m_i_id_user
+            p_o_target.m_i_id_user = m_i_id_user
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -1146,8 +1302,14 @@
         Public Overridable Sub Load(p_o_row As DataRow)
             If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
 			m_i_iD = CInt(p_o_row!VTL_ASSURANCE_ID)
-			m_s_nom = CStr(p_o_row!VTL_ASSURANCE_NOM)
 			m_s_siret = CStr(p_o_row!VTL_ASSURANCE_SIRET)
+			m_s_nom = NzStr(p_o_row!VTL_ASSURANCE_NOM)
+			m_s_tel = NzStr(p_o_row!VTL_ASSURANCE_TEL)
+			m_s_mail = NzStr(p_o_row!VTL_ASSURANCE_MAIL)
+			m_s_adr = NzStr(p_o_row!VTL_ASSURANCE_ADR)
+			m_s_cp = NzStr(p_o_row!VTL_ASSURANCE_CP)
+			m_s_ville = NzStr(p_o_row!VTL_ASSURANCE_VILLE)
+			m_i_id_user = NzInt(p_o_row!VTL_ASSURANCE_ID_USER, 0)
             HasChanges = False
         End Sub
 
@@ -1157,8 +1319,14 @@
         ''' <param name="p_o_row">Enregistrement.</param>
         Public Overridable Sub ToRow(p_o_row As DataRow)
 			p_o_row("VTL_ASSURANCE_ID") = ID
-			p_o_row("VTL_ASSURANCE_NOM") = Nom
 			p_o_row("VTL_ASSURANCE_SIRET") = Siret
+			p_o_row("VTL_ASSURANCE_NOM") = Nom
+			p_o_row("VTL_ASSURANCE_TEL") = Tel
+			p_o_row("VTL_ASSURANCE_MAIL") = Mail
+			p_o_row("VTL_ASSURANCE_ADR") = Adr
+			p_o_row("VTL_ASSURANCE_CP") = Cp
+			p_o_row("VTL_ASSURANCE_VILLE") = Ville
+			p_o_row("VTL_ASSURANCE_ID_USER") = id_user
         End Sub
 
         ''' <summary>
@@ -1171,11 +1339,29 @@
             If p_o_object.ID <> ID Then
                 l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ID, {p_o_object.ID,ID})
             End If
+            If p_o_object.Siret <> Siret Then
+                l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET, {p_o_object.Siret,Siret})
+            End If
             If p_o_object.Nom <> Nom Then
                 l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_NOM, {p_o_object.Nom,Nom})
             End If
-            If p_o_object.Siret <> Siret Then
-                l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET, {p_o_object.Siret,Siret})
+            If p_o_object.Tel <> Tel Then
+                l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_TEL, {p_o_object.Tel,Tel})
+            End If
+            If p_o_object.Mail <> Mail Then
+                l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_MAIL, {p_o_object.Mail,Mail})
+            End If
+            If p_o_object.Adr <> Adr Then
+                l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ADR, {p_o_object.Adr,Adr})
+            End If
+            If p_o_object.Cp <> Cp Then
+                l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_CP, {p_o_object.Cp,Cp})
+            End If
+            If p_o_object.Ville <> Ville Then
+                l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_VILLE, {p_o_object.Ville,Ville})
+            End If
+            If p_o_object.id_user <> id_user Then
+                l_o_dicDiff.Add(VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ID_USER, {p_o_object.id_user,id_user})
             End If
             Return l_o_dicDiff
         End Function
@@ -3646,6 +3832,11 @@
 		Private m_i_iD As Integer
 
         ''' <summary>
+        ''' DateFin.
+        ''' </summary>
+		Private m_dt_dateFin As DateTime
+
+        ''' <summary>
         ''' Nom.
         ''' </summary>
 		Private m_s_nom As String
@@ -3654,6 +3845,36 @@
         ''' Prenom.
         ''' </summary>
 		Private m_s_prenom As String
+
+        ''' <summary>
+        ''' Tel.
+        ''' </summary>
+		Private m_s_tel As String
+
+        ''' <summary>
+        ''' Mail.
+        ''' </summary>
+		Private m_s_mail As String
+
+        ''' <summary>
+        ''' Adr.
+        ''' </summary>
+		Private m_s_adr As String
+
+        ''' <summary>
+        ''' Cp.
+        ''' </summary>
+		Private m_s_cp As String
+
+        ''' <summary>
+        ''' Ville.
+        ''' </summary>
+		Private m_s_ville As String
+
+        ''' <summary>
+        ''' id_user.
+        ''' </summary>
+		Private m_i_id_user As Integer
 
 #End Region
 
@@ -3693,6 +3914,25 @@
         End Sub
 
         ''' <summary>
+        ''' DateFin.
+        ''' Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_DATEFIN.
+        ''' </summary>
+        ''' <value>
+        ''' DateFin.
+        ''' </value>
+		Public Overridable Property DateFin As DateTime
+            Get
+				Return m_dt_dateFin
+            End Get
+			Set(value As DateTime)
+                If m_dt_dateFin <> value Then
+                    m_dt_dateFin = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
         ''' Nom.
         ''' Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM.
         ''' </summary>
@@ -3725,6 +3965,120 @@
 			Set(value As String)
                 If m_s_prenom <> value Then
                     m_s_prenom = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Tel.
+        ''' Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL.
+        ''' </summary>
+        ''' <value>
+        ''' Tel.
+        ''' </value>
+		Public Overridable Property Tel As String
+            Get
+				Return m_s_tel
+            End Get
+			Set(value As String)
+                If m_s_tel <> value Then
+                    m_s_tel = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Mail.
+        ''' Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL.
+        ''' </summary>
+        ''' <value>
+        ''' Mail.
+        ''' </value>
+		Public Overridable Property Mail As String
+            Get
+				Return m_s_mail
+            End Get
+			Set(value As String)
+                If m_s_mail <> value Then
+                    m_s_mail = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Adr.
+        ''' Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR.
+        ''' </summary>
+        ''' <value>
+        ''' Adr.
+        ''' </value>
+		Public Overridable Property Adr As String
+            Get
+				Return m_s_adr
+            End Get
+			Set(value As String)
+                If m_s_adr <> value Then
+                    m_s_adr = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Cp.
+        ''' Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP.
+        ''' </summary>
+        ''' <value>
+        ''' Cp.
+        ''' </value>
+		Public Overridable Property Cp As String
+            Get
+				Return m_s_cp
+            End Get
+			Set(value As String)
+                If m_s_cp <> value Then
+                    m_s_cp = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Ville.
+        ''' Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE.
+        ''' </summary>
+        ''' <value>
+        ''' Ville.
+        ''' </value>
+		Public Overridable Property Ville As String
+            Get
+				Return m_s_ville
+            End Get
+			Set(value As String)
+                If m_s_ville <> value Then
+                    m_s_ville = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' id_user.
+        ''' Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER.
+        ''' </summary>
+        ''' <value>
+        ''' id_user.
+        ''' </value>
+		Public Overridable Property id_user As Integer
+            Get
+				Return m_i_id_user
+            End Get
+			Set(value As Integer)
+                If m_i_id_user <> value Then
+                    m_i_id_user = value
                     HasChanges = True
                 End If
             End Set
@@ -3785,10 +4139,24 @@
                 p_o_target.m_i_iD = m_i_iD
             End If
             p_o_target.m_i_iD = m_i_iD
+            ' Colonne : m_dt_dateFin
+            p_o_target.m_dt_dateFin = m_dt_dateFin
             ' Colonne : m_s_nom
             p_o_target.m_s_nom = m_s_nom
             ' Colonne : m_s_prenom
             p_o_target.m_s_prenom = m_s_prenom
+            ' Colonne : m_s_tel
+            p_o_target.m_s_tel = m_s_tel
+            ' Colonne : m_s_mail
+            p_o_target.m_s_mail = m_s_mail
+            ' Colonne : m_s_adr
+            p_o_target.m_s_adr = m_s_adr
+            ' Colonne : m_s_cp
+            p_o_target.m_s_cp = m_s_cp
+            ' Colonne : m_s_ville
+            p_o_target.m_s_ville = m_s_ville
+            ' Colonne : m_i_id_user
+            p_o_target.m_i_id_user = m_i_id_user
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -3801,8 +4169,15 @@
         Public Overridable Sub Load(p_o_row As DataRow)
             If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
 			m_i_iD = CInt(p_o_row!VTL_PROPRIETAIRE_ID)
-			m_s_nom = CStr(p_o_row!VTL_PROPRIETAIRE_NOM)
+			m_dt_dateFin = NzDate(p_o_row!VTL_PROPRIETAIRE_DATEFIN)
+			m_s_nom = NzStr(p_o_row!VTL_PROPRIETAIRE_NOM)
 			m_s_prenom = NzStr(p_o_row!VTL_PROPRIETAIRE_PRENOM)
+			m_s_tel = NzStr(p_o_row!VTL_PROPRIETAIRE_TEL)
+			m_s_mail = NzStr(p_o_row!VTL_PROPRIETAIRE_MAIL)
+			m_s_adr = NzStr(p_o_row!VTL_PROPRIETAIRE_ADR)
+			m_s_cp = NzStr(p_o_row!VTL_PROPRIETAIRE_CP)
+			m_s_ville = NzStr(p_o_row!VTL_PROPRIETAIRE_VILLE)
+			m_i_id_user = NzInt(p_o_row!VTL_PROPRIETAIRE_ID_USER, 0)
             HasChanges = False
         End Sub
 
@@ -3812,8 +4187,15 @@
         ''' <param name="p_o_row">Enregistrement.</param>
         Public Overridable Sub ToRow(p_o_row As DataRow)
 			p_o_row("VTL_PROPRIETAIRE_ID") = ID
+			p_o_row("VTL_PROPRIETAIRE_DATEFIN") = DateFin
 			p_o_row("VTL_PROPRIETAIRE_NOM") = Nom
 			p_o_row("VTL_PROPRIETAIRE_PRENOM") = Prenom
+			p_o_row("VTL_PROPRIETAIRE_TEL") = Tel
+			p_o_row("VTL_PROPRIETAIRE_MAIL") = Mail
+			p_o_row("VTL_PROPRIETAIRE_ADR") = Adr
+			p_o_row("VTL_PROPRIETAIRE_CP") = Cp
+			p_o_row("VTL_PROPRIETAIRE_VILLE") = Ville
+			p_o_row("VTL_PROPRIETAIRE_ID_USER") = id_user
         End Sub
 
         ''' <summary>
@@ -3826,11 +4208,32 @@
             If p_o_object.ID <> ID Then
                 l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, {p_o_object.ID,ID})
             End If
+            If p_o_object.DateFin <> DateFin Then
+                l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_DATEFIN, {p_o_object.DateFin,DateFin})
+            End If
             If p_o_object.Nom <> Nom Then
                 l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, {p_o_object.Nom,Nom})
             End If
             If p_o_object.Prenom <> Prenom Then
                 l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM, {p_o_object.Prenom,Prenom})
+            End If
+            If p_o_object.Tel <> Tel Then
+                l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL, {p_o_object.Tel,Tel})
+            End If
+            If p_o_object.Mail <> Mail Then
+                l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL, {p_o_object.Mail,Mail})
+            End If
+            If p_o_object.Adr <> Adr Then
+                l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR, {p_o_object.Adr,Adr})
+            End If
+            If p_o_object.Cp <> Cp Then
+                l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP, {p_o_object.Cp,Cp})
+            End If
+            If p_o_object.Ville <> Ville Then
+                l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE, {p_o_object.Ville,Ville})
+            End If
+            If p_o_object.id_user <> id_user Then
+                l_o_dicDiff.Add(VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER, {p_o_object.id_user,id_user})
             End If
             Return l_o_dicDiff
         End Function
@@ -5067,16 +5470,6 @@
         ''' </summary>
 		Private m_s_role As String
 
-        ''' <summary>
-        ''' Nom.
-        ''' </summary>
-		Private m_s_nom As String
-
-        ''' <summary>
-        ''' Prenom.
-        ''' </summary>
-		Private m_s_prenom As String
-
 #End Region
 
 #Region "Propriétés publiques"
@@ -5171,44 +5564,6 @@
             End Set
         End Property
 
-        ''' <summary>
-        ''' Nom.
-        ''' Champ associé : VTL_USER.VTL_USER_NOM.
-        ''' </summary>
-        ''' <value>
-        ''' Nom.
-        ''' </value>
-		Public Overridable Property Nom As String
-            Get
-				Return m_s_nom
-            End Get
-			Set(value As String)
-                If m_s_nom <> value Then
-                    m_s_nom = value
-                    HasChanges = True
-                End If
-            End Set
-        End Property
-
-        ''' <summary>
-        ''' Prenom.
-        ''' Champ associé : VTL_USER.VTL_USER_PRENOM.
-        ''' </summary>
-        ''' <value>
-        ''' Prenom.
-        ''' </value>
-		Public Overridable Property Prenom As String
-            Get
-				Return m_s_prenom
-            End Get
-			Set(value As String)
-                If m_s_prenom <> value Then
-                    m_s_prenom = value
-                    HasChanges = True
-                End If
-            End Set
-        End Property
-
 #End Region
 
 #Region "Constantes publiques"
@@ -5270,10 +5625,6 @@
             p_o_target.m_s_mdp = m_s_mdp
             ' Colonne : m_s_role
             p_o_target.m_s_role = m_s_role
-            ' Colonne : m_s_nom
-            p_o_target.m_s_nom = m_s_nom
-            ' Colonne : m_s_prenom
-            p_o_target.m_s_prenom = m_s_prenom
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -5289,8 +5640,6 @@
 			m_s_login = CStr(p_o_row!VTL_USER_LOGIN)
 			m_s_mdp = CStr(p_o_row!VTL_USER_MDP)
 			m_s_role = CStr(p_o_row!VTL_USER_ROLE)
-			m_s_nom = NzStr(p_o_row!VTL_USER_NOM)
-			m_s_prenom = NzStr(p_o_row!VTL_USER_PRENOM)
             HasChanges = False
         End Sub
 
@@ -5303,8 +5652,6 @@
 			p_o_row("VTL_USER_LOGIN") = Login
 			p_o_row("VTL_USER_MDP") = Mdp
 			p_o_row("VTL_USER_ROLE") = Role
-			p_o_row("VTL_USER_NOM") = Nom
-			p_o_row("VTL_USER_PRENOM") = Prenom
         End Sub
 
         ''' <summary>
@@ -5325,12 +5672,6 @@
             End If
             If p_o_object.Role <> Role Then
                 l_o_dicDiff.Add(VITAL.VTL_USER.VTL_USER_ROLE, {p_o_object.Role,Role})
-            End If
-            If p_o_object.Nom <> Nom Then
-                l_o_dicDiff.Add(VITAL.VTL_USER.VTL_USER_NOM, {p_o_object.Nom,Nom})
-            End If
-            If p_o_object.Prenom <> Prenom Then
-                l_o_dicDiff.Add(VITAL.VTL_USER.VTL_USER_PRENOM, {p_o_object.Prenom,Prenom})
             End If
             Return l_o_dicDiff
         End Function
@@ -5927,6 +6268,16 @@
 		Private m_i_iD As Integer
 
         ''' <summary>
+        ''' SIRET.
+        ''' </summary>
+		Private m_s_sIRET As String
+
+        ''' <summary>
+        ''' id_user.
+        ''' </summary>
+		Private m_i_id_user As Integer
+
+        ''' <summary>
         ''' Nom.
         ''' </summary>
 		Private m_s_nom As String
@@ -5937,14 +6288,29 @@
 		Private m_s_prenom As String
 
         ''' <summary>
-        ''' SIRET.
+        ''' Tel.
         ''' </summary>
-		Private m_s_sIRET As String
+		Private m_s_tel As String
 
         ''' <summary>
-        ''' id_user.
+        ''' Mail.
         ''' </summary>
-		Private m_i_id_user As Integer
+		Private m_s_mail As String
+
+        ''' <summary>
+        ''' Adr.
+        ''' </summary>
+		Private m_s_adr As String
+
+        ''' <summary>
+        ''' Cp.
+        ''' </summary>
+		Private m_s_cp As String
+
+        ''' <summary>
+        ''' Ville.
+        ''' </summary>
+		Private m_s_ville As String
 
 #End Region
 
@@ -5982,6 +6348,44 @@
         Protected Sub SetAutoId(p_i_id As Integer)
             m_i_iD = p_i_id
         End Sub
+
+        ''' <summary>
+        ''' SIRET.
+        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET.
+        ''' </summary>
+        ''' <value>
+        ''' SIRET.
+        ''' </value>
+		Public Overridable Property SIRET As String
+            Get
+				Return m_s_sIRET
+            End Get
+			Set(value As String)
+                If m_s_sIRET <> value Then
+                    m_s_sIRET = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' id_user.
+        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER.
+        ''' </summary>
+        ''' <value>
+        ''' id_user.
+        ''' </value>
+		Public Overridable Property id_user As Integer
+            Get
+				Return m_i_id_user
+            End Get
+			Set(value As Integer)
+                If m_i_id_user <> value Then
+                    m_i_id_user = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
 
         ''' <summary>
         ''' Nom.
@@ -6022,38 +6426,95 @@
         End Property
 
         ''' <summary>
-        ''' SIRET.
-        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET.
+        ''' Tel.
+        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_TEL.
         ''' </summary>
         ''' <value>
-        ''' SIRET.
+        ''' Tel.
         ''' </value>
-		Public Overridable Property SIRET As String
+		Public Overridable Property Tel As String
             Get
-				Return m_s_sIRET
+				Return m_s_tel
             End Get
 			Set(value As String)
-                If m_s_sIRET <> value Then
-                    m_s_sIRET = value
+                If m_s_tel <> value Then
+                    m_s_tel = value
                     HasChanges = True
                 End If
             End Set
         End Property
 
         ''' <summary>
-        ''' id_user.
-        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER.
+        ''' Mail.
+        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_MAIL.
         ''' </summary>
         ''' <value>
-        ''' id_user.
+        ''' Mail.
         ''' </value>
-		Public Overridable Property id_user As Integer
+		Public Overridable Property Mail As String
             Get
-				Return m_i_id_user
+				Return m_s_mail
             End Get
-			Set(value As Integer)
-                If m_i_id_user <> value Then
-                    m_i_id_user = value
+			Set(value As String)
+                If m_s_mail <> value Then
+                    m_s_mail = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Adr.
+        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ADR.
+        ''' </summary>
+        ''' <value>
+        ''' Adr.
+        ''' </value>
+		Public Overridable Property Adr As String
+            Get
+				Return m_s_adr
+            End Get
+			Set(value As String)
+                If m_s_adr <> value Then
+                    m_s_adr = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Cp.
+        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_CP.
+        ''' </summary>
+        ''' <value>
+        ''' Cp.
+        ''' </value>
+		Public Overridable Property Cp As String
+            Get
+				Return m_s_cp
+            End Get
+			Set(value As String)
+                If m_s_cp <> value Then
+                    m_s_cp = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Ville.
+        ''' Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_VILLE.
+        ''' </summary>
+        ''' <value>
+        ''' Ville.
+        ''' </value>
+		Public Overridable Property Ville As String
+            Get
+				Return m_s_ville
+            End Get
+			Set(value As String)
+                If m_s_ville <> value Then
+                    m_s_ville = value
                     HasChanges = True
                 End If
             End Set
@@ -6114,14 +6575,24 @@
                 p_o_target.m_i_iD = m_i_iD
             End If
             p_o_target.m_i_iD = m_i_iD
-            ' Colonne : m_s_nom
-            p_o_target.m_s_nom = m_s_nom
-            ' Colonne : m_s_prenom
-            p_o_target.m_s_prenom = m_s_prenom
             ' Colonne : m_s_sIRET
             p_o_target.m_s_sIRET = m_s_sIRET
             ' Colonne : m_i_id_user
             p_o_target.m_i_id_user = m_i_id_user
+            ' Colonne : m_s_nom
+            p_o_target.m_s_nom = m_s_nom
+            ' Colonne : m_s_prenom
+            p_o_target.m_s_prenom = m_s_prenom
+            ' Colonne : m_s_tel
+            p_o_target.m_s_tel = m_s_tel
+            ' Colonne : m_s_mail
+            p_o_target.m_s_mail = m_s_mail
+            ' Colonne : m_s_adr
+            p_o_target.m_s_adr = m_s_adr
+            ' Colonne : m_s_cp
+            p_o_target.m_s_cp = m_s_cp
+            ' Colonne : m_s_ville
+            p_o_target.m_s_ville = m_s_ville
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -6134,10 +6605,15 @@
         Public Overridable Sub Load(p_o_row As DataRow)
             If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
 			m_i_iD = CInt(p_o_row!VTL_VETERINAIRE_ID)
-			m_s_nom = CStr(p_o_row!VTL_VETERINAIRE_NOM)
-			m_s_prenom = CStr(p_o_row!VTL_VETERINAIRE_PRENOM)
 			m_s_sIRET = NzStr(p_o_row!VTL_VETERINAIRE_SIRET)
 			m_i_id_user = NzInt(p_o_row!VTL_VETERINAIRE_ID_USER, 0)
+			m_s_nom = NzStr(p_o_row!VTL_VETERINAIRE_NOM)
+			m_s_prenom = NzStr(p_o_row!VTL_VETERINAIRE_PRENOM)
+			m_s_tel = NzStr(p_o_row!VTL_VETERINAIRE_TEL)
+			m_s_mail = NzStr(p_o_row!VTL_VETERINAIRE_MAIL)
+			m_s_adr = NzStr(p_o_row!VTL_VETERINAIRE_ADR)
+			m_s_cp = NzStr(p_o_row!VTL_VETERINAIRE_CP)
+			m_s_ville = NzStr(p_o_row!VTL_VETERINAIRE_VILLE)
             HasChanges = False
         End Sub
 
@@ -6147,10 +6623,15 @@
         ''' <param name="p_o_row">Enregistrement.</param>
         Public Overridable Sub ToRow(p_o_row As DataRow)
 			p_o_row("VTL_VETERINAIRE_ID") = ID
-			p_o_row("VTL_VETERINAIRE_NOM") = Nom
-			p_o_row("VTL_VETERINAIRE_PRENOM") = Prenom
 			p_o_row("VTL_VETERINAIRE_SIRET") = SIRET
 			p_o_row("VTL_VETERINAIRE_ID_USER") = id_user
+			p_o_row("VTL_VETERINAIRE_NOM") = Nom
+			p_o_row("VTL_VETERINAIRE_PRENOM") = Prenom
+			p_o_row("VTL_VETERINAIRE_TEL") = Tel
+			p_o_row("VTL_VETERINAIRE_MAIL") = Mail
+			p_o_row("VTL_VETERINAIRE_ADR") = Adr
+			p_o_row("VTL_VETERINAIRE_CP") = Cp
+			p_o_row("VTL_VETERINAIRE_VILLE") = Ville
         End Sub
 
         ''' <summary>
@@ -6163,17 +6644,32 @@
             If p_o_object.ID <> ID Then
                 l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID, {p_o_object.ID,ID})
             End If
+            If p_o_object.SIRET <> SIRET Then
+                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET, {p_o_object.SIRET,SIRET})
+            End If
+            If p_o_object.id_user <> id_user Then
+                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER, {p_o_object.id_user,id_user})
+            End If
             If p_o_object.Nom <> Nom Then
                 l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_NOM, {p_o_object.Nom,Nom})
             End If
             If p_o_object.Prenom <> Prenom Then
                 l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_PRENOM, {p_o_object.Prenom,Prenom})
             End If
-            If p_o_object.SIRET <> SIRET Then
-                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET, {p_o_object.SIRET,SIRET})
+            If p_o_object.Tel <> Tel Then
+                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_TEL, {p_o_object.Tel,Tel})
             End If
-            If p_o_object.id_user <> id_user Then
-                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER, {p_o_object.id_user,id_user})
+            If p_o_object.Mail <> Mail Then
+                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_MAIL, {p_o_object.Mail,Mail})
+            End If
+            If p_o_object.Adr <> Adr Then
+                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ADR, {p_o_object.Adr,Adr})
+            End If
+            If p_o_object.Cp <> Cp Then
+                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_CP, {p_o_object.Cp,Cp})
+            End If
+            If p_o_object.Ville <> Ville Then
+                l_o_dicDiff.Add(VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_VILLE, {p_o_object.Ville,Ville})
             End If
             Return l_o_dicDiff
         End Function

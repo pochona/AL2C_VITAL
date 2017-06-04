@@ -305,6 +305,16 @@
         Public Const VTL_ASSURANCE_ID As String = "VTL_ASSURANCE_ID"
 
         ''' <summary>
+        ''' Siret.
+        ''' </summary>
+        Public Const VTL_ASSURANCE_SIRET As String = "VTL_ASSURANCE_SIRET"
+
+        ''' <summary>
+        ''' Siret (Maxlen).
+        ''' </summary>
+        Public Const VTL_ASSURANCE_SIRET_MAXLEN As Integer = 50
+
+        ''' <summary>
         ''' Nom.
         ''' </summary>
         Public Const VTL_ASSURANCE_NOM As String = "VTL_ASSURANCE_NOM"
@@ -315,14 +325,59 @@
         Public Const VTL_ASSURANCE_NOM_MAXLEN As Integer = 50
 
         ''' <summary>
-        ''' Siret.
+        ''' Tel.
         ''' </summary>
-        Public Const VTL_ASSURANCE_SIRET As String = "VTL_ASSURANCE_SIRET"
+        Public Const VTL_ASSURANCE_TEL As String = "VTL_ASSURANCE_TEL"
 
         ''' <summary>
-        ''' Siret (Maxlen).
+        ''' Tel (Maxlen).
         ''' </summary>
-        Public Const VTL_ASSURANCE_SIRET_MAXLEN As Integer = 50
+        Public Const VTL_ASSURANCE_TEL_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Mail.
+        ''' </summary>
+        Public Const VTL_ASSURANCE_MAIL As String = "VTL_ASSURANCE_MAIL"
+
+        ''' <summary>
+        ''' Mail (Maxlen).
+        ''' </summary>
+        Public Const VTL_ASSURANCE_MAIL_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Adr.
+        ''' </summary>
+        Public Const VTL_ASSURANCE_ADR As String = "VTL_ASSURANCE_ADR"
+
+        ''' <summary>
+        ''' Adr (Maxlen).
+        ''' </summary>
+        Public Const VTL_ASSURANCE_ADR_MAXLEN As Integer = 255
+
+        ''' <summary>
+        ''' Cp.
+        ''' </summary>
+        Public Const VTL_ASSURANCE_CP As String = "VTL_ASSURANCE_CP"
+
+        ''' <summary>
+        ''' Cp (Maxlen).
+        ''' </summary>
+        Public Const VTL_ASSURANCE_CP_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Ville.
+        ''' </summary>
+        Public Const VTL_ASSURANCE_VILLE As String = "VTL_ASSURANCE_VILLE"
+
+        ''' <summary>
+        ''' Ville (Maxlen).
+        ''' </summary>
+        Public Const VTL_ASSURANCE_VILLE_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' id_user.
+        ''' </summary>
+        Public Const VTL_ASSURANCE_ID_USER As String = "VTL_ASSURANCE_ID_USER"
 
     End Class
 
@@ -715,6 +770,11 @@
         Public Const VTL_PROPRIETAIRE_ID As String = "VTL_PROPRIETAIRE_ID"
 
         ''' <summary>
+        ''' DateFin.
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_DATEFIN As String = "VTL_PROPRIETAIRE_DATEFIN"
+
+        ''' <summary>
         ''' Nom.
         ''' </summary>
         Public Const VTL_PROPRIETAIRE_NOM As String = "VTL_PROPRIETAIRE_NOM"
@@ -733,6 +793,61 @@
         ''' Prenom (Maxlen).
         ''' </summary>
         Public Const VTL_PROPRIETAIRE_PRENOM_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Tel.
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_TEL As String = "VTL_PROPRIETAIRE_TEL"
+
+        ''' <summary>
+        ''' Tel (Maxlen).
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_TEL_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Mail.
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_MAIL As String = "VTL_PROPRIETAIRE_MAIL"
+
+        ''' <summary>
+        ''' Mail (Maxlen).
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_MAIL_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Adr.
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_ADR As String = "VTL_PROPRIETAIRE_ADR"
+
+        ''' <summary>
+        ''' Adr (Maxlen).
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_ADR_MAXLEN As Integer = 255
+
+        ''' <summary>
+        ''' Cp.
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_CP As String = "VTL_PROPRIETAIRE_CP"
+
+        ''' <summary>
+        ''' Cp (Maxlen).
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_CP_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Ville.
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_VILLE As String = "VTL_PROPRIETAIRE_VILLE"
+
+        ''' <summary>
+        ''' Ville (Maxlen).
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_VILLE_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' id_user.
+        ''' </summary>
+        Public Const VTL_PROPRIETAIRE_ID_USER As String = "VTL_PROPRIETAIRE_ID_USER"
 
     End Class
 
@@ -951,26 +1066,6 @@
         ''' </summary>
         Public Const VTL_USER_ROLE_MAXLEN As Integer = 50
 
-        ''' <summary>
-        ''' Nom.
-        ''' </summary>
-        Public Const VTL_USER_NOM As String = "VTL_USER_NOM"
-
-        ''' <summary>
-        ''' Nom (Maxlen).
-        ''' </summary>
-        Public Const VTL_USER_NOM_MAXLEN As Integer = 50
-
-        ''' <summary>
-        ''' Prenom.
-        ''' </summary>
-        Public Const VTL_USER_PRENOM As String = "VTL_USER_PRENOM"
-
-        ''' <summary>
-        ''' Prenom (Maxlen).
-        ''' </summary>
-        Public Const VTL_USER_PRENOM_MAXLEN As Integer = 50
-
     End Class
 
 #End Region
@@ -1068,6 +1163,21 @@
         Public Const VTL_VETERINAIRE_ID As String = "VTL_VETERINAIRE_ID"
 
         ''' <summary>
+        ''' SIRET.
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_SIRET As String = "VTL_VETERINAIRE_SIRET"
+
+        ''' <summary>
+        ''' SIRET (Maxlen).
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_SIRET_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' id_user.
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_ID_USER As String = "VTL_VETERINAIRE_ID_USER"
+
+        ''' <summary>
         ''' Nom.
         ''' </summary>
         Public Const VTL_VETERINAIRE_NOM As String = "VTL_VETERINAIRE_NOM"
@@ -1088,19 +1198,54 @@
         Public Const VTL_VETERINAIRE_PRENOM_MAXLEN As Integer = 50
 
         ''' <summary>
-        ''' SIRET.
+        ''' Tel.
         ''' </summary>
-        Public Const VTL_VETERINAIRE_SIRET As String = "VTL_VETERINAIRE_SIRET"
+        Public Const VTL_VETERINAIRE_TEL As String = "VTL_VETERINAIRE_TEL"
 
         ''' <summary>
-        ''' SIRET (Maxlen).
+        ''' Tel (Maxlen).
         ''' </summary>
-        Public Const VTL_VETERINAIRE_SIRET_MAXLEN As Integer = 50
+        Public Const VTL_VETERINAIRE_TEL_MAXLEN As Integer = 50
 
         ''' <summary>
-        ''' id_user.
+        ''' Mail.
         ''' </summary>
-        Public Const VTL_VETERINAIRE_ID_USER As String = "VTL_VETERINAIRE_ID_USER"
+        Public Const VTL_VETERINAIRE_MAIL As String = "VTL_VETERINAIRE_MAIL"
+
+        ''' <summary>
+        ''' Mail (Maxlen).
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_MAIL_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Adr.
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_ADR As String = "VTL_VETERINAIRE_ADR"
+
+        ''' <summary>
+        ''' Adr (Maxlen).
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_ADR_MAXLEN As Integer = 255
+
+        ''' <summary>
+        ''' Cp.
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_CP As String = "VTL_VETERINAIRE_CP"
+
+        ''' <summary>
+        ''' Cp (Maxlen).
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_CP_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Ville.
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_VILLE As String = "VTL_VETERINAIRE_VILLE"
+
+        ''' <summary>
+        ''' Ville (Maxlen).
+        ''' </summary>
+        Public Const VTL_VETERINAIRE_VILLE_MAXLEN As Integer = 50
 
     End Class
 

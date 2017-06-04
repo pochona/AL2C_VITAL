@@ -65,6 +65,7 @@ Partial Public Class PageAccueilAnimal
             LoadElementsVisibles()
             'définition des url des boutons redirecteurs
             LoadLien()
+            dtgConsultations.RefreshData()
         End If
     End Sub
 
@@ -74,7 +75,7 @@ Partial Public Class PageAccueilAnimal
     Private Sub LoadLien()
         btnNewCarte.NavigateUrl = "~/Pages/Veterinaire/NewCarte.aspx?ID=" & SelectedAnimalId
         btnNewCarte.Target = "Modal#400x400"
-        btnNewConsult.NavigateUrl = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Creation
+        btnNewConsult.NavigateUrl = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Creation & "&Animal=" & SelectedAnimalId
         btnNewConsult.Target = "tabConsult"
     End Sub
 
@@ -157,7 +158,7 @@ Partial Public Class PageAccueilAnimal
     ''' <param name="sender">Instance de classe source de l'évènement.</param>
     ''' <param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
     Private Sub stbProprio_TextChanged(sender As Object, e As EventArgs) Handles stbProprio.TextChanged
-        Dim l_o_user As New User
+        Dim l_o_prop As New PropriEtaire
         Dim l_i_count As Integer = 0
         Dim l_b_allNumber As Boolean = True
         Dim l_s_tempCaract As String
@@ -183,11 +184,11 @@ Partial Public Class PageAccueilAnimal
                 'Si c'est bien numérique
                 If l_b_allNumber = True Then
                     'On vérifie qu'il existe un user correspondant
-                    If BO.VITAL.User.Exists(CInt(stbProprio.Text)) = True Then
-                        l_o_user.Load(CInt(stbProprio.Text))
+                    If PropriEtaire.Exists(CInt(stbProprio.Text)) = True Then
+                        l_o_prop.Load(CInt(stbProprio.Text))
                         txtIdPropCache.Text = stbProprio.Text
-                        stbProprio.Text = l_o_user.Nom + " " + l_o_user.Prenom
-                        ShowInfo("Vous avez sélectionné : " + CStr(l_o_user.Nom + " " + l_o_user.Prenom))
+                        stbProprio.Text = l_o_prop.Nom + " " + l_o_prop.Prenom
+                        ShowInfo("Vous avez sélectionné : " + CStr(l_o_prop.Nom + " " + l_o_prop.Prenom))
                     End If
                 Else
                     ShowInfo("Pour sélectionner un propriétaire, veuillez cliquer sur le bouton à droite de la zone.")
@@ -280,6 +281,56 @@ Partial Public Class PageAccueilAnimal
         Catch ex As Exception
             ShowException(ex)
         End Try
+    End Sub
+
+#End Region
+
+#Region "Grille consultation"
+
+#Region "Colonnes de la grille "
+
+    Private m_i_date As Integer
+    Private m_i_montant As Integer
+    Private m_i_comm As Integer
+    Private m_i_veto As Integer
+    Private m_i_btn As Integer
+
+#End Region
+
+    Private Sub dtgConsultations_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgConsultations.DataTableRequest
+        Try
+            p_o_dt = Consultation.GetConsultationsAnimal(SelectedAnimalId).GetDT
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
+    End Sub
+
+    Private Sub dtgConsultations_Init(sender As Object, e As EventArgs) Handles dtgConsultations.Init
+        With dtgConsultations
+            .DataKeyField = VTL_CONSULTATION.VTL_CONSULTATION_ID
+
+            With .AddButtonColumn()
+                .Width = Unit.Pixel(65) ' fixe la taille de la colonne
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}" & "&Animal=" & SelectedAnimalId
+                .DataNavigateUrlField = VTL_CONSULTATION.VTL_CONSULTATION_ID
+                .Target = "tabConsult" + VTL_CONSULTATION.VTL_CONSULTATION_ID
+                .Properties.ImageName = "search"
+                m_i_btn = .ColumnIndex
+            End With
+            With .AddDateColumn("Date", VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
+                m_i_date = .ColumnIndex
+            End With
+            With .AddNumericColumn("Montant (€)", VTL_CONSULTATION.VTL_CONSULTATION_MONTANT)
+                m_i_montant = .ColumnIndex
+            End With
+            With .AddColumn("Commentaire", VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE)
+                m_i_comm = .ColumnIndex
+            End With
+            With .AddColumn("Vétérinaire", "nom_prenom")
+                m_i_veto = .ColumnIndex
+            End With
+        End With
+
     End Sub
 
 #End Region

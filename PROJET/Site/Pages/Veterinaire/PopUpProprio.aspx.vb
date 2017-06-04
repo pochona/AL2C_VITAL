@@ -33,15 +33,15 @@ Partial Public Class PagePopUpProprio
 
     Private Sub dtgProprio_Init(sender As Object, e As EventArgs) Handles dtgProprio.Init
         With dtgProprio
-            .DataKeyField = VTL_USER.VTL_USER_ID
+            .DataKeyField = VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID
 
-            With .AddSelectColumn("Nom", VTL_USER.VTL_USER_NOM, "=")
+            With .AddSelectColumn("Nom", VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, "=")
                 ' On revoie le champ
                 .AddReturnedFields(VTL_USER.VTL_USER_ID)
                 ' Taille 
                 .Width = Unit.Pixel(65)
             End With
-            .AddColumn("Prénom", VTL_USER.VTL_USER_PRENOM)
+            .AddColumn("Prénom", VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM)
         End With
     End Sub
 

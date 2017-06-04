@@ -14,7 +14,7 @@
                 <cw:CwNumericTextBox runat="server" ID="ntbMontant" Label="Montant" Cells-Small="6" ResetLayout="True" Suffix="€"></cw:CwNumericTextBox>
                 <cw:CwDateTextBox runat="server" ID="dtbDate" Label="Date"  Cells-Small="6" ResetLayout="True"></cw:CwDateTextBox>
                 <cw:CwComboBox runat="server" Label="Vétérinaire" ID="cboVeterinaire" Cells-Small="6" ResetLayout="True" Enabled="False"></cw:CwComboBox>
-                <cw:CwTextBox runat="server" Cells-Small="12" ID="txtComment" TextMode="MultiLine" ResetLayout="True" Label="Commentaires" LabelCells-Small="2"></cw:CwTextBox>
+                <cw:CwTextBox runat="server" Cells-Small="12" ID="txtComment" TextMode="MultiLine" ResetLayout="True" Label="Commentaires" LabelCells-Small="2" Height="200px"></cw:CwTextBox>
                 
                 
                 <cw:CwPanelButtons runat="server" ID="pnbBoutons">

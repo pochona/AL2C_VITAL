@@ -4,7 +4,16 @@
 	<description>Propriétaire</description>
 	<columns>
 		<col DataField="VTL_PROPRIETAIRE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
-		<col DataField="VTL_PROPRIETAIRE_NOM" Type="Text" Unique="false" HeaderText="Nom" NotNull="true" MaxLen="50" />
+		<col DataField="VTL_PROPRIETAIRE_DATEFIN" Type="Date" Unique="false" HeaderText="DateFin" />
+		<col DataField="VTL_PROPRIETAIRE_NOM" Type="Text" Unique="false" HeaderText="Nom" MaxLen="50" />
 		<col DataField="VTL_PROPRIETAIRE_PRENOM" Type="Text" Unique="false" HeaderText="Prenom" MaxLen="50" />
+		<col DataField="VTL_PROPRIETAIRE_TEL" Type="Text" Unique="false" HeaderText="Tel" MaxLen="50" />
+		<col DataField="VTL_PROPRIETAIRE_MAIL" Type="Text" Unique="false" HeaderText="Mail" MaxLen="50" />
+		<col DataField="VTL_PROPRIETAIRE_ADR" Type="Text" Unique="false" HeaderText="Adr" MaxLen="255" />
+		<col DataField="VTL_PROPRIETAIRE_CP" Type="Text" Unique="false" HeaderText="Cp" MaxLen="50" />
+		<col DataField="VTL_PROPRIETAIRE_VILLE" Type="Text" Unique="false" HeaderText="Ville" MaxLen="50" />
+		<col DataField="VTL_PROPRIETAIRE_ID_USER" Type="Numeric" HeaderText="id_user">
+			<source Table="VTL_USER" TableAlias="T1" KeyField="VTL_USER_ID" LibField="VTL_USER_LOGIN" LibAlias="F1" Unique="false" />
+		</col>
 	</columns>
 </table>

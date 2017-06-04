@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 03/06/2017                                     */
+/* Historique  : Creation le 04/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -103,8 +103,14 @@ GO
 -- "Creation de la table VTL_ASSURANCE"
 CREATE TABLE VTL_ASSURANCE (
 	VTL_ASSURANCE_ID INT IDENTITY(1,1) NOT NULL,
-	VTL_ASSURANCE_NOM NVARCHAR(50) NOT NULL,
-	VTL_ASSURANCE_SIRET NVARCHAR(50) NOT NULL
+	VTL_ASSURANCE_SIRET NVARCHAR(50) NOT NULL,
+	VTL_ASSURANCE_NOM NVARCHAR(50),
+	VTL_ASSURANCE_TEL NVARCHAR(50),
+	VTL_ASSURANCE_MAIL NVARCHAR(50),
+	VTL_ASSURANCE_ADR NVARCHAR(255),
+	VTL_ASSURANCE_CP NVARCHAR(50),
+	VTL_ASSURANCE_VILLE NVARCHAR(50),
+	VTL_ASSURANCE_ID_USER INT
 )
 GO
 
@@ -112,9 +118,21 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Assurance', @l
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_ID'
 GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Siret', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_SIRET'
+GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_NOM'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Siret', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_SIRET'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Tel', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_TEL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mail', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_MAIL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Adr', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_ADR'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_CP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ville', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_VILLE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'id_user', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_ASSURANCE', @level2type=N'COLUMN',@level2name=N'VTL_ASSURANCE_ID_USER'
 GO
 
 
@@ -330,8 +348,15 @@ GO
 -- "Creation de la table VTL_PROPRIETAIRE"
 CREATE TABLE VTL_PROPRIETAIRE (
 	VTL_PROPRIETAIRE_ID INT IDENTITY(1,1) NOT NULL,
-	VTL_PROPRIETAIRE_NOM NVARCHAR(50) NOT NULL,
-	VTL_PROPRIETAIRE_PRENOM NVARCHAR(50)
+	VTL_PROPRIETAIRE_DATEFIN DATE,
+	VTL_PROPRIETAIRE_NOM NVARCHAR(50),
+	VTL_PROPRIETAIRE_PRENOM NVARCHAR(50),
+	VTL_PROPRIETAIRE_TEL NVARCHAR(50),
+	VTL_PROPRIETAIRE_MAIL NVARCHAR(50),
+	VTL_PROPRIETAIRE_ADR NVARCHAR(255),
+	VTL_PROPRIETAIRE_CP NVARCHAR(50),
+	VTL_PROPRIETAIRE_VILLE NVARCHAR(50),
+	VTL_PROPRIETAIRE_ID_USER INT
 )
 GO
 
@@ -339,9 +364,23 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Propriétaire',
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_ID'
 GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'DateFin', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_DATEFIN'
+GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_NOM'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Prenom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_PRENOM'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Tel', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_TEL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mail', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_MAIL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Adr', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_ADR'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_CP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ville', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_VILLE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'id_user', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_PROPRIETAIRE', @level2type=N'COLUMN',@level2name=N'VTL_PROPRIETAIRE_ID_USER'
 GO
 
 
@@ -449,9 +488,7 @@ CREATE TABLE VTL_USER (
 	VTL_USER_ID INT IDENTITY(1,1) NOT NULL,
 	VTL_USER_LOGIN NVARCHAR(50) NOT NULL,
 	VTL_USER_MDP NVARCHAR(50) NOT NULL,
-	VTL_USER_ROLE NVARCHAR(50) NOT NULL,
-	VTL_USER_NOM NVARCHAR(50),
-	VTL_USER_PRENOM NVARCHAR(50)
+	VTL_USER_ROLE NVARCHAR(50) NOT NULL
   CONSTRAINT VTL_USER_LOGIN_CK UNIQUE (VTL_USER_LOGIN)
 )
 GO
@@ -465,10 +502,6 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mdp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_MDP'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Role', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_ROLE'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_NOM'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Prenom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_USER', @level2type=N'COLUMN',@level2name=N'VTL_USER_PRENOM'
 GO
 
 
@@ -523,10 +556,15 @@ GO
 -- "Creation de la table VTL_VETERINAIRE"
 CREATE TABLE VTL_VETERINAIRE (
 	VTL_VETERINAIRE_ID INT IDENTITY(1,1) NOT NULL,
-	VTL_VETERINAIRE_NOM NVARCHAR(50) NOT NULL,
-	VTL_VETERINAIRE_PRENOM NVARCHAR(50) NOT NULL,
 	VTL_VETERINAIRE_SIRET NVARCHAR(50),
-	VTL_VETERINAIRE_ID_USER INT
+	VTL_VETERINAIRE_ID_USER INT,
+	VTL_VETERINAIRE_NOM NVARCHAR(50),
+	VTL_VETERINAIRE_PRENOM NVARCHAR(50),
+	VTL_VETERINAIRE_TEL NVARCHAR(50),
+	VTL_VETERINAIRE_MAIL NVARCHAR(50),
+	VTL_VETERINAIRE_ADR NVARCHAR(255),
+	VTL_VETERINAIRE_CP NVARCHAR(50),
+	VTL_VETERINAIRE_VILLE NVARCHAR(50)
   CONSTRAINT VTL_VETERINAIRE_ID_USER_CK UNIQUE (VTL_VETERINAIRE_ID_USER)
 )
 GO
@@ -535,13 +573,23 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Veterinaire', 
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_ID'
 GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SIRET', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_SIRET'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'id_user', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_ID_USER'
+GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Nom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_NOM'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Prenom', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_PRENOM'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SIRET', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_SIRET'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Tel', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_TEL'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'id_user', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_ID_USER'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Mail', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_MAIL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Adr', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_ADR'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cp', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_CP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ville', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VETERINAIRE', @level2type=N'COLUMN',@level2name=N'VTL_VETERINAIRE_VILLE'
 GO
 
 

@@ -6,11 +6,7 @@ VITAL.BO
 </name>
 </assembly>
 <members>
-<member name="T:VITAL.BO.VITAL.ConseilDietetique">
-	<summary>
- ConseilDietetique.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_b_changes">
+<member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_b_changes">
 	<summary>
  Indique s'il y a eu des changements sur l'objet ou non
  </summary>
@@ -411,13 +407,37 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_siret">
+	<summary>
+ Siret.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_nom">
 	<summary>
  Nom.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_siret">
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_tel">
 	<summary>
- Siret.
+ Tel.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_mail">
+	<summary>
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_adr">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_cp">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_ville">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_i_id_user">
+	<summary>
+ id_user.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.HasChanges">
 	<summary>
@@ -433,6 +453,14 @@ VITAL.BO
 	<value>
  ID.
  </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Siret">
+	<summary>
+ Siret.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_SIRET.
+ </summary>
+	<value>
+ Siret.
+ </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Nom">
 	<summary>
  Nom.
@@ -441,13 +469,53 @@ VITAL.BO
 	<value>
  Nom.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Siret">
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Tel">
 	<summary>
- Siret.
- Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_SIRET.
+ Tel.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_TEL.
  </summary>
 	<value>
- Siret.
+ Tel.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Mail">
+	<summary>
+ Mail.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_MAIL.
+ </summary>
+	<value>
+ Mail.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Adr">
+	<summary>
+ Adr.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_ADR.
+ </summary>
+	<value>
+ Adr.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Cp">
+	<summary>
+ Cp.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_CP.
+ </summary>
+	<value>
+ Cp.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Ville">
+	<summary>
+ Ville.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_VILLE.
+ </summary>
+	<value>
+ Ville.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.id_user">
+	<summary>
+ id_user.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_ID_USER.
+ </summary>
+	<value>
+ id_user.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.HasHisto">
 	<summary>
@@ -1501,6 +1569,10 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_dt_dateFin">
+	<summary>
+ DateFin.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_nom">
 	<summary>
  Nom.
@@ -1508,6 +1580,30 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_prenom">
 	<summary>
  Prenom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_tel">
+	<summary>
+ Tel.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_mail">
+	<summary>
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_adr">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_cp">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_ville">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_i_id_user">
+	<summary>
+ id_user.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasChanges">
 	<summary>
@@ -1522,6 +1618,14 @@ VITAL.BO
  </summary>
 	<value>
  ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.DateFin">
+	<summary>
+ DateFin.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_DATEFIN.
+ </summary>
+	<value>
+ DateFin.
  </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Nom">
 	<summary>
@@ -1538,6 +1642,54 @@ VITAL.BO
  </summary>
 	<value>
  Prenom.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Tel">
+	<summary>
+ Tel.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL.
+ </summary>
+	<value>
+ Tel.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Mail">
+	<summary>
+ Mail.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL.
+ </summary>
+	<value>
+ Mail.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Adr">
+	<summary>
+ Adr.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR.
+ </summary>
+	<value>
+ Adr.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Cp">
+	<summary>
+ Cp.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP.
+ </summary>
+	<value>
+ Cp.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Ville">
+	<summary>
+ Ville.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE.
+ </summary>
+	<value>
+ Ville.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.id_user">
+	<summary>
+ id_user.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER.
+ </summary>
+	<value>
+ id_user.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasHisto">
 	<summary>
@@ -2095,14 +2247,6 @@ VITAL.BO
 	<summary>
  Role.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_nom">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.User`1.m_s_prenom">
-	<summary>
- Prenom.
- </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.User`1.HasChanges">
 	<summary>
  Indique si l'objet a subi des modifications ou non
@@ -2140,22 +2284,6 @@ VITAL.BO
  </summary>
 	<value>
  Role.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Nom">
-	<summary>
- Nom.
- Champ associé : VTL_USER.VTL_USER_NOM.
- </summary>
-	<value>
- Nom.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.User`1.Prenom">
-	<summary>
- Prenom.
- Champ associé : VTL_USER.VTL_USER_PRENOM.
- </summary>
-	<value>
- Prenom.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.User`1.HasHisto">
 	<summary>
@@ -2440,6 +2568,14 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_sIRET">
+	<summary>
+ SIRET.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_i_id_user">
+	<summary>
+ id_user.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_nom">
 	<summary>
  Nom.
@@ -2448,13 +2584,25 @@ VITAL.BO
 	<summary>
  Prenom.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_sIRET">
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_tel">
 	<summary>
- SIRET.
+ Tel.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_i_id_user">
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_mail">
 	<summary>
- id_user.
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_adr">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_cp">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_ville">
+	<summary>
+ Ville.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.HasChanges">
 	<summary>
@@ -2469,6 +2617,22 @@ VITAL.BO
  </summary>
 	<value>
  ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.SIRET">
+	<summary>
+ SIRET.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET.
+ </summary>
+	<value>
+ SIRET.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.id_user">
+	<summary>
+ id_user.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER.
+ </summary>
+	<value>
+ id_user.
  </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Nom">
 	<summary>
@@ -2486,21 +2650,45 @@ VITAL.BO
 	<value>
  Prenom.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.SIRET">
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Tel">
 	<summary>
- SIRET.
- Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET.
+ Tel.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_TEL.
  </summary>
 	<value>
- SIRET.
+ Tel.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.id_user">
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Mail">
 	<summary>
- id_user.
- Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER.
+ Mail.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_MAIL.
  </summary>
 	<value>
- id_user.
+ Mail.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Adr">
+	<summary>
+ Adr.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ADR.
+ </summary>
+	<value>
+ Adr.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Cp">
+	<summary>
+ Cp.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_CP.
+ </summary>
+	<value>
+ Cp.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Ville">
+	<summary>
+ Ville.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_VILLE.
+ </summary>
+	<value>
+ Ville.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.HasHisto">
 	<summary>
@@ -2556,6 +2744,12 @@ VITAL.BO
 	<summary>
  Contrat d'assurance.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.Exists(System.Int32)">
+	<summary>
+ Indique s'il existe un utilisateur avec cet ID.
+ </summary>
+	<param name="p_i_idUser">Id utilisateur.</param>
+	<returns>Indique s'il existe un utilisateur avec cet ID.</returns>
 </member><member name="T:VITAL.BO.VITAL.PropriEtaire">
 	<summary>
  Propriétaire.
@@ -2564,6 +2758,12 @@ VITAL.BO
 	<summary>
  Vaccin.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.Veterinaire.GetIdVetoConnectedUser(System.String)">
+	<summary>
+ Retourne l'id vétérianire correspondant à l'utilisateur connecté.
+ </summary>
+	<param name="p_s_log">Loggin de l'utilisateur connecté.</param>
+	<returns>L'id vétérianire correspondant à l'utilisateur connecté.</returns>
 </member><member name="T:VITAL.BO.VITAL.Veterinaire">
 	<summary>
  Veterinaire.
@@ -2772,6 +2972,14 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET">
+	<summary>
+ Siret.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET_MAXLEN">
+	<summary>
+ Siret (Maxlen).
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_NOM">
 	<summary>
  Nom.
@@ -2780,13 +2988,49 @@ VITAL.BO
 	<summary>
  Nom (Maxlen).
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET">
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_TEL">
 	<summary>
- Siret.
+ Tel.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET_MAXLEN">
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_TEL_MAXLEN">
 	<summary>
- Siret (Maxlen).
+ Tel (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_MAIL">
+	<summary>
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_MAIL_MAXLEN">
+	<summary>
+ Mail (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ADR">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ADR_MAXLEN">
+	<summary>
+ Adr (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_CP">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_CP_MAXLEN">
+	<summary>
+ Cp (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_VILLE">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_VILLE_MAXLEN">
+	<summary>
+ Ville (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ID_USER">
+	<summary>
+ id_user.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_ASSURANCE">
 	<summary>
@@ -3044,6 +3288,10 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_DATEFIN">
+	<summary>
+ DateFin.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM">
 	<summary>
  Nom.
@@ -3059,6 +3307,50 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM_MAXLEN">
 	<summary>
  Prenom (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL">
+	<summary>
+ Tel.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL_MAXLEN">
+	<summary>
+ Tel (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL">
+	<summary>
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL_MAXLEN">
+	<summary>
+ Mail (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR_MAXLEN">
+	<summary>
+ Adr (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP_MAXLEN">
+	<summary>
+ Cp (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE_MAXLEN">
+	<summary>
+ Ville (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER">
+	<summary>
+ id_user.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_PROPRIETAIRE">
 	<summary>
@@ -3200,22 +3492,6 @@ VITAL.BO
 	<summary>
  Role (Maxlen).
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_NOM">
-	<summary>
- Nom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_NOM_MAXLEN">
-	<summary>
- Nom (Maxlen).
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_PRENOM">
-	<summary>
- Prenom.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_USER.VTL_USER_PRENOM_MAXLEN">
-	<summary>
- Prenom (Maxlen).
- </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_USER">
 	<summary>
  User.
@@ -3276,6 +3552,18 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET">
+	<summary>
+ SIRET.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET_MAXLEN">
+	<summary>
+ SIRET (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER">
+	<summary>
+ id_user.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_NOM">
 	<summary>
  Nom.
@@ -3292,17 +3580,45 @@ VITAL.BO
 	<summary>
  Prenom (Maxlen).
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET">
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_TEL">
 	<summary>
- SIRET.
+ Tel.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET_MAXLEN">
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_TEL_MAXLEN">
 	<summary>
- SIRET (Maxlen).
+ Tel (Maxlen).
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER">
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_MAIL">
 	<summary>
- id_user.
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_MAIL_MAXLEN">
+	<summary>
+ Mail (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ADR">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ADR_MAXLEN">
+	<summary>
+ Adr (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_CP">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_CP_MAXLEN">
+	<summary>
+ Cp (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_VILLE">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_VILLE_MAXLEN">
+	<summary>
+ Ville (Maxlen).
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_VETERINAIRE">
 	<summary>
@@ -6297,6 +6613,10 @@ VITAL.BO
 	<summary>
  Veterinaire.
  </summary>
+</member><member name="T:VITAL.BO.VITAL.ConseilDietetique">
+	<summary>
+ ConseilDietetique.
+ </summary>
 </member><member name="T:VITAL.BO.VITAL.Traitrement">
 	<summary>
  Traitrement.
@@ -6317,12 +6637,12 @@ VITAL.BO
  Retourne la liste des utilisateurs qui sont des propriétaires d'animaux.
  </summary>
 	<returns>La liste des utilisateurs qui sont des propriétaires d'animaux.</returns>
-</member><member name="M:VITAL.BO.VITAL.User.Exists(System.Int32)">
+</member><member name="M:VITAL.BO.VITAL.User.GetIdUser(System.String)">
 	<summary>
- Indique s'il existe un utilisateur avec cet ID.
+ Retourne l'id de l'utilisateur connecté.
  </summary>
-	<param name="p_i_idUser">Id utilisateur.</param>
-	<returns>Indique s'il existe un utilisateur avec cet ID.</returns>
+	<param name="p_s_log">Loggin.</param>
+	<returns>L'id de l'utilisateur connecté.</returns>
 </member><member name="T:VITAL.BO.VITAL.User">
 	<summary>
  User.
@@ -6464,6 +6784,11 @@ VITAL.BO
  l'application
  </summary>
 	<param name="p_o_list">Liste de bases de données</param>
+</member><member name="M:VITAL.BO.VITAL.Consultation.GetConsultationsAnimal(System.Int32)">
+	<summary>
+ Retourne les consultations d'un client et d'un animal de la plus récente à la plus ancienne
+ </summary>
+	<returns>Les consultations d'un client et d'un animal de la plus récente à la plus ancienne.</returns>
 </member><member name="M:VITAL.BO.VITAL.Consultation.GetConsultationsClient(System.String,System.Int32)">
 	<summary>
  Retourne les consultations d'un client et d'un animal de la plus récente à la plus ancienne

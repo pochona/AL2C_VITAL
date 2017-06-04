@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des objets                                        */
-/* Historique  : Creation le 03/06/2017                                     */
+/* Historique  : Creation le 04/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -177,6 +177,12 @@ ADD CONSTRAINT VTL_ANIMAL_ID_PROP_VTL_USER_FK FOREIGN KEY (VTL_ANIMAL_ID_PROP)
 	REFERENCES VTL_USER(VTL_USER_ID);
 GO
 
+-- "Creation de la clef etrangere de la table VTL_ASSURANCE vers la table VTL_USER"
+ALTER TABLE VTL_ASSURANCE
+ADD CONSTRAINT VTL_ASSURANCE_ID_USER_VTL_USER_FK FOREIGN KEY (VTL_ASSURANCE_ID_USER)
+	REFERENCES VTL_USER(VTL_USER_ID);
+GO
+
 -- "Creation de la clef etrangere de la table VTL_ATTACHEMT vers la table VTL_CONSULTATION"
 ALTER TABLE VTL_ATTACHEMT
 ADD CONSTRAINT VTL_ATTACHEMT_CONSULT_VTL_CONSULTATION_FK FOREIGN KEY (VTL_ATTACHEMT_CONSULT)
@@ -235,6 +241,12 @@ GO
 ALTER TABLE VTL_POSITION
 ADD CONSTRAINT VTL_POSITION_ID_ANIMAL_VTL_ANIMAL_FK FOREIGN KEY (VTL_POSITION_ID_ANIMAL)
 	REFERENCES VTL_ANIMAL(VTL_ANIMAL_ID);
+GO
+
+-- "Creation de la clef etrangere de la table VTL_PROPRIETAIRE vers la table VTL_USER"
+ALTER TABLE VTL_PROPRIETAIRE
+ADD CONSTRAINT VTL_PROPRIETAIRE_ID_USER_VTL_USER_FK FOREIGN KEY (VTL_PROPRIETAIRE_ID_USER)
+	REFERENCES VTL_USER(VTL_USER_ID);
 GO
 
 -- "Creation de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_CONSULTATION"

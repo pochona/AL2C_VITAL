@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Suppression des objets existants                           */
-/* Historique  : Creation le 03/06/2017                                     */
+/* Historique  : Creation le 04/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -47,6 +47,10 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT_CONSULT_VTL_CONSULTATION_FK' AND type in (N'F'))
 ALTER TABLE VTL_REMBOURSMT DROP CONSTRAINT VTL_REMBOURSMT_CONSULT_VTL_CONSULTATION_FK;
 GO
+-- "Suppression de la clef etrangere de la table VTL_PROPRIETAIRE vers la table VTL_USER"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_PROPRIETAIRE_ID_USER_VTL_USER_FK' AND type in (N'F'))
+ALTER TABLE VTL_PROPRIETAIRE DROP CONSTRAINT VTL_PROPRIETAIRE_ID_USER_VTL_USER_FK;
+GO
 -- "Suppression de la clef etrangere de la table VTL_POSITION vers la table VTL_ANIMAL"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_POSITION_ID_ANIMAL_VTL_ANIMAL_FK' AND type in (N'F'))
 ALTER TABLE VTL_POSITION DROP CONSTRAINT VTL_POSITION_ID_ANIMAL_VTL_ANIMAL_FK;
@@ -86,6 +90,10 @@ GO
 -- "Suppression de la clef etrangere de la table VTL_ATTACHEMT vers la table VTL_CONSULTATION"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ATTACHEMT_CONSULT_VTL_CONSULTATION_FK' AND type in (N'F'))
 ALTER TABLE VTL_ATTACHEMT DROP CONSTRAINT VTL_ATTACHEMT_CONSULT_VTL_CONSULTATION_FK;
+GO
+-- "Suppression de la clef etrangere de la table VTL_ASSURANCE vers la table VTL_USER"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ASSURANCE_ID_USER_VTL_USER_FK' AND type in (N'F'))
+ALTER TABLE VTL_ASSURANCE DROP CONSTRAINT VTL_ASSURANCE_ID_USER_VTL_USER_FK;
 GO
 -- "Suppression de la clef etrangere de la table VTL_ANIMAL vers la table VTL_USER"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_ANIMAL_ID_PROP_VTL_USER_FK' AND type in (N'F'))
