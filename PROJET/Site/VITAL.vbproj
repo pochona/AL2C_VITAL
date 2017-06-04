@@ -103,7 +103,7 @@
     <None Include="(Libraries)\Corail.Web\Corail.Web.dll" />
     <None Include="(Libraries)\Corail.Web\Corail.Web.xml" />
     <Content Include="Global.asax" />
-    <Content Include="Images\test.png" />
+    <Content Include="Images\logo.png" />
     <Content Include="Pages\AccueilAdmin.aspx" />
     <Content Include="Pages\Mutuelle\AccueilMutuelle.aspx" />
     <Content Include="Pages\Proprio\AccueilProprietaire.aspx" />

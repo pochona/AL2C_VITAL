@@ -420,9 +420,41 @@ Contrôle frmListConseilDiet.
 Champ généré automatiquement.
 Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
 </remarks>
-</member><member name="F:VITAL.PageAccueilAnimal.dtgDiététiques">
+</member><member name="F:VITAL.PageAccueilAnimal.frlDtlDiet">
 	<summary>
-Contrôle dtgDiététiques.
+Contrôle frlDtlDiet.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.txtNewConseil">
+	<summary>
+Contrôle txtNewConseil.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.pnbBtnsDiet">
+	<summary>
+Contrôle pnbBtnsDiet.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.btnNewConseil">
+	<summary>
+Contrôle btnNewConseil.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
+</member><member name="F:VITAL.PageAccueilAnimal.dtgDietetiques">
+	<summary>
+Contrôle dtgDietetiques.
 </summary>
 	<remarks>
 Champ généré automatiquement.
@@ -1553,6 +1585,12 @@ Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans 
 </member><member name="M:VITAL.PageAccueilAnimal.btnModifierInfoAnml_Click(System.Object,System.EventArgs)">
 	<summary>
  Boutons qui va permettre de modifier les infos de l'animal.
+ </summary>
+	<param name="sender">Source de l'événement.</param>
+	<param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
+</member><member name="M:VITAL.PageAccueilAnimal.btnNewConseil_Click(System.Object,System.EventArgs)">
+	<summary>
+ Nouveau conseil diététique.
  </summary>
 	<param name="sender">Source de l'événement.</param>
 	<param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>

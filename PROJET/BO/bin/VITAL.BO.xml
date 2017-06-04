@@ -2073,6 +2073,10 @@ VITAL.BO
 	<summary>
  Dt_debut.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.HasChanges">
 	<summary>
  Indique si l'objet a subi des modifications ou non
@@ -2102,6 +2106,14 @@ VITAL.BO
  </summary>
 	<value>
  Dt_debut.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_TRAITREMENT.VTL_TRAITREMENT_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.HasHisto">
 	<summary>
@@ -3443,6 +3455,10 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT">
 	<summary>
  Dt_debut.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_ID_ANIMAL">
+	<summary>
+ Id_animal.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_TRAITREMENT">
 	<summary>
@@ -6613,6 +6629,11 @@ VITAL.BO
 	<summary>
  Veterinaire.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.ConseilDietetique.GetConseilsAnimal(System.Int32)">
+	<summary>
+ Retourne les consultations d'un client et d'un animal de la plus récente à la plus ancienne
+ </summary>
+	<returns>Les consultations d'un client et d'un animal de la plus récente à la plus ancienne.</returns>
 </member><member name="T:VITAL.BO.VITAL.ConseilDietetique">
 	<summary>
  ConseilDietetique.
