@@ -9,6 +9,7 @@ Partial Public Class PageListeConsult
 #Region "Vétérinaire"
 
     Private m_o_veto As Veterinaire
+    Private m_o_animal As Animal
 
     ''' <summary>
     ''' Contient l'Animal consultée
@@ -28,6 +29,19 @@ Partial Public Class PageListeConsult
         End Get
     End Property
 
+    Private ReadOnly Property SelectedAnimal As Animal
+        Get
+            If m_o_animal Is Nothing OrElse (SelectedAnimalId <> m_o_animal.ID) Then
+                If SelectedVetoId <> 0 Then
+                    m_o_animal = New Animal(SelectedAnimalId)
+                Else
+                    m_o_animal = New Animal()
+                End If
+            End If
+            Return m_o_animal
+        End Get
+    End Property
+
     ''' <summary>
     ''' Contient l'ID de l'SelectedVeto consultée
     ''' </summary>
@@ -39,6 +53,15 @@ Partial Public Class PageListeConsult
         End Get
         Set(p_i_value As Integer)
             ViewState("SelectedVetoId") = p_i_value
+        End Set
+    End Property
+
+    Private Property SelectedAnimalId As Integer
+        Get
+            Return CInt(ViewState("SelectedAnimalId"))
+        End Get
+        Set(p_i_value As Integer)
+            ViewState("SelectedAnimalId") = p_i_value
         End Set
     End Property
 
@@ -59,12 +82,13 @@ Partial Public Class PageListeConsult
             'recupere l'veto dans l'url
             SelectedVetoId = CInt(Request.QueryString("ID"))
             grdHistorique.RefreshData()
+            'chargement des données
+            LoadData()
         End If
     End Sub
 
 #End Region
 
-#Region "Grille consultation"
 #Region "Colonnes de la grille "
 
     Private m_i_animal As Integer
@@ -74,6 +98,9 @@ Partial Public Class PageListeConsult
     Private m_i_puce As Integer
 
 #End Region
+
+#Region "Chargement grille"
+
     Private Sub grdHistorique_Init(sender As Object, e As EventArgs) Handles grdHistorique.Init
         With grdHistorique
             .DataKeyField = VTL_CONSULTATION.VTL_CONSULTATION_ID
@@ -108,7 +135,27 @@ Partial Public Class PageListeConsult
 
 #End Region
 
+#Region "Chargement données formulaire"
 
+    Private Sub LoadData()
+        'Si il y a bien un id d'animal passé en param dans URL
+        If SelectedVetoId <> 0 Then
+            txtTest.Text = SelectedVeto.Nom
+            txtTest1.Text = SelectedAnimal.Nom
+
+        End If
+
+    End Sub
+
+    Private Sub LoadElementsVisibles()
+
+        txtTest.Visible = True
+        txtTest1.Visible = True
+
+
+    End Sub
+
+#End Region
 
 
 

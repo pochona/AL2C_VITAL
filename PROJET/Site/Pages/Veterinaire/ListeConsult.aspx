@@ -11,7 +11,7 @@
     <cw:CwFormLayout runat="server" ID="frlGeneral">
         <cw:CwFrame runat="server" ID="frmGenral" text="Dernières consultations" Collapsable="true" >
             <cw:CwFormLayout runat="server" ID="frlDtl">
-                <cw:CwTextBox runat="server" ID="txtTest" Label="Vétérinaire" Enabled="false" Text="infosRecupBD" ToolTip="Infos bulle"></cw:CwTextBox>
+                <cw:CwTextBox runat="server" ID="txtTest" Label="Vétérinaire" Enabled="false" ToolTip="Infos bulle"></cw:CwTextBox>
                 <cw:CwTextBox runat="server" ID="txtTest1" Label="Date" Enabled="false" Text="infosRecupBD" ToolTip="Infos bulle"></cw:CwTextBox>
                 <cw:CwTextBox runat="server" ID="txtTest2" Label="Coût" Enabled="false" Text="infosRecupBD" ToolTip="Infos bulle"></cw:CwTextBox>
             </cw:CwFormLayout>
