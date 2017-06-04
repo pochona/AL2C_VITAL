@@ -75,6 +75,28 @@
             End With
         End Function
 
+        ''' <summary>
+        ''' Retourne l'id de l'utilisateur connecté.
+        ''' </summary>
+        ''' <param name="p_s_log">Loggin.</param>
+        ''' <returns>L'id de l'utilisateur connecté.</returns>
+        Public Shared Function GetIdUser(p_s_log As String) As Integer
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_USER.VTL_USER_ID)
+                .AddFrom(Tables.VTL_USER)
+                .AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_log)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzInt((.GetFirstValue))
+                Else
+                    Return 0
+                End If
+            End With
+        End Function
+
     End Class
 
 End Namespace
