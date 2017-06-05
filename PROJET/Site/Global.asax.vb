@@ -84,11 +84,10 @@ Public Class MainApplication
                 .AddSubAdminTable("TYPE", Tables.VTL_TYPE)
                 .AddSubAdminTable("Remboursement", Tables.VTL_REMBOURSMT)
                 .AddSubAdminTable("Attachement", Tables.VTL_ATTACHEMT)
-
             End If
             If UserIsInRole("Veto") Or UserIsInRole("Admin") Then
                .Add("Sélectionner un animal", "~/Pages/Veterinaire/AuthAnimal.aspx")
-                .Add("Créer un nouveau animal", "~/Pages/Veterinaire/CreerAnimal.aspx")
+                .Add("Créer un nouveau animal", "~/Pages/Veterinaire/AccueilAnimal.aspx?Mode=" & EN_ModeAcces.Creation, , "tabNewAnimal")
                 .Add("Liste des consultations", "~/Pages/Veterinaire/ListeConsult.aspx?ID=" & Veterinaire.GetIdVetoConnectedUser(UserLogin()))
                 .Add("Paramétrage")
                 .AddSubAdminTable("Vaccins", Tables.VTL_VACCIN)

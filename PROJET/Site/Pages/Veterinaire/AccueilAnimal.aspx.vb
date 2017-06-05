@@ -8,6 +8,8 @@ Partial Public Class PageAccueilAnimal
     Inherits CwPage
 
 #Region "propriétés et variables privées"
+
+#Region "animal"
     Private m_o_animal As Animal
 
     ''' <summary>
@@ -41,6 +43,20 @@ Partial Public Class PageAccueilAnimal
             ViewState("SelectedAnimalId") = p_i_value
         End Set
     End Property
+#End Region
+
+#Region "Mode d'accès"
+
+    Private Property ModeAcces As EN_ModeAcces
+        Get
+            Return CType(ViewState("ModeAcces"), EN_ModeAcces)
+        End Get
+        Set(p_o_value As EN_ModeAcces)
+            ViewState("ModeAcces") = p_o_value
+        End Set
+    End Property
+
+#End Region
 
 #End Region
 
@@ -54,9 +70,15 @@ Partial Public Class PageAccueilAnimal
     ''' Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            'recupere l'animal dans l'url
-            SelectedAnimalId = CInt(Request.QueryString("ID"))
-            Title = SelectedAnimal.Nom
+            ' Récupération des paramètres
+            ModeAcces = CType(Request.QueryString("Mode"), EN_ModeAcces)
+            If ModeAcces = EN_ModeAcces.Modification Then
+                'recupere l'animal dans l'url
+                SelectedAnimalId = CInt(Request.QueryString("ID"))
+                Title = SelectedAnimal.Nom
+            ElseIf ModeAcces = EN_ModeAcces.Creation Then
+                Title = "Nouvel animal"
+            End If
             'chargement listes déroulantes
             LoadCbo()
             'chargement des données
@@ -65,11 +87,19 @@ Partial Public Class PageAccueilAnimal
             LoadElementsVisibles()
             'définition des url des boutons redirecteurs
             LoadLien()
+            LoadGrilles()
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Refresh des grilles.
+    ''' </summary>
+    Private Sub LoadGrilles()
+        If ModeAcces = EN_ModeAcces.Modification Then
             dtgConsultations.RefreshData()
             dtgDietetiques.RefreshData()
             dtgTraitements.RefreshData()
             '  dtgVaccins.RefreshData()
-            ClientRegisterWindowName("tabAnimal" & SelectedAnimalId)
         End If
     End Sub
 
@@ -77,10 +107,12 @@ Partial Public Class PageAccueilAnimal
     ''' Chargement des liens vers d'autres page depuis des boutons.
     ''' </summary>
     Private Sub LoadLien()
-        btnNewCarte.NavigateUrl = "~/Pages/Veterinaire/NewCarte.aspx?ID=" & SelectedAnimalId
-        btnNewCarte.Target = "Modal#400x400"
-        btnNewConsult.NavigateUrl = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Creation & "&Animal=" & SelectedAnimalId
-        btnNewConsult.Target = "tabConsult"
+        If ModeAcces = EN_ModeAcces.Modification Then
+            btnNewCarte.NavigateUrl = "~/Pages/Veterinaire/NewCarte.aspx?ID=" & SelectedAnimalId
+            btnNewCarte.Target = "Modal#400x400"
+            btnNewConsult.NavigateUrl = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Creation & "&Animal=" & SelectedAnimalId
+            btnNewConsult.Target = "tabConsult"
+        End If
     End Sub
 
     ''' <summary>
@@ -96,41 +128,73 @@ Partial Public Class PageAccueilAnimal
     ''' Défini les éléments visibles sur la page.
     ''' </summary>
     Private Sub LoadElementsVisibles()
-        'Boutons
-        btnSaveInfoAnml.Visible = False
-        btnNewCarte.Visible = False
-        btnModifierInfoAnml.Visible = True
-        'Elements modifiables
-        txtNom.Enabled = False
-        ntbPoids.Enabled = False
-        ntbTaille.Enabled = False
-        txtNumPuce.Enabled = False
-        cboNumCarte.Enabled = False
-        dtbNaiss.Enabled = False
-        dtbDeces.Enabled = False
-        cboType.Enabled = False
-        cboRace.Enabled = False
-        stbProprio.Enabled = False
+        If ModeAcces = EN_ModeAcces.Modification Then
+            'Boutons
+            btnSaveInfoAnml.Visible = False
+            btnNewCarte.Visible = False
+            btnModifierInfoAnml.Visible = True
+            btnNewAnimal.Visible = False
+            'Elements modifiables
+            txtNom.Enabled = False
+            ntbPoids.Enabled = False
+            ntbTaille.Enabled = False
+            txtNumPuce.Enabled = False
+            cboNumCarte.Enabled = False
+            dtbNaiss.Enabled = False
+            dtbDeces.Enabled = False
+            cboType.Enabled = False
+            cboRace.Enabled = False
+            stbProprio.Enabled = False
+            'visibilité des frames
+            frmNewConsul.Visible = True
+            frmListConsult.Visible = True
+            frmListTraitements.Visible = True
+            frmListVaccins.Visible = True
+            frmListConseilDiet.Visible = True
+        ElseIf ModeAcces = EN_ModeAcces.Creation Then
+            'les autres frames ne sont pas visibles
+            frmNewConsul.Visible = False
+            frmListConsult.Visible = False
+            frmListTraitements.Visible = False
+            frmListVaccins.Visible = False
+            frmListConseilDiet.Visible = False
+            'modifiabilité des éléments
+            cboType.Enabled = True
+            cboRace.Enabled = True
+            stbProprio.Enabled = True
+            'Boutons
+            btnSaveInfoAnml.Visible = False
+            btnNewCarte.Visible = False
+            btnModifierInfoAnml.Visible = False
+            btnNewAnimal.Visible = True
+        End If
     End Sub
 
     ''' <summary>
     ''' Chargement des données de l'animal.
     ''' </summary>
     Private Sub LoadData()
-        'Si il y a bien un id d'animal passé en param dans URL
-        If SelectedAnimalId <> 0 Then
-            txtIdPropCache.Text = CStr(SelectedAnimal.Id_prop)
-            txtNom.Text = SelectedAnimal.Nom
-            txtNumPuce.Text = SelectedAnimal.Num_puce
-            dtbNaiss.Date = SelectedAnimal.Dt_naissance
-            dtbDeces.Date = SelectedAnimal.Dt_deces
-            ntbPoids.Value = SelectedAnimal.GetLastPoids()
-            ntbTaille.Value = SelectedAnimal.GetLastTaille()
-            ntbAge.Value = DateDiff(DateInterval.Year, SelectedAnimal.Dt_naissance, Now.Date)
-            cboType.SelectedValue = CStr(SelectedAnimal.Id_type)
-            cboRace.SelectedValue = CStr(SelectedAnimal.Id_race)
-            cboNumCarte.SelectedValue = CStr(SelectedAnimal.Id_carte)
-            stbProprio.Text = SelectedAnimal.GetNomPrenomProprio()
+        If ModeAcces = EN_ModeAcces.Modification Then
+            'Si il y a bien un id d'animal passé en param dans URL
+            If SelectedAnimalId <> 0 Then
+                'Renomme la page en cours (identifiant de la page non visible)
+                ClientRegisterWindowName("tabAnimal" & SelectedAnimalId)
+                'Infos
+                txtIdPropCache.Text = CStr(SelectedAnimal.Id_prop)
+                txtNom.Text = SelectedAnimal.Nom
+                txtNumPuce.Text = SelectedAnimal.Num_puce
+                dtbNaiss.Date = SelectedAnimal.Dt_naissance
+                dtbDeces.Date = SelectedAnimal.Dt_deces
+                ntbPoids.Value = SelectedAnimal.GetLastPoids()
+                ntbTaille.Value = SelectedAnimal.GetLastTaille()
+                ntbAge.Value = DateDiff(DateInterval.Year, SelectedAnimal.Dt_naissance, Now.Date)
+                cboType.SelectedValue = CStr(SelectedAnimal.Id_type)
+                cboRace.SelectedValue = CStr(SelectedAnimal.Id_race)
+                cboNumCarte.SelectedValue = CStr(SelectedAnimal.Id_carte)
+                stbProprio.Text = SelectedAnimal.GetNomPrenomProprio()
+            End If
+        ElseIf ModeAcces = EN_ModeAcces.Creation Then
+
         End If
     End Sub
 
@@ -212,6 +276,61 @@ Partial Public Class PageAccueilAnimal
 #End Region
 
 #Region "Boutons"
+
+    ''' <summary>
+    ''' Création d'un nouvel animal.
+    ''' </summary>
+    ''' <param name="sender">Source de l'événement.</param>
+    ''' <param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
+    Private Sub btnNewAnimal_Click(sender As Object, e As EventArgs) Handles btnNewAnimal.Click
+        Dim l_o_animal As New Animal
+        Dim l_o_taille As New Histo_Taille
+        Dim l_o_poids As New Histo_Poids
+
+        Try
+            ValidationManager.Validate(txtNom, txtIdPropCache, cboRace, cboType, ntbPoids, ntbTaille, stbProprio)
+            ' Ouverture d'une transcaction
+            Using l_o_trans As Transaction = MyDB.GetNewTransaction()
+                ' Traitements
+                With l_o_animal
+                    .Nom = txtNom.Text
+                    .Num_puce = txtNumPuce.Text
+                    .Dt_deces = dtbDeces.Date
+                    .Dt_naissance = dtbNaiss.Date
+                    .Id_prop = CInt(txtIdPropCache.Text)
+                    .Id_race = CInt(cboRace.SelectedValue)
+                    .Id_type = CInt(cboType.SelectedValue)
+                    .Id_carte = CInt(cboNumCarte.SelectedValue)
+                    .Save()
+                End With
+                With l_o_poids
+                    .Poids = NzDbl(ntbPoids.Value)
+                    .Dt_histo = Now.Date
+                    .Id_animal = l_o_animal.ID
+                    .Save()
+                End With
+                With l_o_taille
+                    .Taille = NzDbl(ntbTaille.Value)
+                    .Dt_histo = Now.Date
+                    .Id_animal = l_o_animal.ID
+                    .Save()
+                End With
+                ' On valide la transaction (elle se ferme tout seule grace au "using")
+                l_o_trans.Validate()
+                SelectedAnimalId = l_o_animal.ID
+                Title = SelectedAnimal.Nom
+                ModeAcces = EN_ModeAcces.Modification
+                'manque recharger
+                LoadElementsVisibles()
+                LoadLien()
+                LoadGrilles()
+                LoadData()
+                ShowInfo("Enregistrement effectué avec succès.")
+            End Using
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
+    End Sub
 
     ''' <summary>
     ''' Boutons qui va permettre d'enregistrer les informations de l'animal.

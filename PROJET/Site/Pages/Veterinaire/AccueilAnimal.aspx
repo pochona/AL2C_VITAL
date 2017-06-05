@@ -26,14 +26,16 @@
                         </cw:CwUpdatePanel>
                     <cw:CwDateTextBox runat="server" ID="dtbNaiss" Label="Date naissance"  ></cw:CwDateTextBox>
                     <cw:CwDateTextBox runat="server" ID="dtbDeces" Label="Date décès" ></cw:CwDateTextBox>
-                    <cw:CwComboBox runat="server" IsMandatory="true"  ID="cboType" RoleEdit="!*" Label="Type"></cw:CwComboBox>
-                    <cw:CwComboBox runat="server" IsMandatory="true"  ID="cboRace" RoleEdit="!*" Label="Race"></cw:CwComboBox>
+                    <cw:CwComboBox runat="server" IsMandatory="true"  ID="cboType" Label="Type"></cw:CwComboBox>
+                    <cw:CwComboBox runat="server" IsMandatory="true"  ID="cboRace" Label="Race"></cw:CwComboBox>
                     <cw:CwTextBox runat="server" ID="txtIdPropCache" IsMandatory="true" Visible="false" ></cw:CwTextBox>
                     <cw:CwSelectTextBox runat="server" ID="stbProprio" IsMandatory="true" AutoPostBack="true" PostBackMode="Full" NavigateUrl="~/Pages/Veterinaire/PopUpProprio.aspx" Label="Propriétaire" Enabled="True" ToolTip="Pour sélectionner un propriétaire, veuillez cliquer sur le bouton de droite."></cw:CwSelectTextBox>
                     <cw:CwPanelButtons runat="server" ID="pbnInfosAnimal">
                         <cw:CwButton runat="server" ImageName="pencil" ID="btnModifierInfoAnml" Text="Modifier"></cw:CwButton>
                         <cw:CwButton runat="server" ImageName="floppy-disc" ID="btnSaveInfoAnml" Text="Enregistrer"></cw:CwButton>
                         <cw:CwButton runat="server" ImageName="sq-plus-all" ID="btnNewCarte" Text="Créer une nouvelle carte"></cw:CwButton>
+                        <cw:CwButton runat="server" ImageName="sq-plus-all" ID="btnNewAnimal" Text="Créer un nouvel animal"></cw:CwButton>
+                    
                     </cw:CwPanelButtons>
                 </cw:CwFormLayout>
             </cw:CwFrame>

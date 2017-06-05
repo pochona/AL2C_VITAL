@@ -37,7 +37,7 @@ Partial Public Class PagePopUpProprio
 
             With .AddSelectColumn("Nom", VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, "=")
                 ' On revoie le champ
-                .AddReturnedFields(VTL_USER.VTL_USER_ID)
+                .AddReturnedFields(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID)
                 ' Taille 
                 .Width = Unit.Pixel(65)
             End With

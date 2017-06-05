@@ -97,7 +97,7 @@ Partial Class PageAuthAnimal
 
             With .AddButtonColumn()
                 .Width = Unit.Pixel(65) ' fixe la taille de la colonne
-                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/AccueilAnimal.aspx?ID={0}"
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/AccueilAnimal.aspx?ID={0}" & "&Mode=" & EN_ModeAcces.Modification
                 .DataNavigateUrlField = VTL_ANIMAL.VTL_ANIMAL_ID
                 .Target = "tabAnimal" + VTL_ANIMAL.VTL_ANIMAL_ID
                 .Properties.ImageName = "search"
