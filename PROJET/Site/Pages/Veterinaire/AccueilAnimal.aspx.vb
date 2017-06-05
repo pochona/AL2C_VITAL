@@ -67,6 +67,8 @@ Partial Public Class PageAccueilAnimal
             LoadLien()
             dtgConsultations.RefreshData()
             dtgDietetiques.RefreshData()
+            dtgTraitements.RefreshData()
+            '  dtgVaccins.RefreshData()
             ClientRegisterWindowName("tabAnimal" & SelectedAnimalId)
         End If
     End Sub
@@ -315,6 +317,8 @@ Partial Public Class PageAccueilAnimal
 
 #End Region
 
+#Region "Grille"
+
 #Region "Grille consultation"
 
 #Region "Colonnes de la grille "
@@ -404,6 +408,66 @@ Partial Public Class PageAccueilAnimal
         End With
 
     End Sub
+
+#End Region
+
+#Region "Grille Traitements"
+
+#Region "Colonnes de la grille "
+
+    Private m_i_btn_traitmt_medoc As Integer
+    Private m_i_duree_medoc As Integer
+    Private m_i_date_deb As Integer
+    Private m_i_btn_trt As Integer
+    Private m_i_duree_traitmt As Integer
+    Private m_i_lib_medoc As Integer
+    Private m_i_Posologie As Integer
+    Private m_i_dosage_medoc As Integer
+
+#End Region
+
+    Private Sub dtgTraitements_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgTraitements.DataTableRequest
+        Try
+            p_o_dt = Traitement_medicament.GetTraitmtAnimal(SelectedAnimalId).GetDT
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
+    End Sub
+
+    Private Sub dtgTraitements_Init(sender As Object, e As EventArgs) Handles dtgTraitements.Init
+        With dtgTraitements
+            .DataKeyField = VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID
+
+            With .AddButtonColumn()
+                .Width = Unit.Pixel(65) ' fixe la taille de la colonne
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Traitement.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}"
+                .DataNavigateUrlField = VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID
+                .Target = "tabTraitement_Medoc" + VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID
+                .Properties.ImageName = "search"
+                m_i_btn_traitmt_medoc = .ColumnIndex
+            End With
+            With .AddDateColumn("Date début", VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT)
+                m_i_date_deb = .ColumnIndex
+            End With
+            With .AddColumn("Durée de prise du médicament", VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR)
+                m_i_duree_medoc = .ColumnIndex
+            End With
+            With .AddColumn("Durée globale du traitement", VTL_TRAITREMENT.VTL_TRAITREMENT_DUREE_JOUR)
+                m_i_duree_traitmt = .ColumnIndex
+            End With
+            With .AddColumn("Médicament", VTL_MEDICAMENT.VTL_MEDICAMENT_LIBELLE)
+                m_i_lib_medoc = .ColumnIndex
+            End With
+            With .AddColumn("Posologie", VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE)
+                m_i_Posologie = .ColumnIndex
+            End With
+            With .AddColumn("Dosage du médicament", VTL_MEDICAMENT.VTL_MEDICAMENT_DOSAGE)
+                m_i_dosage_medoc = .ColumnIndex
+            End With
+        End With
+    End Sub
+
+#End Region
 
 #End Region
 

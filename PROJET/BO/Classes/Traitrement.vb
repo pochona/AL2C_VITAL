@@ -3,7 +3,7 @@
     ''' <summary>
     ''' Traitrement.
     ''' </summary>
-	Partial Public Class Traitrement
+    Partial Public Class Traitrement
 
     End Class
 
