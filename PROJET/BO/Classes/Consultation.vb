@@ -102,6 +102,25 @@
             Return l_o_sql
         End Function
 
+        Public Function GetNomAnimal() As String
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_ANIMAL.VTL_ANIMAL_NOM)
+                .AddFrom(Tables.VTL_ANIMAL)
+                '  .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_HISTO_POIDS, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID_ANIMAL)
+                .AddWhereIs(VTL_ANIMAL.VTL_ANIMAL_ID, Id_animal)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzStr((.GetFirstValue))
+                Else
+                    Return ""
+                End If
+            End With
+        End Function
+
+
     End Class
 
 End Namespace

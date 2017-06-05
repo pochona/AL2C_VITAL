@@ -9,7 +9,6 @@ Partial Public Class PageListeConsult
 #Region "Vétérinaire"
 
     Private m_o_veto As Veterinaire
-    Private m_o_animal As Animal
 
     ''' <summary>
     ''' Contient l'Animal consultée
@@ -29,19 +28,6 @@ Partial Public Class PageListeConsult
         End Get
     End Property
 
-    Private ReadOnly Property SelectedAnimal As Animal
-        Get
-            If m_o_animal Is Nothing OrElse (SelectedAnimalId <> m_o_animal.ID) Then
-                If SelectedVetoId <> 0 Then
-                    m_o_animal = New Animal(SelectedAnimalId)
-                Else
-                    m_o_animal = New Animal()
-                End If
-            End If
-            Return m_o_animal
-        End Get
-    End Property
-
     ''' <summary>
     ''' Contient l'ID de l'SelectedVeto consultée
     ''' </summary>
@@ -56,12 +42,31 @@ Partial Public Class PageListeConsult
         End Set
     End Property
 
-    Private Property SelectedAnimalId As Integer
+#End Region
+
+#Region "consultation"
+
+    Private m_o_consultation As Consultation
+
+    Private ReadOnly Property SelectedConsultation As Consultation
         Get
-            Return CInt(ViewState("SelectedAnimalId"))
+            If m_o_consultation Is Nothing OrElse (SelectedConsultationId <> m_o_consultation.ID) Then
+                If SelectedConsultationId <> 0 Then
+                    m_o_consultation = New Consultation(SelectedConsultationId)
+                Else
+                    m_o_consultation = New Consultation()
+                End If
+            End If
+            Return m_o_consultation
+        End Get
+    End Property
+
+    Private Property SelectedConsultationId As Integer
+        Get
+            Return CInt(ViewState("SelectedConsultationId"))
         End Get
         Set(p_i_value As Integer)
-            ViewState("SelectedAnimalId") = p_i_value
+            ViewState("SelectedConsultationId") = p_i_value
         End Set
     End Property
 
@@ -81,6 +86,7 @@ Partial Public Class PageListeConsult
         If Not IsPostBack Then
             'recupere l'veto dans l'url
             SelectedVetoId = CInt(Request.QueryString("ID"))
+
             grdHistorique.RefreshData()
             'chargement des données
             LoadData()
@@ -138,26 +144,20 @@ Partial Public Class PageListeConsult
 #Region "Chargement données formulaire"
 
     Private Sub LoadData()
-        'Si il y a bien un id d'animal passé en param dans URL
+        'Si il y a bien un id d'animal passé en param dans URL 
         If SelectedVetoId <> 0 Then
-            txtTest.Text = SelectedVeto.Nom
-            txtTest1.Text = SelectedAnimal.Nom
-
+            'on récupère la derniere consultation
+            SelectedConsultationId = SelectedVeto.GetLastConsult()
+            ntbMontant.Value = NzDbl(SelectedConsultation.Montant)
+            txtNomAnimal.Text = SelectedConsultation.GetNomAnimal()
+            ' TODO continuer
         End If
-
     End Sub
 
     Private Sub LoadElementsVisibles()
 
-        txtTest.Visible = True
-        txtTest1.Visible = True
-
-
     End Sub
 
 #End Region
-
-
-
 
 End Class

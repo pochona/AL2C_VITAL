@@ -59,31 +59,22 @@ Partial Public Class PageListeConsult
     Protected WithEvents frlDtl As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle txtTest.
+    '''Contrôle ntbMontant.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txtTest As Global.Corail.Web.CwTextBox
+    Protected WithEvents ntbMontant As Global.Corail.Web.CwNumericTextBox
 
     '''<summary>
-    '''Contrôle txtTest1.
+    '''Contrôle txtNomAnimal.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txtTest1 As Global.Corail.Web.CwTextBox
-
-    '''<summary>
-    '''Contrôle txtTest2.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents txtTest2 As Global.Corail.Web.CwTextBox
+    Protected WithEvents txtNomAnimal As Global.Corail.Web.CwTextBox
 
     '''<summary>
     '''Contrôle frlGeneral2.
