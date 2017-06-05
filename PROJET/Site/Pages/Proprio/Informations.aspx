@@ -10,7 +10,7 @@
 	<div>
 	<cw:CwFormLayout runat="server" ID="flyGeneral">
             <cw:CwFrame runat="server" ID="frmInfos" text="Mes informations" Collapsable="true" >
-                <cw:CwFormLayout runat="server" ID="frlDtl">
+                <cw:CwFormLayout runat="server" ID="frlDtl" DefaultCells-Small="6">
                     <cw:CwTextBox runat="server" ID="txtNom" Label="Nom" Enabled="false"></cw:CwTextBox>
                     <cw:CwTextBox runat="server" ID="txtPrenom" Label="Prénom" Enabled="false"></cw:CwTextBox>
                     <cw:CwTextBox runat="server" ID="txtAdresse" Label="Adresse" Enabled="false"></cw:CwTextBox>

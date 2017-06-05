@@ -20,4 +20,17 @@ Partial Public Class PageCreerAnimal
 
 #End Region
 
+#Region "Boutons"
+
+
+
+#End Region
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Try
+
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
+    End Sub
 End Class
