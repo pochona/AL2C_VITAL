@@ -275,6 +275,51 @@ Partial Public Class PageAccueilAnimal
     Protected WithEvents frmListTraitements As Global.Corail.Web.CwFrame
 
     '''<summary>
+    '''Contrôle frlTraitement.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frlTraitement As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
+    '''Contrôle dtbNewTraitement.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dtbNewTraitement As Global.Corail.Web.CwDateTextBox
+
+    '''<summary>
+    '''Contrôle ntbNewTraitement.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents ntbNewTraitement As Global.Corail.Web.CwNumericTextBox
+
+    '''<summary>
+    '''Contrôle pnbBtnsTraitement.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents pnbBtnsTraitement As Global.Corail.Web.CwPanelButtons
+
+    '''<summary>
+    '''Contrôle btnNewTraitement.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnNewTraitement As Global.Corail.Web.CwButton
+
+    '''<summary>
     '''Contrôle dtgTraitements.
     '''</summary>
     '''<remarks>

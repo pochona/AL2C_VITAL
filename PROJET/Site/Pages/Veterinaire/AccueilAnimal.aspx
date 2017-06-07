@@ -50,6 +50,13 @@
             </cw:CwFrame>
             
             <cw:CwFrame runat="server" ID="frmListTraitements" Text="Traitements" Width="100%" Cells-Small="6" ResetLayout="False" >
+                <cw:CwFormLayout runat="server" ID="frlTraitement">
+                    <cw:CwDateTextBox runat="server" ID="dtbNewTraitement" Label="début du traitement"></cw:CwDateTextBox>
+                    <cw:CwNumericTextBox runat="server" ID="ntbNewTraitement" Label="durée du traitement"></cw:CwNumericTextBox>
+                </cw:CwFormLayout>
+                <cw:CwPanelButtons runat="server" ID="pnbBtnsTraitement">
+                    <cw:CwButton runat="server" ID="btnNewTraitement" Text="Ajouter"></cw:CwButton>
+                </cw:CwPanelButtons>
                 <cw:CwDataGrid runat="server" ID="dtgTraitements" Title="{0} traitement(s)"></cw:CwDataGrid>
             </cw:CwFrame>
 

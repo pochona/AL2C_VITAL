@@ -436,6 +436,31 @@ Partial Public Class PageAccueilAnimal
     End Sub
 
     ''' <summary>
+    ''' Nouveau Traitement
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub btnNewTraitement_Click(sender As Object, e As EventArgs) Handles btnNewTraitement.Click
+        Dim l_o_cslTraitement As New Traitrement
+
+        Try
+            ValidationManager.Validate(dtbNewTraitement, ntbNewTraitement)
+            With l_o_cslTraitement
+                .Duree_jour = CIntVal(ntbNewTraitement.Text)
+                .Dt_debut = dtbNewTraitement.Date
+                .Id_animal = SelectedAnimalId
+                .Save()
+            End With
+            ShowInfo("Enregistrement effectué avec succès.")
+            dtgTraitements.RefreshData()
+            dtbNewTraitement.Text = ""
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
+    End Sub
+
+    ''' <summary>
     ''' Ajoute une nouvelle vacination pour l'animal
     ''' </summary>
     ''' <param name="sender"></param>
@@ -663,5 +688,6 @@ Partial Public Class PageAccueilAnimal
 
 
 #End Region
+
 
 End Class
