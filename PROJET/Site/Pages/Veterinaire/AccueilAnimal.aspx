@@ -52,7 +52,15 @@
             <cw:CwFrame runat="server" ID="frmListTraitements" Text="Traitements" Width="100%" Cells-Small="6" ResetLayout="False" >
                 <cw:CwDataGrid runat="server" ID="dtgTraitements" Title="{0} traitement(s)"></cw:CwDataGrid>
             </cw:CwFrame>
+
             <cw:CwFrame runat="server" ID="frmListVaccins" Text="Vaccins" Width="100%" Cells-Small="6" ResetLayout="False" >
+                <cw:CwFormLayout runat="server" ID="frlVaccination">
+                    <cw:CwDateTextBox runat="server" IsMandatory="true" ID="dttxtNewVaccin" Label="Date"></cw:CwDateTextBox>
+                    <cw:CwComboBox runat="server" IsMandatory="true"  ID="CboVaccin" Label="Type"></cw:CwComboBox>
+                </cw:CwFormLayout>
+                <cw:CwPanelButtons runat="server" ID="pnbBtnsVaccin">
+                    <cw:CwButton runat="server" ID="btnNewVaccin" Text="Ajouter"></cw:CwButton>
+                </cw:CwPanelButtons>
                 <cw:CwDataGrid runat="server" ID="dtgVaccins" Title="{0} vaccin(s)"></cw:CwDataGrid>
             </cw:CwFrame>
             

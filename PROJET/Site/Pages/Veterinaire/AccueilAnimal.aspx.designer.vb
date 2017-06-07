@@ -293,6 +293,51 @@ Partial Public Class PageAccueilAnimal
     Protected WithEvents frmListVaccins As Global.Corail.Web.CwFrame
 
     '''<summary>
+    '''Contrôle frlVaccination.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frlVaccination As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
+    '''Contrôle dttxtNewVaccin.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dttxtNewVaccin As Global.Corail.Web.CwDateTextBox
+
+    '''<summary>
+    '''Contrôle CboVaccin.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CboVaccin As Global.Corail.Web.CwComboBox
+
+    '''<summary>
+    '''Contrôle pnbBtnsVaccin.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents pnbBtnsVaccin As Global.Corail.Web.CwPanelButtons
+
+    '''<summary>
+    '''Contrôle btnNewVaccin.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnNewVaccin As Global.Corail.Web.CwButton
+
+    '''<summary>
     '''Contrôle dtgVaccins.
     '''</summary>
     '''<remarks>

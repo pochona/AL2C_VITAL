@@ -99,7 +99,7 @@ Partial Public Class PageAccueilAnimal
             dtgConsultations.RefreshData()
             dtgDietetiques.RefreshData()
             dtgTraitements.RefreshData()
-            '  dtgVaccins.RefreshData()
+            dtgVaccins.RefreshData()
         End If
     End Sub
 
@@ -122,6 +122,7 @@ Partial Public Class PageAccueilAnimal
         BindCbo(cboType, Type.GetAll.GetDS, VTL_TYPE.VTL_TYPE_ID, VTL_TYPE.VTL_TYPE_LIBELLE, "Sélectionner...")
         BindCbo(cboRace, Race.GetAll.GetDS, VTL_RACE.VTL_RACE_ID, VTL_RACE.VTL_RACE_NOM, "Sélectionner...")
         BindCbo(cboNumCarte, Carte.GetAll.GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
+        BindCbo(CboVaccin, Vaccin.GetAll.GetDS, VTL_VACCIN.VTL_VACCIN_ID, VTL_VACCIN.VTL_VACCIN_LIBELLE, "Sélectionner...")
     End Sub
 
     ''' <summary>
@@ -434,6 +435,32 @@ Partial Public Class PageAccueilAnimal
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Ajoute une nouvelle vacination pour l'animal
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub btnNewVaccin_Click(sender As Object, e As EventArgs) Handles btnNewVaccin.Click
+        Dim l_o_cslVaccination As New Vaccination
+
+        Try
+            ValidationManager.Validate(dttxtNewVaccin, CboVaccin)
+            With l_o_cslVaccination
+                .Dt_vaccin = dttxtNewVaccin.Date
+                .Id_vaccin = CInt(CboVaccin.SelectedValue)
+                .Id_animal = SelectedAnimalId
+                .Save()
+                'TODO consultation
+            End With
+            ShowInfo("Enregistrement effectué avec succès.")
+            dtgVaccins.RefreshData()
+            dttxtNewVaccin.Text = ""
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
+    End Sub
+
 #End Region
 
 #Region "Grille"
@@ -587,6 +614,53 @@ Partial Public Class PageAccueilAnimal
     End Sub
 
 #End Region
+
+#Region "Grille Vaccins"
+
+#Region "Colonnes de la grille"
+
+    Private m_i_btn_vac As Integer
+    Private m_i_date_vac As Integer
+    Private m_i_vac_eff As Integer
+    Private m_i_recommendation As Integer
+
+#End Region
+
+
+    Private Sub dtgVaccins_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgVaccins.DataTableRequest
+        Try
+            p_o_dt = Vaccination.GetVaccinsAnimal(SelectedAnimalId).GetDT()
+        Catch ex As Exception
+            ShowException(ex)
+        End Try
+    End Sub
+
+    Private Sub dtgVaccins_Init(sender As Object, e As EventArgs) Handles dtgVaccins.Init
+        With dtgVaccins
+            .DataKeyField = VTL_VACCINATION.VTL_VACCINATION_ID
+            With .AddButtonColumn()
+                .Width = Unit.Pixel(65) ' fixe la taille de la colonne
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Vaccin.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}" & "&Animal=" & SelectedAnimalId
+                .DataNavigateUrlField = VTL_VACCINATION.VTL_VACCINATION_ID
+                .Target = "tabVaccin" + VTL_VACCINATION.VTL_VACCINATION_ID
+                .Properties.ImageName = "search"
+                m_i_btn = .ColumnIndex
+            End With
+            With .AddDateColumn("Date", VTL_VACCINATION.VTL_VACCINATION_DT_VACCIN)
+                m_i_date_vac = .ColumnIndex
+            End With
+            With .AddColumn("Vaccin effectué", VTL_VACCIN.VTL_VACCIN_LIBELLE)
+                m_i_vac_eff = .ColumnIndex
+            End With
+            With .AddColumn("Recommendation", VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION)
+                m_i_recommendation = .ColumnIndex
+            End With
+        End With
+    End Sub
+
+#End Region
+
+
 
 #End Region
 
