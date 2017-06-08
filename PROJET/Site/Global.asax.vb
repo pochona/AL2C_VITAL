@@ -115,7 +115,7 @@ Public Class MainApplication
                         .AddSubSub("Historique consultations", "~/Pages/Proprio/HistoConsul.aspx?ID=" & l_o_animal.ID, , "tabHistConsul" + CStr(l_o_animal.ID))
                         .AddSubSub("Documents", "~/Pages/Proprio/Documents.aspx?ID=" & l_o_animal.ID, , "tabDocs" + CStr(l_o_animal.ID))
                         'TODO : créer les pages
-                        .AddSub("Mes remboursements", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabRemboursemt" + CStr(l_o_animal.ID))
+                        .AddSub("Mes remboursements", "~/Pages/Proprio/MesRemboursements.aspx?ID=" & l_o_animal.ID, , "tabRemboursemt" + CStr(l_o_animal.ID))
                         .AddSub("Mon contrat", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabContrat" + CStr(l_o_animal.ID))
                         .AddSubSub("Mes droits", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabDroit" + CStr(l_o_animal.ID))
                         .AddSubSub("Mon espace", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabEspace" + CStr(l_o_animal.ID))
