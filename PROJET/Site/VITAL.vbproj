@@ -64,6 +64,9 @@
     <Reference Include="Corail.Web">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Corail.Web.Chart">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Corail.Data.SqlServer">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -100,6 +103,8 @@
     <None Include="(Libraries)\Corail.Data.SqlServer\Corail.Data.SqlServer.xml" />
     <None Include="(Libraries)\Corail.Less\Corail.Less.dll" />
     <None Include="(Libraries)\Corail.Less\Corail.Less.xml" />
+    <None Include="(Libraries)\Corail.Web.Chart\Corail.Web.Chart.dll" />
+    <None Include="(Libraries)\Corail.Web.Chart\Corail.Web.Chart.xml" />
     <None Include="(Libraries)\Corail.Web\Corail.Web.dll" />
     <None Include="(Libraries)\Corail.Web\Corail.Web.xml" />
     <Content Include="Global.asax" />

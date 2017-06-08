@@ -1018,6 +1018,10 @@ VITAL.BO
 	<summary>
  Id_assurance.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_d_txRemb">
+	<summary>
+ TxRemb.
+ </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.HasChanges">
 	<summary>
  Indique si l'objet a subi des modifications ou non
@@ -1079,6 +1083,14 @@ VITAL.BO
  </summary>
 	<value>
  Id_assurance.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.TxRemb">
+	<summary>
+ TxRemb.
+ Champ associé : VTL_CONTRAT.VTL_CONTRAT_TXREMB.
+ </summary>
+	<value>
+ TxRemb.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.HasHisto">
 	<summary>
@@ -1823,17 +1835,9 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_s_name">
-	<summary>
- Name.
- </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_dt_date">
 	<summary>
  Date.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_s_statut">
-	<summary>
- Statut.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_i_consult">
 	<summary>
@@ -1842,6 +1846,14 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_i_contrat">
 	<summary>
  Contrat.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_d_montant">
+	<summary>
+ Montant.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_i_statut">
+	<summary>
+ Statut.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.HasChanges">
 	<summary>
@@ -1857,14 +1869,6 @@ VITAL.BO
 	<value>
  ID.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Name">
-	<summary>
- Name.
- Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_NAME.
- </summary>
-	<value>
- Name.
- </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Date">
 	<summary>
  Date.
@@ -1872,14 +1876,6 @@ VITAL.BO
  </summary>
 	<value>
  Date.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Statut">
-	<summary>
- Statut.
- Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT.
- </summary>
-	<value>
- Statut.
  </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Consult">
 	<summary>
@@ -1896,6 +1892,22 @@ VITAL.BO
  </summary>
 	<value>
  Contrat.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Montant">
+	<summary>
+ Montant.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_MONTANT.
+ </summary>
+	<value>
+ Montant.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Statut">
+	<summary>
+ Statut.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT.
+ </summary>
+	<value>
+ Statut.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.HasHisto">
 	<summary>
@@ -1941,6 +1953,85 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Raw.Remboursement`1">
 	<summary>
  Remboursement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.m_s_name">
+	<summary>
+ Name.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Statut`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Statut`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_STATUT.VTL_STATUT_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Statut`1.Name">
+	<summary>
+ Name.
+ Champ associé : VTL_STATUT.VTL_STATUT_NAME.
+ </summary>
+	<value>
+ Name.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.Diff(VITAL.BO.VITAL.Raw.Statut{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Statut.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Statut`1">
+	<summary>
+ Statut.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_b_changes">
 	<summary>
@@ -2859,6 +2950,10 @@ VITAL.BO
 	<summary>
  Remboursement.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_STATUT">
+	<summary>
+ Statut.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_TRAITEMENT_MEDICAMENT">
 	<summary>
  Liste des médicaments compris dans un traitement.
@@ -3203,6 +3298,10 @@ VITAL.BO
 	<summary>
  Id_assurance.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_TXREMB">
+	<summary>
+ TxRemb.
+ </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_CONTRAT">
 	<summary>
  Contrat d'assurance.
@@ -3403,25 +3502,9 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_NAME">
-	<summary>
- Name.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_NAME_MAXLEN">
-	<summary>
- Name (Maxlen).
- </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_DATE">
 	<summary>
  Date.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT">
-	<summary>
- Statut.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT_MAXLEN">
-	<summary>
- Statut (Maxlen).
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_CONSULT">
 	<summary>
@@ -3431,9 +3514,33 @@ VITAL.BO
 	<summary>
  Contrat.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_MONTANT">
+	<summary>
+ Montant.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT">
+	<summary>
+ Statut.
+ </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_REMBOURSMT">
 	<summary>
  Remboursement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_STATUT.VTL_STATUT_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_STATUT.VTL_STATUT_NAME">
+	<summary>
+ Name.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_STATUT.VTL_STATUT_NAME_MAXLEN">
+	<summary>
+ Name (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_STATUT">
+	<summary>
+ Statut.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID">
 	<summary>
@@ -3938,6 +4045,21 @@ VITAL.BO
 </member><member name="M:VITAL.BO.VITAL.Remboursement.#ctor(System.Data.DataRow)">
 	<summary>
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Remboursement"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Statut.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Statut"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Statut.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Statut"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Statut.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Statut"/>.
  </summary>
 	<param name="p_o_row">Ligne d'une table de données.</param>
 </member><member name="M:VITAL.BO.VITAL.Traitement_medicament.#ctor(System.Int32,Corail.Core.Transaction)">
@@ -5852,6 +5974,119 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Auto.Remboursement">
 	<summary>
  Remboursement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Statut.m_b_update">
+	<summary>
+ Indique s'il s'agit d'un élément chargé à partir de la base de données.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.Statut.IsNew">
+	<summary>
+ Indique si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregistrement sera mis à jour.
+ </summary>
+	<value>
+		<c>true</c> si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregestement sera mis à jour.
+ </value>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.InitDefaultValues">
+	<summary>
+ Initialization par défaut avec les valeurs définies via Modeler
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.OnInitDefaultValues">
+	<summary> Post-initialisation en fin d'appel du ou des constructeurs de classe. 
+ Permet de surcharger les valeurs par défaut des propriétés.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.GetAll(Corail.Core.Transaction)">
+	<summary>
+ Retourne la requête retournant tous les élements.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+	<returns>Tous les éléments</returns>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.FindDR(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Retourne la ligne de données correspondant à l'enregistrement.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Load(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Chargement des informations à partir la table VTL_STATUT.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table VTL_STATUT.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Save(Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_STATUT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Save(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_STATUT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Cancel(Corail.Core.Transaction)">
+	<summary>
+ Annule les changements apportés a l'objet
+ </summary>
+	<param name="p_o_trans">Transaction a utiliser</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Delete(Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_STATUT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Delete(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_STATUT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="F:VITAL.BO.VITAL.Auto.Statut.m_o_cacheDt">
+	<summary>
+ Cache Datatable
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Statut.m_o_cacheLock">
+	<summary>
+ Cache Lock
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Statut.m_b_cacheHasChanges">
+	<summary>
+ Cache Changes
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.Statut.CacheDt(Corail.Core.Transaction,System.Boolean)">
+	<summary>
+ Propriété du cache datatable
+ </summary>
+	<param name="p_o_trans">La transaction à utiliser</param>
+	<param name="p_b_force">Objet de la classe Statut.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheDtKey(VITAL.BO.VITAL.Statut)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+	<param name="p_o_object">Objet de la classe Statut.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheDtKeyFind(VITAL.BO.VITAL.Statut)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheUpdate(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheUpdateDt(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache datatable
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheClear(System.Boolean)">
+	<summary>
+ Permet vider le cache datatable
+ </summary>
+	<param name="p_b_force">Indique si l'on force le vidage ou non</param>
+</member><member name="T:VITAL.BO.VITAL.Auto.Statut">
+	<summary>
+ Statut.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Auto.Traitement_medicament.m_b_update">
 	<summary>

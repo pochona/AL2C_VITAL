@@ -150,6 +150,18 @@ Corail.Web
  </summary>
 	<param name="p_b">Paramètre à encoder.</param>
 	<returns>"true" ou "false" suivant le paramètre.</returns>
+</member><member name="M:Corail.Web.ToolsJavascripts.ColorJS(System.Drawing.Color)">
+	<summary>
+ Retourne un objet Color en format RGBA.
+ </summary>
+	<param name="p_o_color">Couleur à convertir.</param>
+	<returns>Un objet Color en format RGBA.</returns>
+</member><member name="M:Corail.Web.ToolsJavascripts.PointJS(System.Drawing.PointF)">
+	<summary>
+ Retourne un objet avec les coordonnées du point.
+ </summary>
+	<param name="p_o_point">Le point.</param>
+	<returns>Un objet avec les coordonnées du point.</returns>
 </member><member name="M:Corail.Web.ToolsJavascripts.AddUrlAttribut(System.String@,System.String,System.String)">
 	<summary>
  Ajoute un nouveau paramètre à une chaine contenant une URL
@@ -333,6 +345,13 @@ Corail.Web
 	<param name="p_o_page">Page devant contenir le javascript.</param>
 	<param name="p_s_fileName">Nom du fichier de script sans l'extension dans le dossier de scripts</param>
 	<param name="p_b_resource">Indique s'il s'agit d'un fichier enregistrer en tant que ressource intégrée.</param>
+</member><member name="M:Corail.Web.ToolsJavascripts.GetScriptPath(System.Web.UI.Page,System.String)">
+	<summary>
+ Retourne le chemin complet du script à partir d'un nom simple ou d'une url complete.
+ </summary>
+	<param name="p_o_page">Page devant contenir le composant.</param>
+	<param name="p_s_jsPath">URL du fichier Javascript.</param>
+	<returns>Le chemin complet du script à partir d'un nom simple ou d'une url complete.</returns>
 </member><member name="M:Corail.Web.ToolsJavascripts.CompleteScript(System.String,System.String[])">
 	<summary>
  Formate un block Javascript.
@@ -501,49 +520,68 @@ Corail.Web
 	<param name="p_s_method">Nom de la méthode.</param>
 	<param name="p_o_args">Arguments de la méthode.</param>
 	<returns></returns>
-</member><member name="M:Corail.Web.ToolsHttp.InitResponseHeader(System.Web.HttpContext,System.String,System.String,System.Boolean)">
+</member><member name="M:Corail.Web.ToolsHttp.InitResponseHeader(System.Web.HttpContext,System.String,System.String,System.Boolean,System.Boolean)">
 	<summary>
  Initialise l'envois de fichier vers le navigateur
  </summary>
-	<param name="p_s_contentType">Content Type</param>
-	<param name="p_s_clientFilename">Nom du fichier</param>
-	<param name="p_b_attachment">Affiché dans le navigateur par défaut</param>
+	<param name="p_o_context">Context HTTP.</param>
+	<param name="p_s_contentType">Type MIME.</param>
+	<param name="p_s_clientFilename">Le nom du fichier visible sur le client.</param>
+	<param name="p_b_attachment">Indique si le fichier doit être traité comme une piece attachée par le
+ navigateur.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
 	<returns>Le flux de sorite initialisé</returns>
+</member><member name="M:Corail.Web.ToolsHttp.ClearHeadersAndKeepCookies(System.Web.HttpResponse)">
+	<summary>
+ Supprime toutes les entête HTTP en conservant les cookies.
+ </summary>
+	<param name="p_o_response">Le flux de réponse.</param>
 </member><member name="M:Corail.Web.ToolsHttp.CloseResponse(System.Web.HttpResponse)">
 	<summary>
  Ferme le flux de sortie pour indiquer que l'envois est terminé
  </summary>
 	<param name="p_o_response">Le flux de réponse</param>
 	<remarks></remarks>
-</member><member name="M:Corail.Web.ToolsHttp.SendHtmlResponse(System.String)">
+</member><member name="M:Corail.Web.ToolsHttp.SendHtmlResponse(System.String,System.Boolean)">
 	<summary>
  Envois le contenu d'un document HTML.
  </summary>
 	<param name="p_s_content">Contenu HTML.</param>
-</member><member name="M:Corail.Web.ToolsHttp.SendFile(System.String,System.Boolean,System.String)">
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendFile(System.String,System.Boolean,System.String,System.Boolean)">
 	<summary>
  Retourne un fichier au navigateur en détectant le type MIME en fonction de l'extention
  </summary>
-	<param name="p_s_filePath">Le chemin local d'accès au fichier à envoyer. (Peut etre relatif à la racine de l'application "~/exemple.txt")</param>
-	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece jointe.</param>
-</member><member name="M:Corail.Web.ToolsHttp.SendFile(System.String,System.String,System.String,System.Boolean)">
+	<param name="p_s_filePath">Le chemin local d'accès au fichier à envoyer. (Peut etre relatif à la racine de
+ l'application "~/exemple.txt")</param>
+	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece
+ jointe.</param>
+	<param name="p_s_clientFilename">Le nom du fichier visible sur le client.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendFile(System.String,System.String,System.String,System.Boolean,System.Boolean)">
 	<summary>
  Retourne un fichier au navigateur
  </summary>
-	<param name="p_s_filePath">Le chemin local d'accès au fichier à envoyer. (Peut etre relatif à la racine de l'application "~/exemple.txt")</param>
+	<param name="p_s_filePath">Le chemin local d'accès au fichier à envoyer. (Peut etre relatif à la racine de
+ l'application "~/exemple.txt")</param>
 	<param name="p_s_contentType">Type MIME du fichier</param>
 	<param name="p_s_clientFilename">Nom du fichier tel qu'il est vu dans le navigateur</param>
-	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece jointe.</param>
-</member><member name="M:Corail.Web.ToolsHttp.SendFile(System.Byte[]@,System.String,System.String,System.Boolean,System.Double)">
+	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece
+ jointe.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendFile(System.Byte[]@,System.String,System.String,System.Boolean,System.Double,System.Boolean)">
 	<summary>
  Envois un fichier au navigateur client.
  </summary>
 	<param name="p_o_buffer">Contenu du fichier binaire à envoyer.</param>
 	<param name="p_s_contentType">Type MIME du fichier.</param>
 	<param name="p_s_clientFilename">Nom du fichier tel qu'il est vu dans le navigateur.</param>
-	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece jointe.</param>
-	<param name="p_i_cacheDelay">Délai en minutes durant lequel le fichier doit être conservé en cache par le navigateur client.</param>
-</member><member name="M:Corail.Web.ToolsHttp.SendFile(System.Web.HttpContext,System.Byte[],System.String,System.String,System.Boolean,System.Double)">
+	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece
+ jointe.</param>
+	<param name="p_i_cacheDelay">Délai en minutes durant lequel le fichier doit être conservé en cache par le
+ navigateur client.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendFile(System.Web.HttpContext,System.Byte[],System.String,System.String,System.Boolean,System.Double,System.Boolean)">
 	<summary>
  Envois un fichier au navigateur client.
  </summary>
@@ -551,24 +589,41 @@ Corail.Web
 	<param name="p_o_buffer">Contenu du fichier binaire à envoyer.</param>
 	<param name="p_s_contentType">Type MIME du fichier.</param>
 	<param name="p_s_clientFilename">Nom du fichier tel qu'il est vu dans le navigateur.</param>
-	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece jointe.</param>
-	<param name="p_i_cacheDelay">Délai en minutes durant lequel le fichier doit être conservé en cache par le navigateur client.</param>
-</member><member name="M:Corail.Web.ToolsHttp.SendTextFile(System.String@,System.String,System.String,System.Boolean)">
+	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece
+ jointe.</param>
+	<param name="p_i_cacheDelay">Délai en minutes durant lequel le fichier doit être conservé en cache par le
+ navigateur client.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendTextFile(System.String@,System.String,System.String,System.Boolean,System.Boolean)">
 	<summary>
  Retourne un fichier au navigateur
  </summary>
 	<param name="p_s_content">Contenu du fichier texte à envoyer</param>
 	<param name="p_s_contentType">Type MIME du fichier</param>
 	<param name="p_s_clientFilename">Nom du fichier tel qu'il est vu dans le navigateur</param>
-	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece jointe.</param>
-</member><member name="M:Corail.Web.ToolsHttp.SendImageFile(System.Drawing.Image,System.String,System.Boolean)">
+	<param name="p_b_attachment">Indique si le navigateur doit prendre le fichier comme étant une piece
+ jointe.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendImageFile(System.Drawing.Image,System.String,System.Boolean,System.Boolean)">
 	<summary>
  Envois une image au navigateur client.
  </summary>
 	<param name="p_o_image">Image.</param>
 	<param name="p_s_clientFilename">Nom du fichier tel qu'il est vu dans le navigateur.</param>
-	<param name="p_b_attachment"><c>true</c> si le fichier doit être considéré comme une pièce jointe par le client.</param>
-</member><member name="M:Corail.Web.ToolsHttp.SendImageFile(System.Drawing.Image,Corail.Core.ImageType,System.String,System.Boolean)">
+	<param name="p_b_attachment"><c>true</c> si le fichier doit être considéré comme une pièce jointe par le
+ client.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendImageFile(System.Drawing.Image,Corail.Core.ImageType,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Envois une image au navigateur client.
+ </summary>
+	<param name="p_o_image">Image.</param>
+	<param name="p_i_imageType">Type d'image.</param>
+	<param name="p_s_clientFilename">Nom du fichier tel qu'il est vu dans le navigateur.</param>
+	<param name="p_b_attachment"><c>true</c> si le fichier doit être considéré comme une pièce jointe par le
+ client.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendImageFile(System.Drawing.Image,Corail.Core.ImageType,System.Drawing.Size,System.String,System.Boolean,System.Boolean)">
 	<summary>
  Envois une image au navigateur client.
  </summary>
@@ -576,42 +631,36 @@ Corail.Web
 	<param name="p_i_imageType">Type d'image.</param>
 	<param name="p_s_clientFilename">Nom du fichier tel qu'il est vu dans le navigateur.</param>
 	<param name="p_b_attachment"><c>true</c> si le fichier doit être considéré comme une pièce jointe par le client.</param>
-</member><member name="M:Corail.Web.ToolsHttp.SendImageFile(System.Drawing.Image,Corail.Core.ImageType,System.Drawing.Size,System.String,System.Boolean)">
-	<summary>
- Envois une image au navigateur client.
- </summary>
-	<param name="p_o_image">Image.</param>
-	<param name="p_i_imageType">Type d'image.</param>
-	<param name="p_s_clientFilename">Nom du fichier tel qu'il est vu dans le navigateur.</param>
-	<param name="p_b_attachment"><c>true</c> si le fichier doit être considéré comme une pièce jointe par le client.</param>
-</member><member name="M:Corail.Web.ToolsHttp.SendResFile(System.String,System.TimeSpan)">
+</member><member name="M:Corail.Web.ToolsHttp.SendResFile(System.String,System.TimeSpan,System.Boolean)">
 	<summary>
  Envois au navigateur le contenu d'un fichier ressource
  </summary>
 	<param name="p_s_file">Nom du fichier à récupérer dans l'assembly</param>
-	<remarks></remarks>
-</member><member name="M:Corail.Web.ToolsHttp.SendResFile(System.String,System.String,System.TimeSpan)">
+	<param name="p_i_cacheExpires">Indique la durée de validité du fichier en cache.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendResFile(System.String,System.String,System.TimeSpan,System.Boolean)">
 	<summary>
  Envois au navigateur le contenu d'un fichier ressource
  </summary>
 	<param name="p_s_file">Nom du fichier à récupérer dans l'assembly</param>
 	<param name="p_s_contentType">Type MIME</param>
-	<remarks></remarks>
-</member><member name="M:Corail.Web.ToolsHttp.SendResFile(System.Type,System.String)">
+	<param name="p_i_cacheExpires">Indique la durée de validité du fichier en cache.</param>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendResFile(System.Type,System.String,System.Boolean)">
 	<summary>
  Envois au navigateur le contenu d'un fichier ressource
  </summary>
 	<param name="p_o_type">Type appartenant à l'assembly de la ressource.</param>
 	<param name="p_s_file">Nom du fichier à récupérer dans l'assembly</param>
-	<remarks></remarks>
-</member><member name="M:Corail.Web.ToolsHttp.SendResFile(System.Type,System.String,System.String)">
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
+</member><member name="M:Corail.Web.ToolsHttp.SendResFile(System.Type,System.String,System.String,System.Boolean)">
 	<summary>
  Envois au navigateur le contenu d'un fichier ressource
  </summary>
 	<param name="p_o_type">Type appartenant à l'assembly de la ressource.</param>
 	<param name="p_s_file">Nom du fichier à récupérer dans l'assembly</param>
 	<param name="p_s_contentType">Type MIME</param>
-	<remarks></remarks>
+	<param name="p_b_keepCookies">Indique si on doit conserver les cookies définis dans la réponse.</param>
 </member><member name="M:Corail.Web.ToolsHttp.SendCsvFile(System.Data.DataSet,System.String,System.Boolean,System.Boolean,System.Collections.Specialized.StringDictionary,System.String[],Corail.Core.CsvOptions)">
 	<summary>
  Retourne à l'utilisateur un fichier au format CSV
@@ -2260,10 +2309,6 @@ Corail.Web
 </member><member name="M:Corail.Web.CwUploadBox.CreateControlCollection">
 	<summary>
  On accepte pas les controles enfants
- </summary>
-</member><member name="M:Corail.Web.CwUploadBox.OnLoad(System.EventArgs)">
-	<summary>
- On indique à la page que le controle gere le post
  </summary>
 </member><member name="P:Corail.Web.CwUploadBox.TagKey">
 	<summary>
@@ -4027,7 +4072,7 @@ Corail.Web
 	<param name="e">Données associées à l'évènement.</param>
 </member><member name="E:Corail.Web.CwPage.Reload">
 	<summary>
- Evènement déclencher lorsque l'utilisateur appuit sur F5 ou demande le rechargement de la page.
+ Evènement déclenché lorsque l'utilisateur appuit sur F5 ou demande le rechargement de la page.
  </summary>
 	<param name="sender">Source de l'événement.</param>
 	<param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
@@ -6226,6 +6271,9 @@ Corail.Web
 </member><member name="F:Corail.Web.CwDataGrid.m_o_labelCells">
  Définition de l'espace à utiliser pour le libellé suivant la résolution.
 
+</member><member name="F:Corail.Web.CwDataGrid.m_b_keepFiltersOnClose">
+ Indique si l'on doit conserver ou non les valeurs de filtrage sur la fermeture de la ligne de filtre.
+
 </member><member name="P:Corail.Web.CwDataGrid.AutoGenerateColumns">
 	<summary>
  Par défaut les colonnes ne sont pas crées automatiquement
@@ -6662,6 +6710,12 @@ Corail.Web
  layout précédents; <c>False</c> sinon.</value>
 	<returns><c>True</c> si on doit forcer l'affichage de cet élement en repartant à gauche en dessous des
  layout précédents; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.CwDataGrid.KeepFiltersValuesOnClose">
+	<summary>
+ Indique si l'on doit conserver les valeurs des filtres.
+ </summary>
+	<value><c>True</c> si l'on doit conserver les valeurs des filtres; <c>False</c> sinon.</value>
+	<returns><c>True</c> si l'on doit conserver les valeurs des filtres; <c>False</c> sinon.</returns>
 </member><member name="P:Corail.Web.CwDataGrid.ClientRowClickFunctionName">
 	<summary>
  Indique le nom de la fonction javascript à appeller si on clique sur une ligne.
@@ -6772,6 +6826,34 @@ Corail.Web
 	<summary>
  Indique que l'utilisateur à changé le profil de la grille.
  </summary>
+</member><member name="E:Corail.Web.CwDataGrid.QueryRequest">
+	<summary>
+ Chargement des lignes de la grille.
+ </summary>
+	<param name="sender">Instance de classe source de l'évènement.</param>
+	<param name="p_o_query">Requête permettant de charger les données de la grille.</param>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="E:Corail.Web.CwDataGrid.DataTableRequest">
+	<summary>
+ Chargement des lignes de la grille.
+ </summary>
+	<param name="sender">Instance de classe source de l'évènement.</param>
+	<param name="p_o_dt">Source de données de la grille.</param>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="E:Corail.Web.CwDataGrid.DataSourceRequest">
+	<summary>
+ Chargement des lignes de la grille.
+ </summary>
+	<param name="sender">Instance de classe source de l'évènement.</param>
+	<param name="p_o_ds">Source de données de la grille.</param>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="E:Corail.Web.CwDataGrid.DataViewRequest">
+	<summary>
+ Chargement des lignes de la grille.
+ </summary>
+	<param name="sender">Instance de classe source de l'évènement.</param>
+	<param name="p_o_dv">Source de données de la grille.</param>
+	<param name="e">Données associées à l'évènement.</param>
 </member><member name="E:Corail.Web.CwDataGrid.DeleteSelection">
 	<summary>
  Evenement déclanché lors de la demande de suppression des lignes sélectionnées.
@@ -9221,6 +9303,12 @@ Corail.Web
  </summary>
 	<value>Affichage d'un bouton permettant de supprimer la sélection.</value>
 	<returns>Affichage d'un bouton permettant de supprimer la sélection.</returns>
+</member><member name="P:Corail.Web.CwComboBox.OpenOnFocus">
+	<summary>
+ Indique si la combobox s'ouvre automatiquement si elle est sélectionnée.
+ </summary>
+	<value><c>True</c> la combox s'ouvre; <c>False</c> sinon elle reste fermée.</value>
+	<returns><c>True</c> si la combox s'ouvre; <c>False</c> si elle reste fermée.</returns>
 </member><member name="P:Corail.Web.CwComboBox.SelectedText">
 	<summary>
  Texte de l'élément sélectionné.
@@ -9237,6 +9325,10 @@ Corail.Web
  </summary>
 	<param name="DataSource">Source de données.</param>
 	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.CwComboBox.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Web.UI.WebControls.DropDownList"/>.
+ </summary>
 </member><member name="M:Corail.Web.CwComboBox.RaiseCallbackEvent(System.String)">
 	<summary>
  Traite un événement de rappel qui cible un contrôle.
@@ -10160,12 +10252,14 @@ Corail.Web
  Chargement des informations (Mot de passe et groupes de l'utilisateur).
  </summary>
 	<param name="p_o_identity">Identité de l'utilisateur.</param>
-</member><member name="M:Corail.Web.WebApplication.GetUserIdentity(System.String,System.String)">
+</member><member name="M:Corail.Web.WebApplication.GetUserIdentity(System.String,System.String,System.Boolean)">
 	<summary>
  Retourne les informations necessaires à la validation des informations de connection de l'utilisateur.
  </summary>
 	<param name="p_s_login">Identifiant de l'utilisateur.</param>
 	<param name="p_s_password">Mot de passe saisi.</param>
+	<param name="p_b_passwordRequired">Indique si l'utilisateur doit obligatoirement saisir un mot de passe
+ pour se connecter.</param>
 	<returns>Identité de l'utilisateur.</returns>
 </member><member name="M:Corail.Web.WebApplication.UserChangeApplication(System.String,System.Web.Security.FormsAuthenticationTicket@)">
 	<summary>
@@ -12933,6 +13027,12 @@ Corail.Web
  </summary>
 	<value>Nom de l'icône qui est affiché dans le titre de la datagrid.</value>
 	<returns>Nom de l'icône qui est affiché dans le titre de la datagrid.</returns>
+</member><member name="P:Corail.Web.DataGridAdministration.Table.ErrorAlias">
+	<summary>
+ Liste des erreurs personnalisées.
+ </summary>
+	<value>Liste des erreurs personnalisées.</value>
+	<returns>Liste des erreurs personnalisées.</returns>
 </member><member name="M:Corail.Web.DataGridAdministration.Table.LoadXML(System.String,System.String)">
 	<summary>
  Charge les informations sur le mode de saisie des informations de la table
@@ -15409,6 +15509,40 @@ Corail.Web
 </member><member name="F:Corail.Web.CwCheckBoxColumn.c_s_uncheckedValue">
  Valeur indiquant que la checkbox est décochée.
 
+</member><member name="P:Corail.Web.CwCheckBoxColumn.CheckBoxProperties.CheckedValue">
+	<summary>
+ Valeur indiquant que la checkbox est cochée.
+ </summary>
+	<value>Valeur indiquant que la checkbox est cochée.</value>
+	<returns>Valeur indiquant que la checkbox est cochée.</returns>
+</member><member name="P:Corail.Web.CwCheckBoxColumn.CheckBoxProperties.UncheckedValue">
+	<summary>
+ Valeur indiquant que la CheckBox est décochée.
+ </summary>
+	<value>Valeur indiquant que la CheckBox est décochée.</value>
+	<returns>Valeur indiquant que la CheckBox est décochée.</returns>
+</member><member name="P:Corail.Web.CwCheckBoxColumn.CheckBoxProperties.DefaultToolTip">
+	<summary>
+ Texte a afficher dans la bulle d'aide.
+ </summary>
+	<value>Texte a afficher dans la bulle d'aide.</value>
+	<returns>Texte a afficher dans la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.CwCheckBoxColumn.CheckBoxProperties.CheckedToolTip">
+	<summary>
+ Texte a afficher dans la bulle d'aide lorsqu'elle est cochée.
+ </summary>
+	<value>Texte a afficher dans la bulle d'aide lorsqu'elle est cochée.</value>
+	<returns>Texte a afficher dans la bulle d'aide lorsqu'elle est cochée.</returns>
+</member><member name="P:Corail.Web.CwCheckBoxColumn.CheckBoxProperties.CommandName">
+	<summary>
+ Commande a exécuter lorsque la sélection change.
+ </summary>
+	<value>Commande a exécuter lorsque la sélection change.</value>
+	<returns>Commande a exécuter lorsque la sélection change.</returns>
+</member><member name="T:Corail.Web.CwCheckBoxColumn.CheckBoxProperties">
+	<summary>
+ Propriétés de chaques composants cases à cocher.
+ </summary>
 </member><member name="F:Corail.Web.CwCheckBoxColumn.m_b_keepSelection">
  Indique si on doit conserver un tableau de sélection.
 
@@ -16958,6 +17092,9 @@ Corail.Web
 </member><member name="F:Corail.Web.CwHtmlEditor.m_s_toolTipError">
  Erreur a afficher sous forme de tooltip    
 
+</member><member name="F:Corail.Web.CwHtmlEditor.m_b_canEdit">
+ Gestion des roles
+
 </member><member name="P:Corail.Web.CwHtmlEditor.AllowPrint">
 	<summary>
  Indique si le bouton permettant d'imprimer le texte mis en page est affiché.
@@ -17024,17 +17161,6 @@ Corail.Web
  Hauteur minimale du composant en pixels.
  </summary>
 	<value>Hauteur minimale du composant en pixels.</value>
-</member><member name="P:Corail.Web.CwHtmlEditor.Width">
-	<summary>
- Retourne ou indique la largeur.
- </summary>
-	<value>
- La largeur.
- </value>
-</member><member name="P:Corail.Web.CwHtmlEditor.Enabled">
-	<summary>
- On surcharge la propriété pour prendre en compte CanEdit
- </summary>
 </member><member name="P:Corail.Web.CwHtmlEditor.Label">
 	<summary>
  Retourne ou définit le libéllé correspondant à la zone
@@ -17094,6 +17220,30 @@ Corail.Web
  </summary>
 	<value>Liste des classes prédifinies pour l'insertion de code.</value>
 	<returns>Liste des classes prédifinies pour l'insertion de code.</returns>
+</member><member name="P:Corail.Web.CwHtmlEditor.Visible">
+	<summary>
+ On surchage la propriété pour la liée à l'interface IBaseRoleControl
+ </summary>
+</member><member name="P:Corail.Web.CwHtmlEditor.CanEdit">
+	<summary>
+ On surchage la propriété pour la liée à l'interface IBaseRoleControl
+ </summary>
+</member><member name="P:Corail.Web.CwHtmlEditor.Enabled">
+	<summary>
+ Indique si l'élement est actif et si le rôle de l'utilisateur actif authorise sa modification.
+ </summary>
+	<value><c>True</c> si l'élement est actif et si le rôle de l'utilisateur actif authorise sa modification;
+ <c>False</c> sinon.</value>
+	<returns><c>True</c> si l'élement est actif et si le rôle de l'utilisateur actif authorise sa
+ modification; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.CwHtmlEditor.RoleEdit">
+	<summary>
+ Nom du role de modification conditionnelle
+ </summary>
+</member><member name="P:Corail.Web.CwHtmlEditor.RoleVisible">
+	<summary>
+ Nom du role d'affichage conditionnelle
+ </summary>
 </member><member name="M:Corail.Web.CwHtmlEditor.#ctor">
 	<summary>
  Initializes a new instance of the <see cref="T:Corail.Web.CwHtmlEditor"/> class.
@@ -17350,121 +17500,6 @@ Corail.Web
 	<summary>
  Objet permettant d'indiquer s'il y a eu des erreurs lors du processus de validation des données saisies par
  l'utilisateur.
- </summary>
-</member><member name="P:Corail.Web.JSonNode.Parent">
-	<summary>
- Noeud JSON parent.
- </summary>
-	<value>
- Noeud JSON parent.
- </value>
-</member><member name="P:Corail.Web.JSonNode.ArrayName">
-	<summary>
- Nom du tableau en cours de chargement.
- </summary>
-	<value>
- Nom du tableau en cours de chargement.
- </value>
-</member><member name="P:Corail.Web.JSonNode.IsInArray">
-	<summary>
- Indique si on est en train de charger un tableau.
- </summary>
-	<value>
-		<c>True</c> si on est en train de charger un tableau, <c>False</c> sinon.
- </value>
-</member><member name="P:Corail.Web.JSonNode.IsEmpty">
-	<summary>
- Indique si l'élément contient des définitions.
- </summary>
-	<value><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</value>
-	<returns><c>True</c> si l'élément contient des définitions; <c>False</c> sinon.</returns>
-</member><member name="M:Corail.Web.JSonNode.Deserialize(System.String)">
-	<summary>
- Chargement des données au format JSon.
- </summary>
-	<param name="p_s_json">The p_s_json.</param><returns></returns>
-</member><member name="M:Corail.Web.JSonNode.ToString">
-	<summary>
- Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
- </summary>
-	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
-</member><member name="M:Corail.Web.JSonNode.Serialize">
-	<summary>
- Retourne le code JSON.
- </summary>
-	<returns>Le code JSON.</returns>
-</member><member name="M:Corail.Web.JSonNode.GetSerializedValue(System.String)">
-	<summary>
- Format la valeur au format Javascript.
- </summary>
-	<param name="p_s_value">Valeur.</param>
-	<returns>Valeur formatée</returns>
-</member><member name="M:Corail.Web.JSonNode.IsNumber(System.String)">
-	<summary>
- Indique si la chaine représente un nombre.
- </summary>
-	<param name="p_s">valeur.</param><returns>
-		<c>True</c> si la chaine représente un nombre, <c>False</c> sinon.
- </returns>
-</member><member name="M:Corail.Web.JSonNode.AddValue(System.String,System.String)">
-	<summary>
- Ajoute une valeur au noeud.
- </summary>
-	<param name="p_s_name">Identifiant de la valeur.</param>
-	<param name="p_s_value">Valeur.</param>
-</member><member name="M:Corail.Web.JSonNode.AddValue(System.String,System.Int32)">
-	<summary>
- Ajoute une valeur au noeud.
- </summary>
-	<param name="p_s_name">Identifiant de la valeur.</param>
-	<param name="p_i_value">Valeur.</param>
-</member><member name="M:Corail.Web.JSonNode.AddNode(System.String,Corail.Web.JSonNode)">
-	<summary>
- Ajoute un noeud enfant.
- </summary>
-	<param name="p_s_name">Identifiant du noeud.</param>
-	<param name="p_o_node">Noeud.</param>
-</member><member name="M:Corail.Web.JSonNode.GetValuesKeys">
-	<summary>
- Retourne les noms de propriétés contenant des valeurs.
- </summary><returns></returns>
-</member><member name="M:Corail.Web.JSonNode.GetNodesKeys">
-	<summary>
- Retourne les noms de propriétés contenant des noeuds.
- </summary><returns></returns>
-</member><member name="M:Corail.Web.JSonNode.GetValues(System.String)">
-	<summary>
- Retourne toutes les valeurs pour une clé donnée.
- </summary>
-	<param name="p_s_key">Clé.</param>
-	<returns>Toutes les valeurs pour une clé donnée.</returns>
-</member><member name="M:Corail.Web.JSonNode.GetString(System.String)">
-	<summary>
- Retourne la premiere valeur trouvée.
- </summary>
-	<param name="p_s_key">Clé.</param>
-	<returns>La premiere valeur trouvée.</returns>
-</member><member name="M:Corail.Web.JSonNode.GetInt(System.String)">
-	<summary>
- Retourne la premiere valeur trouvée.
- </summary>
-	<param name="p_s_key">Clé.</param>
-	<returns>La premiere valeur trouvée.</returns>
-</member><member name="M:Corail.Web.JSonNode.GetNodes(System.String)">
-	<summary>
- Retourne toutes les valeurs pour une clé donnée.
- </summary>
-	<param name="p_s_key">Clé.</param>
-	<returns>Toutes les valeurs pour une clé donnée.</returns>
-</member><member name="M:Corail.Web.JSonNode.GetNode(System.String)">
-	<summary>
- Retourne la premiere valeur trouvée.
- </summary>
-	<param name="p_s_key">Clé.</param>
-	<returns>La premiere valeur trouvée.</returns>
-</member><member name="T:Corail.Web.JSonNode">
-	<summary>
- Sérialiseur / désérialiseur JSON.
  </summary>
 </member><member name="M:Corail.Web.ILanguageSensitiveControl.OnLanguageChanged(Corail.Web.LanguageChangedEventArgs)">
 	<summary>
@@ -18504,6 +18539,10 @@ Corail.Web
 	<summary>
  Retourne la déclaration de type de document à utiliser dans les page
  voir par exemple : http://hsivonen.iki.fi/doctype/
+ </summary>
+</member><member name="M:Corail.Web.CwCustomPage.AssertPageTitle">
+	<summary>
+ On s'assure que la page possède un titre (Par défaut le nom de l'application).
  </summary>
 </member><member name="M:Corail.Web.CwPageColumnSelection.OnInit(System.EventArgs)">
 	<summary>
@@ -21046,6 +21085,11 @@ Corail.Web
  </summary>
 	<param name="writer">Objet <see cref="T:System.Web.UI.HtmlTextWriter"/> qui reçoit le contenu rendu.
  </param>
+</member><member name="M:Corail.Web.CwSummaryTextBox.OnPreRender(System.EventArgs)">
+	<summary>
+ Déclenche l'événement <see cref="E:System.Web.UI.Control.PreRender"/>.
+ </summary>
+	<param name="e">Objet <see cref="T:System.EventArgs"/> qui contient les données d'événement.</param>
 </member><member name="E:Corail.Web.CwSummaryTextBox.ValidateRules">
 	<summary>
  Evènement appellé lors de la vérifications des valeurs saisies.
@@ -22318,6 +22362,72 @@ Corail.Web
 </member><member name="T:Corail.Web.CwPageGlyphicons">
 	<summary>
  Page affichant la liste des icônes disponibles.
+ </summary>
+</member><member name="F:Corail.Web.CwPageDico.m_o_dtg">
+ Grille contenant les traductions.
+
+</member><member name="F:Corail.Web.CwPageDico.m_o_dt">
+ Jeu de données.
+
+</member><member name="M:Corail.Web.CwPageDico.AccessNeedConnectedUser">
+	<summary>
+ La page ne peut-être affichée que si l'utilisateur actuel est authentifié.
+ </summary>
+	<returns><c>True</c> si l'utilisateur doit être authentifié pour afficher la page.<c>False</c> sinon.
+ </returns>
+</member><member name="M:Corail.Web.CwPageDico.#ctor">
+	<summary>
+ Initialisation de l'objet
+ </summary>
+</member><member name="M:Corail.Web.CwPageDico.CreateDynamicFormContent(System.Web.UI.HtmlControls.HtmlForm)">
+	<summary>
+ Initialisation du formulaire.
+ </summary>
+	<param name="p_o_form">Formulaire devant contenir les composants graphiques.</param>
+</member><member name="M:Corail.Web.CwPageDico.OnLoad(System.EventArgs)">
+	<summary>
+ Chargement de la page
+ </summary>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.CwPageDico.OnReload(System.EventArgs)">
+	<summary>
+ Méthode appellée lorsque l'utilisateur demande un rechargement de la page par F5.
+ </summary>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.CwPageDico.Grid_Init(System.Object,System.EventArgs)">
+	<summary>
+ Se produit lorsque le contrôle serveur est initialisé, ce qui constitue la première étape de son cycle de
+ vie.
+ </summary>
+	<param name="sender">Instance de classe source de l'évènement.</param>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.CwPageDico.Grid_DataTableRequest(System.Object,System.Data.DataTable@,System.EventArgs)">
+	<summary>
+ Chargement des lignes de la grille.
+ </summary>
+	<param name="sender">Instance de classe source de l'évènement.</param>
+	<param name="p_o_dt">Source de données de la grille.</param>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.CwPageDico.Grid_LoadGridToolbar(System.Object,Corail.Web.DataGridLoadToolbarEventArgs)">
+	<summary>
+ Chargement de la barre d'outils de la grille.
+ </summary>
+	<param name="sender">Instance de classe source de l'évènement.</param>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.CwPageDico.Grid_Command(System.Object,Corail.Web.BubbleCommandEventArgs)">
+	<summary>
+ Evèment déclenché après l'appel d'une commande POST.
+ </summary>
+	<param name="sender">Source de l'événement.</param>
+	<param name="e"><see cref="T:System.Web.UI.WebControls.CommandEventArgs"/> qui contient les données
+ d'événement.</param>
+</member><member name="M:Corail.Web.CwPageDico.ExportDico">
+	<summary>
+ Envois le contenu du dictionnaire pour une modification par le client.
+ </summary>
+</member><member name="T:Corail.Web.CwPageDico">
+	<summary>
+ Page contenant l'ensemble des traductions pour l'application.
  </summary>
 </member><member name="M:Corail.Web.CwPageConnectFrame.RenderFooter(System.Web.UI.HtmlTextWriter)">
 	<summary>
@@ -23882,6 +23992,177 @@ Corail.Web
 	<summary>
  Cellule bouton.
  </summary>
+</member><member name="F:Corail.Web.CwColorPicker.m_i_width">
+ Largeur du composant.
+
+</member><member name="F:Corail.Web.CwColorPicker.m_i_height">
+ Hauteur du composant.
+
+</member><member name="F:Corail.Web.CwColorPicker.m_o_cells">
+ Définition de l'espace à utiliser suivant la résolution.
+
+</member><member name="F:Corail.Web.CwColorPicker.m_o_labelCells">
+ Définition de l'espace à utiliser pour le libellé suivant la résolution.
+
+</member><member name="F:Corail.Web.CwColorPicker.m_b_mandatory">
+ Défini si la données est obligatoire
+
+</member><member name="F:Corail.Web.CwColorPicker.m_s_toolTipError">
+ Erreur a afficher sous forme de tooltip
+
+</member><member name="P:Corail.Web.CwColorPicker.ColorHtml">
+	<summary>
+ Couleur au format HTML.
+ </summary>
+	<value>Couleur au format HTML.</value>
+	<returns>Couleur au format HTML.</returns>
+</member><member name="P:Corail.Web.CwColorPicker.Color">
+	<summary>
+ Retourne la couleur en tant qu'objet System.Drawing.Color.
+ </summary>
+	<value>La couleur en tant qu'objet System.Drawing.Color.</value>
+	<returns>La couleur en tant qu'objet System.Drawing.Color.</returns>
+</member><member name="P:Corail.Web.CwColorPicker.Tooltip">
+	<summary>
+ Aide contextuelle à afficher pour l'élément.
+ </summary>
+	<value>Aide contextuelle à afficher pour l'élément.</value>
+	<returns>Aide contextuelle à afficher pour l'élément.</returns>
+</member><member name="P:Corail.Web.CwColorPicker.Width">
+	<summary>
+ Largeur du composant.
+ </summary>
+	<value>
+ Largeur du composant.
+ </value>
+</member><member name="P:Corail.Web.CwColorPicker.CanEdit">
+	<summary>
+ On surchage la propriété pour la liée à l'interface IBaseRoleControl
+ </summary>
+	<value>Indique si l'on peut modifier la valeur.</value>
+</member><member name="P:Corail.Web.CwColorPicker.Label">
+	<summary>
+ Indique ou retourne le libellé d'un composant
+ </summary>
+	<value>Libellé du composant</value>
+	<returns></returns>
+</member><member name="P:Corail.Web.CwColorPicker.LabelCells">
+	<summary>
+ Définition de l'espace à utiliser pour le libellé suivant la résolution.
+ </summary>
+	<value>Définition de l'espace à utiliser pour le libellé suivant la résolution.</value>
+	<returns>Définition de l'espace à utiliser pour le libellé suivant la résolution.</returns>
+</member><member name="P:Corail.Web.CwColorPicker.LabelVisible">
+	<summary>
+ Indique si le libellé doit être affiché dans un FormLayout.
+ </summary>
+	<value><c>True</c> si le libellé doit être affiché dans un FormLayout; <c>False</c> sinon.</value>
+	<returns><c>True</c> si le libellé doit être affiché dans un FormLayout; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.CwColorPicker.Cells">
+	<summary>
+ Nombres de colonnes occupées par le composant suivant la résolution d'écran.
+ </summary>
+	<value>Nombres de colonnes occupées par le composant suivant la résolution d'écran.</value>
+	<returns>Nombres de colonnes occupées par le composant suivant la résolution d'écran.</returns>
+</member><member name="P:Corail.Web.CwColorPicker.ResetLayout">
+	<summary>
+ Indique si on doit forcer l'affichage de cet élement en repartant à gauche en dessous des layout
+ précédents.
+ </summary>
+	<value><c>True</c> si on doit forcer l'affichage de cet élement en repartant à gauche en dessous des
+ layout précédents; <c>False</c> sinon.</value>
+	<returns><c>True</c> si on doit forcer l'affichage de cet élement en repartant à gauche en dessous des
+ layout précédents; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.CwColorPicker.TooltipError">
+	<summary>
+ Message d'erreur à afficher dans une bulle.
+ </summary>
+	<value>Message d'erreur à afficher dans une bulle.</value>
+	<returns>Message d'erreur à afficher dans une bulle.</returns>
+</member><member name="P:Corail.Web.CwColorPicker.IsMandatory">
+	<summary>
+ Indique si le champ est obligatoire
+ </summary>
+</member><member name="P:Corail.Web.CwColorPicker.IsEmpty">
+	<summary>
+ Retourne vrai si la zone est vide.
+ </summary>
+</member><member name="P:Corail.Web.CwColorPicker.Enabled">
+	<summary>
+ Indique si l'élement est actif et si le rôle de l'utilisateur actif authorise sa modification.
+ </summary>
+</member><member name="P:Corail.Web.CwColorPicker.ShowInput">
+	<summary>
+ Affiche une zone de texte contenant la couleur.
+ </summary>
+	<value>Affiche une zone de texte contenant la couleur.</value>
+	<returns>Affiche une zone de texte contenant la couleur.</returns>
+</member><member name="P:Corail.Web.CwColorPicker.OutputFormat">
+	<summary>
+ Format de sortie de la couleur.
+ </summary>
+	<value>Format de sortie de la couleur.</value>
+	<returns>Format de sortie de la couleur.</returns>
+</member><member name="E:Corail.Web.CwColorPicker.ColorChanged">
+	<summary>
+ Se produit lorsque le contenu de la couleur change entre des publications sur le serveur.
+ </summary>
+	<param name="sender">Instance de classe source de l'évènement.</param>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.CwColorPicker.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+	<summary>
+ Implémenté par une classe, traite les données de publication pour un contrôle serveur ASP.NET.
+ </summary>
+	<param name="postDataKey">Identificateur de clé pour le contrôle.</param>
+	<param name="postCollection">Collection de toutes les valeurs de nom entrantes.</param>
+	<returns>true si l'état du contrôle serveur a été modifié à la suite d'une publication ; sinon false.
+ </returns>
+</member><member name="M:Corail.Web.CwColorPicker.RaisePostDataChangedEvent">
+	<summary>
+ Implémenté par une classe, demande au contrôle serveur d'avertir l'application ASP.NET du changement
+ d'état du contrôle.
+ </summary>
+</member><member name="M:Corail.Web.CwColorPicker.OnColorChanged(System.EventArgs)">
+	<summary>
+ Déclenche l'événement System.Web.UI.WebControls.TextBox.TextChanged. Cela vous permet de gérer l'événement
+ directement.
+ </summary>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.CwColorPicker.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+	<summary>
+ Ajout d'attributs à la balise HTML.
+ </summary>
+	<param name="writer">Flux de sortie.</param>
+</member><member name="M:Corail.Web.CwColorPicker.RenderChildren(System.Web.UI.HtmlTextWriter)">
+	<summary>
+ Renvoie le contenu des enfants d'un contrôle serveur dans un objet <see cref="T:System.Web.UI.HtmlTextWriter"/> fourni, qui écrit le contenu à rendre sur le client.
+ </summary>
+	<param name="writer">Objet <see cref="T:System.Web.UI.HtmlTextWriter"/> qui reçoit le contenu rendu.
+ </param>
+</member><member name="M:Corail.Web.CwColorPicker.OnPreRender(System.EventArgs)">
+	<summary>
+ Déclenche l'événement <see cref="E:System.Web.UI.Control.PreRender"/>.
+ </summary>
+	<param name="e">Objet <see cref="T:System.EventArgs"/> qui contient les données d'événement.</param>
+</member><member name="E:Corail.Web.CwColorPicker.ValidateRules">
+	<summary>
+ Evènement appellé lors de la vérifications des valeurs saisies.
+ </summary>
+	<param name="Sender">Instance de classe source de l'évènement.</param>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.CwColorPicker.OnValidateRules(System.EventArgs)">
+	<summary>
+ Evènement appellé lors de la vérifications des valeurs saisies.
+ </summary>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="T:Corail.Web.CwColorPicker">
+	<summary>
+ Zone d'affichage permettant de sélectionner une couleur.
+ </summary>
+</member><member name="T:Corail.Web.ColorPickerFormat">
+	<summary>
+ Type de format de sortie du CwColorPicker.
+ </summary>
 </member><member name="F:Corail.Web.CwHtmlTextWriterLite.m_o_sw">
 	<summary>
  Flux de sortie
@@ -24347,12 +24628,14 @@ Corail.Web
  </summary>
 	<value>Autres informations associées à l'utilisateur.</value>
 	<returns>Autres informations associées à l'utilisateur.</returns>
-</member><member name="M:Corail.Web.UserIdentity.#ctor(System.String,System.String)">
+</member><member name="M:Corail.Web.UserIdentity.#ctor(System.String,System.String,System.Boolean)">
 	<summary>
  Initialisation.
  </summary>
 	<param name="p_s_login">Identifiant de l'utilisateur.</param>
 	<param name="p_s_password">Mot de passe saisi.</param>
+	<param name="p_b_passwordRequired">Indique si l'utilisateur doit obligatoirement saisir un mot de passe
+ pour se connecter.</param>
 </member><member name="M:Corail.Web.UserIdentity.CheckPassword(System.String)">
 	<summary>
  Indique si le mot de passe passé en paramètre, correspond à celui enregistré pour l'utilisateur.
@@ -24970,6 +25253,14 @@ Corail.Web
  affichés; <c>False</c> sinon.</value>
 	<returns><c>True</c> si l'application utilise des "container" Bootstrap pour gérer la largeur des élements
  affichés; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.WebApplicationConfiguration.ComboBoxOpenOnFocus">
+	<summary>
+ Indique si les CwComboBox de l'application s'ouvre automatiquement lorsqu'elles sont sélectionnées.
+ </summary>
+	<value><c>True</c> si les CwComboBox de l'application s'ouvre automatiquement lorsqu'elles sont
+ sélectionnées; <c>False</c> sinon.</value>
+	<returns><c>True</c> si les CwComboBox de l'application s'ouvre automatiquement lorsqu'elles sont
+ sélectionnées; <c>False</c> sinon.</returns>
 </member><member name="T:Corail.Web.WebApplicationConfiguration">
 	<summary>
  Configuration permettant de gérer le comportement de l'application.
@@ -25071,6 +25362,12 @@ Corail.Web
  </summary>
 	<value><c>True</c> si on doit utiliser la barre d'actions contextuelle; <c>False</c> sinon.</value>
 	<returns><c>True</c> si on doit utiliser la barre d'actions contextuelle; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.DataGridConfiguration.KeepFiltersValuesOnClose">
+	<summary>
+ Conserve les filtres une fois la barre de filtre fermée.
+ </summary>
+	<value>Conserve les filtres une fois la barre de filtre fermée.</value>
+	<returns>Conserve les filtres une fois la barre de filtre fermée.</returns>
 </member><member name="T:Corail.Web.DataGridConfiguration">
 	<summary>
  Configuration permettant de gérer le comportement de la grille dans l'application.

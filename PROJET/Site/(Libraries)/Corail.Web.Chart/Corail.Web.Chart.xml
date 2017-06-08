@@ -1,0 +1,3313 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Corail.Web.Chart
+</name>
+</assembly>
+<members>
+<member name="P:Corail.Web.Chart.RadarDataset.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.RadarDataset.BorderColor">
+	<summary>
+ Couleur de la bordure.
+ </summary>
+	<value>Couleur de la bordure.</value>
+	<returns>Couleur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.RadarDataset.BorderWidth">
+	<summary>
+ Largeur de la bordure.
+ </summary>
+	<value>Largeur de la bordure.</value>
+	<returns>Largeur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.RadarDataset.Label">
+	<summary>
+ Libellé de la série.
+ </summary>
+	<value>Libellé de la série.</value>
+	<returns>Libellé de la série.</returns>
+</member><member name="P:Corail.Web.Chart.RadarDataset.PointBorderColor">
+	<summary>
+ Couleur de l'entourage des points.
+ </summary>
+	<value>Couleur de l'entourage des points.</value>
+	<returns>Couleur de l'entourage des points.</returns>
+</member><member name="P:Corail.Web.Chart.RadarDataset.PointBackgroundColor">
+	<summary>
+ Couleur de fond des points.
+ </summary>
+	<value>Couleur de fond des points.</value>
+	<returns>Couleur de fond des points.</returns>
+</member><member name="P:Corail.Web.Chart.RadarDataset.PointBorderWidth">
+	<summary>
+ Taille des points.
+ </summary>
+	<value>Taille des points.</value>
+	<returns>Taille des points.</returns>
+</member><member name="M:Corail.Web.Chart.RadarDataset.Add(System.Double,System.String)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_value">Valeur.</param>
+	<param name="p_s_backgroundColor">Couleur de fond.</param>
+	<returns>Ajoute une nouvelle valeur à la série.</returns>
+</member><member name="T:Corail.Web.Chart.RadarDataset">
+	<summary>
+ Série de données pour un graphique de type radar.
+ </summary>
+</member><member name="T:Corail.Web.Chart.RadarDataItem">
+	<summary>
+ Entrée dans un graphique de type radar.
+ </summary>
+</member><member name="M:Corail.Web.Chart.CwRadarChart.GetChartType">
+	<summary>
+ Retourne le type de graphique.
+ </summary>
+	<returns>Le type de graphique.</returns>
+</member><member name="T:Corail.Web.Chart.CwRadarChart">
+	<summary>
+ Graphique Radar.
+ </summary>
+</member><member name="P:Corail.Web.Chart.My.Resources.Resources.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:Corail.Web.Chart.My.Resources.Resources.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="T:Corail.Web.Chart.My.Resources.Resources">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="P:Corail.Web.Chart.CwPieChart.Kind">
+	<summary>
+ Type de camembert.
+ </summary>
+	<value>Type de camembert.</value>
+	<returns>Type de camembert.</returns>
+</member><member name="M:Corail.Web.Chart.CwPieChart.GetChartType">
+	<summary>
+ Retourne le type de graphique.
+ </summary>
+	<returns>Le type de graphique.</returns>
+</member><member name="T:Corail.Web.Chart.CwPieChart">
+	<summary>
+ Grphique Camembert.
+ </summary>
+</member><member name="M:Corail.Web.Chart.PieDataset.Add(System.Double,System.String)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_value">Valeur.</param>
+	<param name="p_s_backgroundColor">Couleur de fond.</param>
+	<returns>Ajoute une nouvelle valeur à la série.</returns>
+</member><member name="T:Corail.Web.Chart.PieDataset">
+	<summary>
+ Série de données pour un camembert.
+ </summary>
+</member><member name="T:Corail.Web.Chart.PieDataItem">
+	<summary>
+ Entrée dans un camembert.
+ </summary>
+</member><member name="F:Corail.Web.Chart.OptionalList.m_i_attributeType">
+ Type d'attribut.
+
+</member><member name="F:Corail.Web.Chart.OptionalList.m_o_list">
+ Liste.
+
+</member><member name="F:Corail.Web.Chart.OptionalList.m_o_default">
+ Valeur par défaut.
+
+</member><member name="F:Corail.Web.Chart.OptionalList.m_b_defaultExists">
+ Indique si la valeur par défaut contient une valeur.
+
+</member><member name="F:Corail.Web.Chart.OptionalList.m_o_lastValue">
+ Dernière valeur ajoutée.
+
+</member><member name="F:Corail.Web.Chart.OptionalList.m_b_containsDifferentValues">
+ Indique si le tableau contient tout le temps la même valeur.
+
+</member><member name="F:Corail.Web.Chart.OptionalList.m_b_containsEmpty">
+ Inidique si la liste contient des valeurs non rensignées.
+
+</member><member name="F:Corail.Web.Chart.OptionalList.m_b_containsValue">
+ Indique si la liste contient des valeurs renseignées.
+
+</member><member name="F:Corail.Web.Chart.OptionalList.m_s_attributeName">
+ Nom de l'attribut.
+
+</member><member name="F:Corail.Web.Chart.OptionalList.m_b_allowNull">
+ Indique si le tableau JSON généré peut contenir la valeur "null".
+
+</member><member name="P:Corail.Web.Chart.OptionalList.AttributeName">
+	<summary>
+ Nom de l'attribut.
+ </summary>
+	<value>Nom de l'attribut.</value>
+	<returns>Nom de l'attribut.</returns>
+</member><member name="P:Corail.Web.Chart.OptionalList.ContainsEmpty">
+	<summary>
+ Inidique si la liste contient des valeurs non rensignées.
+ </summary>
+	<value>Inidique si la liste contient des valeurs non rensignées.</value>
+	<returns>Inidique si la liste contient des valeurs non rensignées.</returns>
+</member><member name="P:Corail.Web.Chart.OptionalList.ContainsValue">
+	<summary>
+ Indique si la liste contient des valeurs renseignées.
+ </summary>
+	<value><c>True</c> si la liste contient des valeurs renseignées; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la liste contient des valeurs renseignées; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.Chart.OptionalList.DefaultValue">
+	<summary>
+ Valeur par défaut.
+ </summary>
+	<value>Valeur par défaut.</value>
+	<returns>Valeur par défaut.</returns>
+</member><member name="P:Corail.Web.Chart.OptionalList.IsEmpty">
+	<summary>
+ Indique si la liste est vide.
+ </summary>
+	<value><c>True</c> si la liste est vide; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la liste est vide; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.Chart.OptionalList.List">
+	<summary>
+ Liste des éléments.
+ </summary>
+	<value>Liste des éléments.</value>
+	<returns>Liste des éléments.</returns>
+</member><member name="M:Corail.Web.Chart.OptionalList.#ctor(System.String,Corail.Web.Chart.JSonAttributeType,System.Object,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_attributeName">Nom de l'attribut.</param>
+	<param name="p_i_attributeType">Type d'attribut.</param>
+	<param name="p_o_default">Valeur par défaut.</param>
+	<param name="p_b_allowNull">Indique si le tableau JSON généré peut contenir la valeur "null".</param>
+</member><member name="M:Corail.Web.Chart.OptionalList.IsNullValue(System.Object)">
+	<summary>
+ Indique si la valeur n'est pas définie.
+ </summary>
+	<param name="p_o_value">Valeur à tester.</param>
+	<returns><c>True</c> si la valeur n'est pas définie; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Web.Chart.OptionalList.Add(System.Object)">
+	<summary>
+ Ajout d'une nouvelle valeur.
+ </summary>
+	<param name="p_o_item">Elément à ajouter.</param>
+</member><member name="M:Corail.Web.Chart.OptionalList.RenderJSON(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Ajoute l'attribut contenant la liste.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.OptionalList.OnWriteArribute(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Ajoute l'attribut contenant la liste.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.OptionalList.RenderArray(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ On effectue le rendu du tableau avec les éléments contenus dans le dataset.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.OptionalList.GetEnumerator">
+	<summary>
+ Retourne un énumérateur qui parcourt la collection.
+ </summary>
+	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour parcourir la
+ collection.</returns>
+</member><member name="T:Corail.Web.Chart.OptionalList">
+	<summary>
+ Liste vérifiant si elle possède des valeurs renseignées.
+ </summary>
+</member><member name="M:Corail.Web.Chart.LinearDatasetCollection.Add(Corail.Web.Chart.LinearChartKind,System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle série du type précisé.
+ </summary>
+	<param name="p_i_kind">Type de graphique.</param>
+	<param name="p_s_label">Libellé de la nouvelle série.</param>
+	<param name="p_s_color">Couleur.</param>
+	<returns>Ajoute une nouvelle série du type précisé.</returns>
+</member><member name="M:Corail.Web.Chart.LinearDatasetCollection.AddBar(System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle série repésentée sous la forme de diagrame à barres.
+ </summary>
+	<param name="p_s_label">Libellé de la nouvelle série.</param>
+	<param name="p_s_backgroundColor">Couleur de fond.</param>
+	<returns>Ajoute une nouvelle série repésentée sous la forme de diagrame à barres.</returns>
+</member><member name="M:Corail.Web.Chart.LinearDatasetCollection.AddHorizontalBar(System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle série repésentée sous la forme de diagrame à barres horizontal.
+ </summary>
+	<param name="p_s_label">Libellé de la nouvelle série.</param>
+	<param name="p_s_backgroundColor">Couleur de fond.</param>
+	<returns>Ajoute une nouvelle série repésentée sous la forme de diagrame à barres horizontal.</returns>
+</member><member name="M:Corail.Web.Chart.LinearDatasetCollection.AddLine(System.String,System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle série repésentée sous la forme d'un tracé.
+ </summary>
+	<param name="p_s_label">Libellé de la nouvelle série.</param>
+	<param name="p_s_borderColor">Couleur de la ligne.</param>
+	<param name="p_s_backgroundColor">Couleur de fond en dessous de la ligne.</param>
+	<returns>Ajoute une nouvelle série repésentée sous la forme d'un tracé.</returns>
+</member><member name="M:Corail.Web.Chart.LinearDatasetCollection.AddXY(Corail.Web.Chart.LinearChartKind,System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle série du type précisé.
+ </summary>
+	<param name="p_i_kind">Type de graphique.</param>
+	<param name="p_s_label">Libellé de la nouvelle série.</param>
+	<param name="p_s_color">Couleur.</param>
+	<returns>Ajoute une nouvelle série du type précisé.</returns>
+</member><member name="M:Corail.Web.Chart.LinearDatasetCollection.AddBarXY(System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle série repésentée sous la forme de diagrame à barres.
+ </summary>
+	<param name="p_s_label">Libellé de la nouvelle série.</param>
+	<param name="p_s_backgroundColor">Couleur de fond.</param>
+	<returns>Ajoute une nouvelle série repésentée sous la forme de diagrame à barres.</returns>
+</member><member name="M:Corail.Web.Chart.LinearDatasetCollection.AddHorizontalBarXY(System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle série repésentée sous la forme de diagrame à barres horizontal.
+ </summary>
+	<param name="p_s_label">Libellé de la nouvelle série.</param>
+	<param name="p_s_backgroundColor">Couleur de fond.</param>
+	<returns>Ajoute une nouvelle série repésentée sous la forme de diagrame à barres horizontal.</returns>
+</member><member name="M:Corail.Web.Chart.LinearDatasetCollection.AddLineXY(System.String,System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle série repésentée sous la forme d'un tracé.
+ </summary>
+	<param name="p_s_label">Libellé de la nouvelle série.</param>
+	<param name="p_s_borderColor">Couleur de la ligne.</param>
+	<param name="p_s_backgroundColor">Couleur de fond en dessous de la ligne.</param>
+	<returns>Ajoute une nouvelle série repésentée sous la forme d'un tracé.</returns>
+</member><member name="T:Corail.Web.Chart.LinearDatasetCollection">
+	<summary>
+ Collection de séries de données.
+ </summary>
+</member><member name="P:Corail.Web.Chart.BarDataset.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataset.BorderColor">
+	<summary>
+ Couleur de la bordure.
+ </summary>
+	<value>Couleur de la bordure.</value>
+	<returns>Couleur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataset.BorderWidth">
+	<summary>
+ Largeur de la bordure.
+ </summary>
+	<value>Largeur de la bordure.</value>
+	<returns>Largeur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataset.BorderSkipped">
+	<summary>
+ Indique les cotés pour lesquels on ne souhaite pas dessiner les bords.
+ </summary>
+	<value>Indique les cotés pour lesquels on ne souhaite pas dessiner les bords.</value>
+	<returns>Indique les cotés pour lesquels on ne souhaite pas dessiner les bords.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataset.HoverBackgroundColor">
+	<summary>
+ Couleur de fond lorsque l'élément est sélectionné.
+ </summary>
+	<value>Couleur de fond lorsque l'élément est sélectionné.</value>
+	<returns>Couleur de fond lorsque l'élément est sélectionné.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataset.HoverBorderColor">
+	<summary>
+ Couleur de la bordure lorsque l'élément est survolé.
+ </summary>
+	<value>Couleur de la bordure lorsque l'élément est survolé.</value>
+	<returns>Couleur de la bordure lorsque l'élément est survolé.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataset.HoverBorderWidth">
+	<summary>
+ Largeur de la bordure lorsque l'élément est survolé.
+ </summary>
+	<value>Largeur de la bordure lorsque l'élément est survolé.</value>
+	<returns>Largeur de la bordure lorsque l'élément est survolé.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataset.XAxisID">
+	<summary>
+ Indetifiant de l'axe X.
+ </summary>
+	<value>Indetifiant de l'axe X.</value>
+	<returns>Indetifiant de l'axe X.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataset.YAxisID">
+	<summary>
+ Identifiant de l'axe Y.
+ </summary>
+	<value>Identifiant de l'axe Y.</value>
+	<returns>Identifiant de l'axe Y.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataset.Stack">
+	<summary>
+ Identifiant du groupe auquel le jeux de données appartient.
+ </summary>
+	<value>Identifiant du groupe auquel le jeux de données appartient.</value>
+	<returns>Identifiant du groupe auquel le jeux de données appartient.</returns>
+</member><member name="M:Corail.Web.Chart.BarDataset.#ctor(Corail.Web.Chart.LinearChartKind)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_kind">Type de camembert.</param>
+</member><member name="M:Corail.Web.Chart.BarDataset.AddSimple(System.Nullable{System.Double})">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.BarDataset.Add(System.Nullable{System.Double},System.String)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_value">Valeur.</param>
+	<param name="p_s_backgroundColor">Couleur de fond.</param>
+	<returns>Ajoute une nouvelle valeur à la série.</returns>
+</member><member name="T:Corail.Web.Chart.BarDataset">
+	<summary>
+ Série de données pour un graphique à barre.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ChartDataItemPlain`1.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.ChartDataItemPlain`1.BorderColor">
+	<summary>
+ Couleur de la bordure.
+ </summary>
+	<value>Couleur de la bordure.</value>
+	<returns>Couleur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.ChartDataItemPlain`1.BorderWidth">
+	<summary>
+ Largeur de la bordure.
+ </summary>
+	<value>Largeur de la bordure.</value>
+	<returns>Largeur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.ChartDataItemPlain`1.HoverBackgroundColor">
+	<summary>
+ Couleur de fond lorsque l'élément est sélectionné.
+ </summary>
+	<value>Couleur de fond lorsque l'élément est sélectionné.</value>
+	<returns>Couleur de fond lorsque l'élément est sélectionné.</returns>
+</member><member name="P:Corail.Web.Chart.ChartDataItemPlain`1.HoverBorderColor">
+	<summary>
+ Couleur de la bordure lorsque l'élément est survolé.
+ </summary>
+	<value>Couleur de la bordure lorsque l'élément est survolé.</value>
+	<returns>Couleur de la bordure lorsque l'élément est survolé.</returns>
+</member><member name="P:Corail.Web.Chart.ChartDataItemPlain`1.HoverBorderWidth">
+	<summary>
+ Largeur de la bordure lorsque l'élément est survolé.
+ </summary>
+	<value>Largeur de la bordure lorsque l'élément est survolé.</value>
+	<returns>Largeur de la bordure lorsque l'élément est survolé.</returns>
+</member><member name="T:Corail.Web.Chart.ChartDataItemPlain`1">
+	<summary>
+ Entrée d'un jeux de données représentant une surface remplie.
+ </summary>
+</member><member name="P:Corail.Web.Chart.JSonWriter.ClassState.Comma">
+	<summary>
+ Indique s'il faut ajouter une virgule avant d'ajouter une nouvelle propriété à la classe.
+ </summary>
+	<value>Indique s'il faut ajouter une virgule avant d'ajouter une nouvelle propriété à la classe.
+ </value>
+	<returns>Indique s'il faut ajouter une virgule avant d'ajouter une nouvelle propriété à la classe.
+ </returns>
+</member><member name="T:Corail.Web.Chart.JSonWriter.ClassState">
+	<summary>
+ Etat de la classe ouverte en cours.
+ </summary>
+</member><member name="P:Corail.Web.Chart.JSonWriter.ArrayState.CurrentLength">
+	<summary>
+ Position lors de l'ouyverture.
+ </summary>
+	<value>Position lors de l'ouyverture.</value>
+	<returns>Position lors de l'ouyverture.</returns>
+</member><member name="M:Corail.Web.Chart.JSonWriter.ArrayState.#ctor(System.Int32)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_position">Position.</param>
+</member><member name="T:Corail.Web.Chart.JSonWriter.ArrayState">
+	<summary>
+ Etat du tableau ouvert en cours.
+ </summary>
+</member><member name="F:Corail.Web.Chart.JSonWriter.m_i_indentation">
+ Déclage lors des retours à la ligne.
+
+</member><member name="F:Corail.Web.Chart.JSonWriter.m_c_indentation">
+ Déclage lors des retours à la ligne.
+
+</member><member name="F:Corail.Web.Chart.JSonWriter.m_sb">
+ Buffer d'écriture.
+
+</member><member name="F:Corail.Web.Chart.JSonWriter.m_o_openedClass">
+ Etats des classes ouvertes.
+
+</member><member name="F:Corail.Web.Chart.JSonWriter.m_o_openedArray">
+ Etat des tableaux ouverts.
+
+</member><member name="M:Corail.Web.Chart.JSonWriter.#ctor">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+</member><member name="M:Corail.Web.Chart.JSonWriter.#ctor(System.Int32,System.Char)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_indentation">Déclage lors des retours à la ligne.</param>
+	<param name="p_c_indentationChar">Caractère à utiliser pour l'indentation.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.OpenClass">
+	<summary>
+ Ouverure d'un nouvelle classe JSON.
+ </summary>
+</member><member name="M:Corail.Web.Chart.JSonWriter.CloseClass">
+	<summary>
+ Ferme la classe actuellement ouverte.
+ </summary>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttributeName(System.String)">
+	<summary>
+ Ajoute le nom d'un nouvel attribut.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.OpenArray">
+	<summary>
+ Ouverture d'un tableau.
+ </summary>
+</member><member name="M:Corail.Web.Chart.JSonWriter.CloseArray">
+	<summary>
+ Fermeture d'un tableau.
+ </summary>
+</member><member name="M:Corail.Web.Chart.JSonWriter.NewArrayItem">
+	<summary>
+ Ajoute une virgule.
+ </summary>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Collections.IList)">
+	<summary>
+ Ajout d'un attribut contenant un tableau.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_o_items">Liste des éléments.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(System.Collections.IList)">
+	<summary>
+ Ecriture d'un tableau.
+ </summary>
+	<param name="p_o_items">Liste de valeurs.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,Corail.Web.Chart.JSON.JSonItem)">
+	<summary>
+ Ecrit le contenu d'un élément JSON.
+ </summary>
+	<param name="p_o_item">Elément JSON.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(Corail.Web.Chart.JSON.JSonItem)">
+	<summary>
+ Ecrit le contenu d'un élément JSON.
+ </summary>
+	<param name="p_o_item">Elément JSON.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Nullable{System.Double})">
+	<summary>
+ Ecrit la valeur numérique.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_f">Valeur numérique.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Double,System.Double)">
+	<summary>
+ Ecrit la valeur numérique.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_f">Valeur numérique.</param>
+	<param name="p_f_default">Valeur à ignorer.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Double)">
+	<summary>
+ Ecrit la valeur numérique.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_f">Valeur numérique.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(System.Double)">
+	<summary>
+ Ecrit la valeur numérique.
+ </summary>
+	<param name="p_f">Valeur numérique.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Nullable{System.Int32})">
+	<summary>
+ Ecrit la valeur numérique.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_i">Valeur numérique.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Int32,System.Int32)">
+	<summary>
+ Ecrit la valeur numérique.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_i">Valeur numérique.</param>
+	<param name="p_i_default">Valeur à ignorer.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Int32)">
+	<summary>
+ Ecrit la valeur numérique.
+ </summary>
+	<param name="p_i">Valeur numérique.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(System.Int32)">
+	<summary>
+ Ecrit la valeur numérique.
+ </summary>
+	<param name="p_i">Valeur numérique.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Nullable{System.Boolean})">
+	<summary>
+ Ecrit la valeur booléenne.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_b">Valeur booléenne.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Ecrit la valeur booléenne.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_b">Valeur booléenne.</param>
+	<param name="p_b_default">Valeur à ignorer.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Boolean)">
+	<summary>
+ Ecrit la valeur booléenne.
+ </summary>
+	<param name="p_b">Valeur booléenne.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(System.Boolean)">
+	<summary>
+ Ecrit la valeur booléenne.
+ </summary>
+	<param name="p_b">Valeur booléenne.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.String,System.String)">
+	<summary>
+ Ecrit la chaine de caractères.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_s">Chaine de caractères.</param>
+	<param name="p_s_default">Valeur à ignorer.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(System.String)">
+	<summary>
+ Ecrit la chaine de caractères.
+ </summary>
+	<param name="p_s">Chaine de caractères.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Drawing.Color)">
+	<summary>
+ Ecrit la couleur.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_o_color">Couleur.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(System.Drawing.Color)">
+	<summary>
+ Ecrit la chaine de caractères.
+ </summary>
+	<param name="p_o_color">Couleur.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Drawing.PointF)">
+	<summary>
+ Ecrit les coordonnées.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_o_point">Le point.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(System.Drawing.PointF)">
+	<summary>
+ Ecrit la chaine de caractères.
+ </summary>
+	<param name="p_o_point">Le point.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Enum,System.Int32)">
+	<summary>
+ Ecrit le nom de la valeur de l'énumération.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_i_value">Valeur.</param>
+	<param name="p_i_default">Valeur à ignorer.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(System.Enum,System.Int32)">
+	<summary>
+ Ecrit le texte représentant l'énumération.
+ </summary>
+	<param name="p_i_value">Valeur.</param>
+	<param name="p_i_default">Valeur à ignorer.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.GetEnumJson(System.Enum,System.Int32)">
+	<summary>
+ Retourne le texte JSON correspondant à une énumération.
+ </summary>
+	<param name="p_i_value">Valeur.</param>
+	<returns>Le texte JSON correspondant à une énumération.</returns>
+</member><member name="M:Corail.Web.Chart.JSonWriter.GetEnumJSon(System.Enum,System.Char,System.Int32)">
+	<summary>
+ Retourne la liste des identifiants séparés par le carctère passé en paramètre.
+ </summary>
+	<param name="p_i_value">Valeur.</param>
+	<param name="p_c_separator">Séparateur.</param>
+	<param name="p_i_default">Valeur à ignorer.</param>
+	<returns>La liste des identifiants séparés par le carctère passé en paramètre.</returns>
+</member><member name="M:Corail.Web.Chart.JSonWriter.LowerFirstChar(System.String)">
+	<summary>
+ Retourne La chaine en ne mettant en minuscule que le premier caractère.
+ </summary>
+	<param name="p_s">Chaine de caractères.</param>
+	<returns>La chaine en ne mettant en minuscule que le premier caractère.</returns>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteAttribute(System.String,System.Object)">
+	<summary>
+ Ecrit une valeur.
+ </summary>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_o_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.Write(System.Object)">
+	<summary>
+ Ecrit la valeur.
+ </summary>
+	<param name="p_o_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteRaw(System.String)">
+	<summary>
+ Ecriture de JSON.
+ </summary>
+	<param name="p_s">JSON.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteRaw(System.Char)">
+	<summary>
+ Ecriture de JSON.
+ </summary>
+	<param name="p_c">Caractère.</param>
+</member><member name="M:Corail.Web.Chart.JSonWriter.WriteLine">
+	<summary>
+ Ecrire un retour à la ligne.
+ </summary>
+</member><member name="M:Corail.Web.Chart.JSonWriter.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.</returns>
+</member><member name="F:Corail.Web.Chart.ChartDatasetCollection`1.m_o_list">
+ Liste des jeux de données.
+
+</member><member name="P:Corail.Web.Chart.ChartDatasetCollection`1.Count">
+	<summary>
+ Retourne le nombre d'élements.
+ </summary>
+	<value>Le nombre d'élements.</value>
+	<returns>Le nombre d'élements.</returns>
+</member><member name="P:Corail.Web.Chart.ChartDatasetCollection`1.Item(System.Int32)">
+	<summary>
+ Elément correspondant à l'index.
+ </summary>
+	<param name="p_i_index"></param>
+	<value>Elément correspondant à l'index.</value>
+	<returns>Elément correspondant à l'index.</returns>
+</member><member name="M:Corail.Web.Chart.ChartDatasetCollection`1.RenderJSON(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu JSON.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.ChartDatasetCollection`1.Clear">
+	<summary>
+ Supprimer toutes les entrées.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ChartDatasetCollection`1.Add(`0)">
+	<summary>
+ Ajoute un nouvel élément.
+ </summary>
+	<param name="p_o_item">Elément à ajouter.</param>
+</member><member name="M:Corail.Web.Chart.ChartDatasetCollection`1.GetEnumerator">
+	<summary>
+ Retourne un énumérateur qui parcourt la collection.
+ </summary>
+	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour parcourir la
+ collection.</returns>
+</member><member name="M:Corail.Web.Chart.ChartDatasetCollection`1.GetEnumeratorGeneric">
+	<summary>
+ Retourne un énumérateur qui parcourt la collection.
+ </summary>
+	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour parcourir la
+ collection.</returns>
+</member><member name="T:Corail.Web.Chart.ChartDatasetCollection`1">
+	<summary>
+ Ensemble de série de jeux de données.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ChartDataset`1.Add">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<returns>Ajoute une nouvelle valeur à la série.</returns>
+</member><member name="M:Corail.Web.Chart.ChartDataset`1.RenderJSON(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu JSON.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.ChartDataset`1.RenderJSONContent(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu JSON du contenu de la classe.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.ChartDataset`1.UpdateAttributeList(System.Collections.Generic.SortedDictionary{System.String,Corail.Web.Chart.ChartJSonAttributeData},System.Object)">
+	<summary>
+ Ajoute dans le dictionnaire le nom de l'attribut JSON et le nom de la propriété.
+ </summary>
+	<param name="p_o_dico">Dictionnaire des attributs.</param>
+	<param name="p_o_object">Object à inspecter par réflexion.</param>
+</member><member name="M:Corail.Web.Chart.ChartDataset`1.AddAttribute(Corail.Web.Chart.IChartDataset,System.Collections.Generic.List{Corail.Web.Chart.IOptionalList},Corail.Web.Chart.ChartJSonAttributeData)">
+	<summary>
+ Enregistrement de la valeur pour le jeux de données.
+ </summary>
+	<param name="p_o_attribute">Attribut décrivant l'attribut JSON.</param>
+</member><member name="T:Corail.Web.Chart.ChartDataset`1">
+	<summary>
+ Série de valeurs.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ChartDotOrg.Include(System.Web.UI.Control,System.Boolean)">
+	<summary>
+ Inclus la bibliothèque dans la page en cours.
+ </summary>
+	<param name="p_b_timeAxis">Indique s'il faut inclure la bibliothèque "moment-with-locales.js".</param>
+</member><member name="T:Corail.Web.Chart.ChartDotOrg">
+	<summary>
+ Gestion de la bibliothèque ChartJS.org.
+ </summary>
+</member><member name="F:Corail.Web.Chart.JSON.JSonClass.m_o_properties">
+ Liste des propriétés.
+
+</member><member name="P:Corail.Web.Chart.JSON.JSonClass.IsEmpty">
+	<summary>
+ Indique si la classe contient des propriétés.
+ </summary>
+	<value><c>True</c> si la classe contient des propriétés; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la classe contient des propriétés; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Web.Chart.JSON.JSonClass.AddValue(System.String,System.Double)">
+	<summary>
+ Ajoute une valeur décimale.
+ </summary>
+	<param name="p_s_propertyName">Nom de la propriété.</param>
+	<param name="p_f_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonClass.AddValue(System.String,System.Int32)">
+	<summary>
+ Ajoute une valeur entière.
+ </summary>
+	<param name="p_s_propertyName">Nom de la propriété.</param>
+	<param name="p_i_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonClass.AddValue(System.String,System.Boolean)">
+	<summary>
+ Ajoute une valeur booléenne.
+ </summary>
+	<param name="p_s_propertyName">Nom de la propriété.</param>
+	<param name="p_b_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonClass.AddValue(System.String,System.String)">
+	<summary>
+ Ajoute une valeur chaine de caractères.
+ </summary>
+	<param name="p_s_propertyName">Nom de la propriété.</param>
+	<param name="p_s_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonClass.AddRawValue(System.String,System.String)">
+	<summary>
+ Ajoute une propriété avec sa valeur.
+ </summary>
+	<param name="p_s_propertyName">Nom de la propriété.</param>
+	<param name="p_s_rawValue">Valeur de la propriété.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonClass.AddClass(System.String,Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute une propriété de type [Object].
+ </summary>
+	<param name="p_s_propertyName">Nom de la propriété.</param>
+	<param name="p_o_class">Classe JSON.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonClass.AddClass(System.String)">
+	<summary>
+ Ajoute une propriété de type [Object].
+ </summary>
+	<param name="p_s_propertyName">Nom de la propriété.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonClass.addArray(System.String)">
+	<summary>
+ Ajoute une propriété de type tableau et retourne le tableau.
+ </summary>
+	<param name="p_s_propertyName">Nom de la propriété.</param>
+	<returns>Le tableau.</returns>
+</member><member name="M:Corail.Web.Chart.JSON.JSonClass.OnRender(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu JSON de l'objet.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="T:Corail.Web.Chart.JSON.JSonClass">
+	<summary>
+ Classe JSON.
+ </summary>
+</member><member name="M:Corail.Web.Chart.JSON.JSonValue.#ctor(System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_raw">Valeur encodée en JSON.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonValue.OnRender(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu JSON de l'objet.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="T:Corail.Web.Chart.JSON.JSonValue">
+	<summary>
+ Valeur encodée en JSON.
+ </summary>
+</member><member name="M:Corail.Web.Chart.JSON.JSonItem.ToString">
+	<summary>
+ Retourne un <see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </summary>
+	<returns><see cref="T:System.String"/> qui représente le <see cref="T:System.Object"/> actuel.
+ </returns>
+</member><member name="M:Corail.Web.Chart.JSON.JSonItem.RenderJSon(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Effectuer le rendu JSON.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonItem.OnRender(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu JSON de l'objet.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="T:Corail.Web.Chart.JSON.JSonItem">
+	<summary>
+ Elément JSON.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationLayout.Padding">
+	<summary>
+ Espace entre le bord du composant et le dessin du graphique.
+ </summary>
+	<value>Espace entre le bord du composant et le dessin du graphique.</value>
+	<returns>Espace entre le bord du composant et le dessin du graphique.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationLayout.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationLayout.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationLayout">
+	<summary>
+ Options de mise en page.
+ </summary>
+</member><member name="F:Corail.Web.Chart.ConfigurationNamespace.m_s_name">
+ Nom de l'espace de nom.
+
+</member><member name="P:Corail.Web.Chart.ConfigurationNamespace.Name">
+	<summary>
+ Nom de l'attribut.
+ </summary>
+	<value>Nom de l'attribut.</value>
+	<returns>Nom de l'attribut.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.#ctor(System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_name">Nom de l'espace de nom.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddToJSon(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les options de l'espace de nom à la définition JSON générale de la configuration.
+ </summary>
+	<param name="p_o_parentNode">Noeud parent.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddToJSon(Corail.Web.Chart.JSON.JSonArray)">
+	<summary>
+ Ajoute la classe définissant une configuration dans un tableau.
+ </summary>
+	<param name="p_o_array">Tableau JSON.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.GetJSonClass">
+	<summary>
+ Retourne la classe JSON correspondant à la configuration.
+ </summary>
+	<returns>La classe JSON correspondant à la configuration.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddEnumValue(Corail.Web.Chart.JSON.JSonClass,System.String,System.Enum)">
+	<summary>
+ Ajoute une valeur texte à partir d'une enumération.
+ </summary>
+	<param name="p_o_node">Noeud.</param>
+	<param name="p_s_name">Nom de la valeur.</param>
+	<param name="p_i_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddBooleanValue(Corail.Web.Chart.JSON.JSonClass,System.String,System.Nullable{System.Boolean})">
+	<summary>
+ Ajoute une valeur booléenne.
+ </summary>
+	<param name="p_o_node">Noeud.</param>
+	<param name="p_s_name">Nom de la valeur.</param>
+	<param name="p_b_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddIntegerValue(Corail.Web.Chart.JSON.JSonClass,System.String,System.Nullable{System.Int32})">
+	<summary>
+ Ajoute une valeur entière.
+ </summary>
+	<param name="p_o_node">Noeud.</param>
+	<param name="p_s_name">Nom de la valeur.</param>
+	<param name="p_i_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddDoubleValue(Corail.Web.Chart.JSON.JSonClass,System.String,System.Nullable{System.Double})">
+	<summary>
+ Ajoute une valeur entière.
+ </summary>
+	<param name="p_o_node">Noeud.</param>
+	<param name="p_s_name">Nom de la valeur.</param>
+	<param name="p_f_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddStringValue(Corail.Web.Chart.JSON.JSonClass,System.String,System.String)">
+	<summary>
+ Ajoute une valeur au format chaine de caractères.
+ </summary>
+	<param name="p_o_node">Noeud.</param>
+	<param name="p_s_name">Nom de la valeur.</param>
+	<param name="p_s_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddColorValue(Corail.Web.Chart.JSON.JSonClass,System.String,System.Drawing.Color)">
+	<summary>
+ Ajoute une couleur.
+ </summary>
+	<param name="p_o_node">Noeud.</param>
+	<param name="p_s_name">Nom de la valeur.</param>
+	<param name="p_o_color">Couleur.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddCallbackValue(Corail.Web.Chart.JSON.JSonClass,System.String,System.String)">
+	<summary>
+ Ajoute le nom d'une méthode Javascript.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_s_value">Nom de la méthode javascript.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationNamespace.AddIntegerArrayValue(Corail.Web.Chart.JSON.JSonClass,System.String,System.Int32[])">
+	<summary>
+ Ajoute un tableau d'entier.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+	<param name="p_s_name">Nom de l'attribut.</param>
+	<param name="p_ai_array">Tableau d'entier</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationNamespace">
+	<summary>
+ Espace de nom pour les options des graphiques.
+ </summary>
+</member><member name="P:Corail.Web.Chart.Configuration.DefaultFontSize">
+	<summary>
+ Indique la taille de la police.
+ </summary>
+	<value>Indique la taille de la police.</value>
+	<returns>Indique la taille de la police.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.DefaultFontFamily">
+	<summary>
+ Nom de la police à utiliser.
+ </summary>
+	<value>Nom de la police à utiliser.</value>
+	<returns>Nom de la police à utiliser.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.DefaultFontColor">
+	<summary>
+ Couleur de la police.
+ </summary>
+	<value>Couleur de la police.</value>
+	<returns>Couleur de la police.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.DefaultFontStyle">
+	<summary>
+ Style de la police.
+ </summary>
+	<value>Style de la police.</value>
+	<returns>Style de la police.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.MaintainAspectRatio">
+	<summary>
+ Indique le ratio entre la largeur et la hauteur doit être maintenu lors d'un redimensionnement.
+ </summary>
+	<value>Indique le ratio entre la largeur et la hauteur doit être maintenu lors d'un redimensionnement.
+ </value>
+	<returns>Indique le ratio entre la largeur et la hauteur doit être maintenu lors d'un redimensionnement.
+ </returns>
+</member><member name="P:Corail.Web.Chart.Configuration.Responsive">
+	<summary>
+ Indique si le graphique doit s'adapter à la taille de l'écran.
+ </summary>
+	<value><c>True</c> si le graphique doit s'adapter à la taille de l'écran; <c>False</c> sinon.</value>
+	<returns><c>True</c> si le graphique doit s'adapter à la taille de l'écran; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.OnClickCallback">
+	<summary>
+ Méthode Javascript appelée lors du click sur le graphique.
+ </summary>
+	<value>Méthode Javascript appelée lors du click sur le graphique.</value>
+	<returns>Méthode Javascript appelée lors du click sur le graphique.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.OnLegendCallback">
+	<summary>
+ Méthode javascript pour la génération de la légende au format HTML.
+ </summary>
+	<value>Méthode javascript pour la génération de la légende au format HTML.</value>
+	<returns>Méthode javascript pour la génération de la légende au format HTML.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.OnResizeCallback">
+	<summary>
+ Méthode javascript appellée lorsque le graphique est redimensionné.
+ </summary>
+	<value>Méthode javascript appellée lorsque le graphique est redimensionné.</value>
+	<returns>Méthode javascript appellée lorsque le graphique est redimensionné.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.Animation">
+	<summary>
+ Configuration des animations.
+ </summary>
+	<value>Configuration des animations.</value>
+	<returns>Configuration des animations.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.Elements">
+	<summary>
+ Configuration des 4 types d'éléments.
+ </summary>
+	<value>Configuration des 4 types d'éléments.</value>
+	<returns>Configuration des 4 types d'éléments.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.Hover">
+	<summary>
+ Configuration du survol de la souris.
+ </summary>
+	<value>Configuration du survol de la souris.</value>
+	<returns>Configuration du survol de la souris.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.Layout">
+	<summary>
+ Options de mise en page.
+ </summary>
+	<value>Options de mise en page.</value>
+	<returns>Options de mise en page.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.Legend">
+	<summary>
+ Configuration de la légende.
+ </summary>
+	<value>Configuration de la légende.</value>
+	<returns>Configuration de la légende.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.Title">
+	<summary>
+ Options concernant le titre du graphique.
+ </summary>
+	<value>Options concernant le titre du graphique.</value>
+	<returns>Options concernant le titre du graphique.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.Tooltips">
+	<summary>
+ Bulle d'aide.
+ </summary>
+	<value>Bulle d'aide.</value>
+	<returns>Bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.Configuration.Scales">
+	<summary>
+ Echelles.
+ </summary>
+	<value>Echelles.</value>
+	<returns>Echelles.</returns>
+</member><member name="M:Corail.Web.Chart.Configuration.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.Configuration.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Création du JSON définissant la configuration.
+ </summary>
+	<param name="p_o_node">Noeud.</param>
+</member><member name="T:Corail.Web.Chart.Configuration">
+	<summary>
+ Options de rendu du graphique.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationTitle.Display">
+	<summary>
+ Affiche la zone.
+ </summary>
+	<value>Affiche la zone.</value>
+	<returns>Affiche la zone.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTitle.Position">
+	<summary>
+ Position de la zone.
+ </summary>
+	<value>Position de la zone.</value>
+	<returns>Position de la zone.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTitle.FullWidth">
+	<summary>
+ Indique si la zone doit prendre toute la largeur.
+ </summary>
+	<value><c>True</c> si la zone doit prendre toute la largeur; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la zone doit prendre toute la largeur; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTitle.FontSize">
+	<summary>
+ Indique la taille de la police.
+ </summary>
+	<value>Indique la taille de la police.</value>
+	<returns>Indique la taille de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTitle.FontFamily">
+	<summary>
+ Nom de la police à utiliser.
+ </summary>
+	<value>Nom de la police à utiliser.</value>
+	<returns>Nom de la police à utiliser.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTitle.FontColor">
+	<summary>
+ Couleur de la police.
+ </summary>
+	<value>Couleur de la police.</value>
+	<returns>Couleur de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTitle.FontStyle">
+	<summary>
+ Style de la police.
+ </summary>
+	<value>Style de la police.</value>
+	<returns>Style de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTitle.Padding">
+	<summary>
+ Nombre de pixels au dessus et en dessous du texte.
+ </summary>
+	<value>Nombre de pixels au dessus et en dessous du texte.</value>
+	<returns>Nombre de pixels au dessus et en dessous du texte.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTitle.Text">
+	<summary>
+ Titre à afficher.
+ </summary>
+	<value>Titre à afficher.</value>
+	<returns>Titre à afficher.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationTitle.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationTitle.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationTitle">
+	<summary>
+ Options de mise en page.
+ </summary>
+</member><member name="F:Corail.Web.Chart.PieChartKind.Pie">
+	<summary>
+ Camembert plein.
+ </summary>
+</member><member name="F:Corail.Web.Chart.PieChartKind.Doughnut">
+	<summary>
+ Camembert avec un trou au milieu.
+ </summary>
+</member><member name="T:Corail.Web.Chart.PieChartKind">
+	<summary>
+ Type de camembert.
+ </summary>
+</member><member name="F:Corail.Web.Chart.LinearChartKind.Bar">
+	<summary>
+ Barres verticales.
+ </summary>
+</member><member name="F:Corail.Web.Chart.LinearChartKind.HorizontalBar">
+	<summary>
+ Barres Horizontales.
+ </summary>
+</member><member name="F:Corail.Web.Chart.LinearChartKind.Line">
+	<summary>
+ Lignes.
+ </summary>
+</member><member name="T:Corail.Web.Chart.LinearChartKind">
+	<summary>
+ Type de graphique linéaire.
+ </summary>
+</member><member name="T:Corail.Web.Chart.ChartBorderCapStyle">
+	<summary>
+ Façon dont l'extrémité des lignes sont dessinées. Voir :
+ https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D/lineCap
+ </summary>
+</member><member name="T:Corail.Web.Chart.ChartBorderJoinStyle">
+	<summary>
+ Type de jointure entre deux segments. Voir :
+ https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin.
+ </summary>
+</member><member name="P:Corail.Web.Chart.CustomChart`1.AutoPostBack">
+	<summary>
+ Indique si les clics sur le graphique doivent déclencher un évènement serveur.
+ </summary>
+	<value><c>True</c> si les clics sur le graphique doivent déclencher un évènement serveur; <c>False</c>
+ sinon.</value>
+	<returns><c>True</c> si les clics sur le graphique doivent déclencher un évènement serveur; <c>False</c>
+ sinon.</returns>
+</member><member name="P:Corail.Web.Chart.CustomChart`1.PostBackMode">
+	<summary>
+ Retourne ou indique le mode de chargement de la page dans le
+ cas d'un POST. (Rechargement total ou partiel)
+ </summary>
+	<value>Mode de rechargement.</value>
+</member><member name="P:Corail.Web.Chart.CustomChart`1.Datasets">
+	<summary>
+ Ensemble de jeux de données.
+ </summary>
+	<value>Ensemble de jeux de données.</value>
+	<returns>Ensemble de jeux de données.</returns>
+</member><member name="P:Corail.Web.Chart.CustomChart`1.Labels">
+	<summary>
+ Libellés du graphique.
+ </summary>
+	<value>Libellés du graphique.</value>
+	<returns>Libellés du graphique.</returns>
+</member><member name="P:Corail.Web.Chart.CustomChart`1.Options">
+	<summary>
+ Options de configuration du graphique.
+ </summary>
+	<value>Options de configuration du graphique.</value>
+	<returns>Options de configuration du graphique.</returns>
+</member><member name="E:Corail.Web.Chart.CustomChart`1.Click">
+	<summary>
+ Méthode appelée lors du clic sur un élément du graphique si la propriété Autopostback est à <c>True </c>.
+ </summary>
+	<param name="Sender">Instance de classe source de l'évènement.</param>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.GetViewStateObject``1(System.String)">
+	<summary>
+ Retourne l'objet enregistré dans le VIEWSTATE s'il existe, sinon en crée un nouveau.
+ </summary>
+	<param name="p_s_key">Identifiant pour le VIEWSTATE.</param>
+	<returns>L'objet enregistré dans le VIEWSTATE s'il existe, sinon en crée un nouveau.</returns>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Web.UI.WebControls.WebControl"/> qui
+ représente une balise HTML Span.
+ </summary>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.OnPreRender(System.EventArgs)">
+	<summary>
+ Déclenche l'événement <see cref="E:System.Web.UI.Control.PreRender"/>.
+ </summary>
+	<param name="e">Objet <see cref="T:System.EventArgs"/> qui contient les données d'événement.</param>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.Render(System.Web.UI.HtmlTextWriter)">
+	<summary>
+ Génère le rendu du contrôle via le writer HTML spécifié.
+ </summary>
+	<param name="writer">Objet <see cref="T:System.Web.UI.HtmlTextWriter"/> qui reçoit le contenu du
+ contrôle.</param>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.RenderScript">
+	<summary>
+ Retourne Javascript permettant de créer le graphique.
+ </summary>
+	<returns>Javascript permettant de créer le graphique.</returns>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.RenderJSON(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu du contenu de la classe JSON définissant le graphique.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.GetChartType">
+	<summary>
+ Retourne le type de graphique.
+ </summary>
+	<returns>Le type de graphique.</returns>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.RenderDataContent(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ On effectue le rendu JSON des données nécessaire à la création du graphique.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.EnumToString``1(``0)">
+	<summary>
+ Retourne la chaine représentant une énumération.
+ </summary>
+	<param name="p_i_value">Valeur.</param>
+	<returns>La chaine représentant une énumération.</returns>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.RaisePostBackEvent(System.String)">
+	<summary>
+ Implémenté par une classe, permet à un contrôle serveur de traiter un événement déclenché lorsqu'un
+ formulaire est publié sur le serveur.
+ </summary>
+	<param name="eventArgument"><see cref="T:System.String"/> qui représente un argument d'événement
+ facultatif à passer au gestionnaire d'événements.</param>
+</member><member name="M:Corail.Web.Chart.CustomChart`1.OnClick(Corail.Web.Chart.ChartClickEventArg)">
+	<summary>
+ Méthode appellée lors d'un clic sur un élément du graphique.
+ </summary>
+	<param name="e">Données associées à l'évènement.</param>
+</member><member name="T:Corail.Web.Chart.CustomChart`1">
+	<summary>
+ Ensemble des comportements commun à tous les graphiques.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationElementRectangle.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationElementRectangle.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementPoint.Radius">
+	<summary>
+ Rayon d'un point en pixel.
+ </summary>
+	<value>Rayon d'un point en pixel.</value>
+	<returns>Rayon d'un point en pixel.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementPoint.PointStyle">
+	<summary>
+ Style de point.
+ </summary>
+	<value>Style de point.</value>
+	<returns>Style de point.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementPoint.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementPoint.BorderWidth">
+	<summary>
+ Largeur de la bordure.
+ </summary>
+	<value>Largeur de la bordure.</value>
+	<returns>Largeur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementPoint.BorderColor">
+	<summary>
+ Couleur de la bordure.
+ </summary>
+	<value>Couleur de la bordure.</value>
+	<returns>Couleur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementPoint.HitRadius">
+	<summary>
+ Rayon pour la détection d'une clic.
+ </summary>
+	<value>Rayon pour la détection d'une clic.</value>
+	<returns>Rayon pour la détection d'une clic.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementPoint.HoverRadius">
+	<summary>
+ Rayon du point lorsqu'il est survolé.
+ </summary>
+	<value>Rayon du point lorsqu'il est survolé.</value>
+	<returns>Rayon du point lorsqu'il est survolé.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementPoint.HoverBorderWidth">
+	<summary>
+ Largeur de la bordure lorsque le point est survolé.
+ </summary>
+	<value>Largeur de la bordure lorsque le point est survolé.</value>
+	<returns>Largeur de la bordure lorsque le point est survolé.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationElementPoint.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationElementPoint.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationElementPoint">
+	<summary>
+ Configuration d'un point.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementLine.Tension">
+	<summary>
+ Tension pour les courbes de bézier. Mettre 0 pour ne pas avoir de courbes de bézier.
+ </summary>
+	<value>Tension pour les courbes de bézier. Mettre 0 pour ne pas avoir de courbes de bézier.</value>
+	<returns>Tension pour les courbes de bézier. Mettre 0 pour ne pas avoir de courbes de bézier.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementLine.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementLine.BorderWidth">
+	<summary>
+ Largeur de la bordure.
+ </summary>
+	<value>Largeur de la bordure.</value>
+	<returns>Largeur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementLine.BorderColor">
+	<summary>
+ Couleur de la bordure.
+ </summary>
+	<value>Couleur de la bordure.</value>
+	<returns>Couleur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementLine.BorderCapStyle">
+	<summary>
+ Façon dont l'extrémité des lignes sont dessinées.
+ </summary>
+	<value>Façon dont l'extrémité des lignes sont dessinées.</value>
+	<returns>Façon dont l'extrémité des lignes sont dessinées.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementLine.BorderJoinStyle">
+	<summary>
+ Type de jointure entre les lignes.
+ </summary>
+	<value>Type de jointure entre les lignes.</value>
+	<returns>Type de jointure entre les lignes.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementLine.CapBezierPoints">
+	<summary>
+ Indique si les points de contrôles de bézier sont conserver à l'intérieur du graphique.
+ </summary>
+	<value><c>True</c> si les points de contrôles de bézier sont conserver à l'intérieur du graphique; <c>
+ False</c> sinon.</value>
+	<returns><c>True</c> si les points de contrôles de bézier sont conserver à l'intérieur du graphique; <c>
+ False</c> sinon.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementLine.Fill">
+	<summary>
+ Type de remplissage.
+ </summary>
+	<value>Type de remplissage.</value>
+	<returns>Type de remplissage.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementLine.Stepped">
+	<summary>
+ Indique si la ligne doit être en escalier. (La tension sera ignorée).
+ </summary>
+	<value><c>True</c> si la ligne doit être en escalier. (La tension sera ignorée); <c>False</c> sinon.
+ </value>
+	<returns><c>True</c> si la ligne doit être en escalier. (La tension sera ignorée); <c>False</c> sinon.
+ </returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationElementLine.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationElementLine.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationElementLine">
+	<summary>
+ Configuration des éléments lignes.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementArc.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementArc.BorderColor">
+	<summary>
+ Couleur de la bordure.
+ </summary>
+	<value>Couleur de la bordure.</value>
+	<returns>Couleur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElementArc.BorderWidth">
+	<summary>
+ Largeur de la bordure.
+ </summary>
+	<value>Largeur de la bordure.</value>
+	<returns>Largeur de la bordure.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationElementArc.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationElementArc.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationElementArc">
+	<summary>
+ Configuration des arc dans les graphiques circulaires.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationHover.Mode">
+	<summary>
+ Indique quels sont les élements qui apparaissent.
+ </summary>
+	<value>Indique quels sont les élements qui apparaissent.</value>
+	<returns>Indique quels sont les élements qui apparaissent.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationHover.Intersect">
+	<summary>
+ Le mode s'applique uniquement lorsque la position de la souris intercepte un élément lorsque la valeur est
+ <c>True</c>; Sinon le mode s'applique tout le temps.
+ </summary>
+	<value>Le mode s'applique uniquement lorsque la position de la souris intercepte un élément lorsque la
+ valeur est <c>True</c>; Sinon le mode s'applique tout le temps.</value>
+	<returns>Le mode s'applique uniquement lorsque la position de la souris intercepte un élément lorsque la
+ valeur est <c>True</c>; Sinon le mode s'applique tout le temps.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationHover.AnimationDuration">
+	<summary>
+ Durée de l'animation.
+ </summary>
+	<value>Durée de l'animation.</value>
+	<returns>Durée de l'animation.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationHover.OnHoverCallback">
+	<summary>
+ Méthode javascript appellée lorsque la souris survole un élément du graphique.
+ </summary>
+	<value>Méthode javascript appellée lorsque la souris survole un élément du graphique.</value>
+	<returns>Méthode javascript appellée lorsque la souris survole un élément du graphique.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationHover.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationHover.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationHover">
+	<summary>
+ Configuration du survol de la souris.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.Enabled">
+	<summary>
+ Indique si les bulles d'aide sont activées.
+ </summary>
+	<value><c>True</c> si les bulles d'aide sont activées; <c>False</c> sinon.</value>
+	<returns><c>True</c> si les bulles d'aide sont activées; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.OnCustomCallBack">
+	<summary>
+ Méthode javascript permettant de personnaliser la bulle d'aide.
+ </summary>
+	<value>Méthode javascript permettant de personnaliser la bulle d'aide.</value>
+	<returns>Méthode javascript permettant de personnaliser la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.Mode">
+	<summary>
+ Indique quels sont les élements qui apparaissent dans les bulles d'aide.
+ </summary>
+	<value>Indique quels sont les élements qui apparaissent dans les bulles d'aide.</value>
+	<returns>Indique quels sont les élements qui apparaissent dans les bulles d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.Intersect">
+	<summary>
+ Le mode s'applique uniquement lorsque la position de la souris intercepte un élément lorsque la valeur est
+ <c>True</c>; Sinon le mode s'applique tout le temps.
+ </summary>
+	<value>Le mode s'applique uniquement lorsque la position de la souris intercepte un élément lorsque la
+ valeur est <c>True</c>; Sinon le mode s'applique tout le temps.</value>
+	<returns>Le mode s'applique uniquement lorsque la position de la souris intercepte un élément lorsque la
+ valeur est <c>True</c>; Sinon le mode s'applique tout le temps.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.Position">
+	<summary>
+ Mode de positionnement de la bulle d'aide.
+ </summary>
+	<value>Mode de positionnement de la bulle d'aide.</value>
+	<returns>Mode de positionnement de la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.OnItemSortCallback">
+	<summary>
+ Méthode javascript permettant de trier les éléments dans la bulle d'aide.
+ </summary>
+	<value>Méthode javascript permettant de trier les éléments dans la bulle d'aide.</value>
+	<returns>Méthode javascript permettant de trier les éléments dans la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.OnFilterCallback">
+	<summary>
+ Méthode javascript appellée pour filtrer les élements présents dans la bulle d'aide.
+ </summary>
+	<value>Méthode javascript appellée pour filtrer les élements présents dans la bulle d'aide.</value>
+	<returns>Méthode javascript appellée pour filtrer les élements présents dans la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.TitleFontFamily">
+	<summary>
+ Nom de la police à utiliser.
+ </summary>
+	<value>Nom de la police à utiliser.</value>
+	<returns>Nom de la police à utiliser.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.TitleFontSize">
+	<summary>
+ Indique la taille de la police.
+ </summary>
+	<value>Indique la taille de la police.</value>
+	<returns>Indique la taille de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.TitleFontStyle">
+	<summary>
+ Style de la police.
+ </summary>
+	<value>Style de la police.</value>
+	<returns>Style de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.TitleFontColor">
+	<summary>
+ Couleur de la police.
+ </summary>
+	<value>Couleur de la police.</value>
+	<returns>Couleur de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.TitleSpacing">
+	<summary>
+ Espace au dessus et en dessous de chaque ligne de titre du graphique.
+ </summary>
+	<value>Espace au dessus et en dessous de chaque ligne de titre du graphique.</value>
+	<returns>Espace au dessus et en dessous de chaque ligne de titre du graphique.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.TitleMarginBottom">
+	<summary>
+ Marge en dessous de la section de titre.
+ </summary>
+	<value>Marge en dessous de la section de titre.</value>
+	<returns>Marge en dessous de la section de titre.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.BodyFontFamily">
+	<summary>
+ Nom de la police à utiliser.
+ </summary>
+	<value>Nom de la police à utiliser.</value>
+	<returns>Nom de la police à utiliser.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.BodyFontSize">
+	<summary>
+ Indique la taille de la police.
+ </summary>
+	<value>Indique la taille de la police.</value>
+	<returns>Indique la taille de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.BodyFontStyle">
+	<summary>
+ Style de la police.
+ </summary>
+	<value>Style de la police.</value>
+	<returns>Style de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.BodyFontColor">
+	<summary>
+ Couleur de la police.
+ </summary>
+	<value>Couleur de la police.</value>
+	<returns>Couleur de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.BodySpacing">
+	<summary>
+ Espace à ajouter au dessus et en dessous de chaque éléments.
+ </summary>
+	<value>Espace à ajouter au dessus et en dessous de chaque éléments.</value>
+	<returns>Espace à ajouter au dessus et en dessous de chaque éléments.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.FooterFontFamily">
+	<summary>
+ Nom de la police à utiliser.
+ </summary>
+	<value>Nom de la police à utiliser.</value>
+	<returns>Nom de la police à utiliser.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.FooterFontSize">
+	<summary>
+ Indique la taille de la police.
+ </summary>
+	<value>Indique la taille de la police.</value>
+	<returns>Indique la taille de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.FooterFontStyle">
+	<summary>
+ Style de la police.
+ </summary>
+	<value>Style de la police.</value>
+	<returns>Style de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.FooterFontColor">
+	<summary>
+ Couleur de la police.
+ </summary>
+	<value>Couleur de la police.</value>
+	<returns>Couleur de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.FooterSpacing">
+	<summary>
+ Espace à ajouter au dessus et en dessou de chaque ligne du pied de page de la bulle.
+ </summary>
+	<value>Espace à ajouter au dessus et en dessou de chaque ligne du pied de page de la bulle.</value>
+	<returns>Espace à ajouter au dessus et en dessou de chaque ligne du pied de page de la bulle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.FooterMarginTop">
+	<summary>
+ Marge au dessus du pied de page de la bulle d'aide.
+ </summary>
+	<value>Marge au dessus du pied de page de la bulle d'aide.</value>
+	<returns>Marge au dessus du pied de page de la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.XPadding">
+	<summary>
+ Espacement à rajouter à gauche et à droite de la bulle d'aide.
+ </summary>
+	<value>Espacement à rajouter à gauche et à droite de la bulle d'aide.</value>
+	<returns>Espacement à rajouter à gauche et à droite de la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.YPadding">
+	<summary>
+ Espacement à ajouter en haut et en bas de chaque bulle d'aide.
+ </summary>
+	<value>Espacement à ajouter en haut et en bas de chaque bulle d'aide.</value>
+	<returns>Espacement à ajouter en haut et en bas de chaque bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.CaretSize">
+	<summary>
+ Taille en pixel de la flêche pour la bulle d'aide.
+ </summary>
+	<value>Taille en pixel de la flêche pour la bulle d'aide.</value>
+	<returns>Taille en pixel de la flêche pour la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.CornerRadius">
+	<summary>
+ Radian.
+ </summary>
+	<value>Radian.</value>
+	<returns>Rayon pour l'arrondi des angles de la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.MultiKeyBackground">
+	<summary>
+ Couleur de l'arrière plans quand il y a plusieurs éléments dans la bulle d'aide.
+ </summary>
+	<value>Couleur de l'arrière plans quand il y a plusieurs éléments dans la bulle d'aide.</value>
+	<returns>Couleur de l'arrière plans quand il y a plusieurs éléments dans la bulle d'aide.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.DisplayColors">
+	<summary>
+ Indique si les cadre de couleurs sont affichés dans la bulle d'aide.
+ </summary>
+	<value><c>True</c> si les cadre de couleurs sont affichés dans la bulle d'aide; <c>False</c> sinon.
+ </value>
+	<returns><c>True</c> si les cadre de couleurs sont affichés dans la bulle d'aide; <c>False</c> sinon.
+ </returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltip.Callbacks">
+	<summary>
+ Personnalisation des bulle d'aide à partir de méthodes Javascript.
+ </summary>
+	<value>Personnalisation des bulle d'aide à partir de méthodes Javascript.</value>
+	<returns>Personnalisation des bulle d'aide à partir de méthodes Javascript.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationTooltip.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationTooltip.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationTooltip">
+	<summary>
+ Configuration des bulles d'aide.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegendLabel.BoxWidth">
+	<summary>
+ Largeur des boites colorées.
+ </summary>
+	<value>Largeur des boites colorées.</value>
+	<returns>Largeur des boites colorées.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegendLabel.FontSize">
+	<summary>
+ Indique la taille de la police.
+ </summary>
+	<value>Indique la taille de la police.</value>
+	<returns>Indique la taille de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegendLabel.FontFamily">
+	<summary>
+ Nom de la police à utiliser.
+ </summary>
+	<value>Nom de la police à utiliser.</value>
+	<returns>Nom de la police à utiliser.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegendLabel.FontColor">
+	<summary>
+ Couleur de la police.
+ </summary>
+	<value>Couleur de la police.</value>
+	<returns>Couleur de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegendLabel.FontStyle">
+	<summary>
+ Style de la police.
+ </summary>
+	<value>Style de la police.</value>
+	<returns>Style de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegendLabel.Padding">
+	<summary>
+ Nombre de pixels entre les rangées de boites colorées.
+ </summary>
+	<value>Nombre de pixels entre les rangées de boites colorées.</value>
+	<returns>Nombre de pixels entre les rangées de boites colorées.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegendLabel.OnGenerateLabelsCallback">
+	<summary>
+ Méthode appellée pour la personnalisation des éléments de la légende.
+ </summary>
+	<value>Méthode appellée pour la personnalisation des éléments de la légende.</value>
+	<returns>Méthode appellée pour la personnalisation des éléments de la légende.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegendLabel.OnFilterCallback">
+	<summary>
+ Méthode appellée pour filtrer les élements présents dans la légende.
+ </summary>
+	<value>Méthode appellée pour filtrer les élements présents dans la légende.</value>
+	<returns>Méthode appellée pour filtrer les élements présents dans la légende.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegendLabel.UsePointStyle">
+	<summary>
+ Indique qu'il faut utiliser le même style que celui utilisé par le point.
+ </summary>
+	<value>Indique qu'il faut utiliser le même style que celui utilisé par le point.</value>
+	<returns>Indique qu'il faut utiliser le même style que celui utilisé par le point.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationLegendLabel.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationLegendLabel.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationLegendLabel">
+	<summary>
+ Configuration des libellés de légendes.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegend.Display">
+	<summary>
+ Affiche la zone.
+ </summary>
+	<value>Affiche la zone.</value>
+	<returns>Affiche la zone.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegend.Position">
+	<summary>
+ Position de la zone.
+ </summary>
+	<value>Position de la zone.</value>
+	<returns>Position de la zone.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegend.FullWidth">
+	<summary>
+ Indique si la zone doit prendre toute la largeur.
+ </summary>
+	<value><c>True</c> si la zone doit prendre toute la largeur; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la zone doit prendre toute la largeur; <c>False</c> sinon.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegend.OnClickCallback">
+	<summary>
+ Méthode Javascript appelée lors du click sur un élément de la légende.
+ </summary>
+	<value>Méthode Javascript appelée lors du click sur un élément de la légende.</value>
+	<returns>Méthode Javascript appelée lors du click sur un élément de la légende.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegend.OnHoverCallback">
+	<summary>
+ Méthode javascript appellée lorsque la souris survol un libellé de la légende.
+ </summary>
+	<value>Méthode javascript appellée lorsque la souris survol un libellé de la légende.</value>
+	<returns>Méthode javascript appellée lorsque la souris survol un libellé de la légende.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegend.Labels">
+	<summary>
+ Configuration des libellés de la légende.
+ </summary>
+	<value>Configuration des libellés de la légende.</value>
+	<returns>Configuration des libellés de la légende.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationLegend.Reverse">
+	<summary>
+ La légende affichera les séries dans l'ordre inverse.
+ </summary>
+	<value>La légende affichera les séries dans l'ordre inverse.</value>
+	<returns>La légende affichera les séries dans l'ordre inverse.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationLegend.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationLegend.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationLegend">
+	<summary>
+ Configuration de la légende.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationElements.Arc">
+	<summary>
+ Configuration des arc pour les graphiques circulaires.
+ </summary>
+	<value>Configuration des arc pour les graphiques circulaires.</value>
+	<returns>Configuration des arc pour les graphiques circulaires.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElements.Line">
+	<summary>
+ Configuration des lignes.
+ </summary>
+	<value>Configuration des lignes.</value>
+	<returns>Configuration des lignes.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElements.Point">
+	<summary>
+ Configuration des points.
+ </summary>
+	<value>Configuration des points.</value>
+	<returns>Configuration des points.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationElements.Rectangle">
+	<summary>
+ Configuration des graphique à barres.
+ </summary>
+	<value>Configuration des graphique à barres.</value>
+	<returns>Configuration des graphique à barres.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationElements.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationElements.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationElements">
+	<summary>
+ Configurations des quatres différents types d'éléments.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationAnimation.Duration">
+	<summary>
+ La durée en millisecondes d'une animation.
+ </summary>
+	<value>La durée en millisecondes d'une animation.</value>
+	<returns>La durée en millisecondes d'une animation.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationAnimation.Easing">
+	<summary>
+ Type d'animation à utiliser.
+ </summary>
+	<value>Type d'animation à utiliser.</value>
+	<returns>Type d'animation à utiliser.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationAnimation.OnProgressCallback">
+	<summary>
+ Méthode javascript appelée à chaques étapes de l'animation.
+ </summary>
+	<value>Méthode javascript appelée à chaques étapes de l'animation.</value>
+	<returns>Méthode javascript appelée à chaques étapes de l'animation.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationAnimation.OnCompleteCallback">
+	<summary>
+ Méthode javascript appelée lorsque l'animation est terminée.
+ </summary>
+	<value>Méthode javascript appelée lorsque l'animation est terminée.</value>
+	<returns>Méthode javascript appelée lorsque l'animation est terminée.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationAnimation.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationAnimation.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationAnimation">
+	<summary>
+ Configuration des animations.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ChartLabelCollection.IsEmpty">
+	<summary>
+ Indique si la collection contient des éléments.
+ </summary>
+	<value><c>True</c> si la collection contient des éléments; <c>False</c> sinon.</value>
+	<returns><c>True</c> si la collection contient des éléments; <c>False</c> sinon.</returns>
+</member><member name="M:Corail.Web.Chart.ChartLabelCollection.Add(System.String[])">
+	<summary>
+ Ajoute la liste des libellés.
+ </summary>
+	<param name="p_o_labels">Liste des libellés.</param>
+</member><member name="M:Corail.Web.Chart.ChartLabelCollection.RenderJSON(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Effectue le rendu JSON.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="T:Corail.Web.Chart.ChartLabelCollection">
+	<summary>
+ Collection de libellé.
+ </summary>
+</member><member name="M:Corail.Web.Chart.CwLinearChart.GetChartType">
+	<summary>
+ Retourne le type de graphique.
+ </summary>
+	<returns>Le type de graphique.</returns>
+</member><member name="T:Corail.Web.Chart.CwLinearChart">
+	<summary>
+ Graphique à barres ou avec des lignes.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ILinearDataset.Add(System.Nullable{System.Double})">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_value">Valeur.</param>
+</member><member name="T:Corail.Web.Chart.ILinearDataset">
+	<summary>
+ Jeux de données pouvant être mixé dans un LinearChart.
+ </summary>
+</member><member name="P:Corail.Web.Chart.LineDataset.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataset.BorderColor">
+	<summary>
+ Couleur de la bordure.
+ </summary>
+	<value>Couleur de la bordure.</value>
+	<returns>Couleur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataset.BorderWidth">
+	<summary>
+ Largeur de la bordure.
+ </summary>
+	<value>Largeur de la bordure.</value>
+	<returns>Largeur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataset.XAxisID">
+	<summary>
+ Indetifiant de l'axe X.
+ </summary>
+	<value>Indetifiant de l'axe X.</value>
+	<returns>Indetifiant de l'axe X.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataset.YAxisID">
+	<summary>
+ Identifiant de l'axe Y.
+ </summary>
+	<value>Identifiant de l'axe Y.</value>
+	<returns>Identifiant de l'axe Y.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataset.PointBorderColor">
+	<summary>
+ Couleur de l'entourage des points.
+ </summary>
+	<value>Couleur de l'entourage des points.</value>
+	<returns>Couleur de l'entourage des points.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataset.PointBackgroundColor">
+	<summary>
+ Couleur de fond des points.
+ </summary>
+	<value>Couleur de fond des points.</value>
+	<returns>Couleur de fond des points.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataset.PointBorderWidth">
+	<summary>
+ Taille des points.
+ </summary>
+	<value>Taille des points.</value>
+	<returns>Taille des points.</returns>
+</member><member name="M:Corail.Web.Chart.LineDataset.#ctor">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+</member><member name="M:Corail.Web.Chart.LineDataset.AddSimple(System.Nullable{System.Double})">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_value">Valeur.</param>
+</member><member name="M:Corail.Web.Chart.LineDataset.Add(System.Nullable{System.Double},System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_value">Valeur.</param>
+	<param name="p_s_pointBackgroundColor">Couleur de fond du point.</param>
+	<param name="p_s_pointBorderColor">Couleur du contour des points.</param>
+	<returns>Ajoute une nouvelle valeur à la série.</returns>
+</member><member name="T:Corail.Web.Chart.LineDataset">
+	<summary>
+ Série de données pour un graphique à lignes.
+ </summary>
+</member><member name="F:Corail.Web.Chart.LinearDataset`1.m_i_kind">
+ Type de graphique.
+
+</member><member name="P:Corail.Web.Chart.LinearDataset`1.Kind">
+	<summary>
+ Type de graphique.
+ </summary>
+	<value>Type de graphique.</value>
+	<returns>Type de graphique.</returns>
+</member><member name="P:Corail.Web.Chart.LinearDataset`1.Label">
+	<summary>
+ Libellé de la série.
+ </summary>
+	<value>Libellé de la série.</value>
+	<returns>Libellé de la série.</returns>
+</member><member name="M:Corail.Web.Chart.LinearDataset`1.#ctor(Corail.Web.Chart.LinearChartKind)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_kind">Type de camembert.</param>
+</member><member name="M:Corail.Web.Chart.LinearDataset`1.AddSimple(System.Nullable{System.Double})">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_value">Valeur.</param>
+</member><member name="T:Corail.Web.Chart.LinearDataset`1">
+	<summary>
+ Série de donnée représentée sous la forme de lignes ou de barres.
+ </summary>
+</member><member name="T:Corail.Web.Chart.LineDataItem">
+	<summary>
+ Valeur pour un point de la série.
+ </summary>
+</member><member name="F:Corail.Web.Chart.LinearDatasetXY`1.m_i_kind">
+ Type de graphique.
+
+</member><member name="P:Corail.Web.Chart.LinearDatasetXY`1.Kind">
+	<summary>
+ Type de graphique.
+ </summary>
+	<value>Type de graphique.</value>
+	<returns>Type de graphique.</returns>
+</member><member name="P:Corail.Web.Chart.LinearDatasetXY`1.Label">
+	<summary>
+ Libellé de la série.
+ </summary>
+	<value>Libellé de la série.</value>
+	<returns>Libellé de la série.</returns>
+</member><member name="M:Corail.Web.Chart.LinearDatasetXY`1.#ctor(Corail.Web.Chart.LinearChartKind)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_kind">Type de camembert.</param>
+</member><member name="M:Corail.Web.Chart.LinearDatasetXY`1.AddSimple(System.Single,System.Single)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_x">Valeur de l'abscisse.</param>
+	<param name="p_f_y">Valeur de l'ordonnée.</param>
+</member><member name="T:Corail.Web.Chart.LinearDatasetXY`1">
+	<summary>
+ Série de donnée en X et Y représentée sous la forme de lignes ou de barres.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ILinearDatasetXY.Add(System.Single,System.Single)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_x">Valeur de l'abscisse.</param>
+	<param name="p_f_y">Valeur de l'ordonnée.</param>
+</member><member name="T:Corail.Web.Chart.ILinearDatasetXY">
+	<summary>
+ Jeux de données pouvant être mixé dans un LinearChart.
+ </summary>
+</member><member name="T:Corail.Web.Chart.LineDataItemXY">
+	<summary>
+ Valeur pour un point de la série.
+ </summary>
+</member><member name="P:Corail.Web.Chart.LineDatasetXY.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.LineDatasetXY.BorderColor">
+	<summary>
+ Couleur de la bordure.
+ </summary>
+	<value>Couleur de la bordure.</value>
+	<returns>Couleur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.LineDatasetXY.BorderWidth">
+	<summary>
+ Largeur de la bordure.
+ </summary>
+	<value>Largeur de la bordure.</value>
+	<returns>Largeur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.LineDatasetXY.XAxisID">
+	<summary>
+ Indetifiant de l'axe X.
+ </summary>
+	<value>Indetifiant de l'axe X.</value>
+	<returns>Indetifiant de l'axe X.</returns>
+</member><member name="P:Corail.Web.Chart.LineDatasetXY.YAxisID">
+	<summary>
+ Identifiant de l'axe Y.
+ </summary>
+	<value>Identifiant de l'axe Y.</value>
+	<returns>Identifiant de l'axe Y.</returns>
+</member><member name="P:Corail.Web.Chart.LineDatasetXY.PointBorderColor">
+	<summary>
+ Couleur de l'entourage des points.
+ </summary>
+	<value>Couleur de l'entourage des points.</value>
+	<returns>Couleur de l'entourage des points.</returns>
+</member><member name="P:Corail.Web.Chart.LineDatasetXY.PointBackgroundColor">
+	<summary>
+ Couleur de fond des points.
+ </summary>
+	<value>Couleur de fond des points.</value>
+	<returns>Couleur de fond des points.</returns>
+</member><member name="P:Corail.Web.Chart.LineDatasetXY.PointBorderWidth">
+	<summary>
+ Taille des points.
+ </summary>
+	<value>Taille des points.</value>
+	<returns>Taille des points.</returns>
+</member><member name="M:Corail.Web.Chart.LineDatasetXY.#ctor">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+</member><member name="M:Corail.Web.Chart.LineDatasetXY.AddSimple(System.Single,System.Single)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_x">Valeur de l'abscisse.</param>
+	<param name="p_f_y">Valeur de l'ordonnée.</param>
+</member><member name="M:Corail.Web.Chart.LineDatasetXY.Add(System.Single,System.Single,System.String,System.String)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_x">Valeur de l'abscisse.</param>
+	<param name="p_f_y">Valeur de l'ordonnée.</param>
+	<param name="p_s_pointBackgroundColor">Couleur de fond du point.</param>
+	<param name="p_s_pointBorderColor">Couleur du contour des points.</param>
+	<returns>Ajoute une nouvelle valeur à la série.</returns>
+</member><member name="T:Corail.Web.Chart.LineDatasetXY">
+	<summary>
+ Série de données en X et Y pour un graphique à lignes.
+ </summary>
+</member><member name="P:Corail.Web.Chart.LineDataItemCustom`1.PointBackgroundColor">
+	<summary>
+ Couleur de fond du point.
+ </summary>
+	<value>Couleur de fond du point.</value>
+	<returns>Couleur de fond du point.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataItemCustom`1.PointBorderColor">
+	<summary>
+ Couleur du contour des points.
+ </summary>
+	<value>Couleur du contour des points.</value>
+	<returns>Couleur du contour des points.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataItemCustom`1.PointBorderWidth">
+	<summary>
+ Largeur de la bordure du point.
+ </summary>
+	<value>Largeur de la bordure du point.</value>
+	<returns>Largeur de la bordure du point.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataItemCustom`1.PointRadius">
+	<summary>
+ Rayon du point.
+ </summary>
+	<value>Rayon du point.</value>
+	<returns>Rayon du point.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataItemCustom`1.PointHoverRadius">
+	<summary>
+ Rayon du point lorsqu'il est survolé.
+ </summary>
+	<value>Rayon du point lorsqu'il est survolé.</value>
+	<returns>Rayon du point lorsqu'il est survolé.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataItemCustom`1.PointHitRadius">
+	<summary>
+ Rayon cliquable autour du point.
+ </summary>
+	<value>Rayon cliquable autour du point.</value>
+	<returns>Rayon cliquable autour du point.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataItemCustom`1.PointHoverBackgroundColor">
+	<summary>
+ Couleur de fond du point lorsqu'il est survolé.
+ </summary>
+	<value>Couleur de fond du point lorsqu'il est survolé.</value>
+	<returns>Couleur de fond du point lorsqu'il est survolé.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataItemCustom`1.PointHoverBorderColor">
+	<summary>
+ Couleur de la bordure du point lorsqu'il est survolé.
+ </summary>
+	<value>Couleur de la bordure du point lorsqu'il est survolé.</value>
+	<returns>Couleur de la bordure du point lorsqu'il est survolé.</returns>
+</member><member name="P:Corail.Web.Chart.LineDataItemCustom`1.PointHoverBorderWidth">
+	<summary>
+ Largeur de la bordure du point lorsqu'il est survolé.
+ </summary>
+	<value>Largeur de la bordure du point lorsqu'il est survolé.</value>
+	<returns>Largeur de la bordure du point lorsqu'il est survolé.</returns>
+</member><member name="T:Corail.Web.Chart.LineDataItemCustom`1">
+	<summary>
+ Valeur pour un point de la série.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ILinearDatasetCustom.Kind">
+	<summary>
+ Type de graphique.
+ </summary>
+	<value>Type de graphique.</value>
+	<returns>Type de graphique.</returns>
+</member><member name="P:Corail.Web.Chart.BarDataItemCustom`1.BorderSkipped">
+	<summary>
+ Indique les cotés pour lesquels on ne souhaite pas dessiner les bords.
+ </summary>
+	<value>Indique les cotés pour lesquels on ne souhaite pas dessiner les bords.</value>
+	<returns>Indique les cotés pour lesquels on ne souhaite pas dessiner les bords.</returns>
+</member><member name="T:Corail.Web.Chart.BarDataItemCustom`1">
+	<summary>
+ Classe générique pour un point de la série.
+ </summary>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.BackgroundColor">
+	<summary>
+ Couleur de fond.
+ </summary>
+	<value>Couleur de fond.</value>
+	<returns>Couleur de fond.</returns>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.BorderColor">
+	<summary>
+ Couleur de la bordure.
+ </summary>
+	<value>Couleur de la bordure.</value>
+	<returns>Couleur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.BorderWidth">
+	<summary>
+ Largeur de la bordure.
+ </summary>
+	<value>Largeur de la bordure.</value>
+	<returns>Largeur de la bordure.</returns>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.BorderSkipped">
+	<summary>
+ Indique les cotés pour lesquels on ne souhaite pas dessiner les bords.
+ </summary>
+	<value>Indique les cotés pour lesquels on ne souhaite pas dessiner les bords.</value>
+	<returns>Indique les cotés pour lesquels on ne souhaite pas dessiner les bords.</returns>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.HoverBackgroundColor">
+	<summary>
+ Couleur de fond lorsque l'élément est sélectionné.
+ </summary>
+	<value>Couleur de fond lorsque l'élément est sélectionné.</value>
+	<returns>Couleur de fond lorsque l'élément est sélectionné.</returns>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.HoverBorderColor">
+	<summary>
+ Couleur de la bordure lorsque l'élément est survolé.
+ </summary>
+	<value>Couleur de la bordure lorsque l'élément est survolé.</value>
+	<returns>Couleur de la bordure lorsque l'élément est survolé.</returns>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.HoverBorderWidth">
+	<summary>
+ Largeur de la bordure lorsque l'élément est survolé.
+ </summary>
+	<value>Largeur de la bordure lorsque l'élément est survolé.</value>
+	<returns>Largeur de la bordure lorsque l'élément est survolé.</returns>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.XAxisID">
+	<summary>
+ Indetifiant de l'axe X.
+ </summary>
+	<value>Indetifiant de l'axe X.</value>
+	<returns>Indetifiant de l'axe X.</returns>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.YAxisID">
+	<summary>
+ Identifiant de l'axe Y.
+ </summary>
+	<value>Identifiant de l'axe Y.</value>
+	<returns>Identifiant de l'axe Y.</returns>
+</member><member name="P:Corail.Web.Chart.BarDatasetXY.Stack">
+	<summary>
+ Identifiant du groupe auquel le jeux de données appartient.
+ </summary>
+	<value>Identifiant du groupe auquel le jeux de données appartient.</value>
+	<returns>Identifiant du groupe auquel le jeux de données appartient.</returns>
+</member><member name="M:Corail.Web.Chart.BarDatasetXY.#ctor(Corail.Web.Chart.LinearChartKind)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_kind">Type de camembert.</param>
+</member><member name="M:Corail.Web.Chart.BarDatasetXY.AddSimple(System.Single,System.Single)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_x">Valeur de l'abscisse.</param>
+	<param name="p_f_y">Valeur de l'ordonnée.</param>
+</member><member name="M:Corail.Web.Chart.BarDatasetXY.Add(System.Single,System.Single,System.String)">
+	<summary>
+ Ajoute une nouvelle valeur à la série.
+ </summary>
+	<param name="p_f_x">Valeur de l'abscisse.</param>
+	<param name="p_f_y">Valeur de l'ordonnée.</param>
+	<param name="p_s_backgroundColor">Couleur de fond.</param>
+	<returns>Ajoute une nouvelle valeur à la série.</returns>
+</member><member name="T:Corail.Web.Chart.BarDatasetXY">
+	<summary>
+ Série de données pour un graphique à barre.
+ </summary>
+</member><member name="T:Corail.Web.Chart.BarDataItemXY">
+	<summary>
+ Valeur pour un point de la série.
+ </summary>
+</member><member name="T:Corail.Web.Chart.BarDataItem">
+	<summary>
+ Valeur pour un point de la série.
+ </summary>
+</member><member name="F:Corail.Web.Chart.JSON.JSonArray.m_o_data">
+ Liste d'éléments.
+
+</member><member name="P:Corail.Web.Chart.JSON.JSonArray.Item(System.Int32)">
+	<summary>
+ Sélection d'un élément et retourne l'élément.
+ </summary>
+	<param name="p_i_index"></param>
+	<value>L'élément.</value>
+	<returns>L'élément.</returns>
+</member><member name="M:Corail.Web.Chart.JSON.JSonArray.Push(Corail.Web.Chart.JSON.JSonItem)">
+	<summary>
+ Ajout d'un élément au tableau.
+ </summary>
+	<param name="p_o_item">Elément à ajouter.</param>
+</member><member name="M:Corail.Web.Chart.JSON.JSonArray.Count">
+	<summary>
+ Retourne le nombre d'élément.
+ </summary>
+	<returns>Le nombre d'élément.</returns>
+</member><member name="M:Corail.Web.Chart.JSON.JSonArray.OnRender(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu JSON de l'objet.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="T:Corail.Web.Chart.JSON.JSonArray">
+	<summary>
+ Tableau encodé en JSON.
+ </summary>
+</member><member name="M:Corail.Web.Chart.IChartDataset.RenderJSON(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu JSON.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="M:Corail.Web.Chart.IChartDatasetCollection.RenderJSON(Corail.Web.Chart.JSonWriter)">
+	<summary>
+ Rendu JSON.
+ </summary>
+	<param name="p_o_writer">Objet qui reçoit le rendu de l'élément.</param>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.BeginAtZero">
+	<summary>
+ Definie si le zéro est inclus.
+ </summary>
+	<value>Definie si le zéro est inclus.</value>
+	<returns>Definie si le zéro est inclus.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.Min">
+	<summary>
+ Nombre minimum fixe de l'échelle.
+ </summary>
+	<value>Nombre minimum fixe de l'échelle.</value>
+	<returns>Nombre minimum fixe de l'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.Max">
+	<summary>
+ Nombre maximum fixe de l'échelle.
+ </summary>
+	<value>Nombre maximum fixe de l'échelle.</value>
+	<returns>Nombre maximum fixe de l'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.MaxTicksLimit">
+	<summary>
+ Nombre maximum de marqueurs.
+ </summary>
+	<value>Nombre maximum de marqueurs.</value>
+	<returns>Nombre maximum de marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.StepSize">
+	<summary>
+ Definie le pas de l'échelle.
+ </summary>
+	<value>Definie le pas de l'échelle.</value>
+	<returns>Definie le pas de l'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.SuggestedMax">
+	<summary>
+ Nombre maximum de l'échelle. Peut-être modifié si les données dépassent cette valeur.
+ </summary>
+	<value>Nombre maximum de l'échelle. Peut-être modifié si les données dépassent cette valeur.</value>
+	<returns>Nombre maximum de l'échelle. Peut-être modifié si les données dépassent cette valeur.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.SuggestedMin">
+	<summary>
+ Nombre minimum de l'échelle. Peut-être modifié si les données dépassent cette valeur.
+ </summary>
+	<value>Nombre minimum de l'échelle. Peut-être modifié si les données dépassent cette valeur.</value>
+	<returns>Nombre minimum de l'échelle. Peut-être modifié si les données dépassent cette valeur.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.BackdropColor">
+	<summary>
+ Couleur du fond des labels.
+ </summary>
+	<value>Couleur du fond des labels.</value>
+	<returns>Couleur du fond des labels.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.BackdropPaddingX">
+	<summary>
+ Espacement horizontal des fond de labels.
+ </summary>
+	<value>Espacement horizontal des fond de labels.</value>
+	<returns>Espacement horizontal des fond de labels.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.BackdropPaddingY">
+	<summary>
+ Espacement vertical des fond de labels.
+ </summary>
+	<value>Espacement vertical des fond de labels.</value>
+	<returns>Espacement vertical des fond de labels.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksRadial.ShowLabelBackdrop">
+	<summary>
+ Affiche un fond derrière les labels des marqueurs.
+ </summary>
+	<value>Affiche un fond derrière les labels des marqueurs.</value>
+	<returns>Affiche un fond derrière les labels des marqueurs.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleTicksRadial.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleTicksRadial">
+	<summary>
+ Configuration des marqueurs d'échelle radial.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadial.Ticks">
+	<summary>
+ Configuration des marqueurs d'échelle.
+ </summary>
+	<value>Configuration des marqueurs d'échelle.</value>
+	<returns>Configuration des marqueurs d'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadial.LineArc">
+	<summary>
+ Utilisation d'arc circulaire au lieu de ligne.
+ </summary>
+	<value>Utilisation d'arc circulaire au lieu de ligne.</value>
+	<returns>Utilisation d'arc circulaire au lieu de ligne.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadial.AngleLines">
+	<summary>
+ Configuration des angles des lignes.
+ </summary>
+	<value>Configuration des angles des lignes.</value>
+	<returns>Configuration des angles des lignes.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadial.PointLabels">
+	<summary>
+ Configuration des labels des points.
+ </summary>
+	<value>Configuration des labels des points.</value>
+	<returns>Configuration des labels des points.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeRadial.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeRadial.SpecialAddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Propriétés pour un axe de type linéaire.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleAxeRadial">
+	<summary>
+ Configuration des axes X et Y pour une échelle de type linéaire.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksLogarithmic.Min">
+	<summary>
+ Label minimum à afficher, doit faire partie des labels du datasets.
+ </summary>
+	<value>Label minimum à afficher, doit faire partie des labels du datasets.</value>
+	<returns>Label minimum à afficher, doit faire partie des labels du datasets.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksLogarithmic.Max">
+	<summary>
+ Label maximum à afficher, doit faire partie des labels du datasets.
+ </summary>
+	<value>Label maximum à afficher, doit faire partie des labels du datasets.</value>
+	<returns>Label maximum à afficher, doit faire partie des labels du datasets.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleTicksLogarithmic.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleTicksLogarithmic">
+	<summary>
+ Configuration des marqueurs d'échelle avec des labels.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeLogarithmic.Ticks">
+	<summary>
+ Configuration des marqueurs d'échelle.
+ </summary>
+	<value>Configuration des marqueurs d'échelle.</value>
+	<returns>Configuration des marqueurs d'échelle.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeLogarithmic.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeLogarithmic.SpecialAddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Propriétés pour un axe de type linéaire.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleAxeLogarithmic">
+	<summary>
+ Configuration des axes X et Y pour une échelle de type logarithmique.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksCategory.Min">
+	<summary>
+ Label minimum à afficher, doit faire partie des labels du datasets.
+ </summary>
+	<value>Label minimum à afficher, doit faire partie des labels du datasets.</value>
+	<returns>Label minimum à afficher, doit faire partie des labels du datasets.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksCategory.Max">
+	<summary>
+ Label maximum à afficher, doit faire partie des labels du datasets.
+ </summary>
+	<value>Label maximum à afficher, doit faire partie des labels du datasets.</value>
+	<returns>Label maximum à afficher, doit faire partie des labels du datasets.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleTicksCategory.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleTicksCategory">
+	<summary>
+ Configuration des marqueurs d'échelle avec des labels.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeCategory.Ticks">
+	<summary>
+ Configuration des marqueurs d'échelle.
+ </summary>
+	<value>Configuration des marqueurs d'échelle.</value>
+	<returns>Configuration des marqueurs d'échelle.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeCategory.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeCategory.SpecialAddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Propriétés pour un axe de type linéaire.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleAxeCategory">
+	<summary>
+ Configuration des axes X et Y pour une échelle de type linéaire.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScales.Xaxes">
+	<summary>
+ Axe(s) des X.
+ </summary>
+	<value>Axe(s) des X.</value>
+	<returns>Axe(s) des X.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScales.Yaxes">
+	<summary>
+ Axe(s) des Y.
+ </summary>
+	<value>Axe(s) des Y.</value>
+	<returns>Axe(s) des Y.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScales.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScales.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScales">
+	<summary>
+ Espace de nom pour les options d'échelles.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksLinear.BeginAtZero">
+	<summary>
+ Definie si le zéro est inclus.
+ </summary>
+	<value>Definie si le zéro est inclus.</value>
+	<returns>Definie si le zéro est inclus.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksLinear.Min">
+	<summary>
+ Nombre minimum fixe de l'échelle.
+ </summary>
+	<value>Nombre minimum fixe de l'échelle.</value>
+	<returns>Nombre minimum fixe de l'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksLinear.Max">
+	<summary>
+ Nombre maximum fixe de l'échelle.
+ </summary>
+	<value>Nombre maximum fixe de l'échelle.</value>
+	<returns>Nombre maximum fixe de l'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksLinear.MaxTicksLimit">
+	<summary>
+ Nombre maximum de marqueurs.
+ </summary>
+	<value>Nombre maximum de marqueurs.</value>
+	<returns>Nombre maximum de marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksLinear.StepSize">
+	<summary>
+ Definie le pas de l'échelle.
+ </summary>
+	<value>Definie le pas de l'échelle.</value>
+	<returns>Definie le pas de l'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksLinear.SuggestedMax">
+	<summary>
+ Nombre maximum de l'échelle. Peut-être modifié si les données dépassent cette valeur.
+ </summary>
+	<value>Nombre maximum de l'échelle. Peut-être modifié si les données dépassent cette valeur.</value>
+	<returns>Nombre maximum de l'échelle. Peut-être modifié si les données dépassent cette valeur.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicksLinear.SuggestedMin">
+	<summary>
+ Nombre minimum de l'échelle. Peut-être modifié si les données dépassent cette valeur.
+ </summary>
+	<value>Nombre minimum de l'échelle. Peut-être modifié si les données dépassent cette valeur.</value>
+	<returns>Nombre minimum de l'échelle. Peut-être modifié si les données dépassent cette valeur.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleTicksLinear.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleTicksLinear">
+	<summary>
+ Configuration des marqueurs d'échelle linéaire.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.BeforeTitle">
+	<summary>
+ Texte à afficher avant le titre.
+ </summary>
+	<value>Texte à afficher avant le titre.</value>
+	<returns>Texte à afficher avant le titre.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.Title">
+	<summary>
+ Texte du titre.
+ </summary>
+	<value>Texte du titre.</value>
+	<returns>Texte du titre.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.AfterTitle">
+	<summary>
+ Texte a afficher aprés le titre.
+ </summary>
+	<value>Texte a afficher aprés le titre.</value>
+	<returns>Texte a afficher aprés le titre.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.BeforeBody">
+	<summary>
+ Texte à afficher avant le corps de texte.
+ </summary>
+	<value>Texte à afficher avant le corps de texte.</value>
+	<returns>Texte à afficher avant le corps de texte.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.BeforeLabel">
+	<summary>
+ Texte à afficher avant le libellé d'un élément.
+ </summary>
+	<value>Texte à afficher avant le libellé d'un élément.</value>
+	<returns>Texte à afficher avant le libellé d'un élément.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.Label">
+	<summary>
+ Texte à afficher comme libellé pour un élément.
+ </summary>
+	<value>Texte à afficher comme libellé pour un élément.</value>
+	<returns>Texte à afficher comme libellé pour un élément.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.LabelColor">
+	<summary>
+ Couleur.
+ </summary>
+	<value>Couleur du libellé pour un élément.</value>
+	<returns>Couleur.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.AfterLabel">
+	<summary>
+ Texte a afficher aprés le libellé d'un élément.
+ </summary>
+	<value>Texte a afficher aprés le libellé d'un élément.</value>
+	<returns>Texte a afficher aprés le libellé d'un élément.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.AfterBody">
+	<summary>
+ Texte à afficher aprés le corps du texte.
+ </summary>
+	<value>Texte à afficher aprés le corps du texte.</value>
+	<returns>Texte à afficher aprés le corps du texte.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.BeforeFooter">
+	<summary>
+ Texte à afficher avant le pied de page.
+ </summary>
+	<value>Texte à afficher avant le pied de page.</value>
+	<returns>Texte à afficher avant le pied de page.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.Footer">
+	<summary>
+ Texte du pied de page.
+ </summary>
+	<value>Texte du pied de page.</value>
+	<returns>Texte du pied de page.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.AfterFooter">
+	<summary>
+ Texte affiché aprés le pied de page.
+ </summary>
+	<value>Texte affiché aprés le pied de page.</value>
+	<returns>Texte affiché aprés le pied de page.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationTooltipCallbacks.DataPoints">
+	<summary>
+ La liste des points affichés dans la bulle d'aide.
+ </summary>
+	<value>La liste des points affichés dans la bulle d'aide.</value>
+	<returns>La liste des points affichés dans la bulle d'aide.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationTooltipCallbacks.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationTooltipCallbacks.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationTooltipCallbacks">
+	<summary>
+ Méthode Javascript permettant de configurer les bulles d'aides.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.AutoSkip">
+	<summary>
+ Détermine automatiquement les marqueurs à afficher.
+ </summary>
+	<value>Détermine automatiquement les marqueurs à afficher.</value>
+	<returns>Détermine automatiquement les marqueurs à afficher.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.AutoSkipPadding">
+	<summary>
+ Espacement horizontal entre les marqueurs, seulement quand AutoSkip est actif.
+ </summary>
+	<value>Espacement horizontal entre les marqueurs, seulement quand AutoSkip est actif.</value>
+	<returns>Espacement horizontal entre les marqueurs, seulement quand AutoSkip est actif.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.Display">
+	<summary>
+ Affichage des marqueurs.
+ </summary>
+	<value>Affichage des marqueurs.</value>
+	<returns>Affichage des marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.FontColor">
+	<summary>
+ Couleur des labels des marqueurs.
+ </summary>
+	<value>Couleur des labels des marqueurs.</value>
+	<returns>Couleur des labels des marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.FontFamily">
+	<summary>
+ Font des labels des marqueurs.
+ </summary>
+	<value>Font des labels des marqueurs.</value>
+	<returns>Font des labels des marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.FontSize">
+	<summary>
+ Tailles des labels des marqueurs.
+ </summary>
+	<value>Tailles des labels des marqueurs.</value>
+	<returns>Tailles des labels des marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.FontStyle">
+	<summary>
+ Style des labels des marqueurs.
+ </summary>
+	<value>Style des labels des marqueurs.</value>
+	<returns>Style des labels des marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.LabelOffset">
+	<summary>
+ Distance qui sépare le label du marqueur.
+ </summary>
+	<value>Distance qui sépare le label du marqueur.</value>
+	<returns>Distance qui sépare le label du marqueur.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.MaxRotation">
+	<summary>
+ Rotation maximale des labels des marqueurs.
+ </summary>
+	<value>Rotation maximale des labels des marqueurs.</value>
+	<returns>Rotation maximale des labels des marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.MinRotation">
+	<summary>
+ Rotation minimale des labels des marqueurs.
+ </summary>
+	<value>Rotation minimale des labels des marqueurs.</value>
+	<returns>Rotation minimale des labels des marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.Mirror">
+	<summary>
+ Affichage inversé des labels des marqueurs.
+ </summary>
+	<value>Affichage inversé des labels des marqueurs.</value>
+	<returns>Affichage inversé des labels des marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.Padding">
+	<summary>
+ Espacement entre le label, le marqueur et l'axe.
+ </summary>
+	<value>Espacement entre le label, le marqueur et l'axe.</value>
+	<returns>Espacement entre le label, le marqueur et l'axe.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleTicks.Reverse">
+	<summary>
+ Inverse l'ordre des labels des marqueurs.
+ </summary>
+	<value>Inverse l'ordre des labels des marqueurs.</value>
+	<returns>Inverse l'ordre des labels des marqueurs.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleTicks.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleTicks.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleTicks">
+	<summary>
+ Configuration des marqueurs d'axe.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleLabel.Display">
+	<summary>
+ Affichage du titre de l'axe.
+ </summary>
+	<value>Affichage du titre de l'axe.</value>
+	<returns>Affichage du titre de l'axe.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleLabel.LabelString">
+	<summary>
+ Titre de l'axe.
+ </summary>
+	<value>Titre de l'axe.</value>
+	<returns>Titre de l'axe.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleLabel.FontColor">
+	<summary>
+ Couleur du titre.
+ </summary>
+	<value>Couleur du titre.</value>
+	<returns>Couleur du titre.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleLabel.FontFamily">
+	<summary>
+ Font du titre.
+ </summary>
+	<value>Font du titre.</value>
+	<returns>Font du titre.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleLabel.FontSize">
+	<summary>
+ Taille du titre.
+ </summary>
+	<value>Taille du titre.</value>
+	<returns>Taille du titre.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleLabel.FontStyle">
+	<summary>
+ Style du titre.
+ </summary>
+	<value>Style du titre.</value>5
+ <returns>Style du titre.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleLabel.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleLabel.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleLabel">
+	<summary>
+ Configuration du titre de l'axe.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.Display">
+	<summary>
+ Affichage des lignes de l'axe.
+ </summary>
+	<value>Affichage des lignes de l'axe.</value>
+	<returns>Affichage des lignes de l'axe.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.Color">
+	<summary>
+ Couleur des lignes.
+ </summary>
+	<value>Couleur des lignes.</value>
+	<returns>Couleur des lignes.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.BorderDash">
+	<summary>
+ Longueur et espaces des pointillés.
+ </summary>
+	<value>Longueur et espaces des pointillés.</value>
+	<returns>Longueur et espaces des pointillés.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.BorderDashOffset">
+	<summary>
+ Décalage des pointillés.
+ </summary>
+	<value>Décalage des pointillés.</value>
+	<returns>Décalage des pointillés.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.LineWidth">
+	<summary>
+ Largeur des lignes.
+ </summary>
+	<value>Largeur des lignes.</value>
+	<returns>Largeur des lignes.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.DrawBorder">
+	<summary>
+ Affichage de la bordure du graphique.
+ </summary>
+	<value>Affichage de la bordure du graphique.</value>
+	<returns>Affichage de la bordure du graphique.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.DrawOnChartArea">
+	<summary>
+ Affichage des lignes dans la zone d'affichage du graphique.
+ </summary>
+	<value>Affichage des lignes dans la zone d'affichage du graphique.</value>
+	<returns>Affichage des lignes dans la zone d'affichage du graphique.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.DrawTicks">
+	<summary>
+ Affichage des marqueurs.
+ </summary>
+	<value>Affichage des marqueurs.</value>
+	<returns>Affichage des marqueurs.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.TickMarkLength">
+	<summary>
+ Largeur des marqueurs dans la zone d'affichage du graphique.
+ </summary>
+	<value>Largeur des marqueurs dans la zone d'affichage du graphique.</value>
+	<returns>Largeur des marqueurs dans la zone d'affichage du graphique.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.ZeroLineWidth">
+	<summary>
+ Largeur de la ligne du premier index.
+ </summary>
+	<value>Largeur de la ligne du premier index.</value>
+	<returns>Largeur de la ligne du premier index.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.ZeroLineColor">
+	<summary>
+ Couleur de la ligne du premier index.
+ </summary>
+	<value>Couleur de la ligne du premier index.</value>
+	<returns>Couleur de la ligne du premier index.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleGridLine.OffsetGridLines">
+	<summary>
+ Positionne les labels des marqueurs entre les lignes.
+ </summary>
+	<value>Positionne les labels des marqueurs entre les lignes.</value>
+	<returns>Positionne les labels des marqueurs entre les lignes.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleGridLine.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleGridLine.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleGridLine">
+	<summary>
+ Configuration des lignes de l'axe.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadialLabels.FontColor">
+	<summary>
+ Couleur de la police.
+ </summary>
+	<value>Couleur de la police.</value>
+	<returns>Couleur de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadialLabels.FontFamily">
+	<summary>
+ Nom de la police à utiliser.
+ </summary>
+	<value>Nom de la police à utiliser.</value>
+	<returns>Nom de la police à utiliser.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadialLabels.FontSize">
+	<summary>
+ Indique la taille de la police.
+ </summary>
+	<value>Indique la taille de la police.</value>
+	<returns>Indique la taille de la police.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadialLabels.FontStyle">
+	<summary>
+ Style de la police.
+ </summary>
+	<value>Style de la police.</value>
+	<returns>Style de la police.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeRadialLabels.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeRadialLabels.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleAxeRadialLabels">
+	<summary>
+ Configuration des labels d'un axe de type radial.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadialAngles.Display">
+	<summary>
+ Affichage des lignes d'angles.
+ </summary>
+	<value>Affichage des lignes d'angles.</value>
+	<returns>Affichage des lignes d'angles.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadialAngles.Color">
+	<summary>
+ Couleur des lignes.
+ </summary>
+	<value>Couleur des lignes.</value>
+	<returns>Couleur des lignes.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeRadialAngles.LineWidth">
+	<summary>
+ Largeur des lignes.
+ </summary>
+	<value>Largeur des lignes.</value>
+	<returns>Largeur des lignes.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeRadialAngles.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeRadialAngles.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleAxeRadialAngles">
+	<summary>
+ Configuration des lignes des angles d'un axe de type radial.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeLinear.Ticks">
+	<summary>
+ Configuration des marqueurs d'échelle.
+ </summary>
+	<value>Configuration des marqueurs d'échelle.</value>
+	<returns>Configuration des marqueurs d'échelle.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeLinear.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeLinear.SpecialAddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Propriétés pour un axe de type linéaire.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleAxeLinear">
+	<summary>
+ Configuration des axes X et Y pour une échelle de type linéaire.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeCollection.Item(System.Int32)">
+	<summary>
+ Elément à ajouter.
+ </summary>
+	<param name="p_i_index">Index de l'élément.</param>
+	<value>Elément à ajouter.</value>
+	<returns>Elément à ajouter.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeCollection.Count">
+	<summary>
+ Obtient le nombre d'éléments contenus dans le <see cref="T:System.Collections.Generic.ICollection`1"/>.
+ </summary>
+	<value></value>
+	<returns>Nombre d'éléments contenus dans <see cref="T:System.Collections.Generic.ICollection`1"/>.
+ </returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxeCollection.IsReadOnly">
+	<summary>
+ Obtient une valeur indiquant si <see cref="T:System.Collections.Generic.ICollection`1"/> est en lecture
+ seule.
+ </summary>
+	<value></value>
+	<returns>true si <see cref="T:System.Collections.Generic.ICollection`1"/> est en lecture seule ; sinon,
+ false.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeCollection.Add(Corail.Web.Chart.ConfigurationScaleAxe)">
+	<summary>
+ Ajoute un élément à <see cref="T:System.Collections.Generic.ICollection`1"/>.
+ </summary>
+	<param name="p_o_item">Elément à ajouter.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeCollection.Clear">
+	<summary>
+ Supprime tous les éléments de <see cref="T:System.Collections.Generic.ICollection`1"/>.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeCollection.Contains(Corail.Web.Chart.ConfigurationScaleAxe)">
+	<summary>
+ Détermine si <see cref="T:System.Collections.Generic.ICollection`1"/> contient une valeur spécifique.
+ </summary>
+	<param name="p_o_item">Elément à rechercher.</param>
+	<returns>True si <paramref name="item"/> existe dans <see cref="T:System.Collections.Generic.ICollection`1"/> ; sinon, false.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeCollection.CopyTo(Corail.Web.Chart.ConfigurationScaleAxe[],System.Int32)">
+	<summary>
+ Copie les éléments de <see cref="T:System.Collections.Generic.ICollection`1"/> dans <see cref="T:System.Array"/>, en commençant à un index particulier de <see cref="T:System.Array"/>.
+ </summary>
+	<param name="p_o_array"><see cref="T:System.Array"/> unidimensionnel qui constitue la destination des
+ éléments copiés à partir d'<see cref="T:System.Collections.Generic.ICollection`1"/>. <see cref="T:System.Array"/> doit avoir une indexation de base zéro.</param>
+	<param name="p_i_index"></param>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeCollection.Remove(Corail.Web.Chart.ConfigurationScaleAxe)">
+	<summary>
+ Supprime la première occurrence d'un objet spécifique de <see cref="T:System.Collections.Generic.ICollection`1"/>.
+ </summary>
+	<param name="p_o_item">Elément à supprimer.</param>
+	<returns>True si <paramref name="item"/> a été correctement supprimé de <see cref="T:System.Collections.Generic.ICollection`1"/> ; sinon false. Cette méthode retourne également false
+ si <paramref name="item"/> est introuvable dans le <see cref="T:System.Collections.Generic.ICollection`1"/> d'origine.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeCollection.GetEnumerator">
+	<summary>
+ Retourne l'enumerator.
+ </summary>
+	<returns>L'enumerator.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxeCollection.GetEnumeratorI">
+	<summary>
+ Retourne l'enumerator.
+ </summary>
+	<returns>L'enumerator.</returns>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleAxeCollection">
+	<summary>
+ Définition d'un axe X ou Y.
+ </summary>
+</member><member name="F:Corail.Web.Chart.ConfigurationScaleAxe.m_o_ticks">
+ Configuration des marqueurs de l'échelle.
+
+</member><member name="F:Corail.Web.Chart.ConfigurationScaleAxe.m_e_type">
+ Type de l'échelle.
+
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxe.Type">
+	<summary>
+ Type d'échelle.
+ </summary>
+	<value>Type d'échelle.</value>
+	<returns>Type d'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxe.Display">
+	<summary>
+ Affichage de l'échelle.
+ </summary>
+	<value>Affichage de l'échelle.</value>
+	<returns>Affichage de l'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxe.Position">
+	<summary>
+ Position de l'échelle.
+ </summary>
+	<value>Position de l'échelle.</value>
+	<returns>Position de l'échelle.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxe.Id">
+	<summary>
+ Identifiant permettant de lier l'axe aux datasets.
+ </summary>
+	<value>Identifiant permettant de lier l'axe aux datasets.</value>
+	<returns>Identifiant permettant de lier l'axe aux datasets.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxe.ScaleLabel">
+	<summary>
+ Définition du titre de l'axe.
+ </summary>
+	<value>Définition du titre de l'axe.</value>
+	<returns>Définition du titre de l'axe.</returns>
+</member><member name="P:Corail.Web.Chart.ConfigurationScaleAxe.GridLines">
+	<summary>
+ Définition des lignes de l'échelle.
+ </summary>
+	<value>Définition des lignes de l'échelle.</value>
+	<returns>Définition des lignes de l'échelle.</returns>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxe.#ctor(System.String)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Object"/>.
+ </summary>
+	<param name="p_s_type">Type d'axe.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxe.AddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Ajoute les valeurs de l'espace de nom à la classe JSON de l'espace de nom.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="M:Corail.Web.Chart.ConfigurationScaleAxe.SpecialAddValuesToJson(Corail.Web.Chart.JSON.JSonClass)">
+	<summary>
+ Propriétés particulières pour chaque type d'axe.
+ </summary>
+	<param name="p_o_node">Classe JSON représentant l'espace de nom dans la configuration.</param>
+</member><member name="T:Corail.Web.Chart.ConfigurationScaleAxe">
+	<summary>
+ Espace de nom pour les options d'échelles.
+ </summary>
+</member><member name="F:Corail.Web.Chart.ChartJSonAttribute.m_b_allowNull">
+ Indique si le tableau JSON généré peut contenir la valeur "null".
+
+</member><member name="F:Corail.Web.Chart.ChartJSonAttribute.m_s_attributeName">
+ Nom de l'attribut.
+
+</member><member name="F:Corail.Web.Chart.ChartJSonAttribute.m_i_attributeType">
+ Type d'attribut.
+
+</member><member name="P:Corail.Web.Chart.ChartJSonAttribute.AllowNull">
+	<summary>
+ Indique si le tableau JSON généré peut contenir la valeur "null".
+ </summary>
+	<value><c>True</c> si le tableau JSON généré peut contenir la valeur "null"; <c>False</c> sinon.</value>
+	<returns><c>True</c> si le tableau JSON généré peut contenir la valeur "null"; <c>False</c> sinon.
+ </returns>
+</member><member name="P:Corail.Web.Chart.ChartJSonAttribute.AttributeName">
+	<summary>
+ Nom de l'attribut.
+ </summary>
+	<value>Nom de l'attribut.</value>
+	<returns>Nom de l'attribut.</returns>
+</member><member name="P:Corail.Web.Chart.ChartJSonAttribute.AttributeType">
+	<summary>
+ Type d'attribut.
+ </summary>
+	<value>Type d'attribut.</value>
+	<returns>Type d'attribut.</returns>
+</member><member name="M:Corail.Web.Chart.ChartJSonAttribute.#ctor(Corail.Web.Chart.JSonAttributeType,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_i_attributeType">Type d'attribut.</param>
+	<param name="p_b_allowNull">Indique si le tableau JSON généré peut contenir la valeur "null".</param>
+</member><member name="M:Corail.Web.Chart.ChartJSonAttribute.#ctor(System.String,Corail.Web.Chart.JSonAttributeType,System.Boolean)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_attributeName">Nom de l'attribut.</param>
+	<param name="p_i_attributeType">Type d'attribut.</param>
+	<param name="p_b_allowNlull">Indique si le tableau JSON généré peut contenir la valeur "null".</param>
+</member><member name="T:Corail.Web.Chart.ChartJSonAttribute">
+	<summary>
+ Attribut permettant de relié une propriété à un attribut JSON.
+ </summary>
+</member><member name="F:Corail.Web.Chart.ChartJSonAttributeData.m_b_allowNull">
+ Indique si le tableau JSON généré peut contenir la valeur "null".
+
+</member><member name="F:Corail.Web.Chart.ChartJSonAttributeData.m_s_attributeName">
+ Nom de l'attribut.
+
+</member><member name="F:Corail.Web.Chart.ChartJSonAttributeData.m_i_attributeType">
+ Type d'attribut.
+
+</member><member name="F:Corail.Web.Chart.ChartJSonAttributeData.m_s_propertyName">
+ Nom de la propriété.
+
+</member><member name="P:Corail.Web.Chart.ChartJSonAttributeData.AllowNull">
+	<summary>
+ Indique si le tableau JSON généré peut contenir la valeur "null".
+ </summary>
+	<value><c>True</c> si le tableau JSON généré peut contenir la valeur "null"; <c>False</c> sinon.</value>
+	<returns><c>True</c> si le tableau JSON généré peut contenir la valeur "null"; <c>False</c> sinon.
+ </returns>
+</member><member name="P:Corail.Web.Chart.ChartJSonAttributeData.AttributeName">
+	<summary>
+ Nom de l'attribut.
+ </summary>
+	<value>Nom de l'attribut.</value>
+	<returns>Nom de l'attribut.</returns>
+</member><member name="P:Corail.Web.Chart.ChartJSonAttributeData.AttributeType">
+	<summary>
+ Type d'attribut.
+ </summary>
+	<value>Type d'attribut.</value>
+	<returns>Type d'attribut.</returns>
+</member><member name="P:Corail.Web.Chart.ChartJSonAttributeData.PropertyName">
+	<summary>
+ Nom de la propriété.
+ </summary>
+	<value>Nom de la propriété.</value>
+	<returns>Nom de la propriété.</returns>
+</member><member name="M:Corail.Web.Chart.ChartJSonAttributeData.#ctor(System.String,Corail.Web.Chart.ChartJSonAttribute)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_propertyName">Nom de la propriété.</param>
+	<param name="p_o_attribute">Attribut décrivant l'attribut JSON.</param>
+</member><member name="T:Corail.Web.Chart.ChartJSonAttributeData">
+	<summary>
+ Données liant une propriété à un attribut du JSON généré.
+ </summary>
+</member><member name="M:Corail.Web.Chart.ChartDatasetCollectionSimple`1.Add">
+	<summary>
+ Ajoute un nouveau jeux de données.
+ </summary>
+	<returns>Ajoute un nouveau jeux de données.</returns>
+</member><member name="T:Corail.Web.Chart.ChartDatasetCollectionSimple`1">
+	<summary>
+ Ensemble de série de jeux de données.
+ </summary>
+</member><member name="P:Corail.Web.Chart.ChartDataItem`1.Value">
+	<summary>
+ Valeur.
+ </summary>
+	<value>Valeur.</value>
+	<returns>Valeur.</returns>
+</member><member name="T:Corail.Web.Chart.ChartDataItem`1">
+	<summary>
+ Donnée à représenter dans le graphique.
+ </summary>
+</member><member name="F:Corail.Web.Chart.ChartClickEventArg.m_i_datasetIndex">
+ Index du jeux de données.
+
+</member><member name="F:Corail.Web.Chart.ChartClickEventArg.m_i_itemIndex">
+ Index de la valeur dans le jrux de données.
+
+</member><member name="P:Corail.Web.Chart.ChartClickEventArg.DatasetIndex">
+	<summary>
+ Index du jeux de données.
+ </summary>
+	<value>Index du jeux de données.</value>
+	<returns>Index du jeux de données.</returns>
+</member><member name="P:Corail.Web.Chart.ChartClickEventArg.ItemIndex">
+	<summary>
+ Index de la valeur dans le jeux de données.
+ </summary>
+	<value>Index de la valeur dans le jeux de données.</value>
+	<returns>Index de la valeur dans le jeux de données.</returns>
+</member><member name="M:Corail.Web.Chart.ChartClickEventArg.#ctor(System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_data">Information sur l'élément sur lequel on a cliqué.</param>
+</member><member name="T:Corail.Web.Chart.ChartClickEventArg">
+	<summary>
+ Arguments lorsque qu l'on clique sur un élément du graphique.
+ </summary>
+</member>
+</members>
+</doc>

@@ -961,6 +961,15 @@ Corail.Core
 	<param name="p_s_file">Nom du fichier à récupérer dans l'assembly</param>
 	<param name="p_b_desc">Indique si on doit partir du dernier enregistré vers le premier.</param>
 	<returns>Un flux de donnée sur le fichier spécifié</returns>
+</member><member name="M:Corail.Core.ApplicationManager.TemporaryHorribleFixForCharts">
+	<summary>
+ Alix, j'ai pas trouvé la cause ... juste "corrigé" la conséquence pour Corail.Chart
+ En gros, après un recyclage du pool (iis), la variable m_o_resLibraries ne contient plus le type Corail.Chart
+ Du coup, lorqu'on cherche a recupérer les resources à l'intérieur de ce type (notament un JS dans ce cas) bah ca marche pas ^^
+ 
+ Le code ci-après ajoute le Corail.Chart si manquant dans la variable "m_o_resLibraries" mais présent dans les Assemblies chargées.
+ </summary>
+	<remarks>TODO Alix : Je te laisse corriger la cause ^^</remarks>
 </member><member name="M:Corail.Core.ApplicationManager.RegisterLibraries">
 	<summary>
  Enregistre la liste des DLL utilisées pour la recherche de resources incorporées.
@@ -1084,6 +1093,11 @@ Corail.Core
 	<param name="p_s_lng">Langue.</param>
 	<param name="p_o_args">Arguments à passer au constructeur.</param>
 	<returns>Retourne la chaine correspondant à la clé.</returns>
+</member><member name="M:Corail.Core.ApplicationManager.GetDicoDT">
+	<summary>
+ Retourne la liste des traductions multilingues.
+ </summary>
+	<returns>La liste des traductions multilingues.</returns>
 </member><member name="M:Corail.Core.ApplicationManager.InitDatabases">
 	<summary>
  Méthode permettant de charger la liste des bases de données qui
@@ -2215,42 +2229,38 @@ Corail.Core
 	<param name="p_s_file">Nom du fichier XML.</param>
 	<param name="p_b_needed"><c>true</c> si une erreur doit être déclenché si le fichier XML n'est pas trouvé, <c>false</c> sinon.</param>
 	<returns>Le flux contenant le XML.</returns>
-</member><member name="M:Corail.Core.DicoSourceXml.#ctor(System.IO.Stream)">
+</member><member name="F:Corail.Core.DicoSourceXml.m_o_doc">
+ Document XML
+
+</member><member name="F:Corail.Core.DicoSourceXml.m_o_root">
+ Element racine
+
+</member><member name="F:Corail.Core.DicoSourceXml.m_s_source">
+ Nom de l'assembly associé au fichier "Dico.xml".
+
+</member><member name="F:Corail.Core.DicoSourceXml.m_b_app">
+ Indique s'il s'agit du dictionnaire de l'application.
+
+</member><member name="M:Corail.Core.DicoSourceXml.#ctor(System.IO.Stream,System.String,System.Boolean)">
 	<summary>
  Initialise une nouvelle instance de la classe <see cref="T:Corail.Core.DicoSourceXml"/>.
  </summary>
-</member><member name="M:Corail.Core.DicoSourceXml.AddLanguages">
+	<param name="p_o_stream">Flux contenant les données du fichier.</param>
+	<param name="p_s_source">Nom de l'assembly associé au fichier "Dico.xml".</param>
+	<param name="p_b_app">Indique s'il s'agit du dictionnaire de l'application.</param>
+</member><member name="M:Corail.Core.DicoSourceXml.GetLanguages">
 	<summary>
  Enregistrement des langues du fichier.
  </summary>
-</member><member name="M:Corail.Core.DicoSourceXml.AddStrings">
+</member><member name="M:Corail.Core.DicoSourceXml.UpdateTranslations(Corail.Core.DicoMultilingual)">
 	<summary>
- Enregistrement des traductions du fichier.
+ Met à jour les dictionnaires de langues.
  </summary>
-</member><member name="M:Corail.Core.DicoSourceXml.GetString(System.Xml.XmlNode)">
+	<param name="p_o_translation">Ensemble des dictionnaires de langues.</param>
+</member><member name="T:Corail.Core.DicoSourceXml">
 	<summary>
- Retourne le mot correspondant au noeud du fichier XML.
+ Fichier XML contenant les traductions.
  </summary>
-	<param name="p_o_node">Noeud XML.</param><returns></returns>
-</member><member name="P:Corail.Core.DicoString.Key">
-	<summary>
- Clé.
- </summary>
-</member><member name="P:Corail.Core.DicoString.Translation(System.String)">
-	<summary>
- Retourne la traduction pour la langue demandée ou Nothing si la traduction n'existe pas.
- </summary>
-</member><member name="M:Corail.Core.DicoString.#ctor(System.String)">
-	<summary>
- Initialise une nouvelle version de la classe <see cref="T:Corail.Core.DicoString"/>.
- </summary>
-	<param name="p_s_key">Clé.</param>
-</member><member name="M:Corail.Core.DicoString.AddTranslation(System.String,System.String)">
-	<summary>
- Ajout d'une nouvelle traduction.
- </summary>
-	<param name="p_s_lng">Langue.</param>
-	<param name="p_s_translation">Traduction.</param>
 </member><member name="M:Corail.Core.DicoSourceXmlFile.#ctor(System.String)">
 	<summary>
  Initialise une nouvelle instance de la classe <see cref="T:Corail.Core.DicoSourceXmlResource"/>.
@@ -2262,6 +2272,29 @@ Corail.Core
  </summary>
 	<param name="p_s_file">Nom du fichier XML.</param>
 	<returns>Le flux contenant le XML.</returns>
+</member><member name="T:Corail.Core.DicoSourceXmlFile">
+	<summary>
+ Fichier XML contenant les traductions.
+ </summary>
+</member><member name="P:Corail.Core.DicoSourceList.Count">
+	<summary>
+ Nombre d'éléments.
+ </summary>
+	<value>Nombre d'éléments.</value>
+	<returns>Nombre d'éléments.</returns>
+</member><member name="P:Corail.Core.DicoSourceList.Item(System.Int32)">
+	<summary>
+ Elément.
+ </summary>
+	<param name="p_i_index">Index de l'élément.</param>
+	<value>Elément.</value>
+	<returns>Elément.</returns>
+</member><member name="P:Corail.Core.DicoSourceList.MainSource">
+	<summary>
+ Retourne le dictionnaire de l'application principale.
+ </summary>
+	<value>Le dictionnaire de l'application principale.</value>
+	<returns>Le dictionnaire de l'application principale.</returns>
 </member><member name="M:Corail.Core.DicoSourceList.AddFromFile(System.String)">
 	<summary>
  Ajoute des traductions à partir d'un fichier XML.
@@ -2280,13 +2313,13 @@ Corail.Core
  </summary><returns>
  Objet <see cref="T:System.Collections.IEnumerator"/> pouvant être utilisé pour parcourir la collection.
  </returns>
-</member><member name="P:Corail.Core.DicoSource.Manager">
+</member><member name="T:Corail.Core.DicoSourceList">
 	<summary>
- Obtient ou définit le gestionnaire de langues.
+ Liste des fichier XML source pour les traductions.
  </summary>
-	<value>
- Obtient ou définit le gestionnaire de langues.
- </value>
+</member><member name="F:Corail.Core.DicoSource.m_o_languages">
+ Langues du fichier.
+
 </member><member name="P:Corail.Core.DicoSource.Languages">
 	<summary>
  Gets the languages.
@@ -2295,32 +2328,19 @@ Corail.Core
 	<summary>
  Retourne la langue par défaut dans le fichier.
  </summary>
-</member><member name="M:Corail.Core.DicoSource.AddLanguages">
+</member><member name="M:Corail.Core.DicoSource.GetLanguages">
 	<summary>
- Enregistrement des langues du fichier.
+ Retourne la liste des langues définies dans le fichier.
  </summary>
-</member><member name="M:Corail.Core.DicoSource.AddStrings">
+	<returns>La liste des langues définies dans le fichier.</returns>
+</member><member name="M:Corail.Core.DicoSource.UpdateTranslations(Corail.Core.DicoMultilingual)">
 	<summary>
- Enregistrement des traductions du fichier.
+ Met à jour les dictionnaires de langues.
  </summary>
-</member><member name="M:Corail.Core.DicoSource.AddLanguage(System.String,System.String)">
+	<param name="p_o_translation">Ensemble des dictionnaires de langues.</param>
+</member><member name="T:Corail.Core.DicoSource">
 	<summary>
- Indique qu'une langue est définie dans le fichier dictionnaire.
- </summary>
-	<param name="p_s_lng">Langue.</param>
-	<param name="p_s_culture">Culture.</param>
-</member><member name="M:Corail.Core.DicoSource.AddString(Corail.Core.DicoString)">
-	<summary>
- Ajoute une nouvelle traduction au dictionnaire.
- </summary>
-	<param name="p_o_string">Clé avec les traductions.</param>
-</member><member name="P:Corail.Core.LanguageManager.Languages">
-	<summary>
- Liste des langues disponibles
- </summary>
-</member><member name="P:Corail.Core.LanguageManager.DefaultLanguage">
-	<summary>
- Langue a utilisée par défaut
+ Source permettant de charger le dictionnaire.
  </summary>
 </member><member name="M:Corail.Core.LanguageManager.#ctor(System.String)">
 	<summary>
@@ -2340,41 +2360,39 @@ Corail.Core
  Chargement et compilation des différents dictionnaires.
  </summary>
 	<param name="p_o_list">Liste des dictionnaires.</param>
-</member><member name="M:Corail.Core.LanguageManager.Clear">
+</member><member name="M:Corail.Core.LanguageManager.GetLanguages">
 	<summary>
- On vide le dictionnaire de traduction
+ Retourne la liste des langues disponibles pour l'application.
  </summary>
-</member><member name="M:Corail.Core.LanguageManager.IncreaseLanguageNumber(System.Int32)">
+	<returns>La liste des langues disponibles pour l'application.</returns>
+</member><member name="M:Corail.Core.LanguageManager.GetExistingLanguage(System.String)">
 	<summary>
- On augment le nombre de langues alors que le dictionnaire a déjà commencé
- a être remplis
- </summary>
-</member><member name="M:Corail.Core.LanguageManager.AddLanguage(System.String,System.String)">
-	<summary>
- Indique qu'une langue est définie dans le fichier dictionnaire.
+ Retourne le code de langue à utiliser à partir d'un code de langue demandé. (Si la langue n'existe pas
+ dans le dictionnaire).
  </summary>
 	<param name="p_s_lng">Langue.</param>
-	<param name="p_s_culture">Culture.</param>
-</member><member name="M:Corail.Core.LanguageManager.AddString(Corail.Core.DicoString)">
-	<summary>
- Ajoute une nouvelle traduction au dictionnaire.
- </summary>
-	<param name="p_o_string">Clé avec les traductions.</param>
+	<returns>Le code de langue à utiliser à partir d'un code de langue demandé. (Si la langue n'existe pas
+ dans le dictionnaire).</returns>
 </member><member name="M:Corail.Core.LanguageManager.GetCulture(System.String)">
 	<summary>
  Retourne la culture associée à la langue.
  </summary>
 	<returns>La culture associée à la langue.</returns>
-</member><member name="M:Corail.Core.LanguageManager.ExtrapolateCulture(System.String)">
-	<summary>
- On essaye de deviner la culture.
- </summary>
-	<param name="p_s_lng">Langue.</param>
-	<returns>La culture la plus probable.</returns>
 </member><member name="M:Corail.Core.LanguageManager.GetString(System.String,System.String)">
 	<summary>
  On retourne la chaine de caractères correspondante à la langue
  </summary>
+</member><member name="M:Corail.Core.LanguageManager.GetDicoDT">
+	<summary>
+ Retourne une jeux de données contenant toutes les langues du dictionnaire.
+ </summary>
+	<returns>Une jeux de données contenant toutes les langues du dictionnaire.</returns>
+</member><member name="M:Corail.Core.LanguageManager.GetOld(Corail.Core.DicoEntryCollection)">
+	<summary>
+ Retourne les définitions des textes dans les composants.
+ </summary>
+	<param name="p_o_entries">Entrée pour les traductions.</param>
+	<returns>Les définitions des textes dans les composants.</returns>
 </member><member name="T:Corail.Core.LanguageManager">
 	<summary>
  Gestionnaire multilangue.
@@ -2637,91 +2655,257 @@ Corail.Core
 	<summary>
  Permet de sérialiser une liste de chaines.
  </summary>
-</member><member name="F:Corail.Core.LanguageCollection.m_o_index">
- Dictionnaire permettant de retrouver l'index par rapport au code de la langue.
-
-</member><member name="F:Corail.Core.LanguageCollection.m_o_list">
+</member><member name="F:Corail.Core.DicoMultilingual.m_o_languages">
  Liste des langues.
 
-</member><member name="P:Corail.Core.LanguageCollection.Item(System.Int32)">
+</member><member name="F:Corail.Core.DicoMultilingual.m_o_dico">
+ Dictionnaires par langues.
+
+</member><member name="P:Corail.Core.DicoMultilingual.Languages">
 	<summary>
- La langue correspondant à l'index.
+ Liste des langues disponibles pour l'application.
  </summary>
-	<param name="p_i_index">Index.</param>
-	<value>La langue correspondant à l'index.</value>
-	<returns>La langue correspondant à l'index.</returns>
-</member><member name="M:Corail.Core.LanguageCollection.IndexOf(System.String)">
+	<value>Liste des langues disponibles pour l'application.</value>
+	<returns>Liste des langues disponibles pour l'application.</returns>
+</member><member name="P:Corail.Core.DicoMultilingual.Dictionaries">
 	<summary>
- Retourne l'index de la langue.
+ Liste des dictionnaires de langues disponibles pour l'application.
  </summary>
-	<param name="p_s_lngCode">Code de la langue.</param>
-	<returns>L'index de la langue.</returns>
-</member><member name="M:Corail.Core.LanguageCollection.Contains(System.String)">
+	<value>Liste des dictionnaires de langues disponibles pour l'application.</value>
+	<returns>Liste des dictionnaires de langues disponibles pour l'application.</returns>
+</member><member name="M:Corail.Core.DicoMultilingual.#ctor(Corail.Core.DicoLanguageCollection)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_languages">Liste des langues disponibles pour l'application.</param>
+</member><member name="M:Corail.Core.DicoMultilingual.GetDefaultLanguage">
+	<summary>
+ Retourne la langue par défaut (La première définie dans le fichier "Dico.xml").
+ </summary>
+	<returns>La langue par défaut (La première définie dans le fichier "Dico.xml").</returns>
+</member><member name="M:Corail.Core.DicoMultilingual.GetExistingLanguage(System.String)">
+	<summary>
+ Retourne le code de langue à utiliser à partir d'un code de langue demandé. (Si la langue n'existe pas
+ dans le dictionnaire).
+ </summary>
+	<param name="p_s_lng">Langue.</param>
+	<returns>Le code de langue à utiliser à partir d'un code de langue demandé. (Si la langue n'existe pas
+ dans le dictionnaire).</returns>
+</member><member name="M:Corail.Core.DicoMultilingual.GetString(System.String,System.String)">
+	<summary>
+ Retourne la chaine correspondant à la clée et à la langue.
+ </summary>
+	<param name="p_s_key">Clé de la valeur dans le dictionnaire.</param>
+	<param name="p_s_lng">Langue.</param>
+	<returns>La chaine correspondant à la clée et à la langue.</returns>
+</member><member name="M:Corail.Core.DicoMultilingual.GetAllKeys(System.Boolean)">
+	<summary>
+ Retourne la liste de toutes les clés disponibles dans le dictionnaire.
+ </summary>
+	<param name="p_b_sorted">Indique si la liste doit être triée par ordre alphabéthique.</param>
+	<returns>La liste de toutes les clés disponibles dans le dictionnaire.</returns>
+</member><member name="T:Corail.Core.DicoMultilingual">
+	<summary>
+ Objet contenant les dictionnaires pour gérer le multi-lingue dans les applications.
+ </summary>
+</member><member name="F:Corail.Core.DicoLanguageWithDictionary.m_o_strings">
+ Le dictionaire des traductions (Accès rapide...)
+
+</member><member name="F:Corail.Core.DicoLanguageWithDictionary.m_o_sources">
+ Dictionnaire avec la source de chaque chaine.
+
+</member><member name="M:Corail.Core.DicoLanguageWithDictionary.#ctor(Corail.Core.DicoLanguage)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_lng">Langue.</param>
+</member><member name="M:Corail.Core.DicoLanguageWithDictionary.UpdateTranslation(System.String,System.String,System.String)">
+	<summary>
+ Met à jour la traduction pour la clé dans la langue en cours.
+ </summary>
+	<param name="p_s_source">Nom de l'assembly associé au fichier "Dico.xml".</param>
+	<param name="p_s_key">Clé de la valeur dans le dictionnaire.</param>
+	<param name="p_s">Texte remplçant la clé.</param>
+</member><member name="M:Corail.Core.DicoLanguageWithDictionary.GetString(System.String)">
+	<summary>
+ Retourne la traduction pour une clée donnée.
+ </summary>
+	<param name="p_s_key">Clé de la valeur dans le dictionnaire.</param>
+	<returns>La traduction pour une clée donnée.</returns>
+</member><member name="M:Corail.Core.DicoLanguageWithDictionary.GetAllKeys">
+	<summary>
+ Retourne la liste des clés définies.
+ </summary>
+	<returns>La liste des clés définies.</returns>
+</member><member name="M:Corail.Core.DicoLanguageWithDictionary.GetEntries(System.String)">
+	<summary>
+ Retourne la liste des définitions pour un mot clé dans les différents assemblies.
+ </summary>
+	<param name="p_s_key">Clé de la valeur dans le dictionnaire.</param>
+	<returns>La liste des définitions pour un mot clé dans les différents assemblies.</returns>
+</member><member name="T:Corail.Core.DicoLanguageWithDictionary">
+	<summary>
+ Ensemble des traductions pour une langue.
+ </summary>
+</member><member name="F:Corail.Core.DicoLanguageCollection.m_o_list">
+ Liste de langues.
+
+</member><member name="M:Corail.Core.DicoLanguageCollection.Contains(System.String)">
 	<summary>
  Indique si le code de la langue a déja été ajouté à la liste.
  </summary>
 	<param name="p_s_lngCode">Langue.</param>
 	<returns><c>True</c> si le code de la langue a déja été ajouté à la liste; <c>False</c> sinon.</returns>
-</member><member name="M:Corail.Core.LanguageCollection.Clear">
+</member><member name="P:Corail.Core.DicoLanguageCollection.Count">
 	<summary>
- Vider la liste des langues.
+ Nombre d'éléments.
  </summary>
-</member><member name="M:Corail.Core.LanguageCollection.Add(System.String)">
+	<value>Nombre d'éléments.</value>
+	<returns>Nombre d'éléments.</returns>
+</member><member name="P:Corail.Core.DicoLanguageCollection.DefaultLanguage">
 	<summary>
- Ajoute une nouvelle langue à la liste.
+ Retourne la langue par défaut dans le fichier.
  </summary>
-	<param name="p_s_lngCode">Code de la langue.</param>
-</member><member name="M:Corail.Core.LanguageCollection.GetEnumerator">
+</member><member name="P:Corail.Core.DicoLanguageCollection.Item(System.Int32)">
 	<summary>
- Retourne un énumérateur qui parcourt la collection.
+ Elément.
  </summary>
-	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour parcourir la
- collection.</returns>
-</member><member name="M:Corail.Core.LanguageCollection.GetEnumeratorUntyped">
+	<param name="p_i_index">Index de l'élément.</param>
+	<value>Elément.</value>
+	<returns>Elément.</returns>
+</member><member name="P:Corail.Core.DicoLanguageCollection.Item(System.String)">
 	<summary>
- Retourne un énumérateur qui parcourt la collection.
+ Elément.
  </summary>
-	<returns><see cref="T:System.Collections.IEnumerator"/> pouvant être utilisé pour parcourir la
- collection.</returns>
-</member><member name="T:Corail.Core.LanguageCollection">
+	<param name="p_s_code">Code représentant une langue.</param>
+	<value>Elément.</value>
+	<returns>Elément.</returns>
+</member><member name="M:Corail.Core.DicoLanguageCollection.Clear">
+	<summary>
+ Vider la liste.
+ </summary>
+</member><member name="M:Corail.Core.DicoLanguageCollection.Add(System.String,System.String)">
+	<summary>
+ Ajoute un nouvel élément.
+ </summary>
+	<param name="p_s_lng">Langue.</param>
+	<param name="p_s_culture">Culture.</param>
+</member><member name="M:Corail.Core.DicoLanguageCollection.GetEnumerator">
+	<summary>
+ Retourne un énumérateur qui itère au sein de la collection.
+ </summary>
+	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour itérer au
+ sein de la collection.</returns>
+</member><member name="M:Corail.Core.DicoLanguageCollection.GetEnumeratorRaw">
+	<summary>
+ Retourne un énumérateur qui itère au sein de la collection.
+ </summary>
+	<returns><see cref="T:System.Collections.Generic.IEnumerator`1"/> pouvant être utilisé pour itérer au
+ sein de la collection.</returns>
+</member><member name="T:Corail.Core.DicoLanguageCollection">
 	<summary>
  Liste de langues.
  </summary>
-</member><member name="F:Corail.Core.Language.m_s_code">
- Code de la langue.
+</member><member name="F:Corail.Core.DicoLanguage.m_s_code">
+ Langue.
 
-</member><member name="F:Corail.Core.Language.m_s_englishName">
+</member><member name="F:Corail.Core.DicoLanguage.m_s_culture">
+ Culture.
+
+</member><member name="F:Corail.Core.DicoLanguage.m_s_englishName">
  Nom de la langue.
 
-</member><member name="F:Corail.Core.Language.m_s_name">
+</member><member name="F:Corail.Core.DicoLanguage.m_s_name">
  Nom de la langue.
 
-</member><member name="P:Corail.Core.Language.Code">
+</member><member name="P:Corail.Core.DicoLanguage.Code">
 	<summary>
- Code de la langue.
+ Langue.
  </summary>
-	<value>Code de la langue.</value>
-	<returns>Code de la langue.</returns>
-</member><member name="P:Corail.Core.Language.EnglishName">
+	<value>Langue.</value>
+	<returns>Langue.</returns>
+</member><member name="P:Corail.Core.DicoLanguage.Culture">
+	<summary>
+ Culture associée à la langue ("en-US", "fr-FR", ...).
+ </summary>
+	<value>Culture associée à la langue ("en-US", "fr-FR", ...).</value>
+	<returns>Culture associée à la langue ("en-US", "fr-FR", ...).</returns>
+</member><member name="P:Corail.Core.DicoLanguage.EnglishName">
 	<summary>
  Nom de la langue en Anglais.
  </summary>
 	<value>Nom de la langue en Anglais.</value>
 	<returns>Nom de la langue en Anglais.</returns>
-</member><member name="P:Corail.Core.Language.Name">
+</member><member name="P:Corail.Core.DicoLanguage.Name">
 	<summary>
  Nom de la langue issue du dictionnaire.
  </summary>
 	<value>Nom de la langue issue du dictionnaire.</value>
 	<returns>Nom de la langue issue du dictionnaire.</returns>
-</member><member name="M:Corail.Core.Language.#ctor(System.String)">
+</member><member name="P:Corail.Core.DicoLanguage.FullName">
+	<summary>
+ Retourne le nom avec le nom en anglais s'il est différent.
+ </summary>
+	<value>Le nom avec le nom en anglais s'il est différent.</value>
+	<returns>Le nom avec le nom en anglais s'il est différent.</returns>
+</member><member name="M:Corail.Core.DicoLanguage.#ctor(System.String,System.String)">
 	<summary>
  Initialisation d'une nouvelle instance de la classe.
  </summary>
-	<param name="p_s_code">Code de la langue.</param>
-</member><member name="T:Corail.Core.Language">
+	<param name="p_s_lng">Langue.</param>
+	<param name="p_s_culture">Culture.</param>
+</member><member name="M:Corail.Core.DicoLanguage.#ctor(Corail.Core.DicoLanguage)">
 	<summary>
- Langue à utiliser dans l'interface.
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_o_lng">Création par clonnage.</param>
+</member><member name="M:Corail.Core.DicoLanguage.ExtrapolateCulture(System.String)">
+	<summary>
+ On essaye de deviner la culture.
+ </summary>
+	<param name="p_s_lng">Langue.</param>
+	<returns>La culture la plus probable.</returns>
+</member><member name="T:Corail.Core.DicoLanguage">
+	<summary>
+ Langue et culture définie dans un dictionnaire.
+ </summary>
+</member><member name="M:Corail.Core.DicoException.#ctor(System.String)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:System.Exception"/> avec un message d'erreur
+ spécifié.
+ </summary>
+	<param name="p_s_message">Description de l'erreur.</param>
+</member><member name="T:Corail.Core.DicoException">
+	<summary>
+ Erreur lors de l'utilisation du dictionnaire multilingue;.
+ </summary>
+</member><member name="F:Corail.Core.DicoEntry.m_s_source">
+ Nom de l'assembly associé au fichier "Dico.xml".
+
+</member><member name="F:Corail.Core.DicoEntry.m_s_string">
+ Chaine de caractères.
+
+</member><member name="P:Corail.Core.DicoEntry.Source">
+	<summary>
+ Nom de l'assembly associé au fichier "Dico.xml".
+ </summary>
+	<value>Nom de l'assembly associé au fichier "Dico.xml".</value>
+	<returns>Nom de l'assembly associé au fichier "Dico.xml".</returns>
+</member><member name="P:Corail.Core.DicoEntry.String">
+	<summary>
+ Chaine de caractères.
+ </summary>
+	<value>Chaine de caractères.</value>
+	<returns>Chaine de caractères.</returns>
+</member><member name="M:Corail.Core.DicoEntry.#ctor(System.String,System.String)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_s_source">Nom de l'assembly associé au fichier "Dico.xml".</param>
+	<param name="p_s_string">Chaine de caractères.</param>
+</member><member name="T:Corail.Core.DicoEntry">
+	<summary>
+ Entrée dans un fichier "Dico.xml".
  </summary>
 </member><member name="F:Corail.Core.TransactionManager.m_o_transactions">
  Liste des transactions ouvertes.
@@ -3517,17 +3701,19 @@ Corail.Core
 	<param name="p_s_table">Table.</param>
 	<param name="p_s_foreignTable">Table étrangère.</param>
 	<returns>Le nom de la relation</returns>
-</member><member name="M:Corail.Core.SchemaRules.GetConstraintName(Corail.Core.SchemaColumn)">
+</member><member name="M:Corail.Core.SchemaRules.GetConstraintName(Corail.Core.SchemaColumn,System.String)">
 	<summary>
  Retourne le nom d'une contrainte.
  </summary>
 	<param name="p_o_column">Informations sur la colonne.</param>
-</member><member name="M:Corail.Core.SchemaRules.GetConstraintName(System.String,System.String)">
+	<param name="p_s_suffix">Suffixe</param>
+</member><member name="M:Corail.Core.SchemaRules.GetConstraintName(System.String,System.String,System.String)">
 	<summary>
  Retourne le nom d'une contrainte.
  </summary>
 	<param name="p_s_table">Table.</param>
 	<param name="p_s_field">Champ.</param><returns></returns>
+	<param name="p_s_suffix">Suffixe</param>
 </member><member name="M:Corail.Core.SchemaRules.GetSequenceName(Corail.Core.SchemaColumn)">
 	<summary>
  Retourne le nom d'une sequence.
@@ -4625,6 +4811,19 @@ Corail.Core
  </summary>
 	<param name="p_ab_data">Données.</param>
 	<returns>La representation en Hexadecimal des données.</returns>
+</member><member name="M:Corail.Core.SyntaxManager.StrToBlob(System.String,System.Int32)">
+	<summary>
+ Retourne la chaine formatée pour l'insertion dans un champ de type BLOB.
+ </summary>
+	<param name="p_s_value">Valeur à utiliser.</param>
+	<param name="p_i_index">Index.</param>
+	<returns>La commande avec la chaine paramétrée.</returns>
+</member><member name="M:Corail.Core.SyntaxManager.BlobToStr(System.Object)">
+	<summary>
+ Converti un tableau d'octets en chaine de caractères.
+ </summary>
+	<param name="p_a_bytes">Tableau d'octets.</param>
+	<returns>La chaine de caractères.</returns>
 </member><member name="M:Corail.Core.SyntaxManager.TestIs(System.String,System.String,System.Boolean)">
 	<summary>
  Retourne un chaine contenant le texte permettant de comparer le champ et
