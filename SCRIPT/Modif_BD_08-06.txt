@@ -1,0 +1,47 @@
+
+alter table VTL_REMBOURSMT drop column VTL_REMBOURSMT_NAME;
+alter table VTL_REMBOURSMT drop column VTL_REMBOURSMT_STATUT;
+
+alter table VTL_CONTRAT add VTL_CONTRAT_TXREMB NUMERIC(3,2) NOT NULL;
+
+alter table VTL_REMBOURSMT add VTL_REMBOURSMT_MONTANT NUMERIC(9,2) NOT NULL ;
+alter table VTL_REMBOURSMT add VTL_REMBOURSMT_STATUT INT NOT NULL ;
+
+
+
+-- "Creation de la table VTL_STATUT"
+CREATE TABLE VTL_STATUT (
+	VTL_STATUT_ID INT IDENTITY(1,1) NOT NULL,
+	VTL_STATUT_NAME NVARCHAR(50) NOT NULL
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Statut', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_STATUT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_STATUT', @level2type=N'COLUMN',@level2name=N'VTL_STATUT_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Name', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_STATUT', @level2type=N'COLUMN',@level2name=N'VTL_STATUT_NAME'
+GO
+
+
+-- "Creation de la clef primaire de la table VTL_STATUT"
+ALTER TABLE VTL_STATUT
+ADD CONSTRAINT VTL_STATUT_PK PRIMARY KEY (VTL_STATUT_ID)
+GO
+
+-- "Ajout du role ROLE_VITAL_USER sur la table VTL_STATUT "
+GRANT SELECT,INSERT,UPDATE,DELETE ON VTL_STATUT TO VITL;
+GO
+
+
+-- "Creation de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_STATUT"
+ALTER TABLE VTL_REMBOURSMT
+ADD CONSTRAINT VTL_REMBOURSMT_STATUT_VTL_STATUT_FK FOREIGN KEY (VTL_REMBOURSMT_STATUT)
+	REFERENCES VTL_STATUT(VTL_STATUT_ID);
+GO
+
+	
+
+
+
+

@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 04/06/2017                                     */
+/* Historique  : Creation le 08/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -73,6 +73,7 @@ CREATE TABLE VTL_ANIMAL (
 	VTL_ANIMAL_ID_TYPE INT,
 	VTL_ANIMAL_ID_PROP INT,
 	VTL_ANIMAL_IMAGE VARBINARY(MAX)
+  CONSTRAINT VTL_ANIMAL_ID_CARTE_CK UNIQUE (VTL_ANIMAL_ID_CARTE)
 )
 GO
 
@@ -233,7 +234,8 @@ CREATE TABLE VTL_CONTRAT (
 	VTL_CONTRAT_DT_FIN DATE,
 	VTL_CONTRAT_ID_ANIMAL INT,
 	VTL_CONTRAT_ID_PROPRIETAIRE INT,
-	VTL_CONTRAT_ID_ASSURANCE INT
+	VTL_CONTRAT_ID_ASSURANCE INT,
+	VTL_CONTRAT_TXREMB NUMERIC(3,2) NOT NULL
 )
 GO
 
@@ -252,6 +254,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_proprietaire', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONTRAT', @level2type=N'COLUMN',@level2name=N'VTL_CONTRAT_ID_PROPRIETAIRE'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id_assurance', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONTRAT', @level2type=N'COLUMN',@level2name=N'VTL_CONTRAT_ID_ASSURANCE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'TxRemb', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_CONTRAT', @level2type=N'COLUMN',@level2name=N'VTL_CONTRAT_TXREMB'
 GO
 
 
@@ -402,11 +406,11 @@ GO
 -- "Creation de la table VTL_REMBOURSMT"
 CREATE TABLE VTL_REMBOURSMT (
 	VTL_REMBOURSMT_ID INT IDENTITY(1,1) NOT NULL,
-	VTL_REMBOURSMT_NAME NVARCHAR(50) NOT NULL,
 	VTL_REMBOURSMT_DATE DATETIME2(0) NOT NULL,
-	VTL_REMBOURSMT_STATUT NVARCHAR(50),
 	VTL_REMBOURSMT_CONSULT INT,
-	VTL_REMBOURSMT_CONTRAT INT
+	VTL_REMBOURSMT_CONTRAT INT,
+	VTL_REMBOURSMT_MONTANT NUMERIC(9,2) NOT NULL,
+	VTL_REMBOURSMT_STATUT INT NOT NULL
 )
 GO
 
@@ -414,15 +418,30 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Remboursement'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_ID'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Name', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_NAME'
-GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Date', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_DATE'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Statut', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_STATUT'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Consult', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_CONSULT'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Contrat', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_CONTRAT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Montant', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_MONTANT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Statut', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_REMBOURSMT', @level2type=N'COLUMN',@level2name=N'VTL_REMBOURSMT_STATUT'
+GO
+
+
+-- "Creation de la table VTL_STATUT"
+CREATE TABLE VTL_STATUT (
+	VTL_STATUT_ID INT IDENTITY(1,1) NOT NULL,
+	VTL_STATUT_NAME NVARCHAR(50) NOT NULL
+)
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Statut', @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_STATUT'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_STATUT', @level2type=N'COLUMN',@level2name=N'VTL_STATUT_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Name', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_STATUT', @level2type=N'COLUMN',@level2name=N'VTL_STATUT_NAME'
 GO
 
 

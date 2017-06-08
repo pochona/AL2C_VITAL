@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Suppression des objets existants                           */
-/* Historique  : Creation le 04/06/2017                                     */
+/* Historique  : Creation le 08/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -42,6 +42,10 @@ GO
 -- "Suppression de la clef etrangere de la table VTL_TRAITEMENT_MEDICAMENT vers la table VTL_TRAITREMENT"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT_VTL_TRAITREMENT_FK' AND type in (N'F'))
 ALTER TABLE VTL_TRAITEMENT_MEDICAMENT DROP CONSTRAINT VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT_VTL_TRAITREMENT_FK;
+GO
+-- "Suppression de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_STATUT"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT_STATUT_VTL_STATUT_FK' AND type in (N'F'))
+ALTER TABLE VTL_REMBOURSMT DROP CONSTRAINT VTL_REMBOURSMT_STATUT_VTL_STATUT_FK;
 GO
 -- "Suppression de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_CONTRAT"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT_CONTRAT_VTL_CONTRAT_FK' AND type in (N'F'))
@@ -183,6 +187,14 @@ GO
 -- "Suppression de la clef primaire de la table VTL_TRAITEMENT_MEDICAMENT_HISTO"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_TRAITEMENT_MEDICAMENT_HISTO_PK' AND type in (N'PK'))
 ALTER TABLE VTL_TRAITEMENT_MEDICAMENT_HISTO DROP CONSTRAINT VTL_TRAITEMENT_MEDICAMENT_HISTO_PK;
+GO
+-- "Suppression de la clef primaire de la table VTL_STATUT"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_STATUT_PK' AND type in (N'PK'))
+ALTER TABLE VTL_STATUT DROP CONSTRAINT VTL_STATUT_PK;
+GO
+-- "Suppression de la clef primaire de la table VTL_STATUT_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_STATUT_HISTO_PK' AND type in (N'PK'))
+ALTER TABLE VTL_STATUT_HISTO DROP CONSTRAINT VTL_STATUT_HISTO_PK;
 GO
 -- "Suppression de la clef primaire de la table VTL_REMBOURSMT"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT_PK' AND type in (N'PK'))
@@ -368,6 +380,14 @@ GO
 -- "Suppression de la table VTL_TRAITEMENT_MEDICAMENT_HISTO"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_TRAITEMENT_MEDICAMENT_HISTO' AND type in (N'U'))
 DROP TABLE VTL_TRAITEMENT_MEDICAMENT_HISTO;
+GO
+-- "Suppression de la table VTL_STATUT"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_STATUT' AND type in (N'U'))
+DROP TABLE VTL_STATUT;
+GO
+-- "Suppression de la table VTL_STATUT_HISTO"
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_STATUT_HISTO' AND type in (N'U'))
+DROP TABLE VTL_STATUT_HISTO;
 GO
 -- "Suppression de la table VTL_REMBOURSMT"
 IF EXISTS (SELECT * FROM sys.objects WHERE name = N'VTL_REMBOURSMT' AND type in (N'U'))

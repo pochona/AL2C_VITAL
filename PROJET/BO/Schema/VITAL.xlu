@@ -45,7 +45,7 @@
         <Column Name="VTL_ANIMAL_DT_NAISSANCE" Type="DateTime" DateKind="Date" Label="Dt_naissance" PropertyName="Dt_naissance" Comment="Dt_naissance" />
         <Column Name="VTL_ANIMAL_DT_DECES" Type="DateTime" DateKind="Date" Label="Dt_deces" PropertyName="Dt_deces" Comment="Dt_deces" />
         <Column Name="VTL_ANIMAL_ID_RACE" Type="Integer" Precision="10" Label="Id_race" PropertyName="Id_race" PropertyNullValue="0" Comment="Id_race" />
-        <Column Name="VTL_ANIMAL_ID_CARTE" Type="Integer" Precision="10" Label="Id_carte" PropertyName="Id_carte" PropertyNullValue="0" Comment="Id_carte" />
+        <Column Name="VTL_ANIMAL_ID_CARTE" Type="Integer" Precision="10" Unique="true" Label="Id_carte" PropertyName="Id_carte" PropertyNullValue="0" Comment="Id_carte" />
         <Column Name="VTL_ANIMAL_ID_TYPE" Type="Integer" Precision="10" Label="Id_type" PropertyName="Id_type" PropertyNullValue="0" Comment="Id_type" />
         <Column Name="VTL_ANIMAL_ID_PROP" Type="Integer" Precision="10" Label="Id_prop" PropertyName="Id_prop" PropertyNullValue="0" Comment="Id_prop" />
         <Column Name="VTL_ANIMAL_IMAGE" Type="String" Label="Image" PropertyName="Image" Comment="Image" />
@@ -144,6 +144,7 @@
         <Column Name="VTL_CONTRAT_ID_ANIMAL" Type="Integer" Precision="10" Label="Id_animal" PropertyName="Id_animal" PropertyNullValue="0" Comment="Id_animal" />
         <Column Name="VTL_CONTRAT_ID_PROPRIETAIRE" Type="Integer" Precision="10" Label="Id_proprietaire" PropertyName="Id_proprietaire" PropertyNullValue="0" Comment="Id_proprietaire" />
         <Column Name="VTL_CONTRAT_ID_ASSURANCE" Type="Integer" Precision="10" Label="Id_assurance" PropertyName="Id_assurance" PropertyNullValue="0" Comment="Id_assurance" />
+        <Column Name="VTL_CONTRAT_TXREMB" Type="Double" Scale="2" Precision="3" AllowNull="false" Label="TxRemb" PropertyName="TxRemb" Comment="TxRemb" />
       </Columns>
       <Relations>
         <Relation Name="VTL_CONTRAT_ID_ANIMAL_VTL_ANIMAL_FK">
@@ -236,11 +237,11 @@
     <Table Name="VTL_REMBOURSMT" ClassName="Remboursement" Label="Remboursement" Comment="Remboursement" OldNames="~temp636313259180001671,VTL_REMBOURSEMENT" Param="True">
       <Columns>
         <Column Name="VTL_REMBOURSMT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
-        <Column Name="VTL_REMBOURSMT_NAME" Type="String" MaxLength="50" AllowNull="false" Label="Name" PropertyName="Name" Comment="Name" />
         <Column Name="VTL_REMBOURSMT_DATE" Type="DateTime" AllowNull="false" Label="Date" PropertyName="Date" Comment="Date" />
-        <Column Name="VTL_REMBOURSMT_STATUT" Type="String" MaxLength="50" Label="Statut" PropertyName="Statut" Comment="Statut" />
         <Column Name="VTL_REMBOURSMT_CONSULT" Type="Integer" Precision="10" Label="Consult" PropertyName="Consult" PropertyNullValue="0" Comment="Consult" />
         <Column Name="VTL_REMBOURSMT_CONTRAT" Type="Integer" Precision="10" Label="Contrat" PropertyName="Contrat" PropertyNullValue="0" Comment="Contrat" />
+        <Column Name="VTL_REMBOURSMT_MONTANT" Type="Double" Scale="2" Precision="9" AllowNull="false" Label="Montant" PropertyName="Montant" Comment="Montant" />
+        <Column Name="VTL_REMBOURSMT_STATUT" Type="Integer" Precision="10" AllowNull="false" Label="Statut" PropertyName="Statut" Comment="Statut" />
       </Columns>
       <Relations>
         <Relation Name="VTL_REMBOURSMT_CONSULT_VTL_CONSULTATION_FK">
@@ -249,7 +250,17 @@
         <Relation Name="VTL_REMBOURSMT_CONTRAT_VTL_CONTRAT_FK">
           <Link ColumnName="VTL_REMBOURSMT_CONTRAT" ForeignTableName="VTL_CONTRAT" ForeignFieldName="VTL_CONTRAT_ID" />
         </Relation>
+        <Relation Name="VTL_REMBOURSMT_STATUT_VTL_STATUT_FK">
+          <Link ColumnName="VTL_REMBOURSMT_STATUT" ForeignTableName="VTL_STATUT" ForeignFieldName="VTL_STATUT_ID" />
+        </Relation>
       </Relations>
+    </Table>
+    <Table Name="VTL_STATUT" ClassName="Statut" Label="Statut" Comment="Statut" OldNames="~temp636325410401522717,VITAL_STATUT" Param="True">
+      <Columns>
+        <Column Name="VTL_STATUT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
+        <Column Name="VTL_STATUT_NAME" Type="String" MaxLength="50" AllowNull="false" Label="Name" PropertyName="Name" Comment="Name" />
+      </Columns>
+      <Relations />
     </Table>
     <Table Name="VTL_TRAITEMENT_MEDICAMENT" ClassName="Traitement_medicament" Label="Traitement_medicament" Comment="Liste des médicaments compris dans un traitement" OldNames="~temp636291753605953995,VITAL_TRAITEMENT_MEDICAMENT" Param="True">
       <Columns>

@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des objets                                        */
-/* Historique  : Creation le 04/06/2017                                     */
+/* Historique  : Creation le 08/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -94,6 +94,11 @@ GO
 -- "Creation de la clef primaire de la table VTL_REMBOURSMT"
 ALTER TABLE VTL_REMBOURSMT
 ADD CONSTRAINT VTL_REMBOURSMT_PK PRIMARY KEY (VTL_REMBOURSMT_ID)
+GO
+
+-- "Creation de la clef primaire de la table VTL_STATUT"
+ALTER TABLE VTL_STATUT
+ADD CONSTRAINT VTL_STATUT_PK PRIMARY KEY (VTL_STATUT_ID)
 GO
 
 -- "Creation de la clef primaire de la table VTL_TRAITEMENT_MEDICAMENT"
@@ -259,6 +264,12 @@ GO
 ALTER TABLE VTL_REMBOURSMT
 ADD CONSTRAINT VTL_REMBOURSMT_CONTRAT_VTL_CONTRAT_FK FOREIGN KEY (VTL_REMBOURSMT_CONTRAT)
 	REFERENCES VTL_CONTRAT(VTL_CONTRAT_ID);
+GO
+
+-- "Creation de la clef etrangere de la table VTL_REMBOURSMT vers la table VTL_STATUT"
+ALTER TABLE VTL_REMBOURSMT
+ADD CONSTRAINT VTL_REMBOURSMT_STATUT_VTL_STATUT_FK FOREIGN KEY (VTL_REMBOURSMT_STATUT)
+	REFERENCES VTL_STATUT(VTL_STATUT_ID);
 GO
 
 -- "Creation de la clef etrangere de la table VTL_TRAITEMENT_MEDICAMENT vers la table VTL_TRAITREMENT"

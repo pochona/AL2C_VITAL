@@ -102,6 +102,11 @@
         Public Const VTL_REMBOURSMT As String = "VTL_REMBOURSMT"
 
         ''' <summary>
+        ''' Statut.
+        ''' </summary>
+        Public Const VTL_STATUT As String = "VTL_STATUT"
+
+        ''' <summary>
         ''' Liste des médicaments compris dans un traitement.
         ''' </summary>
         Public Const VTL_TRAITEMENT_MEDICAMENT As String = "VTL_TRAITEMENT_MEDICAMENT"
@@ -594,6 +599,11 @@
         ''' </summary>
         Public Const VTL_CONTRAT_ID_ASSURANCE As String = "VTL_CONTRAT_ID_ASSURANCE"
 
+        ''' <summary>
+        ''' TxRemb.
+        ''' </summary>
+        Public Const VTL_CONTRAT_TXREMB As String = "VTL_CONTRAT_TXREMB"
+
     End Class
 
 #End Region
@@ -894,29 +904,9 @@
         Public Const VTL_REMBOURSMT_ID As String = "VTL_REMBOURSMT_ID"
 
         ''' <summary>
-        ''' Name.
-        ''' </summary>
-        Public Const VTL_REMBOURSMT_NAME As String = "VTL_REMBOURSMT_NAME"
-
-        ''' <summary>
-        ''' Name (Maxlen).
-        ''' </summary>
-        Public Const VTL_REMBOURSMT_NAME_MAXLEN As Integer = 50
-
-        ''' <summary>
         ''' Date.
         ''' </summary>
         Public Const VTL_REMBOURSMT_DATE As String = "VTL_REMBOURSMT_DATE"
-
-        ''' <summary>
-        ''' Statut.
-        ''' </summary>
-        Public Const VTL_REMBOURSMT_STATUT As String = "VTL_REMBOURSMT_STATUT"
-
-        ''' <summary>
-        ''' Statut (Maxlen).
-        ''' </summary>
-        Public Const VTL_REMBOURSMT_STATUT_MAXLEN As Integer = 50
 
         ''' <summary>
         ''' Consult.
@@ -927,6 +917,43 @@
         ''' Contrat.
         ''' </summary>
         Public Const VTL_REMBOURSMT_CONTRAT As String = "VTL_REMBOURSMT_CONTRAT"
+
+        ''' <summary>
+        ''' Montant.
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_MONTANT As String = "VTL_REMBOURSMT_MONTANT"
+
+        ''' <summary>
+        ''' Statut.
+        ''' </summary>
+        Public Const VTL_REMBOURSMT_STATUT As String = "VTL_REMBOURSMT_STATUT"
+
+    End Class
+
+#End Region
+
+#Region "VTL_STATUT - Statut"
+
+    ''' <summary>
+    ''' Statut.
+    ''' </summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public NotInheritable Class VTL_STATUT
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+        Public Const VTL_STATUT_ID As String = "VTL_STATUT_ID"
+
+        ''' <summary>
+        ''' Name.
+        ''' </summary>
+        Public Const VTL_STATUT_NAME As String = "VTL_STATUT_NAME"
+
+        ''' <summary>
+        ''' Name (Maxlen).
+        ''' </summary>
+        Public Const VTL_STATUT_NAME_MAXLEN As Integer = 50
 
     End Class
 
@@ -1373,6 +1400,8 @@
             If Race.HasCache Then Race.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Remboursement
             If Remboursement.HasCache Then Remboursement.CacheClear(p_b_force)
+            ' Clear cache pour les items de la classe Statut
+            If Statut.HasCache Then Statut.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Traitement_medicament
             If Traitement_medicament.HasCache Then Traitement_medicament.CacheClear(p_b_force)
             ' Clear cache pour les items de la classe Traitrement
@@ -2052,6 +2081,46 @@
 
         ''' <summary>
         ''' Initialise une nouvelle instance de la classe <see cref="Remboursement" />.
+        ''' </summary>
+        ''' <param name="p_o_row">Ligne d'une table de données.</param>
+        Protected Sub New(p_o_row As DataRow)
+            Load(p_o_row)
+        End Sub
+
+#End Region
+
+    End Class
+
+#End Region
+
+#Region "Statut - Statut"
+
+    <Serializable()> 
+    Partial Public Class Statut
+        Inherits Auto.Statut
+
+#Region "Initialisation"
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Statut" />.
+        ''' </summary>
+        ''' <param name="p_i_iD">ID.</param>
+        ''' <param name="p_o_trans">Transaction à utiliser.</param>
+        Public Sub New(p_i_iD As Integer, Optional p_o_trans As Transaction = Nothing)
+            ' Chargement des informations
+            Load(p_i_iD, p_o_trans)
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Statut" />.
+        ''' </summary>
+        Public Sub New()
+            ' Initialisation des valeurs de propriétés 
+            InitDefaultValues()
+        End Sub
+
+        ''' <summary>
+        ''' Initialise une nouvelle instance de la classe <see cref="Statut" />.
         ''' </summary>
         ''' <param name="p_o_row">Ligne d'une table de données.</param>
         Protected Sub New(p_o_row As DataRow)

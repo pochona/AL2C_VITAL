@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<title>Statut</title>
+	<description>Statut</description>
+	<columns>
+		<col DataField="VTL_STATUT_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
+		<col DataField="VTL_STATUT_NAME" Type="Text" Unique="false" HeaderText="Name" NotNull="true" MaxLen="50" />
+	</columns>
+</table>

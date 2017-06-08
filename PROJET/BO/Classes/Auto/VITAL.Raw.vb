@@ -2456,6 +2456,11 @@
         ''' </summary>
 		Private m_i_id_assurance As Integer
 
+        ''' <summary>
+        ''' TxRemb.
+        ''' </summary>
+		Private m_d_txRemb As Double
+
 #End Region
 
 #Region "Propriétés publiques"
@@ -2607,6 +2612,25 @@
             End Set
         End Property
 
+        ''' <summary>
+        ''' TxRemb.
+        ''' Champ associé : VTL_CONTRAT.VTL_CONTRAT_TXREMB.
+        ''' </summary>
+        ''' <value>
+        ''' TxRemb.
+        ''' </value>
+		Public Overridable Property TxRemb As Double
+            Get
+				Return m_d_txRemb
+            End Get
+			Set(value As Double)
+                If m_d_txRemb <> value Then
+                    m_d_txRemb = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
 #End Region
 
 #Region "Constantes publiques"
@@ -2674,6 +2698,8 @@
             p_o_target.m_i_id_proprietaire = m_i_id_proprietaire
             ' Colonne : m_i_id_assurance
             p_o_target.m_i_id_assurance = m_i_id_assurance
+            ' Colonne : m_d_txRemb
+            p_o_target.m_d_txRemb = m_d_txRemb
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -2692,6 +2718,7 @@
 			m_i_id_animal = NzInt(p_o_row!VTL_CONTRAT_ID_ANIMAL, 0)
 			m_i_id_proprietaire = NzInt(p_o_row!VTL_CONTRAT_ID_PROPRIETAIRE, 0)
 			m_i_id_assurance = NzInt(p_o_row!VTL_CONTRAT_ID_ASSURANCE, 0)
+			m_d_txRemb = CDbl(p_o_row!VTL_CONTRAT_TXREMB)
             HasChanges = False
         End Sub
 
@@ -2707,6 +2734,7 @@
 			p_o_row("VTL_CONTRAT_ID_ANIMAL") = Id_animal
 			p_o_row("VTL_CONTRAT_ID_PROPRIETAIRE") = Id_proprietaire
 			p_o_row("VTL_CONTRAT_ID_ASSURANCE") = Id_assurance
+			p_o_row("VTL_CONTRAT_TXREMB") = TxRemb
         End Sub
 
         ''' <summary>
@@ -2736,6 +2764,9 @@
             End If
             If p_o_object.Id_assurance <> Id_assurance Then
                 l_o_dicDiff.Add(VITAL.VTL_CONTRAT.VTL_CONTRAT_ID_ASSURANCE, {p_o_object.Id_assurance,Id_assurance})
+            End If
+            If p_o_object.TxRemb <> TxRemb Then
+                l_o_dicDiff.Add(VITAL.VTL_CONTRAT.VTL_CONTRAT_TXREMB, {p_o_object.TxRemb,TxRemb})
             End If
             Return l_o_dicDiff
         End Function
@@ -4456,19 +4487,9 @@
 		Private m_i_iD As Integer
 
         ''' <summary>
-        ''' Name.
-        ''' </summary>
-		Private m_s_name As String
-
-        ''' <summary>
         ''' Date.
         ''' </summary>
 		Private m_dt_date As DateTime
-
-        ''' <summary>
-        ''' Statut.
-        ''' </summary>
-		Private m_s_statut As String
 
         ''' <summary>
         ''' Consult.
@@ -4479,6 +4500,16 @@
         ''' Contrat.
         ''' </summary>
 		Private m_i_contrat As Integer
+
+        ''' <summary>
+        ''' Montant.
+        ''' </summary>
+		Private m_d_montant As Double
+
+        ''' <summary>
+        ''' Statut.
+        ''' </summary>
+		Private m_i_statut As Integer
 
 #End Region
 
@@ -4518,25 +4549,6 @@
         End Sub
 
         ''' <summary>
-        ''' Name.
-        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_NAME.
-        ''' </summary>
-        ''' <value>
-        ''' Name.
-        ''' </value>
-		Public Overridable Property Name As String
-            Get
-				Return m_s_name
-            End Get
-			Set(value As String)
-                If m_s_name <> value Then
-                    m_s_name = value
-                    HasChanges = True
-                End If
-            End Set
-        End Property
-
-        ''' <summary>
         ''' Date.
         ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_DATE.
         ''' </summary>
@@ -4550,25 +4562,6 @@
 			Set(value As DateTime)
                 If m_dt_date <> value Then
                     m_dt_date = value
-                    HasChanges = True
-                End If
-            End Set
-        End Property
-
-        ''' <summary>
-        ''' Statut.
-        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT.
-        ''' </summary>
-        ''' <value>
-        ''' Statut.
-        ''' </value>
-		Public Overridable Property Statut As String
-            Get
-				Return m_s_statut
-            End Get
-			Set(value As String)
-                If m_s_statut <> value Then
-                    m_s_statut = value
                     HasChanges = True
                 End If
             End Set
@@ -4607,6 +4600,44 @@
 			Set(value As Integer)
                 If m_i_contrat <> value Then
                     m_i_contrat = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Montant.
+        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_MONTANT.
+        ''' </summary>
+        ''' <value>
+        ''' Montant.
+        ''' </value>
+		Public Overridable Property Montant As Double
+            Get
+				Return m_d_montant
+            End Get
+			Set(value As Double)
+                If m_d_montant <> value Then
+                    m_d_montant = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Statut.
+        ''' Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT.
+        ''' </summary>
+        ''' <value>
+        ''' Statut.
+        ''' </value>
+		Public Overridable Property Statut As Integer
+            Get
+				Return m_i_statut
+            End Get
+			Set(value As Integer)
+                If m_i_statut <> value Then
+                    m_i_statut = value
                     HasChanges = True
                 End If
             End Set
@@ -4667,16 +4698,16 @@
                 p_o_target.m_i_iD = m_i_iD
             End If
             p_o_target.m_i_iD = m_i_iD
-            ' Colonne : m_s_name
-            p_o_target.m_s_name = m_s_name
             ' Colonne : m_dt_date
             p_o_target.m_dt_date = m_dt_date
-            ' Colonne : m_s_statut
-            p_o_target.m_s_statut = m_s_statut
             ' Colonne : m_i_consult
             p_o_target.m_i_consult = m_i_consult
             ' Colonne : m_i_contrat
             p_o_target.m_i_contrat = m_i_contrat
+            ' Colonne : m_d_montant
+            p_o_target.m_d_montant = m_d_montant
+            ' Colonne : m_i_statut
+            p_o_target.m_i_statut = m_i_statut
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -4689,11 +4720,11 @@
         Public Overridable Sub Load(p_o_row As DataRow)
             If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
 			m_i_iD = CInt(p_o_row!VTL_REMBOURSMT_ID)
-			m_s_name = CStr(p_o_row!VTL_REMBOURSMT_NAME)
 			m_dt_date = CDate(p_o_row!VTL_REMBOURSMT_DATE)
-			m_s_statut = NzStr(p_o_row!VTL_REMBOURSMT_STATUT)
 			m_i_consult = NzInt(p_o_row!VTL_REMBOURSMT_CONSULT, 0)
 			m_i_contrat = NzInt(p_o_row!VTL_REMBOURSMT_CONTRAT, 0)
+			m_d_montant = CDbl(p_o_row!VTL_REMBOURSMT_MONTANT)
+			m_i_statut = CInt(p_o_row!VTL_REMBOURSMT_STATUT)
             HasChanges = False
         End Sub
 
@@ -4703,11 +4734,11 @@
         ''' <param name="p_o_row">Enregistrement.</param>
         Public Overridable Sub ToRow(p_o_row As DataRow)
 			p_o_row("VTL_REMBOURSMT_ID") = ID
-			p_o_row("VTL_REMBOURSMT_NAME") = Name
 			p_o_row("VTL_REMBOURSMT_DATE") = [Date]
-			p_o_row("VTL_REMBOURSMT_STATUT") = Statut
 			p_o_row("VTL_REMBOURSMT_CONSULT") = Consult
 			p_o_row("VTL_REMBOURSMT_CONTRAT") = Contrat
+			p_o_row("VTL_REMBOURSMT_MONTANT") = Montant
+			p_o_row("VTL_REMBOURSMT_STATUT") = Statut
         End Sub
 
         ''' <summary>
@@ -4720,20 +4751,208 @@
             If p_o_object.ID <> ID Then
                 l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_ID, {p_o_object.ID,ID})
             End If
-            If p_o_object.Name <> Name Then
-                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_NAME, {p_o_object.Name,Name})
-            End If
             If p_o_object.[Date] <> [Date] Then
                 l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_DATE, {p_o_object.[Date],[Date]})
-            End If
-            If p_o_object.Statut <> Statut Then
-                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT, {p_o_object.Statut,Statut})
             End If
             If p_o_object.Consult <> Consult Then
                 l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_CONSULT, {p_o_object.Consult,Consult})
             End If
             If p_o_object.Contrat <> Contrat Then
                 l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_CONTRAT, {p_o_object.Contrat,Contrat})
+            End If
+            If p_o_object.Montant <> Montant Then
+                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_MONTANT, {p_o_object.Montant,Montant})
+            End If
+            If p_o_object.Statut <> Statut Then
+                l_o_dicDiff.Add(VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT, {p_o_object.Statut,Statut})
+            End If
+            Return l_o_dicDiff
+        End Function
+
+#End Region
+
+    End Class
+
+#End Region
+
+#Region "Statut - Statut"
+
+    ''' <summary>
+    ''' Statut.
+    ''' </summary>
+    <Serializable()> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public MustInherit Class Statut(Of T As {VITAL.Statut, New})
+        Inherits VITAL.Schema
+
+
+#Region "Variables privées"
+
+        ''' <summary>
+        ''' Indique s'il y a eu des changements sur l'objet ou non
+        ''' </summary>
+        Private m_b_changes As Boolean = False
+
+        ''' <summary>
+        ''' ID.
+        ''' </summary>
+		Private m_i_iD As Integer
+
+        ''' <summary>
+        ''' Name.
+        ''' </summary>
+		Private m_s_name As String
+
+#End Region
+
+#Region "Propriétés publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a subi des modifications ou non
+        ''' </summary>
+        ''' <value>
+        '''
+        ''' </value>
+        Public Property HasChanges As Boolean
+            Get
+                Return m_b_changes
+            End Get
+            Set(value As Boolean)
+                m_b_changes = value
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' ID.
+        ''' Champ associé : VTL_STATUT.VTL_STATUT_ID.
+        ''' </summary>
+        ''' <value>
+        ''' ID.
+        ''' </value>
+		Public Overridable ReadOnly Property ID As Integer
+            Get
+				Return m_i_iD
+            End Get
+        End Property
+
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Protected Sub SetAutoId(p_i_id As Integer)
+            m_i_iD = p_i_id
+        End Sub
+
+        ''' <summary>
+        ''' Name.
+        ''' Champ associé : VTL_STATUT.VTL_STATUT_NAME.
+        ''' </summary>
+        ''' <value>
+        ''' Name.
+        ''' </value>
+		Public Overridable Property Name As String
+            Get
+				Return m_s_name
+            End Get
+			Set(value As String)
+                If m_s_name <> value Then
+                    m_s_name = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
+#End Region
+
+#Region "Constantes publiques"
+
+        ''' <summary>
+        ''' Indique si l'objet a un historique ou non
+        ''' </summary>
+        Public Const HasHisto As Boolean = False
+
+        ''' <summary>
+        ''' Indique si l'objet utilise le cache ou non
+        ''' </summary>
+        Public Const HasCache As Boolean = False
+
+        ''' <summary>
+        ''' Nom de la table associée à la classe.
+        ''' </summary>
+        <Obsolete("Veuillez utiliser la classe 'Tables'.")>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
+        Public Const TableName As String = Tables.VTL_STATUT
+
+#End Region
+
+#Region "Méthodes publiques"
+
+        ''' <summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Function CloneAsNew(Optional p_b_includeKeyValues As Boolean = False) As T
+            Dim l_o_target As New T()
+
+            ' Copie des propriétés et retour
+            Return CopyTo(l_o_target, p_b_includeKeyValues)
+        End Function
+
+        ''' <summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+        ''' </summary>
+        ''' <param name="p_b_includeKeyValues"> <c>true</c> pour inclure les valeurs des clés primaires.</param>
+        ''' <returns> <paramref name="p_o_target"/></returns>
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        Public Overridable Function CopyTo(p_o_target As T, Optional p_b_includeKeyValues As Boolean = False) As T
+
+            ' Vérification des paramètres.
+            If (p_o_target Is Nothing) Then
+                Throw New ArgumentNullException("p_o_target")
+            End If
+
+            ' Copie des valeurs des clés primaires
+            If p_b_includeKeyValues Then
+                ' Column : m_i_iD
+                p_o_target.m_i_iD = m_i_iD
+            End If
+            p_o_target.m_i_iD = m_i_iD
+            ' Colonne : m_s_name
+            p_o_target.m_s_name = m_s_name
+
+            ' Retour de l'objet cible pour appel en chaine
+            Return p_o_target
+        End Function
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub Load(p_o_row As DataRow)
+            If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
+			m_i_iD = CInt(p_o_row!VTL_STATUT_ID)
+			m_s_name = CStr(p_o_row!VTL_STATUT_NAME)
+            HasChanges = False
+        End Sub
+
+        ''' <summary>
+        ''' Chargement des informations à partir de la table.
+        ''' </summary>
+        ''' <param name="p_o_row">Enregistrement.</param>
+        Public Overridable Sub ToRow(p_o_row As DataRow)
+			p_o_row("VTL_STATUT_ID") = ID
+			p_o_row("VTL_STATUT_NAME") = Name
+        End Sub
+
+        ''' <summary>
+        ''' Permet de détecter toutes les différences entre 2 objets
+        ''' </summary>
+        ''' <param name="p_o_object">Objet de la classe Statut.</param>
+        Public Function Diff(p_o_object As Statut(Of T)) As Dictionary(Of String, Object())
+            Dim l_o_dicDiff As New Dictionary(Of String, Object())
+
+            If p_o_object.ID <> ID Then
+                l_o_dicDiff.Add(VITAL.VTL_STATUT.VTL_STATUT_ID, {p_o_object.ID,ID})
+            End If
+            If p_o_object.Name <> Name Then
+                l_o_dicDiff.Add(VITAL.VTL_STATUT.VTL_STATUT_NAME, {p_o_object.Name,Name})
             End If
             Return l_o_dicDiff
         End Function

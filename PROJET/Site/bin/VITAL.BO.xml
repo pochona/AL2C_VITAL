@@ -2766,6 +2766,16 @@ VITAL.BO
 	<summary>
  Propriétaire.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.GetIdProprioByIdUser(System.Int32)">
+	<summary>
+ Retourne l'id du proprio connecté.
+ </summary>
+	<param name="p_i_idUser">ID User.</param>
+	<returns>L'id de l'utilisateur connecté.</returns>
+</member><member name="T:VITAL.BO.VITAL.PropriEtaire">
+	<summary>
+ Propriétaire.
+ </summary>
 </member><member name="T:VITAL.BO.VITAL.Vaccin">
 	<summary>
  Vaccin.
@@ -2776,6 +2786,11 @@ VITAL.BO
  </summary>
 	<param name="p_s_log">Loggin de l'utilisateur connecté.</param>
 	<returns>L'id vétérianire correspondant à l'utilisateur connecté.</returns>
+</member><member name="M:VITAL.BO.VITAL.Veterinaire.GetLastConsult">
+	<summary>
+ Retourne la derniere conusltationt du veterinaire.
+ </summary>
+	<returns>La derniere conusltationt du veterinaire.</returns>
 </member><member name="T:VITAL.BO.VITAL.Veterinaire">
 	<summary>
  Veterinaire.
