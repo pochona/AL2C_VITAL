@@ -4,7 +4,7 @@
     ''' Traitrement.
     ''' </summary>
     Partial Public Class Traitrement
-   
+
         Public Shared Function GetTraitmtAnimal(p_i_idAnimal As Integer) As Query
             Dim l_o_sql As New Query
 
@@ -18,7 +18,5 @@
             End With
             Return l_o_sql
         End Function
-
     End Class
-
 End Namespace

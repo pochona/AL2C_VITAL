@@ -589,14 +589,9 @@ Partial Public Class PageAccueilAnimal
 
 #Region "Colonnes de la grille "
 
-    Private m_i_btn_traitmt_medoc As Integer
-    Private m_i_duree_medoc As Integer
-    Private m_i_date_deb As Integer
-    Private m_i_btn_trt As Integer
+    Private m_i_btn_traitmt As Integer
     Private m_i_duree_traitmt As Integer
-    Private m_i_lib_medoc As Integer
-    Private m_i_Posologie As Integer
-    Private m_i_dosage_medoc As Integer
+    Private m_i_date_deb As Integer
 
 #End Region
 
@@ -617,8 +612,11 @@ Partial Public Class PageAccueilAnimal
                 .DataNavigateUrlFormatString = "~/Pages/Veterinaire/TraitementDtl.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}"
                 .DataNavigateUrlField = VTL_TRAITREMENT.VTL_TRAITREMENT_ID
                 .Target = "tabTraitement_Medoc" + VTL_TRAITREMENT.VTL_TRAITREMENT_ID
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Traitement.aspx?ID={0}" & "&Mode=" & EN_ModeAcces.Modification
+                .DataNavigateUrlField = VTL_TRAITREMENT.VTL_TRAITREMENT_ID
+                .Target = "tabTraitement" + VTL_TRAITREMENT.VTL_TRAITREMENT_ID
                 .Properties.ImageName = "search"
-                m_i_btn_traitmt_medoc = .ColumnIndex
+                m_i_btn_traitmt = .ColumnIndex
             End With
             With .AddDateColumn("Date début", VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT)
                 m_i_date_deb = .ColumnIndex

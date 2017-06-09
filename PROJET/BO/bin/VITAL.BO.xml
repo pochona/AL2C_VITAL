@@ -6,11 +6,7 @@ VITAL.BO
 </name>
 </assembly>
 <members>
-<member name="T:VITAL.BO.VITAL.Statut">
-	<summary>
- Statut.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_b_changes">
+<member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_b_changes">
 	<summary>
  Indique s'il y a eu des changements sur l'objet ou non
  </summary>
@@ -6891,6 +6887,10 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.ConseilDietetique">
 	<summary>
  ConseilDietetique.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Statut">
+	<summary>
+ Statut.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.Traitrement">
 	<summary>

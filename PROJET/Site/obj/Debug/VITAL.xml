@@ -690,6 +690,13 @@ Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans 
 	<remarks>Ne pas mettre de bloc try/catch :
  S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
  Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
+</member><member name="M:VITAL.PageTraitementDtl.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Initialisation de la page en cours
+ </summary>
+	<remarks>Ne pas mettre de bloc try/catch :
+ S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
+ Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
 </member><member name="P:VITAL.PageDefault.StartPage">
 	<summary>
  Définition de la page de démarage à utiliser dans la frame de droite
@@ -2641,6 +2648,14 @@ Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans 
 	<summary>
  Informations de l'animal vue par un propriétaire.
  </summary>
+</member><member name="F:VITAL.PageTraitementDtl.frmData">
+	<summary>
+Contrôle frmData.
+</summary>
+	<remarks>
+Champ généré automatiquement.
+Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+</remarks>
 </member><member name="M:VITAL.PageAccueilAdmin.Page_Load(System.Object,System.EventArgs)">
 	<summary>
  Initialisation de la page en cours
