@@ -123,7 +123,7 @@ Partial Public Class PageListeConsult
             With .AddColumn("Commentaire", VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE)
                 m_i_nom = .ColumnIndex
             End With
-            With .AddNumericColumn("Montant", VTL_CONSULTATION.VTL_CONSULTATION_MONTANT)
+            With .AddNumericColumn("Montant (€)", VTL_CONSULTATION.VTL_CONSULTATION_MONTANT)
                 m_i_montant = .ColumnIndex
             End With
         End With

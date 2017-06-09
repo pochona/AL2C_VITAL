@@ -519,7 +519,7 @@ Partial Public Class PageAccueilAnimal
 
             With .AddButtonColumn()
                 .Width = Unit.Pixel(65) ' fixe la taille de la colonne
-                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}" & "&Animal=" & SelectedAnimalId
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}" & "&Animal=" & CInt(Request.QueryString("ID"))
                 .DataNavigateUrlField = VTL_CONSULTATION.VTL_CONSULTATION_ID
                 .Target = "tabConsult" + VTL_CONSULTATION.VTL_CONSULTATION_ID
                 .Properties.ImageName = "search"

@@ -11,7 +11,7 @@
     <cw:CwFormLayout runat="server" ID="frlGeneral">
         <cw:CwFrame runat="server" ID="frmGenral" text="Dernières consultations" Collapsable="true" >
             <cw:CwFormLayout runat="server" ID="frlDtl">
-                <cw:CwNumericTextBox runat="server" ID="ntbMontant" Label="Montant" Enabled="false" ></cw:CwNumericTextBox>
+                <cw:CwNumericTextBox runat="server" ID="ntbMontant" Label="Montant" Suffix="€" Enabled="false" ></cw:CwNumericTextBox>
                 <cw:CwTextBox runat="server" ID="txtNomAnimal" Label="Nom animal" Enabled="false" ></cw:CwTextBox>
                </cw:CwFormLayout>
         </cw:CwFrame>

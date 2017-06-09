@@ -77,15 +77,6 @@ Partial Public Class PageAuthAnimal
     Protected WithEvents txtNumCarte As Global.Corail.Web.CwTextBox
 
     '''<summary>
-    '''Contrôle txtNomAnimal.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents txtNomAnimal As Global.Corail.Web.CwTextBox
-
-    '''<summary>
     '''Contrôle txtNomProprio.
     '''</summary>
     '''<remarks>
@@ -93,6 +84,15 @@ Partial Public Class PageAuthAnimal
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents txtNomProprio As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle txtNomAnimal.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtNomAnimal As Global.Corail.Web.CwTextBox
 
     '''<summary>
     '''Contrôle txtPrenomProprio.
