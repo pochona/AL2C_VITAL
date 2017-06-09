@@ -50,8 +50,12 @@
             </cw:CwFrame>
             
             <cw:CwFrame runat="server" ID="frmListTraitements" Text="Traitements" Width="100%" Cells-Small="6" ResetLayout="False" >
-                <cw:CwPanelButtons runat="server" ID="pbnTraitements">
-                    <cw:CwButton runat="server" ID="btnNewTraitement" Text="Ajouter un traitement"></cw:CwButton>
+                <cw:CwFormLayout runat="server" ID="frlTraitement">
+                    <cw:CwDateTextBox runat="server" ID="dtbNewTraitement" Label="Date début"></cw:CwDateTextBox>
+                    <cw:CwNumericTextBox runat="server" ID="ntbNewTraitement" Label="Durée" Suffix="jours"></cw:CwNumericTextBox>
+                </cw:CwFormLayout>
+                <cw:CwPanelButtons runat="server" ID="pnbBtnsTraitement">
+                    <cw:CwButton runat="server" ID="btnNewTraitement" Text="Ajouter"></cw:CwButton>
                 </cw:CwPanelButtons>
                 <cw:CwDataGrid runat="server" ID="dtgTraitements" Title="{0} traitement(s)"></cw:CwDataGrid>
             </cw:CwFrame>

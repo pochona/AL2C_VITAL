@@ -10,7 +10,7 @@
 		<col DataField="VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT" Type="Numeric" HeaderText="Id_medicament">
 			<source Table="VTL_MEDICAMENT" TableAlias="T2" KeyField="VTL_MEDICAMENT_ID" LibField="VTL_MEDICAMENT_LIBELLE" LibAlias="F2" Unique="false" />
 		</col>
-		<col DataField="VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE" Type="Numeric" Unique="false" HeaderText="Posologie" />
+		<col DataField="VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE" Type="Text" Unique="false" HeaderText="Posologie" MaxLen="100" />
 		<col DataField="VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR" Type="Numeric" Unique="false" HeaderText="Duree_jour" />
 	</columns>
 </table>

@@ -15,6 +15,12 @@
                    
                 </cw:CwFormLayout>
             </cw:CwFrame>
+            <cw:CwFrame runat="server" ID="frmConseilsDietétiq" text="Conseils diététiques" Collapsable="true" >
+                <cw:CwFormLayout runat="server" ID="CwFormLayout1">
+                    <cw:CwTextBox runat="server" ID="txtConseils" Label="" Text="" Enabled="false" ></cw:CwTextBox>
+                    <cw:CwDateTextBox runat="server" ID="dtbLastConseil"></cw:CwDateTextBox>
+                </cw:CwFormLayout>
+            </cw:CwFrame>
 	    </cw:CwFormLayout>
 	</div>
         

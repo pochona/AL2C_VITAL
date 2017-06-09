@@ -12,13 +12,13 @@
 			<source Table="VTL_RACE" TableAlias="T1" KeyField="VTL_RACE_ID" LibField="VTL_RACE_NOM" LibAlias="F1" Unique="false" />
 		</col>
 		<col DataField="VTL_ANIMAL_ID_CARTE" Type="Numeric" HeaderText="Id_carte">
-			<source Table="VTL_CARTE" TableAlias="T2" KeyField="VTL_CARTE_ID" LibField="VTL_CARTE_NUMERO" LibAlias="F2" Unique="false" />
+			<source Table="VTL_CARTE" TableAlias="T2" KeyField="VTL_CARTE_ID" LibField="VTL_CARTE_NUMERO" LibAlias="F2" Unique="true" />
 		</col>
 		<col DataField="VTL_ANIMAL_ID_TYPE" Type="Numeric" HeaderText="Id_type">
 			<source Table="VTL_TYPE" TableAlias="T3" KeyField="VTL_TYPE_ID" LibField="VTL_TYPE_LIBELLE" LibAlias="F3" Unique="false" />
 		</col>
 		<col DataField="VTL_ANIMAL_ID_PROP" Type="Numeric" HeaderText="Id_prop">
-			<source Table="VTL_USER" TableAlias="T4" KeyField="VTL_USER_ID" LibField="VTL_USER_LOGIN" LibAlias="F4" Unique="false" />
+			<source Table="VTL_PROPRIETAIRE" TableAlias="T4" KeyField="VTL_PROPRIETAIRE_ID" LibField="VTL_PROPRIETAIRE_NOM" LibAlias="F4" Unique="false" />
 		</col>
 		<col DataField="VTL_ANIMAL_IMAGE" Type="Text" Unique="false" HeaderText="Image" />
 	</columns>

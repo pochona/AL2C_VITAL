@@ -4,12 +4,17 @@
 	<description>Veterinaire</description>
 	<columns>
 		<col DataField="VTL_VETERINAIRE_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
-		<col DataField="VTL_VETERINAIRE_NOM" Type="Text" Unique="false" HeaderText="Nom" NotNull="true" MaxLen="50" />
-		<col DataField="VTL_VETERINAIRE_PRENOM" Type="Text" Unique="false" HeaderText="Prenom" NotNull="true" MaxLen="50" />
 		<col DataField="VTL_VETERINAIRE_SIRET" Type="Text" Unique="false" HeaderText="SIRET" MaxLen="50" />
 		<col DataField="VTL_VETERINAIRE_ID_USER" Type="Numeric" HeaderText="id_user">
 			<source Table="VTL_USER" TableAlias="T1" KeyField="VTL_USER_ID" LibField="VTL_USER_LOGIN" LibAlias="F1" Unique="true" />
 		</col>
+		<col DataField="VTL_VETERINAIRE_NOM" Type="Text" Unique="false" HeaderText="Nom" MaxLen="50" />
+		<col DataField="VTL_VETERINAIRE_PRENOM" Type="Text" Unique="false" HeaderText="Prenom" MaxLen="50" />
+		<col DataField="VTL_VETERINAIRE_TEL" Type="Text" Unique="false" HeaderText="Tel" MaxLen="50" />
+		<col DataField="VTL_VETERINAIRE_MAIL" Type="Text" Unique="false" HeaderText="Mail" MaxLen="50" />
+		<col DataField="VTL_VETERINAIRE_ADR" Type="Text" Unique="false" HeaderText="Adr" MaxLen="255" />
+		<col DataField="VTL_VETERINAIRE_CP" Type="Text" Unique="false" HeaderText="Cp" MaxLen="50" />
+		<col DataField="VTL_VETERINAIRE_VILLE" Type="Text" Unique="false" HeaderText="Ville" MaxLen="50" />
 	</columns>
 </table>
 

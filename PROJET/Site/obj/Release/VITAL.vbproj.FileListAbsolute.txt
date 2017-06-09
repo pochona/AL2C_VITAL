@@ -16,3 +16,5 @@ C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\obj\Release\VITAL.vbproj.GenerateResource.Cache
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\obj\Release\VITAL.dll
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\obj\Release\VITAL.xml
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\bin\Corail.Web.Chart.dll
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\bin\Corail.Web.Chart.xml

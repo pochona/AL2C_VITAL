@@ -267,7 +267,7 @@
         <Column Name="VTL_TRAITEMENT_MEDICAMENT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
         <Column Name="VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT" Type="Integer" Precision="10" AllowNull="false" Label="Id_traitement" PropertyName="Id_traitement" Comment="Id_traitement" />
         <Column Name="VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT" Type="Integer" Precision="10" Label="Id_medicament" PropertyName="Id_medicament" PropertyNullValue="0" Comment="Id_medicament" />
-        <Column Name="VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE" Type="Integer" Precision="10" Label="Posologie" PropertyName="Posologie" Comment="Posologie" />
+        <Column Name="VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE" Type="String" MaxLength="100" Label="Posologie" PropertyName="Posologie" Comment="Posologie" />
         <Column Name="VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR" Type="Integer" Precision="10" Label="Duree_jour" PropertyName="Duree_jour" Comment="Duree_jour" />
       </Columns>
       <Relations>

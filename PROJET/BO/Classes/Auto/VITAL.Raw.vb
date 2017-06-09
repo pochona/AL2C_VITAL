@@ -71,8 +71,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -326,8 +326,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -632,8 +632,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -1063,8 +1063,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -1443,8 +1443,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -1688,8 +1688,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -1912,8 +1912,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -2172,8 +2172,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -2494,8 +2494,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -2848,8 +2848,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -3098,8 +3098,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -3348,8 +3348,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -3608,8 +3608,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -3940,8 +3940,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -4336,8 +4336,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -4544,8 +4544,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -4836,8 +4836,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -4999,7 +4999,7 @@
         ''' <summary>
         ''' Posologie.
         ''' </summary>
-		Private m_i_posologie As Integer?
+		Private m_s_posologie As String
 
         ''' <summary>
         ''' Duree_jour.
@@ -5039,8 +5039,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -5088,13 +5088,13 @@
         ''' <value>
         ''' Posologie.
         ''' </value>
-		Public Overridable Property Posologie As Integer?
+		Public Overridable Property Posologie As String
             Get
-				Return m_i_posologie
+				Return m_s_posologie
             End Get
-			Set(value As Integer?)
-                If Not Object.Equals(m_i_posologie, value) Then
-                    m_i_posologie = value
+			Set(value As String)
+                If m_s_posologie <> value Then
+                    m_s_posologie = value
                     HasChanges = True
                 End If
             End Set
@@ -5178,8 +5178,8 @@
             p_o_target.m_i_id_traitement = m_i_id_traitement
             ' Colonne : m_i_id_medicament
             p_o_target.m_i_id_medicament = m_i_id_medicament
-            ' Colonne : m_i_posologie
-            p_o_target.m_i_posologie = m_i_posologie
+            ' Colonne : m_s_posologie
+            p_o_target.m_s_posologie = m_s_posologie
             ' Colonne : m_i_duree_jour
             p_o_target.m_i_duree_jour = m_i_duree_jour
 
@@ -5196,7 +5196,7 @@
 			m_i_iD = CInt(p_o_row!VTL_TRAITEMENT_MEDICAMENT_ID)
 			m_i_id_traitement = CInt(p_o_row!VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT)
 			m_i_id_medicament = NzInt(p_o_row!VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT, 0)
-			m_i_posologie = NzIntNullable(p_o_row!VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE)
+			m_s_posologie = NzStr(p_o_row!VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE)
 			m_i_duree_jour = NzIntNullable(p_o_row!VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR)
             HasChanges = False
         End Sub
@@ -5209,7 +5209,7 @@
 			p_o_row("VTL_TRAITEMENT_MEDICAMENT_ID") = ID
 			p_o_row("VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT") = Id_traitement
 			p_o_row("VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT") = Id_medicament
-			p_o_row("VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE") = If(Posologie Is Nothing, DBNull.Value, CType(Posologie, Object))
+			p_o_row("VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE") = Posologie
 			p_o_row("VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR") = If(Duree_jour Is Nothing, DBNull.Value, CType(Duree_jour, Object))
         End Sub
 
@@ -5229,7 +5229,7 @@
             If p_o_object.Id_medicament <> Id_medicament Then
                 l_o_dicDiff.Add(VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT, {p_o_object.Id_medicament,Id_medicament})
             End If
-            If Not Object.Equals(p_o_object.Posologie, Posologie) Then
+            If p_o_object.Posologie <> Posologie Then
                 l_o_dicDiff.Add(VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE, {p_o_object.Posologie,Posologie})
             End If
             If Not Object.Equals(p_o_object.Duree_jour, Duree_jour) Then
@@ -5315,8 +5315,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -5555,8 +5555,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -5753,8 +5753,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -6008,8 +6008,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -6289,8 +6289,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>
@@ -6595,8 +6595,8 @@
         End Property
 
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
-        Protected Sub SetAutoId(p_i_id As Integer)
-            m_i_iD = p_i_id
+        Protected Sub SetAutoId(p_i_iD As Integer)
+            m_i_iD = p_i_iD
         End Sub
 
         ''' <summary>

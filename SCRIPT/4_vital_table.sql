@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 08/06/2017                                     */
+/* Historique  : Creation le 09/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -450,7 +450,7 @@ CREATE TABLE VTL_TRAITEMENT_MEDICAMENT (
 	VTL_TRAITEMENT_MEDICAMENT_ID INT IDENTITY(1,1) NOT NULL,
 	VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT INT NOT NULL,
 	VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT INT,
-	VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE INT,
+	VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE NVARCHAR(100),
 	VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR INT
 )
 GO

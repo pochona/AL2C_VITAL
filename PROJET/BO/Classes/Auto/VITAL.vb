@@ -13,6 +13,98 @@
 
 #End Region
 
+#Region "Classes Utilitaire"
+
+    ''' <summary>
+    ''' Classe de base de définition des colonnes d'une table.
+    ''' </summary>
+    Public MustInherit Class BaseTableDefinition
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+        <System.ComponentModel.EditorBrowsable(ComponentModel.EditorBrowsableState.Never)>
+        Public Shared Iterator Function GetBaseFields(p_o_Type As System.Type,
+                                                  Optional p_b_ignoreKeyFields As Boolean = False,
+                                                  Optional p_b_ignoreValueFields As Boolean = False
+                                                                                         ) As IEnumerable(Of String)
+
+            For Each l_o_field As System.Reflection.FieldInfo In p_o_Type.GetFields(System.Reflection.BindingFlags.Static Or System.Reflection.BindingFlags.Public)
+                Dim l_o_attribute As FieldUsage
+                Dim l_ao_attributes As Object() = l_o_field.GetCustomAttributes(GetType(FieldUsage), True)
+
+                If l_ao_attributes.Length = 1 Then
+                    l_o_attribute = DirectCast(l_ao_attributes(0), FieldUsage)
+                    If (l_o_attribute.FieldType = FieldUsage.EN_FieldType.Key And Not p_b_ignoreKeyFields) Then
+                        Yield l_o_field.GetRawConstantValue().ToString
+                    ElseIf (l_o_attribute.FieldType = FieldUsage.EN_FieldType.Value And Not p_b_ignoreValueFields) Then
+                        Yield l_o_field.GetRawConstantValue().ToString
+                    End If
+                End If
+            Next
+        End Function
+    End Class
+
+#End Region
+
+#Region "Attributs"
+    ''' <summary>
+    ''' Attribut spécifiant de type d'utilisation d'un colonne.
+    ''' </summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
+    Public Class FieldUsage
+        Inherits Attribute
+#Region "Enumeration imbriquée"
+        ''' <summary>
+        ''' Type d'utilisation d'une colonne.
+        ''' </summary>
+        Public Enum EN_FieldType
+            ''' <summary>
+            ''' Aucun.
+            ''' </summary>
+            None
+            ''' <summary>
+            ''' Clé primaire.
+            ''' </summary>
+            Key
+            ''' <summary>
+            ''' Valeur.
+            ''' </summary>
+            Value
+        End Enum
+
+#End Region
+
+#Region "Propriétés"
+
+        ''' Type d'utilisation.
+        Private m_en_fieldType As EN_FieldType
+
+        ''' <summary>
+        ''' Type d'utilisation déclaré.
+        ''' </summary>
+        ''' <value>Type d'utilisation déclaré.</value>
+        ''' <returns>Type d'utilisation déclaré.</returns>
+        Public ReadOnly Property FieldType As EN_FieldType
+            Get
+                Return m_en_fieldType
+            End Get
+        End Property
+
+#End Region
+
+#Region "Constructeur"
+
+        ''' <summary>
+        ''' Initialisation d'une nouvelle instance de la classe.
+        ''' </summary>
+        ''' <param name="p_en_type">Type d'utilisation de la colonne.</param>
+        Public Sub New(Optional p_en_type As EN_FieldType = EN_FieldType.Value)
+            m_en_fieldType = p_en_type
+        End Sub
+#End Region
+
+    End Class
+
+#End Region
+
 #Region "Tables du schéma VITAL."
 
     ''' <summary>
@@ -152,15 +244,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VITAL_ANIMALDOCS
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const ANIMALDOCS_ID As String = "ANIMALDOCS_ID"
 
         ''' <summary>
         ''' Nom.
         ''' </summary>
+        <FieldUsage>
         Public Const ANIMALDOCS_NOM As String = "ANIMALDOCS_NOM"
 
         ''' <summary>
@@ -171,6 +266,7 @@
         ''' <summary>
         ''' Chemin.
         ''' </summary>
+        <FieldUsage>
         Public Const ANIMALDOCS_CHEMIN As String = "ANIMALDOCS_CHEMIN"
 
         ''' <summary>
@@ -181,7 +277,19 @@
         ''' <summary>
         ''' Id_Animal.
         ''' </summary>
+        <FieldUsage>
         Public Const ANIMALDOCS_ID_ANIMAL As String = "ANIMALDOCS_ID_ANIMAL"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VITAL_ANIMALDOCS), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -194,31 +302,48 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_ADOPTER
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_ADOPTER_ID As String = "VTL_ADOPTER_ID"
 
         ''' <summary>
         ''' Dt_debut.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ADOPTER_DT_DEBUT As String = "VTL_ADOPTER_DT_DEBUT"
 
         ''' <summary>
         ''' Dt_fin.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ADOPTER_DT_FIN As String = "VTL_ADOPTER_DT_FIN"
 
         ''' <summary>
         ''' Id_proprietaire.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ADOPTER_ID_PROPRIETAIRE As String = "VTL_ADOPTER_ID_PROPRIETAIRE"
 
         ''' <summary>
         ''' Id_animal.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ADOPTER_ID_ANIMAL As String = "VTL_ADOPTER_ID_ANIMAL"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_ADOPTER), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -231,15 +356,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_ANIMAL
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_ANIMAL_ID As String = "VTL_ANIMAL_ID"
 
         ''' <summary>
         ''' Nom.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ANIMAL_NOM As String = "VTL_ANIMAL_NOM"
 
         ''' <summary>
@@ -250,6 +378,7 @@
         ''' <summary>
         ''' Num_puce.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ANIMAL_NUM_PUCE As String = "VTL_ANIMAL_NUM_PUCE"
 
         ''' <summary>
@@ -260,37 +389,55 @@
         ''' <summary>
         ''' Dt_naissance.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ANIMAL_DT_NAISSANCE As String = "VTL_ANIMAL_DT_NAISSANCE"
 
         ''' <summary>
         ''' Dt_deces.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ANIMAL_DT_DECES As String = "VTL_ANIMAL_DT_DECES"
 
         ''' <summary>
         ''' Id_race.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ANIMAL_ID_RACE As String = "VTL_ANIMAL_ID_RACE"
 
         ''' <summary>
         ''' Id_carte.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ANIMAL_ID_CARTE As String = "VTL_ANIMAL_ID_CARTE"
 
         ''' <summary>
         ''' Id_type.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ANIMAL_ID_TYPE As String = "VTL_ANIMAL_ID_TYPE"
 
         ''' <summary>
         ''' Id_prop.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ANIMAL_ID_PROP As String = "VTL_ANIMAL_ID_PROP"
 
         ''' <summary>
         ''' Image.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ANIMAL_IMAGE As String = "VTL_ANIMAL_IMAGE"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_ANIMAL), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -303,15 +450,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_ASSURANCE
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_ASSURANCE_ID As String = "VTL_ASSURANCE_ID"
 
         ''' <summary>
         ''' Siret.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ASSURANCE_SIRET As String = "VTL_ASSURANCE_SIRET"
 
         ''' <summary>
@@ -322,6 +472,7 @@
         ''' <summary>
         ''' Nom.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ASSURANCE_NOM As String = "VTL_ASSURANCE_NOM"
 
         ''' <summary>
@@ -332,6 +483,7 @@
         ''' <summary>
         ''' Tel.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ASSURANCE_TEL As String = "VTL_ASSURANCE_TEL"
 
         ''' <summary>
@@ -342,6 +494,7 @@
         ''' <summary>
         ''' Mail.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ASSURANCE_MAIL As String = "VTL_ASSURANCE_MAIL"
 
         ''' <summary>
@@ -352,6 +505,7 @@
         ''' <summary>
         ''' Adr.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ASSURANCE_ADR As String = "VTL_ASSURANCE_ADR"
 
         ''' <summary>
@@ -362,6 +516,7 @@
         ''' <summary>
         ''' Cp.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ASSURANCE_CP As String = "VTL_ASSURANCE_CP"
 
         ''' <summary>
@@ -372,6 +527,7 @@
         ''' <summary>
         ''' Ville.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ASSURANCE_VILLE As String = "VTL_ASSURANCE_VILLE"
 
         ''' <summary>
@@ -382,7 +538,19 @@
         ''' <summary>
         ''' id_user.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ASSURANCE_ID_USER As String = "VTL_ASSURANCE_ID_USER"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_ASSURANCE), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -395,15 +563,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_ATTACHEMT
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_ATTACHEMT_ID As String = "VTL_ATTACHEMT_ID"
 
         ''' <summary>
         ''' Name.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ATTACHEMT_NAME As String = "VTL_ATTACHEMT_NAME"
 
         ''' <summary>
@@ -414,6 +585,7 @@
         ''' <summary>
         ''' Chemin.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ATTACHEMT_CHEMIN As String = "VTL_ATTACHEMT_CHEMIN"
 
         ''' <summary>
@@ -424,7 +596,19 @@
         ''' <summary>
         ''' Consult.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_ATTACHEMT_CONSULT As String = "VTL_ATTACHEMT_CONSULT"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_ATTACHEMT), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -437,15 +621,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_CARTE
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_CARTE_ID As String = "VTL_CARTE_ID"
 
         ''' <summary>
         ''' Numero.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CARTE_NUMERO As String = "VTL_CARTE_NUMERO"
 
         ''' <summary>
@@ -456,12 +643,24 @@
         ''' <summary>
         ''' Nfc.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CARTE_NFC As String = "VTL_CARTE_NFC"
 
         ''' <summary>
         ''' Nfc (Maxlen).
         ''' </summary>
         Public Const VTL_CARTE_NFC_MAXLEN As Integer = 255
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_CARTE), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -474,15 +673,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_CNSLDIET
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const CNSLDIET_ID As String = "CNSLDIET_ID"
 
         ''' <summary>
         ''' Contenu.
         ''' </summary>
+        <FieldUsage>
         Public Const CNSLDIET_CONTENU As String = "CNSLDIET_CONTENU"
 
         ''' <summary>
@@ -493,12 +695,25 @@
         ''' <summary>
         ''' Id_animal.
         ''' </summary>
+        <FieldUsage>
         Public Const CNSLDIET_ID_ANIMAL As String = "CNSLDIET_ID_ANIMAL"
 
         ''' <summary>
         ''' Date.
         ''' </summary>
+        <FieldUsage>
         Public Const CNSLDIET_DATE As String = "CNSLDIET_DATE"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_CNSLDIET), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -511,20 +726,24 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_CONSULTATION
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_CONSULTATION_ID As String = "VTL_CONSULTATION_ID"
 
         ''' <summary>
         ''' Montant.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONSULTATION_MONTANT As String = "VTL_CONSULTATION_MONTANT"
 
         ''' <summary>
         ''' Commentaire.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONSULTATION_COMMENTAIRE As String = "VTL_CONSULTATION_COMMENTAIRE"
 
         ''' <summary>
@@ -535,17 +754,31 @@
         ''' <summary>
         ''' Id_veterinaire.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONSULTATION_ID_VETERINAIRE As String = "VTL_CONSULTATION_ID_VETERINAIRE"
 
         ''' <summary>
         ''' Id_animal.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONSULTATION_L As String = "VTL_CONSULTATION_L"
 
         ''' <summary>
         ''' Dt_Consultation.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONSULTATION_DT_CONSULTATION As String = "VTL_CONSULTATION_DT_CONSULTATION"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_CONSULTATION), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -558,15 +791,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_CONTRAT
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_CONTRAT_ID As String = "VTL_CONTRAT_ID"
 
         ''' <summary>
         ''' Num_contrat.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONTRAT_NUM_CONTRAT As String = "VTL_CONTRAT_NUM_CONTRAT"
 
         ''' <summary>
@@ -577,32 +813,49 @@
         ''' <summary>
         ''' Dt_debut.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONTRAT_DT_DEBUT As String = "VTL_CONTRAT_DT_DEBUT"
 
         ''' <summary>
         ''' Dt_fin.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONTRAT_DT_FIN As String = "VTL_CONTRAT_DT_FIN"
 
         ''' <summary>
         ''' Id_animal.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONTRAT_ID_ANIMAL As String = "VTL_CONTRAT_ID_ANIMAL"
 
         ''' <summary>
         ''' Id_proprietaire.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONTRAT_ID_PROPRIETAIRE As String = "VTL_CONTRAT_ID_PROPRIETAIRE"
 
         ''' <summary>
         ''' Id_assurance.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONTRAT_ID_ASSURANCE As String = "VTL_CONTRAT_ID_ASSURANCE"
 
         ''' <summary>
         ''' TxRemb.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_CONTRAT_TXREMB As String = "VTL_CONTRAT_TXREMB"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_CONTRAT), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -615,26 +868,42 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_HISTO_POIDS
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_HISTO_POIDS_ID As String = "VTL_HISTO_POIDS_ID"
 
         ''' <summary>
         ''' Dt_histo.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_HISTO_POIDS_DT_HISTO As String = "VTL_HISTO_POIDS_DT_HISTO"
 
         ''' <summary>
         ''' Poids.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_HISTO_POIDS_POIDS As String = "VTL_HISTO_POIDS_POIDS"
 
         ''' <summary>
         ''' Id_animal.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_HISTO_POIDS_ID_ANIMAL As String = "VTL_HISTO_POIDS_ID_ANIMAL"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_HISTO_POIDS), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -647,26 +916,42 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_HISTO_TAILLE
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_HISTO_TAILLE_ID As String = "VTL_HISTO_TAILLE_ID"
 
         ''' <summary>
         ''' Dt_histo.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_HISTO_TAILLE_DT_HISTO As String = "VTL_HISTO_TAILLE_DT_HISTO"
 
         ''' <summary>
         ''' Taille.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_HISTO_TAILLE_TAILLE As String = "VTL_HISTO_TAILLE_TAILLE"
 
         ''' <summary>
         ''' Id_animal.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_HISTO_TAILLE_ID_ANIMAL As String = "VTL_HISTO_TAILLE_ID_ANIMAL"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_HISTO_TAILLE), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -679,15 +964,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_MEDICAMENT
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_MEDICAMENT_ID As String = "VTL_MEDICAMENT_ID"
 
         ''' <summary>
         ''' Libelle.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_MEDICAMENT_LIBELLE As String = "VTL_MEDICAMENT_LIBELLE"
 
         ''' <summary>
@@ -698,6 +986,7 @@
         ''' <summary>
         ''' Dosage.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_MEDICAMENT_DOSAGE As String = "VTL_MEDICAMENT_DOSAGE"
 
         ''' <summary>
@@ -708,7 +997,19 @@
         ''' <summary>
         ''' Duree_moyenne_jour.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_MEDICAMENT_DUREE_MOYENNE_JOUR As String = "VTL_MEDICAMENT_DUREE_MOYENNE_JOUR"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_MEDICAMENT), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -721,20 +1022,24 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_POSITION
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_POSITION_ID As String = "VTL_POSITION_ID"
 
         ''' <summary>
         ''' Dt_position.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_POSITION_DT_POSITION As String = "VTL_POSITION_DT_POSITION"
 
         ''' <summary>
         ''' Coord_lat.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_POSITION_COORD_LAT As String = "VTL_POSITION_COORD_LAT"
 
         ''' <summary>
@@ -745,6 +1050,7 @@
         ''' <summary>
         ''' Coord_long.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_POSITION_COORD_LONG As String = "VTL_POSITION_COORD_LONG"
 
         ''' <summary>
@@ -755,12 +1061,25 @@
         ''' <summary>
         ''' Top_courante.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_POSITION_TOP_COURANTE As String = "VTL_POSITION_TOP_COURANTE"
 
         ''' <summary>
         ''' Id_animal.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_POSITION_ID_ANIMAL As String = "VTL_POSITION_ID_ANIMAL"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_POSITION), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -773,20 +1092,24 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_PROPRIETAIRE
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_PROPRIETAIRE_ID As String = "VTL_PROPRIETAIRE_ID"
 
         ''' <summary>
         ''' DateFin.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_PROPRIETAIRE_DATEFIN As String = "VTL_PROPRIETAIRE_DATEFIN"
 
         ''' <summary>
         ''' Nom.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_PROPRIETAIRE_NOM As String = "VTL_PROPRIETAIRE_NOM"
 
         ''' <summary>
@@ -797,6 +1120,7 @@
         ''' <summary>
         ''' Prenom.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_PROPRIETAIRE_PRENOM As String = "VTL_PROPRIETAIRE_PRENOM"
 
         ''' <summary>
@@ -807,6 +1131,7 @@
         ''' <summary>
         ''' Tel.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_PROPRIETAIRE_TEL As String = "VTL_PROPRIETAIRE_TEL"
 
         ''' <summary>
@@ -817,6 +1142,7 @@
         ''' <summary>
         ''' Mail.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_PROPRIETAIRE_MAIL As String = "VTL_PROPRIETAIRE_MAIL"
 
         ''' <summary>
@@ -827,6 +1153,7 @@
         ''' <summary>
         ''' Adr.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_PROPRIETAIRE_ADR As String = "VTL_PROPRIETAIRE_ADR"
 
         ''' <summary>
@@ -837,6 +1164,7 @@
         ''' <summary>
         ''' Cp.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_PROPRIETAIRE_CP As String = "VTL_PROPRIETAIRE_CP"
 
         ''' <summary>
@@ -847,6 +1175,7 @@
         ''' <summary>
         ''' Ville.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_PROPRIETAIRE_VILLE As String = "VTL_PROPRIETAIRE_VILLE"
 
         ''' <summary>
@@ -857,7 +1186,19 @@
         ''' <summary>
         ''' id_user.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_PROPRIETAIRE_ID_USER As String = "VTL_PROPRIETAIRE_ID_USER"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_PROPRIETAIRE), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -870,21 +1211,35 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_RACE
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_RACE_ID As String = "VTL_RACE_ID"
 
         ''' <summary>
         ''' Nom.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_RACE_NOM As String = "VTL_RACE_NOM"
 
         ''' <summary>
         ''' Nom (Maxlen).
         ''' </summary>
         Public Const VTL_RACE_NOM_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_RACE), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -897,36 +1252,54 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_REMBOURSMT
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_REMBOURSMT_ID As String = "VTL_REMBOURSMT_ID"
 
         ''' <summary>
         ''' Date.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_REMBOURSMT_DATE As String = "VTL_REMBOURSMT_DATE"
 
         ''' <summary>
         ''' Consult.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_REMBOURSMT_CONSULT As String = "VTL_REMBOURSMT_CONSULT"
 
         ''' <summary>
         ''' Contrat.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_REMBOURSMT_CONTRAT As String = "VTL_REMBOURSMT_CONTRAT"
 
         ''' <summary>
         ''' Montant.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_REMBOURSMT_MONTANT As String = "VTL_REMBOURSMT_MONTANT"
 
         ''' <summary>
         ''' Statut.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_REMBOURSMT_STATUT As String = "VTL_REMBOURSMT_STATUT"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_REMBOURSMT), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -939,21 +1312,35 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_STATUT
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_STATUT_ID As String = "VTL_STATUT_ID"
 
         ''' <summary>
         ''' Name.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_STATUT_NAME As String = "VTL_STATUT_NAME"
 
         ''' <summary>
         ''' Name (Maxlen).
         ''' </summary>
         Public Const VTL_STATUT_NAME_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_STATUT), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -966,31 +1353,53 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_TRAITEMENT_MEDICAMENT
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_TRAITEMENT_MEDICAMENT_ID As String = "VTL_TRAITEMENT_MEDICAMENT_ID"
 
         ''' <summary>
         ''' Id_traitement.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT As String = "VTL_TRAITEMENT_MEDICAMENT_ID_TRAITEMENT"
 
         ''' <summary>
         ''' Id_medicament.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT As String = "VTL_TRAITEMENT_MEDICAMENT_ID_MEDICAMENT"
 
         ''' <summary>
         ''' Posologie.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE As String = "VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE"
+
+        ''' <summary>
+        ''' Posologie (Maxlen).
+        ''' </summary>
+        Public Const VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE_MAXLEN As Integer = 100
 
         ''' <summary>
         ''' Duree_jour.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR As String = "VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_TRAITEMENT_MEDICAMENT), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -1003,26 +1412,42 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_TRAITREMENT
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_TRAITREMENT_ID As String = "VTL_TRAITREMENT_ID"
 
         ''' <summary>
         ''' Duree_jour.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_TRAITREMENT_DUREE_JOUR As String = "VTL_TRAITREMENT_DUREE_JOUR"
 
         ''' <summary>
         ''' Dt_debut.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_TRAITREMENT_DT_DEBUT As String = "VTL_TRAITREMENT_DT_DEBUT"
 
         ''' <summary>
         ''' Id_animal.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_TRAITREMENT_ID_ANIMAL As String = "VTL_TRAITREMENT_ID_ANIMAL"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_TRAITREMENT), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -1035,21 +1460,35 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_TYPE
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_TYPE_ID As String = "VTL_TYPE_ID"
 
         ''' <summary>
         ''' Libelle.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_TYPE_LIBELLE As String = "VTL_TYPE_LIBELLE"
 
         ''' <summary>
         ''' Libelle (Maxlen).
         ''' </summary>
         Public Const VTL_TYPE_LIBELLE_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_TYPE), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -1062,15 +1501,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_USER
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_USER_ID As String = "VTL_USER_ID"
 
         ''' <summary>
         ''' Login.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_USER_LOGIN As String = "VTL_USER_LOGIN"
 
         ''' <summary>
@@ -1081,6 +1523,7 @@
         ''' <summary>
         ''' Mdp.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_USER_MDP As String = "VTL_USER_MDP"
 
         ''' <summary>
@@ -1091,12 +1534,24 @@
         ''' <summary>
         ''' Role.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_USER_ROLE As String = "VTL_USER_ROLE"
 
         ''' <summary>
         ''' Role (Maxlen).
         ''' </summary>
         Public Const VTL_USER_ROLE_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_USER), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -1109,15 +1564,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_VACCIN
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_VACCIN_ID As String = "VTL_VACCIN_ID"
 
         ''' <summary>
         ''' Libelle.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VACCIN_LIBELLE As String = "VTL_VACCIN_LIBELLE"
 
         ''' <summary>
@@ -1128,17 +1586,31 @@
         ''' <summary>
         ''' Top_periodique.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VACCIN_TOP_PERIODIQUE As String = "VTL_VACCIN_TOP_PERIODIQUE"
 
         ''' <summary>
         ''' Periode_mois.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VACCIN_PERIODE_MOIS As String = "VTL_VACCIN_PERIODE_MOIS"
 
         ''' <summary>
         ''' Top_recommandation.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VACCIN_TOP_RECOMMANDATION As String = "VTL_VACCIN_TOP_RECOMMANDATION"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_VACCIN), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -1151,31 +1623,48 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_VACCINATION
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_VACCINATION_ID As String = "VTL_VACCINATION_ID"
 
         ''' <summary>
         ''' Id_animal.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VACCINATION_ID_ANIMAL As String = "VTL_VACCINATION_ID_ANIMAL"
 
         ''' <summary>
         ''' Id_vaccin.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VACCINATION_ID_VACCIN As String = "VTL_VACCINATION_ID_VACCIN"
 
         ''' <summary>
         ''' Dt_vaccin.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VACCINATION_DT_VACCIN As String = "VTL_VACCINATION_DT_VACCIN"
 
         ''' <summary>
         ''' Id_consultation.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VACCINATION_ID_CONSULTATION As String = "VTL_VACCINATION_ID_CONSULTATION"
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_VACCINATION), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 
@@ -1188,15 +1677,18 @@
     ''' </summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Modeler", "1.4")> _
     Public NotInheritable Class VTL_VETERINAIRE
+        Inherits BaseTableDefinition
 
         ''' <summary>
         ''' ID.
         ''' </summary>
+        <FieldUsage(FieldUsage.EN_FieldType.Key)>
         Public Const VTL_VETERINAIRE_ID As String = "VTL_VETERINAIRE_ID"
 
         ''' <summary>
         ''' SIRET.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VETERINAIRE_SIRET As String = "VTL_VETERINAIRE_SIRET"
 
         ''' <summary>
@@ -1207,11 +1699,13 @@
         ''' <summary>
         ''' id_user.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VETERINAIRE_ID_USER As String = "VTL_VETERINAIRE_ID_USER"
 
         ''' <summary>
         ''' Nom.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VETERINAIRE_NOM As String = "VTL_VETERINAIRE_NOM"
 
         ''' <summary>
@@ -1222,6 +1716,7 @@
         ''' <summary>
         ''' Prenom.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VETERINAIRE_PRENOM As String = "VTL_VETERINAIRE_PRENOM"
 
         ''' <summary>
@@ -1232,6 +1727,7 @@
         ''' <summary>
         ''' Tel.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VETERINAIRE_TEL As String = "VTL_VETERINAIRE_TEL"
 
         ''' <summary>
@@ -1242,6 +1738,7 @@
         ''' <summary>
         ''' Mail.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VETERINAIRE_MAIL As String = "VTL_VETERINAIRE_MAIL"
 
         ''' <summary>
@@ -1252,6 +1749,7 @@
         ''' <summary>
         ''' Adr.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VETERINAIRE_ADR As String = "VTL_VETERINAIRE_ADR"
 
         ''' <summary>
@@ -1262,6 +1760,7 @@
         ''' <summary>
         ''' Cp.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VETERINAIRE_CP As String = "VTL_VETERINAIRE_CP"
 
         ''' <summary>
@@ -1272,12 +1771,24 @@
         ''' <summary>
         ''' Ville.
         ''' </summary>
+        <FieldUsage>
         Public Const VTL_VETERINAIRE_VILLE As String = "VTL_VETERINAIRE_VILLE"
 
         ''' <summary>
         ''' Ville (Maxlen).
         ''' </summary>
         Public Const VTL_VETERINAIRE_VILLE_MAXLEN As Integer = 50
+
+        ''' <summary>
+        ''' Retourne la liste de colonnes déclarées en constante.
+        ''' </summary>
+        ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+        ''' <param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+        ''' <returns>La liste de colonnes déclarées en constante.</returns>
+        Public Shared Function GetFields(Optional p_b_ignoreKeyFields As Boolean = False,
+                                         Optional p_b_ignoreValueFields As Boolean = False) As IEnumerable(Of String)
+            Return GetBaseFields(GetType(VTL_VETERINAIRE), p_b_ignoreKeyFields, p_b_ignoreValueFields)
+        End Function
 
     End Class
 

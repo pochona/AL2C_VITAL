@@ -23,22 +23,85 @@ Partial Public Class PageTraitement
     Protected WithEvents frmData As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Contrôle frmmedicament.
+    '''Contrôle frmTraitmt.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frmmedicament As Global.Corail.Web.CwFrame
+    Protected WithEvents frmTraitmt As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle frlDtlMedoc.
+    '''Contrôle frlTraitmt.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frlDtlMedoc As Global.Corail.Web.CwFormLayout
+    Protected WithEvents frlTraitmt As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
+    '''Contrôle ntbDureeTraitmt.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents ntbDureeTraitmt As Global.Corail.Web.CwNumericTextBox
+
+    '''<summary>
+    '''Contrôle dtbTraitmt.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dtbTraitmt As Global.Corail.Web.CwDateTextBox
+
+    '''<summary>
+    '''Contrôle pbnTraitmt.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents pbnTraitmt As Global.Corail.Web.CwPanelButtons
+
+    '''<summary>
+    '''Contrôle btnNewTraitmt.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnNewTraitmt As Global.Corail.Web.CwButton
+
+    '''<summary>
+    '''Contrôle btnSaveTraitmt.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnSaveTraitmt As Global.Corail.Web.CwButton
+
+    '''<summary>
+    '''Contrôle frmMedoc.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frmMedoc As Global.Corail.Web.CwFrame
+
+    '''<summary>
+    '''Contrôle frlMedoc.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frlMedoc As Global.Corail.Web.CwFormLayout
 
     '''<summary>
     '''Contrôle cboMedoc.
@@ -59,13 +122,13 @@ Partial Public Class PageTraitement
     Protected WithEvents ntbDuree As Global.Corail.Web.CwNumericTextBox
 
     '''<summary>
-    '''Contrôle ntbPosologie.
+    '''Contrôle txtPosologie.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents ntbPosologie As Global.Corail.Web.CwNumericTextBox
+    Protected WithEvents txtPosologie As Global.Corail.Web.CwTextBox
 
     '''<summary>
     '''Contrôle pnbBtnsMedoc.

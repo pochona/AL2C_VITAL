@@ -112,6 +112,8 @@ Partial Public Class PageAccueilAnimal
             btnNewCarte.Target = "Modal#400x400"
             btnNewConsult.NavigateUrl = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Creation & "&Animal=" & SelectedAnimalId
             btnNewConsult.Target = "tabConsult"
+            btnNewTraitement.NavigateUrl = "~/Pages/Veterinaire/Traitement.aspx?Mode=" & EN_ModeAcces.Creation & "&Animal=" & SelectedAnimalId
+            btnNewTraitement.Target = "tabTraitement"
         End If
     End Sub
 
@@ -194,7 +196,6 @@ Partial Public Class PageAccueilAnimal
                 cboNumCarte.SelectedValue = CStr(SelectedAnimal.Id_carte)
                 stbProprio.Text = SelectedAnimal.GetNomPrenomProprio()
                 dttxtNewVaccin.Date = Now.Date
-                dtbNewTraitement.Date = Now.Date
             End If
         ElseIf ModeAcces = EN_ModeAcces.Creation Then
 
@@ -437,31 +438,31 @@ Partial Public Class PageAccueilAnimal
         End Try
     End Sub
 
-    ''' <summary>
-    ''' Nouveau Traitement
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub btnNewTraitement_Click(sender As Object, e As EventArgs) Handles btnNewTraitement.Click
-        Dim l_o_traitement As New Traitrement
-
-        Try
-            ValidationManager.Validate(dtbNewTraitement, ntbNewTraitement)
-            With l_o_traitement
-                .Duree_jour = CIntVal(ntbNewTraitement.Text)
-                .Dt_debut = dtbNewTraitement.Date
-                .Id_animal = SelectedAnimalId
-                .Save()
-            End With
-            ShowInfo("Enregistrement effectué avec succès.")
-            dtgTraitements.RefreshData()
-            ntbNewTraitement.Text = ""
-            dtbNewTraitement.Date = Now.Date
-        Catch ex As Exception
-            ShowException(ex)
-        End Try
-    End Sub
+    'x     ''' <summary>
+    'x     ''' Nouveau Traitement
+    'x     ''' </summary>
+    'x     ''' <param name="sender"></param>
+    'x     ''' <param name="e"></param>
+    'x     ''' <remarks></remarks>
+    'x     Private Sub btnNewTraitement_Click(sender As Object, e As EventArgs) Handles btnNewTraitement.Click
+    'x         Dim l_o_traitement As New Traitrement
+    'x 
+    'x         Try
+    'x             ValidationManager.Validate(dtbNewTraitement, ntbNewTraitement)
+    'x             With l_o_traitement
+    'x                 .Duree_jour = CIntVal(ntbNewTraitement.Text)
+    'x                 .Dt_debut = dtbNewTraitement.Date
+    'x                 .Id_animal = SelectedAnimalId
+    'x                 .Save()
+    'x             End With
+    'x             ShowInfo("Enregistrement effectué avec succès.")
+    'x             dtgTraitements.RefreshData()
+    'x             ntbNewTraitement.Text = ""
+    'x             dtbNewTraitement.Date = Now.Date
+    'x         Catch ex As Exception
+    'x             ShowException(ex)
+    'x         End Try
+    'x     End Sub
 
     ''' <summary>
     ''' Ajoute une nouvelle vacination pour l'animal
@@ -479,7 +480,6 @@ Partial Public Class PageAccueilAnimal
                 .Id_vaccin = CInt(CboVaccin.SelectedValue)
                 .Id_animal = SelectedAnimalId
                 .Save()
-                'TODO consultation
             End With
             ShowInfo("Enregistrement effectué avec succès.")
             dtgVaccins.RefreshData()
@@ -609,10 +609,7 @@ Partial Public Class PageAccueilAnimal
 
             With .AddButtonColumn()
                 .Width = Unit.Pixel(65) ' fixe la taille de la colonne
-                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/TraitementDtl.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}"
-                .DataNavigateUrlField = VTL_TRAITREMENT.VTL_TRAITREMENT_ID
-                .Target = "tabTraitement_Medoc" + VTL_TRAITREMENT.VTL_TRAITREMENT_ID
-                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Traitement.aspx?ID={0}" & "&Mode=" & EN_ModeAcces.Modification
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Traitement.aspx?ID={0}" & "&Mode=" & EN_ModeAcces.Modification & "&Animal=" & CInt(Request.QueryString("ID"))
                 .DataNavigateUrlField = VTL_TRAITREMENT.VTL_TRAITREMENT_ID
                 .Target = "tabTraitement" + VTL_TRAITREMENT.VTL_TRAITREMENT_ID
                 .Properties.ImageName = "search"

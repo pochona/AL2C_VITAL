@@ -133,7 +133,7 @@
     <Content Include="Pages\Veterinaire\ListeConsult.aspx" />
     <Content Include="Pages\Veterinaire\NewCarte.aspx" />
     <Content Include="Pages\Veterinaire\PopUpProprio.aspx" />
-    <Content Include="Pages\Veterinaire\TraitementDtl.aspx" />
+    <Content Include="Pages\Veterinaire\Traitement.aspx" />
     <Content Include="PAR\VTL_ADOPTER.xml" />
     <Content Include="PAR\VTL_ANIMAL.xml" />
     <Content Include="PAR\VTL_ASSURANCE.xml" />
@@ -329,12 +329,12 @@
       <DependentUpon>PopUpProprio.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Pages\Veterinaire\TraitementDtl.aspx.designer.vb">
-      <DependentUpon>TraitementDtl.aspx</DependentUpon>
+    <Compile Include="Pages\Veterinaire\Traitement.aspx.designer.vb">
+      <DependentUpon>Traitement.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Veterinaire\TraitementDtl.aspx.vb">
-      <DependentUpon>TraitementDtl.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+    <Compile Include="Pages\Veterinaire\Traitement.aspx.vb">
+      <DependentUpon>Traitement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Welcome.aspx.designer.vb">
       <DependentUpon>Welcome.aspx</DependentUpon>

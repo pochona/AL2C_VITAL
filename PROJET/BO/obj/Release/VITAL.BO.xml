@@ -407,13 +407,37 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_siret">
+	<summary>
+ Siret.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_nom">
 	<summary>
  Nom.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_siret">
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_tel">
 	<summary>
- Siret.
+ Tel.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_mail">
+	<summary>
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_adr">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_cp">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_s_ville">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.m_i_id_user">
+	<summary>
+ id_user.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.HasChanges">
 	<summary>
@@ -429,6 +453,14 @@ VITAL.BO
 	<value>
  ID.
  </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Siret">
+	<summary>
+ Siret.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_SIRET.
+ </summary>
+	<value>
+ Siret.
+ </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Nom">
 	<summary>
  Nom.
@@ -437,13 +469,53 @@ VITAL.BO
 	<value>
  Nom.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Siret">
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Tel">
 	<summary>
- Siret.
- Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_SIRET.
+ Tel.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_TEL.
  </summary>
 	<value>
- Siret.
+ Tel.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Mail">
+	<summary>
+ Mail.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_MAIL.
+ </summary>
+	<value>
+ Mail.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Adr">
+	<summary>
+ Adr.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_ADR.
+ </summary>
+	<value>
+ Adr.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Cp">
+	<summary>
+ Cp.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_CP.
+ </summary>
+	<value>
+ Cp.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.Ville">
+	<summary>
+ Ville.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_VILLE.
+ </summary>
+	<value>
+ Ville.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Assurance`1.id_user">
+	<summary>
+ id_user.
+ Champ associé : VTL_ASSURANCE.VTL_ASSURANCE_ID_USER.
+ </summary>
+	<value>
+ id_user.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Assurance`1.HasHisto">
 	<summary>
@@ -684,6 +756,109 @@ VITAL.BO
 	<summary>
  Carte vitale.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_s_contenu">
+	<summary>
+ Contenu.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.m_dt_date">
+	<summary>
+ Date.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_CNSLDIET.CNSLDIET_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Contenu">
+	<summary>
+ Contenu.
+ Champ associé : VTL_CNSLDIET.CNSLDIET_CONTENU.
+ </summary>
+	<value>
+ Contenu.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_CNSLDIET.CNSLDIET_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Date">
+	<summary>
+ Date.
+ Champ associé : VTL_CNSLDIET.CNSLDIET_DATE.
+ </summary>
+	<value>
+ Date.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.ConseilDietetique`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.ConseilDietetique`1.Diff(VITAL.BO.VITAL.Raw.ConseilDietetique{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe ConseilDietetique.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.ConseilDietetique`1">
+	<summary>
+ ConseilDietetique.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Consultation`1.m_b_changes">
 	<summary>
  Indique s'il y a eu des changements sur l'objet ou non
@@ -843,6 +1018,10 @@ VITAL.BO
 	<summary>
  Id_assurance.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.m_d_txRemb">
+	<summary>
+ TxRemb.
+ </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.HasChanges">
 	<summary>
  Indique si l'objet a subi des modifications ou non
@@ -904,6 +1083,14 @@ VITAL.BO
  </summary>
 	<value>
  Id_assurance.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Contrat`1.TxRemb">
+	<summary>
+ TxRemb.
+ Champ associé : VTL_CONTRAT.VTL_CONTRAT_TXREMB.
+ </summary>
+	<value>
+ TxRemb.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Contrat`1.HasHisto">
 	<summary>
@@ -1394,6 +1581,10 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_dt_dateFin">
+	<summary>
+ DateFin.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_nom">
 	<summary>
  Nom.
@@ -1401,6 +1592,30 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_prenom">
 	<summary>
  Prenom.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_tel">
+	<summary>
+ Tel.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_mail">
+	<summary>
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_adr">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_cp">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_s_ville">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.m_i_id_user">
+	<summary>
+ id_user.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasChanges">
 	<summary>
@@ -1415,6 +1630,14 @@ VITAL.BO
  </summary>
 	<value>
  ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.DateFin">
+	<summary>
+ DateFin.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_DATEFIN.
+ </summary>
+	<value>
+ DateFin.
  </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Nom">
 	<summary>
@@ -1431,6 +1654,54 @@ VITAL.BO
  </summary>
 	<value>
  Prenom.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Tel">
+	<summary>
+ Tel.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL.
+ </summary>
+	<value>
+ Tel.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Mail">
+	<summary>
+ Mail.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL.
+ </summary>
+	<value>
+ Mail.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Adr">
+	<summary>
+ Adr.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR.
+ </summary>
+	<value>
+ Adr.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Cp">
+	<summary>
+ Cp.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP.
+ </summary>
+	<value>
+ Cp.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.Ville">
+	<summary>
+ Ville.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE.
+ </summary>
+	<value>
+ Ville.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.PropriEtaire`1.id_user">
+	<summary>
+ id_user.
+ Champ associé : VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER.
+ </summary>
+	<value>
+ id_user.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.PropriEtaire`1.HasHisto">
 	<summary>
@@ -1564,17 +1835,9 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_s_name">
-	<summary>
- Name.
- </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_dt_date">
 	<summary>
  Date.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_s_statut">
-	<summary>
- Statut.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_i_consult">
 	<summary>
@@ -1583,6 +1846,14 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_i_contrat">
 	<summary>
  Contrat.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_d_montant">
+	<summary>
+ Montant.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.m_i_statut">
+	<summary>
+ Statut.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.HasChanges">
 	<summary>
@@ -1598,14 +1869,6 @@ VITAL.BO
 	<value>
  ID.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Name">
-	<summary>
- Name.
- Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_NAME.
- </summary>
-	<value>
- Name.
- </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Date">
 	<summary>
  Date.
@@ -1613,14 +1876,6 @@ VITAL.BO
  </summary>
 	<value>
  Date.
- </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Statut">
-	<summary>
- Statut.
- Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT.
- </summary>
-	<value>
- Statut.
  </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Consult">
 	<summary>
@@ -1637,6 +1892,22 @@ VITAL.BO
  </summary>
 	<value>
  Contrat.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Montant">
+	<summary>
+ Montant.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_MONTANT.
+ </summary>
+	<value>
+ Montant.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Remboursement`1.Statut">
+	<summary>
+ Statut.
+ Champ associé : VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT.
+ </summary>
+	<value>
+ Statut.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Remboursement`1.HasHisto">
 	<summary>
@@ -1682,6 +1953,85 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Raw.Remboursement`1">
 	<summary>
  Remboursement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.m_b_changes">
+	<summary>
+ Indique s'il y a eu des changements sur l'objet ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.m_i_iD">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.m_s_name">
+	<summary>
+ Name.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Raw.Statut`1.HasChanges">
+	<summary>
+ Indique si l'objet a subi des modifications ou non
+ </summary>
+	<value>
+	</value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Statut`1.ID">
+	<summary>
+ ID.
+ Champ associé : VTL_STATUT.VTL_STATUT_ID.
+ </summary>
+	<value>
+ ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Statut`1.Name">
+	<summary>
+ Name.
+ Champ associé : VTL_STATUT.VTL_STATUT_NAME.
+ </summary>
+	<value>
+ Name.
+ </value>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.HasHisto">
+	<summary>
+ Indique si l'objet a un historique ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.HasCache">
+	<summary>
+ Indique si l'objet utilise le cache ou non
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Statut`1.TableName">
+	<summary>
+ Nom de la table associée à la classe.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.CloneAsNew(System.Boolean)">
+	<summary> Clone l'objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.CopyTo(`0,System.Boolean)">
+	<summary> Copie objet vers un autre avec la possibilité d'occulter la valorisation des propriétés des clés primaires.
+ </summary>
+	<param name="p_b_includeKeyValues">
+		<c>true</c> pour inclure les valeurs des clés primaires.</param>
+	<returns>
+		<paramref name="p_o_target"/></returns>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.ToRow(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Raw.Statut`1.Diff(VITAL.BO.VITAL.Raw.Statut{`0})">
+	<summary>
+ Permet de détecter toutes les différences entre 2 objets
+ </summary>
+	<param name="p_o_object">Objet de la classe Statut.</param>
+</member><member name="T:VITAL.BO.VITAL.Raw.Statut`1">
+	<summary>
+ Statut.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_b_changes">
 	<summary>
@@ -1814,6 +2164,10 @@ VITAL.BO
 	<summary>
  Dt_debut.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.m_i_id_animal">
+	<summary>
+ Id_animal.
+ </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.HasChanges">
 	<summary>
  Indique si l'objet a subi des modifications ou non
@@ -1843,6 +2197,14 @@ VITAL.BO
  </summary>
 	<value>
  Dt_debut.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Traitrement`1.Id_animal">
+	<summary>
+ Id_animal.
+ Champ associé : VTL_TRAITREMENT.VTL_TRAITREMENT_ID_ANIMAL.
+ </summary>
+	<value>
+ Id_animal.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Traitrement`1.HasHisto">
 	<summary>
@@ -2309,6 +2671,14 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_sIRET">
+	<summary>
+ SIRET.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_i_id_user">
+	<summary>
+ id_user.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_nom">
 	<summary>
  Nom.
@@ -2317,13 +2687,25 @@ VITAL.BO
 	<summary>
  Prenom.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_sIRET">
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_tel">
 	<summary>
- SIRET.
+ Tel.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_i_id_user">
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_mail">
 	<summary>
- id_user.
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_adr">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_cp">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.m_s_ville">
+	<summary>
+ Ville.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.HasChanges">
 	<summary>
@@ -2338,6 +2720,22 @@ VITAL.BO
  </summary>
 	<value>
  ID.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.SIRET">
+	<summary>
+ SIRET.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET.
+ </summary>
+	<value>
+ SIRET.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.id_user">
+	<summary>
+ id_user.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER.
+ </summary>
+	<value>
+ id_user.
  </value>
 </member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Nom">
 	<summary>
@@ -2355,21 +2753,45 @@ VITAL.BO
 	<value>
  Prenom.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.SIRET">
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Tel">
 	<summary>
- SIRET.
- Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET.
+ Tel.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_TEL.
  </summary>
 	<value>
- SIRET.
+ Tel.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.id_user">
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Mail">
 	<summary>
- id_user.
- Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER.
+ Mail.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_MAIL.
  </summary>
 	<value>
- id_user.
+ Mail.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Adr">
+	<summary>
+ Adr.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_ADR.
+ </summary>
+	<value>
+ Adr.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Cp">
+	<summary>
+ Cp.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_CP.
+ </summary>
+	<value>
+ Cp.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Veterinaire`1.Ville">
+	<summary>
+ Ville.
+ Champ associé : VTL_VETERINAIRE.VTL_VETERINAIRE_VILLE.
+ </summary>
+	<value>
+ Ville.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Veterinaire`1.HasHisto">
 	<summary>
@@ -2425,6 +2847,22 @@ VITAL.BO
 	<summary>
  Contrat d'assurance.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.Exists(System.Int32)">
+	<summary>
+ Indique s'il existe un utilisateur avec cet ID.
+ </summary>
+	<param name="p_i_idUser">Id utilisateur.</param>
+	<returns>Indique s'il existe un utilisateur avec cet ID.</returns>
+</member><member name="T:VITAL.BO.VITAL.PropriEtaire">
+	<summary>
+ Propriétaire.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.GetIdProprioByIdUser(System.Int32)">
+	<summary>
+ Retourne l'id du proprio connecté.
+ </summary>
+	<param name="p_i_idUser">ID User.</param>
+	<returns>L'id de l'utilisateur connecté.</returns>
 </member><member name="T:VITAL.BO.VITAL.PropriEtaire">
 	<summary>
  Propriétaire.
@@ -2433,6 +2871,17 @@ VITAL.BO
 	<summary>
  Vaccin.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.Veterinaire.GetIdVetoConnectedUser(System.String)">
+	<summary>
+ Retourne l'id vétérianire correspondant à l'utilisateur connecté.
+ </summary>
+	<param name="p_s_log">Loggin de l'utilisateur connecté.</param>
+	<returns>L'id vétérianire correspondant à l'utilisateur connecté.</returns>
+</member><member name="M:VITAL.BO.VITAL.Veterinaire.GetLastConsult">
+	<summary>
+ Retourne la derniere conusltationt du veterinaire.
+ </summary>
+	<returns>La derniere conusltationt du veterinaire.</returns>
 </member><member name="T:VITAL.BO.VITAL.Veterinaire">
 	<summary>
  Veterinaire.
@@ -2460,6 +2909,10 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_CARTE">
 	<summary>
  Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_CNSLDIET">
+	<summary>
+ ConseilDietetique.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_CONSULTATION">
 	<summary>
@@ -2496,6 +2949,10 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_REMBOURSMT">
 	<summary>
  Remboursement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Tables.VTL_STATUT">
+	<summary>
+ Statut.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Tables.VTL_TRAITEMENT_MEDICAMENT">
 	<summary>
@@ -2637,6 +3094,14 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET">
+	<summary>
+ Siret.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET_MAXLEN">
+	<summary>
+ Siret (Maxlen).
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_NOM">
 	<summary>
  Nom.
@@ -2645,13 +3110,49 @@ VITAL.BO
 	<summary>
  Nom (Maxlen).
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET">
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_TEL">
 	<summary>
- Siret.
+ Tel.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_SIRET_MAXLEN">
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_TEL_MAXLEN">
 	<summary>
- Siret (Maxlen).
+ Tel (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_MAIL">
+	<summary>
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_MAIL_MAXLEN">
+	<summary>
+ Mail (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ADR">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ADR_MAXLEN">
+	<summary>
+ Adr (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_CP">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_CP_MAXLEN">
+	<summary>
+ Cp (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_VILLE">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_VILLE_MAXLEN">
+	<summary>
+ Ville (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_ASSURANCE.VTL_ASSURANCE_ID_USER">
+	<summary>
+ id_user.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_ASSURANCE">
 	<summary>
@@ -2708,6 +3209,30 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.VTL_CARTE">
 	<summary>
  Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_CONTENU">
+	<summary>
+ Contenu.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_CONTENU_MAXLEN">
+	<summary>
+ Contenu (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_ID_ANIMAL">
+	<summary>
+ Id_animal.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CNSLDIET.CNSLDIET_DATE">
+	<summary>
+ Date.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_CNSLDIET">
+	<summary>
+ ConseilDietetique.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_CONSULTATION.VTL_CONSULTATION_ID">
 	<summary>
@@ -2772,6 +3297,10 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_ID_ASSURANCE">
 	<summary>
  Id_assurance.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_CONTRAT.VTL_CONTRAT_TXREMB">
+	<summary>
+ TxRemb.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_CONTRAT">
 	<summary>
@@ -2885,6 +3414,10 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_DATEFIN">
+	<summary>
+ DateFin.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM">
 	<summary>
  Nom.
@@ -2900,6 +3433,50 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM_MAXLEN">
 	<summary>
  Prenom (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL">
+	<summary>
+ Tel.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL_MAXLEN">
+	<summary>
+ Tel (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL">
+	<summary>
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL_MAXLEN">
+	<summary>
+ Mail (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR_MAXLEN">
+	<summary>
+ Adr (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP_MAXLEN">
+	<summary>
+ Cp (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE_MAXLEN">
+	<summary>
+ Ville (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER">
+	<summary>
+ id_user.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_PROPRIETAIRE">
 	<summary>
@@ -2925,25 +3502,9 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_NAME">
-	<summary>
- Name.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_NAME_MAXLEN">
-	<summary>
- Name (Maxlen).
- </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_DATE">
 	<summary>
  Date.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT">
-	<summary>
- Statut.
- </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT_MAXLEN">
-	<summary>
- Statut (Maxlen).
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_CONSULT">
 	<summary>
@@ -2953,9 +3514,33 @@ VITAL.BO
 	<summary>
  Contrat.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_MONTANT">
+	<summary>
+ Montant.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT">
+	<summary>
+ Statut.
+ </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_REMBOURSMT">
 	<summary>
  Remboursement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_STATUT.VTL_STATUT_ID">
+	<summary>
+ ID.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_STATUT.VTL_STATUT_NAME">
+	<summary>
+ Name.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_STATUT.VTL_STATUT_NAME_MAXLEN">
+	<summary>
+ Name (Maxlen).
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.VTL_STATUT">
+	<summary>
+ Statut.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID">
 	<summary>
@@ -2992,6 +3577,10 @@ VITAL.BO
 </member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT">
 	<summary>
  Dt_debut.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITREMENT.VTL_TRAITREMENT_ID_ANIMAL">
+	<summary>
+ Id_animal.
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_TRAITREMENT">
 	<summary>
@@ -3101,6 +3690,18 @@ VITAL.BO
 	<summary>
  ID.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET">
+	<summary>
+ SIRET.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET_MAXLEN">
+	<summary>
+ SIRET (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER">
+	<summary>
+ id_user.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_NOM">
 	<summary>
  Nom.
@@ -3117,17 +3718,45 @@ VITAL.BO
 	<summary>
  Prenom (Maxlen).
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET">
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_TEL">
 	<summary>
- SIRET.
+ Tel.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_SIRET_MAXLEN">
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_TEL_MAXLEN">
 	<summary>
- SIRET (Maxlen).
+ Tel (Maxlen).
  </summary>
-</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ID_USER">
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_MAIL">
 	<summary>
- id_user.
+ Mail.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_MAIL_MAXLEN">
+	<summary>
+ Mail (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ADR">
+	<summary>
+ Adr.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_ADR_MAXLEN">
+	<summary>
+ Adr (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_CP">
+	<summary>
+ Cp.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_CP_MAXLEN">
+	<summary>
+ Cp (Maxlen).
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_VILLE">
+	<summary>
+ Ville.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_VETERINAIRE.VTL_VETERINAIRE_VILLE_MAXLEN">
+	<summary>
+ Ville (Maxlen).
  </summary>
 </member><member name="T:VITAL.BO.VITAL.VTL_VETERINAIRE">
 	<summary>
@@ -3268,6 +3897,21 @@ VITAL.BO
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Carte"/>.
  </summary>
 	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.ConseilDietetique.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.ConseilDietetique"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.ConseilDietetique.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.ConseilDietetique"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.ConseilDietetique.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.ConseilDietetique"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
 </member><member name="M:VITAL.BO.VITAL.Consultation.#ctor(System.Int32,Corail.Core.Transaction)">
 	<summary>
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Consultation"/>.
@@ -3401,6 +4045,21 @@ VITAL.BO
 </member><member name="M:VITAL.BO.VITAL.Remboursement.#ctor(System.Data.DataRow)">
 	<summary>
  Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Remboursement"/>.
+ </summary>
+	<param name="p_o_row">Ligne d'une table de données.</param>
+</member><member name="M:VITAL.BO.VITAL.Statut.#ctor(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Statut"/>.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Statut.#ctor">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Statut"/>.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Statut.#ctor(System.Data.DataRow)">
+	<summary>
+ Initialise une nouvelle instance de la classe <see cref="T:VITAL.BO.VITAL.Statut"/>.
  </summary>
 	<param name="p_o_row">Ligne d'une table de données.</param>
 </member><member name="M:VITAL.BO.VITAL.Traitement_medicament.#ctor(System.Int32,Corail.Core.Transaction)">
@@ -4185,6 +4844,119 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Auto.Carte">
 	<summary>
  Carte vitale.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.ConseilDietetique.m_b_update">
+	<summary>
+ Indique s'il s'agit d'un élément chargé à partir de la base de données.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.ConseilDietetique.IsNew">
+	<summary>
+ Indique si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregistrement sera mis à jour.
+ </summary>
+	<value>
+		<c>true</c> si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregestement sera mis à jour.
+ </value>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.InitDefaultValues">
+	<summary>
+ Initialization par défaut avec les valeurs définies via Modeler
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.OnInitDefaultValues">
+	<summary> Post-initialisation en fin d'appel du ou des constructeurs de classe. 
+ Permet de surcharger les valeurs par défaut des propriétés.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.GetAll(Corail.Core.Transaction)">
+	<summary>
+ Retourne la requête retournant tous les élements.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+	<returns>Tous les éléments</returns>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.FindDR(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Retourne la ligne de données correspondant à l'enregistrement.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Load(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Chargement des informations à partir la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Save(Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Save(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Cancel(Corail.Core.Transaction)">
+	<summary>
+ Annule les changements apportés a l'objet
+ </summary>
+	<param name="p_o_trans">Transaction a utiliser</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Delete(Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.Delete(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_CNSLDIET.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="F:VITAL.BO.VITAL.Auto.ConseilDietetique.m_o_cacheDt">
+	<summary>
+ Cache Datatable
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.ConseilDietetique.m_o_cacheLock">
+	<summary>
+ Cache Lock
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.ConseilDietetique.m_b_cacheHasChanges">
+	<summary>
+ Cache Changes
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheDt(Corail.Core.Transaction,System.Boolean)">
+	<summary>
+ Propriété du cache datatable
+ </summary>
+	<param name="p_o_trans">La transaction à utiliser</param>
+	<param name="p_b_force">Objet de la classe ConseilDietetique.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheDtKey(VITAL.BO.VITAL.ConseilDietetique)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+	<param name="p_o_object">Objet de la classe ConseilDietetique.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheDtKeyFind(VITAL.BO.VITAL.ConseilDietetique)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheUpdate(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheUpdateDt(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache datatable
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.ConseilDietetique.CacheClear(System.Boolean)">
+	<summary>
+ Permet vider le cache datatable
+ </summary>
+	<param name="p_b_force">Indique si l'on force le vidage ou non</param>
+</member><member name="T:VITAL.BO.VITAL.Auto.ConseilDietetique">
+	<summary>
+ ConseilDietetique.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Auto.Consultation.m_b_update">
 	<summary>
@@ -5203,6 +5975,119 @@ VITAL.BO
 	<summary>
  Remboursement.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Statut.m_b_update">
+	<summary>
+ Indique s'il s'agit d'un élément chargé à partir de la base de données.
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.Statut.IsNew">
+	<summary>
+ Indique si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregistrement sera mis à jour.
+ </summary>
+	<value>
+		<c>true</c> si lors de l'appel à la méthode <c>Save</c>, un enregistrement devra être ajouté. Sinon l'enregestement sera mis à jour.
+ </value>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.InitDefaultValues">
+	<summary>
+ Initialization par défaut avec les valeurs définies via Modeler
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.OnInitDefaultValues">
+	<summary> Post-initialisation en fin d'appel du ou des constructeurs de classe. 
+ Permet de surcharger les valeurs par défaut des propriétés.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.GetAll(Corail.Core.Transaction)">
+	<summary>
+ Retourne la requête retournant tous les élements.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+	<returns>Tous les éléments</returns>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.FindDR(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Retourne la ligne de données correspondant à l'enregistrement.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Load(System.Int32,Corail.Core.Transaction)">
+	<summary>
+ Chargement des informations à partir la table VTL_STATUT.
+ </summary>
+	<param name="p_i_iD">ID.</param>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Load(System.Data.DataRow)">
+	<summary>
+ Chargement des informations à partir de la table VTL_STATUT.
+ </summary>
+	<param name="p_o_row">Enregistrement.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Save(Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_STATUT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Save(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Enregistrer les informations dans la table VTL_STATUT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Cancel(Corail.Core.Transaction)">
+	<summary>
+ Annule les changements apportés a l'objet
+ </summary>
+	<param name="p_o_trans">Transaction a utiliser</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Delete(Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_STATUT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.Delete(System.Boolean,Corail.Core.Transaction)">
+	<summary>
+ Supprime l'enregistrement de la table VTL_STATUT.
+ </summary>
+	<param name="p_o_trans">Transaction à utiliser.</param>
+</member><member name="F:VITAL.BO.VITAL.Auto.Statut.m_o_cacheDt">
+	<summary>
+ Cache Datatable
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Statut.m_o_cacheLock">
+	<summary>
+ Cache Lock
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Auto.Statut.m_b_cacheHasChanges">
+	<summary>
+ Cache Changes
+ </summary>
+</member><member name="P:VITAL.BO.VITAL.Auto.Statut.CacheDt(Corail.Core.Transaction,System.Boolean)">
+	<summary>
+ Propriété du cache datatable
+ </summary>
+	<param name="p_o_trans">La transaction à utiliser</param>
+	<param name="p_b_force">Objet de la classe Statut.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheDtKey(VITAL.BO.VITAL.Statut)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+	<param name="p_o_object">Objet de la classe Statut.</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheDtKeyFind(VITAL.BO.VITAL.Statut)">
+	<summary>
+ Permet de constuire le select représentant la clé primaire pour le cache datatable
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheUpdate(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheUpdateDt(System.Boolean)">
+	<summary>
+ Permet mettre à jour le cache datatable
+ </summary>
+	<param name="p_b_delete">Indique si l'on vient du delete d'un objet ou non</param>
+</member><member name="M:VITAL.BO.VITAL.Auto.Statut.CacheClear(System.Boolean)">
+	<summary>
+ Permet vider le cache datatable
+ </summary>
+	<param name="p_b_force">Indique si l'on force le vidage ou non</param>
+</member><member name="T:VITAL.BO.VITAL.Auto.Statut">
+	<summary>
+ Statut.
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.Auto.Traitement_medicament.m_b_update">
 	<summary>
  Indique s'il s'agit d'un élément chargé à partir de la base de données.
@@ -5994,6 +6879,19 @@ VITAL.BO
 	<summary>
  Veterinaire.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.ConseilDietetique.GetConseilsAnimal(System.Int32)">
+	<summary>
+ Retourne les consultations d'un client et d'un animal de la plus récente à la plus ancienne
+ </summary>
+	<returns>Les consultations d'un client et d'un animal de la plus récente à la plus ancienne.</returns>
+</member><member name="T:VITAL.BO.VITAL.ConseilDietetique">
+	<summary>
+ ConseilDietetique.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.Statut">
+	<summary>
+ Statut.
+ </summary>
 </member><member name="T:VITAL.BO.VITAL.Traitrement">
 	<summary>
  Traitrement.
@@ -6009,6 +6907,17 @@ VITAL.BO
 	<param name="p_s_login"></param>
 	<returns></returns>
 	<remarks></remarks>
+</member><member name="M:VITAL.BO.VITAL.User.GetProprios">
+	<summary>
+ Retourne la liste des utilisateurs qui sont des propriétaires d'animaux.
+ </summary>
+	<returns>La liste des utilisateurs qui sont des propriétaires d'animaux.</returns>
+</member><member name="M:VITAL.BO.VITAL.User.GetIdUser(System.String)">
+	<summary>
+ Retourne l'id de l'utilisateur connecté.
+ </summary>
+	<param name="p_s_log">Loggin.</param>
+	<returns>L'id de l'utilisateur connecté.</returns>
 </member><member name="T:VITAL.BO.VITAL.User">
 	<summary>
  User.
@@ -6022,6 +6931,22 @@ VITAL.BO
  Accès en modification
  </summary>
 </member><member name="T:VITAL.BO.EN_ModeAcces">
+	<summary>
+ Mode d'accès aux pages
+ </summary>
+</member><member name="F:VITAL.BO.EN_Statut.StatutInexistant">
+	<summary>
+ Ne pas utiliser
+ </summary>
+</member><member name="F:VITAL.BO.EN_Statut.EnCours">
+	<summary>
+ Accès en création de consultation
+ </summary>
+</member><member name="F:VITAL.BO.EN_Statut.Payee">
+	<summary>
+ Apres paiement
+ </summary>
+</member><member name="T:VITAL.BO.EN_Statut">
 	<summary>
  Mode d'accès aux pages
  </summary>
@@ -6105,6 +7030,30 @@ VITAL.BO
  Retourne le numéro de carte vitale.
  </summary>
 	<returns>Le numéro de carte vitale.</returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetIDConseilDiet">
+	<summary>
+ Retourne le dernier ID conseil diététique enregistré.
+ </summary>
+	<returns>Le dernier ID conseil diététique enregistré.</returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetNomPrenomProprio">
+	<summary>
+ Retourne le nom prénom de son propriétaire.
+ </summary>
+	<returns>Le nom prénom de son propriétaire.</returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetAnimxSearched(System.String,System.String,System.String,System.String)">
+	<summary>
+ Retourne les animaux qui correspondent aux critères de recherche.
+ </summary>
+	<param name="p_s_NumCarte">Numéro de carte vital (NUMERO ET PAS ID NI NFC).</param>
+	<param name="p_s_NomAnimal">Nom animal.</param>
+	<param name="p_s_NomProprio">Nom Proprio.</param>
+	<param name="p_s_PrenomProprio">Prénom proprio.</param>
+	<returns>Les animaux qui correspondent aux critères de recherche.</returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetIdContrat">
+	<summary>
+ Retourne l'id du contrat de l'animal.
+ </summary>
+	<returns>L'id du contrat de l'animal.</returns>
 </member><member name="T:VITAL.BO.VITAL.Animal">
 	<summary>
  Animal.
@@ -6131,11 +7080,22 @@ VITAL.BO
  l'application
  </summary>
 	<param name="p_o_list">Liste de bases de données</param>
+</member><member name="M:VITAL.BO.VITAL.Consultation.GetConsultationsAnimal(System.Int32)">
+	<summary>
+ Retourne les consultations d'un client et d'un animal de la plus récente à la plus ancienne
+ </summary>
+	<returns>Les consultations d'un client et d'un animal de la plus récente à la plus ancienne.</returns>
 </member><member name="M:VITAL.BO.VITAL.Consultation.GetConsultationsClient(System.String,System.Int32)">
 	<summary>
  Retourne les consultations d'un client et d'un animal de la plus récente à la plus ancienne
  </summary>
 	<returns>Les consultations d'un client et d'un animal de la plus récente à la plus ancienne.</returns>
+</member><member name="M:VITAL.BO.VITAL.Consultation.SearchedConsultVeto(System.Int32)">
+	<summary>
+ Retourne la liste des consultations d'un vétérinaire.
+ </summary>
+	<param name="p_s_loginVeto"></param>
+	<returns>La liste des consultations d'un vétérinaire.</returns>
 </member><member name="T:VITAL.BO.VITAL.Consultation">
 	<summary>
  Consultation vétérinaire d'un animal.
