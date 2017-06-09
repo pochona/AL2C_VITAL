@@ -1,0 +1,2 @@
+insert into VTL_STATUT values ('En cours');
+insert into VTL_STATUT values ('Payee');

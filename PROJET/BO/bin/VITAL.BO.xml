@@ -6,7 +6,11 @@ VITAL.BO
 </name>
 </assembly>
 <members>
-<member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_b_changes">
+<member name="T:VITAL.BO.VITAL.Statut">
+	<summary>
+ Statut.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.AnimalDocs`1.m_b_changes">
 	<summary>
  Indique s'il y a eu des changements sur l'objet ou non
  </summary>
@@ -6930,6 +6934,22 @@ VITAL.BO
 	<summary>
  Mode d'accès aux pages
  </summary>
+</member><member name="F:VITAL.BO.EN_Statut.StatutInexistant">
+	<summary>
+ Ne pas utiliser
+ </summary>
+</member><member name="F:VITAL.BO.EN_Statut.EnCours">
+	<summary>
+ Accès en création de consultation
+ </summary>
+</member><member name="F:VITAL.BO.EN_Statut.Payee">
+	<summary>
+ Apres paiement
+ </summary>
+</member><member name="T:VITAL.BO.EN_Statut">
+	<summary>
+ Mode d'accès aux pages
+ </summary>
 </member><member name="F:VITAL.BO.ModConst.C_S_EXEMPLE">
  Style des éléments inactifs dans les grilles
 
@@ -7029,6 +7049,11 @@ VITAL.BO
 	<param name="p_s_NomProprio">Nom Proprio.</param>
 	<param name="p_s_PrenomProprio">Prénom proprio.</param>
 	<returns>Les animaux qui correspondent aux critères de recherche.</returns>
+</member><member name="M:VITAL.BO.VITAL.Animal.GetIdContrat">
+	<summary>
+ Retourne l'id du contrat de l'animal.
+ </summary>
+	<returns>L'id du contrat de l'animal.</returns>
 </member><member name="T:VITAL.BO.VITAL.Animal">
 	<summary>
  Animal.

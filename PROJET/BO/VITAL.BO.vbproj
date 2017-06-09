@@ -80,6 +80,7 @@
     <Compile Include="Classes\PropriEtaire.vb" />
     <Compile Include="Classes\Race.vb" />
     <Compile Include="Classes\Remboursement.vb" />
+    <Compile Include="Classes\Statut.vb" />
     <Compile Include="Classes\Traitement_medicament.vb" />
     <Compile Include="Classes\Traitrement.vb" />
     <Compile Include="Classes\Type.vb" />

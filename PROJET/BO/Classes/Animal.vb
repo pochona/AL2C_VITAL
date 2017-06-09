@@ -267,6 +267,40 @@
 
 #End Region
 
+#Region "Contrat mutuelle "
+
+        ''' <summary>
+        ''' Retourne l'id du contrat de l'animal.
+        ''' </summary>
+        ''' <returns>L'id du contrat de l'animal.</returns>
+        Public Function GetIdContrat() As Integer
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_CONTRAT.VTL_CONTRAT_ID)
+
+                'FROM
+                .AddFrom(Tables.VTL_ANIMAL)
+                .AddFrom(Tables.VTL_CONTRAT, DbJoin.Right, Tables.VTL_ANIMAL, VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL, VTL_ANIMAL.VTL_ANIMAL_ID)
+                .AddWhereIs(VTL_CONTRAT.VTL_CONTRAT_ID_PROPRIETAIRE, Id_prop)
+                'x .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_FIN + ">=" + MyDB.SqlDate(Now.Date))
+                'x .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT + ">=" + MyDB.SqlDate(Now.Date))
+                .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_FIN + ">='" + Now.Year.ToString + "/" + Now.Month.ToString + "/" + Now.Day.ToString + "'")
+                .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT + "<='" + Now.Year.ToString + "/" + Now.Month.ToString + "/" + Now.Day.ToString + "'")
+          
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzInt((.GetFirstValue))
+                Else
+                    Return 0
+                End If
+            End With
+        End Function
+
+
+#End Region
+
     End Class
 
 End Namespace

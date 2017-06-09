@@ -124,3 +124,5 @@ C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.dll
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.xml
 C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\obj\Debug\VITAL.pdb
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\bin\Corail.Web.Chart.dll
+C:\Users\Nolwenn PILLARD\Documents\AL2C\CurrentGit2\AL2C_VITAL\AL2C_VITAL\PROJET\Site\bin\Corail.Web.Chart.xml

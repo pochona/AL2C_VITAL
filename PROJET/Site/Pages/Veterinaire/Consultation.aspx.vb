@@ -173,22 +173,43 @@ Partial Public Class PageConsultation
     ''' <param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim l_o_consult As New Consultation
+        Dim l_i_idContrat As Integer
 
         Try
-            With l_o_consult
-                .Dt_Consultation = dtbDate.Date
-                .Commentaire = txtComment.Text
-                .Montant = ntbMontant.Value
-                .Id_veterinaire = CInt(cboVeterinaire.SelectedValue)
-                .Id_animal = SelectedAnimalId
-                .Save()
-            End With
-            ShowInfo("Enregistrement effectué avec succès.")
-            ModeAcces = EN_ModeAcces.Modification
-            LoadData()
-            LoadElementsVisibles()
-            ClientRegisterRefreshWindow("tabAnimal" & SelectedAnimalId, "refreshGrilleConsult")
-            CloseWindowOnLoad()
+            Using l_o_trans As Transaction = MyDB.GetNewTransaction()
+                With l_o_consult
+                    .Dt_Consultation = dtbDate.Date
+                    .Commentaire = txtComment.Text
+                    .Montant = ntbMontant.Value
+                    .Id_veterinaire = CInt(cboVeterinaire.SelectedValue)
+                    .Id_animal = SelectedAnimalId
+                    .Save(l_o_trans)
+                End With
+                l_i_idContrat = SelectedAnimal.GetIdContrat()
+                If l_i_idContrat <> 0 Then
+                    Dim l_o_contrat As New Contrat
+                    l_o_contrat.Load(l_i_idContrat)
+                    'Création d'un remboursement
+                    Dim l_o_rembsrt As New Remboursement
+                    With l_o_rembsrt
+                        .Date = Now.Date
+                        .Consult = l_o_consult.ID
+                        .Contrat = l_i_idContrat
+                        .Statut = EN_Statut.EnCours
+                        '.montant
+                        .Montant = NzDbl(l_o_consult.Montant) * NzDbl(l_o_contrat.TxRemb)
+                        .Save(l_o_trans)
+                    End With
+                End If
+                ShowInfo("Enregistrement effectué avec succès.")
+                ModeAcces = EN_ModeAcces.Modification
+                LoadData()
+                LoadElementsVisibles()
+                ClientRegisterRefreshWindow("tabAnimal" & SelectedAnimalId, "refreshGrilleConsult")
+                CloseWindowOnLoad()
+                l_o_trans.Validate()
+            End Using
+
         Catch ex As Exception
             ShowException(ex)
         End Try

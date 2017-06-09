@@ -193,6 +193,8 @@ Partial Public Class PageAccueilAnimal
                 cboRace.SelectedValue = CStr(SelectedAnimal.Id_race)
                 cboNumCarte.SelectedValue = CStr(SelectedAnimal.Id_carte)
                 stbProprio.Text = SelectedAnimal.GetNomPrenomProprio()
+                dttxtNewVaccin.Date = Now.Date
+                dtbNewTraitement.Date = Now.Date
             End If
         ElseIf ModeAcces = EN_ModeAcces.Creation Then
 
@@ -442,11 +444,11 @@ Partial Public Class PageAccueilAnimal
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btnNewTraitement_Click(sender As Object, e As EventArgs) Handles btnNewTraitement.Click
-        Dim l_o_cslTraitement As New Traitrement
+        Dim l_o_traitement As New Traitrement
 
         Try
             ValidationManager.Validate(dtbNewTraitement, ntbNewTraitement)
-            With l_o_cslTraitement
+            With l_o_traitement
                 .Duree_jour = CIntVal(ntbNewTraitement.Text)
                 .Dt_debut = dtbNewTraitement.Date
                 .Id_animal = SelectedAnimalId
@@ -454,7 +456,8 @@ Partial Public Class PageAccueilAnimal
             End With
             ShowInfo("Enregistrement effectué avec succès.")
             dtgTraitements.RefreshData()
-            dtbNewTraitement.Text = ""
+            ntbNewTraitement.Text = ""
+            dtbNewTraitement.Date = Now.Date
         Catch ex As Exception
             ShowException(ex)
         End Try
@@ -599,7 +602,7 @@ Partial Public Class PageAccueilAnimal
 
     Private Sub dtgTraitements_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgTraitements.DataTableRequest
         Try
-            p_o_dt = Traitement_medicament.GetTraitmtAnimal(SelectedAnimalId).GetDT
+            p_o_dt = Traitrement.GetTraitmtAnimal(SelectedAnimalId).GetDT
         Catch ex As Exception
             ShowException(ex)
         End Try
@@ -607,33 +610,21 @@ Partial Public Class PageAccueilAnimal
 
     Private Sub dtgTraitements_Init(sender As Object, e As EventArgs) Handles dtgTraitements.Init
         With dtgTraitements
-            .DataKeyField = VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID
+            .DataKeyField = VTL_TRAITREMENT.VTL_TRAITREMENT_ID
 
             With .AddButtonColumn()
                 .Width = Unit.Pixel(65) ' fixe la taille de la colonne
-                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Traitement.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}"
-                .DataNavigateUrlField = VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID
-                .Target = "tabTraitement_Medoc" + VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_ID
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/TraitementDtl.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}"
+                .DataNavigateUrlField = VTL_TRAITREMENT.VTL_TRAITREMENT_ID
+                .Target = "tabTraitement_Medoc" + VTL_TRAITREMENT.VTL_TRAITREMENT_ID
                 .Properties.ImageName = "search"
                 m_i_btn_traitmt_medoc = .ColumnIndex
             End With
             With .AddDateColumn("Date début", VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT)
                 m_i_date_deb = .ColumnIndex
             End With
-            With .AddColumn("Durée de prise du médicament", VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR)
-                m_i_duree_medoc = .ColumnIndex
-            End With
             With .AddColumn("Durée globale du traitement", VTL_TRAITREMENT.VTL_TRAITREMENT_DUREE_JOUR)
                 m_i_duree_traitmt = .ColumnIndex
-            End With
-            With .AddColumn("Médicament", VTL_MEDICAMENT.VTL_MEDICAMENT_LIBELLE)
-                m_i_lib_medoc = .ColumnIndex
-            End With
-            With .AddColumn("Posologie", VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE)
-                m_i_Posologie = .ColumnIndex
-            End With
-            With .AddColumn("Dosage du médicament", VTL_MEDICAMENT.VTL_MEDICAMENT_DOSAGE)
-                m_i_dosage_medoc = .ColumnIndex
             End With
         End With
     End Sub
@@ -648,9 +639,9 @@ Partial Public Class PageAccueilAnimal
     Private m_i_date_vac As Integer
     Private m_i_vac_eff As Integer
     Private m_i_recommendation As Integer
+    Private m_i_period As Integer
 
 #End Region
-
 
     Private Sub dtgVaccins_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgVaccins.DataTableRequest
         Try
@@ -674,20 +665,20 @@ Partial Public Class PageAccueilAnimal
             With .AddDateColumn("Date", VTL_VACCINATION.VTL_VACCINATION_DT_VACCIN)
                 m_i_date_vac = .ColumnIndex
             End With
-            With .AddColumn("Vaccin effectué", VTL_VACCIN.VTL_VACCIN_LIBELLE)
+            With .AddColumn("Nom", VTL_VACCIN.VTL_VACCIN_LIBELLE)
                 m_i_vac_eff = .ColumnIndex
             End With
-            With .AddColumn("Recommendation", VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION)
+            With .AddColumn("Vaccin recommandé", VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION)
                 m_i_recommendation = .ColumnIndex
+            End With
+            With .AddColumn("Vaccin périodique", VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE)
+                m_i_period = .ColumnIndex
             End With
         End With
     End Sub
 
 #End Region
 
-
-
 #End Region
-
 
 End Class

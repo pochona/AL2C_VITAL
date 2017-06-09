@@ -14,6 +14,24 @@ Public Enum EN_ModeAcces
     Modification
 End Enum
 
+''' <summary>
+''' Mode d'accès aux pages
+''' </summary>
+Public Enum EN_Statut
+    ''' <summary>
+    ''' Ne pas utiliser
+    ''' </summary>
+    StatutInexistant
+    ''' <summary>
+    ''' Accès en création de consultation
+    ''' </summary>
+    EnCours
+    ''' <summary>
+    ''' Apres paiement
+    ''' </summary>
+    Payee
+End Enum
+
 #End Region
 
 #Region "Constantes"
