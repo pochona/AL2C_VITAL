@@ -11,14 +11,6 @@
         <cw:CwFormLayout runat="server" ID="frlGeneral" >
             <cw:CwFrame runat="server" ID="frmSelectAnimal" Text="Sélectionner un animal" Kind="Primary">
                 <cw:CwFormLayout runat="server" ID="frlSelectAnimal">
-                    <cw:CwFrame runat="server" iD="frmSearchNFC" Text="Détection carte vitale" Collapsable="true" Cells-Small="6" ResetLayout="False" Width="100%" >
-                        <cw:CwFormLayout runat="server" ID="frlNFC">
-                            <cw:CwTextBox runat="server" ID="txtNumCarteNFC" Label="Numéro de carte" Enabled="False"></cw:CwTextBox>
-                            <cw:CwPanelButtons runat="server" ID="pnlBtnNfc">
-                                <cw:CwButton runat="server" ID="btnSearchNFC" ImageName="download" Text="Lancer la recherche"></cw:CwButton>
-                            </cw:CwPanelButtons>
-                        </cw:CwFormLayout>
-                    </cw:CwFrame>
                     <cw:CwFrame runat="server" iD="frmSearchGeneral" Text="Recherche selon critères" Collapsable="true" Cells-Small="6" ResetLayout="False" Width="100%">
                         <cw:CwFormLayout runat="server" ID="frlSearchAnimal">
                             <cw:CwTextBox runat="server" ID="txtNumCarte" Label="Numéro de carte" ></cw:CwTextBox>

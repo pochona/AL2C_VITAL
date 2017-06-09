@@ -50,51 +50,6 @@ Partial Public Class PageAuthAnimal
     Protected WithEvents frlSelectAnimal As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle frmSearchNFC.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents frmSearchNFC As Global.Corail.Web.CwFrame
-
-    '''<summary>
-    '''Contrôle frlNFC.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents frlNFC As Global.Corail.Web.CwFormLayout
-
-    '''<summary>
-    '''Contrôle txtNumCarteNFC.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents txtNumCarteNFC As Global.Corail.Web.CwTextBox
-
-    '''<summary>
-    '''Contrôle pnlBtnNfc.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents pnlBtnNfc As Global.Corail.Web.CwPanelButtons
-
-    '''<summary>
-    '''Contrôle btnSearchNFC.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents btnSearchNFC As Global.Corail.Web.CwButton
-
-    '''<summary>
     '''Contrôle frmSearchGeneral.
     '''</summary>
     '''<remarks>

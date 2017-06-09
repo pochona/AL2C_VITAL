@@ -39,20 +39,6 @@ Partial Class PageAuthAnimal
 #Region "Boutons"
 
     ''' <summary>
-    ''' Evenement déclenché lors du clic sur le bouton qui va lancer la récupération des informations contenues
-    ''' dans le lecteur.
-    ''' </summary>
-    ''' <param name="sender">Instance de classe source de l'évènement.</param>
-    ''' <param name="e"><see cref="T:System.EventArgs"/> qui ne contient aucune donnée d'événement.</param>
-    Private Sub btnSearchNFC_Click(sender As Object, e As EventArgs) Handles btnSearchNFC.Click
-        Try
-            ' TODO
-        Catch ex As Exception
-            ShowException(ex)
-        End Try
-    End Sub
-
-    ''' <summary>
     ''' Bouton qui lance la recherche d'un animal selon des critères, utile si le proprio n'as pas la carte de
     ''' l'animal.
     ''' </summary>
