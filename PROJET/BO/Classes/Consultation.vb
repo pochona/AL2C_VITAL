@@ -178,22 +178,21 @@
 
         Public Function GetNomProprio() As String
             Dim l_o_sql As New Query
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM)
+                .AddFrom(Tables.VTL_PROPRIETAIRE)
+                .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_PROPRIETAIRE, VTL_ANIMAL.VTL_ANIMAL_ID_PROP, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID)
+                .AddFrom(Tables.VTL_CONSULTATION, DbJoin.Right, Tables.VTL_ANIMAL, VTL_CONSULTATION.VTL_CONSULTATION_L, VTL_ANIMAL.VTL_ANIMAL_ID)
+                .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_ID, ID)
 
-            'x             With l_o_sql
-            'x                 .Clear()
-            'x                 .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM)
-            'x                 .AddFrom(Tables.VTL_PROPRIETAIRE)
-            'x                 .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_CONSULTATION, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_CONSULTATION.VTL_CONSULTATION_L)
-            'x                 .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_PROPRIETAIRE, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID)
-            'x                 .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_ID, ID)
-            'x 
-            'x                 If Not .GetFirstRow Is Nothing Then
-            'x                     Return NzStr((.GetFirstValue))
-            'x                 Else
-            'x                     Return ""
-            'x 
-            'x                 End If
-            'x             End With
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzStr((.GetFirstValue))
+                Else
+                    Return ""
+
+                End If
+            End With
         End Function
 
 
