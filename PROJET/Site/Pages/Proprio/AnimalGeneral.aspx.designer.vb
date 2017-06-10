@@ -248,6 +248,24 @@ Partial Public Class PageAnimalGeneral
     Protected WithEvents txtMsgMut As Global.Corail.Web.CwTextBox
 
     '''<summary>
+    '''Contrôle frmListConsult.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frmListConsult As Global.Corail.Web.CwFrame
+
+    '''<summary>
+    '''Contrôle dtgConsultations.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dtgConsultations As Global.Corail.Web.CwDataGrid
+
+    '''<summary>
     '''Contrôle pnbvet.
     '''</summary>
     '''<remarks>
@@ -273,13 +291,4 @@ Partial Public Class PageAnimalGeneral
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents btnvet2 As Global.Corail.Web.CwButton
-
-    '''<summary>
-    '''Contrôle btnvet3.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents btnvet3 As Global.Corail.Web.CwButton
 End Class

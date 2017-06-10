@@ -42,10 +42,15 @@
             </cw:CwFrame>
 	    </cw:CwFormLayout>
 
+            <cw:CwFrame runat="server" ID="frmListConsult" Text="Liste des consultations" Collapsable="true" >
+              <cw:CwDataGrid runat="server" ID="dtgConsultations" Title="{0} consultation(s)"></cw:CwDataGrid>  
+
+            </cw:CwFrame>
+	   
+
         <cw:CwPanelButtons runat="server" ID="pnbvet">
-            <cw:CwButton runat="server" ID="btnvet1" Text="Consuler les consultations" Kind="Default"></cw:CwButton>
-            <cw:CwButton runat="server" ID="btnvet2" Text="Ajouter des traitements" Kind="Default"></cw:CwButton>
-            <cw:CwButton runat="server" ID="btnvet3" Text="Ajouter des vaccins" Kind="Default"></cw:CwButton>
+            <cw:CwButton runat="server" ID="btnvet1" Text="Afficher les consultations" Kind="Default"></cw:CwButton>
+            <cw:CwButton runat="server" ID="btnvet2" Text="Ajouter un traitement" Kind="Default"></cw:CwButton>
          </cw:CwPanelButtons>
         
 	</div>

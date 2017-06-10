@@ -59,6 +59,24 @@ Partial Public Class PageSuiviPoids
     Protected WithEvents txtPoidsActuel As Global.Corail.Web.CwTextBox
 
     '''<summary>
+    '''Contrôle frmGraph.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frmGraph As Global.Corail.Web.CwFrame
+
+    '''<summary>
+    '''Contrôle frlGraph.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frlGraph As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
     '''Contrôle lnctPoids.
     '''</summary>
     '''<remarks>

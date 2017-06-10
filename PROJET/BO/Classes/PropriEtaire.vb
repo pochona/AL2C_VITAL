@@ -26,13 +26,7 @@
                 End If
             End With
         End Function
-    End Class
-
-
-    ''' <summary>
-    ''' Propriétaire.
-    ''' </summary>
-    Partial Public Class PropriEtaire
+   
         ''' <summary>
         ''' Retourne l'id du proprio connecté.
         ''' </summary>

@@ -1,6 +1,9 @@
 Imports VITAL.BO
 Imports VITAL.BO.VITAL
 
+''' <summary>
+''' 
+''' </summary>
 Partial Public Class PageSuiviPoids
     Inherits CwPage
 
@@ -51,7 +54,7 @@ Partial Public Class PageSuiviPoids
     ''' Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-                'Récupère le document dans l'url
+            'Récupère le document dans l'url
             SelectedAnimalId = CInt(Request.QueryString("ID"))
             LoadData()
         End If
@@ -72,97 +75,77 @@ Partial Public Class PageSuiviPoids
             txtConseils.Label = "Pour obtenir des conseils diététiques pour animal, contactez votre vétérinaire !"
             dtbLastConseil.Date = l_o_conseilDiet.Date
         End If
-        ' LoadChart()
+        LoadChart()
     End Sub
 
+#Region "Chargement"
 
-    'x 
-    'x     '''  Rempli les données dans le graphique
-    'x     Private Sub LoadChartLine()
-    'x         Dim l_o_dt As DataTable = Histo_Poids.GetHistoPoids(SelectedAnimalId).GetDT()
-    'x         Dim l_o_ds As Chart.BarDataset
-    'x         Dim l_i_index As Integer = 0
-    'x 
-    'x         With lnctPoids
-    'x             ' Libellés axe des abscisses (vertical)
-    'x             For Each l_o_row As DataRow In l_o_dt.Rows
-    'x                 .Labels.Add(CStr(l_o_row(VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS)))
-    'x             Next
-    'x             ' Nettoyage des données du graphique
-    'x             .Datasets.Clear()
-    'x             ' Renseignement des données
-    'x             For Each l_o_row As DataRow In l_o_dt.Rows
-    'x                 l_o_ds = .Datasets.AddBar(NzStr(l_o_row(0)), "#39A5E0")
-    'x                 l_o_ds.Add(NzDbl(l_o_row(VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS)))
-    'x             Next
-    'x         End With
-    'x 
-    'x 
-    'x 
-    'x 
-    'x 
-    'x 
-    'x 
-    'x     End Sub
-    'x 
-    'x   
-    'x 
-    'x     ''' Initialise le graphique.    
-    'x     Private Sub LoadChart()
-    'x         ' DataTable qui contient les données à charger 
-    'x         Dim l_o_dt As DataTable = Histo_Poids.GetHistoPoids(SelectedAnimalId).GetDT()
-    'x         ' DataSource du graphique
-    'x         Dim l_o_ds As New Chart.PieDataset
-    'x 
-    'x         With lnctPoids
-    'x             'x ' Pour déclencher un évènement lorsqu'on clique sur le graphique
-    'x             'x .AutoPostBack = True
-    'x             'x ' Chart data sources
-    'x             'x .Datasets.Clear()
-    'x             'x l_o_ds = .Datasets.Add()
-    'x             'x ' Chart Type
-    'x             'x .Kind = Chart.PieChartKind.Doughnut
-    'x             'x ' Options ...
-    'x             'x ' Position de la légende
-    'x             'x .Options.Legend.Position = Chart.ChartPosition.Bottom
-    'x             'x ' Remplissage des données dans le graphique
-    'x             For Each l_o_row As DataRow In l_o_dt.Rows
-    'x                 ' Libellés
-    'x                 .Labels.Add(NzStr(l_o_row(VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS)))
-    'x                 ' Données
-    'x                 l_o_ds.Add(NzDbl(l_o_row(VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS)))
-    'x                 ' l_o_ds.Add(Taille prise graphiquement par les données, Couleur affichée)
-    'x             Next
-    'x         End With
-    'x     End Sub
- 
+    ''' <summary>
+    ''' Mise en forme du graphique.
+    ''' </summary>
+    Private Sub LoadChart()
+        Dim l_o_dt As DataTable = GetChartLineData()
+        Dim l_o_ds As Chart.BarDataset
+        Dim l_i_nbValuePoids As Integer = Histo_Poids.GetHistoPoids(SelectedAnimalId).GetDT().Rows.Count
+
+        With lnctPoids
+            ' Libellés axe des abscisses (vertical)
+            For l_i As Integer = 1 To l_i_nbValuePoids
+                .Labels.Add(l_o_dt.Columns(l_i).ColumnName)
+            Next
+            ' Nettoyage des données du graphique
+            .Datasets.Clear()
+            ' Renseignement des données
+            For Each l_o_dr As DataRow In l_o_dt.Rows
+                l_o_ds = .Datasets.AddBar(NzStr(l_o_dr(0)), "#088A29")
+                For l_i_col As Integer = 1 To l_i_nbValuePoids
+                    l_o_ds.Add(NzDbl(l_o_dr(l_i_col)))
+                    l_o_ds.BorderWidth = 1
+                Next
+            Next
+            .Options.Legend.Display = False
+        End With
+    End Sub
+
+    ''' <summary>
+    ''' Retourne les données à mettre dans le graphique.
+    ''' </summary>
+    ''' <returns>Les données à mettre dans le graphique.</returns>
+    Public Function GetChartLineData() As DataTable
+        Dim l_o_dt As New DataTable
+        Dim l_o_dtTemp As New DataTable
+        Dim l_i_count As Integer
+        Dim l_s_tempDate As String = ""
+        Dim l_i_nbEgaux As Integer = 0
+
+        l_o_dtTemp = Histo_Poids.GetHistoPoids(SelectedAnimalId).GetDT()
+        'Construction des colonnes de la grille 
+        l_o_dt.Columns.Add("TEMP")
+        ' construit donnees de l'axe des ordonnées
+        For Each l_o_row As DataRow In l_o_dtTemp.Rows
+            If l_s_tempDate <> CStr(l_o_row(VTL_HISTO_POIDS.VTL_HISTO_POIDS_DT_HISTO)) Then
+                l_o_dt.Columns.Add(CStr(l_o_row(VTL_HISTO_POIDS.VTL_HISTO_POIDS_DT_HISTO)))
+                l_i_nbEgaux = 0
+            Else
+                l_i_nbEgaux = l_i_nbEgaux + 1
+                l_o_dt.Columns.Add(CStr(l_o_row(VTL_HISTO_POIDS.VTL_HISTO_POIDS_DT_HISTO)) + " " + CStr(l_i_nbEgaux))
+            End If
+            l_s_tempDate = CStr(l_o_row(VTL_HISTO_POIDS.VTL_HISTO_POIDS_DT_HISTO))
+        Next
+        'Ajouter la 1er ligne pour la valeur du poids
+        With l_o_dt.Rows.Add()
+            l_i_count = 1
+            For Each l_o_row2 As DataRow In l_o_dtTemp.Rows
+                'pour cahque date poids sa valeur de poids
+                .Item(l_i_count) = CDbl(l_o_row2(VTL_HISTO_POIDS.VTL_HISTO_POIDS_POIDS))
+                l_i_count = l_i_count + 1
+            Next
+        End With
+        Return l_o_dt
+    End Function
+
+#End Region
 
 #End Region
 
 End Class
-
-'x     Private Sub LoadChartLine()
-'x         Dim l_o_dt As DataTable = GetChartLineData()
-'x         Dim l_o_ds As Chart.BarDataset
-'x         ' Si l'on souhaite utiliser différentes couleurs
-'x         Dim l_as_colors As String() = {"#39A5E0", "#0089D4"}
-'x         Dim l_i_index As Integer = 0
-'x 
-'x         With lchtMyChart
-'x             ' Libellés axe des abscisses (vertical)
-'x             For l_i As Integer = 1 To 12
-'x                 .Labels.Add(l_o_dt.Columns(l_i).ColumnName)
-'x             Next
-'x             ' Nettoyage des données du graphique
-'x             .Datasets.Clear()
-'x             ' Renseignement des données
-'x             For Each l_o_dr As DataRow In l_o_dt.Rows
-'x                 l_o_ds = .Datasets.AddBar(NzStr(l_o_dr(0)), l_as_colors(l_i_index))
-'x                 For l_i_col As Integer = 1 To 12
-'x                     l_o_ds.Add(NzDbl(l_o_dr(l_i_col)))
-'x                 Next
-'x                 ' Pour changer de couleurs
-'x                 l_i_index += 1
-'x             Next
-'x         End With
-'x     End Sub
