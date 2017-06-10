@@ -86,7 +86,7 @@ Public Class MainApplication
                 .AddSubAdminTable("Attachement", Tables.VTL_ATTACHEMT)
             End If
             If UserIsInRole("Veto") Or UserIsInRole("Admin") Then
-               .Add("Sélectionner un animal", "~/Pages/Veterinaire/AuthAnimal.aspx")
+                .Add("Sélectionner un animal", "~/Pages/Veterinaire/AuthAnimal.aspx")
                 .Add("Créer un nouveau animal", "~/Pages/Veterinaire/AccueilAnimal.aspx?Mode=" & EN_ModeAcces.Creation, , "tabNewAnimal")
                 .Add("Liste des consultations", "~/Pages/Veterinaire/ListeConsult.aspx?ID=" & Veterinaire.GetIdVetoConnectedUser(UserLogin()))
                 .Add("Paramétrage")
@@ -95,6 +95,7 @@ Public Class MainApplication
             End If
             If UserIsInRole("Mutuelle") Or UserIsInRole("Admin") Then
                 .Add("Mutuelle", "~/Pages/Mutuelle/AccueilMutuelle.aspx")
+                .Add("Remboursements", "~/Pages/Mutuelle/RemboursementByStatut.aspx")
             End If
             If UserIsInRole("Proprietaire") Or UserIsInRole("Admin") Then
                 ' Chargement des animaux

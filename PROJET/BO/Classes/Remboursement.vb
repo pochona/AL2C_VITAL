@@ -21,6 +21,24 @@
             End With
             Return l_o_sql
         End Function
+        Public Shared Function GetRemboursementStatut(p_i_statutId As Integer) As Query
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_REMBOURSMT.VTL_REMBOURSMT_ID)
+                .AddSelect(VTL_REMBOURSMT.VTL_REMBOURSMT_DATE)
+                .AddSelect(VTL_REMBOURSMT.VTL_REMBOURSMT_CONTRAT)
+                .AddSelect(VTL_REMBOURSMT.VTL_REMBOURSMT_MONTANT)
+                .AddFrom(Tables.VTL_REMBOURSMT)
+                If p_i_statutId <> 0 Then
+
+                    .AddWhereIs(VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT, p_i_statutId)
+                End If
+            End With
+            Return l_o_sql
+        End Function
+
     End Class
 
 End Namespace
