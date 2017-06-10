@@ -65,20 +65,25 @@ Partial Public Class PageSuiviPoids
         Dim l_o_conseilDiet As New ConseilDietetique
 
         txtPoidsActuel.Text = CStr(SelectedAnimal.GetLastPoids())
+       
+        txtTaille.Text = CStr(SelectedAnimal.GetLastTaille())
+        LoadChart()
+        LoadChartTaille()
         If SelectedAnimal.GetIDConseilDiet() <> 0 Then
             l_o_conseilDiet.Load(SelectedAnimal.GetIDConseilDiet())
-            txtConseils.Label = "Conseils diététiques"
             txtConseils.Text = l_o_conseilDiet.Contenu
+            dtbLastConseil.Date = l_o_conseilDiet.Date
             txtConseils.Enabled = False
         Else
             'Pas de dernier conseil diet
             txtConseils.Label = "Pour obtenir des conseils diététiques pour animal, contactez votre vétérinaire !"
-            dtbLastConseil.Date = l_o_conseilDiet.Date
+            dtbLastConseil.Visible = False
         End If
-        LoadChart()
     End Sub
 
-#Region "Chargement"
+#Region "Graphiques"
+
+#Region "Poids"
 
     ''' <summary>
     ''' Mise en forme du graphique.
@@ -143,6 +148,76 @@ Partial Public Class PageSuiviPoids
         End With
         Return l_o_dt
     End Function
+
+#End Region
+
+#Region "Taille"
+
+    ''' <summary>
+    ''' Mise en forme du graphique.
+    ''' </summary>
+    Private Sub LoadChartTaille()
+        Dim l_o_dt As DataTable = GetChartTailleData()
+        Dim l_o_ds As Chart.BarDataset
+        Dim l_i_nbValuePoids As Integer = Histo_Taille.GetHistoTaille(SelectedAnimalId).GetDT().Rows.Count
+
+        With lnctTaille
+            ' Libellés axe des abscisses (vertical)
+            For l_i As Integer = 1 To l_i_nbValuePoids
+                .Labels.Add(l_o_dt.Columns(l_i).ColumnName)
+            Next
+            ' Nettoyage des données du graphique
+            .Datasets.Clear()
+            ' Renseignement des données
+            For Each l_o_dr As DataRow In l_o_dt.Rows
+                l_o_ds = .Datasets.AddBar(NzStr(l_o_dr(0)), "#088A29")
+                For l_i_col As Integer = 1 To l_i_nbValuePoids
+                    l_o_ds.Add(NzDbl(l_o_dr(l_i_col)))
+                    l_o_ds.BorderWidth = 1
+                Next
+            Next
+            .Options.Legend.Display = False
+        End With
+    End Sub
+
+    ''' <summary>
+    ''' Retourne les données à mettre dans le graphique.
+    ''' </summary>
+    ''' <returns>Les données à mettre dans le graphique.</returns>
+    Public Function GetChartTailleData() As DataTable
+        Dim l_o_dt As New DataTable
+        Dim l_o_dtTemp As New DataTable
+        Dim l_i_count As Integer
+        Dim l_s_tempDate As String = ""
+        Dim l_i_nbEgaux As Integer = 0
+
+        l_o_dtTemp = Histo_Taille.GetHistoTaille(SelectedAnimalId).GetDT()
+        'Construction des colonnes de la grille 
+        l_o_dt.Columns.Add("TEMP")
+        ' construit donnees de l'axe des ordonnées
+        For Each l_o_row As DataRow In l_o_dtTemp.Rows
+            If l_s_tempDate <> CStr(l_o_row(VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_DT_HISTO)) Then
+                l_o_dt.Columns.Add(CStr(l_o_row(VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_DT_HISTO)))
+                l_i_nbEgaux = 0
+            Else
+                l_i_nbEgaux = l_i_nbEgaux + 1
+                l_o_dt.Columns.Add(CStr(l_o_row(VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_DT_HISTO)) + " " + CStr(l_i_nbEgaux))
+            End If
+            l_s_tempDate = CStr(l_o_row(VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_DT_HISTO))
+        Next
+        'Ajouter la 1er ligne pour la valeur du poids
+        With l_o_dt.Rows.Add()
+            l_i_count = 1
+            For Each l_o_row2 As DataRow In l_o_dtTemp.Rows
+                'pour cahque date poids sa valeur de poids
+                .Item(l_i_count) = CDbl(l_o_row2(VTL_HISTO_TAILLE.VTL_HISTO_TAILLE_TAILLE))
+                l_i_count = l_i_count + 1
+            Next
+        End With
+        Return l_o_dt
+    End Function
+
+#End Region
 
 #End Region
 

@@ -111,7 +111,7 @@ Public Class MainApplication
                         .Add(l_o_animal.Nom)
                         .AddSub("Informations")
                         .AddSubSub("Générales", "~/Pages/Proprio/AnimalGeneral.aspx?ID=" & l_o_animal.ID, , "tabInfoGene" + CStr(l_o_animal.ID))
-                        .AddSubSub("Suivi du poids", "~/Pages/Proprio/SuiviPoids.aspx?ID=" & l_o_animal.ID, , "tabSuivPoids" + CStr(l_o_animal.ID))
+                        .AddSubSub("Suivi poids et taille", "~/Pages/Proprio/SuiviPoids.aspx?ID=" & l_o_animal.ID, , "tabSuivPoids" + CStr(l_o_animal.ID))
                         .AddSubSub("Historique vaccins et traitements", "~/Pages/Proprio/HistoVaccinTraitemt.aspx?ID=" & l_o_animal.ID, , "tabHistoVac" + CStr(l_o_animal.ID))
                         .AddSubSub("Historique consultations", "~/Pages/Proprio/HistoConsul.aspx?ID=" & l_o_animal.ID, , "tabHistConsul" + CStr(l_o_animal.ID))
                         .AddSubSub("Documents", "~/Pages/Proprio/Documents.aspx?ID=" & l_o_animal.ID, , "tabDocs" + CStr(l_o_animal.ID))

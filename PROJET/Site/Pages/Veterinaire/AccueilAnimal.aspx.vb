@@ -319,19 +319,19 @@ Partial Public Class PageAccueilAnimal
                     .Id_race = CInt(cboRace.SelectedValue)
                     .Id_type = CInt(cboType.SelectedValue)
                     .Id_carte = CInt(cboNumCarte.SelectedValue)
-                    .Save()
+                    .Save(l_o_trans)
                 End With
                 With l_o_poids
                     .Poids = NzDbl(ntbPoids.Value)
                     .Dt_histo = Now.Date
                     .Id_animal = l_o_animal.ID
-                    .Save()
+                    .Save(l_o_trans)
                 End With
                 With l_o_taille
                     .Taille = NzDbl(ntbTaille.Value)
                     .Dt_histo = Now.Date
                     .Id_animal = l_o_animal.ID
-                    .Save()
+                    .Save(l_o_trans)
                 End With
                 ' On valide la transaction (elle se ferme tout seule grace au "using")
                 l_o_trans.Validate()
@@ -375,7 +375,7 @@ Partial Public Class PageAccueilAnimal
                     .Id_race = CInt(cboRace.SelectedValue)
                     .Id_type = CInt(cboType.SelectedValue)
                     .Id_carte = CInt(cboNumCarte.SelectedValue)
-                    .Save()
+                    .Save(l_o_trans)
                 End With
                 'on crée des historiques seuleument si c'est différent
                 If ntbPoids.Value <> SelectedAnimal.GetLastPoids() Then
@@ -383,7 +383,7 @@ Partial Public Class PageAccueilAnimal
                         .Poids = ntbPoids.Value
                         .Dt_histo = Now.Date
                         .Id_animal = SelectedAnimalId
-                        .Save()
+                        .Save(l_o_trans)
                     End With
                 End If
                 If ntbTaille.Value <> SelectedAnimal.GetLastTaille() Then
@@ -391,7 +391,7 @@ Partial Public Class PageAccueilAnimal
                         .Taille = ntbTaille.Value
                         .Dt_histo = Now.Date
                         .Id_animal = SelectedAnimalId
-                        .Save()
+                        .Save(l_o_trans)
                     End With
                 End If
                 ' On valide la transaction (elle se ferme tout seule grace au "using")

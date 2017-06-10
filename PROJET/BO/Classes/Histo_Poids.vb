@@ -16,11 +16,10 @@
                 .AddSelect(VTL_HISTO_POIDS.VTL_HISTO_POIDS_DT_HISTO)
                 .AddFrom(Tables.VTL_HISTO_POIDS)
                 .AddWhereIs(VTL_HISTO_POIDS.VTL_HISTO_POIDS_ID_ANIMAL, p_i_idAnimal)
-
-
                 Return l_o_sql
             End With
         End Function
+
     End Class
 
 End Namespace

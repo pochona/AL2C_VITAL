@@ -59,22 +59,22 @@ Partial Public Class PageSuiviPoids
     Protected WithEvents txtPoidsActuel As Global.Corail.Web.CwTextBox
 
     '''<summary>
-    '''Contrôle frmGraph.
+    '''Contrôle frmGraphPoids.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frmGraph As Global.Corail.Web.CwFrame
+    Protected WithEvents frmGraphPoids As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle frlGraph.
+    '''Contrôle frlGraphPoids.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frlGraph As Global.Corail.Web.CwFormLayout
+    Protected WithEvents frlGraphPoids As Global.Corail.Web.CwFormLayout
 
     '''<summary>
     '''Contrôle lnctPoids.
@@ -84,6 +84,60 @@ Partial Public Class PageSuiviPoids
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents lnctPoids As Global.Corail.Web.Chart.CwLinearChart
+
+    '''<summary>
+    '''Contrôle frmTaille.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frmTaille As Global.Corail.Web.CwFrame
+
+    '''<summary>
+    '''Contrôle frlTaille.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frlTaille As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
+    '''Contrôle txtTaille.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtTaille As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle frmGraphTaille.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frmGraphTaille As Global.Corail.Web.CwFrame
+
+    '''<summary>
+    '''Contrôle frlGraphTaille.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents frlGraphTaille As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
+    '''Contrôle lnctTaille.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lnctTaille As Global.Corail.Web.Chart.CwLinearChart
 
     '''<summary>
     '''Contrôle frmConseilsDietétiq.

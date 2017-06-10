@@ -62,6 +62,7 @@ Partial Public Class PageAnimalGeneral
             LoadCbo()
             'chargement des données
             LoadData()
+            loadLien()
             'définition des éléments visibles
             LoadElementsVisibles()
         End If
@@ -73,6 +74,11 @@ Partial Public Class PageAnimalGeneral
     Private Sub LoadCbo()
         BindCbo(cboType, Type.GetAll.GetDS, VTL_TYPE.VTL_TYPE_ID, VTL_TYPE.VTL_TYPE_LIBELLE, "Sélectionner...")
         BindCbo(cboRace, Race.GetAll.GetDS, VTL_RACE.VTL_RACE_ID, VTL_RACE.VTL_RACE_NOM, "Sélectionner...")
+    End Sub
+
+    Private Sub loadLien()
+        btnAjoutTraitement.NavigateUrl = "~/Pages/Proprio/AjoutTraitement.aspx?Animal=" & SelectedAnimalId
+        btnAjoutTraitement.Target = "Modal#500x400"
     End Sub
 
     ''' <summary>
@@ -93,8 +99,8 @@ Partial Public Class PageAnimalGeneral
             cboRace.SelectedValue = CStr(SelectedAnimal.Id_race)
             txtNom.Text = SelectedAnimal.Nom
             LoadImage()
+            ntbDepTotal.Value = Consultation.GetMontantTtl(SelectedAnimalId)
         End If
-
     End Sub
 
     ''' <summary>
@@ -158,6 +164,13 @@ Partial Public Class PageAnimalGeneral
         btnImage.Text = "Changer l'image"
     End Sub
 
+    Private Sub Page_Refresh(Sender As Object, e As RefreshEventArg) Handles Me.Refresh
+
+        If e.Argument.Contains("ShowInfoNewTraitement") Then
+            ShowInfo("Traitement ajouté avec succès!")
+        End If
+    End Sub
+
 #End Region
 
 #Region "Boutons"
@@ -209,7 +222,7 @@ Partial Public Class PageAnimalGeneral
                     .Nom = txtNom.Text
                     .Dt_deces = dtbDeces.Date
                     .Id_race = CInt(cboRace.SelectedValue)
-                    .Save()
+                    .Save(l_o_trans)
                 End With
                 'on crée des historiques seuleument si c'est différent
                 If ntbPoids.Value <> SelectedAnimal.GetLastPoids() Then
@@ -217,7 +230,7 @@ Partial Public Class PageAnimalGeneral
                         .Poids = ntbPoids.Value
                         .Dt_histo = Now.Date
                         .Id_animal = SelectedAnimalId
-                        .Save()
+                        .Save(l_o_trans)
                     End With
                 End If
                 If ntbTaille.Value <> SelectedAnimal.GetLastTaille() Then
@@ -225,7 +238,7 @@ Partial Public Class PageAnimalGeneral
                         .Taille = ntbTaille.Value
                         .Dt_histo = Now.Date
                         .Id_animal = SelectedAnimalId
-                        .Save()
+                        .Save(l_o_trans)
                     End With
                 End If
                 ' On valide la transaction (elle se ferme tout seule grace au "using")
@@ -268,6 +281,56 @@ Partial Public Class PageAnimalGeneral
             ShowException(ex)
         End Try
     End Sub
+
+#End Region
+
+#Region "Anicienne grille "
+    'x 
+    'x #Region "Chargement consultation"
+    'x     <cw:CwFrame runat="server" ID="frmListConsult" Text="Liste des consultations" Collapsable="true" >
+    'x               <cw:CwDataGrid runat="server" ID="dtgConsultations" Title="{0} consultation(s)"></cw:CwDataGrid>
+    'x             </cw:CwFrame>
+    'x #Region "Colonnes de la grille "
+    'x 
+    'x     Private m_i_btn As Integer
+    'x     Private m_i_animal As Integer
+    'x     Private m_i_date As Integer
+    'x     Private m_i_nom As Integer
+    'x     Private m_i_montant As Integer
+    'x     Private m_i_puce As Integer
+    'x 
+    'x #End Region
+    'x 
+    'x     Private Sub dtgConsultations_Init(sender As Object, e As EventArgs) Handles dtgConsultations.Init
+    'x         With dtgConsultations
+    'x             .DataKeyField = VTL_CONSULTATION.VTL_CONSULTATION_ID
+    'x 
+    'x             With .AddDateColumn("Date", VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
+    'x                 m_i_date = .ColumnIndex
+    'x             End With
+    'x             With .AddColumn("Vétérinaire", "nom_prenom")
+    'x                 m_i_animal = .ColumnIndex
+    'x             End With
+    'x             With .AddColumn("Commentaire", VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE)
+    'x                 m_i_nom = .ColumnIndex
+    'x             End With
+    'x             With .AddNumericColumn("Montant (€)", VTL_CONSULTATION.VTL_CONSULTATION_MONTANT)
+    'x                 m_i_montant = .ColumnIndex
+    'x             End With
+    'x         End With
+    'x 
+    'x     End Sub
+    'x 
+    'x     Private Sub dtgConsultations_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgConsultations.DataTableRequest
+    'x         Try
+    'x             ' GetContacts est une requête qui permet de sélectionner les données qui apparaitrons dans la grille
+    'x             p_o_dt = Consultation.GetConsultationsAnimal(SelectedAnimalId).GetDT
+    'x         Catch ex As Exception
+    'x             ShowException(ex)
+    'x         End Try
+    'x     End Sub
+    'x 
+    'x #End Region
 
 #End Region
 

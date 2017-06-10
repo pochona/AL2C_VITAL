@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class PageHistoVaccinTraitemt
+Partial Public Class PageAjoutTraitement
 
     '''<summary>
     '''Contrôle frmData.
@@ -23,38 +23,56 @@ Partial Public Class PageHistoVaccinTraitemt
     Protected WithEvents frmData As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Contrôle frmTraitements.
+    '''Contrôle frmGene.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frmTraitements As Global.Corail.Web.CwFrame
+    Protected WithEvents frmGene As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle dtgTraitements.
+    '''Contrôle frlGene.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents dtgTraitements As Global.Corail.Web.CwDataGrid
+    Protected WithEvents frlGene As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle frmVaccinations.
+    '''Contrôle dtbMedoc.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frmVaccinations As Global.Corail.Web.CwFrame
+    Protected WithEvents dtbMedoc As Global.Corail.Web.CwDateTextBox
 
     '''<summary>
-    '''Contrôle dtgVaccins.
+    '''Contrôle cboMedoc.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents dtgVaccins As Global.Corail.Web.CwDataGrid
+    Protected WithEvents cboMedoc As Global.Corail.Web.CwComboBox
+
+    '''<summary>
+    '''Contrôle pnlBtns.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents pnlBtns As Global.Corail.Web.CwPanelButtons
+
+    '''<summary>
+    '''Contrôle btnNewTraitement.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnNewTraitement As Global.Corail.Web.CwButton
 End Class

@@ -221,49 +221,31 @@ Partial Public Class PageAnimalGeneral
     Protected WithEvents CwFormLayout2 As Global.Corail.Web.CwFormLayout
 
     '''<summary>
-    '''Contrôle txtTotal.
+    '''Contrôle ntbDepTotal.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txtTotal As Global.Corail.Web.CwTextBox
+    Protected WithEvents ntbDepTotal As Global.Corail.Web.CwNumericTextBox
 
     '''<summary>
-    '''Contrôle txtCourbe.
+    '''Contrôle pbnMut.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txtCourbe As Global.Corail.Web.CwTextBox
+    Protected WithEvents pbnMut As Global.Corail.Web.CwPanelButtons
 
     '''<summary>
-    '''Contrôle txtMsgMut.
+    '''Contrôle btnLink.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txtMsgMut As Global.Corail.Web.CwTextBox
-
-    '''<summary>
-    '''Contrôle frmListConsult.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents frmListConsult As Global.Corail.Web.CwFrame
-
-    '''<summary>
-    '''Contrôle dtgConsultations.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents dtgConsultations As Global.Corail.Web.CwDataGrid
+    Protected WithEvents btnLink As Global.Corail.Web.CwButton
 
     '''<summary>
     '''Contrôle pnbvet.
@@ -275,20 +257,11 @@ Partial Public Class PageAnimalGeneral
     Protected WithEvents pnbvet As Global.Corail.Web.CwPanelButtons
 
     '''<summary>
-    '''Contrôle btnvet1.
+    '''Contrôle btnAjoutTraitement.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents btnvet1 As Global.Corail.Web.CwButton
-
-    '''<summary>
-    '''Contrôle btnvet2.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents btnvet2 As Global.Corail.Web.CwButton
+    Protected WithEvents btnAjoutTraitement As Global.Corail.Web.CwButton
 End Class

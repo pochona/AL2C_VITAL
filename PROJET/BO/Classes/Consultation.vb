@@ -70,7 +70,8 @@
                 .AddFrom(Tables.VTL_CONSULTATION)
                 .AddFrom(Tables.VTL_VETERINAIRE, DbJoin.Right, Tables.VTL_CONSULTATION, VTL_VETERINAIRE.VTL_VETERINAIRE_ID, VTL_CONSULTATION.VTL_CONSULTATION_ID_VETERINAIRE)
                 .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_CONSULTATION, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_CONSULTATION.VTL_CONSULTATION_L)
-                .AddFrom(Tables.VTL_USER, DbJoin.Right, Tables.VTL_ANIMAL, VTL_USER.VTL_USER_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddFrom(Tables.VTL_PROPRIETAIRE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddFrom(Tables.VTL_USER, DbJoin.Right, Tables.VTL_PROPRIETAIRE, VTL_USER.VTL_USER_ID, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER)
                 .AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_loginProp)
                 .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_L, p_i_idAnimal)
             End With
@@ -195,6 +196,23 @@
             End With
         End Function
 
+        Public Shared Function GetMontantTtl(p_i_idAnimal As Integer) As Double
+            Dim l_o_sql As New Query
+            With l_o_sql
+                .Clear()
+
+                .AddSelect("SUM(" + VTL_CONSULTATION.VTL_CONSULTATION_MONTANT + ")")
+                .AddFrom(Tables.VTL_CONSULTATION)
+                .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_L, p_i_idAnimal)
+                .AddGroup(VTL_CONSULTATION.VTL_CONSULTATION_L)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzDbl((.GetFirstValue))
+                Else
+                    Return 0.0
+                End If
+            End With
+        End Function
 
     End Class
 
