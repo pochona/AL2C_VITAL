@@ -59,6 +59,15 @@ Partial Public Class PageSuiviPoids
     Protected WithEvents txtPoidsActuel As Global.Corail.Web.CwTextBox
 
     '''<summary>
+    '''Contrôle lnctPoids.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lnctPoids As Global.Corail.Web.Chart.CwLinearChart
+
+    '''<summary>
     '''Contrôle frmConseilsDietétiq.
     '''</summary>
     '''<remarks>
