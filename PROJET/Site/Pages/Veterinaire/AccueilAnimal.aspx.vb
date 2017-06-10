@@ -121,9 +121,15 @@ Partial Public Class PageAccueilAnimal
     ''' Chargement des combo box / listes déroulantes.
     ''' </summary>
     Private Sub LoadCbo()
+        If ModeAcces = EN_ModeAcces.Modification Then
+            BindCbo(cboNumCarte, Carte.GetCartesNonAttribuees(SelectedAnimalId).GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
+        Else
+            BindCbo(cboNumCarte, Carte.GetCartesNonAttribuees().GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
+
+            '     BindCbo(cboNumCarte, Carte.GetCarteAnimal(SelectedAnimalId).GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
+        End If
         BindCbo(cboType, Type.GetAll.GetDS, VTL_TYPE.VTL_TYPE_ID, VTL_TYPE.VTL_TYPE_LIBELLE, "Sélectionner...")
         BindCbo(cboRace, Race.GetAll.GetDS, VTL_RACE.VTL_RACE_ID, VTL_RACE.VTL_RACE_NOM, "Sélectionner...")
-        BindCbo(cboNumCarte, Carte.GetAll.GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
         BindCbo(CboVaccin, Vaccin.GetAll.GetDS, VTL_VACCIN.VTL_VACCIN_ID, VTL_VACCIN.VTL_VACCIN_LIBELLE, "Sélectionner...")
     End Sub
 
@@ -226,6 +232,14 @@ Partial Public Class PageAccueilAnimal
             dtgConsultations.RefreshData()
         End If
 
+        ' Récupérer l'argument envoyé par la page qui déclenche de rafraichissement
+        If e.Argument.Contains("refreshGrilleTraitement") Then
+            dtgTraitements.RefreshData()
+        End If
+        ' Récupérer l'argument envoyé par la page qui déclenche de rafraichissement
+        If e.Argument.Contains("refreshGrilleVaccins") Then
+            dtgVaccins.RefreshData()
+        End If
     End Sub
 
     ''' <summary>

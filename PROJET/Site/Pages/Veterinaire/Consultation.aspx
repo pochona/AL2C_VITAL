@@ -9,7 +9,7 @@
 	<form id="frmData" runat="server">
 	<div>
 	<cw:CwFormLayout runat="server" ID="frlGeneral">
-        <cw:CwFrame runat="server" ID="frmGeneral">
+        <cw:CwFrame runat="server" ID="frmGeneral" Text="Détails">
             <cw:CwFormLayout runat="server" ID="frlDtl">
                 <cw:CwNumericTextBox runat="server" ID="ntbMontant" Label="Montant" Cells-Small="6" ResetLayout="True" Suffix="€"></cw:CwNumericTextBox>
                 <cw:CwDateTextBox runat="server" ID="dtbDate" Label="Date"  Cells-Small="6" ResetLayout="True"></cw:CwDateTextBox>

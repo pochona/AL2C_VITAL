@@ -97,6 +97,7 @@ Partial Public Class PageListeConsult
 
 #Region "Colonnes de la grille "
 
+    Private m_i_btn As Integer
     Private m_i_animal As Integer
     Private m_i_date As Integer
     Private m_i_nom As Integer
@@ -110,6 +111,15 @@ Partial Public Class PageListeConsult
     Private Sub grdHistorique_Init(sender As Object, e As EventArgs) Handles grdHistorique.Init
         With grdHistorique
             .DataKeyField = VTL_CONSULTATION.VTL_CONSULTATION_ID
+
+            With .AddButtonColumn()
+                .Width = Unit.Pixel(65) ' fixe la taille de la colonne
+                .DataNavigateUrlFormatString = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Modification & "&ID={0}" & "&NoAnml=true"
+                .DataNavigateUrlField = VTL_CONSULTATION.VTL_CONSULTATION_ID
+                .Target = "tabConsult" + VTL_CONSULTATION.VTL_CONSULTATION_ID
+                .Properties.ImageName = "search"
+                m_i_btn = .ColumnIndex
+            End With
 
             With .AddDateColumn("Date", VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
                 m_i_date = .ColumnIndex
@@ -154,8 +164,6 @@ Partial Public Class PageListeConsult
             txtPuceAnimal.Text = SelectedConsultation.GetPuceAnimal()
             txtCommentaire.Text = SelectedConsultation.GetCommentaireConsultation()
             ntbMontant.Value = NzDbl(SelectedConsultation.Montant)
-
-            ' TODO continuer
         End If
     End Sub
 

@@ -93,6 +93,7 @@
                 .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE)
                 .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_MONTANT)
                 .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_ID)
+                .AddSelect(Tables.VTL_ANIMAL + "." + VTL_ANIMAL.VTL_ANIMAL_ID)
                 .AddSelect(VTL_ANIMAL.VTL_ANIMAL_NOM)
                 .AddSelect(VTL_ANIMAL.VTL_ANIMAL_NUM_PUCE)
                 .AddFrom(Tables.VTL_CONSULTATION)

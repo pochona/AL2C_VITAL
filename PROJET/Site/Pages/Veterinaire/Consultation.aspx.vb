@@ -108,8 +108,14 @@ Partial Public Class PageConsultation
         If Not IsPostBack Then
             ' Récupération des paramètres
             ModeAcces = CType(Request.QueryString("Mode"), EN_ModeAcces)
-            'recupere l'animal dans l'url
-            SelectedAnimalId = CInt(Request.QueryString("Animal"))
+            If CStr(Request.QueryString("NoAnml")) <> "true" Then
+                'recupere l'animal dans l'url
+                SelectedAnimalId = CInt(Request.QueryString("Animal"))
+            ElseIf CStr(Request.QueryString("NoAnml")) = "true" And ModeAcces = EN_ModeAcces.Modification Then
+                'recupere l'animal dans l'url
+                SelectedConsultationId = CInt(Request.QueryString("ID"))
+                SelectedAnimalId = SelectedConsultation.Id_animal
+            End If
             If ModeAcces = EN_ModeAcces.Modification Then
                 'recupere l'animal dans l'url
                 SelectedConsultationId = CInt(Request.QueryString("ID"))
@@ -296,6 +302,8 @@ Partial Public Class PageConsultation
             ShowInfo("Vaccination effectuée avec succès.")
             dttxtNewVaccin.Text = ""
             dtgMedicament.RefreshData()
+
+            ClientRegisterRefreshWindow("tabAnimal" & SelectedAnimalId, "refreshGrilleVaccins")
         Catch ex As Exception
             ShowException(ex)
         End Try
@@ -316,6 +324,8 @@ Partial Public Class PageConsultation
                 SelectedTraitementId = .ID
                 LoadElementsVisibles()
             End With
+
+            ClientRegisterRefreshWindow("tabAnimal" & SelectedAnimalId, "refreshGrilleTraitement")
         Catch ex As Exception
             ShowException(ex)
         End Try
@@ -333,6 +343,8 @@ Partial Public Class PageConsultation
                 .Id_animal = SelectedAnimalId
                 .Save()
             End With
+
+            ClientRegisterRefreshWindow("tabAnimal" & SelectedAnimalId, "refreshGrilleTraitement")
         Catch ex As Exception
             ShowException(ex)
         End Try
@@ -363,7 +375,6 @@ Partial Public Class PageConsultation
 #End Region
 
 #End Region
-
 
 #Region "Grille"
 
@@ -428,6 +439,5 @@ Partial Public Class PageConsultation
     End Sub
 
 #End Region
-
 
 End Class
