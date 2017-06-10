@@ -159,7 +159,7 @@ Partial Public Class PageListeConsult
             'on récupère la derniere consultation
             SelectedConsultationId = SelectedVeto.GetLastConsult()
             dtbDate.Date = NzDate(SelectedConsultation.GetDateConsultation())
-            txtNomProprio.Text = SelectedConsultation.GetNomAnimal()
+            txtNomProprio.Text = SelectedConsultation.GetNomProprio()
             txtNomAnimal.Text = SelectedConsultation.GetNomAnimal()
             txtPuceAnimal.Text = SelectedConsultation.GetPuceAnimal()
             txtCommentaire.Text = SelectedConsultation.GetCommentaireConsultation()
