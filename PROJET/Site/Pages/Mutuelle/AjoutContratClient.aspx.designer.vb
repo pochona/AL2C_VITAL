@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class PageAjoutContratClient
 
     '''<summary>
+    '''Contrôle Head1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
+
+    '''<summary>
     '''Contrôle frmData.
     '''</summary>
     '''<remarks>
@@ -77,31 +86,49 @@ Partial Public Class PageAjoutContratClient
     Protected WithEvents DateFin As Global.Corail.Web.CwDateTextBox
 
     '''<summary>
-    '''Contrôle IdAnimal.
+    '''Contrôle Txremb.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents IdAnimal As Global.Corail.Web.CwNumericTextBox
+    Protected WithEvents Txremb As Global.Corail.Web.CwNumericTextBox
 
     '''<summary>
-    '''Contrôle IdProprio.
+    '''Contrôle txtIdPropCache.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents IdProprio As Global.Corail.Web.CwNumericTextBox
+    Protected WithEvents txtIdPropCache As Global.Corail.Web.CwTextBox
 
     '''<summary>
-    '''Contrôle IdAssurance.
+    '''Contrôle stbProprio.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents IdAssurance As Global.Corail.Web.CwNumericTextBox
+    Protected WithEvents stbProprio As Global.Corail.Web.CwSelectTextBox
+
+    '''<summary>
+    '''Contrôle txtIdAnimalCache.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtIdAnimalCache As Global.Corail.Web.CwTextBox
+
+    '''<summary>
+    '''Contrôle stbAnimal.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents stbAnimal As Global.Corail.Web.CwSelectTextBox
 
     '''<summary>
     '''Contrôle label1.
@@ -111,6 +138,24 @@ Partial Public Class PageAjoutContratClient
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents label1 As Global.Corail.Web.CwLabel
+
+    '''<summary>
+    '''Contrôle pnbBtnContrat.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents pnbBtnContrat As Global.Corail.Web.CwPanelButtons
+
+    '''<summary>
+    '''Contrôle btnAjouterContrat.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnAjouterContrat As Global.Corail.Web.CwButton
 
     '''<summary>
     '''Contrôle panelmut2.

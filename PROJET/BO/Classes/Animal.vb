@@ -85,6 +85,31 @@
         End Function
 
         ''' <summary>
+        ''' Retourne la liste des animaux du proprio.
+        ''' </summary>
+        ''' <param name="p_s_logginProprio">Login du propriétaire.</param>
+        ''' <returns>La liste des animaux du proprio.</returns>
+        Public Shared Function GetAnimauxByProprio(p_s_id_proprio As Integer) As Query
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_ANIMAL.VTL_ANIMAL_ID)
+                .AddSelect(VTL_ANIMAL.VTL_ANIMAL_NOM)
+                .AddSelect(VTL_CARTE.VTL_CARTE_NFC)
+                .AddSelect(VTL_RACE.VTL_RACE_NOM)
+                .AddSelect(VTL_TYPE.VTL_TYPE_LIBELLE)
+                .AddFrom(Tables.VTL_ANIMAL)
+                .AddFrom(Tables.VTL_RACE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_RACE.VTL_RACE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_RACE)
+                .AddFrom(Tables.VTL_TYPE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_TYPE.VTL_TYPE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_TYPE)
+                .AddFrom(Tables.VTL_PROPRIETAIRE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddFrom(Tables.VTL_CARTE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_CARTE.VTL_CARTE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_CARTE)
+                .AddWhereIs(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, p_s_id_proprio)
+            End With
+            Return l_o_sql
+        End Function
+
+        ''' <summary>
         ''' Retourne nb d'animaux d'un prop.
         ''' </summary>
         ''' <param name="p_s_logProp"></param>

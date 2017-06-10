@@ -1,11 +1,8 @@
 Imports VITAL.BO
 Imports VITAL.BO.VITAL
 
-
-Partial Public Class PagePopUpProprio
+Partial Public Class PagePopUpProprioContrat
     Inherits CwPage
-
-#Region "Chargement"
 
     ''' <summary>
     ''' Initialisation de la page en cours
@@ -15,15 +12,20 @@ Partial Public Class PagePopUpProprio
     ''' Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            dtgProprio.RefreshData()
+            dtgProprioContrat.RefreshData()
         End If
     End Sub
 
-#End Region
-
 #Region "Grille"
 
-    Private Sub dtgProprio_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgProprio.DataTableRequest
+#Region "Colonnes de la grille"
+
+    Private m_i_prenom As Integer
+    Private m_i_adr As Integer
+
+#End Region
+
+    Private Sub dtgProprioContrat_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgProprioContrat.DataTableRequest
         Try
             p_o_dt = PropriEtaire.GetAll.GetDT
         Catch ex As Exception
@@ -31,8 +33,8 @@ Partial Public Class PagePopUpProprio
         End Try
     End Sub
 
-    Private Sub dtgProprio_Init(sender As Object, e As EventArgs) Handles dtgProprio.Init
-        With dtgProprio
+    Private Sub dtgProprioContrat_Init(sender As Object, e As EventArgs) Handles dtgProprioContrat.Init
+        With dtgProprioContrat
             .DataKeyField = VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID
 
             With .AddSelectColumn("Nom", VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, "=")
