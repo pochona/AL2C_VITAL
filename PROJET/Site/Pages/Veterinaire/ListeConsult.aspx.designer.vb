@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class PageListeConsult
-
+    
     '''<summary>
     '''Contrôle Head1.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class PageListeConsult
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
-
+    
     '''<summary>
     '''Contrôle frmData.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class PageListeConsult
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents frmData As Global.System.Web.UI.HtmlControls.HtmlForm
-
+    
     '''<summary>
     '''Contrôle frlGeneral.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class PageListeConsult
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents frlGeneral As Global.Corail.Web.CwFormLayout
-
+    
     '''<summary>
     '''Contrôle frmGenral.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class PageListeConsult
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents frmGenral As Global.Corail.Web.CwFrame
-
+    
     '''<summary>
     '''Contrôle frlDtl.
     '''</summary>
@@ -57,16 +57,25 @@ Partial Public Class PageListeConsult
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents frlDtl As Global.Corail.Web.CwFormLayout
-
+    
     '''<summary>
-    '''Contrôle ntbMontant.
+    '''Contrôle dtbDate.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents ntbMontant As Global.Corail.Web.CwNumericTextBox
-
+    Protected WithEvents dtbDate As Global.Corail.Web.CwDateTextBox
+    
+    '''<summary>
+    '''Contrôle txtNomProprio.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtNomProprio As Global.Corail.Web.CwTextBox
+    
     '''<summary>
     '''Contrôle txtNomAnimal.
     '''</summary>
@@ -75,7 +84,34 @@ Partial Public Class PageListeConsult
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents txtNomAnimal As Global.Corail.Web.CwTextBox
-
+    
+    '''<summary>
+    '''Contrôle txtPuceAnimal.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtPuceAnimal As Global.Corail.Web.CwTextBox
+    
+    '''<summary>
+    '''Contrôle txtCommentaire.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtCommentaire As Global.Corail.Web.CwTextBox
+    
+    '''<summary>
+    '''Contrôle ntbMontant.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents ntbMontant As Global.Corail.Web.CwNumericTextBox
+    
     '''<summary>
     '''Contrôle frlGeneral2.
     '''</summary>
@@ -84,7 +120,7 @@ Partial Public Class PageListeConsult
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents frlGeneral2 As Global.Corail.Web.CwFormLayout
-
+    
     '''<summary>
     '''Contrôle frmGenral2.
     '''</summary>
@@ -93,7 +129,7 @@ Partial Public Class PageListeConsult
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents frmGenral2 As Global.Corail.Web.CwFrame
-
+    
     '''<summary>
     '''Contrôle grdHistorique.
     '''</summary>
