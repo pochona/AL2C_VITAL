@@ -120,6 +120,60 @@
             End With
         End Function
 
+        Public Function GetDateConsultation() As Date
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
+                .AddFrom(Tables.VTL_CONSULTATION)
+                .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_ID, ID)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzDate((.GetFirstValue))
+                Else
+                    Return DbNullDate()
+
+                End If
+            End With
+        End Function
+
+        Public Function GetCommentaireConsultation() As String
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_COMMENTAIRE)
+                .AddFrom(Tables.VTL_CONSULTATION)
+                .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_ID, ID)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzStr((.GetFirstValue))
+                Else
+                    Return ""
+
+                End If
+            End With
+        End Function
+
+        Public Function GetPuceAnimal() As String
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                'x .Clear()
+                'x .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_)
+                'x .AddFrom(Tables.VTL_CONSULTATION)
+                'x .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_ID, ID)
+
+                'x                 If Not .GetFirstRow Is Nothing Then
+                'x                     Return NzStr((.GetFirstValue))
+                'x                 Else
+                'x                     Return ""
+                'x 
+                'x                 End If
+            End With
+        End Function
+
 
     End Class
 
