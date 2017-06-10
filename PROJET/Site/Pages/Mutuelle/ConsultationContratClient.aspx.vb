@@ -1,4 +1,5 @@
 Imports VITAL.BO.VITAL
+Imports VITAL.BO
 
 Partial Public Class PageConsultationClient
     Inherits CwPage
@@ -27,6 +28,7 @@ Partial Public Class PageConsultationClient
     Private m_i_race As Integer
     Private m_i_tx_remb As Integer
     Private m_i_nom_animal As Integer
+    Private m_i_btn_contrat As Integer
 
 #End Region
 
@@ -43,6 +45,14 @@ Partial Public Class PageConsultationClient
     Private Sub dtgContratClient_Init(sender As Object, e As EventArgs) Handles dtgContratClient.Init
         With dtgContratClient
             .DataKeyField = VTL_CONTRAT.VTL_CONTRAT_ID
+            With .AddButtonColumn()
+                .Width = Unit.Pixel(65) ' fixe la taille de la colonne
+                .DataNavigateUrlFormatString = "~/Pages/Mutuelle/AjoutContratClient.aspx?ID={0}" & "&Mode=" & EN_ModeAcces.Modification
+                .DataNavigateUrlField = VTL_CONTRAT.VTL_CONTRAT_ID
+                .Target = "tabContrat" + VTL_CONTRAT.VTL_CONTRAT_ID
+                .Properties.ImageName = "search"
+                m_i_btn_contrat = .ColumnIndex
+            End With
             With .AddDateColumn("Début", VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT)
                 m_i_dt_deb = .ColumnIndex
             End With
