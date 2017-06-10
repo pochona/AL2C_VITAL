@@ -1001,6 +1001,12 @@
         Public Const VTL_MEDICAMENT_DUREE_MOYENNE_JOUR As String = "VTL_MEDICAMENT_DUREE_MOYENNE_JOUR"
 
         ''' <summary>
+        ''' ProprioCanDo.
+        ''' </summary>
+        <FieldUsage>
+        Public Const VTL_MEDICAMENT_PROPRIOCANDO As String = "VTL_MEDICAMENT_PROPRIOCANDO"
+
+        ''' <summary>
         ''' Retourne la liste de colonnes déclarées en constante.
         ''' </summary>
         ''' <param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>

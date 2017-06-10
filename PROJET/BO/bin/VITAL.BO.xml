@@ -2853,10 +2853,6 @@ VITAL.BO
  </summary>
 	<param name="p_i_idUser">Id utilisateur.</param>
 	<returns>Indique s'il existe un utilisateur avec cet ID.</returns>
-</member><member name="T:VITAL.BO.VITAL.PropriEtaire">
-	<summary>
- Propriétaire.
- </summary>
 </member><member name="M:VITAL.BO.VITAL.PropriEtaire.GetIdProprioByIdUser(System.Int32)">
 	<summary>
  Retourne l'id du proprio connecté.
@@ -7276,6 +7272,11 @@ VITAL.BO
 	<summary>
  Vaccination d'un animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.Carte.GetCartesNonAttribuees(System.Int32)">
+	<summary>
+ Retourne la liste des cartes qui n'ont pas d'animaux.
+ </summary>
+	<returns>La liste des cartes qui n'ont pas d'animaux.</returns>
 </member><member name="T:VITAL.BO.VITAL.Carte">
 	<summary>
  Carte vitale.

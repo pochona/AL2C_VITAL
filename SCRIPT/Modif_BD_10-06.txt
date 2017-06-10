@@ -1,0 +1,3 @@
+alter table VTL_MEDICAMENT add VTL_MEDICAMENT_PROPRIOCANDO BIT DEFAULT 0;
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ProprioCanDo', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_MEDICAMENT', @level2type=N'COLUMN',@level2name=N'VTL_MEDICAMENT_PROPRIOCANDO'
+GO

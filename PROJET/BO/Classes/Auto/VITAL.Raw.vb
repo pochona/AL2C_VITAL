@@ -3315,6 +3315,11 @@
         ''' </summary>
 		Private m_i_duree_moyenne_jour As Integer?
 
+        ''' <summary>
+        ''' ProprioCanDo.
+        ''' </summary>
+		Private m_b_proprioCanDo As Boolean? = False
+
 #End Region
 
 #Region "Propriétés publiques"
@@ -3409,6 +3414,25 @@
             End Set
         End Property
 
+        ''' <summary>
+        ''' ProprioCanDo.
+        ''' Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO.
+        ''' </summary>
+        ''' <value>
+        ''' ProprioCanDo.
+        ''' </value>
+		Public Overridable Property ProprioCanDo As Boolean?
+            Get
+				Return m_b_proprioCanDo
+            End Get
+			Set(value As Boolean?)
+                If Not Object.Equals(m_b_proprioCanDo, value) Then
+                    m_b_proprioCanDo = value
+                    HasChanges = True
+                End If
+            End Set
+        End Property
+
 #End Region
 
 #Region "Constantes publiques"
@@ -3470,6 +3494,8 @@
             p_o_target.m_s_dosage = m_s_dosage
             ' Colonne : m_i_duree_moyenne_jour
             p_o_target.m_i_duree_moyenne_jour = m_i_duree_moyenne_jour
+            ' Colonne : m_b_proprioCanDo
+            p_o_target.m_b_proprioCanDo = m_b_proprioCanDo
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -3485,6 +3511,7 @@
 			m_s_libelle = CStr(p_o_row!VTL_MEDICAMENT_LIBELLE)
 			m_s_dosage = NzStr(p_o_row!VTL_MEDICAMENT_DOSAGE)
 			m_i_duree_moyenne_jour = NzIntNullable(p_o_row!VTL_MEDICAMENT_DUREE_MOYENNE_JOUR)
+			m_b_proprioCanDo = NzBoolNullable(p_o_row!VTL_MEDICAMENT_PROPRIOCANDO)
             HasChanges = False
         End Sub
 
@@ -3497,6 +3524,7 @@
 			p_o_row("VTL_MEDICAMENT_LIBELLE") = Libelle
 			p_o_row("VTL_MEDICAMENT_DOSAGE") = Dosage
 			p_o_row("VTL_MEDICAMENT_DUREE_MOYENNE_JOUR") = If(Duree_moyenne_jour Is Nothing, DBNull.Value, CType(Duree_moyenne_jour, Object))
+			p_o_row("VTL_MEDICAMENT_PROPRIOCANDO") = If(ProprioCanDo Is Nothing, DBNull.Value, CType(ProprioCanDo, Object))
         End Sub
 
         ''' <summary>
@@ -3517,6 +3545,9 @@
             End If
             If Not Object.Equals(p_o_object.Duree_moyenne_jour, Duree_moyenne_jour) Then
                 l_o_dicDiff.Add(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR, {p_o_object.Duree_moyenne_jour,Duree_moyenne_jour})
+            End If
+            If Not Object.Equals(p_o_object.ProprioCanDo, ProprioCanDo) Then
+                l_o_dicDiff.Add(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO, {p_o_object.ProprioCanDo,ProprioCanDo})
             End If
             Return l_o_dicDiff
         End Function

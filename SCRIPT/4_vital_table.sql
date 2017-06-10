@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 09/06/2017                                     */
+/* Historique  : Creation le 10/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -306,7 +306,8 @@ CREATE TABLE VTL_MEDICAMENT (
 	VTL_MEDICAMENT_ID INT IDENTITY(1,1) NOT NULL,
 	VTL_MEDICAMENT_LIBELLE NVARCHAR(50) NOT NULL,
 	VTL_MEDICAMENT_DOSAGE NVARCHAR(50),
-	VTL_MEDICAMENT_DUREE_MOYENNE_JOUR INT
+	VTL_MEDICAMENT_DUREE_MOYENNE_JOUR INT,
+	VTL_MEDICAMENT_PROPRIOCANDO BIT DEFAULT 0
 )
 GO
 
@@ -319,6 +320,8 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Dosage', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_MEDICAMENT', @level2type=N'COLUMN',@level2name=N'VTL_MEDICAMENT_DOSAGE'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Duree_moyenne_jour', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_MEDICAMENT', @level2type=N'COLUMN',@level2name=N'VTL_MEDICAMENT_DUREE_MOYENNE_JOUR'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ProprioCanDo', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_MEDICAMENT', @level2type=N'COLUMN',@level2name=N'VTL_MEDICAMENT_PROPRIOCANDO'
 GO
 
 

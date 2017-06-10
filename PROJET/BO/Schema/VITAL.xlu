@@ -190,6 +190,7 @@
         <Column Name="VTL_MEDICAMENT_LIBELLE" Type="String" MaxLength="50" AllowNull="false" Label="Libelle" PropertyName="Libelle" Comment="Libelle" />
         <Column Name="VTL_MEDICAMENT_DOSAGE" Type="String" MaxLength="50" Label="Dosage" PropertyName="Dosage" Comment="Dosage" />
         <Column Name="VTL_MEDICAMENT_DUREE_MOYENNE_JOUR" Type="Integer" Precision="10" Label="Duree_moyenne_jour" PropertyName="Duree_moyenne_jour" Comment="Duree_moyenne_jour" />
+        <Column Name="VTL_MEDICAMENT_PROPRIOCANDO" Type="Boolean" DefaultValue="False" Label="ProprioCanDo" PropertyName="ProprioCanDo" Comment="ProprioCanDo" />
       </Columns>
       <Relations />
     </Table>

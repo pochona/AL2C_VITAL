@@ -3264,6 +3264,7 @@ Namespace VITAL.Auto
             l_o_qry.AddValue(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_LIBELLE, TextSQL(Libelle))
             l_o_qry.AddValue(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DOSAGE, TextSQL(Dosage))
             l_o_qry.AddTypedValue(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR, Duree_moyenne_jour)
+            l_o_qry.AddTypedValue(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO, ProprioCanDo)
             If l_o_qry.ExecuteSave(Tables.VTL_MEDICAMENT, IsNew) > 0 Then
                 HasChanges = False
                 If IsNew Then SetAutoId(CInt(l_o_qry.NewAutoID))

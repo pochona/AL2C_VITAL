@@ -124,6 +124,7 @@
     <Content Include="Pages\Proprio\HistoConsul.aspx" />
     <Content Include="Pages\Proprio\HistoVaccinTraitemt.aspx" />
     <Content Include="Pages\Proprio\Informations.aspx" />
+    <Content Include="Pages\Proprio\MesRemboursements.aspx" />
     <Content Include="Pages\Proprio\OpenDoc.aspx" />
     <Content Include="Pages\Proprio\SuiviPoids.aspx" />
     <Content Include="Pages\Veterinaire\AccueilAnimal.aspx" />
@@ -264,6 +265,13 @@
     </Compile>
     <Compile Include="Pages\Proprio\Informations.aspx.vb">
       <DependentUpon>Informations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\MesRemboursements.aspx.designer.vb">
+      <DependentUpon>MesRemboursements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\MesRemboursements.aspx.vb">
+      <DependentUpon>MesRemboursements.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Proprio\OpenDoc.aspx.designer.vb">
