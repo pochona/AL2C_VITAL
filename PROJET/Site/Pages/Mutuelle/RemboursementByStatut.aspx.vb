@@ -16,9 +16,18 @@ Partial Public Class PageRemboursementByStatut
 
         'chargement des données
         grdtestmutu.RefreshData()
-
+        ClientRegisterWindowName("ModifStatutRbrst")
 
     End Sub
+
+    Private Sub PageDetailIRD_PartB_Refresh(Sender As Object, e As RefreshEventArg) Handles Me.Refresh
+        ' Récupérer l'argument envoyé par la page qui déclenche de rafraichissement
+        If e.Argument = "REFRESH" Then
+            grdtestmutu.RefreshData()
+        End If
+
+    End Sub
+
 
 #Region "Chargement grille"
     Private m_i_date_mutu As Integer

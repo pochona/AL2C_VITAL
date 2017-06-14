@@ -14,10 +14,10 @@
                 <cw:CwNumericTextBox runat="server" label="Taux de remboursement" ID="CwTxRbrst"></cw:CwNumericTextBox>
                 <cw:CwNumericTextBox runat="server" label="Montant du remboursement" ID="CwMtRemb"></cw:CwNumericTextBox>
                 <cw:CwTextBox runat="server" label="Nom du client" ID="CwTextNomClt"></cw:CwTextBox>
-                <cw:CwTextBox runat="server" label="Prenom du client" ID="CwTextPrenomClt"></cw:CwTextBox>
+                <cw:CwTextBox runat="server" label="Prénom du client" ID="CwTextPrenomClt"></cw:CwTextBox>
                 <cw:CwTextBox runat="server" label="Nom animal" ID="CwTextNomAnimal"></cw:CwTextBox>
                 <cw:CwPanelButtons runat="server" ID="pbnTraitmt">
-                    <cw:CwButton runat="server" ID="btnChgStatut" Text="Changer le statut"></cw:CwButton>
+                    <cw:CwButton runat="server" ID="btnChgStatut" Text="Consultation payée"></cw:CwButton>
                 </cw:CwPanelButtons>
              </cw:CwFormLayout>
         </cw:CwFrame>

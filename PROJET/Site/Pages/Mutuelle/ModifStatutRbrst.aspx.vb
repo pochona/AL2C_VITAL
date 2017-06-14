@@ -103,6 +103,11 @@ Partial Public Class PageModifStatutRbrst
                 .Load(SelectedDemandeId)
                 .Statut = 1
                 .Save()
+                'ferme l'onglet courant
+                CloseWindowOnLoad()
+                'Rafraîchi l'onglet RemboursementByStatut
+                ClientRegisterRefreshWindow("ModifStatutRbrst", "REFRESH")
+
             End With
         Catch ex As Exception
             ShowException(ex)
