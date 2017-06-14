@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class PageCreerAnimal
+Partial Public Class PagePopUpAjoutAnimal
 
     '''<summary>
     '''Contrôle frmData.
@@ -111,15 +111,6 @@ Partial Public Class PageCreerAnimal
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents dtbNaiss As Global.Corail.Web.CwDateTextBox
-
-    '''<summary>
-    '''Contrôle sgtProp.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents sgtProp As Global.Corail.Web.CwSuggestTextBox
 
     '''<summary>
     '''Contrôle pnbBtns.

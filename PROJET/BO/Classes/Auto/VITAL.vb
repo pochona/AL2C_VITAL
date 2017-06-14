@@ -995,13 +995,13 @@
         Public Const VTL_MEDICAMENT_DOSAGE_MAXLEN As Integer = 50
 
         ''' <summary>
-        ''' Duree_moyenne_jour.
+        ''' DureeMoyenneDuTraitement.
         ''' </summary>
         <FieldUsage>
         Public Const VTL_MEDICAMENT_DUREE_MOYENNE_JOUR As String = "VTL_MEDICAMENT_DUREE_MOYENNE_JOUR"
 
         ''' <summary>
-        ''' ProprioCanDo.
+        ''' AdministrableParProprietaires.
         ''' </summary>
         <FieldUsage>
         Public Const VTL_MEDICAMENT_PROPRIOCANDO As String = "VTL_MEDICAMENT_PROPRIOCANDO"
@@ -1590,19 +1590,19 @@
         Public Const VTL_VACCIN_LIBELLE_MAXLEN As Integer = 50
 
         ''' <summary>
-        ''' Top_periodique.
+        ''' VaccinPeriodique.
         ''' </summary>
         <FieldUsage>
         Public Const VTL_VACCIN_TOP_PERIODIQUE As String = "VTL_VACCIN_TOP_PERIODIQUE"
 
         ''' <summary>
-        ''' Periode_mois.
+        ''' MoisPeriode.
         ''' </summary>
         <FieldUsage>
         Public Const VTL_VACCIN_PERIODE_MOIS As String = "VTL_VACCIN_PERIODE_MOIS"
 
         ''' <summary>
-        ''' Top_recommandation.
+        ''' Recommande.
         ''' </summary>
         <FieldUsage>
         Public Const VTL_VACCIN_TOP_RECOMMANDATION As String = "VTL_VACCIN_TOP_RECOMMANDATION"

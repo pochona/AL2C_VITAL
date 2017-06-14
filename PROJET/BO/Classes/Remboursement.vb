@@ -13,9 +13,14 @@
                 .Clear()
                 '  .AddSelect(Tables.VTL_ANIMAL + "." + VTL_ANIMAL.VTL_ANIMAL_ID)
 
-
+                .AddSelect(VTL_REMBOURSMT.VTL_REMBOURSMT_ID)
+                .AddSelect(VTL_REMBOURSMT.VTL_REMBOURSMT_MONTANT)
+                .AddSelect(VTL_REMBOURSMT.VTL_REMBOURSMT_DATE)
+                .AddSelect(VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
+                .AddSelect(VTL_STATUT.VTL_STATUT_NAME)
                 .AddFrom(Tables.VTL_REMBOURSMT)
                 .AddFrom(Tables.VTL_CONSULTATION, DbJoin.Right, Tables.VTL_REMBOURSMT, VTL_CONSULTATION.VTL_CONSULTATION_ID, VTL_REMBOURSMT.VTL_REMBOURSMT_CONSULT)
+                .AddFrom(Tables.VTL_STATUT, DbJoin.Right, Tables.VTL_REMBOURSMT, VTL_STATUT.VTL_STATUT_ID, VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT)
 
                 '.AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_logginProprio)
             End With
@@ -33,6 +38,8 @@
                 .AddSelect(VTL_CONTRAT.VTL_CONTRAT_TXREMB)
                 .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM)
                 .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM)
+                .AddSelect(MyDB.FctConcat(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, TextSQL(", "), VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM), "nom_prenom")
+
                 .AddSelect(VTL_ANIMAL.VTL_ANIMAL_NOM)
                 .AddFrom(Tables.VTL_REMBOURSMT)
                 .AddFrom(Tables.VTL_CONTRAT, DbJoin.Right, Tables.VTL_REMBOURSMT, VTL_CONTRAT.VTL_CONTRAT_ID, VTL_REMBOURSMT.VTL_REMBOURSMT_CONTRAT)

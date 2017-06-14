@@ -32,6 +32,15 @@ Partial Public Class PageAjoutContratClient
     Protected WithEvents frmData As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Contrôle upnNomCli.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents upnNomCli As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
     '''Contrôle layoutajoutclient.
     '''</summary>
     '''<remarks>

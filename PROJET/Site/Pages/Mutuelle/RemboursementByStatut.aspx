@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-	<title>Remboursement par statut</title>
+	<title>Recherche des remboursements</title>
 </head>
 <body>
 	<form id="frmremboursementStatut" runat="server">
@@ -14,8 +14,8 @@
                 <cw:CwFormLayout runat="server" ID="frlayoutremboursementStatutlDtl2">
                  
                   <cw:CwRadioButtonList runat="server" ID="rblStatut" Label="Filtrer par statut" AutoPostBack="True"  >
-                            <asp:ListItem Value="1" Text="Payé"></asp:ListItem>
-                            <asp:ListItem Value="2" Text="En cours"></asp:ListItem>
+                            <asp:ListItem Value="1" Text="En cours"></asp:ListItem>
+                            <asp:ListItem Value="2" Text="Payé"></asp:ListItem>
                     </cw:CwRadioButtonList>
                 </cw:CwFormLayout>
             </cw:CwFrame>

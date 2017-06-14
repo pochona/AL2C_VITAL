@@ -29,6 +29,28 @@
         End Function
 
         ''' <summary>
+        ''' Indique s'il existe un proprietaire avec cet ID.
+        ''' </summary>
+        ''' <returns>Indique s'il existe un proprietaire avec cet ID.</returns>
+        Public Shared Function ExistsV2(p_i_idProp As Integer) As Boolean
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                ' Requête principale
+                .Clear()
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID)
+                .AddFrom(Tables.VTL_PROPRIETAIRE)
+                .AddWhereIs(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, p_i_idProp)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End With
+        End Function
+
+        ''' <summary>
         ''' Indique s'il existe un utilisateur avec cet ID.
         ''' </summary>
         ''' <returns>Indique s'il existe un utilisateur avec cet ID.</returns>

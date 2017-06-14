@@ -58,7 +58,7 @@ Partial Public Class PageMesRemboursements
         SelectedAnimalId = CInt(Request.QueryString("ID"))
 
         'chargement des données
-        ' LoadData()
+        'LoadData()
         grdMesRemboursements.RefreshData()
     End Sub
 
@@ -73,12 +73,12 @@ Partial Public Class PageMesRemboursements
 
     Private Sub grdMesRemboursements_Init(sender As Object, e As EventArgs) Handles grdMesRemboursements.Init
         With grdMesRemboursements
-            .DataKeyField = VTL_CONSULTATION.VTL_CONSULTATION_ID
+            .DataKeyField = VTL_REMBOURSMT.VTL_REMBOURSMT_ID
 
-            With .AddDateColumn("Date", VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
+            With .AddDateColumn("Date consultation", VTL_CONSULTATION.VTL_CONSULTATION_DT_CONSULTATION)
                 m_i_date = .ColumnIndex
             End With
-            With .AddColumn("Statut du remboursement", VTL_ANIMAL.VTL_ANIMAL_NOM)
+            With .AddColumn("Statut du remboursement", VTL_STATUT.VTL_STATUT_NAME)
                 m_i_statut = .ColumnIndex
             End With
         End With

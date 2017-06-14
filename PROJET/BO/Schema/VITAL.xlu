@@ -189,8 +189,8 @@
         <Column Name="VTL_MEDICAMENT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
         <Column Name="VTL_MEDICAMENT_LIBELLE" Type="String" MaxLength="50" AllowNull="false" Label="Libelle" PropertyName="Libelle" Comment="Libelle" />
         <Column Name="VTL_MEDICAMENT_DOSAGE" Type="String" MaxLength="50" Label="Dosage" PropertyName="Dosage" Comment="Dosage" />
-        <Column Name="VTL_MEDICAMENT_DUREE_MOYENNE_JOUR" Type="Integer" Precision="10" Label="Duree_moyenne_jour" PropertyName="Duree_moyenne_jour" Comment="Duree_moyenne_jour" />
-        <Column Name="VTL_MEDICAMENT_PROPRIOCANDO" Type="Boolean" DefaultValue="False" Label="ProprioCanDo" PropertyName="ProprioCanDo" Comment="ProprioCanDo" />
+        <Column Name="VTL_MEDICAMENT_DUREE_MOYENNE_JOUR" Type="Integer" Precision="10" Label="DureeMoyenneDuTraitement" PropertyName="DureeMoyenneDuTraitement" Comment="DureeMoyenneDuTraitement" />
+        <Column Name="VTL_MEDICAMENT_PROPRIOCANDO" Type="Boolean" DefaultValue="False" Label="AdministrableParProprietaires" PropertyName="AdministrableParProprietaires" Comment="AdministrableParProprietaires" />
       </Columns>
       <Relations />
     </Table>
@@ -313,9 +313,9 @@
       <Columns>
         <Column Name="VTL_VACCIN_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
         <Column Name="VTL_VACCIN_LIBELLE" Type="String" MaxLength="50" AllowNull="false" Label="Libelle" PropertyName="Libelle" Comment="Libelle" />
-        <Column Name="VTL_VACCIN_TOP_PERIODIQUE" Type="Boolean" DefaultValue="False" Label="Top_periodique" PropertyName="Top_periodique" Comment="Top_periodique" />
-        <Column Name="VTL_VACCIN_PERIODE_MOIS" Type="Integer" Precision="10" Label="Periode_mois" PropertyName="Periode_mois" Comment="Periode_mois" />
-        <Column Name="VTL_VACCIN_TOP_RECOMMANDATION" Type="Boolean" DefaultValue="False" Label="Top_recommandation" PropertyName="Top_recommandation" Comment="Top_recommandation" />
+        <Column Name="VTL_VACCIN_TOP_PERIODIQUE" Type="Boolean" DefaultValue="False" Label="VaccinPeriodique" PropertyName="VaccinPeriodique" Comment="VaccinPeriodique" />
+        <Column Name="VTL_VACCIN_PERIODE_MOIS" Type="Integer" Precision="10" Label="MoisPeriode" PropertyName="MoisPeriode" Comment="MoisPeriode" />
+        <Column Name="VTL_VACCIN_TOP_RECOMMANDATION" Type="Boolean" DefaultValue="False" Label="Recommande" PropertyName="Recommande" Comment="Recommande" />
       </Columns>
       <Relations />
     </Table>

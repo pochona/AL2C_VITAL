@@ -10,9 +10,7 @@
 	<div>
 	 <cw:CwFormLayout runat="server" ID="frlGeneral2">
         <cw:CwFrame runat="server" ID="frmGenral2" text="Historique" Collapsable="true" >
-            <cw:CwFormLayout runat="server" ID="frlDtl2">
-                <cw:CwDataGrid runat="server" ID="grdMesRemboursements" />
-            </cw:CwFormLayout>
+                <cw:CwDataGrid runat="server" ID="grdMesRemboursements" Title="{0} remboursement(s)" />
         </cw:CwFrame>
     </cw:CwFormLayout>
 	</div>

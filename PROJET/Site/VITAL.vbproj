@@ -112,6 +112,11 @@
     <Content Include="Images\logo_blanc.png" />
     <Content Include="Pages\AccueilAdmin.aspx" />
     <Content Include="Pages\Mutuelle\AccueilMutuelle.aspx" />
+    <Content Include="Pages\Mutuelle\ModifStatutRbrst.aspx" />
+    <Content Include="Pages\Mutuelle\PopUpAjoutAnimal.aspx" />
+    <Content Include="Pages\Mutuelle\PopUpAnimalContrat.aspx" />
+    <Content Include="Pages\Mutuelle\PopUpProprioContrat.aspx" />
+    <Content Include="Pages\Mutuelle\RemboursementByStatut.aspx" />
     <Content Include="Pages\Proprio\AccueilProprietaire.aspx" />
     <Content Include="Pages\Exemple.aspx" />
     <Content Include="Pages\HistoriquePoids.aspx" />
@@ -119,6 +124,7 @@
     <Content Include="Pages\Mutuelle\AjoutContratClient.aspx" />
     <Content Include="Pages\Mutuelle\ConsultationContratClient.aspx" />
     <Content Include="Pages\Mutuelle\PopUpContrat.aspx" />
+    <Content Include="Pages\Proprio\AjoutTraitement.aspx" />
     <Content Include="Pages\Proprio\AnimalGeneral.aspx" />
     <Content Include="Pages\Proprio\Documents.aspx" />
     <Content Include="Pages\Proprio\HistoConsul.aspx" />
@@ -130,7 +136,6 @@
     <Content Include="Pages\Veterinaire\AccueilAnimal.aspx" />
     <Content Include="Pages\Veterinaire\AuthAnimal.aspx" />
     <Content Include="Pages\Veterinaire\Consultation.aspx" />
-    <Content Include="Pages\Veterinaire\CreerAnimal.aspx" />
     <Content Include="Pages\Veterinaire\ListeConsult.aspx" />
     <Content Include="Pages\Veterinaire\NewCarte.aspx" />
     <Content Include="Pages\Veterinaire\PopUpProprio.aspx" />
@@ -183,6 +188,41 @@
       <DependentUpon>AccueilMutuelle.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Pages\Mutuelle\ModifStatutRbrst.aspx.designer.vb">
+      <DependentUpon>ModifStatutRbrst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\ModifStatutRbrst.aspx.vb">
+      <DependentUpon>ModifStatutRbrst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\PopUpAjoutAnimal.aspx.designer.vb">
+      <DependentUpon>PopUpAjoutAnimal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\PopUpAjoutAnimal.aspx.vb">
+      <DependentUpon>PopUpAjoutAnimal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\PopUpAnimalContrat.aspx.designer.vb">
+      <DependentUpon>PopUpAnimalContrat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\PopUpAnimalContrat.aspx.vb">
+      <DependentUpon>PopUpAnimalContrat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\PopUpProprioContrat.aspx.designer.vb">
+      <DependentUpon>PopUpProprioContrat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\PopUpProprioContrat.aspx.vb">
+      <DependentUpon>PopUpProprioContrat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\RemboursementByStatut.aspx.designer.vb">
+      <DependentUpon>RemboursementByStatut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mutuelle\RemboursementByStatut.aspx.vb">
+      <DependentUpon>RemboursementByStatut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Pages\Proprio\AccueilProprietaire.aspx.designer.vb">
       <DependentUpon>AccueilProprietaire.aspx</DependentUpon>
     </Compile>
@@ -230,6 +270,13 @@
     </Compile>
     <Compile Include="Pages\Mutuelle\PopUpContrat.aspx.vb">
       <DependentUpon>PopUpContrat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\AjoutTraitement.aspx.designer.vb">
+      <DependentUpon>AjoutTraitement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\AjoutTraitement.aspx.vb">
+      <DependentUpon>AjoutTraitement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Proprio\AnimalGeneral.aspx.designer.vb">
@@ -307,13 +354,6 @@
     </Compile>
     <Compile Include="Pages\Veterinaire\Consultation.aspx.vb">
       <DependentUpon>Consultation.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Veterinaire\CreerAnimal.aspx.designer.vb">
-      <DependentUpon>CreerAnimal.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Veterinaire\CreerAnimal.aspx.vb">
-      <DependentUpon>CreerAnimal.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Veterinaire\ListeConsult.aspx.designer.vb">

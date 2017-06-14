@@ -1359,9 +1359,13 @@ VITAL.BO
 	<summary>
  Dosage.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_i_duree_moyenne_jour">
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_i_dureeMoyenneDuTraitement">
 	<summary>
- Duree_moyenne_jour.
+ DureeMoyenneDuTraitement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_b_administrableParProprietaires">
+	<summary>
+ AdministrableParProprietaires.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.HasChanges">
 	<summary>
@@ -1393,13 +1397,21 @@ VITAL.BO
 	<value>
  Dosage.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.Duree_moyenne_jour">
+</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.DureeMoyenneDuTraitement">
 	<summary>
- Duree_moyenne_jour.
+ DureeMoyenneDuTraitement.
  Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR.
  </summary>
 	<value>
- Duree_moyenne_jour.
+ DureeMoyenneDuTraitement.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.AdministrableParProprietaires">
+	<summary>
+ AdministrableParProprietaires.
+ Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO.
+ </summary>
+	<value>
+ AdministrableParProprietaires.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.HasHisto">
 	<summary>
@@ -2445,17 +2457,17 @@ VITAL.BO
 	<summary>
  Libelle.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_top_periodique">
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_vaccinPeriodique">
 	<summary>
- Top_periodique.
+ VaccinPeriodique.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_i_periode_mois">
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_i_moisPeriode">
 	<summary>
- Periode_mois.
+ MoisPeriode.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_top_recommandation">
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_recommande">
 	<summary>
- Top_recommandation.
+ Recommande.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.HasChanges">
 	<summary>
@@ -2479,29 +2491,29 @@ VITAL.BO
 	<value>
  Libelle.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Top_periodique">
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.VaccinPeriodique">
 	<summary>
- Top_periodique.
+ VaccinPeriodique.
  Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE.
  </summary>
 	<value>
- Top_periodique.
+ VaccinPeriodique.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Periode_mois">
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.MoisPeriode">
 	<summary>
- Periode_mois.
+ MoisPeriode.
  Champ associé : VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS.
  </summary>
 	<value>
- Periode_mois.
+ MoisPeriode.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Top_recommandation">
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Recommande">
 	<summary>
- Top_recommandation.
+ Recommande.
  Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION.
  </summary>
 	<value>
- Top_recommandation.
+ Recommande.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.HasHisto">
 	<summary>
@@ -2843,6 +2855,17 @@ VITAL.BO
  Retourne les contrats clients correspondant au nom saisi
  </summary>
 	<returns>Les contrats clients correspondant au nom saisi.</returns>
+</member><member name="M:VITAL.BO.VITAL.Contrat.GetContratData">
+	<summary>
+ Récupére les données à afficher pour les contrats
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VITAL.BO.VITAL.Contrat.Exists(System.Int32,System.DateTime,System.DateTime)">
+	<summary>
+ Indique s'il existe un utilisateur avec cet loggin.
+ </summary>
+	<returns>Indique s'il existe un utilisateur avec cet loggin.</returns>
 </member><member name="T:VITAL.BO.VITAL.Contrat">
 	<summary>
  Contrat d'assurance.
@@ -2852,6 +2875,16 @@ VITAL.BO
  Indique s'il existe un utilisateur avec cet ID.
  </summary>
 	<param name="p_i_idUser">Id utilisateur.</param>
+	<returns>Indique s'il existe un utilisateur avec cet ID.</returns>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.ExistsV2(System.Int32)">
+	<summary>
+ Indique s'il existe un proprietaire avec cet ID.
+ </summary>
+	<returns>Indique s'il existe un proprietaire avec cet ID.</returns>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.GetInfoPropUser">
+	<summary>
+ Indique s'il existe un utilisateur avec cet ID.
+ </summary>
 	<returns>Indique s'il existe un utilisateur avec cet ID.</returns>
 </member><member name="M:VITAL.BO.VITAL.PropriEtaire.GetIdProprioByIdUser(System.Int32)">
 	<summary>
@@ -3479,7 +3512,11 @@ VITAL.BO
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR">
 	<summary>
- Duree_moyenne_jour.
+ DureeMoyenneDuTraitement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO">
+	<summary>
+ AdministrableParProprietaires.
  </summary>
 </member><member name="M:VITAL.BO.VITAL.VTL_MEDICAMENT.GetFields(System.Boolean,System.Boolean)">
 	<summary>
@@ -3833,15 +3870,15 @@ VITAL.BO
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE">
 	<summary>
- Top_periodique.
+ VaccinPeriodique.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS">
 	<summary>
- Periode_mois.
+ MoisPeriode.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION">
 	<summary>
- Top_recommandation.
+ Recommande.
  </summary>
 </member><member name="M:VITAL.BO.VITAL.VTL_VACCIN.GetFields(System.Boolean,System.Boolean)">
 	<summary>
@@ -7124,6 +7161,11 @@ VITAL.BO
  </summary>
 	<param name="p_s_log">Loggin.</param>
 	<returns>L'id de l'utilisateur connecté.</returns>
+</member><member name="M:VITAL.BO.VITAL.User.Exists(System.String)">
+	<summary>
+ Indique s'il existe un utilisateur avec cet loggin.
+ </summary>
+	<returns>Indique s'il existe un utilisateur avec cet loggin.</returns>
 </member><member name="T:VITAL.BO.VITAL.User">
 	<summary>
  User.
@@ -7264,6 +7306,11 @@ VITAL.BO
 	<summary>
  Animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.Medicament.GetMedicamentByProprio">
+	<summary>
+ Retourne les médicaments pouvant etre administrés directement par des propriétaires.
+ </summary>
+	<returns>Les médicaments pouvant etre administrés directement par des propriétaires.</returns>
 </member><member name="T:VITAL.BO.VITAL.Medicament">
 	<summary>
  Medicament.

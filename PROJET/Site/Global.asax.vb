@@ -94,9 +94,9 @@ Public Class MainApplication
                 .AddSubAdminTable("Médicaments", Tables.VTL_MEDICAMENT)
             End If
             If UserIsInRole("Mutuelle") Or UserIsInRole("Admin") Then
-                .Add("Mutuelle", "~/Pages/Mutuelle/AccueilMutuelle.aspx")
-                .Add("Remboursements", "~/Pages/Mutuelle/RemboursementByStatut.aspx")
-                .Add("Recherche des contrats clients", "~/Pages/Mutuelle/ConsultationContratClient.aspx")
+                .Add("Remboursements", "~/Pages/Mutuelle/RemboursementByStatut.aspx", , "tabRemboursement")
+                .Add("Recherche des contrats clients", "~/Pages/Mutuelle/ConsultationContratClient.aspx", , "tabRechContrat")
+                .Add("Créer un contrat", "~/Pages/Mutuelle/AjoutContratClient.aspx?Mode=" & EN_ModeAcces.Creation)
             End If
             If UserIsInRole("Proprietaire") Or UserIsInRole("Admin") Then
                 ' Chargement des animaux
@@ -117,12 +117,12 @@ Public Class MainApplication
                         .AddSubSub("Historique consultations", "~/Pages/Proprio/HistoConsul.aspx?ID=" & l_o_animal.ID, , "tabHistConsul" + CStr(l_o_animal.ID))
                         .AddSubSub("Documents", "~/Pages/Proprio/Documents.aspx?ID=" & l_o_animal.ID, , "tabDocs" + CStr(l_o_animal.ID))
                         'TODO : créer les pages
-                        .AddSub("Mes remboursements", "~/Pages/Proprio/MesRemboursements.aspx?ID=" & l_o_animal.ID, , "tabRemboursemt" + CStr(l_o_animal.ID))
-                        .AddSub("Mon contrat", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabContrat" + CStr(l_o_animal.ID))
-                        .AddSubSub("Mes droits", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabDroit" + CStr(l_o_animal.ID))
-                        .AddSubSub("Mon espace", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabEspace" + CStr(l_o_animal.ID))
-                        .AddSub("Infos pratiques", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabInfoPratique" + CStr(l_o_animal.ID))
-                        .AddSub("Contact", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabContact" + CStr(l_o_animal.ID))
+                        'x .AddSub("Mes remboursements", "~/Pages/Proprio/MesRemboursements.aspx?ID=" & l_o_animal.ID, , "tabRemboursemt" + CStr(l_o_animal.ID))
+                        'x .AddSub("Mon contrat", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabContrat" + CStr(l_o_animal.ID))
+                        'x .AddSubSub("Mes droits", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabDroit" + CStr(l_o_animal.ID))
+                        'x .AddSubSub("Mon espace", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabEspace" + CStr(l_o_animal.ID))
+                        'x .AddSub("Infos pratiques", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabInfoPratique" + CStr(l_o_animal.ID))
+                        'x .AddSub("Contact", "~/Pages/Proprio/.aspx?ID=" & l_o_animal.ID, , "tabContact" + CStr(l_o_animal.ID))
                     Next
                 End If
                 ' Infos du proprio

@@ -57,40 +57,4 @@ Partial Public Class PageAccueilProprietaire
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents dtgAnimx As Global.Corail.Web.CwDataGrid
-
-    '''<summary>
-    '''Contrôle frlDepenses.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents frlDepenses As Global.Corail.Web.CwFormLayout
-
-    '''<summary>
-    '''Contrôle frm.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents frm As Global.Corail.Web.CwFrame
-
-    '''<summary>
-    '''Contrôle frlDtlDepenses.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents frlDtlDepenses As Global.Corail.Web.CwFormLayout
-
-    '''<summary>
-    '''Contrôle txt4.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents txt4 As Global.Corail.Web.CwTextBox
 End Class

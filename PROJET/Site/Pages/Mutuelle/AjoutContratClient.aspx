@@ -8,6 +8,8 @@
 <body>
 	<form id="frmData" runat="server">
 	<div>
+         <asp:UpdatePanel runat="server" ID="upnNomCli" UpdateMode="Conditional">
+                              <ContentTemplate>
 	    <cw:CwFormLayout runat="server" ID="layoutajoutclient">
             <cw:CwFrame runat="server" ID="frameajoutclient" text="Propriétaire" Collapsable="true" >
                 <cw:CwFormLayout runat="server" ID="frlDtl" DefaultCells-Small="6" DefaultLabelCells-Small="6">
@@ -17,17 +19,18 @@
                       <cw:CwTextBox runat="server" ID="txtIdPropCache"  Visible="false" ></cw:CwTextBox>
                       <cw:CwSelectTextBox runat="server" ID="stbProprio" IsMandatory="true" PostBackMode="Full" AutoPostBack="true" NavigateUrl="~/Pages/Mutuelle/PopUpProprioContrat.aspx" Enabled="True" ToolTip="Pour sélectionner un propriétaire, veuillez cliquer sur le bouton de droite." Label="Propriétaire"></cw:CwSelectTextBox>
                       <cw:CwDateTextBox runat="server" ID="DateFin" IsMandatory="true" Label="Date de fin"  ></cw:CwDateTextBox>
-                      <cw:CwComboBox runat="server" ID="cboAnimal" IsMandatory="true" Label="Animal" ></cw:CwComboBox>
+                      <cw:CwComboBox runat="server" ID="cboAnimal" IsMandatory="true" Label="Animal" AutoPostBack="True" PostBackMode="Full"></cw:CwComboBox>
                  </cw:CwFormLayout>
             <cw:CwPanelButtons runat="server" ID="pnbBtnContrat">
                 <cw:CwButton runat="server" ID="btnCreate" Text="Ajouter"></cw:CwButton>
                 <cw:CwButton runat="server" ID="btnModifier" Text="Modifier"></cw:CwButton>
                   <cw:CwButton runat="server" ID="btnSave" Text="Sauvegarder"></cw:CwButton>
                 
-                  <cw:CwButton runat="server" ID="btnNewAnimal" Text="Créer un animal"></cw:CwButton>
+                  <cw:CwButton runat="server" ID="btnNewAnimal" NavigateUrl="~/Pages/Mutuelle/PopUpAjoutAnimal.aspx"  Text="Créer un animal"></cw:CwButton>
           </cw:CwPanelButtons>
             </cw:CwFrame>
 	    </cw:CwFormLayout>
+</ContentTemplate></asp:UpdatePanel>
 
 	</div>
 	</form>

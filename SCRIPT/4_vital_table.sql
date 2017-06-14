@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 10/06/2017                                     */
+/* Historique  : Creation le 14/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -319,9 +319,9 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Libelle', @lev
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Dosage', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_MEDICAMENT', @level2type=N'COLUMN',@level2name=N'VTL_MEDICAMENT_DOSAGE'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Duree_moyenne_jour', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_MEDICAMENT', @level2type=N'COLUMN',@level2name=N'VTL_MEDICAMENT_DUREE_MOYENNE_JOUR'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'DureeMoyenneDuTraitement', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_MEDICAMENT', @level2type=N'COLUMN',@level2name=N'VTL_MEDICAMENT_DUREE_MOYENNE_JOUR'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ProprioCanDo', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_MEDICAMENT', @level2type=N'COLUMN',@level2name=N'VTL_MEDICAMENT_PROPRIOCANDO'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'AdministrableParProprietaires', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_MEDICAMENT', @level2type=N'COLUMN',@level2name=N'VTL_MEDICAMENT_PROPRIOCANDO'
 GO
 
 
@@ -546,11 +546,11 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ID', @level0ty
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Libelle', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VACCIN', @level2type=N'COLUMN',@level2name=N'VTL_VACCIN_LIBELLE'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Top_periodique', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VACCIN', @level2type=N'COLUMN',@level2name=N'VTL_VACCIN_TOP_PERIODIQUE'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'VaccinPeriodique', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VACCIN', @level2type=N'COLUMN',@level2name=N'VTL_VACCIN_TOP_PERIODIQUE'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Periode_mois', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VACCIN', @level2type=N'COLUMN',@level2name=N'VTL_VACCIN_PERIODE_MOIS'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'MoisPeriode', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VACCIN', @level2type=N'COLUMN',@level2name=N'VTL_VACCIN_PERIODE_MOIS'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Top_recommandation', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VACCIN', @level2type=N'COLUMN',@level2name=N'VTL_VACCIN_TOP_RECOMMANDATION'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Recommande', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'VTL_VACCIN', @level2type=N'COLUMN',@level2name=N'VTL_VACCIN_TOP_RECOMMANDATION'
 GO
 
 

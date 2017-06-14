@@ -3311,14 +3311,14 @@
 		Private m_s_dosage As String
 
         ''' <summary>
-        ''' Duree_moyenne_jour.
+        ''' DureeMoyenneDuTraitement.
         ''' </summary>
-		Private m_i_duree_moyenne_jour As Integer?
+		Private m_i_dureeMoyenneDuTraitement As Integer?
 
         ''' <summary>
-        ''' ProprioCanDo.
+        ''' AdministrableParProprietaires.
         ''' </summary>
-		Private m_b_proprioCanDo As Boolean? = False
+		Private m_b_administrableParProprietaires As Boolean? = False
 
 #End Region
 
@@ -3396,38 +3396,38 @@
         End Property
 
         ''' <summary>
-        ''' Duree_moyenne_jour.
+        ''' DureeMoyenneDuTraitement.
         ''' Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR.
         ''' </summary>
         ''' <value>
-        ''' Duree_moyenne_jour.
+        ''' DureeMoyenneDuTraitement.
         ''' </value>
-		Public Overridable Property Duree_moyenne_jour As Integer?
+		Public Overridable Property DureeMoyenneDuTraitement As Integer?
             Get
-				Return m_i_duree_moyenne_jour
+				Return m_i_dureeMoyenneDuTraitement
             End Get
 			Set(value As Integer?)
-                If Not Object.Equals(m_i_duree_moyenne_jour, value) Then
-                    m_i_duree_moyenne_jour = value
+                If Not Object.Equals(m_i_dureeMoyenneDuTraitement, value) Then
+                    m_i_dureeMoyenneDuTraitement = value
                     HasChanges = True
                 End If
             End Set
         End Property
 
         ''' <summary>
-        ''' ProprioCanDo.
+        ''' AdministrableParProprietaires.
         ''' Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO.
         ''' </summary>
         ''' <value>
-        ''' ProprioCanDo.
+        ''' AdministrableParProprietaires.
         ''' </value>
-		Public Overridable Property ProprioCanDo As Boolean?
+		Public Overridable Property AdministrableParProprietaires As Boolean?
             Get
-				Return m_b_proprioCanDo
+				Return m_b_administrableParProprietaires
             End Get
 			Set(value As Boolean?)
-                If Not Object.Equals(m_b_proprioCanDo, value) Then
-                    m_b_proprioCanDo = value
+                If Not Object.Equals(m_b_administrableParProprietaires, value) Then
+                    m_b_administrableParProprietaires = value
                     HasChanges = True
                 End If
             End Set
@@ -3492,10 +3492,10 @@
             p_o_target.m_s_libelle = m_s_libelle
             ' Colonne : m_s_dosage
             p_o_target.m_s_dosage = m_s_dosage
-            ' Colonne : m_i_duree_moyenne_jour
-            p_o_target.m_i_duree_moyenne_jour = m_i_duree_moyenne_jour
-            ' Colonne : m_b_proprioCanDo
-            p_o_target.m_b_proprioCanDo = m_b_proprioCanDo
+            ' Colonne : m_i_dureeMoyenneDuTraitement
+            p_o_target.m_i_dureeMoyenneDuTraitement = m_i_dureeMoyenneDuTraitement
+            ' Colonne : m_b_administrableParProprietaires
+            p_o_target.m_b_administrableParProprietaires = m_b_administrableParProprietaires
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -3510,8 +3510,8 @@
 			m_i_iD = CInt(p_o_row!VTL_MEDICAMENT_ID)
 			m_s_libelle = CStr(p_o_row!VTL_MEDICAMENT_LIBELLE)
 			m_s_dosage = NzStr(p_o_row!VTL_MEDICAMENT_DOSAGE)
-			m_i_duree_moyenne_jour = NzIntNullable(p_o_row!VTL_MEDICAMENT_DUREE_MOYENNE_JOUR)
-			m_b_proprioCanDo = NzBoolNullable(p_o_row!VTL_MEDICAMENT_PROPRIOCANDO)
+			m_i_dureeMoyenneDuTraitement = NzIntNullable(p_o_row!VTL_MEDICAMENT_DUREE_MOYENNE_JOUR)
+			m_b_administrableParProprietaires = NzBoolNullable(p_o_row!VTL_MEDICAMENT_PROPRIOCANDO)
             HasChanges = False
         End Sub
 
@@ -3523,8 +3523,8 @@
 			p_o_row("VTL_MEDICAMENT_ID") = ID
 			p_o_row("VTL_MEDICAMENT_LIBELLE") = Libelle
 			p_o_row("VTL_MEDICAMENT_DOSAGE") = Dosage
-			p_o_row("VTL_MEDICAMENT_DUREE_MOYENNE_JOUR") = If(Duree_moyenne_jour Is Nothing, DBNull.Value, CType(Duree_moyenne_jour, Object))
-			p_o_row("VTL_MEDICAMENT_PROPRIOCANDO") = If(ProprioCanDo Is Nothing, DBNull.Value, CType(ProprioCanDo, Object))
+			p_o_row("VTL_MEDICAMENT_DUREE_MOYENNE_JOUR") = If(DureeMoyenneDuTraitement Is Nothing, DBNull.Value, CType(DureeMoyenneDuTraitement, Object))
+			p_o_row("VTL_MEDICAMENT_PROPRIOCANDO") = If(AdministrableParProprietaires Is Nothing, DBNull.Value, CType(AdministrableParProprietaires, Object))
         End Sub
 
         ''' <summary>
@@ -3543,11 +3543,11 @@
             If p_o_object.Dosage <> Dosage Then
                 l_o_dicDiff.Add(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DOSAGE, {p_o_object.Dosage,Dosage})
             End If
-            If Not Object.Equals(p_o_object.Duree_moyenne_jour, Duree_moyenne_jour) Then
-                l_o_dicDiff.Add(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR, {p_o_object.Duree_moyenne_jour,Duree_moyenne_jour})
+            If Not Object.Equals(p_o_object.DureeMoyenneDuTraitement, DureeMoyenneDuTraitement) Then
+                l_o_dicDiff.Add(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR, {p_o_object.DureeMoyenneDuTraitement,DureeMoyenneDuTraitement})
             End If
-            If Not Object.Equals(p_o_object.ProprioCanDo, ProprioCanDo) Then
-                l_o_dicDiff.Add(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO, {p_o_object.ProprioCanDo,ProprioCanDo})
+            If Not Object.Equals(p_o_object.AdministrableParProprietaires, AdministrableParProprietaires) Then
+                l_o_dicDiff.Add(VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO, {p_o_object.AdministrableParProprietaires,AdministrableParProprietaires})
             End If
             Return l_o_dicDiff
         End Function
@@ -5992,19 +5992,19 @@
 		Private m_s_libelle As String
 
         ''' <summary>
-        ''' Top_periodique.
+        ''' VaccinPeriodique.
         ''' </summary>
-		Private m_b_top_periodique As Boolean? = False
+		Private m_b_vaccinPeriodique As Boolean? = False
 
         ''' <summary>
-        ''' Periode_mois.
+        ''' MoisPeriode.
         ''' </summary>
-		Private m_i_periode_mois As Integer?
+		Private m_i_moisPeriode As Integer?
 
         ''' <summary>
-        ''' Top_recommandation.
+        ''' Recommande.
         ''' </summary>
-		Private m_b_top_recommandation As Boolean? = False
+		Private m_b_recommande As Boolean? = False
 
 #End Region
 
@@ -6063,57 +6063,57 @@
         End Property
 
         ''' <summary>
-        ''' Top_periodique.
+        ''' VaccinPeriodique.
         ''' Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE.
         ''' </summary>
         ''' <value>
-        ''' Top_periodique.
+        ''' VaccinPeriodique.
         ''' </value>
-		Public Overridable Property Top_periodique As Boolean?
+		Public Overridable Property VaccinPeriodique As Boolean?
             Get
-				Return m_b_top_periodique
+				Return m_b_vaccinPeriodique
             End Get
 			Set(value As Boolean?)
-                If Not Object.Equals(m_b_top_periodique, value) Then
-                    m_b_top_periodique = value
+                If Not Object.Equals(m_b_vaccinPeriodique, value) Then
+                    m_b_vaccinPeriodique = value
                     HasChanges = True
                 End If
             End Set
         End Property
 
         ''' <summary>
-        ''' Periode_mois.
+        ''' MoisPeriode.
         ''' Champ associé : VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS.
         ''' </summary>
         ''' <value>
-        ''' Periode_mois.
+        ''' MoisPeriode.
         ''' </value>
-		Public Overridable Property Periode_mois As Integer?
+		Public Overridable Property MoisPeriode As Integer?
             Get
-				Return m_i_periode_mois
+				Return m_i_moisPeriode
             End Get
 			Set(value As Integer?)
-                If Not Object.Equals(m_i_periode_mois, value) Then
-                    m_i_periode_mois = value
+                If Not Object.Equals(m_i_moisPeriode, value) Then
+                    m_i_moisPeriode = value
                     HasChanges = True
                 End If
             End Set
         End Property
 
         ''' <summary>
-        ''' Top_recommandation.
+        ''' Recommande.
         ''' Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION.
         ''' </summary>
         ''' <value>
-        ''' Top_recommandation.
+        ''' Recommande.
         ''' </value>
-		Public Overridable Property Top_recommandation As Boolean?
+		Public Overridable Property Recommande As Boolean?
             Get
-				Return m_b_top_recommandation
+				Return m_b_recommande
             End Get
 			Set(value As Boolean?)
-                If Not Object.Equals(m_b_top_recommandation, value) Then
-                    m_b_top_recommandation = value
+                If Not Object.Equals(m_b_recommande, value) Then
+                    m_b_recommande = value
                     HasChanges = True
                 End If
             End Set
@@ -6176,12 +6176,12 @@
             p_o_target.m_i_iD = m_i_iD
             ' Colonne : m_s_libelle
             p_o_target.m_s_libelle = m_s_libelle
-            ' Colonne : m_b_top_periodique
-            p_o_target.m_b_top_periodique = m_b_top_periodique
-            ' Colonne : m_i_periode_mois
-            p_o_target.m_i_periode_mois = m_i_periode_mois
-            ' Colonne : m_b_top_recommandation
-            p_o_target.m_b_top_recommandation = m_b_top_recommandation
+            ' Colonne : m_b_vaccinPeriodique
+            p_o_target.m_b_vaccinPeriodique = m_b_vaccinPeriodique
+            ' Colonne : m_i_moisPeriode
+            p_o_target.m_i_moisPeriode = m_i_moisPeriode
+            ' Colonne : m_b_recommande
+            p_o_target.m_b_recommande = m_b_recommande
 
             ' Retour de l'objet cible pour appel en chaine
             Return p_o_target
@@ -6195,9 +6195,9 @@
             If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
 			m_i_iD = CInt(p_o_row!VTL_VACCIN_ID)
 			m_s_libelle = CStr(p_o_row!VTL_VACCIN_LIBELLE)
-			m_b_top_periodique = NzBoolNullable(p_o_row!VTL_VACCIN_TOP_PERIODIQUE)
-			m_i_periode_mois = NzIntNullable(p_o_row!VTL_VACCIN_PERIODE_MOIS)
-			m_b_top_recommandation = NzBoolNullable(p_o_row!VTL_VACCIN_TOP_RECOMMANDATION)
+			m_b_vaccinPeriodique = NzBoolNullable(p_o_row!VTL_VACCIN_TOP_PERIODIQUE)
+			m_i_moisPeriode = NzIntNullable(p_o_row!VTL_VACCIN_PERIODE_MOIS)
+			m_b_recommande = NzBoolNullable(p_o_row!VTL_VACCIN_TOP_RECOMMANDATION)
             HasChanges = False
         End Sub
 
@@ -6208,9 +6208,9 @@
         Public Overridable Sub ToRow(p_o_row As DataRow)
 			p_o_row("VTL_VACCIN_ID") = ID
 			p_o_row("VTL_VACCIN_LIBELLE") = Libelle
-			p_o_row("VTL_VACCIN_TOP_PERIODIQUE") = If(Top_periodique Is Nothing, DBNull.Value, CType(Top_periodique, Object))
-			p_o_row("VTL_VACCIN_PERIODE_MOIS") = If(Periode_mois Is Nothing, DBNull.Value, CType(Periode_mois, Object))
-			p_o_row("VTL_VACCIN_TOP_RECOMMANDATION") = If(Top_recommandation Is Nothing, DBNull.Value, CType(Top_recommandation, Object))
+			p_o_row("VTL_VACCIN_TOP_PERIODIQUE") = If(VaccinPeriodique Is Nothing, DBNull.Value, CType(VaccinPeriodique, Object))
+			p_o_row("VTL_VACCIN_PERIODE_MOIS") = If(MoisPeriode Is Nothing, DBNull.Value, CType(MoisPeriode, Object))
+			p_o_row("VTL_VACCIN_TOP_RECOMMANDATION") = If(Recommande Is Nothing, DBNull.Value, CType(Recommande, Object))
         End Sub
 
         ''' <summary>
@@ -6226,14 +6226,14 @@
             If p_o_object.Libelle <> Libelle Then
                 l_o_dicDiff.Add(VITAL.VTL_VACCIN.VTL_VACCIN_LIBELLE, {p_o_object.Libelle,Libelle})
             End If
-            If Not Object.Equals(p_o_object.Top_periodique, Top_periodique) Then
-                l_o_dicDiff.Add(VITAL.VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE, {p_o_object.Top_periodique,Top_periodique})
+            If Not Object.Equals(p_o_object.VaccinPeriodique, VaccinPeriodique) Then
+                l_o_dicDiff.Add(VITAL.VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE, {p_o_object.VaccinPeriodique,VaccinPeriodique})
             End If
-            If Not Object.Equals(p_o_object.Periode_mois, Periode_mois) Then
-                l_o_dicDiff.Add(VITAL.VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS, {p_o_object.Periode_mois,Periode_mois})
+            If Not Object.Equals(p_o_object.MoisPeriode, MoisPeriode) Then
+                l_o_dicDiff.Add(VITAL.VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS, {p_o_object.MoisPeriode,MoisPeriode})
             End If
-            If Not Object.Equals(p_o_object.Top_recommandation, Top_recommandation) Then
-                l_o_dicDiff.Add(VITAL.VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION, {p_o_object.Top_recommandation,Top_recommandation})
+            If Not Object.Equals(p_o_object.Recommande, Recommande) Then
+                l_o_dicDiff.Add(VITAL.VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION, {p_o_object.Recommande,Recommande})
             End If
             Return l_o_dicDiff
         End Function

@@ -111,8 +111,12 @@ Partial Public Class PageAjoutContratClient
     End Sub
 
     Private Sub LoadCbo()
-        If ModeAcces = EN_ModeAcces.Creation Then
+        If ModeAcces = EN_ModeAcces.Creation And SelectedProprioId <> 0 Then
+            BindCbo(cboAnimal, Animal.GetAnimauxByProprio(SelectedProprioId).GetDS, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_ANIMAL.VTL_ANIMAL_NOM, "Sélectionner...")
+
+        ElseIf ModeAcces = EN_ModeAcces.Creation Then
             BindCbo(cboAnimal, Animal.GetAll().GetDS, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_ANIMAL.VTL_ANIMAL_NOM, "Sélectionner...")
+
         ElseIf ModeAcces = EN_ModeAcces.Modification And SelectedProprioId <> 0 Then
             BindCbo(cboAnimal, Animal.GetAnimauxByProprio(SelectedProprioId).GetDS, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_ANIMAL.VTL_ANIMAL_NOM, "Sélectionner...")
         Else
@@ -138,6 +142,8 @@ Partial Public Class PageAjoutContratClient
             cboAnimal.Visible = False
             If SelectedProprioId <> 0 Then
                 btnNewAnimal.Visible = True
+                btnNewAnimal.NavigateUrl = "~/Pages/Mutuelle/PopUpAjoutAnimal.aspx?ID=" & SelectedProprioId
+                btnNewAnimal.Target = "Modal#400x400"
             End If
         ElseIf ModeAcces = EN_ModeAcces.Modification Then
             btnCreate.Visible = False
@@ -190,7 +196,7 @@ Partial Public Class PageAjoutContratClient
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
         Dim l_o_Contrat As New Contrat
-        Dim l_o_ex As New Exception("Vous devez sélectionner un animal !")
+        Dim l_o_ex As New Exception("Vous devez séléctionner un animal !")
         Dim l_o_ex2 As New Exception("Cet animal à déjà un contrat ! Vous devez le modifier !")
 
         Try
@@ -201,7 +207,6 @@ Partial Public Class PageAjoutContratClient
                 ShowException(l_o_ex2)
             Else
                 With l_o_Contrat
-                    .Load(SelectedContratId)
                     .Dt_debut = DateDebut.Date
                     .Dt_fin = DateFin.Date
                     .Id_animal = CInt(cboAnimal.SelectedValue)
@@ -212,8 +217,8 @@ Partial Public Class PageAjoutContratClient
                     .Save()
                 End With
                 SelectedContratId = l_o_Contrat.ID
-                LoadElementsVisibles()
                 ModeAcces = EN_ModeAcces.Modification
+                LoadElementsVisibles()
                 ShowInfo("Nouveau contrat enregistré avec succès !")
             End If
         Catch ex As Exception
@@ -296,7 +301,7 @@ Partial Public Class PageAjoutContratClient
                 'Si c'est bien numérique
                 If l_b_allNumber = True Then
                     'On vérifie qu'il existe un user correspondant
-                    If PropriEtaire.Exists(CInt(stbProprio.Text)) = True Then
+                    If PropriEtaire.ExistsV2(CInt(stbProprio.Text)) = True Then
                         l_o_prop.Load(CInt(stbProprio.Text))
                         txtIdPropCache.Text = stbProprio.Text
                         stbProprio.Text = l_o_prop.Nom + " " + l_o_prop.Prenom
@@ -305,6 +310,10 @@ Partial Public Class PageAjoutContratClient
                         SelectedProprioId = CInt(txtIdPropCache.Text)
                         LoadCbo()
                         btnNewAnimal.Visible = True
+
+                        btnNewAnimal.NavigateUrl = "~/Pages/Mutuelle/PopUpAjoutAnimal.aspx?ID=" & SelectedProprioId
+
+                        btnNewAnimal.Target = "Modal#400x400"
                     End If
                 Else
                     ShowInfo("Pour sélectionner un propriétaire, veuillez cliquer sur le bouton à droite de la zone.")
@@ -321,4 +330,15 @@ Partial Public Class PageAjoutContratClient
 
 #End Region
 
+    Private Sub Page_Refresh(Sender As Object, e As Corail.Web.RefreshEventArg) Handles Me.Refresh
+        Dim l_s_parts As String()
+        If e.Argument.Contains("RefreshCboAnimal||") Then
+
+            l_s_parts = Split(e.Argument, "||")
+            LoadCbo()
+            cboAnimal.SelectedValue = l_s_parts(1)
+            ShowInfo("Enregistrement effectué avec succès !")
+            upnNomCli.Update()
+        End If
+    End Sub
 End Class

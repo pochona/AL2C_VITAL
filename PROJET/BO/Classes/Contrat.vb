@@ -95,14 +95,15 @@
                 .AddSelect(VTL_CONTRAT.VTL_CONTRAT_ID)
                 .AddFrom(Tables.VTL_CONTRAT)
                 .AddWhereIs(VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL, p_i_idAnimal)
-                .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_FIN + ">='" + p_d_dtfin.ToString + "'")
-                .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT + "<='" + p_d_dtfin.ToString + "'")
+                'x .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_FIN + ">='" + CStr(p_d_dtfin.Date) + "'")
+                'x .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT + "<='" + CStr(p_d_dtfin.Date) + "'")
+                .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_FIN + ">='" + CStr(p_d_dtfin.Date.Year) + "/" + CStr(p_d_dtfin.Date.Month) + "/" + CStr(p_d_dtfin.Date.Day) + "'")
+                .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT + "<='" + CStr(p_d_dtfin.Date.Year) + "/" + CStr(p_d_dtfin.Date.Month) + "/" + CStr(p_d_dtfin.Date.Day) + "'")
 
-
-                If Not .GetFirstRow Is Nothing Then
-                    Return True
-                Else
+                If .GetFirstRow Is Nothing Then
                     Return False
+                Else
+                    Return True
                 End If
             End With
         End Function
