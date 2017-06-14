@@ -3,7 +3,8 @@
     ''' <summary>
     ''' Propriétaire.
     ''' </summary>
-	Partial Public Class PropriEtaire
+    Partial Public Class PropriEtaire
+
         ''' <summary>
         ''' Indique s'il existe un utilisateur avec cet ID.
         ''' </summary>
@@ -26,7 +27,39 @@
                 End If
             End With
         End Function
-   
+
+        ''' <summary>
+        ''' Indique s'il existe un utilisateur avec cet ID.
+        ''' </summary>
+        ''' <returns>Indique s'il existe un utilisateur avec cet ID.</returns>
+        Public Shared Function GetInfoPropUser() As Query
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                ' Requête principale
+                .Clear()
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ADR)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_CP)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_DATEFIN)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_TEL)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE)
+
+                .AddSelect(VTL_USER.VTL_USER_LOGIN)
+                .AddSelect(VTL_USER.VTL_USER_MDP)
+                .AddSelect(VTL_USER.VTL_USER_ROLE)
+
+                .AddFrom(Tables.VTL_USER)
+                .AddFrom(Tables.VTL_PROPRIETAIRE, DbJoin.Right, Tables.VTL_USER, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID_USER, VTL_USER.VTL_USER_ID)
+
+                .AddWhereIs(VTL_USER.VTL_USER_ROLE, "Proprietaire")
+                    Return l_o_sql
+            End With
+        End Function
+
         ''' <summary>
         ''' Retourne l'id du proprio connecté.
         ''' </summary>
@@ -48,7 +81,6 @@
                 End If
             End With
         End Function
-
 
     End Class
 

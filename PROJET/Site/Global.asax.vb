@@ -96,6 +96,7 @@ Public Class MainApplication
             If UserIsInRole("Mutuelle") Or UserIsInRole("Admin") Then
                 .Add("Mutuelle", "~/Pages/Mutuelle/AccueilMutuelle.aspx")
                 .Add("Remboursements", "~/Pages/Mutuelle/RemboursementByStatut.aspx")
+                .Add("Recherche des contrats clients", "~/Pages/Mutuelle/ConsultationContratClient.aspx")
             End If
             If UserIsInRole("Proprietaire") Or UserIsInRole("Admin") Then
                 ' Chargement des animaux

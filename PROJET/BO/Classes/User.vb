@@ -76,6 +76,28 @@
             End With
         End Function
 
+        ''' <summary>
+        ''' Indique s'il existe un utilisateur avec cet loggin.
+        ''' </summary>
+        ''' <returns>Indique s'il existe un utilisateur avec cet loggin.</returns>
+        Public Shared Function Exists(p_s_log As String) As Boolean
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                ' Requête principale
+                .Clear()
+                .AddSelect(VTL_USER.VTL_USER_ID)
+                .AddFrom(Tables.VTL_USER)
+                .AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_log)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End With
+        End Function
+
     End Class
 
 End Namespace

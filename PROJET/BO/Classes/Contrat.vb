@@ -4,6 +4,7 @@
     ''' Contrat d'assurance.
     ''' </summary>
     Partial Public Class Contrat
+
         Public Shared Function SearchedConsultContrat() As Query
             Dim l_o_sql As New Query
 
@@ -62,22 +63,50 @@
                 .AddSelect(VTL_CONTRAT.VTL_CONTRAT_ID)
                 .AddSelect(VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT)
                 .AddSelect(VTL_CONTRAT.VTL_CONTRAT_DT_FIN)
+                .AddSelect(VTL_CONTRAT.VTL_CONTRAT_NUM_CONTRAT)
                 .AddSelect(VTL_CONTRAT.VTL_CONTRAT_TXREMB)
                 .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM)
                 .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM)
+                .AddSelect(MyDB.FctConcat(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, TextSQL(", "), VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM), "nom_prenom")
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL)
+                .AddSelect(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE)
                 .AddSelect(VTL_ANIMAL.VTL_ANIMAL_NOM)
                 .AddSelect(VTL_TYPE.VTL_TYPE_LIBELLE)
                 .AddSelect(VTL_RACE.VTL_RACE_NOM)
                 .AddFrom(Tables.VTL_CONTRAT)
                 .AddFrom(Tables.VTL_PROPRIETAIRE, DbJoin.Right, Tables.VTL_CONTRAT, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, VTL_CONTRAT.VTL_CONTRAT_ID_PROPRIETAIRE)
                 .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_CONTRAT, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL)
-                .AddFrom(Tables.VTL_TYPE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_TYPE.VTL_TYPE_ID, VTL_ANIMAL.VTL_ANIMAL_ID)
+                .AddFrom(Tables.VTL_TYPE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_TYPE.VTL_TYPE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_TYPE)
                 .AddFrom(Tables.VTL_RACE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_RACE.VTL_RACE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_RACE)
             End With
             Return l_o_sql
         End Function
 
-    End Class
+        ''' <summary>
+        ''' Indique s'il existe un utilisateur avec cet loggin.
+        ''' </summary>
+        ''' <returns>Indique s'il existe un utilisateur avec cet loggin.</returns>
+        Public Shared Function Exists(p_i_idAnimal As Integer, p_d_dbdebut As Date, p_d_dtfin As Date) As Boolean
+            Dim l_o_sql As New Query
 
+            With l_o_sql
+                ' Requête principale
+                .Clear()
+                .AddSelect(VTL_CONTRAT.VTL_CONTRAT_ID)
+                .AddFrom(Tables.VTL_CONTRAT)
+                .AddWhereIs(VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL, p_i_idAnimal)
+                .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_FIN + ">='" + p_d_dtfin.ToString + "'")
+                .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT + "<='" + p_d_dtfin.ToString + "'")
+
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End With
+        End Function
+
+    End Class
 
 End Namespace

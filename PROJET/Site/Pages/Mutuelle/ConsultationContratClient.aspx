@@ -8,13 +8,11 @@
 <body>
 	<form id="frmData" runat="server">
 	<div>
-	    <cw:CwFormLayout runat="server" ID="layoutajoutclient">
-            <cw:CwFrame runat="server" ID="frameajoutclient" text="Propriétaire" Collapsable="true" >
-                <cw:CwFormLayout runat="server" ID="frlDtl">
+            <cw:CwFrame runat="server" ID="frameajoutclient" text="Contrats des clients" Collapsable="true" >
+              
                     <cw:CwDataGrid runat="server" Id="dtgContratClient" Title="{0} contrat(s)"></cw:CwDataGrid> 
-                </cw:CwFormLayout>
+              
             </cw:CwFrame>
-	    </cw:CwFormLayout>
 	</div>
 	</form>
 </body>
