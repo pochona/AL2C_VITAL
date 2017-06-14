@@ -78,6 +78,7 @@ Partial Public Class PageModifStatutRbrst
             With l_o_remboursement
                 .Load(SelectedDemandeId)
                 .Statut = 2
+                .Date = Now.Date
                 .Save()
                 'ferme l'onglet courant
                 CloseWindowOnLoad()

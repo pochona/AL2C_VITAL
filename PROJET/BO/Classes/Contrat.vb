@@ -108,6 +108,41 @@
             End With
         End Function
 
+        Public Function GetAnimal() As String
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(MyDB.FctConcat(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, TextSQL(", "), VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM), "nom_prenom")
+                .AddFrom(Tables.VTL_ANIMAL)
+                .AddFrom(Tables.VTL_PROPRIETAIRE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddWhereIs(VTL_ANIMAL.VTL_ANIMAL_ID, ID)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzStr((.GetFirstValue))
+                Else
+                    Return ""
+                End If
+            End With
+        End Function
+
+        Public Function GetNomMutuelle() As String
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_ASSURANCE.VTL_ASSURANCE_NOM)
+                '.AddSelect(MyDB.FctConcat(VTL_ASSURANCE.VTL_ASSURANCE_NOM, TextSQL(", "), VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM), "nom_prenom")
+                .AddFrom(Tables.VTL_ASSURANCE)
+                '  .AddFrom(Tables.VTL_CONTRAT, DbJoin.Right, Tables.VTL_ASSURANCE, VTL_CONTRAT.VTL_CONTRAT_ID_ASSURANCE, VTL_ASSURANCE.VTL_ASSURANCE_ID)
+                .AddWhereIs(VTL_ASSURANCE.VTL_ASSURANCE_ID, Id_assurance)
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzStr((.GetFirstValue))
+                Else
+                    Return ""
+                End If
+            End With
+        End Function
     End Class
 
 End Namespace

@@ -81,6 +81,12 @@ Partial Public Class PageMesRemboursements
             With .AddColumn("Statut du remboursement", VTL_STATUT.VTL_STATUT_NAME)
                 m_i_statut = .ColumnIndex
             End With
+            With .AddColumn("Montant (€)", VTL_REMBOURSMT.VTL_REMBOURSMT_MONTANT)
+                m_i_statut = .ColumnIndex
+            End With
+            With .AddDateColumn("Date remboursement", VTL_REMBOURSMT.VTL_REMBOURSMT_DATE)
+                m_i_statut = .ColumnIndex
+            End With
         End With
 
     End Sub

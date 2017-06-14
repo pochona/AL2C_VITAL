@@ -259,7 +259,6 @@ Partial Public Class PageConsultation
                     'Création d'un remboursement
                     Dim l_o_rembsrt As New Remboursement
                     With l_o_rembsrt
-                        .Date = Now.Date
                         .Consult = l_o_consult.ID
                         .Contrat = l_i_idContrat
                         .Statut = EN_Statut.EnCours
