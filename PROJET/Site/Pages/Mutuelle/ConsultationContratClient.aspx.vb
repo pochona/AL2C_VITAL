@@ -32,8 +32,6 @@ Partial Public Class PageConsultationClient
 
 #End Region
 
-#End Region
-
     Private Sub dtgContratClient_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgContratClient.DataTableRequest
         Try
             p_o_dt = Contrat.GetContratData().GetDT()
@@ -47,11 +45,14 @@ Partial Public Class PageConsultationClient
             .DataKeyField = VTL_CONTRAT.VTL_CONTRAT_ID
             With .AddButtonColumn()
                 .Width = Unit.Pixel(65) ' fixe la taille de la colonne
-                .DataNavigateUrlFormatString = "~/Pages/Mutuelle/AjoutContratClient.aspx?ID={0}" & "&Mode=" & EN_ModeAcces.Modification
+                .DataNavigateUrlFormatString = "~/Pages/Mutuelle/AjoutContratClient.aspx?Contrat={0}" & "&Mode=" & EN_ModeAcces.Modification
                 .DataNavigateUrlField = VTL_CONTRAT.VTL_CONTRAT_ID
                 .Target = "tabContrat" + VTL_CONTRAT.VTL_CONTRAT_ID
                 .Properties.ImageName = "search"
                 m_i_btn_contrat = .ColumnIndex
+            End With
+            With .AddColumn("Numéro du contrat", VTL_CONTRAT.VTL_CONTRAT_NUM_CONTRAT)
+                m_i_dt_deb = .ColumnIndex
             End With
             With .AddDateColumn("Début", VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT)
                 m_i_dt_deb = .ColumnIndex
@@ -59,10 +60,13 @@ Partial Public Class PageConsultationClient
             With .AddDateColumn("Fin", VTL_CONTRAT.VTL_CONTRAT_DT_FIN)
                 m_i_dt_fin = .ColumnIndex
             End With
-            With .AddColumn("Nom propriétaire", VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM)
+            With .AddColumn("Nom propriétaire", "nom_prenom")
                 m_i_nom_proprietaire = .ColumnIndex
             End With
-            With .AddColumn("Prenom propriétaire", VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM)
+            With .AddColumn("Ville du propriétaire", VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_VILLE)
+                m_i_prenom_proprietaire = .ColumnIndex
+            End With
+            With .AddColumn("Mail du propriétaire", VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_MAIL)
                 m_i_prenom_proprietaire = .ColumnIndex
             End With
             With .AddColumn("Nom de l'animal", VTL_ANIMAL.VTL_ANIMAL_NOM)
@@ -74,11 +78,13 @@ Partial Public Class PageConsultationClient
             With .AddColumn("Race animal", VTL_RACE.VTL_RACE_NOM)
                 m_i_race = .ColumnIndex
             End With
-            With .AddColumn("Type de contrat", VTL_CONTRAT.VTL_CONTRAT_TXREMB)
+            With .AddColumn("Taux du remboursement", VTL_CONTRAT.VTL_CONTRAT_TXREMB)
                 m_i_tx_remb = .ColumnIndex
             End With
         End With
 
     End Sub
+
+#End Region
 
 End Class
