@@ -23,7 +23,7 @@
 
   <cw:CwPanelButtons runat="server" ID="panelremboursementStatut">
            
-            <cw:CwDataGrid runat="server" ID="grdtestmutu" Title="{0} Remboursement par statut" />
+            <cw:CwDataGrid runat="server" ID="grdtestmutu" Title="{0} Remboursement(s) par statut" />
   </cw:CwPanelButtons>
 	
 	</div>
