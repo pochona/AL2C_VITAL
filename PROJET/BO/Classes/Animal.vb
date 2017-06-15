@@ -248,7 +248,7 @@
         End Function
 
 
-       
+
 
 #End Region
 
@@ -319,7 +319,7 @@
                 'x .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT + ">=" + MyDB.SqlDate(Now.Date))
                 .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_FIN + ">='" + Now.Year.ToString + "/" + Now.Month.ToString + "/" + Now.Day.ToString + "'")
                 .AddWhere(VTL_CONTRAT.VTL_CONTRAT_DT_DEBUT + "<='" + Now.Year.ToString + "/" + Now.Month.ToString + "/" + Now.Day.ToString + "'")
-          
+
 
                 If Not .GetFirstRow Is Nothing Then
                     Return NzInt((.GetFirstValue))
