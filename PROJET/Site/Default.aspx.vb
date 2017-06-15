@@ -35,7 +35,26 @@ Partial Public Class PageDefault
             ElseIf UserIsInRole("Mutuelle") Then
                 Return "~/Pages/Mutuelle/AccueilMutuelle.aspx"
             ElseIf UserIsInRole("Proprietaire") Then
-                Return "~/Pages/Proprio/AccueilProprietaire.aspx"
+                If (CStr(Request.QueryString("acces")) = "direct") Then
+                    ' NFC en paramètre
+                    Dim NFC As String
+                    NFC = CStr(Request.QueryString("NFC"))
+
+                    ' Retrouver ID Animal
+                    Dim id As String
+
+                    id = retrouverAnimalParNFC(NFC)
+
+                    MsgBox(id)
+
+                    'Si le numéro NFC n'existe pas
+                    If id = "0" Then
+                        Return "~/Pages/Proprio/AccueilProprietaire.aspx"
+                    End If
+                    Return "~/Pages/Proprio/AnimalGeneral.aspx?ID=" & id
+                Else
+                    Return "~/Pages/Proprio/AccueilProprietaire.aspx"
+                End If
             End If
             Return "Welcome.aspx"
         End Get
