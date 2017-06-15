@@ -141,9 +141,16 @@ Public Class MainApplication
     ''' <param name="ToolBar">Barre d'outils principale de l'application.</param>
     ''' <param name="IsAuthenticated">Indique si l'utilisateur est actuellement connecté.</param>
     Public Overrides Sub LoadToolbar(ToolBar As ApplicationToolbar, IsAuthenticated As Boolean)
+        'partenaires.ImageUrl("~/Images/logo.png")
+        'setImageUrl("")
+
         With ToolBar
             ' Déconnexion
             .AddDisconnect()
+
+            'Ouvre URL Page
+            .AddOpen("Infos Partenaires", "~/Pages/InfoPartenaire.aspx").ImageName = "link"
+
             ' A propos
             .AddAbout()
             ' Thèmes
