@@ -65,7 +65,7 @@ Partial Public Class PageInfoPartenaire
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents txtAnimx As Global.Corail.Web.CwTextBox
+    Protected WithEvents txtAnimx As Global.Corail.Web.CwLabel
 
     '''<summary>
     '''Contrôle pbnAnix.
@@ -86,20 +86,110 @@ Partial Public Class PageInfoPartenaire
     Protected WithEvents btnLink As Global.Corail.Web.CwButton
 
     '''<summary>
-    '''Contrôle frmDz.
+    '''Contrôle CwFrame1.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frmDz As Global.Corail.Web.CwFrame
+    Protected WithEvents CwFrame1 As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle drlDz.
+    '''Contrôle CwFormLayout1.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents drlDz As Global.Corail.Web.CwFormLayout
+    Protected WithEvents CwFormLayout1 As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
+    '''Contrôle CwImage1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwImage1 As Global.Corail.Web.CwImage
+
+    '''<summary>
+    '''Contrôle CwLabel1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwLabel1 As Global.Corail.Web.CwLabel
+
+    '''<summary>
+    '''Contrôle CwPanelButtons1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwPanelButtons1 As Global.Corail.Web.CwPanelButtons
+
+    '''<summary>
+    '''Contrôle CwButton1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwButton1 As Global.Corail.Web.CwButton
+
+    '''<summary>
+    '''Contrôle CwFrame2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwFrame2 As Global.Corail.Web.CwFrame
+
+    '''<summary>
+    '''Contrôle CwFormLayout2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwFormLayout2 As Global.Corail.Web.CwFormLayout
+
+    '''<summary>
+    '''Contrôle CwImage2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwImage2 As Global.Corail.Web.CwImage
+
+    '''<summary>
+    '''Contrôle CwLabel2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwLabel2 As Global.Corail.Web.CwLabel
+
+    '''<summary>
+    '''Contrôle CwPanelButtons2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwPanelButtons2 As Global.Corail.Web.CwPanelButtons
+
+    '''<summary>
+    '''Contrôle CwButton2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents CwButton2 As Global.Corail.Web.CwButton
 End Class
