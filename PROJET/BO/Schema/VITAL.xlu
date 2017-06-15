@@ -45,7 +45,7 @@
         <Column Name="VTL_ANIMAL_DT_NAISSANCE" Type="DateTime" DateKind="Date" Label="Dt_naissance" PropertyName="Dt_naissance" Comment="Dt_naissance" />
         <Column Name="VTL_ANIMAL_DT_DECES" Type="DateTime" DateKind="Date" Label="Dt_deces" PropertyName="Dt_deces" Comment="Dt_deces" />
         <Column Name="VTL_ANIMAL_ID_RACE" Type="Integer" Precision="10" Label="Id_race" PropertyName="Id_race" PropertyNullValue="0" Comment="Id_race" />
-        <Column Name="VTL_ANIMAL_ID_CARTE" Type="Integer" Precision="10" Unique="true" Label="Id_carte" PropertyName="Id_carte" PropertyNullValue="0" Comment="Id_carte" />
+        <Column Name="VTL_ANIMAL_ID_CARTE" Type="Integer" Precision="10" Label="Id_carte" PropertyName="Id_carte" PropertyNullValue="0" Comment="Id_carte" />
         <Column Name="VTL_ANIMAL_ID_TYPE" Type="Integer" Precision="10" Label="Id_type" PropertyName="Id_type" PropertyNullValue="0" Comment="Id_type" />
         <Column Name="VTL_ANIMAL_ID_PROP" Type="Integer" Precision="10" Label="Id_prop" PropertyName="Id_prop" PropertyNullValue="0" Comment="Id_prop" />
         <Column Name="VTL_ANIMAL_IMAGE" Type="String" Label="Image" PropertyName="Image" Comment="Image" />
@@ -238,7 +238,7 @@
     <Table Name="VTL_REMBOURSMT" ClassName="Remboursement" Label="Remboursement" Comment="Remboursement" OldNames="~temp636313259180001671,VTL_REMBOURSEMENT" Param="True">
       <Columns>
         <Column Name="VTL_REMBOURSMT_ID" Type="Integer" Precision="10" Auto="true" PrimaryKey="true" Label="ID" PropertyName="ID" Comment="ID" />
-        <Column Name="VTL_REMBOURSMT_DATE" Type="DateTime" AllowNull="false" Label="Date" PropertyName="Date" Comment="Date" />
+        <Column Name="VTL_REMBOURSMT_DATE" Type="DateTime" Label="Date" PropertyName="Date" Comment="Date" />
         <Column Name="VTL_REMBOURSMT_CONSULT" Type="Integer" Precision="10" Label="Consult" PropertyName="Consult" PropertyNullValue="0" Comment="Consult" />
         <Column Name="VTL_REMBOURSMT_CONTRAT" Type="Integer" Precision="10" Label="Contrat" PropertyName="Contrat" PropertyNullValue="0" Comment="Contrat" />
         <Column Name="VTL_REMBOURSMT_MONTANT" Type="Double" Scale="2" Precision="9" AllowNull="false" Label="Montant" PropertyName="Montant" Comment="Montant" />

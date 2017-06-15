@@ -19,7 +19,7 @@ Partial Public Class PageAccueilMutuelle
 
     Private Sub dtgResults_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles consultClient.DataTableRequest
         Try
-            p_o_dt = Consultation.SearchedConsultClient().GetDT
+            p_o_dt = Consultation.SearchedConsultClient(VITAL.BO.VITAL.User.GetIdAssur(User.Identity.Name)).GetDT
         Catch ex As Exception
 
             ShowException(ex)

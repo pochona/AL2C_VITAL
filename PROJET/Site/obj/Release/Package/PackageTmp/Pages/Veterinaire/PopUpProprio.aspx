@@ -10,7 +10,7 @@
 	<div>
 	<cw:CwFormLayout runat="server" ID="frlGene">
         <cw:CwFrame runat="server" ID="frmGene" Text="Selectionner un propriétaire">
-            <cw:CwDataGrid runat="server" id="dtgProprio"></cw:CwDataGrid>
+            <cw:CwDataGrid runat="server" id="dtgProprioContrat"></cw:CwDataGrid>
         </cw:CwFrame>
 	</cw:CwFormLayout>
 	</div>

@@ -80,19 +80,19 @@ Partial Public Class PagePopUpProprioContrat
         End With
     End Sub
 
-    Private Sub dtgProprioContrat_Load(sender As Object, e As EventArgs) Handles dtgProprioContrat.Load
-        With dtgProprioContrat
-            .ValueForAdd(m_i_prenom) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
-            .ValueForAdd(m_i_adr) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
-            .ValueForAdd(m_i_nom) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
-            .ValueForAdd(m_i_cp) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
-            .ValueForAdd(m_i_ville) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
-            .ValueForAdd(m_i_tel) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
-            .ValueForAdd(m_i_mail) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
-            .ValueForAdd(m_i_log) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
-            .ValueForAdd(m_i_mdp) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
-        End With
-    End Sub
+    'x Private Sub dtgProprioContrat_Load(sender As Object, e As EventArgs) Handles dtgProprioContrat.Load
+    'x     With dtgProprioContrat
+    'x         .ValueForAdd(m_i_prenom) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
+    'x         .ValueForAdd(m_i_adr) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
+    'x         .ValueForAdd(m_i_nom) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
+    'x         .ValueForAdd(m_i_cp) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
+    'x         .ValueForAdd(m_i_ville) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
+    'x         .ValueForAdd(m_i_tel) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
+    'x         .ValueForAdd(m_i_mail) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
+    'x         .ValueForAdd(m_i_log) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
+    'x         .ValueForAdd(m_i_mdp) = "Nouveau"  ' m_i_nom correspond au numéro de la colonne
+    'x     End With
+    'x End Sub
 
     Private Sub dtgProprioContrat_AddCommand(sender As Object, e As DataGridCommandEventArgs, ByRef refresh As Boolean) Handles dtgProprioContrat.AddCommand
         Dim l_o_user As New User

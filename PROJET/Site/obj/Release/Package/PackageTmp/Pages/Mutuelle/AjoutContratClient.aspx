@@ -2,31 +2,35 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server">
+<head id="Head1" runat="server">
 	<title>AjoutContratClient</title>
 </head>
 <body>
 	<form id="frmData" runat="server">
 	<div>
+         <asp:UpdatePanel runat="server" ID="upnNomCli" UpdateMode="Conditional">
+                              <ContentTemplate>
 	    <cw:CwFormLayout runat="server" ID="layoutajoutclient">
             <cw:CwFrame runat="server" ID="frameajoutclient" text="Propriétaire" Collapsable="true" >
-                <cw:CwFormLayout runat="server" ID="frlDtl">
-                    <cw:CwTextBox runat="server" ID="NumContrat" Label="Numéro de contrat" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwDateTextBox runat="server" ID="DateDebut" Label="Date de début" Enabled="true" Text="" IsMandatory="true" ></cw:CwDateTextBox>
-                    <cw:CwDateTextBox runat="server" ID="DateFin" Label="Date de fin" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwDateTextBox>
-                    <cw:CwNumericTextBox runat="server" ID="IdAnimal" Label="ID de l'animal" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
-                    <cw:CwNumericTextBox runat="server" ID="IdProprio" Label="ID du propriétaire" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
-                    <cw:CwNumericTextBox runat="server" ID="IdAssurance" Label="ID de l'assurance" Enabled="true" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
-                    <cw:CwLabel runat="server" ID="label1" Label="" Text=""></cw:CwLabel>
-                </cw:CwFormLayout>
+                <cw:CwFormLayout runat="server" ID="frlDtl" DefaultCells-Small="6" DefaultLabelCells-Small="6">
+                    <cw:CwTextBox runat="server" ID="txtNumContrat" IsMandatory="true" Label="Numéro de contrat" ></cw:CwTextBox>
+                      <cw:CwNumericTextBox Decimals="2" MaxValue="1" MinValue="0" runat="server" ID="ntbTxremb" IsMandatory="true" Suffix="%" Label="Taux de remboursement (ex : 0,30)"  ></cw:CwNumericTextBox>
+                      <cw:CwDateTextBox runat="server" ID="DateDebut"  Label="Date de début"  IsMandatory="true" ></cw:CwDateTextBox>
+                      <cw:CwTextBox runat="server" ID="txtIdPropCache"  Visible="false" ></cw:CwTextBox>
+                      <cw:CwSelectTextBox runat="server" ID="stbProprio" IsMandatory="true" PostBackMode="Full" AutoPostBack="true" NavigateUrl="~/Pages/Mutuelle/PopUpProprioContrat.aspx" Enabled="True" ToolTip="Pour sélectionner un propriétaire, veuillez cliquer sur le bouton de droite." Label="Propriétaire"></cw:CwSelectTextBox>
+                      <cw:CwDateTextBox runat="server" ID="DateFin" IsMandatory="true" Label="Date de fin"  ></cw:CwDateTextBox>
+                      <cw:CwComboBox runat="server" ID="cboAnimal" IsMandatory="true" Label="Animal" AutoPostBack="True" PostBackMode="Full"></cw:CwComboBox>
+                 </cw:CwFormLayout>
+            <cw:CwPanelButtons runat="server" ID="pnbBtnContrat">
+                <cw:CwButton runat="server" ID="btnCreate" Text="Ajouter"></cw:CwButton>
+                <cw:CwButton runat="server" ID="btnModifier" Text="Modifier"></cw:CwButton>
+                  <cw:CwButton runat="server" ID="btnSave" Text="Sauvegarder"></cw:CwButton>
+                
+                  <cw:CwButton runat="server" ID="btnNewAnimal" NavigateUrl="~/Pages/Mutuelle/PopUpAjoutAnimal.aspx"  Text="Créer un animal"></cw:CwButton>
+          </cw:CwPanelButtons>
             </cw:CwFrame>
 	    </cw:CwFormLayout>
-
-
-        <cw:CwPanelButtons runat="server" ID="panelmut2">
-            <cw:CwButton runat="server" ID="btnmut1" Text="AJOUTER LE CONTRAT" Kind="Default" OnClick="clicValider"></cw:CwButton>
-            <cw:CwButton runat="server" ID="btnmut2" Text="ANNULER" Kind="Default" NavigateUrl="~/Pages/AccueilMutuelle.aspx"></cw:CwButton>
-         </cw:CwPanelButtons>
+</ContentTemplate></asp:UpdatePanel>
 
 	</div>
 	</form>

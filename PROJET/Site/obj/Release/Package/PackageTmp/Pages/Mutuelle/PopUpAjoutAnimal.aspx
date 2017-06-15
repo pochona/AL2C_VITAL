@@ -1,9 +1,9 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CreerAnimal.aspx.vb" Inherits="VITAL.PageCreerAnimal" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="PopUpAjoutAnimal.aspx.vb" Inherits="VITAL.PagePopUpAjoutAnimal" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-	<title>CreerAnimal</title>
+	<title>PopUpAjoutAnimal</title>
 </head>
 <body>
 	<form id="frmData" runat="server">
@@ -12,15 +12,16 @@
         <cw:CwFrame runat="server" ID="frmGene" Text="Informations">
             <cw:CwFormLayout runat="server" ID="frlInfos">
                 <cw:CwTextBox runat="server" ID="txtNom" Label="Nom" IsMandatory="true"></cw:CwTextBox>
+                
                 <cw:CwComboBox runat="server" ID="cboType" Label="Type" IsMandatory="true"></cw:CwComboBox>
                 <cw:CwComboBox runat="server" ID="cboRace" Label="Race" IsMandatory="true"></cw:CwComboBox>
                 <cw:CwNumericTextBox runat="server" ID="ntbPoids" Label="Poids" ></cw:CwNumericTextBox>
                 <cw:CwNumericTextBox runat="server" ID="ntbTaille" Label="Taille" ></cw:CwNumericTextBox>
                 <cw:CwTextBox runat="server" ID="txtPuce" Label="Numéro de puce" ></cw:CwTextBox>
                 <cw:CwDateTextBox runat="server" ID="dtbNaiss" Label="Date de naissance" ></cw:CwDateTextBox>
-                <cw:CwSuggestTextBox runat="server" ID="sgtProp" Label="Propriétaire"></cw:CwSuggestTextBox>
+                <cw:CwCheckBox runat="server" ID="chkCarte" Label="Créer une carte vitale"/>
                 <cw:CwPanelButtons runat="server" ID="pnbBtns">
-                    <cw:CwButton runat="server" ID="btnSave"></cw:CwButton>
+                    <cw:CwButton runat="server" ID="btnSave" Text="Enregistrer"></cw:CwButton>
                 </cw:CwPanelButtons>
             </cw:CwFormLayout>
         </cw:CwFrame>

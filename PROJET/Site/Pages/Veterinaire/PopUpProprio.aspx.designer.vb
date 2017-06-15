@@ -41,11 +41,11 @@ Partial Public Class PagePopUpProprio
     Protected WithEvents frmGene As Global.Corail.Web.CwFrame
 
     '''<summary>
-    '''Contrôle dtgProprio.
+    '''Contrôle dtgProprioContrat.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents dtgProprio As Global.Corail.Web.CwDataGrid
+    Protected WithEvents dtgProprioContrat As Global.Corail.Web.CwDataGrid
 End Class

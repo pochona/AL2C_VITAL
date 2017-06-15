@@ -111,6 +111,7 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\logo_blanc.png" />
     <Content Include="Pages\AccueilAdmin.aspx" />
+    <Content Include="Pages\InfoPartenaire.aspx" />
     <Content Include="Pages\Mutuelle\AccueilMutuelle.aspx" />
     <Content Include="Pages\Mutuelle\ModifStatutRbrst.aspx" />
     <Content Include="Pages\Mutuelle\PopUpAjoutAnimal.aspx" />
@@ -126,6 +127,7 @@
     <Content Include="Pages\Mutuelle\PopUpContrat.aspx" />
     <Content Include="Pages\Proprio\AjoutTraitement.aspx" />
     <Content Include="Pages\Proprio\AnimalGeneral.aspx" />
+    <Content Include="Pages\Proprio\Contrat.aspx" />
     <Content Include="Pages\Proprio\Documents.aspx" />
     <Content Include="Pages\Proprio\HistoConsul.aspx" />
     <Content Include="Pages\Proprio\HistoVaccinTraitemt.aspx" />
@@ -179,6 +181,13 @@
     </Compile>
     <Compile Include="Pages\AccueilAdmin.aspx.vb">
       <DependentUpon>AccueilAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InfoPartenaire.aspx.designer.vb">
+      <DependentUpon>InfoPartenaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InfoPartenaire.aspx.vb">
+      <DependentUpon>InfoPartenaire.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Mutuelle\AccueilMutuelle.aspx.designer.vb">
@@ -285,6 +294,13 @@
     <Compile Include="Pages\Proprio\AnimalGeneral.aspx.vb">
       <DependentUpon>AnimalGeneral.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Proprio\Contrat.aspx.designer.vb">
+      <DependentUpon>Contrat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proprio\Contrat.aspx.vb">
+      <DependentUpon>Contrat.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Proprio\Documents.aspx.designer.vb">
       <DependentUpon>Documents.aspx</DependentUpon>

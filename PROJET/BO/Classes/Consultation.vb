@@ -5,7 +5,7 @@
     ''' </summary>
     Partial Public Class Consultation
 
-        Public Shared Function SearchedConsultClient() As Query
+        Public Shared Function SearchedConsultClient(p_i_idAssur As Integer) As Query
             Dim l_o_sql As New Query
 
             With l_o_sql
@@ -21,6 +21,8 @@
                 .AddFrom(Tables.VTL_CONSULTATION)
                 .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_CONSULTATION, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_CONSULTATION.VTL_CONSULTATION_L)
                 .AddFrom(Tables.VTL_PROPRIETAIRE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_PROP)
+                .AddFrom(Tables.VTL_CONTRAT, DbJoin.Right, Tables.VTL_ANIMAL, VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL, VTL_ANIMAL.VTL_ANIMAL_ID)
+                .AddWhereIs(VTL_CONTRAT.VTL_CONTRAT_ID_ASSURANCE, p_i_idAssur)
             End With
             Return l_o_sql
         End Function

@@ -17,13 +17,9 @@
                     <cw:CwNumericTextBox  runat="server" ID="ntbPoids" IsMandatory="true" Label="Poids" Suffix="kg"></cw:CwNumericTextBox>
                     <cw:CwNumericTextBox runat="server" ID="ntbTaille" IsMandatory="true" Label="Taille" Suffix="cm"></cw:CwNumericTextBox>
                     <cw:cwTextBox runat="server" ID="txtNumPuce" Label="Numéro de puce"></cw:cwTextBox>
-                        <cw:CwUpdatePanel runat="server" ID="upnNumCarte" UpdateMode="Conditional"  >
-                            <ContentTemplate>
-                                <cw:CwFormLayout runat="server" ID="frlNumCarte">
-                                    <cw:CwComboBox runat="server" ID="cboNumCarte" Label="Numéro de carte vitale" PostBackMode="Full"  AutoPostBack="True"></cw:CwComboBox> 
-                                </cw:CwFormLayout>
-                            </ContentTemplate>
-                        </cw:CwUpdatePanel>
+                    <cw:CwCheckBox runat="server" ID="chkCarte" Label="Créer une carte vitale"/>
+                  
+                     <cw:CwTextBox runat="server" ID="txtCarte" Label="Numéro de carte" Enabled="false" ></cw:CwTextBox>
                     <cw:CwDateTextBox runat="server" ID="dtbNaiss" Label="Date naissance"  ></cw:CwDateTextBox>
                     <cw:CwDateTextBox runat="server" ID="dtbDeces" Label="Date décès" ></cw:CwDateTextBox>
                     <cw:CwComboBox runat="server" IsMandatory="true"  ID="cboType" Label="Type"></cw:CwComboBox>
@@ -33,7 +29,6 @@
                     <cw:CwPanelButtons runat="server" ID="pbnInfosAnimal">
                         <cw:CwButton runat="server" ImageName="pencil" ID="btnModifierInfoAnml" Text="Modifier"></cw:CwButton>
                         <cw:CwButton runat="server" ImageName="floppy-disc" ID="btnSaveInfoAnml" Text="Enregistrer"></cw:CwButton>
-                        <cw:CwButton runat="server" ImageName="sq-plus-all" ID="btnNewCarte" Text="Créer une nouvelle carte"></cw:CwButton>
                         <cw:CwButton runat="server" ImageName="sq-plus-all" ID="btnNewAnimal" Text="Créer un nouvel animal"></cw:CwButton>
                     
                     </cw:CwPanelButtons>
@@ -50,12 +45,8 @@
             </cw:CwFrame>
             
             <cw:CwFrame runat="server" ID="frmListTraitements" Text="Traitements" Width="100%" Cells-Small="6" ResetLayout="False" >
-                <cw:CwFormLayout runat="server" ID="frlTraitement">
-                    <cw:CwDateTextBox runat="server" ID="dtbNewTraitement" Label="Date début"></cw:CwDateTextBox>
-                    <cw:CwNumericTextBox runat="server" ID="ntbNewTraitement" Label="Durée" Suffix="jours"></cw:CwNumericTextBox>
-                </cw:CwFormLayout>
-                <cw:CwPanelButtons runat="server" ID="pnbBtnsTraitement">
-                    <cw:CwButton runat="server" ID="btnNewTraitement" Text="Ajouter"></cw:CwButton>
+                <cw:CwPanelButtons runat="server" ID="pbnTraitements">
+                    <cw:CwButton runat="server" ID="btnNewTraitement" Text="Ajouter un traitement"></cw:CwButton>
                 </cw:CwPanelButtons>
                 <cw:CwDataGrid runat="server" ID="dtgTraitements" Title="{0} traitement(s)"></cw:CwDataGrid>
             </cw:CwFrame>

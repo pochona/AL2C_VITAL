@@ -33,19 +33,20 @@
             </cw:CwFrame>
 	    </cw:CwFormLayout>
 	    <cw:CwFormLayout runat="server" ID="CwFormLayout1">
-            <cw:CwFrame runat="server" ID="frmDepenses" text="Dépenses" Collapsable="true" >
+            <cw:CwFrame runat="server" ID="frmDepenses" text="Dépenses en consultations vétérinaire" Collapsable="true" >
                 <cw:CwFormLayout runat="server" ID="CwFormLayout2">
-                    <cw:CwTextBox runat="server" ID="txtTotal" Label="Total" Enabled="false" Text="" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwTextBox runat="server" ID="txtCourbe" Label="Courbe" Enabled="false" Text="" ToolTip="Infos bulle"></cw:CwTextBox>
-                    <cw:CwTextBox runat="server" ID="txtMsgMut" Label="Découvrez ce que vous auriez économisé avec une mutelle  " Enabled="false" Text="" ></cw:CwTextBox>
-                </cw:CwFormLayout>
+                    <cw:CwNumericTextBox  runat="server" ID="ntbDepTotal" Label="Total" Suffix="€" Enabled="false" Text="" ToolTip="Infos bulle"></cw:CwNumericTextBox>
+                       </cw:CwFormLayout>
+                <cw:CwPanelButtons runat="server" ID="pbnMut">
+                     <cw:CwButton runat="server" text="Découvrez ce que vous auriez économisé avec une mutelle" ID="btnLink" Kind="Link" NavigateUrl="http://animaux-relax.com/"></cw:CwButton>
+             </cw:CwPanelButtons>
             </cw:CwFrame>
 	    </cw:CwFormLayout>
 
+            
+	   
         <cw:CwPanelButtons runat="server" ID="pnbvet">
-            <cw:CwButton runat="server" ID="btnvet1" Text="Consuler les consultations" Kind="Default"></cw:CwButton>
-            <cw:CwButton runat="server" ID="btnvet2" Text="Ajouter des traitements" Kind="Default"></cw:CwButton>
-            <cw:CwButton runat="server" ID="btnvet3" Text="Ajouter des vaccins" Kind="Default"></cw:CwButton>
+            <cw:CwButton runat="server" ID="btnAjoutTraitement" Text="Ajouter un traitement" Kind="Default"></cw:CwButton>
          </cw:CwPanelButtons>
         
 	</div>

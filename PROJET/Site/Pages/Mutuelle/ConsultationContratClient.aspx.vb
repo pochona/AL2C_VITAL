@@ -34,7 +34,7 @@ Partial Public Class PageConsultationClient
 
     Private Sub dtgContratClient_DataTableRequest(sender As Object, ByRef p_o_dt As DataTable, e As EventArgs) Handles dtgContratClient.DataTableRequest
         Try
-            p_o_dt = Contrat.GetContratData().GetDT()
+            p_o_dt = Contrat.GetContratData(VITAL.BO.VITAL.User.GetIdAssur(User.Identity.Name)).GetDT()
         Catch ex As Exception
             ShowException(ex)
         End Try

@@ -87,7 +87,7 @@ Public Class MainApplication
             End If
             If UserIsInRole("Veto") Or UserIsInRole("Admin") Then
                 .Add("Sélectionner un animal", "~/Pages/Veterinaire/AuthAnimal.aspx")
-                .Add("Créer un nouveau animal", "~/Pages/Veterinaire/AccueilAnimal.aspx?Mode=" & EN_ModeAcces.Creation, , "tabNewAnimal")
+                .Add("Créer un nouvel animal", "~/Pages/Veterinaire/AccueilAnimal.aspx?Mode=" & EN_ModeAcces.Creation, , "tabNewAnimal")
                 .Add("Liste des consultations", "~/Pages/Veterinaire/ListeConsult.aspx?ID=" & Veterinaire.GetIdVetoConnectedUser(UserLogin()))
                 .Add("Paramétrage")
                 .AddSubAdminTable("Vaccins", Tables.VTL_VACCIN)
@@ -115,7 +115,7 @@ Public Class MainApplication
                         .AddSubSub("Suivi poids et taille", "~/Pages/Proprio/SuiviPoids.aspx?ID=" & l_o_animal.ID, , "tabSuivPoids" + CStr(l_o_animal.ID))
                         .AddSubSub("Historique vaccins et traitements", "~/Pages/Proprio/HistoVaccinTraitemt.aspx?ID=" & l_o_animal.ID, , "tabHistoVac" + CStr(l_o_animal.ID))
                         .AddSubSub("Historique consultations", "~/Pages/Proprio/HistoConsul.aspx?ID=" & l_o_animal.ID, , "tabHistConsul" + CStr(l_o_animal.ID))
-                        .AddSubSub("Documents", "~/Pages/Proprio/Documents.aspx?ID=" & l_o_animal.ID, , "tabDocs" + CStr(l_o_animal.ID))
+                        '      .AddSubSub("Documents", "~/Pages/Proprio/Documents.aspx?ID=" & l_o_animal.ID, , "tabDocs" + CStr(l_o_animal.ID))
                         'TODO : créer les pages
                         .AddSub("Mes remboursements", "~/Pages/Proprio/MesRemboursements.aspx?ID=" & l_o_animal.ID, , "tabRemboursemt" + CStr(l_o_animal.ID))
                         .AddSub("Mon contrat", "~/Pages/Proprio/Contrat.aspx?ID=" & l_o_animal.ID, , "tabContrat" + CStr(l_o_animal.ID))

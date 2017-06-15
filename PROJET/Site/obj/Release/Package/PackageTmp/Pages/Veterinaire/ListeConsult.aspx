@@ -11,8 +11,12 @@
     <cw:CwFormLayout runat="server" ID="frlGeneral">
         <cw:CwFrame runat="server" ID="frmGenral" text="Dernières consultations" Collapsable="true" >
             <cw:CwFormLayout runat="server" ID="frlDtl">
-                <cw:CwNumericTextBox runat="server" ID="ntbMontant" Label="Montant" Enabled="false" ></cw:CwNumericTextBox>
+                <cw:CwDateTextBox runat="server" ID="dtbDate" Label="Date" Enabled="false" ></cw:CwDateTextBox>
+                <cw:CwTextBox runat="server" ID="txtNomProprio" Label="Nom Proprietaire" Enabled="false" ></cw:CwTextBox>
                 <cw:CwTextBox runat="server" ID="txtNomAnimal" Label="Nom animal" Enabled="false" ></cw:CwTextBox>
+                <cw:CwTextBox runat="server" ID="txtPuceAnimal" Label="Puce animal" Enabled="false" ></cw:CwTextBox>
+                <cw:CwTextBox runat="server" ID="txtCommentaire" Label="Commentaire" Enabled="false" ></cw:CwTextBox>
+                <cw:CwNumericTextBox runat="server" ID="ntbMontant" Label="Montant" Enabled="false" ></cw:CwNumericTextBox>        
                </cw:CwFormLayout>
         </cw:CwFrame>
     </cw:CwFormLayout>

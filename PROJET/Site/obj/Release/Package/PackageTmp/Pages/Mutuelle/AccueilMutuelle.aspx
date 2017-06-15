@@ -9,7 +9,7 @@
 	<form id="frmData" runat="server">
 	<div>
 	
-	    <cw:CwDataGrid runat="server" ID="consultClient" Title="{0} Clients" />
+	    <cw:CwDataGrid runat="server" ID="consultClient" Title="{0} Consultation(s)" />
             
         
 

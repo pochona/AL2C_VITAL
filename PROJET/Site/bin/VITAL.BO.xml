@@ -2855,7 +2855,7 @@ VITAL.BO
  Retourne les contrats clients correspondant au nom saisi
  </summary>
 	<returns>Les contrats clients correspondant au nom saisi.</returns>
-</member><member name="M:VITAL.BO.VITAL.Contrat.GetContratData">
+</member><member name="M:VITAL.BO.VITAL.Contrat.GetContratData(System.Int32)">
 	<summary>
  Récupére les données à afficher pour les contrats
  </summary>
@@ -7288,7 +7288,7 @@ VITAL.BO
  Retourne le nom prénom de son propriétaire.
  </summary>
 	<returns>Le nom prénom de son propriétaire.</returns>
-</member><member name="M:VITAL.BO.VITAL.Animal.GetAnimxSearched(System.String,System.String,System.String,System.String)">
+</member><member name="M:VITAL.BO.VITAL.Animal.GetAnimxSearched(System.String,System.String,System.String,System.String,System.String)">
 	<summary>
  Retourne les animaux qui correspondent aux critères de recherche.
  </summary>
@@ -7296,6 +7296,7 @@ VITAL.BO
 	<param name="p_s_NomAnimal">Nom animal.</param>
 	<param name="p_s_NomProprio">Nom Proprio.</param>
 	<param name="p_s_PrenomProprio">Prénom proprio.</param>
+	<param name="p_s_NFC">Code sotcké dans carte NFC</param>
 	<returns>Les animaux qui correspondent aux critères de recherche.</returns>
 </member><member name="M:VITAL.BO.VITAL.Animal.GetIdContrat">
 	<summary>

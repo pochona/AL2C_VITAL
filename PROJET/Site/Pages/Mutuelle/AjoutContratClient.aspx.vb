@@ -213,6 +213,7 @@ Partial Public Class PageAjoutContratClient
                     .Id_proprietaire = CInt(txtIdPropCache.Text)
                     .Num_contrat = txtNumContrat.Text
                     .TxRemb = ntbTxremb.Value
+                    .Id_assurance = VITAL.BO.VITAL.User.GetIdAssur(User.Identity.Name)
                     'TODO Vérif remboursement
                     .Save()
                 End With

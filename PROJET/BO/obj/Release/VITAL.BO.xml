@@ -1359,9 +1359,13 @@ VITAL.BO
 	<summary>
  Dosage.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_i_duree_moyenne_jour">
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_i_dureeMoyenneDuTraitement">
 	<summary>
- Duree_moyenne_jour.
+ DureeMoyenneDuTraitement.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.m_b_administrableParProprietaires">
+	<summary>
+ AdministrableParProprietaires.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.HasChanges">
 	<summary>
@@ -1393,13 +1397,21 @@ VITAL.BO
 	<value>
  Dosage.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.Duree_moyenne_jour">
+</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.DureeMoyenneDuTraitement">
 	<summary>
- Duree_moyenne_jour.
+ DureeMoyenneDuTraitement.
  Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR.
  </summary>
 	<value>
- Duree_moyenne_jour.
+ DureeMoyenneDuTraitement.
+ </value>
+</member><member name="P:VITAL.BO.VITAL.Raw.Medicament`1.AdministrableParProprietaires">
+	<summary>
+ AdministrableParProprietaires.
+ Champ associé : VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO.
+ </summary>
+	<value>
+ AdministrableParProprietaires.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Medicament`1.HasHisto">
 	<summary>
@@ -2049,7 +2061,7 @@ VITAL.BO
 	<summary>
  Id_medicament.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_i_posologie">
+</member><member name="F:VITAL.BO.VITAL.Raw.Traitement_medicament`1.m_s_posologie">
 	<summary>
  Posologie.
  </summary>
@@ -2445,17 +2457,17 @@ VITAL.BO
 	<summary>
  Libelle.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_top_periodique">
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_vaccinPeriodique">
 	<summary>
- Top_periodique.
+ VaccinPeriodique.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_i_periode_mois">
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_i_moisPeriode">
 	<summary>
- Periode_mois.
+ MoisPeriode.
  </summary>
-</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_top_recommandation">
+</member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.m_b_recommande">
 	<summary>
- Top_recommandation.
+ Recommande.
  </summary>
 </member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.HasChanges">
 	<summary>
@@ -2479,29 +2491,29 @@ VITAL.BO
 	<value>
  Libelle.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Top_periodique">
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.VaccinPeriodique">
 	<summary>
- Top_periodique.
+ VaccinPeriodique.
  Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE.
  </summary>
 	<value>
- Top_periodique.
+ VaccinPeriodique.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Periode_mois">
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.MoisPeriode">
 	<summary>
- Periode_mois.
+ MoisPeriode.
  Champ associé : VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS.
  </summary>
 	<value>
- Periode_mois.
+ MoisPeriode.
  </value>
-</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Top_recommandation">
+</member><member name="P:VITAL.BO.VITAL.Raw.Vaccin`1.Recommande">
 	<summary>
- Top_recommandation.
+ Recommande.
  Champ associé : VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION.
  </summary>
 	<value>
- Top_recommandation.
+ Recommande.
  </value>
 </member><member name="F:VITAL.BO.VITAL.Raw.Vaccin`1.HasHisto">
 	<summary>
@@ -2843,6 +2855,17 @@ VITAL.BO
  Retourne les contrats clients correspondant au nom saisi
  </summary>
 	<returns>Les contrats clients correspondant au nom saisi.</returns>
+</member><member name="M:VITAL.BO.VITAL.Contrat.GetContratData(System.Int32)">
+	<summary>
+ Récupére les données à afficher pour les contrats
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VITAL.BO.VITAL.Contrat.Exists(System.Int32,System.DateTime,System.DateTime)">
+	<summary>
+ Indique s'il existe un utilisateur avec cet loggin.
+ </summary>
+	<returns>Indique s'il existe un utilisateur avec cet loggin.</returns>
 </member><member name="T:VITAL.BO.VITAL.Contrat">
 	<summary>
  Contrat d'assurance.
@@ -2853,10 +2876,16 @@ VITAL.BO
  </summary>
 	<param name="p_i_idUser">Id utilisateur.</param>
 	<returns>Indique s'il existe un utilisateur avec cet ID.</returns>
-</member><member name="T:VITAL.BO.VITAL.PropriEtaire">
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.ExistsV2(System.Int32)">
 	<summary>
- Propriétaire.
+ Indique s'il existe un proprietaire avec cet ID.
  </summary>
+	<returns>Indique s'il existe un proprietaire avec cet ID.</returns>
+</member><member name="M:VITAL.BO.VITAL.PropriEtaire.GetInfoPropUser">
+	<summary>
+ Indique s'il existe un utilisateur avec cet ID.
+ </summary>
+	<returns>Indique s'il existe un utilisateur avec cet ID.</returns>
 </member><member name="M:VITAL.BO.VITAL.PropriEtaire.GetIdProprioByIdUser(System.Int32)">
 	<summary>
  Retourne l'id du proprio connecté.
@@ -2885,6 +2914,44 @@ VITAL.BO
 </member><member name="T:VITAL.BO.VITAL.Veterinaire">
 	<summary>
  Veterinaire.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.BaseTableDefinition">
+	<summary>
+ Classe de base de définition des colonnes d'une table.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.FieldUsage.EN_FieldType.None">
+	<summary>
+ Aucun.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.FieldUsage.EN_FieldType.Key">
+	<summary>
+ Clé primaire.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.FieldUsage.EN_FieldType.Value">
+	<summary>
+ Valeur.
+ </summary>
+</member><member name="T:VITAL.BO.VITAL.FieldUsage.EN_FieldType">
+	<summary>
+ Type d'utilisation d'une colonne.
+ </summary>
+</member><member name="F:VITAL.BO.VITAL.FieldUsage.m_en_fieldType">
+ Type d'utilisation.
+
+</member><member name="P:VITAL.BO.VITAL.FieldUsage.FieldType">
+	<summary>
+ Type d'utilisation déclaré.
+ </summary>
+	<value>Type d'utilisation déclaré.</value>
+	<returns>Type d'utilisation déclaré.</returns>
+</member><member name="M:VITAL.BO.VITAL.FieldUsage.#ctor(VITAL.BO.VITAL.FieldUsage.EN_FieldType)">
+	<summary>
+ Initialisation d'une nouvelle instance de la classe.
+ </summary>
+	<param name="p_en_type">Type d'utilisation de la colonne.</param>
+</member><member name="T:VITAL.BO.VITAL.FieldUsage">
+	<summary>
+ Attribut spécifiant de type d'utilisation d'un colonne.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.Tables.VITAL_ANIMALDOCS">
 	<summary>
@@ -3010,6 +3077,13 @@ VITAL.BO
 	<summary>
  Id_Animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VITAL_ANIMALDOCS.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VITAL_ANIMALDOCS">
 	<summary>
  AnimalDocs.
@@ -3034,6 +3108,13 @@ VITAL.BO
 	<summary>
  Id_animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_ADOPTER.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_ADOPTER">
 	<summary>
  Adopter : Associations etre propriétaire et animal.
@@ -3086,6 +3167,13 @@ VITAL.BO
 	<summary>
  Image.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_ANIMAL.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_ANIMAL">
 	<summary>
  Animal.
@@ -3154,6 +3242,13 @@ VITAL.BO
 	<summary>
  id_user.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_ASSURANCE.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_ASSURANCE">
 	<summary>
  Assurance.
@@ -3182,6 +3277,13 @@ VITAL.BO
 	<summary>
  Consult.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_ATTACHEMT.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_ATTACHEMT">
 	<summary>
  Attachement.
@@ -3206,6 +3308,13 @@ VITAL.BO
 	<summary>
  Nfc (Maxlen).
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_CARTE.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_CARTE">
 	<summary>
  Carte vitale.
@@ -3230,6 +3339,13 @@ VITAL.BO
 	<summary>
  Date.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_CNSLDIET.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_CNSLDIET">
 	<summary>
  ConseilDietetique.
@@ -3262,6 +3378,13 @@ VITAL.BO
 	<summary>
  Dt_Consultation.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_CONSULTATION.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_CONSULTATION">
 	<summary>
  Consultation vétérinaire d'un animal.
@@ -3302,6 +3425,13 @@ VITAL.BO
 	<summary>
  TxRemb.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_CONTRAT.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_CONTRAT">
 	<summary>
  Contrat d'assurance.
@@ -3322,6 +3452,13 @@ VITAL.BO
 	<summary>
  Id_animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_HISTO_POIDS.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_HISTO_POIDS">
 	<summary>
  Historique du poids de l'animal.
@@ -3342,6 +3479,13 @@ VITAL.BO
 	<summary>
  Id_animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_HISTO_TAILLE.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_HISTO_TAILLE">
 	<summary>
  Historique de la taille de l'animal.
@@ -3368,8 +3512,19 @@ VITAL.BO
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_DUREE_MOYENNE_JOUR">
 	<summary>
- Duree_moyenne_jour.
+ DureeMoyenneDuTraitement.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_MEDICAMENT.VTL_MEDICAMENT_PROPRIOCANDO">
+	<summary>
+ AdministrableParProprietaires.
+ </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_MEDICAMENT.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_MEDICAMENT">
 	<summary>
  Medicament.
@@ -3406,6 +3561,13 @@ VITAL.BO
 	<summary>
  Id_animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_POSITION.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_POSITION">
 	<summary>
  Position de l'animal.
@@ -3478,6 +3640,13 @@ VITAL.BO
 	<summary>
  id_user.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_PROPRIETAIRE.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_PROPRIETAIRE">
 	<summary>
  Propriétaire.
@@ -3494,6 +3663,13 @@ VITAL.BO
 	<summary>
  Nom (Maxlen).
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_RACE.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_RACE">
 	<summary>
  Race de l'animal.
@@ -3522,6 +3698,13 @@ VITAL.BO
 	<summary>
  Statut.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_REMBOURSMT.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_REMBOURSMT">
 	<summary>
  Remboursement.
@@ -3538,6 +3721,13 @@ VITAL.BO
 	<summary>
  Name (Maxlen).
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_STATUT.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_STATUT">
 	<summary>
  Statut.
@@ -3558,10 +3748,21 @@ VITAL.BO
 	<summary>
  Posologie.
  </summary>
+</member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_POSOLOGIE_MAXLEN">
+	<summary>
+ Posologie (Maxlen).
+ </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR">
 	<summary>
  Duree_jour.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_TRAITEMENT_MEDICAMENT">
 	<summary>
  Liste des médicaments compris dans un traitement.
@@ -3582,6 +3783,13 @@ VITAL.BO
 	<summary>
  Id_animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_TRAITREMENT.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_TRAITREMENT">
 	<summary>
  Traitrement.
@@ -3598,6 +3806,13 @@ VITAL.BO
 	<summary>
  Libelle (Maxlen).
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_TYPE.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_TYPE">
 	<summary>
  Typede l'animal.
@@ -3630,6 +3845,13 @@ VITAL.BO
 	<summary>
  Role (Maxlen).
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_USER.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_USER">
 	<summary>
  User.
@@ -3648,16 +3870,23 @@ VITAL.BO
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_TOP_PERIODIQUE">
 	<summary>
- Top_periodique.
+ VaccinPeriodique.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS">
 	<summary>
- Periode_mois.
+ MoisPeriode.
  </summary>
 </member><member name="F:VITAL.BO.VITAL.VTL_VACCIN.VTL_VACCIN_TOP_RECOMMANDATION">
 	<summary>
- Top_recommandation.
+ Recommande.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_VACCIN.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_VACCIN">
 	<summary>
  Vaccin.
@@ -3682,6 +3911,13 @@ VITAL.BO
 	<summary>
  Id_consultation.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_VACCINATION.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_VACCINATION">
 	<summary>
  Vaccination d'un animal.
@@ -3758,6 +3994,13 @@ VITAL.BO
 	<summary>
  Ville (Maxlen).
  </summary>
+</member><member name="M:VITAL.BO.VITAL.VTL_VETERINAIRE.GetFields(System.Boolean,System.Boolean)">
+	<summary>
+ Retourne la liste de colonnes déclarées en constante.
+ </summary>
+	<param name="p_b_ignoreKeyFields">Ignore les colonnes de type clé primaire.</param>
+	<param name="p_b_ignoreValueFields">Ignorer les colonnes de valeurs.</param>
+	<returns>La liste de colonnes déclarées en constante.</returns>
 </member><member name="T:VITAL.BO.VITAL.VTL_VETERINAIRE">
 	<summary>
  Veterinaire.
@@ -6918,6 +7161,11 @@ VITAL.BO
  </summary>
 	<param name="p_s_log">Loggin.</param>
 	<returns>L'id de l'utilisateur connecté.</returns>
+</member><member name="M:VITAL.BO.VITAL.User.Exists(System.String)">
+	<summary>
+ Indique s'il existe un utilisateur avec cet loggin.
+ </summary>
+	<returns>Indique s'il existe un utilisateur avec cet loggin.</returns>
 </member><member name="T:VITAL.BO.VITAL.User">
 	<summary>
  User.
@@ -7040,7 +7288,7 @@ VITAL.BO
  Retourne le nom prénom de son propriétaire.
  </summary>
 	<returns>Le nom prénom de son propriétaire.</returns>
-</member><member name="M:VITAL.BO.VITAL.Animal.GetAnimxSearched(System.String,System.String,System.String,System.String)">
+</member><member name="M:VITAL.BO.VITAL.Animal.GetAnimxSearched(System.String,System.String,System.String,System.String,System.String)">
 	<summary>
  Retourne les animaux qui correspondent aux critères de recherche.
  </summary>
@@ -7048,6 +7296,7 @@ VITAL.BO
 	<param name="p_s_NomAnimal">Nom animal.</param>
 	<param name="p_s_NomProprio">Nom Proprio.</param>
 	<param name="p_s_PrenomProprio">Prénom proprio.</param>
+	<param name="p_s_NFC">Code sotcké dans carte NFC</param>
 	<returns>Les animaux qui correspondent aux critères de recherche.</returns>
 </member><member name="M:VITAL.BO.VITAL.Animal.GetIdContrat">
 	<summary>
@@ -7058,6 +7307,11 @@ VITAL.BO
 	<summary>
  Animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.Medicament.GetMedicamentByProprio">
+	<summary>
+ Retourne les médicaments pouvant etre administrés directement par des propriétaires.
+ </summary>
+	<returns>Les médicaments pouvant etre administrés directement par des propriétaires.</returns>
 </member><member name="T:VITAL.BO.VITAL.Medicament">
 	<summary>
  Medicament.
@@ -7066,6 +7320,11 @@ VITAL.BO
 	<summary>
  Vaccination d'un animal.
  </summary>
+</member><member name="M:VITAL.BO.VITAL.Carte.GetCartesNonAttribuees(System.Int32)">
+	<summary>
+ Retourne la liste des cartes qui n'ont pas d'animaux.
+ </summary>
+	<returns>La liste des cartes qui n'ont pas d'animaux.</returns>
 </member><member name="T:VITAL.BO.VITAL.Carte">
 	<summary>
  Carte vitale.

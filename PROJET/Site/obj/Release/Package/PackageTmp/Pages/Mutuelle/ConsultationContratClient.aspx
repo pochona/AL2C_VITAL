@@ -8,13 +8,11 @@
 <body>
 	<form id="frmData" runat="server">
 	<div>
-	    <cw:CwFormLayout runat="server" ID="layoutajoutclient">
-            <cw:CwFrame runat="server" ID="frameajoutclient" text="Propriétaire" Collapsable="true" >
-                <cw:CwFormLayout runat="server" ID="frlDtl">
-                    <cw:CwSelectTextBox runat="server" ID="saisieNom" NavigateUrl="~/Pages/Mutuelle/PopUpContrat.aspx" LabelCells-Small="3" Cells- Small="6"  AutoPostBack="true" PostBackMode="Partial" Columns="5" WindowWidth="950"  MaxLength="10" Label="Nom" ></cw:CwSelectTextBox> 
-                </cw:CwFormLayout>
+            <cw:CwFrame runat="server" ID="frameajoutclient" text="Contrats des clients" Collapsable="true" >
+              
+                    <cw:CwDataGrid runat="server" Id="dtgContratClient" Title="{0} contrat(s)"></cw:CwDataGrid> 
+              
             </cw:CwFrame>
-	    </cw:CwFormLayout>
 	</div>
 	</form>
 </body>

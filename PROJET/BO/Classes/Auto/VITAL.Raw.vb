@@ -4751,7 +4751,7 @@
         Public Overridable Sub Load(p_o_row As DataRow)
             If p_o_row Is Nothing Then Throw New Exception("#RECORD_NOT_FOUND")
 			m_i_iD = CInt(p_o_row!VTL_REMBOURSMT_ID)
-			m_dt_date = CDate(p_o_row!VTL_REMBOURSMT_DATE)
+			m_dt_date = NzDate(p_o_row!VTL_REMBOURSMT_DATE)
 			m_i_consult = NzInt(p_o_row!VTL_REMBOURSMT_CONSULT, 0)
 			m_i_contrat = NzInt(p_o_row!VTL_REMBOURSMT_CONTRAT, 0)
 			m_d_montant = CDbl(p_o_row!VTL_REMBOURSMT_MONTANT)

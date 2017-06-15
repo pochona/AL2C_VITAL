@@ -52,7 +52,25 @@
             Return l_o_sql
         End Function
 
-    
+        Public Shared Function GetIdAssur(p_s_log As String) As Integer
+            Dim l_o_sql As New Query
+
+            With l_o_sql
+                .Clear()
+                .AddSelect(VTL_ASSURANCE.VTL_ASSURANCE_ID)
+                .AddFrom(Tables.VTL_USER)
+                .AddFrom(Tables.VTL_ASSURANCE, DbJoin.Right, Tables.VTL_USER, VTL_ASSURANCE.VTL_ASSURANCE_ID_USER, VTL_USER.VTL_USER_ID)
+                .AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_log)
+
+                .AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_log)
+
+                If Not .GetFirstRow Is Nothing Then
+                    Return NzInt((.GetFirstValue))
+                Else
+                    Return 0
+                End If
+            End With
+        End Function
 
         ''' <summary>
         ''' Retourne l'id de l'utilisateur connecté.

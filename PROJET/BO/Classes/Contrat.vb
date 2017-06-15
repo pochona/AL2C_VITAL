@@ -52,7 +52,7 @@
         ''' </summary>
         ''' <returns></returns>
         ''' <remarks></remarks>
-        Public Shared Function GetContratData() As Query
+        Public Shared Function GetContratData(p_i_idAssur As Integer) As Query
             Dim l_o_sql As New Query
 
             With l_o_sql
@@ -78,6 +78,7 @@
                 .AddFrom(Tables.VTL_ANIMAL, DbJoin.Right, Tables.VTL_CONTRAT, VTL_ANIMAL.VTL_ANIMAL_ID, VTL_CONTRAT.VTL_CONTRAT_ID_ANIMAL)
                 .AddFrom(Tables.VTL_TYPE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_TYPE.VTL_TYPE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_TYPE)
                 .AddFrom(Tables.VTL_RACE, DbJoin.Right, Tables.VTL_ANIMAL, VTL_RACE.VTL_RACE_ID, VTL_ANIMAL.VTL_ANIMAL_ID_RACE)
+                .AddWhereIs(VTL_CONTRAT.VTL_CONTRAT_ID_ASSURANCE, p_i_idAssur)
             End With
             Return l_o_sql
         End Function
