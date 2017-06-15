@@ -17,6 +17,9 @@ Partial Class PageAuthAnimal
     ''' Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
+            If (CStr(Request.QueryString("NFC")) = "erreur") Then
+                ShowInfo("Erreur : Animal ou carte inexistant")
+            End If
             LoadData()
             LoadElementsVisibles()
         End If

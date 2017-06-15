@@ -45,11 +45,9 @@ Partial Public Class PageDefault
 
                     id = retrouverAnimalParNFC(NFC)
 
-                    MsgBox(id)
-
                     'Si le numéro NFC n'existe pas
                     If id = "0" Then
-                        Return "~/Pages/Proprio/AccueilProprietaire.aspx"
+                        Return "~/Pages/Proprio/AccueilProprietaire.aspx?NFC=erreur"
                     End If
                     Return "~/Pages/Proprio/AnimalGeneral.aspx?ID=" & id
                 Else
