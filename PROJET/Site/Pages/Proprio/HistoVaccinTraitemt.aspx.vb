@@ -131,7 +131,7 @@ Partial Public Class PageHistoVaccinTraitemt
             With .AddDateColumn("Date début prise traitement", VTL_TRAITREMENT.VTL_TRAITREMENT_DT_DEBUT)
                 m_i_date_deb = .ColumnIndex
             End With
-            With .AddColumn("Durée globale du traitement", VTL_TRAITREMENT.VTL_TRAITREMENT_DUREE_JOUR)
+            With .AddColumn("Durée globale du traitement (jours)", VTL_TRAITREMENT.VTL_TRAITREMENT_DUREE_JOUR)
                 m_i_duree_traitmt = .ColumnIndex
             End With
 
@@ -139,7 +139,7 @@ Partial Public Class PageHistoVaccinTraitemt
                 m_i_Posologie = .ColumnIndex
             End With
 
-            With .AddColumn("Durée prise du médicament", VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR)
+            With .AddColumn("Durée prise du médicament (jours)", VTL_TRAITEMENT_MEDICAMENT.VTL_TRAITEMENT_MEDICAMENT_DUREE_JOUR)
                 m_i_duree_prise = .ColumnIndex
             End With
 

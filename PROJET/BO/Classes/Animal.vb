@@ -70,7 +70,7 @@
                 .AddSelect(VTL_ANIMAL.VTL_ANIMAL_DT_DECES)
                 .AddSelect(VTL_ANIMAL.VTL_ANIMAL_DT_NAISSANCE)
                 .AddSelect(Tables.VTL_ANIMAL + "." + VTL_ANIMAL.VTL_ANIMAL_ID_CARTE)
-                .AddSelect(VTL_CARTE.VTL_CARTE_NFC)
+                .AddSelect(VTL_CARTE.VTL_CARTE_NUMERO)
                 .AddSelect(VTL_RACE.VTL_RACE_NOM)
                 .AddSelect(VTL_TYPE.VTL_TYPE_LIBELLE)
                 .AddFrom(Tables.VTL_ANIMAL)

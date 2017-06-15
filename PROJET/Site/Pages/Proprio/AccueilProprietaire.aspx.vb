@@ -84,7 +84,7 @@ Partial Public Class PageAccueilProprietaire
             With .AddDateColumn("Date décès", VTL_ANIMAL.VTL_ANIMAL_DT_DECES)
                 m_i_deces = .ColumnIndex
             End With
-            With .AddColumn("Id carte(à changer)", VTL_ANIMAL.VTL_ANIMAL_ID_CARTE)
+            With .AddColumn("Numéro de carte", VTL_CARTE.VTL_CARTE_NUMERO)
                 m_i_carte = .ColumnIndex
             End With
             With .AddColumn("Nom race", VTL_RACE.VTL_RACE_NOM)
