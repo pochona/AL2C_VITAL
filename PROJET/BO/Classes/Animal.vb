@@ -291,7 +291,7 @@
                 If p_s_NomAnimal <> "" Then .AddWhereContains(VTL_ANIMAL.VTL_ANIMAL_NOM, p_s_NomAnimal)
                 If p_s_NomProprio <> "" Then .AddWhereContains(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_NOM, p_s_NomProprio)
                 If p_s_PrenomProprio <> "" Then .AddWhereContains(VTL_PROPRIETAIRE.VTL_PROPRIETAIRE_PRENOM, p_s_PrenomProprio)
-                If p_s_NFC <> "" Then .AddWhereContains(VTL_CARTE.VTL_CARTE_NFC, p_s_NFC)
+                If p_s_NFC <> "" Then .AddWhereIs(VTL_CARTE.VTL_CARTE_NFC, p_s_NFC)
             End With
             Return l_o_sql
         End Function
