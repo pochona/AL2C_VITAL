@@ -27,17 +27,17 @@ Partial Public Class PageAccueilProprietaire
 
     Private Sub LoadData()
         dtgAnimx.RefreshData()
-        ' TODO traitements
-        Dim l_s_msg As String
+        Dim l_s_msg As String = ""
         Dim l_o_dt As DataTable = Vaccin.GetVaccinations(User.Identity.Name).Getdt
 
         If l_o_dt.Rows.Count <> 0 Then
             For Each l_o_row As DataRow In l_o_dt.Rows
                 If NzDate(l_o_row(VTL_VACCINATION.VTL_VACCINATION_DT_VACCIN)).AddMonths(NzInt(l_o_row(VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS)) - 1) >= Now.Date Then
-                    l_s_msg = CStr(l_o_row(VTL_VACCINATION.VTL_VACCINATION_ID))
+                    l_s_msg = l_s_msg + "Attention, vous devez faire le vaccin '" + CStr(l_o_row(VTL_VACCIN.VTL_VACCIN_LIBELLE)) + "' pour l'animal : '" + CStr(l_o_row(VTL_ANIMAL.VTL_ANIMAL_NOM)) + "' ! "
                 End If
             Next
         End If
+        ShowInfo(l_s_msg)
     End Sub
 
 #End Region

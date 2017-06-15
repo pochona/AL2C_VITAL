@@ -39,7 +39,7 @@
             Dim l_o_sql As New Query
 
             With l_o_sql
-                .AddOrder(VTL_VACCINATION.VTL_VACCINATION_ID_ANIMAL)
+                '  .AddOrder(VTL_VACCINATION.VTL_VACCINATION_ID_ANIMAL)
                 .AddSelect(VTL_VACCINATION.VTL_VACCINATION_DT_VACCIN)
                 .AddSelect(VTL_VACCIN.VTL_VACCIN_LIBELLE)
                 .AddSelect(VTL_VACCIN.VTL_VACCIN_PERIODE_MOIS)
@@ -57,7 +57,7 @@
                 'x V new  .AddWhereIs(VTL_ANIMAL.VTL_ANIMAL_ID_PROP, p_i_idProp)
 
                 .AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_logginProprio)
-                .AddGroup(VTL_VACCIN.VTL_VACCIN_ID)
+
                 'x                 .AddSelect(VTL_VACCIN.)
                 'x                 .AddFrom(Tables.VTL_VACCIN)
                 'x                 .AddFrom(Tables.VTL_VACCINATION, DbJoin.Right, Tables.VTL_VACCIN, VTL_VACCINATION.VTL_VACCINATION_ID_VACCIN, VTL_VACCIN.VTL_VACCIN_ID)
