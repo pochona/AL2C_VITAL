@@ -95,31 +95,22 @@ Partial Public Class PageAccueilAnimal
     Protected WithEvents txtNumPuce As Global.Corail.Web.CwTextBox
 
     '''<summary>
-    '''Contrôle upnNumCarte.
+    '''Contrôle chkCarte.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents upnNumCarte As Global.Corail.Web.CwUpdatePanel
+    Protected WithEvents chkCarte As Global.Corail.Web.CwCheckBox
 
     '''<summary>
-    '''Contrôle frlNumCarte.
+    '''Contrôle txtCarte.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents frlNumCarte As Global.Corail.Web.CwFormLayout
-
-    '''<summary>
-    '''Contrôle cboNumCarte.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents cboNumCarte As Global.Corail.Web.CwComboBox
+    Protected WithEvents txtCarte As Global.Corail.Web.CwTextBox
 
     '''<summary>
     '''Contrôle dtbNaiss.
@@ -201,15 +192,6 @@ Partial Public Class PageAccueilAnimal
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents btnSaveInfoAnml As Global.Corail.Web.CwButton
-
-    '''<summary>
-    '''Contrôle btnNewCarte.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents btnNewCarte As Global.Corail.Web.CwButton
 
     '''<summary>
     '''Contrôle btnNewAnimal.

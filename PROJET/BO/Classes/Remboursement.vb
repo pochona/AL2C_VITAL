@@ -21,8 +21,8 @@
                 .AddFrom(Tables.VTL_REMBOURSMT)
                 .AddFrom(Tables.VTL_CONSULTATION, DbJoin.Right, Tables.VTL_REMBOURSMT, VTL_CONSULTATION.VTL_CONSULTATION_ID, VTL_REMBOURSMT.VTL_REMBOURSMT_CONSULT)
                 .AddFrom(Tables.VTL_STATUT, DbJoin.Right, Tables.VTL_REMBOURSMT, VTL_STATUT.VTL_STATUT_ID, VTL_REMBOURSMT.VTL_REMBOURSMT_STATUT)
-
-                '.AddWhereIs(VTL_USER.VTL_USER_LOGIN, p_s_logginProprio)
+            
+                .AddWhereIs(VTL_CONSULTATION.VTL_CONSULTATION_L, p_i_animalId)
             End With
             Return l_o_sql
         End Function

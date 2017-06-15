@@ -113,6 +113,15 @@ Partial Public Class PagePopUpAjoutAnimal
     Protected WithEvents dtbNaiss As Global.Corail.Web.CwDateTextBox
 
     '''<summary>
+    '''Contrôle chkCarte.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents chkCarte As Global.Corail.Web.CwCheckBox
+
+    '''<summary>
     '''Contrôle pnbBtns.
     '''</summary>
     '''<remarks>

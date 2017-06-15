@@ -108,8 +108,8 @@ Partial Public Class PageAccueilAnimal
     ''' </summary>
     Private Sub LoadLien()
         If ModeAcces = EN_ModeAcces.Modification Then
-            btnNewCarte.NavigateUrl = "~/Pages/Veterinaire/NewCarte.aspx?ID=" & SelectedAnimalId
-            btnNewCarte.Target = "Modal#400x400"
+            '  btnNewCarte.NavigateUrl = "~/Pages/Veterinaire/NewCarte.aspx?ID=" & SelectedAnimalId
+            '  btnNewCarte.Target = "Modal#400x400"
             btnNewConsult.NavigateUrl = "~/Pages/Veterinaire/Consultation.aspx?Mode=" & EN_ModeAcces.Creation & "&Animal=" & SelectedAnimalId
             btnNewConsult.Target = "tabConsult"
             btnNewTraitement.NavigateUrl = "~/Pages/Veterinaire/Traitement.aspx?Mode=" & EN_ModeAcces.Creation & "&Animal=" & SelectedAnimalId
@@ -121,13 +121,13 @@ Partial Public Class PageAccueilAnimal
     ''' Chargement des combo box / listes déroulantes.
     ''' </summary>
     Private Sub LoadCbo()
-        If ModeAcces = EN_ModeAcces.Modification Then
-            BindCbo(cboNumCarte, Carte.GetCartesNonAttribuees(SelectedAnimalId).GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
-        Else
-            BindCbo(cboNumCarte, Carte.GetCartesNonAttribuees().GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
-
-            '     BindCbo(cboNumCarte, Carte.GetCarteAnimal(SelectedAnimalId).GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
-        End If
+        'x         If ModeAcces = EN_ModeAcces.Modification Then
+        'x             BindCbo(cboNumCarte, Carte.GetCartesNonAttribuees(SelectedAnimalId).GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
+        'x         Else
+        'x             BindCbo(cboNumCarte, Carte.GetCartesNonAttribuees().GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
+        'x 
+        'x             '     BindCbo(cboNumCarte, Carte.GetCarteAnimal(SelectedAnimalId).GetDS, VTL_CARTE.VTL_CARTE_ID, VTL_CARTE.VTL_CARTE_NUMERO, "Sélectionner...")
+        'x         End If
         BindCbo(cboType, Type.GetAll.GetDS, VTL_TYPE.VTL_TYPE_ID, VTL_TYPE.VTL_TYPE_LIBELLE, "Sélectionner...")
         BindCbo(cboRace, Race.GetAll.GetDS, VTL_RACE.VTL_RACE_ID, VTL_RACE.VTL_RACE_NOM, "Sélectionner...")
         BindCbo(CboVaccin, Vaccin.GetAll.GetDS, VTL_VACCIN.VTL_VACCIN_ID, VTL_VACCIN.VTL_VACCIN_LIBELLE, "Sélectionner...")
@@ -140,15 +140,16 @@ Partial Public Class PageAccueilAnimal
         If ModeAcces = EN_ModeAcces.Modification Then
             'Boutons
             btnSaveInfoAnml.Visible = False
-            btnNewCarte.Visible = False
+            '   btnNewCarte.Visible = False
             btnModifierInfoAnml.Visible = True
             btnNewAnimal.Visible = False
             'Elements modifiables
             txtNom.Enabled = False
             ntbPoids.Enabled = False
+            chkCarte.Enabled = False
             ntbTaille.Enabled = False
             txtNumPuce.Enabled = False
-            cboNumCarte.Enabled = False
+            'x  cboNumCarte.Enabled = False
             dtbNaiss.Enabled = False
             dtbDeces.Enabled = False
             cboType.Enabled = False
@@ -160,6 +161,8 @@ Partial Public Class PageAccueilAnimal
             frmListTraitements.Visible = True
             frmListVaccins.Visible = True
             frmListConseilDiet.Visible = True
+            'x  cboNumCarte.Visible = True
+            'x  upnNumCarte.Visible = True
         ElseIf ModeAcces = EN_ModeAcces.Creation Then
             'les autres frames ne sont pas visibles
             frmNewConsul.Visible = False
@@ -173,9 +176,11 @@ Partial Public Class PageAccueilAnimal
             stbProprio.Enabled = True
             'Boutons
             btnSaveInfoAnml.Visible = False
-            btnNewCarte.Visible = False
+            ' btnNewCarte.Visible = False
             btnModifierInfoAnml.Visible = False
             btnNewAnimal.Visible = True
+            'x  cboNumCarte.Visible = False
+            'x   upnNumCarte.Visible = False
         End If
     End Sub
 
@@ -199,7 +204,8 @@ Partial Public Class PageAccueilAnimal
                 ntbAge.Value = DateDiff(DateInterval.Year, SelectedAnimal.Dt_naissance, Now.Date)
                 cboType.SelectedValue = CStr(SelectedAnimal.Id_type)
                 cboRace.SelectedValue = CStr(SelectedAnimal.Id_race)
-                cboNumCarte.SelectedValue = CStr(SelectedAnimal.Id_carte)
+                txtCarte.Text = SelectedAnimal.GetNumCarteVit
+                'x   cboNumCarte.SelectedValue = CStr(SelectedAnimal.Id_carte)
                 stbProprio.Text = SelectedAnimal.GetNomPrenomProprio()
                 dttxtNewVaccin.Date = Now.Date
             End If
@@ -221,11 +227,11 @@ Partial Public Class PageAccueilAnimal
         Dim l_s_parts As String()
 
         If e.Argument.Contains("RefreshCarte||") Then
-            l_s_parts = Split(e.Argument, "||")
-            LoadCbo()
-            cboNumCarte.SelectedValue = l_s_parts(1)
-            ShowInfo("Enregistrement effectué avec succès!")
-            upnNumCarte.Update()
+            'x  l_s_parts = Split(e.Argument, "||")
+            'x  LoadCbo()
+            'x cboNumCarte.SelectedValue = l_s_parts(1)
+            'x ShowInfo("Enregistrement effectué avec succès!")
+            'xupnNumCarte.Update()
         End If
         ' Récupérer l'argument envoyé par la page qui déclenche de rafraichissement
         If e.Argument.Contains("refreshGrilleConsult") Then
@@ -275,7 +281,7 @@ Partial Public Class PageAccueilAnimal
                 'Si c'est bien numérique
                 If l_b_allNumber = True Then
                     'On vérifie qu'il existe un user correspondant
-                    If PropriEtaire.Exists(CInt(stbProprio.Text)) = True Then
+                    If PropriEtaire.ExistsV2(CInt(stbProprio.Text)) = True Then
                         l_o_prop.Load(CInt(stbProprio.Text))
                         txtIdPropCache.Text = stbProprio.Text
                         stbProprio.Text = l_o_prop.Nom + " " + l_o_prop.Prenom
@@ -304,12 +310,20 @@ Partial Public Class PageAccueilAnimal
         Dim l_o_animal As New Animal
         Dim l_o_taille As New Histo_Taille
         Dim l_o_poids As New Histo_Poids
+        Dim l_o_carte As New Carte
 
         Try
             ValidationManager.Validate(txtNom, txtIdPropCache, cboRace, cboType, ntbPoids, ntbTaille, stbProprio)
             ' Ouverture d'une transcaction
             Using l_o_trans As Transaction = MyDB.GetNewTransaction()
-                ' Traitements
+
+                If chkCarte.checked = True Then
+                    With l_o_carte
+                        .Numero = Guid.NewGuid().ToString
+                        .Nfc = Guid.NewGuid().ToString
+                        .Save(l_o_trans)
+                    End With
+                End If
                 With l_o_animal
                     .Nom = txtNom.Text
                     .Num_puce = txtNumPuce.Text
@@ -318,7 +332,10 @@ Partial Public Class PageAccueilAnimal
                     .Id_prop = CInt(txtIdPropCache.Text)
                     .Id_race = CInt(cboRace.SelectedValue)
                     .Id_type = CInt(cboType.SelectedValue)
-                    .Id_carte = CInt(cboNumCarte.SelectedValue)
+                    If chkCarte.Checked = True Then
+                        .Id_carte = l_o_carte.ID
+                    End If
+                    ' .Id_carte = CInt(cboNumCarte.SelectedValue)
                     .Save(l_o_trans)
                 End With
                 With l_o_poids
@@ -359,11 +376,19 @@ Partial Public Class PageAccueilAnimal
         Dim l_o_animal As New Animal
         Dim l_o_taille As New Histo_Taille
         Dim l_o_poids As New Histo_Poids
+        Dim l_o_carte As New Carte
 
         Try
             ValidationManager.Validate(txtNom, txtIdPropCache, cboRace, cboType, ntbPoids, ntbTaille, stbProprio)
             ' Ouverture d'une transcaction
             Using l_o_trans As Transaction = MyDB.GetNewTransaction()
+                If chkCarte.Checked = True Then
+                    With l_o_carte
+                        .Numero = Guid.NewGuid().ToString
+                        .Nfc = Guid.NewGuid().ToString
+                        .Save(l_o_trans)
+                    End With
+                End If
                 ' Traitements
                 With l_o_animal
                     .Load(SelectedAnimalId)
@@ -374,28 +399,36 @@ Partial Public Class PageAccueilAnimal
                     .Id_prop = CInt(txtIdPropCache.Text)
                     .Id_race = CInt(cboRace.SelectedValue)
                     .Id_type = CInt(cboType.SelectedValue)
-                    .Id_carte = CInt(cboNumCarte.SelectedValue)
+                    If chkCarte.Checked = True Then
+                        .Id_carte = l_o_carte.ID
+                        'x ElseIf CInt(cboNumCarte.SelectedValue) <> 0 Then
+                        'x    .Id_carte = CInt(cboNumCarte.SelectedValue)
+                    End If
                     .Save(l_o_trans)
                 End With
                 'on crée des historiques seuleument si c'est différent
-                If ntbPoids.Value <> SelectedAnimal.GetLastPoids() Then
-                    With l_o_poids
-                        .Poids = ntbPoids.Value
-                        .Dt_histo = Now.Date
-                        .Id_animal = SelectedAnimalId
-                        .Save(l_o_trans)
-                    End With
-                End If
-                If ntbTaille.Value <> SelectedAnimal.GetLastTaille() Then
-                    With l_o_taille
-                        .Taille = ntbTaille.Value
-                        .Dt_histo = Now.Date
-                        .Id_animal = SelectedAnimalId
-                        .Save(l_o_trans)
-                    End With
-                End If
+                'x If ntbPoids.Value <> SelectedAnimal.GetLastPoids() Then
+                With l_o_poids
+                    .Poids = ntbPoids.Value
+                    .Dt_histo = Now.Date
+                    .Id_animal = SelectedAnimalId
+                    .Save(l_o_trans)
+                End With
+                'x End If
+                'x  If ntbTaille.Value <> SelectedAnimal.GetLastTaille() Then
+                With l_o_taille
+                    .Taille = ntbTaille.Value
+                    .Dt_histo = Now.Date
+                    .Id_animal = SelectedAnimalId
+                    .Save(l_o_trans)
+                End With
+                'x  End If
                 ' On valide la transaction (elle se ferme tout seule grace au "using")
                 l_o_trans.Validate()
+                If chkCarte.Checked = True Then
+                    txtCarte.Text = SelectedAnimal.GetNumCarteVit
+                End If
+
                 LoadElementsVisibles()
                 ShowInfo("Enregistrement effectué avec succès.")
             End Using
@@ -403,6 +436,15 @@ Partial Public Class PageAccueilAnimal
             ShowException(ex)
         End Try
     End Sub
+    'x <cw:CwUpdatePanel runat="server" ID="upnNumCarte" UpdateMode="Conditional"  >
+    'x                         <ContentTemplate>
+    'x                             <cw:CwFormLayout runat="server" ID="frlNumCarte">
+    'x                                 <cw:CwComboBox runat="server" ID="cboNumCarte" Label="Numéro de carte vitale" PostBackMode="Full"  AutoPostBack="True"></cw:CwComboBox> 
+    'x                             </cw:CwFormLayout>
+    'x                         </ContentTemplate>
+    'x                     </cw:CwUpdatePanel>
+
+    'x   <cw:CwButton runat="server" ImageName="sq-plus-all" ID="btnNewCarte" Text="Créer une nouvelle carte"></cw:CwButton>
 
     ''' <summary>
     ''' Boutons qui va permettre de modifier les infos de l'animal.
@@ -413,16 +455,18 @@ Partial Public Class PageAccueilAnimal
         Try
             txtNom.Enabled = True
             ntbPoids.Enabled = True
+
+            chkCarte.Enabled = True
             ntbTaille.Enabled = True
             txtNumPuce.Enabled = True
-            cboNumCarte.Enabled = True
+            'x cboNumCarte.Enabled = True
             dtbNaiss.Enabled = True
             dtbDeces.Enabled = True
             cboType.Enabled = True
             cboRace.Enabled = True
             stbProprio.Enabled = True
             btnSaveInfoAnml.Visible = True
-            btnNewCarte.Visible = True
+            '   btnNewCarte.Visible = True
             btnModifierInfoAnml.Visible = False
         Catch ex As Exception
             ShowException(ex)

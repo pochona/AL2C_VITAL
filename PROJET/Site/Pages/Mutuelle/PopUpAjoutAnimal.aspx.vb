@@ -30,14 +30,9 @@ Partial Public Class PagePopUpAjoutAnimal
     End Property
 
 #End Region
+
 #Region "Chargement"
 
-    ''' <summary>query
-    ''' Initialisation de la page en cours
-    ''' </summary>
-    ''' <remarks>Ne pas mettre de bloc try/catch :
-    ''' S'il y a une erreur dans cette procédure, la page ne sera pas affichée.
-    ''' Le message d'erreur sera affiché dans la page d'erreur critique</remarks>
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             SelectedProprioId = CInt(Request.QueryString("ID"))
@@ -61,11 +56,13 @@ Partial Public Class PagePopUpAjoutAnimal
         Try
             Using l_o_trans As Transaction = MyDB.GetNewTransaction()
                 ValidationManager.Validate(txtNom, cboRace, cboType)
-                With l_o_carte
-                    .Numero = Guid.NewGuid().ToString
-                    .Nfc = Guid.NewGuid().ToString
-                    .Save(l_o_trans)
-                End With
+                If chkCarte.checked = True Then
+                    With l_o_carte
+                        .Numero = Guid.NewGuid().ToString
+                        .Nfc = Guid.NewGuid().ToString
+                        .Save(l_o_trans)
+                    End With
+                End If
                 With l_o_animal
                     .Dt_naissance = dtbNaiss.Date
                     .Nom = txtNom.Text
@@ -85,7 +82,5 @@ Partial Public Class PagePopUpAjoutAnimal
     End Sub
 
 #End Region
-
-
 
 End Class

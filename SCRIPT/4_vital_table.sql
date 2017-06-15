@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Creation des tables                                        */
-/* Historique  : Creation le 14/06/2017                                     */
+/* Historique  : Creation le 15/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
@@ -73,7 +73,6 @@ CREATE TABLE VTL_ANIMAL (
 	VTL_ANIMAL_ID_TYPE INT,
 	VTL_ANIMAL_ID_PROP INT,
 	VTL_ANIMAL_IMAGE VARBINARY(MAX)
-  CONSTRAINT VTL_ANIMAL_ID_CARTE_CK UNIQUE (VTL_ANIMAL_ID_CARTE)
 )
 GO
 
@@ -409,7 +408,7 @@ GO
 -- "Creation de la table VTL_REMBOURSMT"
 CREATE TABLE VTL_REMBOURSMT (
 	VTL_REMBOURSMT_ID INT IDENTITY(1,1) NOT NULL,
-	VTL_REMBOURSMT_DATE DATETIME2(0) NOT NULL,
+	VTL_REMBOURSMT_DATE DATETIME2(0),
 	VTL_REMBOURSMT_CONSULT INT,
 	VTL_REMBOURSMT_CONTRAT INT,
 	VTL_REMBOURSMT_MONTANT NUMERIC(9,2) NOT NULL,

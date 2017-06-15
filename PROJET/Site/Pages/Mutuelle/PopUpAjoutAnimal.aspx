@@ -19,6 +19,7 @@
                 <cw:CwNumericTextBox runat="server" ID="ntbTaille" Label="Taille" ></cw:CwNumericTextBox>
                 <cw:CwTextBox runat="server" ID="txtPuce" Label="Numéro de puce" ></cw:CwTextBox>
                 <cw:CwDateTextBox runat="server" ID="dtbNaiss" Label="Date de naissance" ></cw:CwDateTextBox>
+                <cw:CwCheckBox runat="server" ID="chkCarte" Label="Créer une carte vitale"/>
                 <cw:CwPanelButtons runat="server" ID="pnbBtns">
                     <cw:CwButton runat="server" ID="btnSave" Text="Enregistrer"></cw:CwButton>
                 </cw:CwPanelButtons>

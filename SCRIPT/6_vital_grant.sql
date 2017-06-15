@@ -3,7 +3,7 @@
 /* Version     : 1.0                                                        */
 /* Societe     :                                                            */
 /* Fonction    : Attribution des roles                                      */
-/* Historique  : Creation le 14/06/2017                                     */
+/* Historique  : Creation le 15/06/2017                                     */
 /* Commentaire :                                                            */
 /*------------------------------------------------------ www.desirade.fr ---*/
 
