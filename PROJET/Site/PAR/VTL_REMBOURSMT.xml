@@ -4,7 +4,7 @@
 	<description>Remboursement</description>
 	<columns>
 		<col DataField="VTL_REMBOURSMT_ID" Type="Numeric" Unique="false" HeaderText="ID" PrimaryKey="true" Auto="true" />
-		<col DataField="VTL_REMBOURSMT_DATE" Type="DateTime" Unique="false" HeaderText="Date" NotNull="true" />
+		<col DataField="VTL_REMBOURSMT_DATE" Type="DateTime" Unique="false" HeaderText="Date" />
 		<col DataField="VTL_REMBOURSMT_CONSULT" Type="Numeric" HeaderText="Consult">
 			<source Table="VTL_CONSULTATION" TableAlias="T1" KeyField="VTL_CONSULTATION_ID" LibField="VTL_CONSULTATION_COMMENTAIRE" LibAlias="F1" Unique="false" />
 		</col>
